@@ -18,3 +18,4 @@ namespace MarketAnalyzer.Membership.Domain
         }
     }
 }
+
