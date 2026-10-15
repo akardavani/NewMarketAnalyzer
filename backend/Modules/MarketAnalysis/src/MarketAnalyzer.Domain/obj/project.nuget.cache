@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "YkrbiNXOMvtcJR2YSa1R1fO5bLxMKyAPNzBxuz4ZfDJpqu8Ng/9vjXbTMjnoGUSlzwjk7pGGVR0HFaESgynnJw==",
+  "success": true,
+  "projectFilePath": "C:\\Total Project\\New project\\NewMarketAnalyzer\\backend\\Modules\\MarketAnalysis\\src\\MarketAnalyzer.Domain\\MarketAnalyzer.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Mobin\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.1\\microsoft.extensions.dependencyinjection.8.0.1.nupkg.sha512",
+    "C:\\Users\\Mobin\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\Mobin\\.nuget\\packages\\newtonsoft.json\\13.0.4\\newtonsoft.json.13.0.4.nupkg.sha512",
+    "C:\\Users\\Mobin\\.nuget\\packages\\skender.stock.indicators\\2.7.0\\skender.stock.indicators.2.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

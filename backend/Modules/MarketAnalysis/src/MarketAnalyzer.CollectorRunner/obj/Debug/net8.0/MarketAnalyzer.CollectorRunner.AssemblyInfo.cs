@@ -11,6 +11,7 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("dotnet-MarketAnalyzer.CollectorRunner-f106e66e-01bc-432d-ab98-66de7c448237")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("MarketAnalyzer.CollectorRunner")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
