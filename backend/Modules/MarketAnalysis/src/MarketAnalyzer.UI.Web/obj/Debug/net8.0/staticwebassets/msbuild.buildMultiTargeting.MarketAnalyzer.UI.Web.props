@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\MarketAnalyzer.UI.Web.props" />
+</Project>

@@ -1,0 +1,16 @@
+C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Infrastructure\bin\Debug\net8.0\MarketAnalyzer.Infrastructure.deps.json
+C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Infrastructure\bin\Debug\net8.0\MarketAnalyzer.Infrastructure.dll
+C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Infrastructure\bin\Debug\net8.0\MarketAnalyzer.Infrastructure.pdb
+C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Infrastructure\bin\Debug\net8.0\MarketAnalyzer.Abstractions.dll
+C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Infrastructure\bin\Debug\net8.0\MarketAnalyzer.Abstractions.pdb
+C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Infrastructure\obj\Debug\net8.0\MarketAnalyzer.Infrastructure.csproj.AssemblyReference.cache
+C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Infrastructure\obj\Debug\net8.0\MarketAnalyzer.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Infrastructure\obj\Debug\net8.0\MarketAnalyzer.Infrastructure.AssemblyInfoInputs.cache
+C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Infrastructure\obj\Debug\net8.0\MarketAnalyzer.Infrastructure.AssemblyInfo.cs
+C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Infrastructure\obj\Debug\net8.0\MarketAnalyzer.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Infrastructure\obj\Debug\net8.0\MarketAnalyzer.Infrastructure.sourcelink.json
+C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Infrastructure\obj\Debug\net8.0\MarketAn.2D947415.Up2Date
+C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Infrastructure\obj\Debug\net8.0\MarketAnalyzer.Infrastructure.dll
+C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Infrastructure\obj\Debug\net8.0\refint\MarketAnalyzer.Infrastructure.dll
+C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Infrastructure\obj\Debug\net8.0\MarketAnalyzer.Infrastructure.pdb
+C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Infrastructure\obj\Debug\net8.0\ref\MarketAnalyzer.Infrastructure.dll

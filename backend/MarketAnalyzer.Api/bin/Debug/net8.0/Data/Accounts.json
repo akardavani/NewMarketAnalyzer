@@ -1,0 +1,4884 @@
+[
+  {
+    "Code": "01",
+    "Title": "دارایی های جاری",
+    "Type": 0,
+    "Nature": 1,
+    "Level": 1,
+    "SubAccountCodeLength": 4,
+    "DetailAccountTypes": null,
+    "SubAccounts": [
+      {
+        "Code": "0111",
+        "Title": "نقد و بانک",
+        "Type": 0,
+        "Nature": 1,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "011110",
+            "Title": "بانک",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                1
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011120",
+            "Title": "نقد",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "011113",
+            "Title": "تستی1",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 6,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          }
+        ]
+      },
+      {
+        "Code": "0112",
+        "Title": "حساب های دریافتنی تجاری",
+        "Type": 0,
+        "Nature": 1,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "011235",
+            "Title": "سود ترجیحی دریافتنی اوراق بهادار با درآمد ثابت",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011285",
+            "Title": "سود دریافتنی وجه تضمین نزد سپرده گذاری",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011210",
+            "Title": "سود دریافتنی سپرده بانکی",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                1
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011211",
+            "Title": "سود دریافتنی اوراق سپرده بانکی فرابورسی",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": []
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011220",
+            "Title": "سود دریافتنی گواهی سپرده بانکی",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011230",
+            "Title": "سود دریافتنی اوراق مشارکت",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011240",
+            "Title": "سود اوراق مشارکت دریافتنی بورسی",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011250",
+            "Title": "سود اوراق مشارکت دریافتنی رهنی",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": []
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011260",
+            "Title": "سود اوراق اجاره دریافتنی",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": []
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011270",
+            "Title": "سود دریافتنی سهام",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011271",
+            "Title": "سود ترجیحی دریافتنی اوراق بهادار با درآمد ثابت",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011280",
+            "Title": "سود دریافتنی از صندوق های سرمایه گذاری",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011290",
+            "Title": "مطالبات بابت فروش حق تقدم",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011293",
+            "Title": "دریافتنی تعهد پذیره نویسی اوراق بهادار با درآمد ثابت",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011295",
+            "Title": "دریافتنی از مالک",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011296",
+            "Title": "سود دریافتنی اوراق مرابحه",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": []
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011297",
+            "Title": "مطالبات بابت فروش حق تقدم",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": []
+            },
+            "SubAccounts": []
+          }
+        ]
+      },
+      {
+        "Code": "0113",
+        "Title": "جاری کارگزاران",
+        "Type": 0,
+        "Nature": 4,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "011310",
+            "Title": "جاری کارگزار",
+            "Type": 1,
+            "Nature": 4,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                5,
+                99
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011320",
+            "Title": "جاری کارگزار از تعدیل کارمزد",
+            "Type": 1,
+            "Nature": 4,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011330",
+            "Title": "جاری كارگزاری از تعدیل معاملات",
+            "Type": 1,
+            "Nature": 4,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011340",
+            "Title": "جاری كارگزاری گواهی سپرده كالایی",
+            "Type": 1,
+            "Nature": 4,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011360",
+            "Title": "جاری کارگزار بابت وجه تضمین قراردادهای آتی موقعیت تعهدی فروش",
+            "Type": 1,
+            "Nature": 4,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011370",
+            "Title": "جاری کارگزار بابت وجه تضمین قراردادهای آتی موقعیت تعهدی خرید",
+            "Type": 1,
+            "Nature": 4,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011380",
+            "Title": "جاری کارگزار بابت صدور و ابطال بازارگردان",
+            "Type": 1,
+            "Nature": 4,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011325",
+            "Title": "جاری کارگزار از تعدیل سقف کارمزد",
+            "Type": 1,
+            "Nature": 4,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                5
+              ]
+            },
+            "SubAccounts": []
+          }
+        ]
+      },
+      {
+        "Code": "0114",
+        "Title": "سایر حساب های دریافتنی",
+        "Type": 0,
+        "Nature": 1,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "011495",
+            "Title": "دریافتنی از مالک",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011497",
+            "Title": "مطالبات بابت فروش حق تقدم",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011410",
+            "Title": "حسابهای دریافتنی از سرمایه گذاران",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011420",
+            "Title": "چکهای در جریان وصول",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011430",
+            "Title": "سایر حسابهای دریافتنی",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011431",
+            "Title": "وجه تضمین نزد سپرده گذاری",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011440",
+            "Title": "دریافتنی از مدیر",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011450",
+            "Title": "دریافتنی از ضامن",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011460",
+            "Title": "دریافتنی از شرکت پروژه",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          }
+        ]
+      },
+      {
+        "Code": "0115",
+        "Title": "سرمایه گذاری در سپرده بانکی و گواهی سپرده بانکی",
+        "Type": 0,
+        "Nature": 1,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "011510",
+            "Title": "سرمایه گذاری در سپرده بانکی",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                1
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011520",
+            "Title": "سرمایه گذاری در گواهی سپرده بانکی",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011530",
+            "Title": "سرمایه گذاری در گواهی سپرده بانکی فرابورسی",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": []
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011525",
+            "Title": "حساب ارزشیابی در گواهی سپرده بانکی",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          }
+        ]
+      },
+      {
+        "Code": "0116",
+        "Title": "سرمایه گذاری در اوراق بهادار با درآمد ثابت",
+        "Type": 0,
+        "Nature": 1,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "011635",
+            "Title": "حساب ارزشیابی در اوراق تبعی تامین مالی",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011610",
+            "Title": "سرمایه گذاری در اوراق مشارکت",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011620",
+            "Title": "حساب ارزشیابی در اوراق مشارکت",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011630",
+            "Title": "سرمایه گذاری در اوراق تبعی تامین مالی",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ],
+              "Level2": [
+                9
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011640",
+            "Title": "سرمایه گذاری در اوراق اجاره",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": []
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011650",
+            "Title": "حساب ارزشیابی در اوراق مشارکت بورسی",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": []
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011660",
+            "Title": "حساب ارزشیابی در اوراق مشارکت با درآمد ثابت فرا بورسی",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          }
+        ]
+      },
+      {
+        "Code": "0117",
+        "Title": "سرمایه گذاری در سهام و حق تقدم شرکتهای بورسی",
+        "Type": 0,
+        "Nature": 1,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "011710",
+            "Title": "سرمایه گذاری در سهام",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011720",
+            "Title": "حساب ارزشیابی در سهام",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011730",
+            "Title": "سرمایه گذاری در حق تقدم سهام",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011740",
+            "Title": "حساب ارزشیابی در حق تقدم خرید سهام",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011760",
+            "Title": "سرمایه گذاری در اوراق تبعی حمایتی",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ],
+              "Level2": [
+                9
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011765",
+            "Title": "حساب ارزشیابی در اوراق تبعی حمایتی",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011715",
+            "Title": "سرمایه گذاری در گواهی سپرده کالایی",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011725",
+            "Title": "حساب ارزشیابی گواهی سپرده کالایی",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          }
+        ]
+      },
+      {
+        "Code": "0118",
+        "Title": "مخارج انتقالی به دوره\u009Dهای آتی",
+        "Type": 0,
+        "Nature": 1,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "011810",
+            "Title": "مخارج انتقالی تاسیس",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "011830",
+            "Title": "مخارج انتقالی برگزاری مجامع",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "011861",
+            "Title": "مالیات ذخیره هزینه نرم افزار",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "011870",
+            "Title": "آبونمان نرم افزار صندوق",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "011871",
+            "Title": " مالیات آبونمان نرم افزار صندوق",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "011872",
+            "Title": "عوارض آبونمان نرم افزار صندوق",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "011880",
+            "Title": "ثبت و نظارت سازمان بورس و اوراق بهادار",
+            "Type": 8,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "011820",
+            "Title": "مخارج عضویت در کانون ها",
+            "Type": 8,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "011815",
+            "Title": "مخارج اشتراک خدمات سپرده گذاری و نگهداری اوراق",
+            "Type": 8,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "011840",
+            "Title": "مخارج افزایش سقف واحدهای سرمایه گذاری صندوق",
+            "Type": 8,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "011850",
+            "Title": "مخارج رتبه بندی",
+            "Type": 8,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "011860",
+            "Title": "مخارج عملیاتی صندوق",
+            "Type": 8,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "011875",
+            "Title": "هزینه خرید نرم افزار",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "011885",
+            "Title": "هزینه بهره سنوات آتی",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "011887",
+            "Title": "مخارج طرح دعاوی",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "011890",
+            "Title": "مالیات هزینه های ثابت صندوق",
+            "Type": 8,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                6
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011895",
+            "Title": " عوارض هزینه های ثابت صندوق",
+            "Type": 8,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                6
+              ]
+            },
+            "SubAccounts": []
+          }
+        ]
+      },
+      {
+        "Code": "0119",
+        "Title": "سرمایه گذاری در صندوق و سایر اوراق",
+        "Type": 0,
+        "Nature": 1,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "011910",
+            "Title": "سرمایه گذاری در صندوق های سرمایه گذاری",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011920",
+            "Title": "حساب ارزشیابی صندوق های سرمایه گذاری",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011930",
+            "Title": "سرمایه گذاری در اوراق سلف",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011931",
+            "Title": "حساب ارزشیابی اوراق سلف",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011940",
+            "Title": "سرمایه گذاری در سهام شرکت پروژه",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011950",
+            "Title": "صندوق های مختلط ",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": []
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011960",
+            "Title": "صندوق های در سهام غیر بورسی",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": []
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011970",
+            "Title": "صندوق های با درآمد ثابت بورسی",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": []
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011941",
+            "Title": "حساب ارزشیابی گواهی سپرده کالایی",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011911",
+            "Title": "حساب ارزشيابي در صندوق های در سهام قابل معامله در بورس",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011912",
+            "Title": "صندوق های در سهام قابل معامله در فرابورس",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011913",
+            "Title": "حساب ارزشيابي در صندوق های در سهام قابل معامله در فرابورس",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011914",
+            "Title": "صندوق های در سهام  غیر قابل معامله",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011915",
+            "Title": "حساب ارزشيابي در صندوق های در سهام غیر قابل معامله",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011916",
+            "Title": "صندوق های درآمد ثابت قابل معامله در بورس",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011917",
+            "Title": "حساب ارزشیابی صندوق های درآمد ثابت قابل معامله در بورس",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011918",
+            "Title": "صندوق های درآمد ثابت قابل معامله در فرابورس",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011919",
+            "Title": "حساب ارزشیابی صندوق های درآمد ثابت قابل معامله در فرابورس",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011921",
+            "Title": "حساب ارزشيابي در صندوق های در سهام قابل معامله در فرابورس",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011922",
+            "Title": "صندوق های مختلط قابل معامله در بورس",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011923",
+            "Title": "حساب ارزشيابي در صندوق های مختلط قابل معامله در بورس",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011924",
+            "Title": "صندوق های مختلط قابل معامله در فرابورس",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011925",
+            "Title": "حساب ارزشيابي در صندوق های مختلط قابل معامله در فرابورس",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011926",
+            "Title": "صندوق های مختلط  غیر قابل معامله",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011927",
+            "Title": "حساب ارزشيابي در صندوق های مختلط  غیر قابل معامله",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011928",
+            "Title": "صندوق های زمين و ساختمان قابل معامله در بورس",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011929",
+            "Title": "حساب ارزشيابي در صندوق های زمين و ساختمان قابل معامله در بورس",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011932",
+            "Title": "صندوق های درآمد ثابت غیر قابل معامله",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011933",
+            "Title": "حساب ارزشیابی صندوق های درآمد ثابت غیر قابل معامله",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011934",
+            "Title": "سرمایه گذاری در اوراق سلف",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011936",
+            "Title": "صندوق های پروژه قابل معامله در بورس",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011937",
+            "Title": "صندوق های پروژه غیر قابل معامله",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011938",
+            "Title": "صندوق های پروژه قابل معامله در فرابورس",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011939",
+            "Title": "حساب ارزشيابي در صندوق های پروژه قابل معامله در فرابورس",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "011935",
+            "Title": "حساب ارزشیابی اوراق سلف",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          }
+        ]
+      },
+      {
+        "Code": "0120",
+        "Title": "پیش پرداخت ها",
+        "Type": 0,
+        "Nature": 1,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "012010",
+            "Title": "پیش پرداخت به شرکت پروژه",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "012020",
+            "Title": "پیش پرداخت به مدیر ساخت",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "012030",
+            "Title": "پیش پرداخت به حسابرس",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                1,
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "012040",
+            "Title": "پیش پرداخت بیمه",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          }
+        ]
+      },
+      {
+        "Code": "0121",
+        "Title": "ساخت و ساز",
+        "Type": 0,
+        "Nature": 1,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "012110",
+            "Title": "مخارج مرتبط با زمین و آماده سازی آن",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "012115",
+            "Title": "مطالعات و طراحی",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "012120",
+            "Title": "تجهیز و برچیدن کارگاه",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "012125",
+            "Title": "مواد و مصالح",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "012130",
+            "Title": "دستمزد اجرا",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "012135",
+            "Title": "محوطه سازی",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "012140",
+            "Title": "هزینه های کارکنان",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "012145",
+            "Title": "اجاره ماشین آلات",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "012150",
+            "Title": "عوارض ساخت و تفکیک",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "012155",
+            "Title": "اتشعابات",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "012160",
+            "Title": "بهای تمام شده واحدهای تکمیل شده فروش نرفته",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "012165",
+            "Title": "بهای تمام شده واحدهای فروش رفته",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          }
+        ]
+      },
+      {
+        "Code": "0122",
+        "Title": "دارایی ها",
+        "Type": 0,
+        "Nature": 1,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "012210",
+            "Title": "زمین",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "012220",
+            "Title": "ساختمان",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "012230",
+            "Title": "تاسیسات",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "012240",
+            "Title": "ماشین آلات و تجهیزات",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "012250",
+            "Title": "اثاثیه و منصوبات",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "012260",
+            "Title": "ابزارآلات",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "012270",
+            "Title": "وسایل نقلیه",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "012280",
+            "Title": "استهلاک انباشته",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          }
+        ]
+      },
+      {
+        "Code": "0127",
+        "Title": "ذخیره تغییر ارزش سهام",
+        "Type": 0,
+        "Nature": 1,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "012710",
+            "Title": "ذخیره تغییر ارزش سهام",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Code": "02",
+    "Title": "بدهی های جاری",
+    "Type": 0,
+    "Nature": 2,
+    "Level": 1,
+    "SubAccountCodeLength": 4,
+    "DetailAccountTypes": null,
+    "SubAccounts": [
+      {
+        "Code": "0220",
+        "Title": "پیش دریافت ها",
+        "Type": 0,
+        "Nature": 2,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "022010",
+            "Title": "پیش دریافت سود سپرده بانکی",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                1
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "022020",
+            "Title": "پیش دریافت سود اوراق بهادار با درآمد ثابت",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                1
+              ]
+            },
+            "SubAccounts": []
+          }
+        ]
+      },
+      {
+        "Code": "0221",
+        "Title": "حسابهای پرداختنی تجاری",
+        "Type": 0,
+        "Nature": 2,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "022110",
+            "Title": "خرید اقساطی سهام",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "022120",
+            "Title": "پرداختنی بابت اختیار معامله",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "022130",
+            "Title": "پرداختنی بابت اختیار تبعی",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          }
+        ]
+      },
+      {
+        "Code": "0222",
+        "Title": "بدهی به سرمایه گذاران",
+        "Type": 0,
+        "Nature": 2,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "022210",
+            "Title": "بدهی بابت درخواست صدور واحدهای سرمایه گذاری ممتاز",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "022220",
+            "Title": "بدهی بابت درخواست صدور واحدهای سرمایه گذاری عادی",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "022230",
+            "Title": "بدهی بابت تتمه واحدهای صادر شده",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "022240",
+            "Title": "بدهی بابت واحدهای ابطال شده",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "022250",
+            "Title": "بدهی بابت سود پرداختنی به سرمایه گذاران ممتاز",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "022260",
+            "Title": "بدهی بابت سود پرداختنی به سرمایه گذاران عادی",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "022270",
+            "Title": "بدهی به سرمایه گذاران بابت پرداخت ذخیره ناشی از تغییرات ارزش سهام",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          }
+        ]
+      },
+      {
+        "Code": "0223",
+        "Title": "پرداختنی به ارکان صندوق",
+        "Type": 0,
+        "Nature": 2,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "022360",
+            "Title": "پرداختنی به بازارگردان",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "022310",
+            "Title": "پرداختنی به مدیر",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5,
+                6,
+                99
+              ],
+              "Level2": [
+                6
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "022320",
+            "Title": "پرداختنی به متولی",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "022330",
+            "Title": "پرداختنی به ضامن",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "022340",
+            "Title": "پرداختنی به حسابرس",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "022350",
+            "Title": "پرداختنی به مدیر (مدیر ثبت) بابت صدور و ابطال",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "022351",
+            "Title": "مالیات پرداختنی به مدیر (مدیر ثبت) بابت صدور و ابطال",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          }
+        ]
+      },
+      {
+        "Code": "0224",
+        "Title": "ذخیره هزینه ارکان",
+        "Type": 0,
+        "Nature": 2,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "022410",
+            "Title": "ذخیره کارمزد مدیر",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "022411",
+            "Title": "ذخیره کارمزد مدیر مبتنی بر عملکرد",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "022420",
+            "Title": "ذخیره کارمزد متولی",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "022430",
+            "Title": "ذخیره کارمزد ضامن",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "022440",
+            "Title": "ذخیره حق الزحمه حسابرس",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "022450",
+            "Title": "ذخیره کارمزد بازارگردان",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "022460",
+            "Title": "ذخیره مالیات ارکان",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                1,
+                2,
+                4,
+                5,
+                8,
+                99
+              ],
+              "Level2": [
+                8
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "022465",
+            "Title": "ذخیره عوارض ارکان",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                1,
+                2,
+                4,
+                5,
+                8,
+                99
+              ],
+              "Level2": [
+                8
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "022470",
+            "Title": "ذخیره کارمزد ضامن سودآوری",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                1,
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "022480",
+            "Title": "ذخیره کارمزد ضامن نقدشوندگی",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                1,
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "022490",
+            "Title": "ذخیره کارمزد مدیر ثبت",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                1,
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "022495",
+            "Title": "ذخیره کارمزد مدیر سرمایه گذاری",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                1,
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "022412",
+            "Title": "ذخیره کارمزد مدیر ثبت مبتنی بر عملکرد",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "022421",
+            "Title": "ذخیره کارمزد متولی مبتنی بر عملکرد",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "022431",
+            "Title": "ذخیره کارمزد ضامن نقدشوندگی مبتنی بر عملکرد",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "022432",
+            "Title": "ذخیره کارمزد ضامن سودآوری مبتنی بر عملکرد",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "022451",
+            "Title": "ذخیره کارمزد بازارگردان مبتنی بر عملکرد",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "022413",
+            "Title": "ذخیره کارمزد مدیر سرمایه گذاری مبتنی بر عملکرد",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          }
+        ]
+      },
+      {
+        "Code": "0225",
+        "Title": "سایر حسابهای پرداختنی",
+        "Type": 0,
+        "Nature": 2,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "022555",
+            "Title": "ذخیره تغییر ارزش سهام",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "022515",
+            "Title": "ذخیره انبارداری",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "022540",
+            "Title": "ذخیره هزینه نرم افزار",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "022541",
+            "Title": "ذخیره مالیات هزینه نرم افزار",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "022542",
+            "Title": "ذخیره عوارض هزینه نرم افزار",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "022510",
+            "Title": "ذخیره نگهداری اوراق بهادار بی نام",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "022520",
+            "Title": "ذخیره کارمزد تصفیه",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "022521",
+            "Title": "ذخیره تبلیغات",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "022530",
+            "Title": "وجوه واریزی نامشخص",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "022550",
+            "Title": "ذخیره برگشت سود گواهی بانکی",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                1
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "022560",
+            "Title": "ذخیره تنزیل سود دریافتنی سپرده بانکی",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                1
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "022570",
+            "Title": "ذخیره حساب تنزیل سود دریافتنی سهام",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "022580",
+            "Title": "سایر حسابهای پرداختنی",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "022590",
+            "Title": "ذخیره مالیات هزینه های ثابت صندوق",
+            "Type": 8,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                6
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "022595",
+            "Title": "ذخیره عوارض هزینه های ثابت صندوق",
+            "Type": 8,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                6
+              ]
+            },
+            "SubAccounts": []
+          }
+        ]
+      },
+      {
+        "Code": "0226",
+        "Title": "تسهیلات مالی دریافتی",
+        "Type": 0,
+        "Nature": 2,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "022610",
+            "Title": "تسهیلات مالی دریافتی",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Code": "03",
+    "Title": "خالص دارایی ها",
+    "Type": 0,
+    "Nature": 2,
+    "Level": 1,
+    "SubAccountCodeLength": 4,
+    "DetailAccountTypes": null,
+    "SubAccounts": [
+      {
+        "Code": "0331",
+        "Title": "خالص دارایی ها",
+        "Type": 0,
+        "Nature": 2,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "033110",
+            "Title": "واحدهای سرمایه گذاری عادی",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5,
+                99
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "033120",
+            "Title": "تغییرات ارزش ناشی از عملکرد",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "033130",
+            "Title": "واحدهای سرمایه گذاری ممتاز",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          }
+        ]
+      },
+      {
+        "Code": "0332",
+        "Title": "تعدیلات",
+        "Type": 0,
+        "Nature": 2,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "033210",
+            "Title": "تعدیلات ارزشگذاری صدور واحدهای عادی",
+            "Type": 1,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "033220",
+            "Title": "تعدیلات ارزشگذاری ابطال واحدهای عادی",
+            "Type": 1,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5,
+                99
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "033230",
+            "Title": "تعدیلات ارزشیابی دارایی ها به خالص ارزش فروش",
+            "Type": 1,
+            "Nature": 4,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          }
+        ]
+      },
+      {
+        "Code": "0357",
+        "Title": "خلاصه حساب سود و زیان",
+        "Type": 0,
+        "Nature": 4,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "035710",
+            "Title": "خلاصه حساب سود و زیان",
+            "Type": 1,
+            "Nature": 4,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Code": "04",
+    "Title": "درآمد",
+    "Type": 0,
+    "Nature": 2,
+    "Level": 1,
+    "SubAccountCodeLength": 4,
+    "DetailAccountTypes": null,
+    "SubAccounts": [
+      {
+        "Code": "0441",
+        "Title": "سود(زیان) فروش اوراق بهادار",
+        "Type": 0,
+        "Nature": 2,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "044110",
+            "Title": "سود(زیان) ناشی از فروش سهام",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044111",
+            "Title": "سود(زیان) فروش سرمایه گذاری در صندوق های پروژه بورسی",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": []
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044113",
+            "Title": "سود(زیان) فروش سرمایه گذاری در صندوق های پروژه فرابورسی",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": []
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044115",
+            "Title": "سود(زیان) ناشی از ابطال اوراق تبعی حمایتی",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044117",
+            "Title": "زیان فروش سرمایه گذاری در صندوق های پروژه  غير قابل معامله",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044122",
+            "Title": "سود(زیان) فروش گواهی سپرده بورسی",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": []
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044124",
+            "Title": "سود(زیان) فروش اوراق مشاركت رهنی",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": []
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044126",
+            "Title": "سود(زیان) فروش اوراق اجاره",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": []
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044128",
+            "Title": "سود(زیان) فروش اوراق مرابحه",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": []
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044130",
+            "Title": "سود(زیان) ناشی از فروش اوراق مشارکت",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044150",
+            "Title": "سود(زیان) فروش اوراق مشارکت بورسی",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": []
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044160",
+            "Title": "سود(زیان) فروش اوراق مشارکت غیر بورسی",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044170",
+            "Title": "سود(زیان) ناشی از فروش صندوق های سرمایه گذاری",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044180",
+            "Title": "سود(زیان) ناشی از فروش سلف",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044120",
+            "Title": "سود(زیان) ناشی از فروش حق تقدم سهام",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044140",
+            "Title": "سود(زیان) ناشی از فروش گواهی سپرده بانکی",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044190",
+            "Title": "سود و زیان ناشی از تسویه اختیار",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044174",
+            "Title": "سود فروش سرمایه گذاری در صندوق های در سهام غير قابل معامله",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044175",
+            "Title": "زیان فروش سرمایه گذاری در صندوق های در سهام غير قابل معامله",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044176",
+            "Title": "سود فروش سرمایه گذاری در صندوق های درآمد ثابت غير قابل معامله",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044177",
+            "Title": "زیان فروش سرمایه گذاری در صندوق های درآمد ثابت غير قابل معامله",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044186",
+            "Title": "سود فروش سرمایه گذاری در صندوق های مختلط  غير قابل معامله",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044187",
+            "Title": "زیان فروش سرمایه گذاری در صندوق های مختلط  غير قابل معامله",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044116",
+            "Title": "سود فروش سرمایه گذاری در صندوق های پروژه  غير قابل معامله",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044118",
+            "Title": "سود و زیان ناشی از فروش گواهی سپرده کالایی",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044195",
+            "Title": "سود و زیان ناشی از تسویه اوراق تبعی حمایتی",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044196",
+            "Title": "سود و زیان ناشی از تسویه اوراق تبعی تامین مالی",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044135",
+            "Title": "سود(زیان) ناشی از ابطال اوراق تبعی تامین مالی",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          }
+        ]
+      },
+      {
+        "Code": "0442",
+        "Title": "درآمد سود سهام",
+        "Type": 0,
+        "Nature": 2,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "044210",
+            "Title": "درآمد سود سهام",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          }
+        ]
+      },
+      {
+        "Code": "0443",
+        "Title": "سود سپرده سرمایه گذاری و گواهی سپرده بانکی",
+        "Type": 0,
+        "Nature": 2,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "044310",
+            "Title": "سود گواهی سپرده بانکی",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044320",
+            "Title": "سود سپرده بانکی",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                1
+              ]
+            },
+            "SubAccounts": []
+          }
+        ]
+      },
+      {
+        "Code": "0444",
+        "Title": "سود اوراق بهادار با درآمد ثابت",
+        "Type": 0,
+        "Nature": 2,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "044410",
+            "Title": "سود اوراق مشارکت",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044420",
+            "Title": "سود اوراق مشارکت بورسی",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": []
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044430",
+            "Title": "درآمد سود اوراق مشارکت رهنی",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": []
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044440",
+            "Title": "درآمد سود اوراق اجاره",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": []
+            },
+            "SubAccounts": []
+          }
+        ]
+      },
+      {
+        "Code": "0445",
+        "Title": "درآمد (هزینه) ناشی از تغییر ارزش سرمایه گذاری ها",
+        "Type": 0,
+        "Nature": 2,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "044510",
+            "Title": "درآمد (هزینه) تغییر ارزش سرمایه گذاری در سهام",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044520",
+            "Title": "درآمد (هزینه) تغییر ارزش سرمایه گذاری در حق تقدم سهام",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044530",
+            "Title": "درآمد (هزینه) تغییر ارزش سرمایه گذاری در اوراق مشارکت",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044557",
+            "Title": "درآمد (هزینه) تغییر ارزش سرمایه گذاری در صندوق های با درآمد ثابت بورسی",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": []
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044558",
+            "Title": "درآمد (هزینه) تغییر ارزش سرمایه گذاری در صندوق های با درآمد ثابت فرابورسی",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": []
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044559",
+            "Title": "درآمد (هزینه) تغییر ارزش سرمایه گذاری در صندوق های با درآمد ثابت غیربورسی",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": []
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044580",
+            "Title": "درآمد (هزینه) تغییر ارزش سرمایه گذاری در اوراق تبعی حمایتی",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044585",
+            "Title": "درآمد (هزینه) تغییر ارزش سرمایه گذاری در اوراق تبعی تامین مالی",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044562",
+            "Title": "درآمد (هزينه) تغيير ارزش سرمایه گذاری در صندوق های در سهام غیرقابل معامله",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044568",
+            "Title": "درآمد (هزينه) تغيير ارزش سرمایه گذاری در صندوق های مختلط غیرقابل معامله",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044563",
+            "Title": "درآمد (هزينه) تغيير ارزش سرمایه گذاری در صندوق های زمین و ساختمان غیرقابل معامله",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044564",
+            "Title": "درآمد (هزينه) تغيير ارزش سرمایه گذاری در صندوق های پروژه غیرقابل معامله",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044565",
+            "Title": "درآمد (هزينه) تغيير ارزش سرمایه گذاری در صندوق های درآمد ثابت غیرقابل معامله",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044570",
+            "Title": "درآمد (هزینه) تغییر ارزش سرمایه گذاری در صندوق های سرمایه گذاری",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044515",
+            "Title": "درآمد (هزینه) تغییر ارزش سرمایه گذاری در گواهی سپرده کالایی",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044561",
+            "Title": "درآمد (هزينه) تغيير ارزش سرمایه گذاری در صندوق های  غیرقابل معامله",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044540",
+            "Title": "درآمد (هزینه) تغییر ارزش سرمایه گذاری در اوراق سلف",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          }
+        ]
+      },
+      {
+        "Code": "0446",
+        "Title": "درآمد تعهد پذیره نویسی اوراق",
+        "Type": 0,
+        "Nature": 2,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "044610",
+            "Title": "درآمد تعهد پذیره نویسی اوراق بهادار با درآمد ثابت",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          }
+        ]
+      },
+      {
+        "Code": "0447",
+        "Title": "سایر درآمدها",
+        "Type": 0,
+        "Nature": 2,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "044710",
+            "Title": "سایر درآمدها",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                99
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044720",
+            "Title": "درآمد برگشت سود گواهی بانکی",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                1
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044731",
+            "Title": "درآمد سود دریافتنی وجه تضمین نزد سپرده گذاری",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "044750",
+            "Title": "تعدیل کارمزد کارگزار",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044760",
+            "Title": "درآمد تنزیل سود بانک",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                1
+              ]
+            },
+            "SubAccounts": []
+          }
+        ]
+      },
+      {
+        "Code": "0448",
+        "Title": "درآمد هزینه سرمایه گذاری در ابزار مالی جدید",
+        "Type": 0,
+        "Nature": 2,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "044810",
+            "Title": "درآمد(هزینه) سرمایه گذاری در قرارداد فروش تعهدی مالک سهام",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044820",
+            "Title": "درآمد(هزینه) سرمایه گذاری در قرارداد فروش تعهدی متقاضی سهام",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044830",
+            "Title": "درآمد هزینه ناشی از مبلغ تشویقی فروش تعهدی سهام",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          }
+        ]
+      },
+      {
+        "Code": "0449",
+        "Title": "سود صندوق های سرمایه گذاری",
+        "Type": 0,
+        "Nature": 2,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "044910",
+            "Title": "سود تقسیمی صندوق های سرمایه گذاری",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044920",
+            "Title": "سود سرمایه گذاری در صندوق های در سهام قابل معامله در فرابورس",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": []
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044930",
+            "Title": "سود سرمایه گذاری در صندوق های در سهام غیربورسی",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": []
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044940",
+            "Title": "سود سرمایه گذاری در صندوق های با درآمد ثابت قابل معامله در بورس",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": []
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044950",
+            "Title": "سود سرمایه گذاری در صندوق های با درآمد ثابت قابل معامله در فرابورس",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": []
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044960",
+            "Title": "سود سرمایه گذاری در صندوق های با درآمد ثابت غیربورسی",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": []
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044970",
+            "Title": "سود سرمایه گذاری در صندوق های مختلط قابل معامله در بورس",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": []
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044980",
+            "Title": "سود سرمایه گذاری در صندوق های مختلط قابل معامله در فرابورس",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": []
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "044990",
+            "Title": "سود سرمایه گذاری در صندوق های مختلط غیر قابل قابل معامله",
+            "Type": 2,
+            "Nature": 2,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": []
+            },
+            "SubAccounts": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Code": "05",
+    "Title": "هزینه",
+    "Type": 0,
+    "Nature": 1,
+    "Level": 1,
+    "SubAccountCodeLength": 4,
+    "DetailAccountTypes": null,
+    "SubAccounts": [
+      {
+        "Code": "0550",
+        "Title": "هزینه های کارمزد ارکان",
+        "Type": 0,
+        "Nature": 1,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "055010",
+            "Title": "هزینه کارمزد مدیر",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "055011",
+            "Title": "هزینه کارمزد مدیر مبتنی بر عملکرد",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "055020",
+            "Title": "هزینه کارمزد متولی",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "055030",
+            "Title": "هزینه کارمزد ضامن",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                1,
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "055040",
+            "Title": "هزینه حق الزحمه حسابرس",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "055050",
+            "Title": "هزینه کارمزد بازارگردان",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                1,
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "055060",
+            "Title": "هزینه مالیات ارکان",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                1,
+                2,
+                4,
+                5,
+                8,
+                99
+              ],
+              "Level2": [
+                8
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "055065",
+            "Title": "هزینه عوارض ارکان",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                1,
+                2,
+                4,
+                5,
+                8,
+                99
+              ],
+              "Level2": [
+                8
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "055070",
+            "Title": "هزینه کارمزد ضامن سودآوری",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                1,
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "055080",
+            "Title": "هزینه کارمزد ضامن نقدشوندگی",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                1,
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "055090",
+            "Title": "هزینه کارمزد مدیر ثبت",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                1,
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "055095",
+            "Title": "هزینه کارمزد مدیر سرمایه گذاری",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                1,
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "055012",
+            "Title": "هزینه کارمزد مدیر ثبت مبتنی بر عملکرد",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "055013",
+            "Title": "هزینه کارمزد مدیر سرمایه گذاری مبتنی بر عملکرد",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "055021",
+            "Title": "هزینه کارمزد متولی مبتنی بر عملکرد",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "055031",
+            "Title": "هزینه کارمزد ضامن نقدشوندگی مبتنی بر عملکرد",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                1,
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "055032",
+            "Title": "هزینه کارمزد ضامن سودآوری مبتنی بر عملکرد",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                1,
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "055051",
+            "Title": "هزینه کارمزد بازارگردان مبتنی بر عملکرد",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                1,
+                2,
+                4,
+                5
+              ]
+            },
+            "SubAccounts": []
+          }
+        ]
+      },
+      {
+        "Code": "0551",
+        "Title": "هزینه تاسیس",
+        "Type": 0,
+        "Nature": 1,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "055110",
+            "Title": "هزینه تاسیس",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "055190",
+            "Title": "هزینه نرم افزار",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "055191",
+            "Title": "هزینه مالیات نرم افزار",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "055192",
+            "Title": "هزینه عوارض  نرم افزار",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          }
+        ]
+      },
+      {
+        "Code": "0552",
+        "Title": "هزینه برگزاری مجامع",
+        "Type": 0,
+        "Nature": 1,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "055210",
+            "Title": "هزینه برگزاری مجامع",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          }
+        ]
+      },
+      {
+        "Code": "0553",
+        "Title": "سایر هزینه ها",
+        "Type": 0,
+        "Nature": 1,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "055310",
+            "Title": "هزینه تصفیه",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "055320",
+            "Title": "هزینه نگهداری اوراق بهادار بی نام",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "055330",
+            "Title": "هزینه دعاوی حقوقی",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "055340",
+            "Title": "هزینه پذیرش و عضویت در کانون ها",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "055350",
+            "Title": "هزینه تنزیل سود دریافتنی سپرده بانکی",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                1
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "055360",
+            "Title": "حساب تنزیل سود دریافتنی سهام",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "055370",
+            "Title": "هزینه برگشت سود گواهی بانکی",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "055380",
+            "Title": "هزینه کارمزد بانکی",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                1,
+                99
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "055390",
+            "Title": "هزینه رتبه بندی صندوق های سرمایه گذاری",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "055396",
+            "Title": "هزینه کارمزد ابطال واحد صندوق غیر بورسی",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "055397",
+            "Title": "هزینه آبونمان نرم افزار",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "055398",
+            "Title": "مالیات هزینه آبونمان نرم افزار",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "055399",
+            "Title": "عوارض هزینه آبونمان نرم افزار",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "055345",
+            "Title": "ثبت و نظارت سازمان بورس و اوراق بهادار",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "055346",
+            "Title": "مخارج اشتراک خدمات سپرده گذاری و نگهداری اوراق",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "055347",
+            "Title": "مخارج افزایش سقف واحدهای سرمایه گذاری صندوق",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "055348",
+            "Title": "مخارج عملیاتی صندوق",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "055315",
+            "Title": "هزینه انبارداری",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "055395",
+            "Title": "سایر هزینه ها",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                99
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "055365",
+            "Title": "حساب تنزیل سود دریافتنی اوراق",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          }
+        ]
+      },
+      {
+        "Code": "0554",
+        "Title": "هزینه کارمزد معاملات",
+        "Type": 0,
+        "Nature": 1,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "055450",
+            "Title": "هزینه کارمزد فروش اوراق سلف",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3,
+                5
+              ],
+              "Level2": [
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "055470",
+            "Title": "هزینه کارمزد فروش صندوق",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3,
+                5
+              ],
+              "Level2": [
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "055410",
+            "Title": "هزینه کارمزد فروش",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3,
+                5,
+                99
+              ],
+              "Level2": [
+                5,
+                99
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "055411",
+            "Title": "هزینه کارمزد فروش گواهی سپرده کالایی",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3,
+                5
+              ],
+              "Level2": [
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "055412",
+            "Title": "هزینه معاملات گواهی سپرده كالایی فرابورسی",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": []
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "055413",
+            "Title": "هزینه کارمزد فروش آتی",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "055416",
+            "Title": "هزینه کارمزد فروش اختیار خرید سهم",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "055417",
+            "Title": "هزینه کارمزد فروش اختیار فروش سهم",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "055418",
+            "Title": "هزینه کارمزد فروش گواهی سپرده",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "055420",
+            "Title": "هزینه کارمزد فروش حق تقدم استفاده نشده",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "055430",
+            "Title": "هزینه کارمزد فروش اوراق مشارکت",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3,
+                5
+              ],
+              "Level2": [
+                5
+              ]
+            },
+            "SubAccounts": []
+          },
+          {
+            "Code": "055440",
+            "Title": "هزینه کارمزد فروش حق تقدم استفاده نشده",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3,
+                5
+              ],
+              "Level2": [
+                5
+              ]
+            },
+            "SubAccounts": []
+          }
+        ]
+      },
+      {
+        "Code": "0555",
+        "Title": "هزینه های مالی",
+        "Type": 0,
+        "Nature": 1,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "055510",
+            "Title": "هزینه تسهیلات بانکی",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                1
+              ]
+            },
+            "SubAccounts": []
+          }
+        ]
+      },
+      {
+        "Code": "0556",
+        "Title": "هزینه مالیات معاملات",
+        "Type": 0,
+        "Nature": 1,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "055610",
+            "Title": "هزینه مالیات فروش سهام و حق تقدم",
+            "Type": 2,
+            "Nature": 1,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": {
+              "Level1": [
+                3,
+                5,
+                7,
+                99
+              ],
+              "Level2": [
+                5,
+                99
+              ],
+              "Level3": [
+                7
+              ]
+            },
+            "SubAccounts": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Code": "09",
+    "Title": "حسابهای انتظامی",
+    "Type": 0,
+    "Nature": 4,
+    "Level": 1,
+    "SubAccountCodeLength": 4,
+    "DetailAccountTypes": null,
+    "SubAccounts": [
+      {
+        "Code": "0990",
+        "Title": "تراز اختتامیه/افتتاحیه",
+        "Type": 0,
+        "Nature": 4,
+        "Level": 2,
+        "SubAccountCodeLength": 6,
+        "DetailAccountTypes": null,
+        "SubAccounts": [
+          {
+            "Code": "099010",
+            "Title": "تراز افتتاحیه",
+            "Type": 1,
+            "Nature": 4,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          },
+          {
+            "Code": "099020",
+            "Title": "تراز اختتامیه",
+            "Type": 1,
+            "Nature": 4,
+            "Level": 3,
+            "SubAccountCodeLength": 0,
+            "DetailAccountTypes": null,
+            "SubAccounts": []
+          }
+        ]
+      }
+    ]
+  }
+]

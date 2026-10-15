@@ -1,0 +1,16 @@
+C:\Total Project\New project\NewMarketAnalyzer\backend\MarketAnalyzer.Persistence\bin\Debug\net8.0\MarketAnalyzer.Persistence.deps.json
+C:\Total Project\New project\NewMarketAnalyzer\backend\MarketAnalyzer.Persistence\bin\Debug\net8.0\MarketAnalyzer.Persistence.dll
+C:\Total Project\New project\NewMarketAnalyzer\backend\MarketAnalyzer.Persistence\bin\Debug\net8.0\MarketAnalyzer.Persistence.pdb
+C:\Total Project\New project\NewMarketAnalyzer\backend\MarketAnalyzer.Persistence\bin\Debug\net8.0\MarketAnalyzer.Abstractions.dll
+C:\Total Project\New project\NewMarketAnalyzer\backend\MarketAnalyzer.Persistence\bin\Debug\net8.0\MarketAnalyzer.Abstractions.pdb
+C:\Total Project\New project\NewMarketAnalyzer\backend\MarketAnalyzer.Persistence\obj\Debug\net8.0\MarketAnalyzer.Persistence.csproj.AssemblyReference.cache
+C:\Total Project\New project\NewMarketAnalyzer\backend\MarketAnalyzer.Persistence\obj\Debug\net8.0\MarketAnalyzer.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Total Project\New project\NewMarketAnalyzer\backend\MarketAnalyzer.Persistence\obj\Debug\net8.0\MarketAnalyzer.Persistence.AssemblyInfoInputs.cache
+C:\Total Project\New project\NewMarketAnalyzer\backend\MarketAnalyzer.Persistence\obj\Debug\net8.0\MarketAnalyzer.Persistence.AssemblyInfo.cs
+C:\Total Project\New project\NewMarketAnalyzer\backend\MarketAnalyzer.Persistence\obj\Debug\net8.0\MarketAnalyzer.Persistence.csproj.CoreCompileInputs.cache
+C:\Total Project\New project\NewMarketAnalyzer\backend\MarketAnalyzer.Persistence\obj\Debug\net8.0\MarketAnalyzer.Persistence.sourcelink.json
+C:\Total Project\New project\NewMarketAnalyzer\backend\MarketAnalyzer.Persistence\obj\Debug\net8.0\MarketAn.BC655FA7.Up2Date
+C:\Total Project\New project\NewMarketAnalyzer\backend\MarketAnalyzer.Persistence\obj\Debug\net8.0\MarketAnalyzer.Persistence.dll
+C:\Total Project\New project\NewMarketAnalyzer\backend\MarketAnalyzer.Persistence\obj\Debug\net8.0\refint\MarketAnalyzer.Persistence.dll
+C:\Total Project\New project\NewMarketAnalyzer\backend\MarketAnalyzer.Persistence\obj\Debug\net8.0\MarketAnalyzer.Persistence.pdb
+C:\Total Project\New project\NewMarketAnalyzer\backend\MarketAnalyzer.Persistence\obj\Debug\net8.0\ref\MarketAnalyzer.Persistence.dll

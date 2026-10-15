@@ -1,0 +1,12 @@
+C:\Total Project\New project\NewMarketAnalyzer\shared\MarketAnalyzer.ApiClient\bin\Debug\net8.0\MarketAnalyzer.ApiClient.deps.json
+C:\Total Project\New project\NewMarketAnalyzer\shared\MarketAnalyzer.ApiClient\bin\Debug\net8.0\MarketAnalyzer.ApiClient.dll
+C:\Total Project\New project\NewMarketAnalyzer\shared\MarketAnalyzer.ApiClient\bin\Debug\net8.0\MarketAnalyzer.ApiClient.pdb
+C:\Total Project\New project\NewMarketAnalyzer\shared\MarketAnalyzer.ApiClient\obj\Debug\net8.0\MarketAnalyzer.ApiClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Total Project\New project\NewMarketAnalyzer\shared\MarketAnalyzer.ApiClient\obj\Debug\net8.0\MarketAnalyzer.ApiClient.AssemblyInfoInputs.cache
+C:\Total Project\New project\NewMarketAnalyzer\shared\MarketAnalyzer.ApiClient\obj\Debug\net8.0\MarketAnalyzer.ApiClient.AssemblyInfo.cs
+C:\Total Project\New project\NewMarketAnalyzer\shared\MarketAnalyzer.ApiClient\obj\Debug\net8.0\MarketAnalyzer.ApiClient.csproj.CoreCompileInputs.cache
+C:\Total Project\New project\NewMarketAnalyzer\shared\MarketAnalyzer.ApiClient\obj\Debug\net8.0\MarketAnalyzer.ApiClient.sourcelink.json
+C:\Total Project\New project\NewMarketAnalyzer\shared\MarketAnalyzer.ApiClient\obj\Debug\net8.0\MarketAnalyzer.ApiClient.dll
+C:\Total Project\New project\NewMarketAnalyzer\shared\MarketAnalyzer.ApiClient\obj\Debug\net8.0\refint\MarketAnalyzer.ApiClient.dll
+C:\Total Project\New project\NewMarketAnalyzer\shared\MarketAnalyzer.ApiClient\obj\Debug\net8.0\MarketAnalyzer.ApiClient.pdb
+C:\Total Project\New project\NewMarketAnalyzer\shared\MarketAnalyzer.ApiClient\obj\Debug\net8.0\ref\MarketAnalyzer.ApiClient.dll

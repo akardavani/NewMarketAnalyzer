@@ -1,0 +1,52 @@
+[
+  {
+    "Id": 1,
+    "Indicator": 1,
+    "Name": "بانک‌ها"
+  },
+  {
+    "Id": 2,
+    "Indicator": 2,
+    "Name": "اشخاص"
+  },
+  {
+    "Id": 3,
+    "Indicator": 3,
+    "Name": "سهام"
+  },
+  {
+    "Id": 4,
+    "Indicator": 4,
+    "Name": "شرکت‌ها"
+  },
+  {
+    "Id": 5,
+    "Indicator": 5,
+    "Name": "کارگزاری‌ها"
+  },
+  {
+    "Id": 6,
+    "Indicator": 6,
+    "Name": "نوع هزینه"
+  },
+  {
+    "Id": 7,
+    "Indicator": 7,
+    "Name": "نوع نماد"
+  },
+  {
+    "Id": 8,
+    "Indicator": 8,
+    "Name": "نقش رکن"
+  },
+  {
+    "Id": 9,
+    "Indicator": 9,
+    "Name": "هدف از انتشار اوراق تبعی"
+  },
+  {
+    "Id": 99,
+    "Indicator": 99,
+    "Name": "سایر"
+  }
+]

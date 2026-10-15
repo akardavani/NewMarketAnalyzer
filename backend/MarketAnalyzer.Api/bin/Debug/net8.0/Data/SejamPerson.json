@@ -1,0 +1,339 @@
+[
+  {
+    "data": {
+      "mobile": 989134235497,
+      "email": null,
+      "uniqueIdentifier": "5419779757",
+      "type": "IranianPrivatePerson",
+      "status": "Sejami",
+      "privatePerson": {
+        "firstName": "حمید ",
+        "lastName": "کیانی",
+        "fatherName": "علی",
+        "gender": "Male",
+        "seriShChar": "ا",
+        "seriSh": "14",
+        "serial": "485427",
+        "shNumber": "26",
+        "birthDate": "1982-06-27T00:00:00",
+        "placeOfIssue": "لنجان",
+        "placeOfBirth": "لنجان",
+        "signatureFile": null
+      },
+      "legalPerson": null,
+      "addresses": [
+        {
+          "postalCode": "8481974691",
+          "country": {
+            "id": 1,
+            "name": "ایران"
+          },
+          "province": {
+            "id": 137,
+            "name": "اصفهان"
+          },
+          "city": {
+            "id": 2468,
+            "name": "مبارکه"
+          },
+          "section": {
+            "id": 3437,
+            "name": "مرکزی"
+          },
+          "cityPrefix": "031",
+          "remnantAddress": " خیابان طالقانی",
+          "alley": "ارشاد هشتم",
+          "plaque": "23",
+          "tel": "52410540",
+          "countryPrefix": null,
+          "mobile": null,
+          "emergencyTel": null,
+          "emergencyTelCityPrefix": null,
+          "emergencyTelCountryPrefix": null,
+          "faxPrefix": null,
+          "fax": null,
+          "website": null,
+          "email": "parssmobin@gmail.com"
+        }
+      ],
+      "tradingCodes": [
+        {
+          "type": "StockExchange",
+          "firstPart": "کیا18523",
+          "secondPart": "",
+          "thirdPart": "",
+          "code": "کیا18523"
+        }
+      ],
+      "agent": null,
+      "accounts": [
+        {
+          "accountNumber": "0247439151",
+          "type": "SavingAccount",
+          "sheba": "IR550160000000000247439151",
+          "bank": {
+            "id": 123115,
+            "name": "بانک کشاورزی"
+          },
+          "branchCode": "2544",
+          "branchName": "بانک کشاورزی",
+          "branchCity": {
+            "id": 2468,
+            "name": "مبارکه"
+          },
+          "isDefault": true
+        }
+      ],
+      "jobInfo": {
+        "employmentDate": null,
+        "companyName": "مجتمع فولاد مبارکه ",
+        "companyAddress": "مجتمع فولاد مبارکه اصفهان کیلومتر 75 جنوب غربی اصفهان ",
+        "companyPostalCode": "8488111131",
+        "companyEmail": "parssmobin@gmail.com",
+        "companyWebSite": null,
+        "companyCityPrefix": "031",
+        "companyPhone": "52736363",
+        "position": null,
+        "companyFaxPrefix": null,
+        "companyFax": null,
+        "job": {
+          "id": 109180,
+          "title": "کارمند"
+        },
+        "jobDescription": null
+      },
+      "financialInfo": {
+        "assetsValue": null,
+        "inComingAverage": null,
+        "sExchangeTransaction": null,
+        "cExchangeTransaction": null,
+        "outExchangeTransaction": null,
+        "transactionLevel": "One",
+        "tradingKnowledgeLevel": "Low",
+        "companyPurpose": null,
+        "referenceRateCompany": null,
+        "rateDate": null,
+        "rate": null,
+        "financialBrokers": []
+      },
+      "legalPersonShareholders": [],
+      "legalPersonStakeholders": []
+    },
+    "meta": null,
+    "error": null
+  },
+
+  {
+    "data": {
+      "mobile": 989186887417,
+      "email": null,
+      "uniqueIdentifier": "10660170226",
+      "type": "IranianLegalPerson",
+      "status": "Sejami",
+      "privatePerson": null,
+      "legalPerson": {
+        "companyName": "چابک سازان زاگرس",
+        "citizenshipCountry": null,
+        "registerNumber": "17197",
+        "registerPlace": "کرمانشاه",
+        "registerDate": "2013-01-20T00:00:00",
+        "economicCode": "411445133684",
+        "evidenceReleaseCompany": null,
+        "evidenceReleaseDate": null,
+        "evidenceExpirationDate": null,
+        "legalPersonTypeCategory": null,
+        "legalPersonTypeSubCategory": null
+      },
+      "addresses": [
+        {
+          "postalCode": "6714783887",
+          "country": {
+            "id": 1,
+            "name": "ایران"
+          },
+          "province": {
+            "id": 147,
+            "name": "کرمانشاه"
+          },
+          "city": {
+            "id": 2533,
+            "name": "کرمانشاه"
+          },
+          "section": {
+            "id": 3350,
+            "name": "مرکزی"
+          },
+          "cityPrefix": "083",
+          "remnantAddress": "چهار راه سنگر",
+          "alley": "لادن 5 ",
+          "plaque": "417",
+          "tel": "38354558",
+          "countryPrefix": null,
+          "mobile": "9181323486",
+          "emergencyTel": null,
+          "emergencyTelCityPrefix": null,
+          "emergencyTelCountryPrefix": null,
+          "faxPrefix": null,
+          "fax": null,
+          "website": null,
+          "email": "chaboksazan@chmail.ir"
+        }
+      ],
+      "tradingCodes": [],
+      "agent": null,
+      "accounts": [
+        {
+          "accountNumber": "1078800108308",
+          "type": "CurrentAccount",
+          "sheba": "IR450150000001078800108308",
+          "bank": {
+            "id": 123110,
+            "name": "بانک سپه"
+          },
+          "branchCode": "18450",
+          "branchName": "طباطبایی نژاد",
+          "branchCity": {
+            "id": 2533,
+            "name": "کرمانشاه"
+          },
+          "isDefault": true
+        }
+      ],
+      "jobInfo": null,
+      "financialInfo": {
+        "assetsValue": null,
+        "inComingAverage": null,
+        "sExchangeTransaction": null,
+        "cExchangeTransaction": null,
+        "outExchangeTransaction": null,
+        "transactionLevel": "Thirteen",
+        "tradingKnowledgeLevel": 0,
+        "companyPurpose": null,
+        "referenceRateCompany": "آب وابنیه س مدیریت برنامه ریزی",
+        "rateDate": "2017-12-21T00:00:00",
+        "rate": 5,
+        "financialBrokers": []
+      },
+      "legalPersonShareholders": [
+        {
+          "firstName": "محمدهادی",
+          "lastName": "فرهادی",
+          "uniqueIdentifier": "3255426219",
+          "postalCode": "6714755945",
+          "address": "گلستان بل اجاقی 16 متری دوم",
+          "positionType": "Ceo",
+          "percentageVotingRight": 5
+        },
+        {
+          "firstName": "حجت الله",
+          "lastName": "خزاعی",
+          "uniqueIdentifier": "4969745722",
+          "postalCode": "6714755945",
+          "address": "گلستان بل اجاقی 16 متری دوم",
+          "positionType": "Chairman",
+          "percentageVotingRight": 47
+        }
+      ],
+      "legalPersonStakeholders": [
+        {
+          "type": "TakeAccess",
+          "positionType": "Ceo",
+          "startAt": null,
+          "endAt": null,
+          "isOwnerSignature": false,
+          "uniqueIdentifier": "3255426219",
+          "firstName": "محمد هادی ",
+          "lastName": "فرهادی",
+          "fileName": "",
+          "fileType": ""
+        },
+        {
+          "type": "Manager",
+          "positionType": "Chairman",
+          "startAt": null,
+          "endAt": null,
+          "isOwnerSignature": false,
+          "uniqueIdentifier": "4969745722",
+          "firstName": "حجت الله",
+          "lastName": "خزاعی",
+          "fileName": "",
+          "fileType": ""
+        },
+        {
+          "type": "Manager",
+          "positionType": "Ceo",
+          "startAt": null,
+          "endAt": null,
+          "isOwnerSignature": true,
+          "uniqueIdentifier": "3255426219",
+          "firstName": "محمد هادی ",
+          "lastName": "فرهادی",
+          "fileName": "",
+          "fileType": ""
+        },
+        {
+          "type": "Agent",
+          "positionType": "Agent",
+          "startAt": null,
+          "endAt": null,
+          "isOwnerSignature": false,
+          "uniqueIdentifier": "3255426219",
+          "firstName": "محمد هادی ",
+          "lastName": "فرهادی",
+          "fileName": "",
+          "fileType": ""
+        },
+        {
+          "type": "Manager",
+          "positionType": "Member",
+          "startAt": null,
+          "endAt": null,
+          "isOwnerSignature": true,
+          "uniqueIdentifier": "3255426219",
+          "firstName": "محمد هادی ",
+          "lastName": "فرهادی",
+          "fileName": "",
+          "fileType": ""
+        },
+        {
+          "type": "Manager",
+          "positionType": "DeputyChairman",
+          "startAt": null,
+          "endAt": null,
+          "isOwnerSignature": false,
+          "uniqueIdentifier": "3309961818",
+          "firstName": "مرتضی",
+          "lastName": "دادگر",
+          "fileName": "",
+          "fileType": ""
+        },
+        {
+          "type": "OrderAccess",
+          "positionType": "Ceo",
+          "startAt": "2022-03-17T00:00:00",
+          "endAt": "2024-03-19T00:00:00",
+          "isOwnerSignature": false,
+          "uniqueIdentifier": "3255426219",
+          "firstName": "محمد هادی ",
+          "lastName": "فرهادی",
+          "fileName": "",
+          "fileType": ""
+        },
+        {
+          "type": "Manager",
+          "positionType": "Inspector",
+          "startAt": null,
+          "endAt": null,
+          "isOwnerSignature": false,
+          "uniqueIdentifier": "3257487592",
+          "firstName": "روزبه ",
+          "lastName": "خسروی ",
+          "fileName": "",
+          "fileType": ""
+        }
+      ]
+    },
+    "meta": null,
+    "error": null
+  }
+]
