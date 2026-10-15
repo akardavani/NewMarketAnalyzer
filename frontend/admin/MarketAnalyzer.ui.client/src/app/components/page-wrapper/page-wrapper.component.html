@@ -1,0 +1,36 @@
+<div class="page-wrapper">
+
+  <div class="page-header">
+    <div class="flex-grow-1">
+      <ng-content select="[toolbar]"></ng-content>
+    </div>
+
+    @if(showTitle){
+    <div class="page-title">{{pageTitle}}</div>
+    }
+
+  </div>
+
+  <div class="page-body" [class.show-sidebar]="showSidebar">
+    @if(hasSidebar){
+    <div class="sidebar">
+      <ng-content select="[sidebar]"></ng-content>
+    </div>
+    }
+
+    @if(!!portalContent) {
+    <div class="portal">
+      <fd-scrollbar class="h-100">
+        <ng-template [cdkPortalOutlet]="portalContent" (attached)="portalAttached.emit($event)"></ng-template>
+      </fd-scrollbar>
+    </div>
+    }
+
+    <div class="page-outlet" [class.d-none]="!!portalContent">
+      <fd-scrollbar class="h-100">
+        <ng-content></ng-content>
+      </fd-scrollbar>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,70 @@
+<fd-page-wrapper [showSidebar]="showSidebar">
+  <div toolbar class="d-flex gap-4">
+    <div>
+      <button type="button" class="btn" (click)="toggleSidebar()"><i class="pa-filter"></i></button>
+    </div>
+
+    <div>
+      <button type="button" class="btn btn-primary" (click)="create()">ایجاد کاربر جدید</button>
+    </div>
+  </div>
+
+  <form [formGroup]="filter" sidebar class="ag-filter-form" (ngSubmit)="applyFilter()">
+    <fd-scrollbar>
+
+      <div class="form-field">
+        <fd-float-label class="form-field" placeholder="نام و نام خانوادگی">
+          <input type="text" class="form-control" formControlName="fullName" />
+        </fd-float-label>
+      </div>
+
+      <div class="form-field">
+        <fd-float-label class="form-field" placeholder="نام کاربری">
+          <input type="text" class="form-control" formControlName="userName" />
+        </fd-float-label>
+      </div>
+
+      <div class="form-field">
+        <fd-float-label class="form-field" placeholder="شماره موبایل">
+          <input type="text" class="form-control" formControlName="phoneNumber" />
+        </fd-float-label>
+      </div>
+
+      <div class="form-field">
+        <fd-float-label class="form-field" placeholder="ایمیل">
+          <input type="text" class="form-control" formControlName="email" />
+        </fd-float-label>
+      </div>
+
+      <div class="form-field">
+        <div class="d-flex form-control">
+          <checkbox label="ورود دو عاملی" formControlName="twoFactorAuthentication"></checkbox>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <div class="d-flex form-control">
+          <checkbox label="فعال" formControlName="isActive"></checkbox>
+        </div>
+      </div>
+    </fd-scrollbar>
+
+    <footer>
+      <button type="submit" class="btn btn-primary btn-search">جستجو</button>
+      <button type="button" class="btn btn-dark" (click)="resetFilter()">بازنشانی</button>
+    </footer>
+  </form>
+
+  <ag-grid-angular [enableRtl]="true"
+                   [getRowId]="getRowId"
+                   [style.width]="width"
+                   [style.height]="height"
+                   [localeText]="localeText"
+                   [rowModelType]="rowModelType"
+                   [autoSizeStrategy]="autoSizeStrategy"
+                   [loadingOverlayComponent]="loadingOverlayComponent"
+                   [paginationPageSizeSelector]="paginationPageSizeSelector"
+                   (gridReady)="onGridReady($event)">
+  </ag-grid-angular>
+
+</fd-page-wrapper>

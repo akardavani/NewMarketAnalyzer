@@ -1,0 +1,9 @@
+<div class="dashboard-container">
+  <h1>خوش آمدید، {{ appData.fullName }}</h1>
+
+  <div class="info-card">
+    <p><strong>نام کامل:</strong> {{ appData.fullName }}</p>
+    <p><strong>آخرین ورود:</strong> {{ appData.lastLoginDate | date:'yyyy/MM/dd HH:mm' }}</p>
+    <p><strong>وضعیت سیستم:</strong> {{ appData.appState === 2 ? 'فعال' : 'غیرفعال' }}</p>
+  </div>
+</div>

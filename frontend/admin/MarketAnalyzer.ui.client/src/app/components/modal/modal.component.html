@@ -1,0 +1,26 @@
+<div class="ng-modal d-flex flex-column">
+
+  <div class="ng-modal-header d-flex w-100">
+    <div class="modal-header-text d-flex align-items-center ps-3 pe-3">{{title}}</div>
+    <div class="btn-close-modal d-flex align-items-center justify-content-center" (click)="closeClicked.emit()">
+      <i class="pa-close"></i>
+    </div>
+  </div>
+
+  <div class="ng-modal-body d-flex flex-column align-items-center justify-content-center p-3">{{content}}</div>
+
+  <div class="ng-modal-footer gap-1 p-2">
+    @for(btn of buttons; track $index) {
+    <button type="button" [class]="btn.cssClass" (click)="buttonClicked.emit(btn.data)">
+      @if(btn.icon) {
+      <span [class]="btn.icon"></span>
+      }
+      @if(btn.label) {
+      <span>{{btn.label}}</span>
+      }
+    </button>
+    }
+
+  </div>
+
+</div>

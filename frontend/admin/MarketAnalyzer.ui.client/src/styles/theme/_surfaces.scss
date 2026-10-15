@@ -1,0 +1,32 @@
+// ============================================================================
+// سطح‌ها — کارت و pill وضعیت (کلاس‌های کمکی برای صفحه‌های جدید)
+//   <div class="fd-card">…</div>      <span class="fd-pill ok">تأیید شده</span>
+// ============================================================================
+
+.fd-card {
+  background: var(--fd-surface);
+  border: 1px solid var(--fd-line);
+  border-radius: var(--fd-radius);
+  box-shadow: var(--fd-shadow-card);
+  min-width: 0;
+}
+
+.fd-pill {
+  display: inline-flex;
+  align-items: center;
+  height: 24px;
+  padding: 0 11px;
+  border-radius: 12px;
+  font-size: 11.5px;
+  font-weight: var(--fd-fw-bold);
+  white-space: nowrap;
+  width: fit-content;
+  color: var(--fd-on-primary);
+  background: var(--fd-info);
+
+  &.ok { background: var(--fd-success); }
+  &.warn { background: var(--fd-warning); color: var(--fd-on-warning); }
+  &.bad { background: var(--fd-danger); }
+  &.info { background: var(--fd-info); }
+  &.muted { background: var(--fd-surface-3); color: var(--fd-text-2); }
+}

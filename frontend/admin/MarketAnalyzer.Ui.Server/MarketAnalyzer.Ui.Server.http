@@ -1,0 +1,6 @@
+@MarketAnalyzer.Ui.Server_HostAddress = http://localhost:5073
+
+GET {{MarketAnalyzer.Ui.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

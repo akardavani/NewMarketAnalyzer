@@ -1,0 +1,429 @@
+@font-face {
+  font-family: "Flaticon";
+  src: url("../../../public/fonts/icon/Flaticon.eot");
+  src: url("../../../public/fonts/icon/Flaticon.eot?#iefix") format("embedded-opentype"), url("../../../public/fonts/icon/Flaticon.woff2") format("woff2"), url("../../../public/fonts/icon/Flaticon.woff") format("woff"), url("../../../public/fonts/icon/Flaticon.ttf") format("truetype"), url("../../../public/fonts/icon/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="pa-"], [class*=" pa-"],
+[class^="pa-"], [class*=" pa-"] {
+  font-size: 16px;
+  line-height: 1;
+  font-weight: normal
+}
+
+[class^="pa-"]:before, [class*=" pa-"]:before,
+[class^="pa-"]:after, [class*=" pa-"]:after {
+  font-family: Flaticon;
+  font-size: inherit;
+  font-style: normal;
+}
+
+.pa-excel:before {
+  content: "\f154";
+}
+
+.pa-pdf:before {
+  content: "\f155";
+}
+
+.pa-user:before {
+  content: "\f101";
+}
+
+.pa-settings:before {
+  content: "\f102";
+}
+
+.pa-search:before {
+  content: "\f103";
+}
+
+.pa-clock:before {
+  content: "\f104";
+}
+
+.pa-notification:before {
+  content: "\f105";
+}
+
+.pa-statistics:before {
+  content: "\f106";
+}
+
+.pa-bar-graph:before {
+  content: "\f107";
+}
+
+.pa-eye:before {
+  content: "\f108";
+}
+
+.pa-edit:before {
+  content: "\f109";
+}
+
+.pa-filter:before {
+  content: "\f10a";
+}
+
+.pa-calendar:before {
+  content: "\f10b";
+}
+
+.pa-exit-full-screen:before {
+  content: "\f10c";
+}
+
+.pa-full-screen:before {
+  content: "\f10d";
+}
+
+.pa-setting:before {
+  content: "\f10e";
+}
+
+.pa-refresh:before {
+  content: "\f10f";
+}
+
+.pa-uncompact:before {
+  content: "\f110";
+}
+
+.pa-compact:before {
+  content: "\f152";
+}
+
+.pa-logoff:before {
+  content: "\f111";
+}
+
+.pa-connected:before {
+  content: "\f112";
+}
+
+.pa-ticket:before {
+  content: "\f113";
+}
+
+.pa-print:before {
+  content: "\f114";
+}
+
+.pa-help:before {
+  content: "\f115";
+}
+
+.pa-like:before {
+  content: "\f116";
+}
+
+.pa-history:before {
+  content: "\f117";
+}
+
+.pa-about:before {
+  content: "\f118";
+}
+
+.pa-basket:before {
+  content: "\f119";
+}
+
+.pa-buy:before {
+  content: "\f11a";
+}
+
+.pa-info:before {
+  content: "\f11b";
+}
+
+.pa-add:before {
+  content: "\f11c";
+}
+
+.pa-maximize:before {
+  content: "\f11d";
+}
+
+.pa-minimize:before {
+  content: "\f11e";
+}
+
+.pa-speaker:before {
+  content: "\f11f";
+}
+
+.pa-arrow-down:before {
+  content: "\f120";
+}
+
+.pa-arrow-up:before {
+  content: "\f121";
+}
+
+.pa-warning:before {
+  content: "\f122";
+}
+
+.pa-checked:before {
+  content: "\f123";
+}
+
+.pa-forbidden:before {
+  content: "\f124";
+}
+
+.pa-open:before {
+  content: "\f125";
+}
+
+.pa-lock:before {
+  content: "\f126";
+}
+
+.pa-account-report:before {
+  content: "\f127";
+}
+
+.pa-tread-report:before {
+  content: "\f128";
+}
+
+.pa-change:before {
+  content: "\f129";
+}
+
+.pa-close:before {
+  content: "\f12a";
+}
+
+.pa-credit-card:before {
+  content: "\f12b";
+}
+
+.pa-paper-money:before {
+  content: "\f12c";
+}
+
+.pa-atm:before {
+  content: "\f12d";
+}
+
+.pa-failed:before {
+  content: "\f12e";
+}
+
+.pa-cancel:before {
+  content: "\f12f";
+}
+
+.pa-save:before {
+  content: "\f130";
+}
+
+.pa-bull:before {
+  content: "\f131";
+}
+
+.pa-keyboard:before {
+  content: "\f132";
+}
+
+.pa-tse:before {
+  content: "\f133";
+}
+
+.pa-home-page:before {
+  content: "\f134";
+}
+
+.pa-calculator:before {
+  content: "\f135";
+}
+
+.pa-pencil:before {
+  content: "\f136";
+}
+
+.pa-menu:before {
+  content: "\f137";
+}
+
+.pa-options:before {
+  content: "\f138";
+}
+
+.pa-shield:before {
+  content: "\f139";
+}
+
+.pa-mraket-map:before {
+  content: "\f13a";
+}
+
+.pa-heatmap:before {
+  content: "\f13b";
+}
+
+.pa-disconnected:before {
+  content: "\f13c";
+}
+
+.pa-trash:before {
+  content: "\f13d";
+}
+
+.pa-delete:before {
+  content: "\f13e";
+}
+
+.pa-accept:before {
+  content: "\f13f";
+}
+
+.pa-liner-chart:before {
+  content: "\f140";
+}
+
+.pa-mobile:before {
+  content: "\f141";
+}
+
+.pa-industry:before {
+  content: "\f142";
+}
+
+.pa-message:before {
+  content: "\f143";
+}
+
+.pa-profit-report:before {
+  content: "\f144";
+}
+
+.pa-pie-chart:before {
+  content: "\f145";
+}
+
+.pa-analytics:before {
+  content: "\f146";
+}
+
+.pa-copy:before {
+  content: "\f147";
+}
+
+.pa-back-arrow:before {
+  content: "\f148";
+}
+
+.pa-resize-height:before {
+  content: "\f149";
+}
+
+.pa-settings-profile:before {
+  content: "\f14a";
+}
+
+.pa-market-view:before {
+  content: "\f14b";
+}
+
+.pa-log-out:before {
+  content: "\f14c";
+}
+
+.pa-download:before {
+  content: "\f14d";
+}
+
+.pa-spinner:before {
+  content: "\f14e";
+}
+
+.pa-compare:before {
+  content: "\f14f";
+}
+
+.pa-tse-view:before {
+  content: "\f153";
+}
+
+.pa-eyes:before {
+  content: "\f150";
+}
+
+.pa-eyes-close:before {
+  content: "\f151";
+}
+
+.pa-file-excel:before {
+  content: "\f154";
+}
+
+.pa-file-pdf:before {
+  content: "\f155";
+}
+
+.pa-play:before {
+  content: "\f156";
+}
+
+.pa-stop:before {
+  content: "\f157";
+}
+
+.pa-dot-v:before {
+  content: "\f158";
+}
+
+.pa-bolt:before {
+  content: "\f159";
+}
+
+.pa-eye-add:before {
+  content: "\f15a";
+}
+
+.pa-eye-success:before {
+  content: "\f15b";
+}
+
+.pa-upload:before {
+  content: "\f15c";
+}
+
+.pa-search-add:before {
+  content: "\F15D"
+}
+
+.pa-search-minus:before {
+  content: "\F15E"
+}
+
+.pa-search-close:before {
+  content: "\F15F"
+}
+
+.pa-pie-chart:before {
+  content: "\F160"
+}
+
+.pa-mark-down:before {
+  content: "\F161"
+}
+
+.pa-mark-up:before {
+  content: "\F162"
+}
+
+.pa-star:before {
+  content: "\F163"
+}
+
+.pa-star-fill:before {
+  content: "\F164"
+}

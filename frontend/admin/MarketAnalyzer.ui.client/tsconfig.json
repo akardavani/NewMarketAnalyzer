@@ -1,0 +1,43 @@
+/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
+/* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "outDir": "./dist/out-tsc",
+    "strict": true,
+    "noImplicitOverride": true,
+    "forceConsistentCasingInFileNames": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "declaration": false,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": true,
+    "moduleResolution": "bundler",
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "ES2022",
+    "useDefineForClassFields": false,
+    "paths": {
+      "@imports": [ "./src/imports" ],
+      "@utils": [ "./src/infrastructure/utils" ],
+      "@binders": [ "./src/infrastructure/binders" ],
+      "@form-utils": [ "./src/infrastructure/form-utils" ],
+      "@validations": [ "./src/infrastructure/validations" ],
+      "@typings": [ "./src/infrastructure/typings" ],
+      "@components/*": [ "./src/app/components/*" ],
+      "@services/*": [ "./src/infrastructure/services/*" ],
+      "@directives/*": [ "./src/infrastructure/directives/*" ],
+      "@grid-utils": [ "./src/infrastructure/grid-utils" ]
+    }
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  }
+}

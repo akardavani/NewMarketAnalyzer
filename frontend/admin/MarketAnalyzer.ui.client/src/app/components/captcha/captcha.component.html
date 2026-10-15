@@ -1,0 +1,16 @@
+
+<input type="text"
+       class="form-control"
+       inputValidation
+       [disabled]="disabled"
+       [value]="_value"
+       (blur)="_onBlur()"
+       (input)="_onInput($event)" />
+
+<div class="btn-icon-group">
+  <img [src]="_src" />
+
+  <button type="button" tabindex="-1" class="btn btn-icon" (click)="refreshCaptcha()">
+    <i class="pa pa-refresh"></i>
+  </button>
+</div>

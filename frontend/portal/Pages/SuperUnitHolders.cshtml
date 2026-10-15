@@ -1,0 +1,33 @@
+@page
+@model SuperUnitHoldersModel
+@{
+    ViewData["Title"] = "دارندگان واحدهای ممتاز";
+}
+
+<div class="container">
+    <div class="d-flex flex-column">
+        <h3 data-type="pre-titles" class="align-self-center">دارندگان واحدهای ممتاز</h3>
+        <div class="table-responsive overflow-x-auto">
+            <table class="table table-striped table-hover data-table text-center mt-3 mb-5">
+                <thead>
+                    <tr>
+                        <th scope="col">نام</th>
+                        <th scope="col">تعداد</th>
+                        <th scope="col">درصد</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Rows)
+                    {
+                        <tr>
+                            <td>@item.FullName</td>
+                            <td>@item.SuperUnits</td>
+                            <td>@item.SuperUnitsPercent <span>%</span></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

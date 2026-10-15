@@ -1,0 +1,56 @@
+// ============================================================================
+// لایه ۳ · توکن‌های معنایی (--fd-*)
+// کامپوننت‌ها فقط همین‌ها را می‌خوانند؛ هرگز hex، rgb() یا --bs-gray-* خام.
+// ============================================================================
+
+:root {
+  // برند
+  --fd-primary-rgb: var(--fd-pal-a);
+  --fd-primary-2-rgb: var(--fd-pal-b);
+  --fd-primary: rgb(var(--fd-pal-a));
+  --fd-primary-2: rgb(var(--fd-pal-b));
+  --fd-primary-text: rgb(var(--fd-pal-text));
+  --fd-primary-soft: rgb(var(--fd-pal-a) / 0.15);
+  --fd-primary-line: rgb(var(--fd-pal-a) / 0.45);
+  --fd-gradient: linear-gradient(135deg, rgb(var(--fd-pal-a)), color-mix(in oklab, rgb(var(--fd-pal-a)) 55%, rgb(var(--fd-pal-b))));
+  --fd-primary-dark: color-mix(in oklab, rgb(var(--fd-pal-a)) 55%, black);
+  --fd-primary-light: color-mix(in oklab, rgb(var(--fd-pal-a)) 10%, white);
+  --fd-hero: linear-gradient(125deg, color-mix(in oklab, rgb(var(--fd-pal-a)) 80%, #120a52), color-mix(in oklab, rgb(var(--fd-pal-b)) 74%, #041a4c));
+
+  // وضعیت‌ها (ثابت بین پالت‌ها؛ pill ها با متن سفید/تیره)
+  --fd-success: #15803d;
+  --fd-warning: #f59e0b;
+  --fd-danger: #c81e1e;
+  --fd-info: #5b4fd8;
+  --fd-success-rgb: 21 128 61;
+  --fd-warning-rgb: 245 158 11;
+  --fd-danger-rgb: 200 30 30;
+  --fd-on-warning: #261900;
+  --fd-focus-ring: 0 0 0 3px var(--fd-primary-soft);
+  --fd-success-text: #15803d;
+  --fd-success-soft: color-mix(in oklab, var(--fd-success) 14%, transparent);
+  --fd-success-soft-2: color-mix(in oklab, var(--fd-success) 28%, transparent);
+  --fd-danger-soft: color-mix(in oklab, var(--fd-danger) 12%, transparent);
+  --fd-danger-soft-2: color-mix(in oklab, var(--fd-danger) 26%, transparent);
+  --fd-danger-text: #c81e1e;
+
+  // شکل
+  --fd-radius: 18px;
+  --fd-radius-control: 12px;
+  --fd-row-h: 56px;
+  --fd-nav-h: 40px;
+}
+
+:root[data-mode="dark"] {
+  // روی پس‌زمینهٔ تیره سبز/قرمز/زرد روشن‌تر لازم است (فقط مسیر rgb: .text-success، .bg-danger و ...)
+  --fd-success-rgb: 34 197 94;
+  --fd-warning-rgb: 251 191 36;
+  --fd-danger-rgb: 248 113 113;
+  --fd-success-text: color-mix(in oklab, #22c55e 80%, var(--fd-text));
+  --fd-danger-text: color-mix(in oklab, #ef4444 80%, var(--fd-text));
+}
+
+// تراکم
+:root[data-density="compact"] { --fd-row-h: 44px; --fd-nav-h: 34px; }
+:root[data-density="normal"]  { --fd-row-h: 56px; --fd-nav-h: 40px; }
+:root[data-density="comfy"]   { --fd-row-h: 66px; --fd-nav-h: 46px; }

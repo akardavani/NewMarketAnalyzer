@@ -1,0 +1,53 @@
+@page
+@model MarketAnalyzer.Portal.Pages.LastInvestmentCertificateModel
+@{
+    ViewData["Title"] = "آخرین گواهی‌";
+}
+
+<div class="container px-0">
+    <div class="d-flex flex-column">
+        <h3 data-type="pre-titles" class="align-self-center">آخرین گواهی</h3>
+        <div class="table-responsive overflow-x-auto">
+            <table class="table table-striped data-table text-center mt-3 mb-2">
+                <thead>
+                    <tr>
+                        <th>شماره گواهی</th>
+                        <th>شماره سریال</th>
+                        <th>نوع واحد</th>
+                        <th>‌نام سرمایه‌گذار</th>
+                        <th>کد ملی</th>
+                        <th>تاریخ صدور</th>
+                        <th>تعداد</th>
+                        <th>چاپ گواهی</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>@Model.Certificate?.Id</td>
+                        <td>@Model.Certificate?.SerialNumber</td>
+                        <td>@Model.Certificate?.UnitType</td>
+                        <td>@Model.Certificate?.FullName</td>
+                        <td>@Model.Certificate?.NationalCode</td>
+                        <td>@Model.Certificate?.CertificateIssuanceDate.ToPersian()</td>
+                        <td>@Model.Certificate?.Quantity</td>
+                        @if (Model.Certificate is not null)
+                        {
+                            <td>
+                                <form method="post" asp-page-handler="ExportLastInvestmentCertificate">
+                                    <input type="hidden" name="requestId" value="@Model.Certificate?.Id" />
+                                    <input type="hidden" name="unitTypeId" value="@Model.Certificate?.UnitTypeId" />
+                                    <button type="submit" data-type="hyper-link" class="btn btn-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download m-1" viewBox="0 0 16 16">
+                                            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                                            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                                        </svg>چاپ گواهی
+                                    </button>
+                                </form>
+                            </td>
+                        }
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

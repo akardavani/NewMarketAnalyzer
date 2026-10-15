@@ -1,0 +1,44 @@
+// ============================================================================
+// پل Bootstrap — مقداردهی --bs-* از توکن‌های --fd-*
+//
+// Bootstrap بیشتر رنگ‌ها را زمان build به hex می‌پزد؛ این پل فقط CSS variableهای runtime را وصل می‌کند.
+// سلکتور :root[data-mode] اولویت بیشتری از :root و [data-bs-theme] خود Bootstrap دارد.
+// ============================================================================
+
+:root {
+  --bs-primary: var(--fd-primary);
+  --bs-primary-rgb: var(--fd-pal-a);
+  --bs-primary-dark: var(--fd-primary-dark);
+  --bs-primary-light: var(--fd-primary-light);
+  --bs-secondary: rgb(var(--fd-pal-b));
+  --bs-glassy: var(--fd-hover);
+  --bs-secondary-rgb: var(--fd-pal-b);
+  --bs-link-color: var(--fd-primary-text);
+  --bs-link-color-rgb: var(--fd-pal-text);
+  --bs-link-hover-color: var(--fd-primary-text);
+  --bs-link-hover-color-rgb: var(--fd-pal-text);
+
+  --bs-success: var(--fd-success);
+  --bs-success-rgb: var(--fd-success-rgb);
+  --bs-warning: var(--fd-warning);
+  --bs-warning-rgb: var(--fd-warning-rgb);
+  --bs-danger: var(--fd-danger);
+  --bs-danger-rgb: var(--fd-danger-rgb);
+  --bs-form-valid-color: var(--fd-success-text);
+  --bs-form-valid-border-color: var(--fd-success);
+  --bs-form-invalid-color: var(--fd-danger-text);
+  --bs-form-invalid-border-color: var(--fd-danger);
+  --bs-focus-ring-color: var(--fd-primary-soft);
+
+  --bs-body-bg: var(--fd-bg);
+  --bs-body-color: var(--fd-text);
+  --bs-emphasis-color: var(--fd-text);
+  --bs-secondary-color: var(--fd-text-2);
+  --bs-tertiary-color: var(--fd-text-3);
+  --bs-secondary-bg: var(--fd-surface-2);
+  --bs-tertiary-bg: var(--fd-surface-2);
+  --bs-border-color: var(--fd-line-strong);
+  --bs-border-radius: var(--fd-radius-control);
+  --bs-font-sans-serif: var(--fd-font-sans);
+  --bs-body-font-family: var(--fd-font-sans);
+}

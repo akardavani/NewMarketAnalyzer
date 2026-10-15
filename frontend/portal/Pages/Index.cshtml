@@ -1,0 +1,41 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "خانه";
+}
+
+<partial name="_Carsoul" for="Data.CarsoulItems" />
+
+@*<partial name="_IndexModal" />*@
+
+<section class="statistical-section d-flex justify-content-center align-items-center py-5 my-5">
+    <div class="d-flex flex-column justify-content-center align-items-center mx-4">
+        <div class="toggle-buttons same-width d-flex justify-content-center p-0 my-0">
+            <ul class="nav nav-pills p-2 d-flex justify-content-evenly" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link fw-bold active" id="investment-info-tab" data-bs-toggle="tab" data-bs-target="#investment-info" type="button" role="tab" aria-controls="investment-info" aria-selected="true">اطلاعات سرمایه‌گذاری</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link fw-bold" id="fund-info-tab" data-bs-toggle="tab" data-bs-target="#fund-info" type="button" role="tab" aria-controls="fund-info" aria-selected="false">اطلاعات صندوق</button>
+                </li>
+            </ul>
+        </div>
+        <div class="statistics tab-content same-width px-1 py-3" id="nav-tabContent">
+            <partial name="_InvestmentInformation" for="Data.InvestmentInformation" />
+            <partial name="_FundInformation" for="Data.FundInformation" />
+        </div>
+    </div>
+</section>
+
+<partial name="_NavChart" />
+<partial name="_AssetsCompositionChart" />
+<partial name="_Calculator" />
+
+@section Scripts {
+    <script>
+        var navsJson = "@Model.Navs"
+        var assetCompositionChartDataJson = "@Model.AssetCompositionChartData"
+        var sectorsAssetsCompositionData = "@Model.SectorsAssetsCompositionData"
+    </script>
+    <script src="~/scripts/home.js"></script>
+}

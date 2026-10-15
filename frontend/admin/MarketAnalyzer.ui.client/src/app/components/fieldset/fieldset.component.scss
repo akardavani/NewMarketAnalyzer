@@ -1,0 +1,34 @@
+
+.fieldset {
+  display: block;
+  position: relative;
+  padding: 20px;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+
+  .legend {
+    top: -14px;
+    height: 30px;
+    right: 15px;
+    position: absolute;
+
+    .caption {
+      z-index: 3;
+      font-weight: var(--fd-fw-bold);
+      font-size: 1rem;
+      position: relative;
+      padding: 0 10px;
+      color: var(--fd-text-3);
+    }
+
+    .caption-border {
+      display: block;
+      top: 12px;
+      width: 100%;
+      z-index: 1;
+      height: 2px;
+      background-color: var(--fd-surface);
+      position: absolute;
+    }
+  }
+}

@@ -1,0 +1,88 @@
+.tree-view {
+  display: block;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  transition: all 0.9s ease-in-out;
+
+  > .tree-view-node {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+
+    &.hide {
+      display: none;
+    }
+
+    > a {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      color: var(--fd-strong-fg);
+      padding: 4px 0;
+      border-radius: var(--bs-border-radius);
+
+      &:hover {
+        background-color: var(--bs-primary-dark);
+      }
+
+      &.active:not(.expandable) {
+        background-color: var(--bs-secondary);
+      }
+
+
+      &.expandable.active {
+        background-color: var(--bs-primary);
+      }
+
+      .icon,
+      .expander {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform ease-in-out 150ms;
+      }
+
+      .expander {
+        i.pa {
+          font-size: 12px;
+        }
+      }
+
+
+      &.expanded {
+        .expander {
+          transform: rotate(-90deg);
+        }
+      }
+
+      .caption {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        overflow: hidden;
+      }
+    }
+
+    > .children {
+      width: 100%;
+      display: block;
+      overflow-y: hidden;
+      height: 0;
+      transition: height ease-in-out 150ms;
+
+      .tree-view-node {
+        a {
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+@import "bootstrap/scss/functions";
+@import "../../../styles/base/variables";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+
+$model-bg: var(--fd-surface);
+$modal-border-radius: var(--fd-radius-control);
+$model-header-height: 40px;
+
+.ng-modal-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999999;
+  background-color: var(--fd-scrim);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  cursor: default;
+
+  &.align-top {
+    padding-top: 10%;
+    justify-content: start;
+  }
+
+  &.align-center {
+    justify-content: center;
+  }
+
+  &.align-bottom {
+    justify-content: end;
+  }
+
+  .ng-modal {
+    min-width: 450px;
+    border-radius: $modal-border-radius;
+
+    > :last-child {
+      border-bottom-right-radius: inherit;
+      border-bottom-left-radius: inherit;
+    }
+
+    .ng-modal-header {
+      color: var(--fd-on-primary);
+      height: $model-header-height;
+      background-color: var(--bs-primary);
+      overflow: hidden;
+      border-top-right-radius: inherit;
+      border-top-left-radius: inherit;
+
+      .btn-close-modal {
+        cursor: pointer;
+        color: var(--fd-on-primary);
+        padding: $btn-padding-y $btn-padding-x;
+
+        i {
+          font-size: 12px;
+        }
+
+        &:hover {
+          background-color: var(--bs-danger);
+        }
+      }
+
+      .modal-header-text {
+        flex-grow: 1;
+        font-weight: var(--fd-fw-bold);
+      }
+    }
+
+    .ng-modal-body {
+      background-color: $model-bg;
+      min-height: 100px;
+    }
+
+    .ng-modal-footer {
+      display: flex;
+      justify-content: center;
+      background-color: $model-bg;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+﻿%circle {
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+@mixin smallCircle($color) {
+    @extend %circle;
+    height: 8px;
+    width: 8px;
+    background-color: $color;
+}
+
+@mixin largeCircle($color) {
+    @extend %circle;
+    height: 12px;
+    width: 12px;
+    background-color: $color;
+}

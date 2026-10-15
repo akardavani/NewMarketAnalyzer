@@ -1,0 +1,205 @@
+@page
+@model InvestmentGuideModel
+@{
+    ViewData["Title"] = "راهنمای سرمایه‌گذاری";
+}
+
+<div class="container">
+    <div class="investment-guid d-flex flex-column justify-content-center align-items-center">
+        <h3 data-type="pre-titles">راهنمای سرمایه‌گذاری</h3>
+        <p data-type='small-text'>
+            به اطلاع میرساند ساعات ثبت درخواست صدور و ابطال شنبه الی چهارشنبه از ساعت 8 صبح لغایت 16 می‌باشد.
+        </p>
+        <div class="row g-3 my-3">
+            <div class="col-12">
+                <div class="card guid-card">
+                    <div class="row g-0">
+                        <div class="col-2 d-flex align-items-center justify-content-center">
+                            1
+                        </div>
+                        <div class="col-10">
+                            <div class="card-body">
+                                <p class="card-title"><a href="https://www.sejam.ir/" data-type="hyper-link" target="_blank">ثبت نام در سامانه سجام</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card guid-card">
+                    <div class="row g-0">
+                        <div class="col-2 d-flex align-items-center justify-content-center">
+                            2
+                        </div>
+                        <div class="col-10">
+                            <div class="card-body">
+                                <p class="card-title"><a asp-page="/Account/Signup" data-type="hyper-link">ثبت‌نام  با استفاده از کد سجام در تارنما صندوق </a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card guid-card">
+                    <div class="row g-0">
+                        <div class="col-2 d-flex align-items-center justify-content-center">
+                            3
+                        </div>
+                        <div class="col-10">
+                            <div class="card-body">
+                                <p class="card-title"><a asp-page="FundBranches" data-type="hyper-link">مراجعه به یکی از شعب مدیر ثبت، با همراه داشتن کارت ملی و شناسنامه</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card guid-card">
+                    <div class="row g-0">
+                        <div class="col-2 d-flex align-items-center justify-content-center">
+                            4
+                        </div>
+                        <div class="col-10">
+                            <div class="card-body">
+                                <p class="card-title">تحویل مدارک هویتی، تکمیل و امضای فرم های احراز هویت صندوق<br>(<a href="#" data-type="hyper-link"> حقیقی </a>/<a href="#" data-type="hyper-link"> حقوقی </a>)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card guid-card">
+                    <div class="row g-0">
+                        <div class="col-2 d-flex align-items-center justify-content-center">
+                            5
+                        </div>
+                        <div class="col-10">
+                            <div class="card-body">
+                                <p class="card-title">ارسال پیامک حاوی کد کاربری و کلمه عبور از سوی صندوق</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3 data-type="pre-titles">دستورالعمل نحوه صدور سرمایه‌گذاری</h3>
+        <p class="pre-text">قیمت صدور هر واحد سرمایه گذاری در صورتی که درخواست صدور قبل از ساعت 16 ارائه شده باشد معادل قیمت صدور هر واحد سرمایه گذاری در پایان روز کاری بعد از ارائه درخواست صدور و درصورتی‌که درخواست صدور پس از ساعت 16 ارائه شده‌باشد، معادل قیمت صدور هر واحد سرمایه‌گذاری در پایان دو روز کاری پس از ارائه درخواست صدور خواهد بود. با توجه به اینکه سرمایه‌گذار یا نمایندۀ وی، می‌تواند از قیمت صدور هر واحد سرمایه‌گذاری در روز قبل یا روز جاری، برای تخمین مبلغ واریزی، استفاده نماید. توصیه می‌شود مبلغ واریزی کمی (مثلاً 8 درصد) بیشتر از مبلغی باشد که براساس قیمت هر واحد سرمایه‌گذاری در روز قبل یا روز جاری تخمین زده‌می‌شود تا در اثر نوسانات قیمت، مشکل کسری مبلغ واریزی، به‌وجود نیاید. مبالغ اضافه پرداختی، ظرف دو روز کاری پس از ارائه درخواست صدور واحد سرمایه‌گذاری توسط مدیر صندوق به حساب بانکی سرمایه‌گذار عودت داده می‌شود. قيمت صدور واحد سرمایه‌گذاری در پایان هر روز از طريق تارنماي صندوق به طور روزانه اعلام مي‌گردد.</p>
+        <ol class="pre-text">
+            <li class="mb-3 fw-bold"> واریز وجه مورد نظر به حساب بانکی صندوق از طریق فیش بانکی، اینترنت بانک و دستگاه کارتخوان مستقر در شعب (صرفا شعب قائم مقام، طالقانی و آرژانتین)</li>
+            <li class="mb-3 fw-bold">
+                ارائه درخواست صدور واحد های سرمایه گذاری از طریق یکی از روش های ذیل امکان پذیر است:
+                <ul class="request-guid fw-normal">
+                    <li class="my-3 d-flex flex-column">
+                        <h4>
+                            درخواست صدور غیرحضوری(آنلاین):
+                        </h4>
+                        <p>
+                            از طریق مراجعه به حساب کاربری خود در تارنمای صندوق و تکمیل فرم تعبیه شده در آن و سپس تایید و ارسال آن به‌صورت الکترونیکی به مدیر ثبت صندوق.
+                        </p>
+                        <a asp-page="/IssuanceRequest" data-type='primary-buttons' class="m-2 align-self-center">درخواست صدور الکترونیکی</a>
+                    </li>
+                    <li class="mb-3 d-flex flex-column">
+                        <h4>
+                            درخواست صدور حضوری:
+                        </h4>
+                        <p>
+                            از طریق مراجعه حضوری سرمایه‌گذار یا نمایندۀ وی به یکی از شعب مدیر ثبت و تسلیم فرم صدور به نمایندۀ مدیر ثبت مستقر در شعبه که در این‌صورت لازم‌است نمایندۀ مدیر ثبت، ضمن احراز هویت سرمایه‌گذار یا احراز هویت و سمت نمایندۀ وی و تطبیق امضای سرمایه‌گذار یا نمایندۀ وی با نمونه امضای ارائه شده طی فرم مشخصات سرمایه‌گذار و نمایندۀ وی، اطلاعات فرم پذیره‌نویسی یا درخواست صدور واحد سرمایه‌گذاری را در نرم‌افزار صندوق ثبت و پرینت آن را حداقل در دو نسخه تهیه کرده و پس از رؤیت و تأیید سرمایه‌گذار یا نمایندۀ وی، هر دو نسخۀ آن را امضاء و مهر نموده و یک نسخه را به عنوان رسید فرم، به سرمایه‌گذار یا نمایندۀ وی تحویل دهد.
+                        </p>
+                        <div class="d-flex flex-column flex-md-row justify-content-center">
+                            <a href="#" download data-type='primary-buttons' class="m-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                                    <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                                    <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                                </svg>
+                                <span class="mx-1">فرم درخواست صدور</span>
+                            </a>
+                            <a href="#" download data-type='primary-buttons' class="m-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                                    <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                                    <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                                </svg>
+                                <span class="mx-1">رسید پذیره‌نویسی</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="mb-3 fw-bold">دریافت پیامک تایید درخواست صدور از سوی صندوق</li>
+            <li class="mb-3 fw-bold">
+                ارائه گواهی سرمایه‌گذاری به سرمایه‌گذار
+                <ul class="request-guid fw-normal">
+                    <li class="my-3 d-flex flex-column">
+                        <p>
+                            از طریق مراجعه به حساب کاربری خود در تارنمای صندوق و تکمیل فرم تعبیه شده در آن و سپس تایید و ارسال آن به‌صورت الکترونیکی به مدیر ثبت صندوق.
+                        </p>
+                        <div class="d-flex flex-column flex-md-row justify-content-center">
+                            <a href="#" download data-type='primary-buttons' class="m-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                                    <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                                    <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                                </svg>
+                                <span class="mx-1">گواهی سرمایه‌گذاری عادی</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+
+        <h3 data-type="pre-titles">دستورالعمل نحوه ابطال سرمایه‌گذاری</h3>
+        <p class="pre-text">
+            دارندۀ واحد سرمایه‌گذاری عادی یا نمایندۀ وی در هر زمان می‌تواند برای ابطال تمام یا بخشی از واحدهای سرمایه‌گذاری خود اقدام کند.
+
+            در صورتی‌که درخواست ابطال قبل از ساعت 16 ارائه شده ‌باشد، قيمت ابطال هر واحد سرمايه‌گذاري معادل قیمت ابطال واحد سرمایه‌گذاری در پایان روز کاری  بعد از ارائه درخواست ابطال و در صورتی‌که درخواست ابطال پس از ساعت 16 ارائه شده‌، معادل قیمت ابطال واحد سرمایه‌گذاری در پایان دو روز کاری پس از ارائه درخواست ابطال خواهد بود. مدیر صندوق موظف است وجوه حاصل از ابطال واحدهای سرمایه‌گذاری را پس از کسر کارمزد ابطال یا هزینه‌های مربوطه، ظرف 7 روز از تاریخ درخواست، منحصراً به حساب بانکی سرمایه‌گذار یا نمایندۀ وی به‌گونه‌ای که قبلاً اعلام شده‌است؛ واریز کند. قيمت ابطال واحد سرمایه‌گذاری در پایان هر روز از طريق تارنماي صندوق به طور روزانه اعلام مي‌گردد.
+        </p>
+        <ol class="pre-text">
+            <li class="mb-3 fw-bold">
+                ارائه درخواست ابطال واحد های سرمایه گذاری از طریق یکی از روش های ذیل امکان پذیر است:
+                <ul class="request-guid fw-normal">
+                    <li class="my-3 d-flex flex-column">
+                        <h4>
+                            درخواست ابطال غیرحضوری(آنلاین):
+                        </h4>
+                        <p>
+                            از طریق مراجعه به حساب کاربری خود در تارنمای صندوق و تکمیل فرم تعبیه شده در آن و سپس تایید و ارسال آن به‌صورت الکترونیکی به مدیر ثبت صندوق.
+                        </p>
+                        <a asp-page="/CancellationRequest" data-type='primary-buttons' class="m-2 align-self-center">درخواست ابطال الکترونیکی</a>
+                    </li>
+                    <li class="mb-3 d-flex flex-column">
+                        <h4>
+                            درخواست ابطال حضوری:
+                        </h4>
+                        <p>
+                            از طریق مراجعه حضوری سرمایه‌گذار یا نمایندۀ وی به یکی از شعب مدیر ثبت و تسلیم فرم ابطال به نمایندۀ مدیر ثبت مستقر در شعبه که در این‌صورت لازم‌است نمایندۀ مدیر ثبت، ضمن احراز هویت سرمایه‌گذار یا احراز هویت و سمت نمایندۀ وی و تطبیق امضای سرمایه‌گذار یا نمایندۀ وی با نمونه امضای ارائه شده طی فرم مشخصات سرمایه‌گذار و نمایندۀ وی، اطلاعات فرم درخواست ابطال واحد سرمایه‌گذاری را در نرم‌افزار صندوق ثبت و پرینت آن را حداقل در دو نسخه تهیه کرده و پس از رؤیت و تأیید سرمایه‌گذار یا نمایندۀ وی، هر دو نسخۀ آن را امضاء و مهر نموده و یک نسخه را به عنوان رسید فرم، به سرمایه‌گذار یا نمایندۀ وی تحویل دهد.
+                        </p>
+                        <div class="d-flex flex-column flex-md-row justify-content-center">
+                            <a href="#" download data-type='primary-buttons' class="m-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                                    <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                                    <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                                </svg>
+                                <span class="mx-1">فرم درخواست ابطال</span>
+                            </a>
+                            <a href="#" download data-type='primary-buttons' class="m-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                                    <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                                    <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                                </svg>
+                                <span class="mx-1">رسید درخواست ابطال واحد سرمایه‌گذاری</span>
+                            </a>
+                            <a href="#" download data-type='primary-buttons' class="m-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                                    <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                                    <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                                </svg>
+                                <span class="mx-1">اعلامیه ابطال واحد سرمایه گذاری</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="mb-1 fw-bold">دریافت پیامک تایید درخواست ابطال از سوی صندوق</li>
+        </ol>
+        <p>توجه داشته باشید ابطال واحد های سرمایه گذاری منوط به ارائه درخواست به یکی از روش های فوق بوده و درصورت عدم ارائه درخواست ابطال به مدیر ثبت، صندوق هیچ مسئولیتی نسبت به عدم ابطال و خسارت وارده نخواهد داشت</p>
+    </div>
+</div>

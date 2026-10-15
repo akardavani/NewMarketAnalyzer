@@ -1,0 +1,107 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<SpaRoot>..\MarketAnalyzer.ui.client</SpaRoot>
+		<SpaProxyLaunchCommand>npm start</SpaProxyLaunchCommand>
+		<SpaProxyServerUrl>https://localhost:64100</SpaProxyServerUrl>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.SpaProxy">
+			<Version>9.*-*</Version>
+		</PackageReference>
+		<PackageReference Include="Serilog.AspNetCore" Version="9.0.0" />
+		<PackageReference Include="Serilog.Exceptions" Version="8.4.0" />
+		<PackageReference Include="Serilog.Sinks.Async" Version="2.1.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\MarketAnalyzer.ui.client\MarketAnalyzer.ui.client.esproj">
+			<ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+		</ProjectReference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\shared\MarketAnalyzer.Captcha\MarketAnalyzer.Captcha.csproj" />
+		<ProjectReference Include="..\..\..\shared\MarketAnalyzer.IdentityClient\MarketAnalyzer.IdentityClient.csproj" />
+		<ProjectReference Include="..\..\..\shared\MarketAnalyzer.SettingsFileProvider\MarketAnalyzer.SettingsFileProvider.csproj" />
+	</ItemGroup>
+	
+	
+  <!-- ====================================================
+       MarketAnalyzer.Ui.Server.csproj
+       - این نسخه فایل‌های build شده‌ی client را مستقیم به پوشه‌ی publish می‌ریزد
+         (PublishDir) تا فایل‌ها وارد پوشه‌ی پروژه و git نشوند.
+       - در صورت عدم وجود PublishDir (مثلاً حالت dev محلی) به wwwroot پروژه کپی می‌کند.
+       ==================================================== -->
+	   
+  <PropertyGroup>
+    <!-- مسیرهای احتمالی خروجی SPA -->
+    <_SpaBuildCandidate1>$(SpaRoot)\build</_SpaBuildCandidate1>        <!-- React / CRA -->
+    <_SpaBuildCandidate2>$(SpaRoot)\dist</_SpaBuildCandidate2>         <!-- Vue / Angular (top-level dist) -->
+    <_SpaBuildCandidate3>$(SpaRoot)\dist\*</_SpaBuildCandidate3>       <!-- Angular with dist\<appName> -->
+
+    <!-- فایل‌هایی که نمی‌خواهیم کپی شوند -->
+    <_SpaExcludeFiles>**\3rdpartylicenses.txt;**\prerendered-routes.json</_SpaExcludeFiles>
+
+    <!-- اگر می‌خواهی امکان غیرفعال کردن مرحله‌ی ساخت SPA در CI را داشته باشی:
+         می‌توانی هنگام publish این property را ست کنی: -p:SkipSpaBuild=true -->
+    <SkipSpaBuild Condition="'$(SkipSpaBuild)' == 'true'">true</SkipSpaBuild>
+  </PropertyGroup>
+
+  <!-- Target اجرا شونده قبل از Publish -->
+  <Target Name="BuildAndCopySpaToPublishDir" BeforeTargets="Publish" Condition="'$(SkipSpaBuild)' != 'true'">
+    <Message Importance="high" Text="== 🧩 Building SPA from $(SpaRoot) before publish ==" />
+
+    <!-- 1) نصب وابستگی‌ها و ساخت -->
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm ci" ContinueOnError="false" />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build" ContinueOnError="false" />
+
+    <!-- 2) تعیین مسیر خروجی SPA (اولویت: dist\browser، سپس build یا dist) -->
+    <PropertyGroup>
+      <SpaDistBrowserFolder Condition="Exists('$(SpaRoot)\dist\browser')">$(SpaRoot)\dist\browser</SpaDistBrowserFolder>
+      <SpaDistFolder Condition="Exists('$(_SpaBuildCandidate1)')">$(_SpaBuildCandidate1)</SpaDistFolder>
+      <SpaDistFolder Condition="'$(SpaDistFolder)' == '' and Exists('$(_SpaBuildCandidate2)')">$(_SpaBuildCandidate2)</SpaDistFolder>
+      <SpaDistFolder Condition="'$(SpaDistFolder)' == '' and Exists('$(_SpaBuildCandidate3)')">$(_SpaBuildCandidate3)</SpaDistFolder>
+    </PropertyGroup>
+
+    <PropertyGroup>
+      <!-- اگر dist\browser بود، آن را ریشه قرار بده -->
+      <SpaDistRootFolder Condition="Exists('$(SpaDistBrowserFolder)')">$(SpaDistBrowserFolder)</SpaDistRootFolder>
+      <!-- در غیر این صورت از سایر گزینه‌ها استفاده کن -->
+      <SpaDistRootFolder Condition="'$(SpaDistRootFolder)' == '' and '$(SpaDistFolder)' != ''">$(SpaDistFolder)</SpaDistRootFolder>
+    </PropertyGroup>
+
+    <Error Condition="'$(SpaDistRootFolder)' == ''" 
+           Text="❌ خروجی SPA پیدا نشد؛ بررسی کنید npm run build فولدر build یا dist یا dist\browser می‌سازد." />
+
+    <Message Importance="high" Text="SPA root resolved to: $(SpaDistRootFolder)" />
+
+    <!-- 3) تعیین مقصد کپی: اگر PublishDir وجود دارد (در زمان publish)، مستقیم به PublishDir/wwwroot کپی کن.
+           در غیر این صورت (مثلاً فقط build محلی در VS) به ProjectDir/wwwroot کپی شود. -->
+    <PropertyGroup>
+      <_DestRoot Condition="'$(PublishDir)' != ''">$(PublishDir)wwwroot</_DestRoot>
+      <_DestRoot Condition="'$(_DestRoot)' == ''">$(ProjectDir)wwwroot</_DestRoot>
+    </PropertyGroup>
+
+    <Message Importance="high" Text="Destination for SPA copy: $(_DestRoot)" />
+
+    <!-- 4) پاک سازی مسیر مقصد و ساخت مجدد -->
+    <RemoveDir Condition="Exists('$(_DestRoot)')" Directories="$(_DestRoot)" />
+    <MakeDir Directories="$(_DestRoot)" />
+
+    <!-- 5) انتخاب فایل‌ها برای کپی (بدون فایل‌های مستثنی شده) -->
+    <ItemGroup>
+      <_SpaFiles Include="$(SpaDistRootFolder)\**\*" Exclude="$(_SpaExcludeFiles)" />
+    </ItemGroup>
+
+    <!-- 6) کپی فایل‌ها به مقصد (حفظ ساختار زیرشاخه‌ها) -->
+    <Copy SourceFiles="@(_SpaFiles)"
+          DestinationFiles="@(_SpaFiles -> '$(_DestRoot)\%(RecursiveDir)%(Filename)%(Extension)')"
+          SkipUnchangedFiles="true" />
+
+    <Message Importance="high" Text="✅ Copied @(_SpaFiles->Count()) SPA files to $(_DestRoot)" />
+  </Target>
+  
+</Project>

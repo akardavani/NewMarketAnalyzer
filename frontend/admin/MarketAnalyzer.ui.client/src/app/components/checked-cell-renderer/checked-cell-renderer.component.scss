@@ -1,0 +1,16 @@
+:host {
+  padding-top: 3px;
+  align-items: center;
+  justify-self: center;
+  align-self: center;
+  display: flex;
+
+  .pa-accept {
+    color: var(--bs-success);
+  }
+
+  .pa-delete {
+    font-size: 11px;
+    color: var(--bs-danger);
+  }
+}

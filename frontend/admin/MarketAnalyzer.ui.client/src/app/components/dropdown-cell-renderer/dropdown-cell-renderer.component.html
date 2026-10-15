@@ -1,0 +1,8 @@
+<select class="ag-dropwodn" [(ngModel)]="value" (change)="changed()">
+  @if(!!caption) {
+  <option [ngValue]="captionValue">{{caption}}</option>
+  }
+  @for(item of options | async; track $index) {
+  <option [ngValue]="item.value">{{item.text}}</option>
+  }
+</select>

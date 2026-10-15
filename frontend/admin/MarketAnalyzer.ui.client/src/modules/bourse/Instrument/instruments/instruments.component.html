@@ -1,0 +1,101 @@
+<fd-page-wrapper [showSidebar]="showSidebar">
+  <div toolbar class="d-flex gap-4">
+    <div class="d-flex gap-4">
+      <div class="d-flex gap-2">
+        <button type="button" class="btn" (click)="toggleSidebar()"><i class="pa-filter"></i></button>
+        <button type="button" class="btn" (click)="exportReport(1)"><i class="pa pa-pdf"></i></button>
+        <button type="button" class="btn" (click)="exportReport(2)"><i class="pa pa-excel"></i></button>
+      </div>
+
+      <div class="d-flex gap-2">
+        <button type="button" class="btn btn-primary" (click)="create()">ایجاد نماد</button>
+        <button type="button" class="btn btn-dark" (click)="editEmbeddedsIssuingPurpose()">ویرایش تبعی</button>
+      </div>
+    </div>
+  </div>
+
+  <form [formGroup]="filter" sidebar class="ag-filter-form" (ngSubmit)="applyFilter()">
+    <fd-scrollbar>
+
+      <div class="form-field">
+        <fd-float-label class="form-field" placeholder="شناسه TSE">
+          <input type="text" class="form-control" formControlName="insCode" />
+        </fd-float-label>
+      </div>
+
+      <div class="form-field">
+        <fd-float-label placeholder="شناسه نماد / ISIN شرکت">
+          <input type="text" class="form-control" formControlName="id" />
+        </fd-float-label>
+      </div>
+
+      <div class="form-field">
+        <fd-float-label placeholder="نام نماد / نام شرکت">
+          <input type="text" class="form-control" formControlName="name" />
+        </fd-float-label>
+      </div>
+
+      <div class="form-field">
+        <fd-float-label class="form-field" placeholder="صنعت">
+          <input type="text" class="form-control" formControlName="sector" />
+        </fd-float-label>
+      </div>
+
+      <div class="form-field">
+        <fd-float-label class="form-field" placeholder="زیر گروه صنعت">
+          <input type="text" class="form-control" formControlName="subSector" />
+        </fd-float-label>
+      </div>
+
+      <div class="form-field">
+        <fd-float-label class="form-field" placeholder="وضعیت">
+          <fd-drop-down formControlName="isActive">
+            <fd-option [value]="null">همه</fd-option>
+            <fd-option [value]="true">فعال</fd-option>
+            <fd-option [value]="false">غیرفعال</fd-option>
+          </fd-drop-down>
+        </fd-float-label>
+      </div>
+
+      <!--<div class="form-field">
+        <fd-float-label class="form-field" placeholder="فعال">
+          <fd-drop-down formControlName="instrumentTypes">
+            <fd-option [value]="null">همه</fd-option>
+            <fd-option [value]="true">فعال</fd-option>
+            <fd-option [value]="false">غیرفعال</fd-option>
+          </fd-drop-down>
+        </fd-float-label>
+      </div>-->
+
+      <div class="form-field">
+        <fd-float-label class="form-field" placeholder="بازار">
+          <fd-drop-down selection="multiple" formControlName="marketSegments">
+            <fd-option [value]="null">همه</fd-option>
+            @for(item of marketSegments; track $index) {
+            <fd-option [value]="item.value">{{item.text}}</fd-option>
+            }
+          </fd-drop-down>
+        </fd-float-label>
+      </div>
+
+    </fd-scrollbar>
+
+    <footer>
+      <button type="submit" class="btn btn-primary btn-search">جستجو</button>
+      <button type="button" class="btn btn-dark" (click)="resetFilter()">بازنشانی</button>
+    </footer>
+  </form>
+
+  <ag-grid-angular [enableRtl]="true"
+                   [getRowId]="getRowId"
+                   [style.width]="width"
+                   [style.height]="height"
+                   [localeText]="localeText"
+                   [rowModelType]="rowModelType"
+                   [autoSizeStrategy]="autoSizeStrategy"
+                   [loadingOverlayComponent]="loadingOverlayComponent"
+                   [paginationPageSizeSelector]="paginationPageSizeSelector"
+                   (gridReady)="onGridReady($event)">
+  </ag-grid-angular>
+
+</fd-page-wrapper>

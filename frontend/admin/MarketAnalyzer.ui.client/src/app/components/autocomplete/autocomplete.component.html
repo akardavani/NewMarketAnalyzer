@@ -1,0 +1,12 @@
+<div class="clearable-input">
+  <input #searchInput
+         type="text"
+         class="form-control"
+         inputValidation
+         [disabled]="disabled || !dataSource"
+         (blur)="_onBlur()" />
+
+  <button type="button" class="btn-clear" (click)="_clear()">
+    <i class="btn-icon pa pa-close"></i>
+  </button>
+</div>

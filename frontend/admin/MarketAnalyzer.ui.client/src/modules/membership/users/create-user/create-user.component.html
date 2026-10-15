@@ -1,0 +1,82 @@
+<form class="dialog-warpper voucher-form" [formGroup]="formGroup" (ngSubmit)="submit()">
+  <div class="dialog-header">
+    <div class="dialog-title">ایجاد کاربر جدید</div>
+
+    <div class="btn-close" (click)="close()">
+      <i class="pa-close"></i>
+    </div>
+  </div>
+
+  <div class="dialog-body d-flex flex-column gap-4 p-4">
+
+    <div>
+      <fd-float-label placeholder="نام">
+        <input type="text" class="form-control" formControlName="fullName" />
+      </fd-float-label>
+      <span class="input-error-text" errorFor="fullName"></span>
+    </div>
+
+    <div>
+      <fd-float-label placeholder="نام کاربری">
+        <input type="text" class="form-control" formControlName="userName" />
+      </fd-float-label>
+      <span class="input-error-text" errorFor="userName"></span>
+    </div>
+
+    <div>
+      <fd-float-label placeholder="رمز عبور">
+        <fd-password formControlName="password"></fd-password>
+      </fd-float-label>
+      <span class="input-error-text" errorFor="password"></span>
+    </div>
+
+    <div>
+      <fd-float-label placeholder="تکرار رمز عبور">
+        <fd-password formControlName="confirmPassword"></fd-password>
+      </fd-float-label>
+      <span class="input-error-text" errorFor="confirmPassword"></span>
+    </div>
+
+    <div>
+      <fd-float-label placeholder="شماره موبایل">
+        <input type="text" class="form-control" formControlName="phoneNumber" />
+      </fd-float-label>
+      <span class="input-error-text" errorFor="phoneNumber"></span>
+    </div>
+
+    <div>
+      <fd-float-label placeholder="ایمیل">
+        <input type="text" class="form-control" formControlName="email" />
+      </fd-float-label>
+      <span class="input-error-text" errorFor="email"></span>
+    </div>
+
+    <div class="form-control">
+      <checkbox label="ورود دو عاملی" formControlName="twoFactorAuthentication"></checkbox>
+    </div>
+
+    <div>
+      <fd-float-label placeholder="آدرس‌های IP">
+        <input type="text" class="form-control" />
+      </fd-float-label>
+    </div>
+
+    <div>
+      <fd-float-label placeholder="نقش‌ها" [floated]="true">
+        <checkbox-group class="form-control d-flex gap-3 pt-2 pb-2" formControlName="roles">
+          @for(item of roles | async; track $index) {
+          <checkbox [label]="item.text" [value]="item.value"></checkbox>
+          }
+        </checkbox-group>
+      </fd-float-label>
+      <span class="input-error-text" errorFor="roles"></span>
+    </div>
+  </div>
+
+  <div class="dialog-footer">
+    <div class="d-inline-flex gap-2">
+      <button type="submit" class="btn btn-primary">ذخیره</button>
+      <button type="button" class="btn btn-dark" (click)="reset()">بازنشانی</button>
+    </div>
+  </div>
+</form>

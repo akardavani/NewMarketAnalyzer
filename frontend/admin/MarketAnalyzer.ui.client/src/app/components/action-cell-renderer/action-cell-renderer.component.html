@@ -1,0 +1,11 @@
+@for(btn of actions; track $index) {
+<div class="btn-action" [class]="btn.cssClass" (click)="btn.action(rowParams)" [title]="btn.tooltip || ''">
+  @if(btn.icon) {
+  <i [class]="btn.icon"></i>
+  }
+
+  @if(btn.label) {
+  <span>{{btn.label}}</span>
+  }
+</div>
+}

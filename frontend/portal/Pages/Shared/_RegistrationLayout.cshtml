@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - صندوق مشترک مبین سرمایه</title>
+    <environment names="Development">
+        <link href="~/styles/bootstrap.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/styles/layout.css" rel="stylesheet" asp-append-version="true" />
+    </environment>
+    <environment names="Production">
+        <link href="~/styles.min.css" rel="stylesheet" asp-append-version="true" />
+    </environment>
+</head>
+<body>
+    <div>
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/libs.min.js" asp-append-version="true"></script>
+    <script src="~/scripts.min.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

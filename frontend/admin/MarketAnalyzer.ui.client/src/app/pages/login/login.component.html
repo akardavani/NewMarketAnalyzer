@@ -1,0 +1,111 @@
+<form [formGroup]="formGroup" class="form" (ngSubmit)="submit()">
+  <div class="d-flex align-items-stretch">
+    <div class="form-container">
+      @if(loading) {
+      <div class="loader-wrapper">
+        <fd-loader message="در حال ورود..."></fd-loader>
+      </div>
+      }
+
+      <header>
+        <h3 class="fw-bold text-primary-emphasis">ورود</h3>
+
+        @if (brand.logoUrl) {
+        <img class="broker-logo" [src]="brand.logoUrl" alt="" />
+        } @else {
+        <div class="broker-logo"></div>
+        }
+        <div class="d-flex flex-column align-items-center">
+          <h5>{{ brand.productFullName }}</h5>
+          @if (brand.managerName) {
+          <h6>{{ brand.managerName }}</h6>
+          }
+        </div>
+      </header>
+
+      <div class="d-grid flex-column gap-4">
+        <div>
+          <fd-float-label placeholder="نام کاربری">
+            <input type="text" class="form-control" formControlName="userName" />
+          </fd-float-label>
+          <span class="input-error-text" errorFor="userName"></span>
+        </div>
+
+        <div>
+          <fd-float-label placeholder="رمز عبور">
+            <fd-password formControlName="password"></fd-password>
+          </fd-float-label>
+          <span class="input-error-text" errorFor="password"></span>
+        </div>
+
+        <div>
+          <fd-float-label placeholder="کد امنیتی">
+            <fd-captcha formControlName="captchaCode"></fd-captcha>
+          </fd-float-label>
+          <span class="input-error-text" errorFor="captchaCode"></span>
+        </div>
+
+        <div class="d-grid gap-2">
+          <button type="submit" class="btn btn-primary">ورود</button>
+          <div>
+            <a routerLink="/forgot-password">فراموشی کلمه عبور</a>
+          </div>
+
+        </div>
+      </div>
+
+      <footer>
+        @if(companyLogo) {
+        <div class="company-logo"></div>
+        }
+
+        <div class="copyright">
+          @if (brand.companyName) {
+          <span class="pb-1">طراحی شده توسط: شرکت {{ brand.companyName }}</span>
+          }
+          <span>نسخه: {{version}}</span>
+        </div>
+      </footer>
+
+    </div>
+
+    <div class="hints">
+      <h5 class="d-block text-center">نکات امنیتی</h5>
+
+      <fd-scrollbar class="flex-grow-1">
+        <div>
+          <h6>مدیریت رمز عبور</h6>
+          <ul>
+            <li>هنگام دریافت رمز عبور برای ورود به سامانه، رمز عبور را با اولین ورود به سامانه تغییر دهید.</li>
+            <li>هرگز اطلاعات کاربری خود از جمله نام و رمز عبور را در اختیار دیگران قرار ندهید و آن را در فواصل زمانی (حداقل هر سه ماه) و همچنین بنا به ضرورت تغییر دهید.</li>
+            <li>هنگام ورود نام و رمز عبور سامانه، از عدم رویت آن توسط دیگران اطمینان حاصل نمایید.</li>
+            <li>از ثبت و ذخیره نمودن نام و رمز عبور بر روی کاغذ، فایل و غیره خودداری نمایید.</li>
+            <li>جهت ورود نام و رمز عبور سامانه، ترجیحاً از صفحه کلید مجازی تعبیه شده در سایت استفاده نمایید.</li>
+            <li>از انتخاب رمز عبور قابل حدس نظیر سال تولد، شماره تلفن، شماره شناسنامه و غیره، برای ورود به سامانه، اجتناب نمایید.</li>
+            <li>توصیه می‌گردد رمز عبور شامل حداقل هشت کاراکتر، ترکیبی از حروف بزرگ و کوچک، اعداد و کاراکترهای ویژه نظیر <strong>&#64;، #، !</strong> و غیره باشد.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h6>پیشگیری از سوء‌استفاده‌های اینترنتی</h6>
+          <ul>
+            <li>به منظور استفاده از سامانه صرفاً از طریق مراجعه مستقیم به سایت و یا با استفاده از وبسایت مدیر صندوق اقدام نمایید.</li>
+            <li>از بروزرسانی مستمر سیستم عامل، مرورگر وب و سایر نرم‌افزارهای نصب شده روی رایانه، تبلت و گوشی موبایل خود اطمینان حاصل نمایید.</li>
+            <li>استفاده از آنتی‌ویروس معتبر و بروز شده بروی رایانه، تبلت و گوشی موبایل خطر به سرقت رفتن اطلاعات محرمانه شما را کاهش می‌دهد.</li>
+            <li>پس از اتمام کار در سامانه ، با استفاده از گزینه " خروج"، از سامانه خارج شوید.</li>
+            <li>رایانه، تبلت و گوشی موبایل خود را طوری تنظیم نمایید که در فواصل زمانی کوتاه با استفاده از روش‌های امنیتی قفل گردد.</li>
+            <li>تا حد امکان از سیستم‌های عمومی و شبکه‌های بیسیم عمومی برای دسترسی به سامانه اجتناب نموده و در صورت استفاده حتما در اولین فرصت ممکن رمز عبور خود را تغییر دهید.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h6>اطلاع رسانی</h6>
+          <ul>
+            <li>مشتری گرامی در صورت بروز هر گونه مشکل و یا مشاهده شواهد مشکوک، مانند عدم امکان ورود به سامانه، پی بردن به عملیاتی که توسط شما انجام نگرفته است و غیره سریعا با مدیر صندوق تماس بگیرید.</li>
+          </ul>
+        </div>
+      </fd-scrollbar>
+    </div>
+  </div>
+
+</form>

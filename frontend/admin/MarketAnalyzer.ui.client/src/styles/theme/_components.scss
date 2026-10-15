@@ -1,0 +1,121 @@
+// ============================================================================
+// لایه ۵ · توکن‌های کامپوننت
+//
+//   «رنگ همهٔ دکمه‌های ثبت»      → --fd-btn-submit-*
+//   «رنگ همهٔ دکمه‌های اصلی»      → --fd-btn-primary-*
+//   «شکل همهٔ دکمه‌ها»            → --fd-btn-radius
+//
+// نقش‌های دکمه: primary | submit | secondary | danger.  هر نقش فقط توکن‌های خودش را می‌خواند.
+// دکمهٔ ثبت = کلاس .btn-submit  یا  <button type="submit" class="btn">  (جز دکمهٔ جستجو: .btn-search = نقش اصلی)
+// «بازنشانی» (.btn-dark) = نقش secondary
+// ============================================================================
+
+:root {
+  --fd-btn-radius: var(--fd-radius-control);
+
+  --fd-btn-primary-bg: var(--fd-gradient);
+  --fd-btn-primary-fg: #fff;
+  --fd-btn-primary-shadow: 0 8px 20px -10px var(--fd-primary-line);
+
+  // پیش‌فرض: هم‌رنگ دکمهٔ اصلی. برای رنگ جدا: --fd-btn-submit-bg را عوض کنید (یا data-submit)
+  --fd-btn-submit-bg: var(--fd-btn-primary-bg);
+  --fd-btn-submit-fg: #fff;
+  --fd-btn-submit-shadow: var(--fd-btn-primary-shadow);
+
+  --fd-btn-secondary-bg: var(--fd-surface);
+  --fd-btn-secondary-fg: var(--fd-text);
+  --fd-btn-secondary-border: var(--fd-line-strong);
+
+  --fd-btn-danger-bg: var(--fd-danger);
+  --fd-btn-danger-fg: #fff;
+}
+
+:root[data-submit="green"] { --fd-btn-submit-bg: linear-gradient(135deg, #16a34a, #0f7a37); --fd-btn-submit-shadow: 0 8px 20px -10px rgb(22 163 74 / 0.6); }
+:root[data-submit="blue"]  { --fd-btn-submit-bg: linear-gradient(135deg, #2563eb, #1d4ed8); --fd-btn-submit-shadow: 0 8px 20px -10px rgb(37 99 235 / 0.6); }
+:root[data-submit="rose"]  { --fd-btn-submit-bg: linear-gradient(135deg, #e11d74, #be185d); --fd-btn-submit-shadow: 0 8px 20px -10px rgb(225 29 116 / 0.6); }
+
+// ── اعمال روی Bootstrap (Bootstrap رنگ دکمه‌ها را زمان build می‌پزد، پس اینجا override می‌شود) ──
+.btn {
+  border-radius: var(--fd-btn-radius);
+}
+
+.btn.btn-primary {
+  color: var(--fd-btn-primary-fg);
+  background: var(--fd-btn-primary-bg);
+  border-color: transparent;
+  box-shadow: var(--fd-btn-primary-shadow);
+}
+
+.btn.btn-submit,
+.btn[type="submit"]:not(.btn-danger):not(.btn-secondary):not(.btn-link):not(.btn-search) {
+  color: var(--fd-btn-submit-fg);
+  background: var(--fd-btn-submit-bg);
+  border-color: transparent;
+  box-shadow: var(--fd-btn-submit-shadow);
+}
+
+.btn.btn-secondary,
+.btn.btn-outline-secondary,
+.btn.btn-dark {
+  color: var(--fd-btn-secondary-fg);
+  background: var(--fd-btn-secondary-bg);
+  border-color: var(--fd-btn-secondary-border);
+}
+
+.btn.btn-danger {
+  color: var(--fd-btn-danger-fg);
+  background: var(--fd-btn-danger-bg);
+  border-color: transparent;
+}
+
+.btn.btn-primary:not(:disabled):hover,
+.btn.btn-submit:not(:disabled):hover,
+.btn[type="submit"]:not(:disabled):not(.btn-search):hover,
+.btn.btn-danger:not(:disabled):hover {
+  filter: brightness(1.08);
+}
+
+// دکمهٔ .btn-primary-dark (رنگ‌های theme-colors بوت‌استرپ در build به hex پخته می‌شوند)
+.btn.btn-primary-dark {
+  --bs-btn-bg: var(--fd-primary-dark);
+  --bs-btn-border-color: var(--fd-primary-dark);
+  --bs-btn-hover-bg: var(--fd-primary-dark);
+  --bs-btn-hover-border-color: var(--fd-primary-dark);
+  --bs-btn-active-bg: var(--fd-primary-dark);
+  --bs-btn-active-border-color: var(--fd-primary-dark);
+  --bs-btn-color: var(--fd-on-primary);
+  --bs-btn-hover-color: var(--fd-on-primary);
+  --bs-btn-active-color: var(--fd-on-primary);
+  background-color: var(--fd-primary-dark);
+  border-color: var(--fd-primary-dark);
+  color: var(--fd-on-primary);
+}
+
+.btn:focus-visible {
+  box-shadow: var(--fd-focus-ring);
+}
+
+// دکمه‌های معنایی (افزودن / دانلود / تأیید): رنگ از توکن وضعیت، نه hex بوت‌استرپ
+.btn.btn-success {
+  color: var(--fd-on-primary);
+  background: var(--fd-success);
+  border-color: transparent;
+}
+
+.btn.btn-warning {
+  color: var(--fd-on-warning);
+  background: var(--fd-warning);
+  border-color: transparent;
+}
+
+.btn.btn-info {
+  color: var(--fd-on-primary);
+  background: var(--fd-info);
+  border-color: transparent;
+}
+
+.btn.btn-success:not(:disabled):hover,
+.btn.btn-warning:not(:disabled):hover,
+.btn.btn-info:not(:disabled):hover {
+  filter: brightness(1.08);
+}

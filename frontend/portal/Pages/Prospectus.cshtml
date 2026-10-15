@@ -1,0 +1,91 @@
+@page
+@model ProspectusModel
+@{
+    ViewData["Title"] = "امیدنامه صندوق";
+}
+
+<div class="container">
+    <div class="d-flex flex-column justify-content-center align-items-center">
+        <h3 data-type="pre-titles">امیدنامه صندوق</h3>
+        <div class="container p-0 m-3">
+            <div class="alert alert-danger mb-5" asp-validation-summary="ModelOnly"></div>
+            @if (Model.InitialProspectus is not null)
+            {
+                <div class="row d-flex justify-content-center">
+                    <div class="col-12 col-md-6 mb-3">
+                        <a asp-page="Prospectus" asp-page-handler="Download" asp-route-attachmentId="@Model.InitialProspectus.AttachmentId">
+                            <div class="card download-card">
+                                <div class="row g-0">
+                                    <div class="col-3 d-flex align-items-center justify-content-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                                            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                                            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                                        </svg>
+                                    </div>
+                                    <div class="col-9">
+                                        <div class="card-body">
+                                            <h5 class="card-title">	امیدنامه (نسخه اولیه)</h5>
+                                            <p class="card-text"><small class="text-muted">تاریخ بارگذاری: @Model.InitialProspectus.Date.ToPersian()</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class=" col-12 col-md-6 mb-3">
+                        <a href="#">
+                            <div class="card download-card">
+                                <div class="row g-0">
+                                    <div class="col-3 d-flex align-items-center justify-content-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                                            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                                            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                                        </svg>
+                                    </div>
+                                    <div class="col-9">
+                                        <div class="card-body">
+                                            <h5 class="card-title">	امیدنامه (نسخه نهایی)</h5>
+                                            <p class="card-text"><small class="text-muted">تاریخ بارگذاری: --</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            }
+        </div>
+        <h3 data-type="pre-titles">تغییرات امیدنامه</h3>
+        <table class="table table-striped table-hover data-table text-center mt-3 mb-5">
+            <thead>
+                <tr>
+                    <th scope="col">شرح</th>
+                    <th scope="col">دانلود فایل</th>
+                    <th scope="col">تاریخ</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @if (Model.Prospectuses is not null)
+                {
+                    @foreach (var item in Model.Prospectuses)
+                    {
+                        <tr>
+                            <td>@item.Description</td>
+                            <td>
+                                <a asp-page="Prospectus" asp-page-handler="Download" asp-route-attachmentId="@item.AttachmentId" data-type="hyper-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download m-1" viewBox="0 0 16 16">
+                                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                                    </svg>@item.Description
+                                </a>
+                            </td>
+                            <td><span dir="ltr">@item.Date.ToPersian()</span></td>
+                        </tr>
+                    }
+                }
+            </tbody>
+
+        </table>
+    </div>
+</div>

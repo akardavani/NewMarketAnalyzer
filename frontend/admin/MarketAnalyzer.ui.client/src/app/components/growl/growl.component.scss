@@ -1,0 +1,68 @@
+.growl {
+  position: absolute;
+  width: 309px;
+  min-height: 45px;
+  cursor: default;
+  border: 1px solid transparent;
+  z-index: 999999999;
+  transition: bottom ease-in-out 150ms;
+  border-radius: var(--bs-border-radius);
+  display: flex;
+  flex-direction: row;
+  margin: 5px 5px 0 5px;
+
+  &.right {
+    right: 0;
+  }
+
+  &.left {
+    left: 0;
+  }
+
+  .grow-content {
+    display: flex;
+    overflow: hidden;
+    max-height: 200px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+  }
+
+  .growl-closer {
+    padding: 8px;
+    cursor: pointer;
+    opacity: 0.8;
+
+    i {
+      font-size: 12px;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &.growl-success {
+    color: var(--bs-light);
+    background-color: var(--bs-success);
+    border-color: var(--bs-success-text-emphasis);
+  }
+
+  &.growl-info {
+    color: var(--bs-light);
+    background-color: var(--bs-info);
+    border-color: var(--bs-info-text-emphasis);
+  }
+
+  &.growl-warning {
+    color: var(--bs-light);
+    background-color: var(--bs-warning);
+    border-color: var(--bs-warning-text-emphasis);
+  }
+
+  &.growl-error {
+    color: var(--bs-light);
+    background-color: var(--bs-danger);
+    border-color: var(--bs-danger-text-emphasis);
+  }
+}

@@ -1,0 +1,47 @@
+<fd-page-wrapper [showSidebar]="showSidebar">
+  <div toolbar class="d-flex align-items-center gap-2">
+    <div class="d-flex align-items-center">
+      <button type="button" class="btn" (click)="toggleSidebar()"><i class="pa-filter"></i></button>
+      <button type="button" class="btn" (click)="exportReport(1)"><i class="pa pa-pdf"></i></button>
+      <button type="button" class="btn" (click)="exportReport(2)"><i class="pa pa-excel"></i></button>
+    </div>
+
+    <button class="btn btn-dark" (click)="downloadTemplate()">دریافت فایل قالب</button>
+
+    <div class="d-flex gap-1">
+      <div style="width: 300px;">
+        <file-input (changed)="fileChanged($event)" placeholder="انتخاب فایل..."></file-input>
+      </div>
+      <button type="button" class="btn btn-secondary" [disabled]="disableFileSubmit" (click)="submitFile()">ارسال</button>
+    </div>
+  </div>
+
+  <form [formGroup]="filter" sidebar class="ag-filter-form" (ngSubmit)="applyFilter()">
+    <fd-scrollbar>
+
+      <fd-float-label class="form-field" placeholder="تاریخ">
+        <date-input formControlName="date" />
+      </fd-float-label>
+
+    </fd-scrollbar>
+
+    <footer>
+      <button type="submit" class="btn btn-primary btn-search">جستجو</button>
+      <button type="button" class="btn btn-dark" (click)="resetFilter()">بازنشانی</button>
+    </footer>
+  </form>
+
+  <ag-grid-angular [enableRtl]="true"
+                   [rowData]="data | async"
+                   [getRowId]="getRowId"
+                   [style.width]="width"
+                   [style.height]="height"
+                   [localeText]="localeText"
+                   [rowModelType]="rowModelType"
+                   [autoSizeStrategy]="autoSizeStrategy"
+                   [loadingOverlayComponent]="loadingOverlayComponent"
+                   [paginationPageSizeSelector]="paginationPageSizeSelector"
+                   (gridReady)="onGridReady($event)">
+  </ag-grid-angular>
+
+</fd-page-wrapper>

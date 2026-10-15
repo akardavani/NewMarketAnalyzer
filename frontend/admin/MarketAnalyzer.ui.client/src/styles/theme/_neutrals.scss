@@ -1,0 +1,60 @@
+// ============================================================================
+// لایه ۲ · خنثی‌ها (پس‌زمینه‌ها، خط‌ها، متن‌ها) برای حالت روشن و تیره
+// این لایه به برند وابسته نیست. اگر نیمه‌شب‌تر یا روشن‌تر می‌خواهید فقط همین‌جا را تغییر دهید.
+// حالت پیش‌فرض (بدون attribute) = روشن، تا برنامه بدون ThemeService هم درست نمایش داده شود.
+// ============================================================================
+
+:root,
+:root[data-mode="light"] {
+  --fd-pal-a: var(--fd-pal-a-light);
+  --fd-pal-b: var(--fd-pal-b-light);
+  --fd-pal-text: var(--fd-pal-text-light);
+
+  --fd-bg: #f6f6fb;
+  --fd-sidebar: #fcfcff;
+  --fd-surface: #ffffff;
+  --fd-surface-2: #f3f3fa;
+  --fd-surface-3: #e9e9f3;
+  --fd-field: #ffffff;
+  --fd-line: rgb(24 24 70 / 0.085);
+  --fd-line-strong: rgb(24 24 70 / 0.17);
+  --fd-text: #14142b;
+  --fd-text-2: #4a4a68;
+  --fd-text-3: #6c6c88;
+  --fd-hover: rgb(30 30 100 / 0.055);
+  --fd-scrim: rgb(20 20 50 / 0.38);
+  --fd-segment-on: #ffffff;
+  --fd-strong-bg: #5f6078;
+  --fd-strong-fg: #f6f6fb;
+  --fd-on-primary: #ffffff;
+  --fd-shadow-card: 0 1px 2px rgb(20 20 60 / 0.05);
+  --fd-shadow-pop: 0 4px 8px rgb(0 0 0 / 0.2), 0 6px 20px rgb(0 0 0 / 0.19);
+  color-scheme: light;
+}
+
+:root[data-mode="dark"] {
+  --fd-pal-a: var(--fd-pal-a-dark);
+  --fd-pal-b: var(--fd-pal-b-dark);
+  --fd-pal-text: var(--fd-pal-text-dark);
+
+  --fd-bg: #08080f;
+  --fd-sidebar: #0b0b14;
+  --fd-surface: #12121e;
+  --fd-surface-2: #181827;
+  --fd-surface-3: #22223a;
+  --fd-field: #0e0e19;
+  --fd-line: rgb(255 255 255 / 0.075);
+  --fd-line-strong: rgb(255 255 255 / 0.15);
+  --fd-text: #f5f5fb;
+  --fd-text-2: #b8b8cc;
+  --fd-text-3: #8686a0;
+  --fd-hover: rgb(255 255 255 / 0.055);
+  --fd-scrim: rgb(2 2 10 / 0.6);
+  --fd-segment-on: #05050b;
+  --fd-strong-bg: #2b2b44;
+  --fd-strong-fg: #f5f5fb;
+  --fd-on-primary: #ffffff;
+  --fd-shadow-card: 0 1px 0 rgb(255 255 255 / 0.04) inset;
+  --fd-shadow-pop: 0 8px 24px rgb(0 0 0 / 0.55), 0 0 0 1px rgb(255 255 255 / 0.06);
+  color-scheme: dark;
+}

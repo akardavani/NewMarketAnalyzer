@@ -1,0 +1,49 @@
+
+/* ***Fonts*** */
+
+//For iran-sans-farsi - Regular
+@font-face {
+    font-family: IRANSansFarsi;
+    font-style: normal;
+    font-weight: normal;
+    src: url('~/fonts/iran-sans-farsi/farsi_normal.eot');
+    src: url('~/fonts/iran-sans-farsi/farsi_normal.eot') format('embedded-opentype'), url('~/fonts/iran-sans-farsi/farsi_normal.woff2') format('woff2'), url('~/fonts/iran-sans-farsi/farsi_normal.woff') format('woff'), url('~/fonts/iran-sans-farsi/farsi_normal.ttf') format('truetype');
+}
+
+//For iran-sans-farsi - Bold
+@font-face {
+    font-family: 'iran-sans-farsi';
+    src: url('~/fonts/iran-sans-farsi/farsi_bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* ***Colors*** */
+
+$primary-color: #045050;
+$secondary-color: #E8885E;
+$background-color: #EAE2D5;
+$light-primary-color: #096464;
+$light-blue: #cfe8ed;
+
+$main-background: #ffffff; /*white*/
+$text-color: #494e4e; /*dark gray*/
+$light-gray: #e2e2e2; /*light gray*/
+
+$negative-color: #f32121;
+
+/* ***Border*** */
+
+$thin-border: 1px solid $primary-color;
+$small-radius: 5px;
+$medium-radius: 10px;
+
+
+
+/* ***animation*** */
+
+$animation-ease: all 0.3s ease;
+
+/* ***box shadow*** */
+
+$shadow-small: 0 0 10px rgba(0,0,0,0.2);

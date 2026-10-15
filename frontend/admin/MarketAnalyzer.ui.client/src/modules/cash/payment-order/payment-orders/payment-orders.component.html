@@ -1,0 +1,133 @@
+<fd-page-wrapper [showSidebar]="showSidebar">
+  <div toolbar class="d-flex gap-2">
+    <div>
+      <button type="button" class="btn" (click)="toggleSidebar()"><i class="pa-filter"></i></button>
+      <button type="button" class="btn" (click)="exportReport(1)"><i class="pa pa-pdf"></i></button>
+      <button type="button" class="btn" (click)="exportReport(2)"><i class="pa pa-excel"></i></button>
+    </div>
+
+    <div class="d-flex align-items-center gap-1">
+      <a routerLink="/cash/others-payment" class="btn btn-secondary">پرداخت به سایر</a>
+      <a routerLink="/cash/investors-payment" class="btn btn-secondary">پرداخت به سرمایه گذار</a>
+      <button type="button" class="btn btn-secondary" (click)="bankTransferMoney()">انتقال وجه بانکی</button>
+    </div>
+  </div>
+
+  <form [formGroup]="filter" sidebar class="ag-filter-form" (ngSubmit)="applyFilter()">
+    <fd-scrollbar>
+
+      <div class="form-field">
+        <fd-float-label class="form-field" placeholder="از تاریخ ایجاد">
+          <date-input formControlName="creationFromDate"></date-input>
+        </fd-float-label>
+      </div>
+
+      <div class="form-field">
+        <fd-float-label class="form-field" placeholder="تا تاریخ ایجاد">
+          <date-input formControlName="creationToDate"></date-input>
+        </fd-float-label>
+      </div>
+
+      <div class="form-field">
+        <fd-float-label class="form-field" placeholder="تاریخ پرداخت از">
+          <date-input formControlName="paymentFromDate"></date-input>
+        </fd-float-label>
+      </div>
+
+      <div class="form-field">
+        <fd-float-label class="form-field" placeholder="تاریخ پرداخت تا">
+          <date-input formControlName="paymentToDate"></date-input>
+        </fd-float-label>
+      </div>
+
+      <div class="form-field">
+        <fd-float-label class="form-field" placeholder="حساب بانکی مبدأ">
+          <fd-drop-down formControlName="bankAccountId">
+            <fd-option [value]="null">همه</fd-option>
+            @for(item of banks | async; track $index) {
+            <fd-option [value]="item.id">{{item.title}}</fd-option>
+            }
+          </fd-drop-down>
+        </fd-float-label>
+      </div>
+
+      <div class="form-field">
+        <fd-float-label class="form-field" placeholder="حساب تفصیلی">
+          <fd-autocomplete [dataSource]="detailAccountsSource" formControlName="destinationDetailAccountCode"></fd-autocomplete>
+        </fd-float-label>
+      </div>
+
+      <div class="form-field">
+        <fd-float-label class="form-field" placeholder="علت دستور پرداخت">
+          <fd-drop-down formControlName="reasonId">
+            <fd-option [value]="null">همه</fd-option>
+            @for(item of categories | async; track $index) {
+            <fd-option [value]="item.value">{{item.text}}</fd-option>
+            }
+          </fd-drop-down>
+        </fd-float-label>
+      </div>
+
+      <div class="form-field">
+        <fd-float-label class="form-field" placeholder="نحوه پرداخت">
+          <fd-drop-down formControlName="paymentTypeId">
+            <fd-option [value]="null">همه</fd-option>
+            @for(item of paymentTypes | async; track $index) {
+            <fd-option [value]="item.value">{{item.text}}</fd-option>
+            }
+          </fd-drop-down>
+        </fd-float-label>
+      </div>
+
+      <div class="form-field">
+        <fd-float-label class="form-field" placeholder="وضعیت دستور پرداخت">
+          <fd-drop-down formControlName="stateId">
+            <fd-option [value]="null">همه</fd-option>
+            @for(item of states | async; track $index) {
+            <fd-option [value]="item.value">{{item.text}}</fd-option>
+            }
+          </fd-drop-down>
+        </fd-float-label>
+      </div>
+
+      <div class="form-field">
+        <fd-float-label class="form-field" placeholder="وضعیت حذف">
+          <fd-drop-down formControlName="deleted">
+            <fd-option [value]="null">همه</fd-option>
+            <fd-option [value]="false">حذف نشده</fd-option>
+            <fd-option [value]="true">حذف شده</fd-option>
+          </fd-drop-down>
+        </fd-float-label>
+      </div>
+
+      <div class="form-field">
+        <fd-float-label class="form-field" placeholder="وضعیت سند">
+          <fd-drop-down formControlName="hasVoucher">
+            <fd-option [value]="null">همه</fd-option>
+            <fd-option [value]="true">دارای سند</fd-option>
+            <fd-option [value]="false">فاقد سند</fd-option>
+          </fd-drop-down>
+        </fd-float-label>
+      </div>
+
+    </fd-scrollbar>
+
+    <footer>
+      <button type="submit" class="btn btn-primary btn-search">جستجو</button>
+      <button type="button" class="btn btn-dark" (click)="resetFilter()">بازنشانی</button>
+    </footer>
+  </form>
+
+  <ag-grid-angular [enableRtl]="true"
+                   [getRowId]="getRowId"
+                   [style.width]="width"
+                   [style.height]="height"
+                   [localeText]="localeText"
+                   [rowModelType]="rowModelType"
+                   [autoSizeStrategy]="autoSizeStrategy"
+                   [loadingOverlayComponent]="loadingOverlayComponent"
+                   [paginationPageSizeSelector]="paginationPageSizeSelector"
+                   (gridReady)="onGridReady($event)">
+  </ag-grid-angular>
+
+</fd-page-wrapper>

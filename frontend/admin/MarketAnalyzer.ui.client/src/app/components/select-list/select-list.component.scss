@@ -1,0 +1,54 @@
+.fd-select-list {
+  .empty-text {
+    border-radius: inherit;
+    cursor: default !important;
+  }
+
+  .items-container {
+    position: relative;
+
+    .focus-control {
+      width: 0;
+      height: 0;
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+    }
+  }
+
+  .list-group {
+    position: relative;
+    border: var(--bs-border-width) solid var(--bs-list-group-border-color);
+
+    .list-group-item {
+      cursor: pointer;
+      user-select: none;
+
+      &.focused {
+        z-index: 1;
+        text-decoration: none;
+
+        &:not(.active) {
+          color: var(--bs-list-group-action-hover-color);
+          background-color: var(--bs-list-group-action-hover-bg);
+        }
+      }
+
+      + .list-group-item.active {
+        margin-top: initial;
+      }
+
+      &.active {
+        .highlight {
+          color: yellow;
+        }
+      }
+
+      &:not(.active) {
+        .highlight {
+          background-color: yellow;
+        }
+      }
+    }
+  }
+}

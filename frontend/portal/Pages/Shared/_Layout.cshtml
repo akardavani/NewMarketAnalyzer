@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - صندوق مشترک مبین سرمایه</title>
+    <environment names="Development">
+        <link href="~/styles/bootstrap.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/styles/layout.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/styles/jalalidatepicker.css" rel="stylesheet" asp-append-version="true" />
+    </environment>
+    <environment names="Production">
+        <link href="~/styles.min.css" rel="stylesheet" asp-append-version="true" />
+    </environment>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <partial name="_Header" />
+
+    @if (User.Identity.IsAuthenticated)
+    {
+        <partial name="_UserMenu" />
+    }
+
+    <div class="flex-grow-1">
+        <main role="main">
+            @RenderBody()
+        </main>
+        <button type="button"
+                class="btn btn-floating"
+                id="btn-back-to-top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z" />
+            </svg>
+        </button>
+    </div>
+
+    <partial name="_Footer" />
+
+    <script src="~/libs.min.js" asp-append-version="true"></script>
+    <environment names="Development">
+        <script src="~/scripts/index.js" type="module" asp-append-version="true"></script>
+    </environment>
+    <environment names="Production">
+        <script src="~/scripts.min.js" asp-append-version="true"></script>
+    </environment>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,63 @@
+<fd-page-wrapper [showSidebar]="showSidebar">
+  <div toolbar class="d-flex gap-4">
+    <div>
+      <button type="button" class="btn" (click)="toggleSidebar()"><i class="pa-filter"></i></button>
+    </div>
+
+    <div>
+      <button type="button" class="btn btn-primary" (click)="create()">ایجاد نقش جدید</button>
+    </div>
+  </div>
+
+  <form [formGroup]="filter" sidebar class="ag-filter-form" (ngSubmit)="applyFilter()">
+    <fd-scrollbar>
+
+      <div class="form-field">
+        <fd-float-label class="form-field" placeholder="نام">
+          <input type="text" class="form-control" formControlName="name" />
+        </fd-float-label>
+      </div>
+
+      <div class="form-field">
+        <fd-float-label class="form-field" placeholder="نام نمایشی">
+          <input type="text" class="form-control" formControlName="displayName" />
+        </fd-float-label>
+      </div>
+
+      <div class="form-field">
+        <fd-float-label class="form-field" placeholder="وضعیت">
+          <fd-drop-down formControlName="isActive">
+            <fd-option [value]="null">همه</fd-option>
+            <fd-option [value]="true">فعال</fd-option>
+            <fd-option [value]="false">غیر فعال</fd-option>
+          </fd-drop-down>
+        </fd-float-label>
+      </div>
+
+    </fd-scrollbar>
+
+    <footer>
+      <button type="submit" class="btn btn-primary btn-search">جستجو</button>
+      <button type="button" class="btn btn-dark" (click)="resetFilter()">بازنشانی</button>
+    </footer>
+  </form>
+
+  <div class="d-flex h-100">
+    <div class="w-50">
+      <ag-grid-angular [enableRtl]="true"
+                       [getRowId]="getRowId"
+                       [style.width]="width"
+                       [style.height]="height"
+                       [localeText]="localeText"
+                       [rowModelType]="rowModelType"
+                       [autoSizeStrategy]="autoSizeStrategy"
+                       [loadingOverlayComponent]="loadingOverlayComponent"
+                       [paginationPageSizeSelector]="paginationPageSizeSelector"
+                       (gridReady)="onGridReady($event)">
+      </ag-grid-angular>
+    </div>
+
+    <role-permissions class="role-permissions" [role]="selectedRole"></role-permissions>
+  </div>
+
+</fd-page-wrapper>

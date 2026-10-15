@@ -1,0 +1,61 @@
+
+.loader {
+  width: 100px;
+  display: grid;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 8px solid transparent;
+  border-color: var(--fd-line-strong) transparent;
+  animation: l16 1s infinite linear;
+
+  &::before,
+  &::after {
+    content: "";
+    margin: 4px;
+    grid-area: 1/1;
+    border: inherit;
+    border-radius: 50%;
+  }
+
+  &::before {
+    animation: inherit;
+    animation-duration: 0.5s;
+    border-color: var(--bs-primary) transparent;
+    animation-direction: reverse;
+  }
+
+  &::after {
+    margin: 16px;
+  }
+}
+
+.waiting-msg {
+  margin-top: 10px;
+}
+
+@keyframes l16 {
+  100% {
+    transform: rotate(1turn)
+  }
+}
+
+body {
+  .app-loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    z-index: 100000;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &.loaded {
+    .app-loader-wrapper {
+      display: none;
+    }
+  }
+}

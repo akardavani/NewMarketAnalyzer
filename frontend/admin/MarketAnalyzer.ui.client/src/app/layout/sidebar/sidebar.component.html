@@ -1,0 +1,63 @@
+<aside class="sb" [class.collapsed]="collapsed()" aria-label="منوی اصلی">
+  <a class="brand" routerLink="/" [attr.title]="brand.productName">
+    @if (brand.logoUrl) {
+    <img class="logo logo-img" [src]="brand.logoUrl" alt="" />
+    } @else {
+    <span class="logo" aria-hidden="true">{{ initial }}</span>
+    }
+    <span class="brand-t">
+      <b>{{ brand.productName }}</b>
+      @if (brand.companyName) {
+      <span>{{ brand.companyName }}</span>
+      }
+    </span>
+  </a>
+
+  <button type="button" class="edge" (click)="shell.toggleSidebar()"
+          [attr.aria-label]="collapsed() ? 'باز کردن منو' : 'بستن منو'" [attr.aria-expanded]="!collapsed()">
+    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6" /></svg>
+  </button>
+
+  <nav class="nav">
+    <ng-container *ngTemplateOutlet="list; context: { $implicit: tree(), depth: 0 }" />
+  </nav>
+</aside>
+
+<ng-template #list let-nodes let-depth="depth">
+  @for (n of nodes; track n.key) {
+  @if (n.children.length) {
+  @if (depth === 0) {
+  <!-- عنوان منوی اصلی = بخش آکاردئونی -->
+  <section class="sec" [class.is-closed]="!isOpen(n)" [class.has-active]="hasActive(n)">
+    <button type="button" class="sec-h" [attr.data-tip]="n.label" [attr.aria-expanded]="isOpen(n)" (click)="toggle(n)">
+      <span class="ico"><i [class]="iconFor(n)"></i></span>
+      <span class="t">{{ n.label }}</span>
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6" /></svg>
+    </button>
+    <div class="sec-body"><div>
+      <ng-container *ngTemplateOutlet="list; context: { $implicit: n.children, depth: depth + 1 }" />
+    </div></div>
+  </section>
+  } @else {
+  <!-- گروه تو‌در‌تو (عمق ≥ ۲) -->
+  <div class="grp" [class.is-closed]="!isOpen(n)" [class.has-active]="hasActive(n)">
+    <button type="button" class="item sub" [attr.data-tip]="n.label" [attr.aria-expanded]="isOpen(n)" (click)="toggle(n)">
+      <span class="l">{{ n.label }}</span>
+      <svg class="chev" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6" /></svg>
+    </button>
+    <div class="sec-body"><div class="nested">
+      <ng-container *ngTemplateOutlet="list; context: { $implicit: n.children, depth: depth + 1 }" />
+    </div></div>
+  </div>
+  }
+  } @else if (n.url) {
+  <a class="item" [class.sub]="depth > 0" [routerLink]="n.url" [class.on]="isActive(n)" [attr.data-tip]="n.label"
+     [attr.aria-current]="isActive(n) ? 'page' : null">
+    @if (depth === 0) {
+    <span class="ico"><i [class]="iconFor(n)"></i></span>
+    }
+    <span class="l">{{ n.label }}</span>
+  </a>
+  }
+  }
+</ng-template>

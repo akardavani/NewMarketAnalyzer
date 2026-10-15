@@ -1,0 +1,41 @@
+@if(loading) {
+<div class="loader-wrapper">
+  <fd-loader message="در حال دریافت اطلاعات کاربر ..."></fd-loader>
+</div>
+}
+
+<header class="d-flex">
+  <div class="flex-grow-1 p-1">
+    <button type="button" class="btn btn-primary btn-submit" [disabled]="!role" (click)="saveChanges()">ذخیره تغییرات</button>
+  </div>
+
+  <span class="p-3">دسترسی‌ها</span>
+</header>
+
+<div class="flex-grow-1">
+  <fd-scrollbar class="h-100">
+
+    <ul>
+      @for (permission of permissions; track permission.tracker) {
+      <li>
+        <div class="expander" (click)="toggle(submenu, permission)">
+          <span class="expander-handler" [class.rotated]="permission.expanded"><i class="pa pa-compact"></i></span>
+          <span>{{permission.routeName}}</span>
+        </div>
+
+        <div #submenu class="permissions">
+          @for (item of permission.children; track item.tracker) {
+          <div>
+            <checkbox [value]="item"
+                      [label]="item.routeName"
+                      [checked]="item.authorized"
+                      (changed)="permissionChanged($event)"></checkbox>
+          </div>
+          }
+        </div>
+      </li>
+      }
+    </ul>
+
+  </fd-scrollbar>
+</div>

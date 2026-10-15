@@ -1,0 +1,176 @@
+@page
+@model IssuanceRequestModel
+@{
+    ViewData["Title"] = "صدور واحد";
+}
+
+<div class="container">
+    <div class="d-flex flex-column">
+        <h3 data-type="pre-titles" class="align-self-center">صدور واحد</h3>
+        <div class="statistics tab-content same-width px-1 py-3" id="nav-tabContent">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-2 g-lg-2">
+                    <div class="col">
+                        <div class='statistic-box'>
+                            <p class="statistic-title">تاریخ آخرین NAV محاسبه شده</p>
+                            <p>
+                                @(Model.NavDate?.ToString("yyyy/MM/dd") ?? "-")
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class='statistic-box'>
+                            <p class="statistic-title">قیمت صدور</p>
+                            <p>
+                                @Model.IssuanceNav.ToString("##,0")
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class='statistic-box'>
+                            <p class="statistic-title">قیمت ابطال</p>
+                            <p>
+                                @Model.CancellationNav.ToString("##,0")
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="alert alert-danger mt-5" asp-validation-summary="ModelOnly"></div>
+        <div class="issuance-request d-flex flex-column align-items-center shadow-lg my-5">
+            <div class="toggle-buttons p-0 mb-0">
+                <ul class="nav nav-pills p-2 mb-3 d-flex justify-content-evenly" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="deposit-slip" data-bs-toggle="pill" data-bs-target="#deposit-slip-form" type="button" role="tab" aria-controls="deposit-slip">فیش واریزی</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="electronic-payment" data-bs-toggle="pill" data-bs-target="#electronic-payment-form" type="button" role="tab" aria-controls="electronic-payment">پرداخت الکترونیک</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content w-100" id="pills-tabContent">
+                <div class="tab-pane mt-4 fade show active" id="deposit-slip-form" role="tabpanel" aria-labelledby="pills-deposit-slip">
+                    <form method="post" class="d-flex flex-column request-form" enctype="multipart/form-data">
+                        <div class="row mb-1">
+                            <div class="col-12 col-md-6">
+                                <div class="input-group">
+                                    <div class="input-group-prepend request-form-prepend">
+                                        <label class="input-group-text request-form-label" for="inputGroupSelect">شماره حساب صندوق</label>
+                                    </div>
+                                    <select class="custom-select form-control request-form-input" asp-for="CompanyBankAccount" asp-items="Model.CompanyBankAccounts">
+                                        <option value="">[انتخاب شماره حساب صندوق]</option>
+                                    </select>
+                                </div>
+                                <span asp-validation-for="CompanyBankAccount" class="input-validation-alert"></span>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="input-group">
+                                    <div class="input-group-prepend request-form-prepend">
+                                        <label class="input-group-text request-form-label" for="inputGroupSelect">نحوه واریز</label>
+                                    </div>
+                                    <select class="custom-select form-control request-form-input" asp-for="PaymentMethodId" asp-items="Model.PaymentMethods">
+                                        <option value="">[انتخاب نحوه واریز]</option>
+                                    </select>
+                                </div>
+                                <span asp-validation-for="CompanyBankAccount" class="input-validation-alert"></span>
+                            </div>
+                        </div>
+                        <div class="row mb-1">
+                            <div class="col-12 col-md-6">
+                                <div class="input-group">
+                                    <div class="input-group-prepend request-form-prepend">
+                                        <label class="input-group-text request-form-label" for="inputGroupSelect">نوع واحد</label>
+                                    </div>
+                                    <select class="custom-select form-control request-form-input" asp-for="UnitTypeId" asp-items="Model.UnitTypes">
+                                        <option value="">[انتخاب نوع واحد]</option>
+                                    </select>
+                                </div>
+                                <span asp-validation-for="CompanyBankAccount" class="input-validation-alert"></span>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="input-group">
+                                    <div class="input-group-prepend request-form-prepend">
+                                        <label class="input-group-text request-form-label">مبلغ واریزی</label>
+                                    </div>
+                                    <input asp-for="Amount" class="form-control request-form-input" type="text" placeholder="مبلغ واریزی به ریال">
+                                </div>
+                                <span asp-validation-for="Amount" class="input-validation-alert"></span>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class=" col-12 col-md-6">
+                                <div class="input-group">
+                                    <div class="input-group-prepend request-form-prepend">
+                                        <label class="input-group-text request-form-label">شماره فیش واریزی</label>
+                                    </div>
+                                    <input asp-for="DepositSlipNumber" class="form-control request-form-input" type="text" placeholder="شماره فیش">
+                                </div>
+                                <span asp-validation-for="DepositSlipNumber" class="input-validation-alert"></span>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="input-group">
+                                    <div class="input-group-prepend request-form-prepend">
+                                        <label class="input-group-text request-form-label">تاریخ واریز</label>
+                                    </div>
+                                    <input data-jdp asp-for="DepositDate" class="form-control request-form-input" type="text" placeholder="انتخاب تاریخ">
+                                </div>
+                                <span asp-validation-for="DepositDate" class="input-validation-alert"></span>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="input-group">
+                                    <div class="input-group-prepend request-form-prepend">
+                                        <label class="input-group-text request-form-label">تصویر فیش واریزی</label>
+                                    </div>
+                                    <input asp-for="DepositSlipPicture" class="form-control request-form-input text-center" type="file">
+                                </div>
+                                <span asp-validation-for="DepositSlipPicture" class="input-validation-alert"></span>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="form-group">
+                                <textarea asp-for="Description" class="form-control request-description" placeholder="توضیحات" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="mb-3 align-self-center">
+                            <button class="mt-2" type="submit" data-type="primary-buttons" asp-page-handler="DepositSlip">
+                                ثبت درخواست
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane mt-4 fade show" id="electronic-payment-form" role="tabpanel" aria-labelledby="pills-electronic-payment">
+                    <form method="post" class="d-flex flex-column request-form">
+                        <div class="row mb-1">
+                            <div class="col-12">
+                                <div class="input-group">
+                                    <div class="input-group-prepend request-form-prepend">
+                                        <label class="input-group-text request-form-label" for="inputGroupSelect">درگاه پرداخت</label>
+                                    </div>
+                                    <select class="custom-select form-control request-form-input" asp-for="GatewayId" asp-items="Model.Gateways">
+                                        <option value="">[انتخاب درگاه پرداخت]</option>
+                                    </select>
+                                </div>
+                                <span asp-validation-for="GatewayId" class="input-validation-alert"></span>
+                            </div>
+                        </div>
+                        <div class="row mb-1">
+                            <div class="col-12">
+                                <div class="input-group">
+                                    <div class="input-group-prepend request-form-prepend">
+                                        <label class="input-group-text request-form-label">مبلغ واریزی</label>
+                                    </div>
+                                    <input asp-for="Amount" class="form-control request-form-input" type="text" placeholder="مبلغ واریزی به ریال">
+                                </div>
+                                <span asp-validation-for="Amount" class="input-validation-alert"></span>
+                            </div>
+                        </div>
+                        <div class="row align-self-center mb-3">
+                            <button class="mt-2" type="submit" data-type="primary-buttons" asp-page-handler="PaymentGateway">پرداخت</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

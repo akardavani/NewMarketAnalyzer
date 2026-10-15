@@ -1,0 +1,14 @@
+﻿[
+  {
+    "outputFile": "wwwroot/styles/main.css",
+    "inputFile": "wwwroot/styles/main.scss"
+  },
+  {
+    "outputFile": "wwwroot/styles/bootstrap.css",
+    "inputFile": "wwwroot/styles/bootstrap.scss"
+  },
+  {
+    "outputFile": "wwwroot/styles/layout.css",
+    "inputFile": "wwwroot/styles/layout.scss"
+  }
+]

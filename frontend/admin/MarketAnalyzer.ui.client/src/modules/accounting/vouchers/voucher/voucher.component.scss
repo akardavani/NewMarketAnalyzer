@@ -1,0 +1,20 @@
+.voucher-header {
+  border-radius: 8px;
+  padding: 10px;
+  border: solid 1px var(--fd-line);
+
+  table {
+    width: 100%;
+    table-layout: fixed;
+
+    td.caption {
+      width: 85px;
+      text-align: left;
+      font-weight: var(--fd-fw-bold);
+    }
+
+    td {
+      padding: 3px 4px;
+    }
+  }
+}

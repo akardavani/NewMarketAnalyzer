@@ -1,0 +1,49 @@
+// ============================================================================
+// لایه ۱ · پالت‌ها — «تنها نقطهٔ تغییر رنگ برند»
+//
+// هر پالت فقط ۶ مقدار دارد (سه رنگ برای تیره، سه رنگ برای روشن)، به‌صورت سه‌تایی RGB
+// (بدون ویرگول) تا هم در rgb() و هم در color-mix() و هم در Bootstrap (--bs-*-rgb) قابل استفاده باشد.
+//
+//   a    = رنگ اصلی برند (دکمه‌ها، آیتم فعال، لینک‌ها)
+//   b    = رنگ دوم گرادیان (هیرو و دکمه‌ها)
+//   text = رنگ برند وقتی روی پس‌زمینهٔ عادی «متن» است (باید کنتراست کافی داشته باشد)
+//
+// برای محصول جدید (مثلاً BackOffice): فقط یک بلاک جدید اضافه کنید و data-palette را عوض کنید.
+// ============================================================================
+
+:root,
+:root[data-palette="violet"],
+[data-pal-preview="violet"] {
+  --fd-pal-a-dark: 124 108 245;  --fd-pal-b-dark: 14 165 255;  --fd-pal-text-dark: 169 157 255;
+  --fd-pal-a-light: 91 79 216;   --fd-pal-b-light: 10 143 230; --fd-pal-text-light: 79 67 207;
+}
+
+:root[data-palette="blue"],
+[data-pal-preview="blue"] {
+  --fd-pal-a-dark: 59 130 246;   --fd-pal-b-dark: 34 211 238;  --fd-pal-text-dark: 125 179 255;
+  --fd-pal-a-light: 37 99 235;   --fd-pal-b-light: 8 145 178;  --fd-pal-text-light: 29 86 216;
+}
+
+:root[data-palette="emerald"],
+[data-pal-preview="emerald"] {
+  --fd-pal-a-dark: 16 185 129;   --fd-pal-b-dark: 45 212 191;  --fd-pal-text-dark: 74 222 159;
+  --fd-pal-a-light: 5 150 105;   --fd-pal-b-light: 13 148 136; --fd-pal-text-light: 4 120 87;
+}
+
+:root[data-palette="rose"],
+[data-pal-preview="rose"] {
+  --fd-pal-a-dark: 236 72 153;   --fd-pal-b-dark: 249 115 22;  --fd-pal-text-dark: 245 140 192;
+  --fd-pal-a-light: 219 39 119;  --fd-pal-b-light: 234 88 12;  --fd-pal-text-light: 190 24 93;
+}
+
+:root[data-palette="orange"],
+[data-pal-preview="orange"] {
+  --fd-pal-a-dark: 249 115 22;   --fd-pal-b-dark: 244 63 94;   --fd-pal-text-dark: 253 174 107;
+  --fd-pal-a-light: 234 88 12;   --fd-pal-b-light: 225 29 72;  --fd-pal-text-light: 194 65 12;
+}
+
+:root[data-palette="slate"],
+[data-pal-preview="slate"] {
+  --fd-pal-a-dark: 122 138 163;  --fd-pal-b-dark: 56 189 248;  --fd-pal-text-dark: 169 183 204;
+  --fd-pal-a-light: 71 85 105;   --fd-pal-b-light: 2 132 199;  --fd-pal-text-light: 59 71 88;
+}

@@ -1,0 +1,66 @@
+<div class="dialog-warpper">
+  <div class="dialog-header">
+    <div class="dialog-title">ثبت اشخاص </div>
+
+    <div class="btn-close" (click)="close()">
+      <i class="pa-close"></i>
+    </div>
+  </div>
+
+  <div class="dialog-body d-flex flex-column gap-4 p-4">
+
+    <div class="d-flex gap-2">
+      <div class="w-25">
+        <fd-float-label placeholder="شخصیت">
+          <fd-drop-down [formControl]="personType">
+            <fd-option [value]="null">سجامی</fd-option>
+            @for(item of personTypes; track $index) {
+            <fd-option [value]="item.value">{{item.text}}</fd-option>
+            }
+          </fd-drop-down>
+        </fd-float-label>
+      </div>
+
+      <div class="w-25">
+        <fd-float-label placeholder="کد/شناسه ملی">
+          <input type="text" class="form-control" [formControl]="nationalCode" maxlength="16" />
+
+          @if(sejami) {
+          <div class="btn-float">
+            <button type="button" class="btn btn-success" [disabled]="kycDisabled" (click)="getKycCode()">دریافت کد سجام</button>
+          </div>
+          }
+        </fd-float-label>
+      </div>
+
+      @if(sejami) {
+      <div class="w-25">
+        <fd-float-label placeholder="کد اعتبارسنجی سجام">
+          <input type="text" class="form-control" [formControl]="kycCode" maxlength="16" />
+
+          <div class="btn-float">
+            <button type="button" class="btn btn-primary text-nowrap" [disabled]="profileDisabled" (click)="getSejamProfile()">دریافت اطلاعات</button>
+          </div>
+        </fd-float-label>
+      </div>
+
+      <div class="w-25">
+        <div class="form-control d-flex gap-2">
+          <span>وضعیت سجام:</span>
+          <span>{{sejamState}}</span>
+        </div>
+      </div>
+      }
+    </div>
+
+    <ng-template [cdkPortalOutlet]="portal" (attached)="portalAttached($event)"></ng-template>
+  </div>
+
+  <div class="dialog-footer gap-2">
+    <button type="button" class="btn btn-primary btn-submit" [disabled]="!portal" (click)="submit()">ذخیره</button>
+    <button type="button" class="btn btn-dark" (click)="reset()">بازنشانی</button>
+    <button type="button" class="btn btn-success" [disabled]="!portal" (click)="addBankAccount()">افزودن حساب بانکی</button>
+    <button type="button" class="btn btn-info" [disabled]="!portal" (click)="addAddress()">افزودن آدرس</button>
+    <button type="button" class="btn btn-warning" [disabled]="!portal" (click)="addContact()">افزودن تماس</button>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+@page
+@model BranchesModel
+@{
+    ViewData["Title"] = "شعبه‌های صندوق";
+}
+
+<div class="container">
+    <div class="d-flex flex-column">
+        <h3 data-type="pre-titles" class="align-self-center">شعبه‌های صندوق</h3>
+        <div class="table-responsive overflow-x-auto">
+            <table class="table table-striped table-hover data-table text-center mt-3 mb-5">
+                <thead>
+                    <tr>
+                        <th scope="col">ردیف</th>
+                        <th scope="col">نام شعبه</th>
+                        <th scope="col">آدرس</th>
+                        <th scope="col">مدیر ثبت</th>
+                        <th scope="col">تلفن</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="row">1</td>
+                        <td>مرکزی</td>
+                        <td>
+                            خیابان قائم مقام فراهانی، خیابان هشتم، پلاک 19
+                        </td>
+                        <td>محمدعلی محمدی</td>
+                        <td>۰۲۱۹۱۰۰۱۵۷۹</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">2</td>
+                        <td>سایر شعب</td>
+                        <td>
+                            <a href="https://club.mobinsb.ir/home/branches" data-type="hyper-link" target="_blank">مشاهده سایر شعب</a>
+                        </td>
+                        <td>محمدعلی محمدی</td>
+                        <td>۰۲۱۹۱۰۰۱۵۷۹</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

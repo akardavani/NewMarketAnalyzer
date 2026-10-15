@@ -1,0 +1,142 @@
+<fd-page-wrapper [showSidebar]="showSidebar">
+  <div toolbar>
+    <button type="button" class="btn" (click)="toggleSidebar()"><i class="pa-filter"></i></button>
+    <button type="button" class="btn" (click)="exportReport(1)"><i class="pa-pdf"></i></button>
+    <button type="button" class="btn" (click)="exportReport(2)"><i class="pa-excel"></i></button>
+  </div>
+
+  <form [formGroup]="filter" sidebar class="ag-filter-form" (ngSubmit)="applyFilter()">
+    <fd-scrollbar>
+
+      <div class="form-field">
+        <fd-float-label placeholder="حساب">
+          <fd-autocomplete [dataSource]="accountsSource" formControlName="accountCode"></fd-autocomplete>
+        </fd-float-label>
+      </div>
+
+      <div class="form-field">
+        <fd-float-label placeholder="حساب تفصیلی">
+          <fd-autocomplete [dataSource]="detailAccountsSource" formControlName="detailAccountCode"></fd-autocomplete>
+        </fd-float-label>
+      </div>
+
+      <fd-float-label class="form-field" placeholder="از تاریخ">
+        <date-input formControlName="fromDate" />
+      </fd-float-label>
+
+      <fd-float-label class="form-field" placeholder="تا تاریخ">
+        <date-input formControlName="toDate" />
+      </fd-float-label>
+
+      <fd-float-label class="form-field" placeholder="از شماره سند">
+        <input type="text" class="form-control" numbersOnly formControlName="fromVoucherNumber" />
+      </fd-float-label>
+
+      <fd-float-label class="form-field" placeholder="تا شماره سند">
+        <input type="text" class="form-control" numbersOnly formControlName="toVoucherNumber" />
+      </fd-float-label>
+
+      <fd-float-label class="form-field" placeholder="بدهکار از">
+        <input type="text" class="form-control" [ngAutoNumeric]="{}" formControlName="fromDebit" />
+      </fd-float-label>
+
+      <fd-float-label class="form-field" placeholder="بدهکار تا">
+        <input type="text" class="form-control" [ngAutoNumeric]="{}" formControlName="toDebit" />
+      </fd-float-label>
+
+      <fd-float-label class="form-field" placeholder="بستانکار از">
+        <input type="text" class="form-control" [ngAutoNumeric]="{}" formControlName="fromCredit" />
+      </fd-float-label>
+
+      <fd-float-label class="form-field" placeholder="بستانکار تا">
+        <input type="text" class="form-control" [ngAutoNumeric]="{}" formControlName="toCredit" />
+      </fd-float-label>
+
+      <fd-float-label class="form-field" placeholder="شرح">
+        <input type="text" class="form-control" formControlName="description" />
+      </fd-float-label>
+
+      <div class="form-field">
+        <div class="d-flex form-control">
+          <checkbox label="مانده از قبل" formControlName="includeOpeningBalance"></checkbox>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <div class="d-flex form-control">
+          <checkbox label="بدون سند افتتاحیه" formControlName="excludeOpeningVoucher"></checkbox>
+        </div>
+
+      </div>
+
+      <div class="form-field">
+        <div class="d-flex form-control">
+          <checkbox label="بدون سند اختتامیه" formControlName="excludeClosingVoucher"></checkbox>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <div class="d-flex form-control">
+          <checkbox label="بدون سند بستن حساب‌های عملکرد" formControlName="excludeCloseOperatingAccounts"></checkbox>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <div class="d-flex form-control">
+          <checkbox label="بدون سند بستن حساب‌های موقت" formControlName="excludeCloseTemporaryAccountsVoucher"></checkbox>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <fd-float-label placeholder="نوع سند">
+          <checkbox-group class="form-control d-inline-flex flex-column gap-3" style="max-height:200px; overflow-y:auto;" [showSelectAll]="true" [selectAllLabel]="'انتخاب همه'" formControlName="voucherTypes">
+            @for(item of voucherTypes | async; track $index) {
+            <checkbox [label]="item.text" [value]="item.value"></checkbox>
+            }
+          </checkbox-group>
+        </fd-float-label>
+      </div>
+
+      <div class="form-field">
+        <fd-float-label placeholder="وضعیت سند">
+          <checkbox-group class="form-control d-inline-flex flex-column gap-3" style="max-height:200px; overflow-y:auto;" [showSelectAll]="true" [selectAllLabel]="'انتخاب همه'" formControlName="voucherStates">
+            @for(item of voucherStates | async; track $index) {
+            <checkbox [label]="item.text" [value]="item.value"></checkbox>
+            }
+          </checkbox-group>
+        </fd-float-label>
+      </div>
+
+      <div class="form-field">
+        <fd-float-label placeholder="نحوه ثبت سند">
+          <checkbox-group class="form-control d-inline-flex flex-column gap-3" style="max-height:200px; overflow-y:auto;" formControlName="creationTypes">
+            @for(item of creationTypes | async; track $index) {
+            <checkbox [label]="item.text" [value]="item.value"></checkbox>
+            }
+          </checkbox-group>
+        </fd-float-label>
+      </div>
+
+    </fd-scrollbar>
+
+    <footer>
+      <button type="submit" class="btn btn-primary btn-search">جستجو</button>
+      <button type="button" class="btn btn-dark" (click)="resetFilter()">بازنشانی</button>
+    </footer>
+  </form>
+
+  <ag-grid-angular [enableRtl]="true"
+                   [getRowId]="getRowId"
+                   [style.width]="width"
+                   [style.height]="height"
+                   [localeText]="localeText"
+                   [rowModelType]="rowModelType"
+                   [pinnedTopRowData]="topRowData"
+                   [pinnedBottomRowData]="totalRowData"
+                   [autoSizeStrategy]="autoSizeStrategy"
+                   [loadingOverlayComponent]="loadingOverlayComponent"
+                   [paginationPageSizeSelector]="paginationPageSizeSelector"
+                   (gridReady)="onGridReady($event)">
+  </ag-grid-angular>
+
+</fd-page-wrapper>

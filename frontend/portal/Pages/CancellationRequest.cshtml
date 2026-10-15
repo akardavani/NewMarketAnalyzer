@@ -1,0 +1,96 @@
+@page
+@model CancellationRequestModel
+@{
+    ViewData["Title"] = "ابطال واحد";
+}
+
+<div class="container">
+    <div class="d-flex flex-column">
+        <h3 data-type="pre-titles" class="align-self-center">ابطال واحد</h3>
+        <div class="statistics tab-content same-width px-1 py-3" id="nav-tabContent">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-md-3 g-2 g-lg-2">
+                    <div class="col">
+                        <div class='statistic-box'>
+                            <p class="statistic-title">تاریخ آخرین NAV محاسبه شده</p>
+                            <p>
+                                @Model.NavDate.ToPersian()
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class='statistic-box'>
+                            <p class="statistic-title">قیمت صدور</p>
+                            <p>
+                                @Model.IssuanceNav.ToString("##,0")
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class='statistic-box'>
+                            <p class="statistic-title">قیمت ابطال</p>
+                            <p>
+                                @Model.CancellationNav.ToString("##,0")
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="alert alert-danger mt-5" asp-validation-summary="ModelOnly"></div>
+        <div class="cancel-request card-body my-5 shadow">
+            <form method="post" class="d-flex flex-column request-form">
+                <div class="row mb-1">
+                    <div class="col-12 col-md-6">
+                        <div class="input-group">
+                            <div class="input-group-prepend request-form-prepend">
+                                <label class="input-group-text request-form-label">تعداد واحد جهت ابطال</label>
+                            </div>
+                            <input asp-for="Quantity" class="form-control request-form-input" type="text" placeholder="تعداد واحد جهت ابطال">
+                        </div>
+                        <span asp-validation-for="Quantity" class="input-validation-alert"></span>
+                    </div>
+                    <div class=" col-12 col-md-6">
+                        <div class="input-group">
+                            <div class="input-group-prepend request-form-prepend">
+                                <label class="input-group-text request-form-label">تعداد واحد قابل ابطال</label>
+                            </div>
+                            <input asp-for="CancelableUnits" class="form-control request-form-input" readonly="readonly" type="text" placeholder="0">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-1">
+                    <div class="col-12 col-md-6">
+                        <div class="input-group mb-4">
+                            <div class="input-group-prepend request-form-prepend">
+                                <label class="input-group-text request-form-label" for="amount">تعداد واحد وثیقه شده</label>
+                            </div>
+                            <input asp-for="CollateralizedUnits" class="form-control request-form-input" readonly="readonly" type="text" placeholder="0">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="input-group mb-4">
+                            <div class="input-group-prepend request-form-prepend">
+                                <label class="input-group-text request-form-label">تاریخ درخواست</label>
+                            </div>
+                            <input asp-for="RequestDate" class="form-control request-form-input" type="text" asp-format="{0:yyyy/MM/dd}" readonly="readonly" placeholder="تاریخ درخواست">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-6">
+                        <div class="input-group mb-4">
+                            <div class="input-group-prepend request-form-prepend">
+                                <label class="input-group-text request-form-label" for="amount">تعداد واحد در انتظار تایید</label>
+                            </div>
+                            <input asp-for="PendingCancellationRequests" class="form-control request-form-input" type="text" readonly="readonly" placeholder="0">
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3 align-self-center">
+                    <button class="mt-2" type="submit" data-type="primary-buttons">ثبت درخواست</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

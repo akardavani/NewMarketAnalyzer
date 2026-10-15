@@ -1,0 +1,47 @@
+.commissions {
+  width: 100%;
+  table-layout: fixed;
+  background-color: var(--fd-surface-2);
+  border: solid 1px var(--fd-line-strong);
+
+
+  .buy {
+    background-color: var(--fd-success-soft);
+  }
+
+  .sell {
+    background-color: var(--fd-danger-soft);
+  }
+
+  thead {
+    border-bottom: solid 1px var(--fd-line-strong);
+  }
+
+  th {
+    text-align: center;
+    padding: 4px 8px;
+
+    &.buy {
+      background-color: var(--fd-success-soft-2);
+    }
+
+    &.sell {
+      background-color: var(--fd-danger-soft-2);
+    }
+  }
+
+  td {
+    padding: 4px 8px;
+    text-align: center;
+  }
+
+  tfoot {
+    font-weight: var(--fd-fw-bold);
+    border-top: solid 1px var(--fd-line-strong);
+
+    td {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+  }
+}

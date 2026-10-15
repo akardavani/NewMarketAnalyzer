@@ -1,0 +1,32 @@
+// ============================================================================
+// لایه ۴ · تایپوگرافی — فونت و وزن‌ها فقط از اینجا
+//
+//   فونت کل برنامه            → --fd-font-sans
+//   وزن همهٔ متن‌های پررنگ     → --fd-fw-bold   (و --fd-fw-semi برای نیمه‌پررنگ)
+//
+// نکته: IRANSans فعلاً فقط دو وزن (normal و bold) دارد؛ تا وقتی فونت متغیر/چندوزنه اضافه نشود،
+// مقادیر semi و bold هر دو به bold می‌روند. با افزودن فونت چندوزنه فقط همین‌جا عوض می‌شود.
+// ============================================================================
+
+:root {
+  --fd-font-sans: IRANSans, Tahoma, sans-serif;
+  --fd-font-mono: ui-monospace, "SF Mono", Consolas, monospace;
+
+  --fd-fw-regular: 400;
+  --fd-fw-medium: 400;
+  --fd-fw-semi: 700;
+  --fd-fw-bold: 700;
+}
+
+:root[data-typeface="iransans"]       { --fd-font-sans: IRANSans, Tahoma, sans-serif; }
+:root[data-typeface="iransans-farsi"] { --fd-font-sans: IRANSansFarsi, IRANSans, Tahoma, sans-serif; }
+
+body {
+  font-family: var(--fd-font-sans);
+}
+
+b,
+strong { font-weight: var(--fd-fw-bold); }
+
+.fw-semibold { font-weight: var(--fd-fw-semi) !important; }
+.fw-bold, .fw-bolder { font-weight: var(--fd-fw-bold) !important; }

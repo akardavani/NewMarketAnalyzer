@@ -1,0 +1,57 @@
+@model InvestmentInformation
+
+<div class="tab-pane fade show active" id="investment-info" role="tabpanel" aria-labelledby="investment-info-tab">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-2 g-lg-2">
+            <div class="col">
+                <div class="statistic-box">
+                    <p class="statistic-title">تاریخ محاسبه NAV صندوق</p>
+                    <p>@(Model.NavDate?.ToString("yyyy/MM/dd") ?? "-")</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class='statistic-box'>
+                    <p class="statistic-title">تعداد واحدهای سرمایه‌گذاری</p>
+                    <p>@Model.InvestmentUnitsCount.ToString("##,0")</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class='statistic-box'>
+                    <p class="statistic-title">تعداد واحدهای باقی مانده</p>
+                    <p>@Model.RemainingInvestmentUnitsCount.ToString("##,0")</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class='statistic-box'>
+                    <p class="statistic-title">کل خالص ارزش دارایی‌ها(ریال)</p>
+                    <p>@Model.NetAssetsValue.ToString("##,0")</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class='statistic-box'>
+                    <p class="statistic-title">قیمت صدور هر واحد(ریال)</p>
+                    <p>@Model.IssuanceNav.ToString("##,0")</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class='statistic-box'>
+                    <p class="statistic-title">قیمت ابطال هر واحد(ریال)</p>
+                    <p>@Model.CancellationNav.ToString("##,0")</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class='statistic-box'>
+                    <p class="statistic-title">قیمت آماری هر واحد(ریال)</p>
+                    <p>@Model.StatisticalNav.ToString("##,0")</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class='statistic-box'>
+                    <p class="statistic-title">تاریخ انتشار</p>
+                    <p>@(Model.PublishDate?.ToString("yyyy/MM/dd") ?? "-")</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

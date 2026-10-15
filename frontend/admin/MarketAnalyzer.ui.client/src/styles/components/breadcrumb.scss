@@ -1,0 +1,78 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/variables-dark";
+@import "../../../node_modules/bootstrap/scss/maps";
+@import "../../../node_modules/bootstrap/scss/mixins";
+@import "../../../node_modules/bootstrap/scss/utilities";
+
+.breadcrumb {
+  // scss-docs-start breadcrumb-css-vars
+  --#{$prefix}breadcrumb-padding-x: #{$breadcrumb-padding-x};
+  --#{$prefix}breadcrumb-padding-y: #{$breadcrumb-padding-y};
+  --#{$prefix}breadcrumb-margin-bottom: #{$breadcrumb-margin-bottom};
+  @include rfs($breadcrumb-font-size, --#{$prefix}breadcrumb-font-size);
+  --#{$prefix}breadcrumb-bg: #{$breadcrumb-bg};
+  --#{$prefix}breadcrumb-border-radius: #{$breadcrumb-border-radius};
+  --#{$prefix}breadcrumb-divider-color: #{$breadcrumb-divider-color};
+  --#{$prefix}breadcrumb-item-padding-x: #{$breadcrumb-item-padding-x};
+  --#{$prefix}breadcrumb-item-active-color: #{$breadcrumb-active-color};
+  // scss-docs-end breadcrumb-css-vars
+
+  display: flex;
+  padding: var(--#{$prefix}breadcrumb-padding-y) var(--#{$prefix}breadcrumb-padding-x);
+  margin-bottom: var(--#{$prefix}breadcrumb-margin-bottom);
+  @include font-size(var(--#{$prefix}breadcrumb-font-size));
+  list-style: none;
+  background-color: var(--#{$prefix}breadcrumb-bg);
+  @include border-radius(var(--#{$prefix}breadcrumb-border-radius));
+}
+
+.breadcrumb-item {
+  display: flex;
+  position: relative;
+  z-index: 10;
+  color: var(--bs-primary-light);
+  background-color: transparent;
+  margin-left: 2px;
+
+  &:first-child {
+    /*background: var(--bs-primary-dark);*/
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    height: 50%;
+    width: 100%;
+    background: var(--bs-primary-dark);
+    z-index: -1;
+  }
+
+  &::before {
+    top: 0px;
+    transform: skew(-30deg);
+  }
+
+  &::after {
+    bottom: 0;
+    transform: skew(30deg);
+  }
+
+  .caption {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    position: relative;
+    color: var(--bs-primary-light);
+    padding: 0 20px;
+  }
+
+  &.active {
+    &::before,
+    &::after {
+      background-color: var(--bs-primary);
+    }
+  }
+}

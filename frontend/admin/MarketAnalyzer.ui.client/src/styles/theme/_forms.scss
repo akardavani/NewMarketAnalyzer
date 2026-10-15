@@ -1,0 +1,65 @@
+// ============================================================================
+// فرم‌ها — فیلدها، فوکوس، placeholder، غیرفعال. فقط توکن؛ بوت‌استرپ رنگ فوکوس را در build می‌پزد، پس اینجا override می‌شود.
+//   رنگ پس‌زمینهٔ فیلد → --fd-field   ·   حلقهٔ فوکوس → --fd-focus-ring   ·   گوشهٔ فیلد → --fd-radius-control
+// ============================================================================
+
+.form-control,
+.form-select {
+  background-color: var(--fd-field);
+  color: var(--fd-text);
+  border-color: var(--fd-line-strong);
+  border-radius: var(--fd-radius-control);
+
+  &::placeholder {
+    color: var(--fd-text-3);
+    opacity: 1;
+  }
+
+  &:focus {
+    background-color: var(--fd-field);
+    color: var(--fd-text);
+    border-color: var(--fd-primary);
+    box-shadow: var(--fd-focus-ring);
+  }
+
+  &:disabled,
+  &[readonly] {
+    background-color: var(--fd-surface-2);
+    color: var(--fd-text-3);
+    opacity: 1;
+  }
+
+  &.is-invalid:focus { box-shadow: 0 0 0 3px var(--fd-danger-soft); }
+  &.is-valid:focus { box-shadow: 0 0 0 3px var(--fd-success-soft); }
+}
+
+.input-group-text {
+  background-color: var(--fd-surface-2);
+  color: var(--fd-text-2);
+  border-color: var(--fd-line-strong);
+}
+
+.form-check-input {
+  background-color: var(--fd-field);
+  border-color: var(--fd-line-strong);
+
+  &:checked {
+    background-color: var(--fd-primary);
+    border-color: var(--fd-primary);
+  }
+  &:focus {
+    border-color: var(--fd-primary);
+    box-shadow: var(--fd-focus-ring);
+  }
+}
+
+.list-group {
+  --bs-list-group-bg: var(--fd-surface);
+  --bs-list-group-color: var(--fd-text);
+  --bs-list-group-border-color: var(--fd-line);
+  --bs-list-group-action-hover-bg: var(--fd-hover);
+  --bs-list-group-action-hover-color: var(--fd-text);
+  --bs-list-group-active-bg: var(--fd-primary);
+  --bs-list-group-active-border-color: var(--fd-primary);
+  --bs-list-group-active-color: var(--fd-on-primary);
+}

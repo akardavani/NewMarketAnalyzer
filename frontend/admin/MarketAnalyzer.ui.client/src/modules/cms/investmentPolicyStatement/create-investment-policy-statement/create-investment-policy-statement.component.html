@@ -1,0 +1,47 @@
+<form class="dialog-warpper" [formGroup]="formGroup" (ngSubmit)="submit()">
+  <div class="dialog-header">
+    <div class="dialog-title">ایجاد بیانیه سیاست های سرمایه گذاری</div>
+
+    <div class="btn-close" (click)="close()">
+      <i class="pa-close"></i>
+    </div>
+  </div>
+
+  <div class="dialog-body d-flex flex-column gap-3 p-4">
+    <div class="d-flex flex-column gap-3">
+      <fd-float-label placeholder="تاریخ">
+        <date-input formControlName="date"></date-input>
+      </fd-float-label>
+
+      <div class="form-control">
+        <checkbox label="فعال" formControlName="isActive"></checkbox>
+      </div>
+      <fd-float-label placeholder="توضیحات">
+        <input
+          type="text"
+          class="form-control"
+          formControlName="description"
+          [disabled]="true"
+        />
+      </fd-float-label>
+
+      <file-input
+        formControlName="fileContent"
+        class="d-flex align-items-center justify-content-center"
+        placeholder="فایل را در اینجا رها کنید یا برای انتخاب فایل کلیک کنید."
+        [valueFormatter]="returnFileContent"
+        style="height: 120px"
+      ></file-input>
+      <span class="input-error-text" errorFor="fileContent"></span>
+    </div>
+  </div>
+
+  <div class="dialog-footer">
+    <div class="d-inline-flex gap-2">
+      <button type="submit" class="btn btn-primary">ذخیره</button>
+      <button type="button" class="btn btn-dark" (click)="reset()">
+        بازنشانی
+      </button>
+    </div>
+  </div>
+</form>

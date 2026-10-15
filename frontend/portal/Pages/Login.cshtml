@@ -1,0 +1,122 @@
+@page
+@model LoginModel
+@{
+    ViewData["Title"] = "ورود";
+    Layout = "_RegistrationLayout";
+}
+
+<section class="signup-section d-flex align-items-center justify-content-center min-vh-100">
+    <div class="container shadow-lg h-auto rounded-3">
+        <div class="row">
+            <div class="col-lg-6 col-12 text-center p-lg-5">
+                <a asp-page="Index">
+                    <img class="logo img-fluid mt-4 d-lg-none" src="~/images/Mobin-Logo.png" alt="لوگوی مبین سرمایه" />
+                </a>
+                <header class="mt-4 w-100" data-type='pre-titles'>ورود به صندوق سرمایه‌گذاری مبین سرمایه</header>
+                <p data-type="small-text">در صورتی که سجامی نیستید، برای ثبت‌نام در سجام <a href="https://profilesejam.csdiran.ir/" class="hyper-link" target="_blank" rel="noopener">اینجا</a> کلیک کنید. </p>
+
+                <div class="regestration-form w-100">
+                    <div class="alert alert-danger mt-2" asp-validation-summary="ModelOnly"></div>
+
+                    <form class="d-flex flex-column" method="post">
+                        <div class="form-fields align-self-center">
+                            <div class="field d-flex flex-column">
+                                <label for="username" class="label m-0 fw-bold">نام کاربری یا کد ملی</label>
+                                <div class="input-container w-100">
+                                    <input type="text" class="m-0" asp-for="UserName" placeholder="نام کاربری یا کد ملی">
+                                </div>
+                                <span asp-validation-for="UserName" class="input-validation-alert"></span>
+                            </div>
+                            <div class="field d-flex flex-column">
+                                <label for="password" class="label m-0 fw-bold">رمز عبور</label>
+                                <div class="input-container password-container d-flex flex-column w-100">
+                                    <input type="password" class="m-0 password-input" asp-for="Password" placeholder="رمز عبور">
+                                    <span class="eye-icon" data-password-visibility>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                                            <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z" />
+                                            <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0" />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <span asp-validation-for="Password" class="input-validation-alert"></span>
+                            </div>
+                            <div class="field d-flex flex-column">
+                                <div class="label m-0 fw-bold">کد امنیتی</div>
+                                <div class="captcha-field container">
+                                    <div class="row d-flex align-items-center justify-content-between">
+                                        <div class="col-4 input-container d-flex flex-column">
+                                            <input class="h-100" type="text" asp-for="CaptchaCode" placeholder="کد امنیتی">
+                                        </div>
+                                        <div class="col-8 d-flex align-items-center justify-content-end">
+                                            <div class="col-10 captcha-image p-0">
+                                                <img id="captchaImage" class="img-fluid" data-refresh-captcha="true" src="/captcha" height="48" width="180" alt="تصویر امنیتی" />
+                                            </div>
+                                            <div class="col-2 refresh-captcha">
+                                                <a class="change-captcha" data-refresh-captcha="true">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z" />
+                                                        <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span asp-validation-for="CaptchaCode" class="input-validation-alert"></span>
+                            </div>
+                            <div class="field">
+                                <button type="submit" data-type='primary-buttons' class="w-100">ورود</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div>
+                        <p class="m-0">
+                            حساب ندارید؟ <a asp-page="Signup" class="hyper-link">ثبت نام</a>
+                        </p>
+                        <p class="m-0">
+                            <a asp-page="ForgotPassword" class="hyper-link">فراموشی رمز عبور</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="registration-left-col col-lg-6 col-12 rounded-3 py-5 mt-5 mt-md-0">
+                <div class="d-flex flex-column align-items-center justify-content-end">
+                    <a asp-page="Index">
+                        <img class="logo img-fluid my-4 d-none d-lg-block" src="~/images/Mobin-Logo-White.png" alt="لوگوی مبین سرمایه" />
+                    </a>
+                    <div class="security-tips px-5 py-2 text-right">
+                        <p class="fw-bold">نکات امنیتی</p>
+                        <ul class="security-tips-list mb-2">
+                            <li>
+                                شماره پشتیبانی مستقیم: 1579
+                            </li>
+                            <li>
+                                صندوق سرمایه‌گذاری مشترک این کارگزاری با استفاده از پروتکل امن SSL و به آدرس https://smart.mobinsb.ir در اختیار مشتریان کارگزاری قرار دارد.
+                            </li>
+                            <li>
+                                لطفاً پیش از ورود هرگونه اطلاعات، آدرس موجود در بخش مرورگر خود را با آدرس فوق مقایسه نمایید. درصورت مشاهده هر نوع مغایرت احتمالی، از ادامه کار منصرف شده و موضوع را با ما در میان بگذارید.
+                            </li>
+                            <li>
+                                هرگز نام کاربری و کلمه عبور خود را در اختیار دیگران قرار ندهید.
+                            </li>
+                            <li>
+                                پس از اتمام کار با سامانه، حتماً با استفاده از دکمه خروج، از حساب کاربری خود خارج شوید.
+                            </li>
+                            <li>از ذخیره نام کاربری و رمز عبور در مرورگر حتی المقدور خودداری نمایید.</li>
+                        </ul>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-center mt-4 p-3 rounded-3 support-center">
+                        <p class="d-block">تماس با پشتیبانی</p>
+                        <a href="tel:1579">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" style="-webkit-transform: scaleX(-1);
+  transform: scaleX(-1);" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                            </svg>
+                            1579
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,30 @@
+.drop-down {
+  .form-select {
+    cursor: default;
+    user-select: none;
+    -webkit-user-select: none;
+    /*pointer-events: none;*/
+  }
+}
+
+.drop-down-container {
+  position: absolute !important;
+  z-index: 1100 !important;
+  .fd-select-list {
+    border: none;
+  }
+
+  .list-group {
+    border-radius: 0;
+    border: none !important;
+  }
+
+  .search-container {
+    padding: 0.375rem 0.75rem 0.375rem 0.75rem;
+    border-bottom: solid 1px var(--fd-line);
+  }
+
+  .list-group-item:not(:hover):not(.active) {
+    background-color: transparent;
+  }
+}

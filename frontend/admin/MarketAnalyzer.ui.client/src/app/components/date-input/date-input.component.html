@@ -1,0 +1,20 @@
+<div class="clearable-input">
+  <input #formInput
+         type="text"
+         class="form-control"
+         inputValidation
+         [disabled]="disabled"
+         [readonly]="readonly"
+         [style.min-width]="minWidth"
+         (blur)="_onBlur()"
+         (focus)="_onFocus()"
+         (click)="_onFocus()"
+         (input)="_onInput($event)" />
+
+  @if(!readonly){
+  <button type="button" class="btn-clear" (click)="_clear()">
+    <i class="btn-icon pa pa-close"></i>
+  </button>
+  }
+
+</div>

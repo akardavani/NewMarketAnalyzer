@@ -1,0 +1,11 @@
+@if(autoNumeric) {
+<input class="form-control"
+       #formInput
+       type="{{type}}"
+       [value]="_value"
+       [ngAutoNumeric]="autoNumeric"
+       (input)="_onChange()" />
+}
+@else {
+<input class="form-control" type="{{type}}" />
+}

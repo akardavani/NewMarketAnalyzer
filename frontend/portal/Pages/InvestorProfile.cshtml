@@ -1,0 +1,198 @@
+@page
+@model InvestorProfileModel
+@{
+    ViewData["Title"] = "حساب کاربری";
+}
+
+<div class="container">
+    <div class="d-flex flex-column">
+        <h3 data-type="pre-titles" class="align-self-center">حساب کاربری</h3>
+        <div class="form-navigation shadow-lg rounded-3 mb-5">
+            <div class="d-flex flex-column align-items-center justify-content-center border-bottom px-3 p-5">
+                <p class="pre-text mb-4">
+                    سرمایه‌گذار گرامی
+                    چنانچه تمایل دارید اطلاعات پروفایل شما(شامل شماره حساب و شماره شبا بانکی، شماره موبایل و غیره) با اطلاعات ثبت شده شما در سامانه سجام تطابق پیدا کند، بر روی دکمه زیر کلیک کنید.بدیهی است در صورت کلیک بر روی دکمه «به‌روزرسانی اطلاعات از سجام»، اطلاعات حساب بانکی (شامل شماره حساب و شماره شبا) که در سامانه سجام ثبت کرده‌اید به پرتال مبین سرمایه منتقل می‌شود و لذا از آن پس تمام پرداخت‌های صندوق به آن حساب انجام خواهد شد. لذا خواهشمند است از صحت شماره شبا ثبت شده در سامانه سجام و تطبیق آن با شماره حسابی که ثبت کرده‌اید اطمینان حاصل کنید . همچنین شماره موبایل ثبت شده در سامانه سجام جایگزین شماره فعلی شما در پرتال می‌شود.
+                </p>
+                @if (!Model.DisplayKycCodeInput)
+                {
+                    <form method="post">
+                        <button class="mb-0" type="submit" data-type="primary-buttons" asp-page-handler="GetKycCode">بروزرسانی اطلاعات از سجام</button>
+                    </form>
+                }
+                @if (Model.DisplayKycCodeInput)
+                {
+                    <form class="d-flex flex-column mt-4" method="post">
+                        <p data-type="small-text" class="form-guid text-right mb-1">کد ارسال شده به شماره همراه خود را وارد کنید.</p>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="field d-flex flex-column justify-content-end">
+                                <div class="input-container d-flex flex-column w-100">
+                                    <input asp-for="KycCode" class="m-0" type="text" id="verification-code" placeholder="کد سجام">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <button class="search-date-btn" type="submit" data-type="primary-buttons" asp-page-handler="GetInvestorProfile">بروزرسانی</button>
+                            </div>
+                        </div>
+                        <span asp-validation-for="KycCode" class="input-validation-alert"></span>
+                    </form>
+                }
+            </div>
+            <div class="d-flex flex-column align-items-center px-3 py-5">
+                <div class="toggle-buttons p-0 mb-0">
+                    <ul class="nav nav-pills p-2 mb-3 d-flex justify-content-evenly" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="personal-info-tab" data-bs-toggle="pill" data-bs-target="#personal-info" type="button" role="tab" aria-controls="personal-info">اطلاعات هویتی</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="contact-info-tab" data-bs-toggle="pill" data-bs-target="#contact-info" type="button" role="tab" aria-controls="contact-info">اطلاعات تماس</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="bank-info-tab" data-bs-toggle="pill" data-bs-target="#bank-info" type="button" role="tab" aria-controls="bank-info">اطلاعات بانکی</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content w-100" id="pills-tabContent">
+                    <div class="tab-pane mt-4 fade show active" id="personal-info" role="tabpanel" aria-labelledby="pills-personal-info-tab">
+                        @if (Model.InvestorProfile?.PersonType == "Natural")
+                        {
+                            <div class="row">
+                                <div class="input-box col-12 col-md-4">
+                                    <p class="input-box-label">نام</p>
+                                    <div class="input-box-text">@Model.InvestorProfile.FirstName</div>
+                                </div>
+                                <div class="input-box col-12 col-md-4">
+                                    <p class="input-box-label">نام خانوادگی</p>
+                                    <div class="input-box-text">@Model.InvestorProfile.LastName</div>
+                                </div>
+                                <div class="input-box col-12 col-md-4">
+                                    <p class="input-box-label">نام پدر</p>
+                                    <div class="input-box-text">@Model.InvestorProfile.FatherName</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-box col-12 col-md-4">
+                                    <p class="input-box-label">کد ملی</p>
+                                    <div class="input-box-text">@Model.InvestorProfile.NationalCode</div>
+                                </div>
+                                <div class="input-box col-12 col-md-4">
+                                    <p class="input-box-label">محل صدور</p>
+                                    <div class="input-box-text">@Model.InvestorProfile.BirthPlace</div>
+                                </div>
+                                <div class="input-box col-12 col-md-4">
+                                    <p class="input-box-label">جنسیت</p>
+                                    <div class="input-box-text">@Model.InvestorProfile.Gender</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-box col-12 col-md-4">
+                                    <p class="input-box-label">شماره شناسنامه</p>
+                                    <div class="input-box-text">@Model.InvestorProfile.IdentityNumber</div>
+                                </div>
+                                <div class="input-box col-12 col-md-4">
+                                    <p class="input-box-label">تاریخ تولد</p>
+                                    <div class="input-box-text">@Model.InvestorProfile.RegistrationOrBirthDate.ToPersian()</div>
+                                </div>
+                                <div class="input-box col-12 col-md-4">
+                                    <p class="input-box-label">سریال شناسنامه</p>
+                                    <div class="input-box-text">@Model.InvestorProfile.IdentitySerialNumber @Model.InvestorProfile.IdentitySequnceNumber</div>
+                                </div>
+                            </div>
+                        }
+                        @if (Model.InvestorProfile?.PersonType == "Legal")
+                        {
+                            <div class="row">
+                                <div class="input-box col-12 col-md-4">
+                                    <p class="input-box-label">نام شخص حقوقی</p>
+                                    <div class="input-box-text">@Model.InvestorProfile.Name</div>
+                                </div>
+                                <div class="input-box col-12 col-md-4">
+                                    <p class="input-box-label">نوع شخص حقوقی</p>
+                                    <div class="input-box-text">@Model.InvestorProfile.CompanyType</div>
+                                </div>
+                                <div class="input-box col-12 col-md-4">
+                                    <p class="input-box-label">شناسه ملی</p>
+                                    <div class="input-box-text">@Model.InvestorProfile.NationalCode</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-box col-12 col-md-4">
+                                    <p class="input-box-label">شماره ثبت</p>
+                                    <div class="input-box-text">@Model.InvestorProfile.RegistrationNumber</div>
+                                </div>
+                                <div class="input-box col-12 col-md-4">
+                                    <p class="input-box-label">محل ثبت</p>
+                                    <div class="input-box-text">@Model.InvestorProfile.RegistrationOrIdentityIssuancePlace</div>
+                                </div>
+                                <div class="input-box col-12 col-md-4">
+                                    <p class="input-box-label">تاریخ ثبت</p>
+                                    <div class="input-box-text">@Model.InvestorProfile.RegistrationOrBirthDate.ToPersian()</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-box col-12 col-md-4">
+                                    <p class="input-box-label">کد اقتصادی</p>
+                                    <div class="input-box-text">@Model.InvestorProfile.EconomicCode</div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                    <div class="tab-pane fade show" id="contact-info" role="tabpanel" aria-labelledby="pills-contact-info-tab">
+                        <div class="row">
+                            @foreach (var contact in Model.InvestorProfile.Contacts)
+                            {
+                                <div class="input-box col-12 col-md-4">
+                                    <p class="input-box-label">@contact.ContactType</p>
+                                    <div class="input-box-text">@contact.Content</div>
+                                </div>
+                            }
+                        </div>
+                        @foreach (var address in Model.InvestorProfile.Addresses)
+                        {
+                            <div class="row">
+                                <div class="input-box col-12 col-md-10">
+                                    <p class="input-box-label">@address.AddressType</p>
+                                    <div class="input-box-text">@address.Region، @address.Content، پلاک @address.Number</div>
+                                </div>
+                                <div class="input-box col-12 col-md-2">
+                                    <p class="input-box-label">کد پستی</p>
+                                    <div class="input-box-text">@address.PostalCode</div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                    <div class="tab-pane fade" id="bank-info" role="tabpanel" aria-labelledby="pills-bank-info-tab">
+                        @foreach (var account in Model.InvestorProfile.BankAccounts)
+                        {
+                            <div class="row">
+                                <div class="input-box col-12 col-md-4">
+                                    <p class="input-box-label">نام بانک</p>
+                                    <div class="input-box-text">@account.Bank</div>
+                                </div>
+                                <div class="input-box col-12 col-md-4">
+                                    <p class="input-box-label">نام شعبه</p>
+                                    <div class="input-box-text">@account.Branch</div>
+                                </div>
+                                <div class="input-box col-12 col-md-4">
+                                    <p class="input-box-label">نوع حساب</p>
+                                    <div class="input-box-text">@account.AccountType</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-box col-12 col-md-4">
+                                    <p class="input-box-label">شماره حساب</p>
+                                    <div class="input-box-text">@account.AccountNumber</div>
+                                </div>
+                                <div class="input-box col-12 col-md-4">
+                                    <p class="input-box-label">شماره شبا</p>
+                                    <div class="input-box-text">@account.ShebaNumber</div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

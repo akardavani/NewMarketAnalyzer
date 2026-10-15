@@ -1,0 +1,91 @@
+@page
+@model RequestListModel
+@{
+    ViewData["Title"] = "لیست درخواست‌ها";
+}
+
+<div class="container px-0">
+    <div class="d-flex flex-column">
+        <h3 data-type="pre-titles" class="align-self-center">لیست درخواست‌ها</h3>
+        @if (Model.RequestResult is not null)
+        {
+            <div class="alert alert-success">@Model.RequestResult</div>
+        }
+        <div class="alert alert-danger mt-5" asp-validation-summary="ModelOnly"></div>
+        <form method="get">
+            <div class="d-flex justify-content-between align-items-md-end gap-1 w-100">
+                <div class="row justify-content-start align-items-end mt-2 g-2">
+                    <div class="dates-input col-12 col-md-5 mt-2">
+                        <span>شروع از:</span>
+                        <input data-jdp class="date-input form-control mt-1" type="text" asp-for="FromDate" placeholder="انتخاب تاریخ">
+                    </div>
+                    <div class="dates-input col-12 col-md-5 mt-2">
+                        <span>تا پایان:</span>
+                        <input data-jdp class="date-input form-control mt-1" type="text" asp-for="ToDate" placeholder="انتخاب تاریخ">
+                    </div>
+                    <div class="col-12 col-md-2 mt-2">
+                        <button class="mt-2 search-date-btn" type="submit" data-type="primary-buttons">جستجو</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="table-responsive overflow-x-auto">
+            <table class="table table-striped data-table text-center mt-3 mb-2">
+                <thead>
+                    <tr>
+                        <th>نام کامل شخص</th>
+                        <th>شناسه درخواست</th>
+                        <th>نوع درخواست</th>
+                        <th>نحوه واریز</th>
+                        <th>شماره فیش واریزی</th>
+                        <th>تعداد</th>
+                        <th>مبلغ</th>
+                        <th>زمان ثبت</th>
+                        <th>تاریخ ثبت</th>
+                        <th>تاریخ Nav مبنا</th>
+                        <th>تاریخ سند</th>
+                        <th>وضعیت درخواست</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Rows)
+                    {
+                        <tr>
+                            <td>@item.InvestorFullName</td>
+                            <td>@item.Id</td>
+                            <td>@item.RequestTypeName</td>
+                            <td>@item.PaymentMethodName</td>
+                            <td>@item.DepositSlipNumber</td>
+                            <td>@item.Quantity</td>
+                            <td>@item.Amount.ToString("##,0")</td>
+                            <td>@item.RequestDate.ToString("HH:mm")</td>
+                            <td>@item.RequestDate.ToPersian()</td>
+                            <td>@item.BaseNavDate.ToPersian()</td>
+                            <td>@item.ExcecutedDate.ToPersian()</td>
+                            <td>@item.State</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <nav class="d-flex justify-content-center table-pagination mt-3" dir="ltr">
+            <ul class="pagination">
+                <li class="page-item @(Model.PageNumber == 1 ? "disabled" : "")">
+                    <a class="page-link" href="?PageNumber=@(Model.PageNumber - 1)">
+                        <span aria-hidden="true">قبلی</span>
+                    </a>
+                </li>
+                @for (int i = 1; i <= Model.TotalPages; i++)
+                {
+                    <li class="page-item @(i == Model.PageNumber ? "active" : "")"><a class="page-link" href="?PageNumber=@i">@i</a></li>
+                }
+                <li class="page-item @(Model.PageNumber == Model.TotalPages ? "disabled" : "")">
+                    <a class="page-link" href="?PageNumber=@(Model.PageNumber + 1)" aria-label="Next">
+                        <span aria-hidden="true">بعدی</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+

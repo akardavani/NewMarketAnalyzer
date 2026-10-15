@@ -1,0 +1,17 @@
+<div class="d-flex flex-column flex-grow-1 p-3">
+  @if(title) {
+  <span class="d-flex flex-column align-items-center">{{title}}</span>
+  }
+
+  <div class="d-flex flex-column">
+    @if(icon) {
+    <span></span>
+    }
+
+    <span class="grow-content">{{content}}</span>
+  </div>
+</div>
+
+<div class="growl-closer d-flex flex-column align-items-center justify-content-center" (click)="close()">
+  <i class="pa-about pa-close"></i>
+</div>

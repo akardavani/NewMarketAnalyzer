@@ -1,0 +1,58 @@
+:host {
+  display: block;
+  overflow: hidden;
+
+  .tree-view {
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 5px 0;
+    transition: all 0.9s ease-in-out;
+
+    .tree-view-node {
+      display: block;
+      flex-direction: column;
+      list-style: none;
+      padding: 0;
+      margin: 0 0 8px 0;
+
+      > .expander {
+        display: flex;
+        text-decoration: none;
+        color: var(--fd-text);
+        gap: 10px;
+        cursor: pointer;
+        user-select: none;
+
+        > .expander-handler {
+          transition: all 0.2s ease-in-out;
+
+          i.pa-compact {
+            font-size: 13px;
+          }
+        }
+      }
+
+      > .children {
+        width: 100%;
+        display: block;
+        overflow-y: hidden;
+        height: 0;
+        transition: height ease-in-out 150ms;
+
+        fd-account-tree {
+          padding-right: 15px;
+          margin-top: 5px;
+        }
+      }
+
+      &.expanded {
+        > .expander {
+          .expander-handler {
+            transform: rotate(-90deg);
+          }
+        }
+      }
+    }
+  }
+}

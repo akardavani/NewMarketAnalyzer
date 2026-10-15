@@ -1,0 +1,30 @@
+<fd-page-wrapper [showSidebar]="showSidebar">
+  <div toolbar class="d-inline-flex align-items-center justify-content-center gap-2 pe-2">
+    <button type="button" class="btn" (click)="toggleSidebar()"><i class="pa-filter"></i></button>
+    <button class="btn " (click)="create()"><i class="pa-add"></i></button>
+  </div>
+
+  <form [formGroup]="filter" class="ag-filter-form" sidebar (ngSubmit)="applyFilter()">
+    <fd-scrollbar>
+
+    </fd-scrollbar>
+
+    <footer>
+      <button type="submit" class="btn btn-primary btn-search">جستجو</button>
+      <button type="button" class="btn btn-dark" (click)="resetFilter()">بازنشانی</button>
+    </footer>
+  </form>
+
+  <ag-grid-angular [enableRtl]="true"
+                   [getRowId]="getRowId"
+                   [style.width]="width"
+                   [style.height]="height"
+                   [localeText]="localeText"
+                   [rowModelType]="rowModelType"
+                   [autoSizeStrategy]="autoSizeStrategy"
+                   [loadingOverlayComponent]="loadingOverlayComponent"
+                   [paginationPageSizeSelector]="paginationPageSizeSelector"
+                   (gridReady)="onGridReady($event)">
+  </ag-grid-angular>
+
+</fd-page-wrapper>

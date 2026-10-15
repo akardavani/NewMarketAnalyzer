@@ -1,0 +1,147 @@
+<div class="fund-info-section w-100 px-5 py-2">
+    <div class="d-flex justify-content-between align-items-center w-100">
+        <h1>
+            صندوق سرمایه‌گذاری مشترک مبین سرمایه
+            <br />
+            <span class="fw-normal d-block d-md-none">شماره ثبت:11384</span>
+        </h1>
+        <div class="fund-info d-none d-md-block float-start">
+            <p class="m-0"> ثبت شده به شماره 11384 نزد سازمان بورس و اوراق بهادار</p>
+            <p class="m-0">ثبت شده به شماره 37105 نزد مرجع ثبت شرکت‌ها و موسسات غیرتجاری	</p>
+        </div>
+    </div>
+</div>
+
+<header class="header">
+    <div class="header-main">
+        <div class="logo-section px-2">
+            <a href="@Url.Page("Index")" class="navbar-brand m-0">
+                <img class="logo img-fluid" src="~/images/Mobin-Logo.png" />
+            </a>
+        </div>
+        <div class="open-nav-menu">
+            <span></span>
+        </div>
+        <div class="menu-overlay">
+        </div>
+        <nav class="nav-menu">
+            <div class="close-nav-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                </svg>
+            </div>
+            <ul class="menu">
+                <li class="menu-item">
+                    <a asp-page="Index">صفحه نخست</a>
+                </li>
+                <li class="menu-item">
+                    <a asp-page="/Pillars">ارکان صندوق</a>
+                </li>
+                <li class="menu-item menu-item-has-children">
+                    <a href="#" data-toggle="sub-menu">
+                        درباره صندوق
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down arrow" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                        </svg>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a asp-page="/Overview" class="sub-menu-item">اطلاعات کلی صندوق</a></li>
+                        <li><a asp-page="/Objectives" class="sub-menu-item mt-2">اهداف صندوق</a></li>
+                        <li><a asp-page="/Statute" class="sub-menu-item">اساسنامه صندوق</a></li>
+                        <li><a asp-page="/Prospectus" class="sub-menu-item">امیدنامه صندوق</a></li>
+                        <li><a asp-page="/InvestmentGuide" class="sub-menu-item mb-2">راهنمای سرمایه‌گذاری</a></li>
+                        <li><a asp-page="/BankAccounts" class="sub-menu-item">حساب‌های بانکی صندوق</a></li>
+                        <li><a asp-page="/Branches" class="sub-menu-item">شعبه‌های صندوق</a></li>
+                        <li><a asp-page="/Costs" class="sub-menu-item">هزینه‌های صندوق</a></li>
+                        <li><a asp-page="/InvestmentPolicyStatements" class="sub-menu-item">بیانیه سیاست‌های سرمایه‌گذاری</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item menu-item-has-children">
+                    <a href="#" data-toggle="sub-menu">
+                        گزارش‌ها
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down arrow" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                        </svg>
+                    </a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a asp-page="/DailyAssetComposition" class="sub-menu-item">ترکیب دارایی‌های روزانه</a>
+                        </li>
+                        <li><a asp-page="/PeriodicAssetComposition" class="sub-menu-item mt-2">ترکیب دارایی‌های دوره‌ای</a></li>
+                        <li>
+                            <a asp-page="/DailyFundReturn" class="sub-menu-item">بازدهی روزانه صندوق</a>
+                        </li>
+                        <li>
+                            <a asp-page="/PeriodicFundReturn" class="sub-menu-item">بازدهی دوره‌ای صندوق</a>
+                        </li>
+                        <li>
+                            <a asp-page="/SuperUnitHolders" class="sub-menu-item">دارندگان واحدهای ممتاز</a>
+                        </li>
+                        <li><a asp-page="/FinancialStatements" class="sub-menu-item">صورت‌های مالی صندوق</a></li>
+                        <li>
+                            <a asp-page="/Meetings" class="sub-menu-item mb-2">مجامع صندوق</a>
+                        </li>
+                        <li><a asp-page="/FundStatus" class="sub-menu-item">وضعیت صندوق</a></li>
+
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a asp-page="/News">اخبار</a>
+                </li>
+                <li class="menu-item">
+                    <a asp-page="/RulesAndRegulations">قوانین و مقررات</a>
+                </li>
+                <li class="menu-item">
+                    <a asp-page="/ContactUs">تماس با ما</a>
+                </li>
+            </ul>
+        </nav>
+
+        @if (User.Identity.IsAuthenticated)
+        {
+            <div class="username-section dropdown">
+                <button class="btn user-name" type="button" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-fill mx-1" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                    </svg> <span>@User.Identity.Name</span>
+                </button>
+                <div class="dropdown-menu user-list" aria-labelledby="dropdownMenuButton">
+                    <a asp-page="/InvestorProfile" class="dropdown-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-person-fill inline-icon" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                        </svg>حساب کاربری
+                    </a>
+                    <a asp-page="/ChangePassword" class="dropdown-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-key inline-icon" viewBox="0 0 16 16">
+                            <path d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8zm4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5z" />
+                            <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                        </svg>تغییر رمز عبور
+                    </a>
+                    <a asp-page="/LoginHistory" class="dropdown-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-clock-history inline-icon" viewBox="0 0 16 16">
+                            <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483zm.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535zm-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z" />
+                            <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0v1z" />
+                            <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z" />
+                        </svg>تاریخچه ورود و خروج
+                    </a>
+                    <a asp-page="/Logout" class="dropdown-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-box-arrow-right inline-icon" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
+                            <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+                        </svg>خروج
+                    </a>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="login-section">
+                <a asp-page="/Login" data-type='primary-buttons'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill mx-1" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                    </svg> <span>ورود | ثبت‌نام </span>
+                </a>
+            </div>
+        }
+    </div>
+</header>

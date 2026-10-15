@@ -1,0 +1,89 @@
+$border-radius: 10px;
+
+.income-statement-wrapper {
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  section {
+    /*margin: 10px;*/
+
+    header {
+      color: var(--fd-strong-fg);
+      font-size: 16px;
+      font-weight: var(--fd-fw-bold);
+      padding: 5px 10px;
+      border-radius: $border-radius $border-radius 0 0;
+
+      &.revenues {
+        background-color: var(--bs-success);
+      }
+
+      &.expenses {
+        background-color: var(--bs-danger);
+      }
+    }
+
+    footer {
+      display: flex;
+      font-weight: var(--fd-fw-bold);
+      align-items: flex-end;
+      /*color: var(--bs-gray-800);*/
+      border-radius: 0 0 $border-radius $border-radius;
+      background-color: var(--fd-strong-bg);
+      color: var(--fd-strong-fg);
+
+      .caption {
+        padding: 5px 10px;
+        flex-grow: 1;
+      }
+
+      .balance {
+        padding: 5px;
+        width: 150px;
+        /*border-top: double 4px var(--bs-gray-500);*/
+      }
+    }
+  }
+
+  .table-wrapper {
+    flex-grow: 1;
+    background-color: var(--bs-body-bg);
+
+    table {
+      width: 100%;
+      border-spacing: 10px;
+      border-collapse: separate;
+
+      th, td {
+        white-space: nowrap;
+      }
+
+      th {
+        padding: 5px;
+        border-bottom: solid 2px var(--fd-line-strong);
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    align-items: center;
+    font-weight: var(--fd-fw-bold);
+    font-size: 16px;
+    border-radius: $border-radius;
+    color: var(--fd-on-primary);
+
+    &.in-gains {
+      background-color: var(--bs-success);
+    }
+
+    &.in-losses {
+      background-color: var(--bs-danger);
+    }
+  }
+}

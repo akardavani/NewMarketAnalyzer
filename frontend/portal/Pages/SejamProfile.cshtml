@@ -1,0 +1,204 @@
+@page
+@model SejamProfileModel
+@{
+    ViewData["Title"] = "پروفایل سجام";
+    Layout = "_RegistrationLayout";
+}
+
+<div class="d-flex flex-column shadow rounded-3 m-5">
+    <div class="d-flex flex-column align-items-center justify-content-center px-3 py-5">
+        <p class="pre-text bg-light rounded p-2 m-0">
+            کاربر گرامی، چنانچه اطلاعات کاربری دریافت شده از سجام، با اطلاعات شما مطابقت ندارد، ابتدا از طریق سامانه سجام اقدام به اصلاح و به‌روزرسانی اطلاعات خود کرده و سپس مجددا اقدام به ثبت‌نام در این سامانه فرمایید.
+        </p>
+    </div>
+    <form class="d-flex flex-column w-100 px-3 py-5" method="post">
+    <div class="alert alert-danger mt-2 w-25" asp-validation-summary="ModelOnly"></div>
+        <p class="pre-text fw-bold">اطلاعات عمومی</p>
+        @if (Model.SejamProfileResult.IsNaturalPerson)
+        {
+            <div class="row border-top">
+                <div class="input-box col-12 col-md-3">
+                    <label class="input-box-label">نوع شخص</label>
+                    <input class="input-box-text" asp-for="SejamProfileResult.PersonType" type="text" readonly>
+                </div>
+                <div class="input-box col-12 col-md-3">
+                    <label class="input-box-label">نام</label>
+                    <input class="input-box-text" asp-for="SejamProfileResult.FirstName" type="text" readonly>
+                </div>
+                <div class="input-box col-12 col-md-3">
+                    <label class="input-box-label">نام خانوادگی</label>
+                    <input class="input-box-text" asp-for="SejamProfileResult.LastName" type="text" readonly>
+                </div>
+                <div class="input-box col-12 col-md-3">
+                    <label class="input-box-label">نام پدر</label>
+                    <input class="input-box-text" asp-for="SejamProfileResult.FatherName" type="text" readonly>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-box col-12 col-md-3">
+                    <label class="input-box-label">جنسیت</label>
+                    <input class="input-box-text" asp-for="SejamProfileResult.Gender" type="text" readonly>
+                </div>
+                <div class="input-box col-12 col-md-3">
+                    <label class="input-box-label">تاریخ تولد</label>
+                    <input class="input-box-text" asp-for="SejamProfileResult.RegistrationOrBirthDate" asp-format="{0:yyyy/MM/dd}" type="text" readonly>
+                </div>
+                <div class="input-box col-12 col-md-3">
+                    <label class="input-box-label">کد ملی</label>
+                    <input class="input-box-text" asp-for="SejamProfileResult.NationalCode" type="text" readonly>
+                </div>
+                <div class="input-box col-12 col-md-3">
+                    <label class="input-box-label">محل صدور</label>
+                    <input class="input-box-text" asp-for="SejamProfileResult.RegistrationOrIdentityIssuancePlace" type="text" readonly>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-box col-12 col-md-3">
+                    <label class="input-box-label">شماره شناسنامه</label>
+                    <input class="input-box-text" asp-for="SejamProfileResult.IdentityNumber" type="text" readonly>
+                </div>
+                <div class="input-box col-12 col-md-3">
+                    <label class="input-box-label">سریال شناسنامه</label>
+                    <input class="input-box-text" asp-for="SejamProfileResult.IdentitySerialNumber" type="text" readonly>
+                </div>
+                <div class="input-box col-12 col-md-3">
+                    <label class="input-box-label">سری شناسنامه</label>
+                    <input class="input-box-text" asp-for="SejamProfileResult.IdentitySequnceNumber" type="text" readonly>
+                </div>
+            </div>
+        }
+        @if (!Model.SejamProfileResult.IsNaturalPerson)
+        {
+            <div class="row border-top">
+                <div class="input-box col-12 col-md-3">
+                    <label class="input-box-label">نوع شخص</label>
+                    <input class="input-box-text" asp-for="SejamProfileResult.PersonType" type="text" readonly>
+                </div>
+                <div class="input-box col-12 col-md-3">
+                    <label class="input-box-label">نام شرکت</label>
+                    <input class="input-box-text" asp-for="SejamProfileResult.Name" type="text" readonly>
+                </div>
+                <div class="input-box col-12 col-md-3">
+                    <label class="input-box-label">نوع شرکت</label>
+                    <input class="input-box-text" asp-for="SejamProfileResult.CompanyType" type="text" readonly>
+                </div>
+                <div class="input-box col-12 col-md-3">
+                    <label class="input-box-label">شناسه ملی</label>
+                    <input class="input-box-text" asp-for="SejamProfileResult.NationalCode" type="text" readonly>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-box col-12 col-md-3">
+                    <label class="input-box-label">کد اقتصادی</label>
+                    <input class="input-box-text" asp-for="SejamProfileResult.EconomicCode" type="text" readonly>
+                </div>
+                <div class="input-box col-12 col-md-3">
+                    <label class="input-box-label">تاریخ ثبت</label>
+                    <input class="input-box-text" asp-for="SejamProfileResult.RegistrationOrBirthDate" type="text" readonly>
+                </div>
+                <div class="input-box col-12 col-md-3">
+                    <label class="input-box-label">محل ثبت</label>
+                    <input class="input-box-text" asp-for="SejamProfileResult.RegistrationOrIdentityIssuancePlace" type="text" readonly>
+                </div>
+                <div class="input-box col-12 col-md-3">
+                    <label class="input-box-label">شماره ثبت</label>
+                    <input class="input-box-text" asp-for="SejamProfileResult.RegistrationNumber" type="text" readonly>
+                </div>
+            </div>
+        }
+        <p class="pre-text fw-bold mt-5">اطلاعات تماس</p>
+        <div class="row border-top">
+            @foreach (var contact in Model.SejamProfileResult.Contacts)
+            {
+                <div class="input-box col-12 col-md-4">
+                    <label class="input-box-label">@contact.ContactType</label>
+                    <input class="input-box-text" asp-for="@contact.Content" type="text" readonly>
+                </div>
+            }
+        </div>
+        <div class="row">
+            <p class="fw-bold">نشانی‌ها</p>
+            <table class="table table-striped table-hover data-table text-center mt-3 mb-5">
+                <thead>
+                    <tr>
+                        <th>نوع نشانی</th>
+                        <th>شهر</th>
+                        <th>نشانی</th>
+                        <th>پلاک</th>
+                        <th>کد پستی</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var address in Model.SejamProfileResult.Addresses)
+                    {
+                        <tr>
+                            <td>@address.AddressType</td>
+                            <td>@address.Region</td>
+                            <td>@address.Content</td>
+                            <td>@address.Number</td>
+                            <td>@address.PostalCode</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <p class="pre-text fw-bold mt-5">اطلاعات حساب بانکی</p>
+        <div class="row border-top">
+        </div>
+        <div class="row">
+            <table class="table table-striped table-hover data-table text-center mt-3 mb-5">
+                <thead>
+                    <tr>
+                        <th>بانک</th>
+                        <th>شعبه</th>
+                        <th>نوع حساب</th>
+                        <th>شبا</th>
+                        <th>شماره حساب</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var account in Model.SejamProfileResult.BankAccounts)
+                    {
+                        <tr>
+                            <td>@account.Bank</td>
+                            <td>@account.Branch</td>
+                            <td>@account.AccountType</td>
+                            <td>@account.ShebaNumber</td>
+                            <td>@account.AccountNumber</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <input type="hidden" asp-for="NationalCode" />
+        <input type="hidden" asp-for="SejamProfileHistoryId" />
+        <input type="hidden" asp-for="Otp" />
+        <div class="d-flex align-self-center py-3 gap-5">
+            <div class="field d-flex flex-column">
+                <div class="label m-0 fw-bold">کد امنیتی</div>
+                <div class="captcha-field container">
+                    <div class="row d-flex align-items-center justify-content-between">
+                        <div class="col-4 input-container d-flex flex-column">
+                            <input class="h-100" type="text" asp-for="CaptchaCode" placeholder="کد امنیتی">
+                        </div>
+                        <div class="col-8 d-flex align-items-center justify-content-end">
+                            <div class="col-10 captcha-image p-0">
+                                <img id="captchaImage" class="img-fluid" data-refresh-captcha="true" src="/captcha" height="48" width="180" alt="تصویر امنیتی" />
+                            </div>
+                            <div class="col-2 refresh-captcha">
+                                <a class="change-captcha" data-refresh-captcha="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z" />
+                                        <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span asp-validation-for="CaptchaCode" class="input-validation-alert"></span>
+            </div>
+            <button type="submit" class="align-self-center mb-0 mt-4" data-type="primary-buttons">تایید اطلاعات</button>
+        </div>
+    </form>
+</div>

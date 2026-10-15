@@ -1,0 +1,60 @@
+@use 'sass:math';
+@import "bootstrap/scss/functions";
+@import "../../../styles/base/variables";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+
+/*@function strip-units($value){
+  @return math.div($value, ($value * 0 + 1));
+}*/
+
+:host {
+  display: block;
+  position: relative;
+  width: 100%;
+
+  label {
+    position: absolute;
+    pointer-events: none;
+    top: 50%;
+    right: 0;
+    padding: 0 $input-padding-x;
+    transform: translateY(-50%);
+    line-height: $input-line-height;
+    transition: top 150ms, right 150ms, transform 150ms;
+    opacity: 0.5;
+    color: var(--fd-text-3);
+
+    span {
+      position: relative;
+      z-index: 10;
+    }
+  }
+
+  &.filled,
+  &:has(input:focus),
+  &:has(textarea:focus),
+  &:has(select:focus) {
+    label {
+      top: 0;
+      opacity: 1;
+      right: -4px;
+      transform: translateY(-50%) scale(0.85);
+
+      &:after {
+        top: 50%;
+        content: ' ';
+        position: absolute;
+        width: 85%;
+        background-color: var(--fd-field);
+        /*background-color: blue;*/
+        height: 3px;
+        margin-top: 1px;
+        transform: translateY(-50%);
+        right: 8px;
+        z-index: 1;
+      }
+    }
+  }
+}

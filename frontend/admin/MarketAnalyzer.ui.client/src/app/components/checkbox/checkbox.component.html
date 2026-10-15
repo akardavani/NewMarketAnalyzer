@@ -1,0 +1,13 @@
+<label>
+  <input #checkbox
+         type="checkbox"
+         [value]="value"
+         [checked]="checked"
+         (change)="onCheckboxChange($event)"
+         (blur)="_onTouched()" />
+
+  <span class="box"></span>
+  @if(label) {
+  <span>{{label}}</span>
+  }
+</label>

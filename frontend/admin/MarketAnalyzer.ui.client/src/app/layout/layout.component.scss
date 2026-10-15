@@ -1,0 +1,264 @@
+// پوستهٔ برنامه — فقط توکن‌های --fd-*؛ رنگ/فونت ثابت ندارد.
+$head-h: 62px;
+
+:host {
+  display: block;
+  height: 100%;
+  --fd-side-w: 264px;
+  --fd-side-w-collapsed: 76px;
+}
+
+.shell {
+  display: flex;
+  height: 100%;
+  background: var(--fd-bg);
+  color: var(--fd-text);
+}
+
+.main {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sp { flex: 1 1 auto; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* ───── هدر ───── */
+.head {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: $head-h;
+  padding: 0 24px;
+  border-bottom: 1px solid var(--fd-line);
+  background: color-mix(in oklab, var(--fd-bg) 88%, transparent);
+  backdrop-filter: blur(8px);
+  position: relative;
+  z-index: 10;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: min(300px, 40%);
+  height: 38px;
+  padding: 0 12px;
+  border-radius: var(--fd-radius-control);
+  border: 1px solid var(--fd-line-strong);
+  background: var(--fd-field);
+  color: var(--fd-text-3);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+
+  &:hover { border-color: var(--fd-primary-line); }
+  .ph { flex: 1; text-align: start; }
+  kbd {
+    padding: 1px 7px;
+    border-radius: 6px;
+    font: inherit;
+    font-size: 11px;
+    border: 1px solid var(--fd-line-strong);
+    background: var(--fd-surface-2);
+    color: var(--fd-text-3);
+    direction: ltr;
+  }
+}
+
+.quick {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.vr {
+  width: 1px;
+  height: 24px;
+  margin-inline: 6px;
+  background: var(--fd-line-strong);
+}
+
+.ibtn {
+  position: relative;
+  flex: none;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 10px;
+  background: none;
+  color: var(--fd-text-2);
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 150ms, color 150ms;
+
+  &:hover { background: var(--fd-hover); color: var(--fd-text); }
+  &:focus-visible { outline: 2px solid var(--fd-primary); outline-offset: 1px; }
+}
+
+.badge-dot {
+  position: absolute;
+  top: 2px;
+  inset-inline-start: 0;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  border: 2px solid var(--fd-bg);
+  box-sizing: content-box;
+  background: var(--fd-danger);
+  color: var(--fd-on-primary);
+  font-size: 9.5px;
+  font-weight: var(--fd-fw-bold);
+  line-height: 1;
+  pointer-events: none;
+}
+
+/* ───── کاربر ───── */
+.user { position: relative; margin-inline-start: 4px; }
+
+.user-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 40px;
+  padding: 0 6px 0 10px;
+  border: 0;
+  border-radius: 999px;
+  background: none;
+  color: var(--fd-text);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+
+  &:hover { background: var(--fd-hover); }
+  &:focus-visible { outline: 2px solid var(--fd-primary); outline-offset: 1px; }
+}
+
+.avatar {
+  flex: none;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: var(--fd-fw-bold);
+  color: var(--fd-on-primary);
+  background: var(--fd-gradient);
+}
+
+.user-name {
+  max-width: 160px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  inset-inline-start: 0;
+  z-index: 30;
+  min-width: 210px;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  background: var(--fd-surface);
+  border: 1px solid var(--fd-line-strong);
+  border-radius: var(--fd-radius-control);
+  box-shadow: var(--fd-shadow-pop);
+
+  .menu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 12px;
+    border: 0;
+    border-radius: calc(var(--fd-radius-control) - 4px);
+    background: none;
+    color: var(--fd-text);
+    font: inherit;
+    font-size: 13px;
+    text-align: start;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover { background: var(--fd-hover); }
+    .icon { width: 20px; display: grid; place-items: center; color: var(--fd-text-3); }
+  }
+}
+
+/* ───── محتوا ───── */
+.page-content {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+  padding: 16px 24px;
+}
+
+.crumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 13px;
+  color: var(--fd-text-3);
+
+  a { color: var(--fd-text-3); text-decoration: none; &:hover { color: var(--fd-text); } }
+  b { color: var(--fd-text); font-weight: var(--fd-fw-semi); }
+  .sep { opacity: 0.6; }
+}
+
+/* ───── فوتر (نوار وضعیت) ───── */
+.status {
+  flex: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 22px;
+  min-height: 36px;
+  padding: 0 24px;
+  border-top: 1px solid var(--fd-line);
+  background: var(--fd-sidebar);
+  font-size: 11.5px;
+  color: var(--fd-text-3);
+
+  b { color: var(--fd-text-2); font-weight: var(--fd-fw-semi); }
+}
+
+.nav-state {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  .live {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--fd-success);
+    box-shadow: 0 0 8px var(--fd-success);
+  }
+  &.bad .live { background: var(--fd-danger); box-shadow: 0 0 8px var(--fd-danger); }
+}
+
+.clock { min-width: 56px; text-align: end; }
+
+@media (max-width: 991.98px) {
+  .head { padding: 0 12px; }
+  .search { width: auto; flex: 1; }
+  .search kbd, .user-name, .quick span { display: none; }
+  .page-content { padding: 12px; }
+  .status { padding: 0 12px; }
+}

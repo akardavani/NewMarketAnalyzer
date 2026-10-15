@@ -1,0 +1,22 @@
+<ul class="tree-view">
+  @for(item of nodes; track $index)
+  {
+  <li class="tree-view-node" [class.hide]="item.filtered">
+    <a [class.expanded]="item.expanded()" [class.expandable]="item.expandable" [class.active]="item.active" href="{{item.path || '#'}}" (click)="navigate($event, item)">
+      <span class="icon"><i class="{{item.icon}}"></i></span>
+      <span class="caption">{{item.label}}</span>
+      @if(item.expandable)
+      {
+      <span class="expander">
+        <i class="pa pa-compact"></i>
+      </span>
+      }
+    </a>
+
+    @if(item.expandable)
+    {
+    <fd-tree-view class="children" [nodes]="item.children"></fd-tree-view>
+    }
+  </li>
+  }
+</ul>

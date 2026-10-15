@@ -1,0 +1,55 @@
+<section class="calculator-section d-flex flex-column justify-content-center align-items-center my-5">
+    <h2 data-type='main-titles-light'>ماشین حساب</h2>
+    <p class="text-white">
+        اگر در این صندوق سرمایه‌گذاری کرده بودید،سرمایه امروز شما چقدر بود؟
+    </p>
+    <div class="calculator-container w-100">
+        <div class="container">
+            <div class="row">
+                <div class="calculator-inputs col-12 col-md-6 py-3 px-4">
+                    <div class="investment-amount-input flex flex-column my-5">
+                        <label for="investmentAmount" class="fw-bold mb-2">مبلغ سرمایه‌گذاری</label>
+                        <div class="input-group" dir="ltr">
+                            <span class="input-group-text" id="inputGroupPrepend">تومان</span>
+                            <input type="text" class="form-control text-center" id="investmentAmount" placeholder="1,000,000" value=1000000 aria-describedby="inputGroupPrepend">
+                        </div>
+                    </div>
+                    <div class="investment-duration-input my-5">
+                        <div class="d-flex justify-content-between">
+                            <label for="investmentAmount" class="fw-bold mb-1">مدت سرمایه‌گذاری</label>
+                        </div>
+                        <div class="row justify-content-between align-items-center mt-1">
+                            <div class="dates-input col-12 col-md-6">
+                                <span>از شروع:</span>
+                                <input data-jdp type="text" class="date-input form-control mt-1" id="startDate">
+                            </div>
+                            <div class="dates-input col-12 col-md-6">
+                                <span>تا پایان:</span>
+                                <input data-jdp type="text" class="date-input form-control mt-1" id="finishDate">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <button class="px-5" data-type="primary-buttons">محاسبه سود سرمایه‌گذاری</button>
+                    </div>
+                </div>
+                <div class="calculator-result col-12 col-md-6 d-flex flex-column justify-content-center p-5">
+                    <p class="investment-result-output fw-bold">
+                        ارزش دارایی شما پس از سرمایه‌گذاری:
+                        <span id="total-final-amount" class="final-amount d-block fw-bold"><span>تومان</span> </span>
+                    </p>
+                    <p class="profit-output">
+                        <span class="large-circle"></span>
+                        مبلغ سود شما در این مدت:
+                        <span id="total-final-profit-amount" class="fw-bold"></span>
+                    </p>
+                    <p class="profit-output">
+                        <span class="large-circle"></span>
+                        درصد سود شما در این مدت:
+                        <span id="total-final-profit-percent" class="fw-bold"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

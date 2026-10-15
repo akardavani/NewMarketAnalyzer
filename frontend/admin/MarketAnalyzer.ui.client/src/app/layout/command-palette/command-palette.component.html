@@ -1,0 +1,25 @@
+@if (isOpen()) {
+<div class="scrim" (click)="close()"></div>
+<div class="box" role="dialog" aria-modal="true" aria-label="جستجو در منو">
+  <div class="field">
+    <i class="pa pa-search" aria-hidden="true"></i>
+    <input #field type="text" autocomplete="off" placeholder="جستجو در منو..."
+           role="combobox" aria-expanded="true" aria-controls="fd-palette-list"
+           [value]="query()" (input)="onInput($any($event.target).value)" (keydown)="onFieldKeydown($event)" />
+    <kbd>Esc</kbd>
+  </div>
+
+  <ul id="fd-palette-list" class="list" role="listbox">
+    @for (r of results(); track r.url; let i = $index) {
+    <li role="option" [attr.aria-selected]="i === cursor()" [class.on]="i === cursor()" (mouseenter)="cursor.set(i)" (click)="go(r)">
+      <span class="t">{{ r.label }}</span>
+      @if (r.trail) {
+      <span class="trail">{{ r.trail }}</span>
+      }
+    </li>
+    } @empty {
+    <li class="empty">موردی پیدا نشد</li>
+    }
+  </ul>
+</div>
+}

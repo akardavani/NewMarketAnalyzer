@@ -1,0 +1,65 @@
+@page
+@model SejamKycModel
+@{
+    ViewData["Title"] = "احراز هویت سجام";
+    Layout = "_RegistrationLayout";
+}
+
+<div class="d-flex flex-column align-items-center justify-content-center shadow w-25 center pt-5 rounded-3">
+    <a asp-page="Index" class="d-flex justify-content-center">
+        <img class="logo img-fluid my-1" src="~/images/Mobin-Logo.png" alt="لوگوی مبین سرمایه" />
+    </a>
+    <header class="mt-1 w-100 text-center" data-type='pre-titles'>ثبت‌نام صندوق سرمایه‌گذاری مبین سرمایه</header>
+    <div class="regestration-form w-100">
+        <div class="alert alert-danger mt-2" asp-validation-summary="ModelOnly"></div>
+        <form class="d-flex flex-column mt-4" id="OtpForm" method="post">
+            <input type="hidden" asp-for="OtpLifetime" />
+            <div class="form-fields align-self-center">
+                <div class="field d-flex flex-column mt-1">
+                    <div class="label m-0 fw-bold">کد ملی</div>
+                    <div class="input-container d-flex flex-column w-100">
+                        <input asp-for="NationalCode" class="m-0" type="text" readonly>
+                    </div>
+                    <span asp-validation-for="NationalCode" class="input-validation-alert"></span>
+                </div>
+                <div data-type="small-text" class="form-guid" style="text-align: justify">رمز یکبار مصرف ارسال شده به شماره همراه ثبت شده در سجام را وارد کنید.</div>
+                <div class="field d-flex flex-column mt-1">
+                    <div class="input-container otp-container d-flex flex-column w-100">
+                        <input asp-for="Otp" class="m-0" type="text" placeholder="کد سجام">
+                        <span class="otp-timer"></span>
+                        <div id="ResendOtpHandlerUrl" data-ajax-url="/SejamKyc?handler=ResendSejamKyc"></div>
+                        <button type="button" class="resend-otp-link d-none border-0 bg-transparent" data-otp-invoke="true">دریافت کد جدید</button>
+                    </div>
+                    <span asp-validation-for="Otp" class="input-validation-alert"></span>
+                </div>
+                <div class="field d-flex flex-column mt-1">
+                    <div class="label m-0 fw-bold">کد امنیتی</div>
+                    <div class="captcha-field container">
+                        <div class="row d-flex align-items-center justify-content-between">
+                            <div class="col-4 input-container d-flex flex-column">
+                                <input class="h-100" type="text" asp-for="CaptchaCode" placeholder="کد امنیتی">
+                            </div>
+                            <div class="col-8 d-flex align-items-center justify-content-end">
+                                <div class="col-10 captcha-image p-0">
+                                    <img id="captchaImage" class="img-fluid" data-refresh-captcha="true" src="/captcha" height="48" width="180" alt="تصویر امنیتی" />
+                                </div>
+                                <div class="col-2 refresh-captcha">
+                                    <a class="change-captcha" data-refresh-captcha="true">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z" />
+                                            <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="CaptchaCode" class="input-validation-alert"></span>
+                </div>
+                <div class="field">
+                    <button type="submit" data-type='primary-buttons' class="w-100">تایید و ادامه</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

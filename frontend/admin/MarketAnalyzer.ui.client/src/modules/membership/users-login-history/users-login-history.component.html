@@ -1,0 +1,94 @@
+<fd-page-wrapper [showSidebar]="showSidebar">
+  <div toolbar class="d-flex gap-4">
+    <div>
+      <button type="button" class="btn" (click)="toggleSidebar()"><i class="pa-filter"></i></button>
+    </div>
+  </div>
+
+  <form [formGroup]="filter" sidebar class="ag-filter-form" (ngSubmit)="applyFilter()">
+    <fd-scrollbar>
+
+      <div class="form-field">
+        <fd-float-label class="form-field" placeholder="از تاریخ">
+          <date-input formControlName="fromDate"></date-input>
+        </fd-float-label>
+      </div>
+
+      <div class="form-field">
+        <fd-float-label class="form-field" placeholder="تا تاریخ">
+          <date-input formControlName="toDate"></date-input>
+        </fd-float-label>
+      </div>
+
+      <div class="form-field">
+        <fd-float-label class="form-field" placeholder="نام کاربری">
+          <input type="text" class="form-control" formControlName="userName" />
+        </fd-float-label>
+      </div>
+
+      <div class="form-field">
+        <fd-float-label class="form-field" placeholder="نوع ورود">
+          <fd-drop-down formControlName="loginType">
+            <fd-option [value]="null">همه</fd-option>
+            @for(item of loginTypes; track $index) {
+            <fd-option [value]="item.value">{{item.text}}</fd-option>
+            }
+          </fd-drop-down>
+        </fd-float-label>
+      </div>
+
+      <div class="form-field">
+        <fd-float-label class="form-field" placeholder="وضعیت">
+          <fd-drop-down formControlName="resultId">
+            <fd-option [value]="null">همه</fd-option>
+            @for(item of loginResults | async; track $index) {
+            <fd-option [value]="item.value">{{item.text}}</fd-option>
+            }
+          </fd-drop-down>
+        </fd-float-label>
+      </div>
+
+      <div class="form-field">
+        <fd-float-label class="form-field" placeholder="آدرس IP">
+          <input type="text" class="form-control" formControlName="ipAddress" />
+        </fd-float-label>
+      </div>
+
+      <div class="form-field">
+        <fd-float-label class="form-field" placeholder="مرورگر">
+          <input type="text" class="form-control" formControlName="userAgent" />
+        </fd-float-label>
+      </div>
+
+      <div class="form-field">
+        <fd-float-label class="form-field" placeholder="برنامه">
+          <fd-drop-down formControlName="applicationId">
+            <fd-option [value]="null">همه</fd-option>
+            @for(item of applications | async; track $index) {
+            <fd-option [value]="item.value">{{item.text}}</fd-option>
+            }
+          </fd-drop-down>
+        </fd-float-label>
+      </div>
+
+    </fd-scrollbar>
+
+    <footer>
+      <button type="submit" class="btn btn-primary btn-search">جستجو</button>
+      <button type="button" class="btn btn-dark" (click)="resetFilter()">بازنشانی</button>
+    </footer>
+  </form>
+
+  <ag-grid-angular [enableRtl]="true"
+                   [getRowId]="getRowId"
+                   [style.width]="width"
+                   [style.height]="height"
+                   [localeText]="localeText"
+                   [rowModelType]="rowModelType"
+                   [autoSizeStrategy]="autoSizeStrategy"
+                   [loadingOverlayComponent]="loadingOverlayComponent"
+                   [paginationPageSizeSelector]="paginationPageSizeSelector"
+                   (gridReady)="onGridReady($event)">
+  </ag-grid-angular>
+
+</fd-page-wrapper>

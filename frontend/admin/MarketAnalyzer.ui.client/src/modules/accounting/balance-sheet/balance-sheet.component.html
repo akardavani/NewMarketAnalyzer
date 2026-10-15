@@ -1,0 +1,225 @@
+<fd-page-wrapper [showSidebar]="showSidebar">
+
+  <div toolbar>
+    <button type="button" class="btn" (click)="toggleSidebar()"><i class="pa-filter"></i></button>
+    <button type="button" class="btn" (click)="exportReport(1)"><i class="pa-pdf"></i></button>
+    <button type="button" class="btn" (click)="exportReport(2)"><i class="pa-excel"></i></button>
+  </div>
+
+  <form [formGroup]="formGroup" sidebar class="ag-filter-form" (ngSubmit)="submit()">
+    <fd-scrollbar>
+
+      <fd-float-label class="form-field" placeholder="سال مالی">
+        <fd-drop-down [formControl]="fiscalYear">
+          @for(item of fiscalYears; track $index) {
+          <fd-option [value]="item">{{item.text}}</fd-option>
+          }
+        </fd-drop-down>
+      </fd-float-label>
+
+      <fd-float-label class="form-field" placeholder="از تاریخ">
+        <date-input formControlName="fromDate" />
+      </fd-float-label>
+
+      <fd-float-label class="form-field" placeholder="تا تاریخ">
+        <date-input formControlName="toDate" />
+      </fd-float-label>
+
+      <fd-float-label class="form-field" placeholder="سطح حساب">
+        <fd-drop-down formControlName="accountLevel">
+          @for(item of accountLevels; track $index) {
+          <fd-option [value]="item.value">{{item.text}}</fd-option>
+          }
+        </fd-drop-down>
+      </fd-float-label>
+
+      <div class="form-field">
+        <div class="form-control">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="excludeOpeningVoucher" formControlName="excludeOpeningVoucher">
+            <label class="form-check-label" for="excludeOpeningVoucher">بدون سند افتتاحیه</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <div class="form-control">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="excludeClosingVoucher" formControlName="excludeClosingVoucher">
+            <label class="form-check-label" for="excludeClosingVoucher">بدون سند اختتامیه</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <div class="form-control">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="excludeCloseTemporaryAccountsVoucher" formControlName="excludeCloseTemporaryAccountsVoucher">
+            <label class="form-check-label" for="excludeCloseTemporaryAccountsVoucher">بدون سند بستن حساب‌های موقت</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <div class="form-control">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="excludeCloseOperatingAccounts" formControlName="excludeCloseOperatingAccounts">
+            <label class="form-check-label" for="excludeCloseOperatingAccounts">بدون سند بستن حساب‌های عملکرد</label>
+          </div>
+        </div>
+      </div>
+
+    </fd-scrollbar>
+
+    <footer>
+      <button type="submit" class="btn btn-primary btn-search">جستجو</button>
+      <button type="button" class="btn btn-dark" (click)="reset()">بازنشانی</button>
+    </footer>
+  </form>
+
+  <div class="balance-sheet-wrapper">
+    @if((balanceSheet | async); as context) {
+    <section class="d-flex flex-column w-50">
+      <header class="revenues">دارایی‌ها</header>
+      <div class="table-wrapper">
+        @if(context.currentAssets.length) {
+        <div class="mb-2">
+          <div class="item-header">دارایی‌های جاری</div>
+          <table>
+            <tbody>
+              @for(item of context.currentAssets; track $index) {
+              <tr>
+                <td class="account-code">{{item.accountCode}}</td>
+                <td><a href="{{item.url}}" target="_blank">{{item.accountName}}</a></td>
+                <td class="account-balance" [negative]="item.balance">{{item.balance | neg}}</td>
+              </tr>
+              }
+            </tbody>
+            <tfoot>
+              <tr>
+                <td class="total-title">جمع</td>
+                <td>&nbsp;</td>
+                <td class="total-balance" [negative]="context.totalCurrentAssets">{{context.totalCurrentAssets | neg}}</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        }
+
+        @if(context.fixedAssets.length) {
+        <div class="mb-2">
+          <div class="item-header">دارایی‌های غیرجاری</div>
+          <table>
+            <tbody>
+              @for(item of context.fixedAssets; track $index) {
+              <tr>
+                <td class="account-code">{{item.accountCode}}</td>
+                <td><a href="{{item.url}}" target="_blank">{{item.accountName}}</a></td>
+                <td class="account-balance" [negative]="item.balance">{{item.balance | neg}}</td>
+              </tr>
+              }
+            </tbody>
+            <tfoot>
+              <tr>
+                <td class="total-title">جمع</td>
+                <td>&nbsp;</td>
+                <td class="total-balance" [negative]="context.totalFixedAssets">{{context.totalFixedAssets | neg}}</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        }
+      </div>
+      <footer>
+        <span class="caption">جمع دارایی‌ها</span>
+        <span class="balance" [negative]="context.totalAssets">{{context.totalAssets | neg}}</span>
+      </footer>
+    </section>
+
+    <section class="d-flex flex-column w-50">
+      <header class="expenses">بدهی‌‌ها</header>
+      <div class="table-wrapper">
+        @if(context.currentLiabilities.length) {
+        <div class="mb-2">
+          <div class="item-header">بدهی‌های جاری</div>
+          <table>
+            <tbody>
+              @for(item of context.currentLiabilities; track $index) {
+              <tr>
+                <td class="account-code">{{item.accountCode}}</td>
+                <td><a href="{{item.url}}" target="_blank">{{item.accountName}}</a></td>
+                <td class="account-balance" [negative]="item.balance">{{item.balance | neg}}</td>
+              </tr>
+              }
+            </tbody>
+            <tfoot>
+              <tr>
+                <td class="total-title">جمع</td>
+                <td>&nbsp;</td>
+                <td class="total-balance" [negative]="context.totalCurrentLiabilities">{{context.totalCurrentLiabilities | neg}}</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        }
+
+        @if(context.fixedLiabilities.length) {
+        <div class="mb-2">
+          <div class="item-header">بدهی‌های ثابت</div>
+          <table>
+            <tbody>
+              @for(item of context.fixedLiabilities; track $index) {
+              <tr>
+                <td class="account-code">{{item.accountCode}}</td>
+                <td><a href="{{item.url}}" target="_blank">{{item.accountName}}</a></td>
+                <td class="account-balance" [negative]="item.balance">{{item.balance | neg}}</td>
+              </tr>
+              }
+            </tbody>
+            <tfoot>
+              <tr>
+                <td class="total-title">جمع</td>
+                <td>&nbsp;</td>
+                <td class="total-balance" [negative]="context.totalFixedLiabilities">{{context.totalFixedLiabilities | neg}}</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        }
+
+        @if(context.ownersEequity.length) {
+        <div class="mb-2">
+          <div class="item-header">خالص دارایی‌ها</div>
+          <table>
+            <tbody>
+              @for(item of context.ownersEequity; track $index) {
+              <tr>
+                <td class="account-code">{{item.accountCode}}</td>
+                <td><a href="{{item.url}}" target="_blank">{{item.accountName}}</a></td>
+                <td class="account-balance" [negative]="item.balance">{{item.balance | neg}}</td>
+              </tr>
+              }
+            </tbody>
+            <tfoot>
+              <tr>
+                <td class="total-title">جمع</td>
+                <td>&nbsp;</td>
+                <td class="total-balance" [negative]="context.totalOwnersEequity">{{context.totalOwnersEequity | neg}}</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        }
+      </div>
+      <footer>
+        <span class="caption">جمع بدهی‌ها</span>
+        <span class="balance" [negative]="context.totalLiabilities">{{context.totalLiabilities | neg}}</span>
+      </footer>
+    </section>
+    }
+    @else {
+    <fd-loader></fd-loader>
+    }
+  </div>
+
+</fd-page-wrapper>

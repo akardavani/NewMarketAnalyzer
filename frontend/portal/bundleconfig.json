@@ -1,0 +1,38 @@
+[
+  {
+    "minify": {
+      "enabled": true
+    },
+    "outputFileName": "wwwroot/styles.min.css",
+    "inputFiles": [
+      "wwwroot/styles/bootstrap.css",
+      "wwwroot/styles/jalalidatepicker.css",
+      "wwwroot/styles/layout.css"
+    ]
+  },
+
+  {
+    "minify": {
+      "enabled": true
+    },
+    "outputFileName": "wwwroot/libs.min.js",
+    "inputFiles": [
+      "node_modules/jquery/dist/jquery.js",
+      "node_modules/jquery-validation/dist/jquery.validate.js",
+      "node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js",
+      "node_modules/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.js",
+      "node_modules/bootstrap/dist/js/bootstrap.bundle.js",
+      "node_modules/chart.js/dist/chart.umd.js"
+    ]
+  },
+
+  {
+    "minify": {
+      "enabled": true
+    },
+    "outputFileName": "wwwroot/scripts.min.js",
+    "inputFiles": [
+      "wwwroot/scripts/*.js"
+    ]
+  }
+]

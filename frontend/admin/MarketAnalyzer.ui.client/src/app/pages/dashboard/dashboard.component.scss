@@ -1,0 +1,26 @@
+.dashboard-container {
+  padding: 2rem;
+
+  h1 {
+    margin-bottom: 2rem;
+    color: var(--fd-text-1);
+  }
+
+  .info-card {
+    background: var(--fd-surface-1);
+    border: 1px solid var(--fd-line);
+    border-radius: 8px;
+    padding: 1.5rem;
+    max-width: 600px;
+
+    p {
+      margin-bottom: 1rem;
+      color: var(--fd-text-2);
+
+      strong {
+        color: var(--fd-text-1);
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}

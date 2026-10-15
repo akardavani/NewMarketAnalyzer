@@ -1,0 +1,9 @@
+.fd-calendar {
+  display: flex;
+  flex-direction: column;
+
+  .btn {
+    margin: 5px;
+    flex-grow: 1;
+  }
+}

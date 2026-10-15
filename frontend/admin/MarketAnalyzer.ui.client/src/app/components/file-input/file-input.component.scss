@@ -1,0 +1,27 @@
+:host {
+  position: relative !important;
+  overflow: hidden !important;
+  cursor: pointer;
+
+  label {
+    width: 100%;
+    display: flex;
+    cursor: pointer;
+    flex-flow: column;
+
+    span {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+  input[type="file"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+}

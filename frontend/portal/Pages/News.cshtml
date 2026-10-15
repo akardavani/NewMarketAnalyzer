@@ -1,0 +1,146 @@
+@page
+@model NewsModel
+@{
+    ViewData["Title"] = "اخبار صندوق";
+}
+
+<div class="container">
+    <div class="d-flex flex-column paginated-table">
+        <h3 data-type="pre-titles" class="align-self-center">اخبار صندوق</h3>
+        <div class="d-flex justify-content-start">
+            <div class="search-box">
+                <input class="search-input" type="search" placeholder="جستجوی عناوین..." />
+            </div>
+        </div>
+        <div class="table-responsive overflow-x-auto">
+            <table class="table table-striped data-table mt-3 mb-5">
+                <thead>
+                    <tr>
+                        <th>عنوان‌ها</th>
+                        <th>تاریخ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="cssGridItem">
+                        <td>
+                            <span>
+                                <a href="#" target="_blank" data-type="hyper-link">لیست حاضرین در مجمع 1402/05/24</a>
+                            </span>
+                        </td>
+                        <td>
+                            ۱۴۰۲/۰۵/۲۴
+                        </td>
+                    </tr>
+                    <tr class="cssGridItem">
+                        <td>
+                            <span>
+                                <a href="#" target="_blank" data-type="hyper-link">صورت جلسه مجمع  عمومی  صندوق مورخ 1401/04/24</a>
+                            </span>
+                        </td>
+                        <td>
+                            ۱۴۰۲/۰۵/۲۲
+                        </td>
+                    </tr>
+                    <tr class="cssGridItem">
+                        <td>
+                            <span>
+                                <a href="#" target="_blank" data-type="hyper-link">نامه تایید سازمان بورس در خصوص مجمع مورخ 1401/04/24</a>
+                            </span>
+                        </td>
+                        <td>
+                            ۱۴۰۲/۰۵/۲۲
+                        </td>
+                    </tr>
+                    <tr class="cssGridItem">
+                        <td>
+                            <span>
+                                <a href="#" target="_blank" data-type="hyper-link">آگهی دعوت به مجمع صندوق مورخ 1402/05/24</a>
+                            </span>
+                        </td>
+                        <td>
+                            ۱۴۰۲/۰۵/۱۴
+                        </td>
+                    </tr>
+                    <tr class="cssGridItem">
+                        <td>
+                            <span>
+                                <a href="#" target="_blank" data-type="hyper-link">لیست حاضرین در مجمع 1402/04/24</a>
+                            </span>
+                        </td>
+                        <td>
+                            ۱۴۰۲/۰۴/۲۴
+                        </td>
+                    </tr>
+                    <tr class="cssGridItem">
+                        <td>
+                            <span>
+                                <a href="#" target="_blank" data-type="hyper-link">آگهی دعوت به مجمع صندوق مورخ 1402/04/24</a>
+                            </span>
+                        </td>
+                        <td>
+                            ۱۴۰۲/۰۴/۱۴
+                        </td>
+                    </tr>
+                    <tr class="cssGridItem">
+                        <td>
+                            <span>
+                                <a href="#" target="_blank" data-type="hyper-link">صورت جلسه مجمع  عمومی سالانه صندوق مورخ 1402/03/17</a>
+                            </span>
+                        </td>
+                        <td>
+                            ۱۴۰۲/۰۴/۰۳
+                        </td>
+                    </tr>
+                    <tr class="cssGridItem">
+                        <td>
+                            <span>
+                                <a href="#" target="_blank" data-type="hyper-link">نامه تایید سازمان بورس در خصوص مجمع مورخ 1402/03/17</a>
+                            </span>
+                        </td>
+                        <td>
+                            ۱۴۰۲/۰۴/۰۳
+                        </td>
+                    </tr>
+                    <tr class="cssGridItem">
+                        <td>
+                            <span>
+                                <a href="#" target="_blank" data-type="hyper-link">لیست حاضرین در مجمع 1402/03/17</a>
+                            </span>
+                        </td>
+                        <td>
+                            ۱۴۰۲/۰۳/۱۷
+                        </td>
+                    </tr>
+                    <tr class="cssGridItem">
+                        <td>
+                            <span>
+                                <a href="#" target="_blank" data-type="hyper-link">آگهی دعوت به مجمع صندوق مورخ 1402/03/17</a>
+                            </span>
+                        </td>
+                        <td>
+                            ۱۴۰۲/۰۳/۰۷
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <nav class="d-flex justify-content-center table-pagination" dir="ltr">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="#">
+                        <span aria-hidden="true">قبلی</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">بعدی</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>

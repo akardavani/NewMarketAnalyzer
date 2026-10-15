@@ -1,0 +1,49 @@
+<fd-page-wrapper [showSidebar]="showSidebar">
+  <div toolbar>
+    <button type="button" class="btn" (click)="toggleSidebar()"><i class="pa-filter"></i></button>
+    <button type="button" class="btn" (click)="exportReport(1)"><i class="pa pa-pdf"></i></button>
+    <button type="button" class="btn" (click)="exportReport(2)"><i class="pa pa-excel"></i></button>
+  </div>
+
+  <form [formGroup]="filter" sidebar class="ag-filter-form" (ngSubmit)="applyFilter()">
+    <fd-scrollbar>
+
+      <fd-float-label class="form-field" placeholder="تا تاریخ">
+        <date-input formControlName="toDate" />
+      </fd-float-label>
+
+      <fd-float-label class="form-field" placeholder="سهام">
+        <input type="text" class="form-control" formControlName="keyword" />
+      </fd-float-label>
+
+      <div class="form-field">
+        <div class="form-control">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="hasQuantity" formControlName="hasQuantity">
+            <label class="form-check-label" for="hasQuantity">فقط سهام مانده‌دار</label>
+          </div>
+        </div>
+      </div>
+
+    </fd-scrollbar>
+
+    <footer>
+      <button type="submit" class="btn btn-primary btn-search">جستجو</button>
+      <button type="button" class="btn btn-dark" (click)="resetFilter()">بازنشانی</button>
+    </footer>
+  </form>
+
+  <ag-grid-angular [enableRtl]="true"
+                   [rowData]="data | async"
+                   [getRowId]="getRowId"
+                   [style.width]="width"
+                   [style.height]="height"
+                   [localeText]="localeText"
+                   [rowModelType]="rowModelType"
+                   [autoSizeStrategy]="autoSizeStrategy"
+                   [loadingOverlayComponent]="loadingOverlayComponent"
+                   [paginationPageSizeSelector]="paginationPageSizeSelector"
+                   (gridReady)="onGridReady($event)">
+  </ag-grid-angular>
+
+</fd-page-wrapper>

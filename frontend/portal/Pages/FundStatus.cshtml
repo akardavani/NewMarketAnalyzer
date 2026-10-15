@@ -1,0 +1,93 @@
+﻿@page
+@model FundStatusModel
+@{
+    ViewData["Title"] = "وضعیت صندوق";
+}
+
+<div class="container">
+    <div class="d-flex flex-column period-asset">
+        <h3 data-type="pre-titles" class="align-self-center">وضعیت‌ صندوق</h3>
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end w-100">
+            <form method="get">
+                <div class="d-flex justify-content-between align-items-md-end gap-1 w-100">
+                    <div class="row justify-content-start align-items-end mt-2 g-2">
+                        <div class="dates-input col-12 col-md-5 mt-2">
+                            <span>شروع از:</span>
+                            <input data-jdp class="date-input form-control mt-1" type="text" asp-for="FromDate" placeholder="انتخاب تاریخ">
+                        </div>
+                        <div class="dates-input col-12 col-md-5 mt-2">
+                            <span>تا پایان:</span>
+                            <input data-jdp class="date-input form-control mt-1" type="text" asp-for="ToDate" placeholder="انتخاب تاریخ">
+                        </div>
+                        <div class="col-12 col-md-2 mt-2">
+                            <button class="mt-2 search-date-btn" type="submit" data-type="primary-buttons">جستجو</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="table-responsive overflow-x-auto">
+            <table class="table table-striped table-hover data-table period-asset-table text-center mt-3 mb-2">
+                <thead>
+                    <tr>
+                        <th> تاریخ</th>
+                        <th> کل واحدهای صندوق</th>
+                        <th> عمر صندوق</th>
+                        <th> صدور NAV</th>
+                        <th> ابطال NAV</th>
+                        <th> ابطال ماه گذشته NAV </th>
+                        <th> ابطال هفته گذشته NAV </th>
+                        <th> تعداد واحد صادر شده </th>
+                        <th> تعداد واحد باطل شده </th>
+                        <th> ارزش واحدهای صادر شده</th>
+                        <th> ارزش واحدهای ابطال شده</th>
+                        <th> بازدهی روزانه صندوق</th>
+                        <th> بازدهی هفته اخیر</th>
+                        <th> بازدهی ماه اخیر</th>
+                        <th> بازدهی ابتدای فعالیت</th>
+                        <th> تعداد سرمایه گذاران حقیقی</th>
+                        <th> تعداد سرمایه گذاران حقوقی</th>
+                        <th> درصد دارایی از کل سرمایه گذاران حقیقی</th>
+                        <th> درصد دارایی از کل سرمایه گذاران حقوقی</th>
+                        <th> ارزش (نقد و شبه نقد)</th>
+                        <th> درصد دارایی از کل نقد و شبه نقد</th>
+                        <th> ارزش سهام</th>
+                        <th> درصد دارایی از کل سهام</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.FundStatusReturns)
+                    {
+                        <tr>
+                            <td>@item.Date.ToPersian()</td>
+                            <td>@item.UnitsCount</td>
+                            <td>@item.FundDuration</td>
+                            <td>@item.IssuanceNav</td>
+                            <td>@item.CancellationNav</td>
+                            <td>@item.PreviousMonthCancellationNav</td>
+                            <td>@item.PreviousWeekCancellationNav</td>
+                            <td>@item.IssuedUnitsCount</td>
+                            <td>@item.CancelledUnitsCount</td>
+                            <td>@item.ValueOfIssuedUnits</td>
+                            <td>@item.ValueOfCancellationUnits</td>
+                            <td>@item.DailyFundReturn</td>
+                            <td>@item.WeeklyFundReturn</td>
+                            <td>@item.MonthlyFundReturn</td>
+                            <td>@item.ReturnSinceInception</td>
+                            <td>@item.NaturalInvestorsCount</td>
+                            <td>@item.LegalInvestorsCount</td>
+                            <td>@item.NaturalOwnershipPercentage</td>
+                            <td>@item.LegalOwnershipPercentage</td>
+                            <td>@item.ValueOfCash</td>
+                            <td>@item.CashOwnershipPercentage</td>
+                            <td>@item.ValueOfStock</td>
+                            <td>@item.StockOwnershipPercentage</td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+}

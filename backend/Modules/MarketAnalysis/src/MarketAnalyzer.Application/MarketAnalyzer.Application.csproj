@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Common\src\MarketAnalyzer.Abstractions\MarketAnalyzer.Abstractions.csproj" />
+    <ProjectReference Include="..\MarketAnalyzer.Analysis.Infrastructure\MarketAnalyzer.Analysis.Infrastructure.csproj" />
+    <ProjectReference Include="..\MarketAnalyzer.AnalysisStrategy\MarketAnalyzer.AnalysisStrategy.csproj" />
+  </ItemGroup>
+
+</Project>

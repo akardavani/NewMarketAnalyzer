@@ -1,0 +1,100 @@
+.ag-cell-action {
+  display: flex;
+  /*margin-top: 1px;*/
+  gap: 2px;
+
+  .btn-action {
+    display: inline-flex;
+    cursor: pointer;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    padding: 4px;
+    margin: 3px 0 0 2px;
+    min-width: 28px;
+    height: 28px;
+    border: solid 1px transparent;
+
+    &:hover {
+      background-color: var(--fd-primary-soft);
+      border-color: var(--fd-primary-line);
+    }
+
+    &.btn-accept {
+      color: var(--bs-success);
+    }
+
+    &.btn-reject {
+      color: var(--bs-danger);
+
+      i {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.ag-header-cell-text,
+.ag-header-group-text {
+  font-weight: var(--fd-fw-bold) !important;
+}
+
+.ag-floating-top,
+.ag-floating-bottom {
+  overflow-y: hidden !important;
+}
+
+.ag-cell-value, .ag-group-value {
+  cursor: initial;
+}
+
+.ag-cell-focus {
+  outline: none !important;
+  border-color: transparent !important;
+}
+
+.ag-picker-field-wrapper {
+  min-height: max(var(--ag-list-item-height), calc(var(--ag-spacing)* 3));
+}
+
+.ag-horizontal-left-spacer {
+  width: 0 !important;
+  max-width: 0 !important;
+  min-width: 0 !important;
+}
+
+.ag-filter-form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0 5px 5px 5px;
+
+  fd-scrollbar {
+    flex-grow: 1;
+  }
+
+  .form-field {
+    margin-bottom: 1rem;
+
+    &:first-child {
+      margin-top: 1rem;
+    }
+  }
+
+  footer {
+    display: flex;
+    gap: 0.4rem;
+  }
+}
+
+
+.ag-vertical-center {
+  display: flex;
+  align-items: center;
+}
+
+.balance-table {
+  > div:not(:last-child) {
+    border-bottom: dotted 1px var(--bs-border-color);
+  }
+}

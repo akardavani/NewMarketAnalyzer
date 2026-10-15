@@ -1,0 +1,87 @@
+<fd-page-wrapper>
+
+  <form toolbar [formGroup]="formGroup" class="fd-toolbar" (ngSubmit)="submit()">
+    <span>تا تاریخ</span>
+    <date-input formControlName="toDate" />
+    <button type="submit" class="btn btn-primary btn-search">جستجو</button>
+  </form>
+
+  <div class="d-flex flex-column gap-4 p-4">
+    @for(item of commissions; track $index) {
+    <fd-fieldset caption="{{item.title}}">
+      <table class="commissions">
+        <thead>
+          <tr>
+            <th rowspan="2">شرح کارمزد</th>
+            <th colspan="2" class="buy">{{item.isSettlement ? 'اختیار خرید' : 'خرید'}}</th>
+            <th colspan="2" class="sell">{{item.isSettlement ? 'اختیار فروش' : 'فروش'}}</th>
+          </tr>
+
+          <tr>
+            <th class="buy">نرخ کارمزد</th>
+            <th class="buy">حداکثر مبلغ کارمزد</th>
+            <th class="sell">نرخ کارمزد</th>
+            <th class="sell">حداکثر مبلغ کارمزد</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>کارمزد کارگزار</td>
+            <td class="buy">{{item.buyCommissions.broker}}</td>
+            <td class="buy">{{item.buyCommissions.brokerMax | separator}}</td>
+            <td class="sell">{{item.sellCommissions.broker}}</td>
+            <td class="sell">{{item.sellCommissions.brokerMax | separator}}</td>
+          </tr>
+          <tr>
+            <td>کارمزد بورس</td>
+            <td class="buy">{{item.buyCommissions.bourse}}</td>
+            <td class="buy">{{item.buyCommissions.bourseMax | separator}}</td>
+            <td class="sell">{{item.sellCommissions.bourse}}</td>
+            <td class="sell">{{item.sellCommissions.bourseMax | separator}}</td>
+          </tr>
+          <tr>
+            <td>کارمزد سپرده گذاری</td>
+            <td class="buy">{{item.buyCommissions.csd}}</td>
+            <td class="buy">{{item.buyCommissions.csdMax | separator}}</td>
+            <td class="sell">{{item.sellCommissions.csd}}</td>
+            <td class="sell">{{item.sellCommissions.csdMax | separator}}</td>
+          </tr>
+          <tr>
+            <td>کارمزد مدیریت فناوری</td>
+            <td class="buy">{{item.buyCommissions.tsetmc}}</td>
+            <td class="buy">{{item.buyCommissions.tsetmcMax | separator}}</td>
+            <td class="sell">{{item.sellCommissions.tsetmc}}</td>
+            <td class="sell">{{item.sellCommissions.tsetmcMax | separator}}</td>
+          </tr>
+          <tr>
+            <td>کارمزد حق نظارت سازمان</td>
+            <td class="buy">{{item.buyCommissions.seo}}</td>
+            <td class="buy">{{item.buyCommissions.seoMax | separator}}</td>
+            <td class="sell">{{item.sellCommissions.seo}}</td>
+            <td class="sell">{{item.sellCommissions.seoMax | separator}}</td>
+          </tr>
+          <tr>
+            <td>مالیات</td>
+            <td class="buy">{{item.buyCommissions.tax}}</td>
+            <td class="buy">{{item.buyCommissions.taxMax | separator}}</td>
+            <td class="sell">{{item.sellCommissions.tax}}</td>
+            <td class="sell">{{item.sellCommissions.taxMax | separator}}</td>
+          </tr>
+        </tbody>
+
+        <tfoot>
+          <tr>
+            <td>جمع کل</td>
+            <td class="buy">{{item.buyCommissions.total}}</td>
+            <td class="buy">{{item.buyCommissions.totalMax | separator}}</td>
+            <td class="sell">{{item.sellCommissions.total}}</td>
+            <td class="sell">{{item.sellCommissions.totalMax | separator}}</td>
+          </tr>
+        </tfoot>
+      </table>
+    </fd-fieldset>
+    }
+  </div>
+
+</fd-page-wrapper>

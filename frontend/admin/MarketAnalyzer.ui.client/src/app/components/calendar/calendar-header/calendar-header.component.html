@@ -1,0 +1,17 @@
+<div class="calendar-header gap-1">
+  <div class="sections">
+    <div class="d-flex justify-content-start">
+      <!--<button [disabled]="!previousEnabled()" (click)="previousClicked('month')" title="ماه قبلی"><i class="icon next"></i></button>-->
+      <label class="header-label" (click)="showView('year')">{{monthLabel}}</label>
+      <!--<button [disabled]="!nextEnabled()" (click)="nextClicked('month')" title="ماه بعدی"><i class="icon prev"></i></button>-->
+    </div>
+  </div>
+
+  <div class="sections">
+    <div class="d-flex justify-content-end">
+      <button [disabled]="!previousEnabled()" (click)="previousClicked('year')" title="سال قبلی"><i class="icon next"></i></button>
+      <label class="header-label" (click)="showView('multi-year')">{{yearLabel}}</label>
+      <button [disabled]="!nextEnabled()" (click)="nextClicked('year')" title="سال بعدی"><i class="icon prev"></i></button>
+    </div>
+  </div>
+</div>

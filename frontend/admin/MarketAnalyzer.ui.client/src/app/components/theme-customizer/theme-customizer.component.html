@@ -1,0 +1,64 @@
+@if (isOpen()) {
+<div class="scrim" (click)="close()"></div>
+}
+<aside class="panel" [class.open]="isOpen()" role="dialog" aria-label="شخصی‌سازی ظاهر" [attr.aria-hidden]="!isOpen()">
+  <header class="panel-head">
+    <h2>شخصی‌سازی ظاهر</h2>
+    <button type="button" class="icon-btn" (click)="close()" aria-label="بستن">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18" /></svg>
+    </button>
+  </header>
+
+  <div class="panel-body">
+    <section>
+      <h3>حالت نمایش</h3>
+      <div class="segment">
+        @for (o of modes; track o.value) {
+        <button type="button" [class.on]="settings().mode === o.value" (click)="set('mode', o.value)">{{ o.label }}</button>
+        }
+      </div>
+    </section>
+
+    <section>
+      <h3>رنگ برند</h3>
+      <div class="swatches">
+        @for (o of palettes; track o.value) {
+        <button type="button" class="swatch" [attr.data-pal-preview]="o.value" [class.on]="settings().palette === o.value"
+                [attr.title]="o.label" [attr.aria-label]="o.label" [attr.aria-pressed]="settings().palette === o.value"
+                (click)="set('palette', o.value)"></button>
+        }
+      </div>
+    </section>
+
+    <section>
+      <h3>تراکم</h3>
+      <div class="segment">
+        @for (o of densities; track o.value) {
+        <button type="button" [class.on]="settings().density === o.value" (click)="set('density', o.value)">{{ o.label }}</button>
+        }
+      </div>
+    </section>
+
+    <section>
+      <h3>فونت</h3>
+      <div class="segment vertical">
+        @for (o of typefaces; track o.value) {
+        <button type="button" [class.on]="settings().typeface === o.value" (click)="set('typeface', o.value)">{{ o.label }}</button>
+        }
+      </div>
+    </section>
+
+    <section>
+      <h3>رنگ دکمه‌های «ثبت»</h3>
+      <div class="segment">
+        @for (o of submits; track o.value) {
+        <button type="button" [class.on]="settings().submit === o.value" (click)="set('submit', o.value)">{{ o.label }}</button>
+        }
+      </div>
+    </section>
+  </div>
+
+  <footer class="panel-foot">
+    <button type="button" class="btn btn-secondary w-100" (click)="reset()">بازگشت به پیش‌فرض</button>
+  </footer>
+</aside>

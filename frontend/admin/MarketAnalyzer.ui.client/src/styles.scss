@@ -1,0 +1,271 @@
+@import "./styles/base/icons";
+@import "./styles/base/bootstrap";
+@import "./styles/theme/theme";
+@import "./styles/vendor/material";
+@import "./styles/vendor/ag-grid";
+@import "simple-keyboard/build/css/index.css";
+
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../public/fonts/iran-sans/normal.eot");
+  src:
+    url("../public/fonts/iran-sans/normal.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/iran-sans/normal.woff2") format("woff2"),
+    url("../public/fonts/iran-sans/normal.woff") format("woff"),
+    url("../public/fonts/iran-sans/normal.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: bold;
+  src: url("../public/fonts/iran-sans/bold.eot");
+  src:
+    url("../public/fonts/iran-sans/bold.eot?#iefix") format("embedded-opentype"),
+    url("../public/fonts/iran-sans/bold.woff2") format("woff2"),
+    url("../public/fonts/iran-sans/bold.woff") format("woff"),
+    url("../public/fonts/iran-sans/bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: IRANSansFarsi;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../public/fonts/iran-sans-farsi/farsi_normal.eot");
+  src:
+    url("../public/fonts/iran-sans-farsi/farsi_normal.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/iran-sans-farsi/farsi_normal.woff2") format("woff2"),
+    url("../public/fonts/iran-sans-farsi/farsi_normal.woff") format("woff"),
+    url("../public/fonts/iran-sans-farsi/farsi_normal.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: IRANSansFarsi;
+  font-style: normal;
+  font-weight: bold;
+  src: url("../public/fonts/iran-sans-farsi/farsi_bold.eot");
+  src:
+    url("../public/fonts/iran-sans-farsi/farsi_bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/iran-sans-farsi/farsi_bold.woff2") format("woff2"),
+    url("../public/fonts/iran-sans-farsi/farsi_bold.woff") format("woff"),
+    url("../public/fonts/iran-sans-farsi/farsi_bold.ttf") format("truetype");
+}
+
+:root {
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body[data-font="fa"] {
+  font-family: var(--fd-font-sans);
+}
+
+app-root {
+  display: block;
+  height: 100%;
+  position: relative;
+}
+
+router-outlet + * {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.ltr {
+  direction: ltr;
+}
+
+@import "./styles/components/loader";
+
+/**
+  <div class="clearable-input">
+    <input />
+    <button type="button" class="btn-clear" (click)="resetValue()">
+      <i class="btn-icon pa pa-close"></i>
+    </button>
+  </div>
+*/
+.clearable-input {
+  position: relative;
+
+  &:hover {
+    .btn-icon {
+      opacity: 1;
+    }
+  }
+
+  .btn-clear {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 0;
+    transform: translateY(-50%);
+    margin-top: -1px;
+
+    &:focus {
+      outline: none;
+      border: dotted 1px var(--fd-line-strong);
+    }
+  }
+
+  .btn-icon {
+    font-size: 12px;
+    opacity: 0.5;
+    color: var(--fd-text);
+    transition: all 150ms linear;
+  }
+}
+
+.fd-toolbar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 0.5rem;
+  gap: 0.5rem;
+}
+.dom-outlet-container {
+  overflow: hidden;
+  position: absolute;
+  background-color: var(--fd-surface);
+  display: none;
+  top: 0;
+  z-index: 10000000;
+  box-shadow: var(--fd-shadow-pop);
+  border: 1px solid var(--fd-line-strong);
+  border-radius: var(--bs-border-radius);
+
+  &.active {
+    display: block;
+  }
+
+  &:first-child {
+    border-radius: inherit;
+  }
+}
+
+.negative {
+  color: var(--bs-danger);
+}
+
+.loader-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  background-color: color-mix(in srgb, var(--fd-surface) 95%, transparent);
+}
+
+.external-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bs-primary-dark);
+
+  .form {
+    --bg-color: color-mix(in srgb, var(--bs-primary), transparent 10%);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    border-radius: var(--bs-border-radius);
+    backdrop-filter: saturate(180%) blur(7px);
+
+    .form-container {
+      display: grid;
+      width: 400px;
+      background-color: var(--fd-surface);
+      border-radius: var(--bs-border-radius);
+      padding: 20px;
+      gap: 1rem;
+
+      header {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+
+        .broker-logo {
+          height: 80px;
+        }
+      }
+
+      footer {
+        display: flex;
+        color: var(--fd-on-primary);
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: solid 2px var(--bs-border-color);
+
+        .company-logo {
+          width: 48px;
+          height: 48px;
+          background-color: blueviolet;
+        }
+
+        .copyright {
+          font-size: 13px;
+          display: flex;
+          flex-grow: 1;
+          flex-direction: column;
+          padding: 5px;
+          align-items: center;
+          color: var(--fd-text-2);
+        }
+      }
+    }
+
+    .hints {
+      width: 500px;
+      display: flex;
+      flex-direction: column;
+      text-align: justify;
+      margin-right: 20px;
+      color: var(--fd-on-primary);
+    }
+  }
+}
+
+.dash-borderer-table {
+  table-layout: fixed;
+  width: 100%;
+
+  tr:not(:last-child) {
+    border-bottom: dashed 1px var(--bs-border-color);
+  }
+
+  td {
+    padding: 5px;
+
+    &:first-child {
+      width: 350px;
+    }
+  }
+}
+
+.w-33 {
+  width: 33.333333333333%;
+}

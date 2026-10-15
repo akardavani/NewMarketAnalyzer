@@ -1,0 +1,50 @@
+<fd-page-wrapper [showSidebar]="showSidebar">
+  <div toolbar class="d-flex gap-4">
+    <div>
+      <button type="button" class="btn" (click)="toggleSidebar()"><i class="pa-filter"></i></button>
+    </div>
+  </div>
+
+  <form [formGroup]="filter" sidebar class="ag-filter-form" (ngSubmit)="applyFilter()">
+    <fd-scrollbar>
+
+      <div class="form-field">
+        <fd-float-label placeholder="سرمایه گذار">
+          <fd-autocomplete [dataSource]="investorsSource" formControlName="investorId"></fd-autocomplete>
+        </fd-float-label>
+        <span class="input-error-text" errorFor="investorId"></span>
+      </div>
+
+      <div class="form-field">
+        <fd-float-label placeholder="از تاریخ">
+          <date-input formControlName="fromDate" />
+        </fd-float-label>
+      </div>
+
+      <div class="form-field">
+        <fd-float-label placeholder="تا تاریخ">
+          <date-input formControlName="toDate" />
+        </fd-float-label>
+      </div>
+    </fd-scrollbar>
+
+    <footer>
+      <button type="submit" class="btn btn-primary btn-search">جستجو</button>
+      <button type="button" class="btn btn-dark" (click)="resetFilter()">بازنشانی</button>
+    </footer>
+  </form>
+
+  <ag-grid-angular [enableRtl]="true"
+                   [getRowId]="getRowId"
+                   [style.width]="width"
+                   [style.height]="height"
+                   [localeText]="localeText"
+                   [rowModelType]="rowModelType"
+                   [pinnedBottomRowData]="totalRowData"
+                   [autoSizeStrategy]="autoSizeStrategy"
+                   [loadingOverlayComponent]="loadingOverlayComponent"
+                   [paginationPageSizeSelector]="paginationPageSizeSelector"
+                   (gridReady)="onGridReady($event)">
+  </ag-grid-angular>
+
+</fd-page-wrapper>

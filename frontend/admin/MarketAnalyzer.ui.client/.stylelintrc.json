@@ -1,0 +1,12 @@
+{
+  "extends": ["stylelint-config-standard-scss"],
+  "rules": {
+    "color-no-hex": true,
+    "declaration-property-value-disallowed-list": {
+      "/.*/": ["/var\\(--bs-(gray-\\d+|white|black)\\)/"]
+    }
+  },
+  "overrides": [
+    { "files": ["src/styles/theme/**/*.scss", "src/styles/base/variables.scss"], "rules": { "color-no-hex": null } }
+  ]
+}

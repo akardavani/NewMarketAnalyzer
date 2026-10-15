@@ -1,0 +1,34 @@
+// ============================================================================
+// Angular Material — فقط دیالوگ و datepicker استفاده می‌شوند. تم Material (M2) در build «روشن» پخته می‌شود؛
+// این‌جا توکن‌های CSS خودش (نام‌های --mat-* و --mdc-* هر دو، برای نسخه‌های مختلف) به توکن‌های ما وصل می‌شود تا در حالت تیره درست باشد.
+// ============================================================================
+
+:root {
+  --mat-dialog-container-color: var(--fd-surface);
+  --mat-dialog-subhead-color: var(--fd-text);
+  --mat-dialog-supporting-text-color: var(--fd-text-2);
+  --mdc-dialog-container-color: var(--fd-surface);
+  --mdc-dialog-subhead-color: var(--fd-text);
+  --mdc-dialog-supporting-text-color: var(--fd-text-2);
+
+  --mat-datepicker-calendar-container-background-color: var(--fd-surface);
+  --mat-datepicker-calendar-container-text-color: var(--fd-text);
+  --mat-datepicker-calendar-date-text-color: var(--fd-text);
+  --mat-datepicker-calendar-date-outline-color: var(--fd-line);
+  --mat-datepicker-calendar-header-text-color: var(--fd-text-3);
+  --mat-datepicker-calendar-header-divider-color: var(--fd-line);
+  --mat-datepicker-calendar-body-label-text-color: var(--fd-text-2);
+  --mat-datepicker-calendar-period-button-text-color: var(--fd-text);
+  --mat-datepicker-calendar-period-button-icon-color: var(--fd-text-2);
+  --mat-datepicker-calendar-navigation-button-icon-color: var(--fd-text-2);
+  --mat-datepicker-calendar-date-hover-state-background-color: var(--fd-hover);
+  --mat-datepicker-calendar-date-focus-state-background-color: var(--fd-hover);
+  --mat-datepicker-calendar-date-selected-state-background-color: var(--fd-primary);
+  --mat-datepicker-calendar-date-selected-state-text-color: var(--fd-on-primary);
+  --mat-datepicker-calendar-date-today-outline-color: var(--fd-primary-line);
+}
+
+.mat-mdc-dialog-surface {
+  color: var(--fd-text);
+  box-shadow: var(--fd-shadow-pop);
+}

@@ -1,0 +1,33 @@
+.date-picker {
+  width: 260px;
+
+  .mat-calendar-body-label {
+    color: var(--fd-text);
+  }
+
+  .friday-day {
+    .mat-calendar-body-cell-content {
+      color: var(--bs-danger);
+    }
+  }
+
+  .mat-calendar-body-active {
+    .mat-calendar-body-cell-content {
+      color: var(--fd-on-primary);
+      background-color: var(--bs-primary);
+    }
+
+    &:hover {
+      .mat-calendar-body-cell-content {
+        color: var(--fd-on-primary);
+        background-color: var(--bs-primary) !important;
+      }
+    }
+  }
+
+  .mat-calendar-body-today,
+  .mat-calendar-body-today:hover {
+    color: var(--fd-on-primary);
+    background-color: var( --bs-success) !important;
+  }
+}

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <title>PouyaFundUiClient</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script type="text/javascript" src="/env.js"></script>
+  <script>
+    // اعمال تم ذخیره‌شده پیش از اولین رنگ‌آمیزی (جلوگیری از چشمک). منطق اصلی: ThemeService
+    (function () {
+      try {
+        var t = JSON.parse(localStorage.getItem('fd.theme.v1') || '{}');
+        var d = document.documentElement;
+        var dark = t.mode === 'dark' || (t.mode === 'system' && matchMedia('(prefers-color-scheme: dark)').matches);
+        var mode = t.mode ? (dark ? 'dark' : 'light') : 'dark'; /* هم‌راستا با THEME_DEFAULTS.mode */
+        d.dataset.mode = mode;
+        d.setAttribute('data-bs-theme', mode);
+        if (t.palette) d.dataset.palette = t.palette;
+        if (t.density) d.dataset.density = t.density;
+        if (t.typeface) d.dataset.typeface = t.typeface;
+        if (t.submit) d.dataset.submit = t.submit;
+      } catch (e) { }
+    })();
+  </script>
+</head>
+<body class="rtl">
+  <fd-root></fd-root>
+  <div class="app-loader-wrapper">
+    <div class="loader"></div>
+    <div class="waiting-msg">لطفا منتظر باشید...</div>
+  </div>
+  
+</body>
+</html>

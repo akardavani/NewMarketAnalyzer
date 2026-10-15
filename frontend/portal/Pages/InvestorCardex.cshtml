@@ -1,0 +1,145 @@
+@page
+@model InvestorCardexModel
+@{
+    ViewData["Title"] = "کاردکس سرمایه‌گذار";
+}
+
+<div class="container px-0">
+    <div class="d-flex flex-column">
+        <h3 data-type="pre-titles" class="align-self-center">کاردکس سرمایه‌گذار</h3>
+        <div class="alert alert-danger mt-5" asp-validation-summary="ModelOnly"></div>
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-1 w-100">
+            <form method="get">
+                <div class="d-flex justify-content-between align-items-md-end gap-1 w-100">
+                    <div class="row justify-content-start align-items-end mt-2 g-2">
+                        <div class="dates-input col-12 col-md-5 mt-2">
+                            <span>شروع از:</span>
+                            <input data-jdp class="date-input form-control mt-1" type="text" asp-for="FromDate" placeholder="انتخاب تاریخ">
+                        </div>
+                        <div class="dates-input col-12 col-md-5 mt-2">
+                            <span>تا پایان:</span>
+                            <input data-jdp class="date-input form-control mt-1" type="text" asp-for="ToDate" placeholder="انتخاب تاریخ">
+                        </div>
+                        <div class="col-12 col-md-2 mt-2">
+                            <button class="mt-2 search-date-btn" type="submit" data-type="primary-buttons">جستجو</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <form method="post" asp-page-handler="ExportReport">
+                <button class="mt-2 search-date-btn" type="submit" data-type="primary-buttons">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                    </svg>
+                    دانلود گزارش
+                </button>
+            </form>
+        </div>
+        <div class="table-responsive overflow-x-auto">
+            <table class="table table-striped data-table text-center mt-3 mb-2">
+                <thead>
+                    <tr>
+                        <th colspan="15" class="text-center">کاردکس سرمایه‌گذار</th>
+                    </tr>
+                    <tr>
+                        <th>تاریخ درخواست</th>
+                        <th>تاریخ تائید</th>
+                        <th>نوع</th>
+                        <th>وضعیت</th>
+                        <th>وضعیت اجرا</th>
+                        <th>تعداد</th>
+                        <th>ارزش NAV</th>
+                        <th>قیمت کل صدور</th>
+                        <th>قیمت کل ابطال</th>
+                        <th>مانده</th>
+                        <th>میانگین</th>
+                        <th>آورده</th>
+                        <th>قیمت تمام شده واحدهای ابطالی</th>
+                        <th>کارمزد</th>
+                        <th>جریمه</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.InvestorCardexResult is not null)
+                    {
+                        @foreach (var item in Model.CardexRows)
+                        {
+                            <tr>
+                                <td>@item.RequestDate.ToPersian()</td>
+                                <td>@item.ExcecutedDate.ToPersian()</td>
+                                <td>@item.RequestType</td>
+                                <td>@item.State</td>
+                                <td>@item.Executed</td>
+                                <td>@item.Quantity.ToString("##,0")</td>
+                                <td>@item.Nav.ToString("##,0")</td>
+                                <td>@item.TotalIssuancePrice.ToString("##,0")</td>
+                                <td>@item.TotalCancellationPrice.ToString("##,0")</td>
+                                <td>@item.Remain.ToString("##,0")</td>
+                                <td>@item.Average.ToString("##,0")</td>
+                                <td>@item.Income.ToString("##,0")</td>
+                                <td>@item.CancelledUnitsCost.ToString("##,0")</td>
+                                <td>@item.FixedFee.ToString("##,0")</td>
+                                <td>@item.CancellationPenalty.ToString("##,0")</td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+                <tfoot>
+                    <tr class="d-none d-md-table-row">
+                        <td colspan="1">جمع</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>@Model.InvestorCardexResult?.SumTotalIssuancePrice.ToString("##,0")</td>
+                        <td>@Model.InvestorCardexResult?.SumTotalCancellationPrice.ToString("##,0")</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>@Model.InvestorCardexResult?.SumCancelledUnitsCost.ToString("##,0")</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="table-responsive overflow-x-auto mt-5">
+            <table class="table table-striped data-table text-center mt-3 mb-2">
+                <thead>
+                    <tr>
+                        <th colspan="9">وضعیت موجودی و ارزش واحدهای نزد سرمایه&zwnj;گذار</th>
+                    </tr>
+                    <tr>
+                        <th>تعداد واحد</th>
+                        <th>آخرین نرخ NAV ابطال</th>
+                        <th>ارزش کل واحدها</th>
+                        <th>بدهکاری/بستانکاری</th>
+                        <th>سود(زیان) واحدهای موجود</th>
+                        <th>سود(زیان) واحدهای ابطال شده</th>
+                        <th>سود اعمال شده صندوق</th>
+                        <th>سود و زیان کل</th>
+                        <th>درصد بازدهی</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>@Model.InvestorCardexResult?.Count.ToString("##,0")</td>
+                        <td>@Model.InvestorCardexResult?.LastNav.ToString("##,0")</td>
+                        <td>-</td>
+                        <td>@Model.InvestorCardexResult?.DebitCredit.ToString("##,0")</td>
+                        <td>
+                            <span class="@(Model.InvestorCardexResult?.AvailableUnitsProfitLoss >= 0 ? "" : "negative")">@Model.InvestorCardexResult?.AvailableUnitsProfitLoss.ToString("##,0")</span>
+                        </td>
+                        <td><span class="@(Model.InvestorCardexResult?.CancelledUnitsProfitLoss >= 0 ? "" : "negative")">@Model.InvestorCardexResult?.CancelledUnitsProfitLoss.ToString("##,0")</span></td>
+                        <td>@Model.InvestorCardexResult?.FundAppliedProfit.ToString("##,0")</td>
+                        <td><span class="@(Model.InvestorCardexResult?.TotalProfitLoss >= 0 ? "" : "negative")">@Model.InvestorCardexResult?.TotalProfitLoss.ToString("##,0")</span></td>
+                        <td>@Model.InvestorCardexResult?.Return</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

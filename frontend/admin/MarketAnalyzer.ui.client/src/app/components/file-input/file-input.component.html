@@ -1,0 +1,10 @@
+<span [title]="_tooltip">{{_caption || placeholder}}</span>
+
+<input #inputFile
+       type="file"
+       floatLabelInput
+       placeholder="placeholder"
+       [disabled]="disabled"
+       [accept]="accept"
+       [multiple]="multiple"
+       (change)="_inputChange($event)" />

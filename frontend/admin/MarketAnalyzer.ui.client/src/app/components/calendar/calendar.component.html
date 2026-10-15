@@ -1,0 +1,12 @@
+<mat-calendar
+  #calendar
+  [minDate]="minDate"
+  [maxDate]="maxDate"
+  [headerComponent]="header"
+  [dateClass]="dateClassSelector"
+  (selectedChange)="onSelect($event)"
+></mat-calendar>
+
+<button class="btn btn-primary d-block" (click)="goToday()">
+  برو به امروز
+</button>

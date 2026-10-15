@@ -1,0 +1,30 @@
+<form class="dialog-warpper">
+  <div class="dialog-header">
+    <div class="dialog-title">پیام ها</div>
+
+    <div class="btn-close" (click)="close()">
+      <i class="pa-close"></i>
+    </div>
+  </div>
+
+  <div class="dialog-body p-3">
+    <div class="notification-list">
+      @if (userAlert.length) {
+      @for (item of userAlert; track item.id) {
+      <article class="notification-item">
+        <span class="dot"></span>
+        <div class="notification-content">
+          <h5 class="title">{{ item.title }}</h5>
+          <p class="message">{{ item.message }}</p>
+        </div>
+      </article>
+      }
+      } @else {
+      <div class="empty-state">
+        <i class="pa-bell-off"></i>
+        <p>پیامی برای نمایش وجود ندارد</p>
+      </div>
+      }
+    </div>
+  </div>
+</form>

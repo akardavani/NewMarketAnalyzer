@@ -1,0 +1,99 @@
+<fd-page-wrapper [showSidebar]="showSidebar">
+  <div toolbar class="d-flex gap-1">
+    <button type="button" class="btn" (click)="toggleSidebar()"><i class="pa-filter"></i></button>
+    <button type="button" class="btn" (click)="exportReport(1)"><i class="pa pa-pdf"></i></button>
+    <button type="button" class="btn" (click)="exportReport(2)"><i class="pa pa-excel"></i></button>
+    <button type="button" class="btn btn-warning" (click)="create()">ثبت دستی معامله</button>
+    <button type="button" class="btn btn-danger" [disabled]="!deleteSelections.length" (click)="remove()">حذف معاملات انتخاب شده</button>
+  </div>
+
+  <form [formGroup]="filter" sidebar class="ag-filter-form" (ngSubmit)="applyFilter()">
+    <fd-scrollbar>
+
+      <div class="form-field">
+        <fd-float-label placeholder="نماد">
+          <fd-autocomplete [dataSource]="instrumentSources" formControlName="instrumentId"></fd-autocomplete>
+        </fd-float-label>
+      </div>
+
+      <fd-float-label class="form-field" placeholder="نوع معامله">
+        <fd-drop-down formControlName="orderSide">
+          <fd-option [value]="null">همه</fd-option>
+          @for(item of orderSides; track $index) {
+          <fd-option [value]="item.value">{{item.text}}</fd-option>
+          }
+        </fd-drop-down>
+      </fd-float-label>
+
+      <fd-float-label class="form-field" placeholder="منشأ معامله">
+        <fd-drop-down formControlName="tradeOrigin">
+          <fd-option [value]="null">همه</fd-option>
+          @for(item of (tradeOrigins | async); track $index) {
+          <fd-option [value]="item.value">{{item.text}}</fd-option>
+          }
+        </fd-drop-down>
+      </fd-float-label>
+
+      <fd-float-label class="form-field" placeholder="نوع نماد">
+        <fd-drop-down formControlName="instrumentTypeCategory">
+          <fd-option [value]="null">همه</fd-option>
+          @for(item of instrumentCategories; track $index) {
+          <fd-option [value]="item.value">{{item.text}}</fd-option>
+          }
+        </fd-drop-down>
+      </fd-float-label>
+
+      <fd-float-label class="form-field" placeholder="از تاریخ">
+        <date-input formControlName="fromDate" />
+      </fd-float-label>
+
+      <fd-float-label class="form-field" placeholder="تا تاریخ">
+        <date-input formControlName="toDate" />
+      </fd-float-label>
+
+      <div class="form-field">
+        <fd-float-label placeholder="محل اعتبار">
+          <fd-drop-down formControlName="settlementAccountType">
+            <fd-option [value]="null">همه</fd-option>
+            @for(item of settlementAccountTypes; track $index) {
+            <fd-option [value]="item.value">{{item.text}}</fd-option>
+            }
+          </fd-drop-down>
+        </fd-float-label>
+      </div>
+
+      @if(renderBrokers) {
+      <div class="form-field">
+        <fd-float-label placeholder="کارگزار">
+          <fd-drop-down formControlName="brokerId">
+            <fd-option [value]="null">همه</fd-option>
+            @for(item of (brokers | async); track $index) {
+            <fd-option [value]="item.value">{{item.text}}</fd-option>
+            }
+          </fd-drop-down>
+        </fd-float-label>
+      </div>
+      }
+
+    </fd-scrollbar>
+
+    <footer>
+      <button type="submit" class="btn btn-primary btn-search">جستجو</button>
+      <button type="button" class="btn btn-dark" (click)="resetFilter()">بازنشانی</button>
+    </footer>
+  </form>
+
+  <ag-grid-angular [enableRtl]="true"
+                   [getRowId]="getRowId"
+                   [style.width]="width"
+                   [style.height]="height"
+                   [localeText]="localeText"
+                   [rowModelType]="rowModelType"
+                   [pinnedBottomRowData]="totalRowData"
+                   [autoSizeStrategy]="autoSizeStrategy"
+                   [loadingOverlayComponent]="loadingOverlayComponent"
+                   [paginationPageSizeSelector]="paginationPageSizeSelector"
+                   (gridReady)="onGridReady($event)">
+  </ag-grid-angular>
+
+</fd-page-wrapper>

@@ -1,0 +1,1398 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+/* ***Fonts*** */
+
+@font-face {
+  font-family: IRANSansFarsi;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/iran-sans-farsi/farsi_normal.eot");
+  src: url("../fonts/iran-sans-farsi/farsi_normal.eot") format("embedded-opentype"), url("../fonts/iran-sans-farsi/farsi_normal.woff2") format("woff2"), url("../fonts/iran-sans-farsi/farsi_normal.woff") format("woff"), url("../fonts/iran-sans-farsi/farsi_normal.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: IRANSansFarsi;
+  font-style: normal;
+  font-weight: bold;
+  src: url('../fonts/iran-sans-farsi/farsi_bold.eot');
+  src: url('../fonts/iran-sans-farsi/farsi_bold.eot?#iefix') format('embedded-opentype'), url('../fonts/iran-sans-farsi/farsi_bold.woff2') format('woff2'), url('../fonts/iran-sans-farsi/farsi_bold.woff') format('woff'), url('../fonts/iran-sans-farsi/farsi_bold.ttf') format('truetype');
+}
+
+/* *Texts* */
+
+[data-type='main-titles'] {
+  font-size: 2rem;
+  font-weight: bold;
+  color: $primary-color;
+  margin: 3.5rem 0;
+  text-align: center;
+  max-width: 90vw;
+}
+
+[data-type='main-titles-light'] {
+  font-size: 2rem;
+  font-weight: bold;
+  color: $main-background;
+  margin: 3.5rem 0;
+  text-align: center;
+  max-width: 90vw;
+}
+
+[data-type='pre-titles'] {
+  font-size: 20px;
+  font-weight: bold;
+  color: $primary-color;
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+  width: fit-content;
+}
+
+[data-type='small-text'] {
+  font-size: 14px;
+  color: $text-color;
+  margin: 0;
+}
+
+/* *Links* */
+
+[data-type='hyper-link'] {
+  color: $primary-color;
+}
+
+[data-type='hyper-link']:hover {
+  color: $secondary-color;
+}
+
+/* *Buttons* */
+
+[data-type='primary-buttons'] {
+  font-size: 16px;
+  background-color: $primary-color;
+  color: white;
+  border-radius: $medium-radius;
+  padding: 0.5rem 1rem;
+  border: none;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+}
+
+[data-type='primary-buttons']:hover {
+  background-color: $secondary-color;
+}
+
+/* *Global* */
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: IRANSansFarsi;
+}
+
+body {
+  direction: rtl;
+  font-size: 14px;
+}
+
+::-moz-selection {
+  background: $light-blue; /* for Firefox */
+}
+
+::selection {
+  background: $light-blue;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a.hyper-link {
+  color: $secondary-color;
+}
+
+a.hyper-link:hover {
+  text-decoration: underline;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.text-right {
+  text-align: right;
+}
+
+.large-circle {
+  @include largeCircle($primary-color);
+}
+
+.small-circle {
+  @include smallCircle($primary-color);
+}
+
+.inline-icon {
+  margin-left: 10px;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  width: 80px;
+  color: white;
+  font-size: 12px;
+  background-color: $text-color;
+  opacity: 0.95;
+  border-radius: 10px;
+  padding: 10px 20px;
+  top: -40px;
+  left: -40%;
+}
+
+.hover-text:hover .tooltip-text {
+  visibility: visible;
+}
+
+.hover-text {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  padding: 5px;
+  background: $light-primary-color;
+  color: $main-background;
+  border-radius: $medium-radius;
+}
+
+.input-validation-alert {
+  color: #dc3545;
+  text-align: right;
+  font-size: 14px;
+  margin: 4px;
+}
+
+.negative {
+  color: $negative-color;
+}
+
+/* Fund Info Styles */
+.fund-info-section {
+  font-size: 12px;
+  background: $background-color;
+  color: $primary-color;
+}
+
+h1 {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Navbar Styles */
+
+.header {
+  background-color: $main-background;
+  box-shadow: $shadow-small;
+  width: 100%;
+  height: 75px;
+  padding: 10px 15px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  margin: auto 0;
+}
+
+img.logo {
+  width: 95px;
+}
+
+.header-main .menu > .menu-item > a {
+  display: block;
+  padding: 12px 0;
+  color: $primary-color;
+  font-weight: bold;
+  transition: $animation-ease;
+}
+
+.header-main .menu > .menu-item > a .arrow {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  position: relative;
+  margin-right: 5px;
+  pointer-events: none;
+  transition: $animation-ease;
+}
+
+.header-main .menu > .menu-item:hover > a,
+.header-main .menu > .menu-item:hover > a .arrow {
+  color: $secondary-color;
+}
+
+
+.header-main .menu > .menu-item > .sub-menu > li {
+  padding: 5px 10px;
+  margin: 10px;
+}
+
+
+.header-main .menu > .menu-item > .sub-menu > li:hover {
+  color: $secondary-color;
+  transition: $animation-ease;
+  background-color: $background-color;
+  border-radius: $medium-radius;
+}
+
+a.sub-menu-item {
+  color: $main-background;
+  width: 100%;
+  padding: 5px 10px;
+}
+
+.header-main .menu > .menu-item > .sub-menu > li:hover > a.sub-menu-item {
+  color: $secondary-color;
+}
+
+.header .open-nav-menu {
+  height: 34px;
+  width: 40px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: $primary-color;
+}
+
+.header .open-nav-menu span {
+  display: block;
+  height: 3px;
+  width: 24px;
+  background-color: $primary-color;
+  position: relative;
+}
+
+.header .open-nav-menu span:before,
+.header .open-nav-menu span:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $primary-color;
+  box-sizing: border-box;
+}
+
+.header .open-nav-menu span:before {
+  top: -7px;
+}
+
+.header .open-nav-menu span:after {
+  top: 7px;
+}
+
+.header .close-nav-menu {
+  height: 30px;
+  width: 30px;
+  background-color: $main-background;
+  color: $secondary-color;
+  margin: 15px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: $small-radius;
+}
+
+.header .menu-overlay {
+  position: fixed;
+  z-index: 999;
+  background-color: rgba(0,0,0,0.5);
+  top: 0;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+  transition: $animation-ease;
+}
+
+.header .menu-overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.header .nav-menu.open {
+  visibility: visible;
+  right: 0px;
+}
+
+.header .menu > .menu-item {
+  display: block;
+  margin: 0;
+}
+
+.header .menu > .menu-item-has-children > a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .menu > .menu-item > a {
+  color: $main-background;
+  padding: 12px 15px;
+}
+
+.header .menu > .menu-item:first-child > a {
+  border-top: 1px solid $main-background;
+}
+
+.header .menu > .menu-item > a .arrow {
+  color: $main-background;
+}
+
+.header .menu > .menu-item-has-children.active > a .arrow {
+  color: $secondary-color;
+  transform: rotate(180deg);
+}
+
+.header-main > .username-section > .user-name {
+  background-color: $main-background;
+  border: none;
+  color: $primary-color;
+  font-weight: bold;
+
+  svg {
+    border: 1px solid $primary-color;
+    border-radius: 50px;
+    padding: 2px;
+  }
+}
+
+.header-main > .username-section:hover > .user-name {
+  color: $secondary-color;
+  background-color: $background-color;
+  border-radius: $medium-radius;
+
+  svg {
+    border-color: $secondary-color;
+  }
+}
+
+
+.header-main > .username-section > .user-list {
+  box-shadow: $shadow-small;
+  background-color: $main-background;
+  width: 250px;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 0 0 $medium-radius $medium-radius;
+  border-top: 3px solid $secondary-color;
+  text-align: right;
+  position: absolute;
+  right: 0;
+}
+
+.header-main > .username-section:hover > div.dropdown-menu {
+  display: block;
+  position: absolute;
+  right: -70%;
+}
+
+.dropdown-item {
+  color: $primary-color;
+  padding: 2px 10px;
+}
+
+.dropdown-item:hover {
+  color: $secondary-color;
+  background-color: $background-color;
+  border-radius: $medium-radius;
+}
+
+
+/* Carsoul Section Styles */
+
+.carousel-inner > .carousel-item > img {
+  height: 400px;
+}
+
+/* User's Service Navigation */
+
+.service-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  justify-content: center;
+  font-weight: bold;
+
+  a {
+    color: $primary-color;
+  }
+
+  a > div {
+    outline: 6px solid $background-color;
+    padding: 30px;
+    margin-bottom: 20px;
+
+    img {
+      height: 5rem;
+      width: 5rem;
+      margin-bottom: 2px;
+    }
+  }
+}
+
+.service-nav-item:hover {
+
+  div {
+    outline: 12px solid $secondary-color;
+    transition: $animation-ease;
+    color: $primary-color;
+  }
+
+  a {
+    color: $secondary-color;
+    cursor: pointer;
+  }
+}
+
+/* Statistical Section Styles */
+
+.same-width {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.toggle-buttons {
+  width: fit-content;
+}
+
+.toggle-buttons > .nav-pills {
+  background-color: $primary-color;
+  border-radius: $medium-radius;
+}
+
+.same-width.toggle-buttons > .nav-pills {
+  background-color: $primary-color;
+  border-radius: $medium-radius $medium-radius 0 0;
+}
+
+.toggle-buttons > .nav-pills > .nav-item > .nav-link {
+  color: $main-background;
+  padding: 5px 6px;
+}
+
+.toggle-buttons > .nav-pills > .nav-item > .nav-link.active {
+  background: $main-background;
+  color: $primary-color;
+  transition: $animation-ease;
+}
+
+.toggle-buttons > .nav-pills > .nav-item > .nav-link:hover {
+  color: $secondary-color;
+}
+
+.statistics {
+  border: 1px solid $primary-color;
+  background: $primary-color;
+  border-radius: $medium-radius;
+}
+
+.statistic-box {
+  border: 1px solid $background-color;
+  background: $main-background;
+  text-align: center;
+  padding: 20px;
+  border-radius: $medium-radius;
+  color: $primary-color;
+}
+
+.statistic-box > p {
+  margin: 5px 0;
+}
+
+.statistic-title {
+  font-weight: bold;
+}
+
+/* NAV chart */
+
+.nav-chart-section {
+  background-image: url(/images/background-pattern.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px;
+
+  > div {
+    background: $main-background;
+    border-radius: $medium-radius;
+    padding: 10px;
+  }
+}
+
+.chart-gist {
+  color: $primary-color;
+}
+
+.chart-gist > svg {
+  color: $secondary-color;
+}
+
+.chart-gist > span {
+  font-size: 18px;
+}
+
+.charts {
+  background-color: $background-color;
+  border-radius: $medium-radius;
+  margin: 10px;
+}
+
+.chart-info {
+  margin: 0;
+}
+
+.charts > div {
+  height: 260px;
+}
+
+/* Asset Composition Charts */
+
+.asset-composition-section > div {
+  border-radius: $medium-radius;
+}
+
+.five-shares > div > p {
+  color: $primary-color;
+  border-radius: $medium-radius;
+}
+
+/* Calculator */
+
+.calculator-section {
+  background-image: url(/images/background-pattern.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.calculator-section > h2 {
+  margin-bottom: 10px;
+}
+
+.calculator-section > p {
+  margin-bottom: 3.5rem;
+}
+
+.calculator-container {
+  padding-bottom: 48px;
+}
+
+.calculator-container > .container > .row {
+  padding: 48px;
+}
+
+.calculator-container > .container {
+  background: $background-color;
+  border-radius: $medium-radius;
+}
+
+.calculator-inputs {
+  background: $main-background;
+  border-radius: $medium-radius;
+  color: $primary-color;
+}
+
+.input-group > input {
+  border: 1px solid $primary-color;
+}
+
+.input-group > input:focus {
+  box-shadow: 3px 3px 3px rgba(50, 50, 50, 0.30);
+}
+
+.input-group-text {
+  border: 1px solid $primary-color;
+  background: $main-background;
+}
+
+.date-input {
+  border: 1px solid $primary-color;
+  background: $main-background;
+}
+
+input.date-input:focus {
+  box-shadow: 3px 3px 3px rgba(50, 50, 50, 0.30);
+}
+
+.investment-result-output {
+  font-size: 20px;
+  color: $primary-color;
+}
+
+.investment-result-output > .final-amount {
+  color: $primary-color;
+  font-size: 16px;
+}
+
+.investment-result-output > .final-amount > span {
+  color: $secondary-color;
+  font-size: 36px;
+}
+
+.profit-output {
+  color: $primary-color;
+}
+
+/* Footer */
+
+footer {
+  width: 100%;
+  color: $main-background;
+  margin-top: auto;
+}
+
+.footer-section {
+  box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.10);
+}
+
+.footer-logo {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.brokerage-info > li {
+  color: $text-color;
+  margin: 10px 0;
+}
+
+.brokerage-info > li > a {
+  color: $text-color;
+}
+
+.brokerage-info > li > a:hover {
+  color: $secondary-color;
+}
+
+
+.footer-navigation-item > span {
+  color: $primary-color;
+  font-weight: bold;
+}
+
+.footer-navigation-item > ul > li {
+  margin: 10px 0;
+}
+
+.footer-navigation-item > ul {
+  margin: 20px 0;
+}
+
+a.footer-menu-item {
+  color: $text-color;
+  margin: 10px;
+}
+
+a.footer-menu-item:hover {
+  color: $secondary-color;
+}
+
+.footer-icons > a > svg {
+  color: $text-color;
+  fill: $text-color;
+}
+
+.footer-icons > a:hover > svg {
+  color: $secondary-color;
+  fill: $secondary-color !important;
+}
+
+/* Copy rights */
+
+.footer-copyrights {
+  font-size: 12px;
+  background-color: $background-color;
+  height: fit-content;
+}
+
+.footer-copyrights > div > a {
+  color: $primary-color;
+  transition: $animation-ease;
+}
+
+.footer-copyrights > div > a:hover {
+  color: $secondary-color;
+}
+
+/* Sign up, Login & Manage Password */
+
+.signup-section {
+  border-radius: $medium-radius;
+}
+
+.regestration-form > form > .form-fields {
+  width: 100%;
+}
+
+.form-fields > .field {
+  margin: 60px 0;
+  display: flex;
+  position: relative;
+  height: 48px;
+}
+
+.regestration-form > form > .form-fields > .field > .label {
+  position: absolute;
+  top: -30px;
+  font-weight: 500;
+  color: $text-color;
+}
+
+.field > .input-container > input {
+  height: 100%;
+  width: 100%;
+  border: 1px solid $light-gray;
+  outline: none;
+  border-radius: $small-radius;
+  padding: 10px;
+}
+
+.field > .input-container > select {
+  height: 100%;
+  width: 100%;
+  border: 1px solid $light-gray;
+  outline: none;
+  border-radius: $small-radius;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #808080;
+}
+
+.field > .input-container > input:focus,
+.field > .input-container > select:focus {
+  box-shadow: 3px 3px 3px rgba(50, 50, 50, 0.30);
+}
+
+.field > .input-container > select:focus > option:hover {
+  background-color: $primary-color !important;
+  color: $main-background;
+}
+
+.field > .password-container,
+.field > .otp-container {
+  position: relative;
+}
+
+.field > .password-container > .eye-icon {
+  position: absolute;
+  top: 28%;
+  left: 4%;
+  cursor: pointer;
+  color: #808080;
+}
+
+.field > .otp-container > .otp-timer {
+  position: absolute;
+  top: 28%;
+  left: 4%;
+  color: #808080;
+  font-size: 14px;
+}
+
+.field > .otp-container > .resend-otp-link {
+  font-size: 14px;
+  color: $primary-color;
+  cursor: pointer;
+  position: absolute;
+  top: 28%;
+  left: 4%;
+}
+
+.field > .otp-container > .resend-otp-link:hover {
+  color: $secondary-color;
+}
+
+
+.field > .captcha-field {
+  border: 1px solid $light-gray;
+}
+
+.field > .captcha-field > .row > .input-container > input {
+  border: none;
+  outline: none;
+  max-width: 75px;
+}
+
+
+
+.field > .captcha-field:focus {
+  box-shadow: 3px 3px 3px rgba(50, 50, 50, 0.30);
+}
+
+form > .form-fields > .field > a {
+  width: 100%;
+  height: calc(100% + 5px);
+  border: none;
+  background: $primary-color;
+  margin-top: -20px;
+  border-radius: $medium-radius;
+  color: $main-background;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.5s ease;
+}
+
+form > .form-fields > .field > a:hover {
+  background: $secondary-color;
+}
+
+.captcha-image > img,
+.captcha-image {
+  height: 48px;
+  width: 180px;
+}
+
+.field > .captcha-field {
+  border-radius: $small-radius;
+
+  > .row > .refresh-captcha {
+    margin: 0 auto;
+    border-right: 1px solid $light-gray;
+    max-width: 18px;
+  }
+}
+
+.refresh-captcha > .change-captcha > svg {
+  color: $primary-color;
+}
+
+.refresh-captcha > .change-captcha > svg:hover {
+  color: $secondary-color;
+  cursor: pointer;
+}
+
+.registration-left-col {
+  background: $primary-color;
+  color: $main-background;
+}
+
+.security-tips-list {
+  text-align: justify;
+  list-style: none;
+  font-size: 14px;
+  white-space: normal;
+}
+
+.security-tips-list > li::before {
+  content: "\2022";
+  color: $main-background;
+  font-weight: bold;
+  font-size: 18px;
+  display: inline-block;
+  width: 1em;
+  margin-left: -0.2rem;
+  vertical-align: top;
+}
+
+.halftone-content {
+  opacity: 0.5;
+  background: repeating-conic-gradient( #0000 0% 50%, #0008 0% 50% );
+  pointer-events: none;
+}
+
+.confirmCheckbox {
+  accent-color: $primary-color;
+}
+
+/* Fund Objectives */
+
+h3[data-type='pre-titles'] {
+  border-bottom: 2px solid $primary-color;
+  padding: 10px 20px;
+}
+
+.pre-text {
+  text-align: justify;
+  color: $text-color;
+}
+
+
+.data-table > thead > tr {
+  th {
+    color: $main-background;
+    background-color: $primary-color;
+    vertical-align: middle;
+    border: 1px solid $main-background;
+  }
+}
+
+/*Fund Charter*/
+
+.download-card {
+  border: 1px solid $primary-color;
+  border-radius: 15px;
+
+  .row > .col-3 {
+    background-color: $primary-color;
+    border-radius: 0 10px 10px 0;
+    color: $main-background;
+  }
+
+  .row > .col-9 {
+    color: $text-color;
+  }
+}
+
+.download-card:hover {
+  box-shadow: 3px 3px 3px rgba(50, 50, 50, 0.30);
+
+  > div > div > svg {
+    color: $secondary-color;
+  }
+}
+
+/* Investment Guid */
+
+.guid-card {
+  border: 1px solid $primary-color;
+  border-radius: 15px;
+
+  .row > .col-2 {
+    background-color: $primary-color;
+    border-radius: 0 10px 10px 0;
+    color: $main-background;
+  }
+
+  .row > .col-10 {
+    color: $text-color;
+  }
+}
+
+.request-guid > li {
+  border: 1px solid $primary-color;
+  border-radius: 15px;
+  padding: 10px;
+
+  h4 {
+    color: $primary-color;
+    font-weight: bold;
+    font-size: 16px;
+  }
+}
+/* Fund Meetings */
+
+.search-box > input {
+  border: 1px solid $primary-color;
+  outline: none;
+  border-radius: $small-radius;
+  padding: 5px;
+}
+
+.search-box > input:focus {
+  box-shadow: 3px 3px 3px rgba(50, 50, 50, 0.30);
+}
+
+/* Table pagination */
+
+.table-pagination > ul > li > a {
+  color: $primary-color;
+
+  :hover {
+    color: $secondary-color;
+  }
+}
+
+.table-pagination > ul > li:hover > a,
+.table-pagination > ul > li > a:focus {
+  color: $secondary-color;
+  box-shadow: none;
+}
+
+.table-pagination > ul > li.active > a {
+  background-color: $primary-color;
+  border-color: $primary-color;
+  color: $main-background;
+  box-shadow: none;
+}
+
+/* Contact Us */
+
+.contact-info {
+  background-color: $primary-color;
+  color: $main-background;
+  border-radius: $medium-radius;
+}
+
+.contact-info-item > .text > p > a {
+  color: $main-background;
+}
+
+.contact-info-item > .text > p > a:hover {
+  color: $secondary-color;
+}
+
+.contact-wrap, .contact-us-row {
+  border-radius: $medium-radius;
+}
+
+.contact-input {
+  height: 100%;
+  width: 100%;
+  border: 1px solid $light-gray;
+  outline: none;
+  border-radius: $small-radius;
+  padding: 10px;
+}
+
+.contact-input:focus {
+  box-shadow: 3px 3px 3px rgba(50, 50, 50, 0.30);
+  border: 1px solid $light-gray;
+}
+
+.social-media,
+.support-center {
+  background-color: $light-primary-color;
+}
+
+.social-media > div > a > svg,
+.support-center > a {
+  color: $main-background;
+
+  svg {
+    color: $main-background;
+    fill: $main-background;
+    margin: 0 4px;
+  }
+}
+
+.social-media > div > a:hover > svg,
+.support-center > a:hover > svg,
+.support-center > a:hover {
+  color: $secondary-color;
+  fill: $secondary-color;
+}
+
+.refresh-center {
+  text-align: center;
+}
+
+/* Issuance/Cancel Request */
+
+.issuance-request,
+.cancel-request {
+  border-radius: 10px;
+  padding: 48px;
+}
+
+.request-form-label {
+  border: 1px solid $primary-color;
+  border-radius: 0 $medium-radius $medium-radius 0;
+  padding: 5px 10px;
+  background-color: $primary-color;
+  color: $main-background;
+  width: 11.5rem;
+  text-align: right;
+}
+
+.request-form-input,
+.request-form-input:focus {
+  border: 1px solid $primary-color;
+  padding: 0px 10px;
+  border-radius: $medium-radius 0 0 $medium-radius !important;
+}
+
+.request-description,
+.request-captcha {
+  border: $thin-border;
+  border-radius: $medium-radius;
+}
+
+/* Issuance Request Result */
+
+.issuance-request-result.successed {
+  svg {
+    border: $primary-color;
+    fill: $primary-color;
+  }
+
+  strong {
+    color: $primary-color;
+  }
+}
+
+.issuance-request-result.failed {
+  svg {
+    border: $negative-color;
+    fill: $negative-color;
+  }
+
+  strong {
+    color: $negative-color;
+  }
+}
+/* Profile */
+.input-box {
+  margin: 15px 0;
+
+  .input-box-label {
+    margin-bottom: 4px;
+    font-weight: bold;
+  }
+
+  .input-box-text {
+    width: 100%;
+    border: 1px solid $light-gray;
+    outline: none;
+    border-radius: $medium-radius;
+    background: $light-gray;
+    padding: 10px;
+    margin: 0;
+  }
+}
+
+.input-box > .input-box-text:focus {
+  box-shadow: 3px 3px 3px rgba(50, 50, 50, 0.10);
+}
+
+.table-striped.data-table {
+  font-size: 14px;
+
+  tr:first-child th:first-child {
+    border-top-right-radius: $medium-radius;
+  }
+}
+
+
+.table-striped.data-table tr:first-child th:last-child {
+  border-top-left-radius: $medium-radius;
+}
+
+/* responsive */
+
+@media(min-width: 1200px) {
+
+  body {
+    font-size: 16px;
+  }
+
+  .header-main {
+    padding: 10px 40px;
+  }
+
+  img.logo {
+    width: 130px;
+  }
+
+  .header .menu > .menu-item {
+    display: inline-block;
+    margin-left: 0.15rem;
+    position: relative;
+    background-clip: padding-box;
+  }
+
+  .header .menu > .menu-item-has-children:hover > .sub-menu {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    z-index: 1000;
+  }
+
+  .header-main .menu > .menu-item:hover > a .arrow {
+    color: $secondary-color;
+    transform: rotate(180deg);
+  }
+
+  a.sub-menu-item {
+    color: $primary-color;
+    margin: 0;
+  }
+
+  .header .menu > .menu-item > a {
+    color: $primary-color;
+    padding: 12px 15px;
+  }
+
+  .header .menu > .menu-item > a .arrow {
+    color: $primary-color;
+  }
+
+  .header .menu > .menu-item > .sub-menu {
+    box-shadow: $shadow-small;
+    background-color: $main-background;
+    width: 280px;
+    position: absolute;
+    right: 0;
+    top: 120%;
+    padding: 10px;
+    border-top: 3px solid $secondary-color;
+    transform: translateY(10px);
+    transition: $animation-ease;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 0 0 $medium-radius $medium-radius;
+  }
+
+  .header-main .menu > .menu-item > .sub-menu > li {
+    padding: 5px 10px;
+    margin: 5px;
+  }
+
+  .regestration-form > form > .form-fields {
+    width: 75%;
+  }
+
+  .nav-chart-section {
+    box-shadow: none;
+
+    > div {
+      border-radius: $medium-radius;
+      width: 75vw;
+      padding: 24px;
+    }
+  }
+
+  .toggle-buttons > .nav-pills > .nav-item > .nav-link {
+    padding: 5px 10px;
+  }
+
+  .toggle-buttons {
+    width: fit-content;
+  }
+
+  .charts > div {
+    height: 425px;
+  }
+
+  .doughnut-charts {
+    height: 600px;
+    width: 600px;
+  }
+
+  .period-asset > .input-group,
+  .period-asset > .dates-input {
+    width: 25%;
+  }
+}
+
+@media(max-width: 1200px) {
+
+  .header .nav-menu {
+    position: fixed;
+    right: -280px;
+    visibility: hidden;
+    width: 280px;
+    height: 100%;
+    top: 0;
+    overflow-y: auto;
+    background-color: $primary-color;
+    z-index: 1000;
+    padding: 10px 0;
+    transition: $animation-ease;
+  }
+
+  .header .menu > .menu-item > .sub-menu {
+    width: 100%;
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    border: none;
+    background-color: $light-primary-color;
+    box-shadow: none;
+    transition: $animation-ease;
+    transform: translateY(0px);
+    padding: 0px;
+    left: auto;
+    top: auto;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .header .close-nav-menu,
+  .header .open-nav-menu {
+    display: flex;
+    order: -1;
+  }
+
+  .login-section,
+  .username-section {
+    margin-right: auto;
+  }
+}
+
+@media(max-width: 768px) {
+
+  .toggle-buttons {
+    width: 100%;
+  }
+
+  .nav-chart-section {
+    background: $primary-color;
+  }
+
+  .calculator-section {
+    background: $primary-color;
+    padding: 10px;
+  }
+
+  .calculator-container > .container > .row {
+    padding: 10px;
+  }
+
+  .search-date-btn {
+    width: 100%;
+  }
+
+  .issuance-request,
+  .cancel-request {
+    padding: 15px;
+  }
+
+  .request-form .input-group {
+    display: flex;
+    flex-direction: column;
+
+    .request-form-prepend .request-form-label {
+      width: 100%;
+      border-radius: $medium-radius $medium-radius 0 0;
+      justify-content: center;
+    }
+
+    .request-form-input {
+      width: 100%;
+      border-radius: 0 0 $medium-radius $medium-radius !important;
+      padding: 5px 10px;
+      text-align: center;
+    }
+  }
+}

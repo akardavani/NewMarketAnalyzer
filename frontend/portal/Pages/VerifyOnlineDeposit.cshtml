@@ -1,0 +1,31 @@
+@page
+@model VerifyOnlineDepositModel
+@{
+    ViewData["Title"] = "اعتبارسنجی پرداخت الکترونیک";
+    Layout = "_RegistrationLayout";
+}
+
+<div class="d-flex align-items-center justify-content-center min-vh-100">
+    <div class="container w-25 mb-5 pb-5">
+        <div class="d-flex flex-column align-items-center shadow">
+            <h3 data-type="pre-titles">اعتبارسنجی پرداخت الکترونیک</h3>
+            <div class="regestration-form pb-5">
+                <div class="alert alert-danger mt-2" asp-validation-summary="ModelOnly"></div>
+                <form class="d-flex flex-column mt-4" method="post">
+                    <input type="hidden" asp-for="DepositId" />
+                    <div class="field d-flex flex-column mb-3">
+                        <div class="label m-0 fw-bold">کد اعتبارسنجی</div>
+                        <div data-type="small-text" class="form-guid text-right">کد ارسال شده به موبایل خود را وارد کنید.</div>
+                        <div class="input-container d-flex flex-column w-100">
+                            <input type="text" asp-for="VerificationCode" class="m-0" placeholder="کد اعتبارسنجی" />
+                        </div>
+                        <span asp-validation-for="VerificationCode" class="input-validation-alert"></span>
+                    </div>
+                    <div class="field d-flex justify-content-center">
+                        <button type="submit" data-type="primary-buttons">انتقال به درگاه پرداخت</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

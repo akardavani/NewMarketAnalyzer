@@ -1,0 +1,27 @@
+@if(search) {
+<div class="search-container">
+  <input type="text" class="form-control mb-1" [formControl]="_searchInput" (keydown)="_onKeyDown($event)" placeholder="جستجو..." />
+</div>
+  }
+
+<div class="items-container" (click)="_onClicked()">
+  <input #focusControl type="text" class="focus-control" (keydown)="_onKeyDown($event)" />
+
+  <div class="list-group p-0">
+
+    @if(_empty()) {
+    <div class="empty-text list-group-item p-3">{{emptyText || 'نتیجه‌ای پیدا نشد.'}}</div>
+    }
+
+    @for(item of _items; track $index) {
+    <select-list-item class="list-group-item list-group-item-action"
+                      [class.active]="_selectedItems.includes(item)"
+                      [class.d-none]="item.filtered"
+                      [class.focused]="item.focused"
+                      [caption]="item.caption"
+                      [keyword]="_keyword()"
+                      (click)="_onItemSelected(item)"></select-list-item>
+    }
+  </div>
+
+</div>

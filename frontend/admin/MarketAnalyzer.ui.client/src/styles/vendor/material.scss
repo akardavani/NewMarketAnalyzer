@@ -1,0 +1,59 @@
+@use '@angular/material' as mat;
+
+// Include non-theme styles for core.
+// Mixin that renders all of the core styles that are not theme-dependent.
+@include mat.elevation-classes();
+@include mat.app-background();
+
+// Define a theme.
+$primary: mat.m2-define-palette($base-palette: mat.$m2-blue-gray-palette);
+$accent: mat.m2-define-palette($base-palette: mat.$m2-blue-gray-palette, $default: A200, $lighter: A100, $darker: A400);
+
+$level: mat.m2-define-typography-level( $font-family: 'IRANSans, Tahoma', $font-weight: 400, $font-size: 14px, $line-height: 1, $letter-spacing: normal );
+
+$typography: mat.m2-define-typography-config( $font-family: 'IRANSans, Tahoma', $headline-1: null, $headline-2: null, $headline-3: null, $headline-4: null, $headline-5: null, $headline-6: null, $subtitle-1: null, $subtitle-2: null, $body-1: null, $body-2: null, $caption: null, $button: null, $overline: null );
+
+$theme: mat.m2-define-light-theme(( color: ( primary: $primary, accent: $accent ), typography: $typography, density: 0 ));
+
+
+@include mat.elevation-classes();
+@include mat.app-background();
+//@include mat.card-theme($theme);
+//@include mat.progress-bar-theme($theme);
+//@include mat.tooltip-theme($theme);
+//@include mat.form-field-theme($theme);
+//@include mat.input-theme($theme);
+//@include mat.select-theme($theme);
+//@include mat.autocomplete-theme($theme);
+@include mat.dialog-theme($theme);
+//@include mat.chips-theme($theme);
+//@include mat.slide-toggle-theme($theme);
+//@include mat.radio-theme($theme);
+//@include mat.slider-theme($theme);
+//@include mat.menu-theme($theme);
+//@include mat.list-theme($theme);
+//@include mat.paginator-theme($theme);
+//@include mat.tabs-theme($theme);
+//@include mat.checkbox-theme($theme);
+//@include mat.button-theme($theme);
+//@include mat.icon-button-theme($theme);
+//@include mat.fab-theme($theme);
+//@include mat.snack-bar-theme($theme);
+//@include mat.table-theme($theme);
+//@include mat.progress-spinner-theme($theme);
+//@include mat.badge-theme($theme);
+//@include mat.bottom-sheet-theme($theme);
+//@include mat.button-toggle-theme($theme);
+@include mat.datepicker-theme($theme);
+//@include mat.divider-theme($theme);
+//@include mat.expansion-theme($theme);
+//@include mat.grid-list-theme($theme);
+//@include mat.icon-theme($theme);
+//@include mat.sidenav-theme($theme);
+//@include mat.stepper-theme($theme);
+//@include mat.sort-theme($theme);
+//@include mat.toolbar-theme($theme);
+//@include mat.tree-theme($theme);
+
+
+@import "../components/dialog";
