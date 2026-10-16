@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Total Project\\New project\\NewMarketAnalyzer\\backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1DAA3982-E017-46FD-A159-48DCA5BB2B73}|Modules\\MarketAnalysis\\src\\MarketAnalyzer.Collectors\\MarketAnalyzer.Collectors.csproj|c:\\total project\\new project\\newmarketanalyzer\\backend\\modules\\marketanalysis\\src\\marketanalyzer.collectors\\scheduledtasks\\corecandlescheduledtask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DAA3982-E017-46FD-A159-48DCA5BB2B73}|Modules\\MarketAnalysis\\src\\MarketAnalyzer.Collectors\\MarketAnalyzer.Collectors.csproj|solutionrelative:modules\\marketanalysis\\src\\marketanalyzer.collectors\\scheduledtasks\\corecandlescheduledtask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2FA413EE-24F1-4B53-B9A4-002C622A5A1B}|Modules\\MarketAnalysis\\src\\MarketAnalyzer.Analysis.Infrastructure\\MarketAnalyzer.Analysis.Infrastructure.csproj|c:\\total project\\new project\\newmarketanalyzer\\backend\\modules\\marketanalysis\\src\\marketanalyzer.analysis.infrastructure\\services\\investmentfundservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2FA413EE-24F1-4B53-B9A4-002C622A5A1B}|Modules\\MarketAnalysis\\src\\MarketAnalyzer.Analysis.Infrastructure\\MarketAnalyzer.Analysis.Infrastructure.csproj|solutionrelative:modules\\marketanalysis\\src\\marketanalyzer.analysis.infrastructure\\services\\investmentfundservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -78,24 +82,41 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CoreCandleScheduledTask.cs",
+              "DocumentMoniker": "C:\\Total Project\\New project\\NewMarketAnalyzer\\backend\\Modules\\MarketAnalysis\\src\\MarketAnalyzer.Collectors\\ScheduledTasks\\CoreCandleScheduledTask.cs",
+              "RelativeDocumentMoniker": "Modules\\MarketAnalysis\\src\\MarketAnalyzer.Collectors\\ScheduledTasks\\CoreCandleScheduledTask.cs",
+              "ToolTip": "C:\\Total Project\\New project\\NewMarketAnalyzer\\backend\\Modules\\MarketAnalysis\\src\\MarketAnalyzer.Collectors\\ScheduledTasks\\CoreCandleScheduledTask.cs",
+              "RelativeToolTip": "Modules\\MarketAnalysis\\src\\MarketAnalyzer.Collectors\\ScheduledTasks\\CoreCandleScheduledTask.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T16:48:20.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "InvestmentFundService.cs",
               "DocumentMoniker": "C:\\Total Project\\New project\\NewMarketAnalyzer\\backend\\Modules\\MarketAnalysis\\src\\MarketAnalyzer.Analysis.Infrastructure\\Services\\InvestmentFundService.cs",
               "RelativeDocumentMoniker": "Modules\\MarketAnalysis\\src\\MarketAnalyzer.Analysis.Infrastructure\\Services\\InvestmentFundService.cs",
               "ToolTip": "C:\\Total Project\\New project\\NewMarketAnalyzer\\backend\\Modules\\MarketAnalysis\\src\\MarketAnalyzer.Analysis.Infrastructure\\Services\\InvestmentFundService.cs",
               "RelativeToolTip": "Modules\\MarketAnalysis\\src\\MarketAnalyzer.Analysis.Infrastructure\\Services\\InvestmentFundService.cs",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAqwFUAAAA3AAAA",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAqwF0AAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-16T07:44:13.473Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "CandleBulkService.cs",
               "DocumentMoniker": "C:\\Total Project\\New project\\NewMarketAnalyzer\\backend\\Modules\\MarketAnalysis\\src\\MarketAnalyzer.Analysis.Infrastructure\\Services\\CandleBulkService.cs",
               "RelativeDocumentMoniker": "Modules\\MarketAnalysis\\src\\MarketAnalyzer.Analysis.Infrastructure\\Services\\CandleBulkService.cs",
@@ -108,7 +129,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "StringExtentions.cs",
               "DocumentMoniker": "C:\\Total Project\\New project\\NewMarketAnalyzer\\backend\\Common\\src\\MarketAnalyzer.Abstractions\\Extensions\\StringExtentions.cs",
               "RelativeDocumentMoniker": "Common\\src\\MarketAnalyzer.Abstractions\\Extensions\\StringExtentions.cs",
@@ -121,7 +142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "StringExtensions.cs",
               "DocumentMoniker": "C:\\Total Project\\New project\\NewMarketAnalyzer\\backend\\Modules\\MarketAnalysis\\src\\MarketAnalyzer.Analysis.Infrastructure\\Extention\\StringExtensions.cs",
               "RelativeDocumentMoniker": "Modules\\MarketAnalysis\\src\\MarketAnalyzer.Analysis.Infrastructure\\Extention\\StringExtensions.cs",
@@ -134,7 +155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "CoreSymbolCollector.cs",
               "DocumentMoniker": "C:\\Total Project\\New project\\NewMarketAnalyzer\\backend\\Modules\\MarketAnalysis\\src\\MarketAnalyzer.Collectors\\Collectors\\CoreSymbolCollector.cs",
               "RelativeDocumentMoniker": "Modules\\MarketAnalysis\\src\\MarketAnalyzer.Collectors\\Collectors\\CoreSymbolCollector.cs",
@@ -147,7 +168,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "KucoinCandleSource.cs",
               "DocumentMoniker": "C:\\Total Project\\New project\\NewMarketAnalyzer\\backend\\Modules\\MarketAnalysis\\src\\MarketAnalyzer.Collectors\\CandleSource\\KucoinCandleSource.cs",
               "RelativeDocumentMoniker": "Modules\\MarketAnalysis\\src\\MarketAnalyzer.Collectors\\CandleSource\\KucoinCandleSource.cs",
@@ -160,7 +181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "CoreCandleCollector.cs",
               "DocumentMoniker": "C:\\Total Project\\New project\\NewMarketAnalyzer\\backend\\Modules\\MarketAnalysis\\src\\MarketAnalyzer.Collectors\\Collectors\\CoreCandleCollector.cs",
               "RelativeDocumentMoniker": "Modules\\MarketAnalysis\\src\\MarketAnalyzer.Collectors\\Collectors\\CoreCandleCollector.cs",
@@ -173,7 +194,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "NahayatnegarCandleSourceBase.cs",
               "DocumentMoniker": "C:\\Total Project\\New project\\NewMarketAnalyzer\\backend\\Modules\\MarketAnalysis\\src\\MarketAnalyzer.Collectors\\CandleSource\\NahayatnegarCandleSourceBase.cs",
               "RelativeDocumentMoniker": "Modules\\MarketAnalysis\\src\\MarketAnalyzer.Collectors\\CandleSource\\NahayatnegarCandleSourceBase.cs",
@@ -186,7 +207,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "DateTimeExtensions.cs",
               "DocumentMoniker": "C:\\Total Project\\New project\\NewMarketAnalyzer\\backend\\Modules\\MarketAnalysis\\src\\MarketAnalyzer.Analysis.Infrastructure\\Extention\\DateTimeExtensions.cs",
               "RelativeDocumentMoniker": "Modules\\MarketAnalysis\\src\\MarketAnalyzer.Analysis.Infrastructure\\Extention\\DateTimeExtensions.cs",
@@ -199,7 +220,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "TgjuCandleSource.cs",
               "DocumentMoniker": "C:\\Total Project\\New project\\NewMarketAnalyzer\\backend\\Modules\\MarketAnalysis\\src\\MarketAnalyzer.Collectors\\CandleSource\\TgjuCandleSource.cs",
               "RelativeDocumentMoniker": "Modules\\MarketAnalysis\\src\\MarketAnalyzer.Collectors\\CandleSource\\TgjuCandleSource.cs",
@@ -212,7 +233,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "TseTmcClient.cs",
               "DocumentMoniker": "C:\\Total Project\\New project\\NewMarketAnalyzer\\backend\\Modules\\MarketAnalysis\\src\\MarketAnalyzer.Collectors\\Client\\TseTmcClient.cs",
               "RelativeDocumentMoniker": "Modules\\MarketAnalysis\\src\\MarketAnalyzer.Collectors\\Client\\TseTmcClient.cs",
@@ -225,7 +246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "WallexCandleSource.cs",
               "DocumentMoniker": "C:\\Total Project\\New project\\NewMarketAnalyzer\\backend\\Modules\\MarketAnalysis\\src\\MarketAnalyzer.Collectors\\CandleSource\\WallexCandleSource.cs",
               "RelativeDocumentMoniker": "Modules\\MarketAnalysis\\src\\MarketAnalyzer.Collectors\\CandleSource\\WallexCandleSource.cs",
@@ -238,7 +259,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "DateTimeExtensions.cs",
               "DocumentMoniker": "C:\\Total Project\\New project\\NewMarketAnalyzer\\backend\\Common\\src\\MarketAnalyzer.Abstractions\\Extensions\\DateTimeExtensions.cs",
               "RelativeDocumentMoniker": "Common\\src\\MarketAnalyzer.Abstractions\\Extensions\\DateTimeExtensions.cs",
@@ -251,7 +272,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "NobitexCandleSource.cs",
               "DocumentMoniker": "C:\\Total Project\\New project\\NewMarketAnalyzer\\backend\\Modules\\MarketAnalysis\\src\\MarketAnalyzer.Collectors\\CandleSource\\NobitexCandleSource.cs",
               "RelativeDocumentMoniker": "Modules\\MarketAnalysis\\src\\MarketAnalyzer.Collectors\\CandleSource\\NobitexCandleSource.cs",
@@ -263,16 +284,8 @@
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "ImeCandleSource.cs",
               "DocumentMoniker": "C:\\Total Project\\New project\\NewMarketAnalyzer\\backend\\Modules\\MarketAnalysis\\src\\MarketAnalyzer.Collectors\\CandleSource\\ImeCandleSource.cs",
               "RelativeDocumentMoniker": "Modules\\MarketAnalysis\\src\\MarketAnalyzer.Collectors\\CandleSource\\ImeCandleSource.cs",
@@ -285,7 +298,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "RunIranEquityMainQueryHandler.cs",
               "DocumentMoniker": "C:\\Total Project\\New project\\NewMarketAnalyzer\\backend\\Modules\\MarketAnalysis\\src\\MarketAnalyzer.Application\\IranEquity\\RunIranEquityMainQueryHandler.cs",
               "RelativeDocumentMoniker": "Modules\\MarketAnalysis\\src\\MarketAnalyzer.Application\\IranEquity\\RunIranEquityMainQueryHandler.cs",
@@ -298,7 +311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "LoginResult.cs",
               "DocumentMoniker": "C:\\Total Project\\New project\\NewMarketAnalyzer\\backend\\Membership\\src\\MarketAnalyzer.Membership.Domain\\LoginResult.cs",
               "RelativeDocumentMoniker": "Membership\\src\\MarketAnalyzer.Membership.Domain\\LoginResult.cs",

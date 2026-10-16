@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MarketAnalyzer.CollectorRunner")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fb4e48acd2cc0621523fbd40a4da334bf1cc87d1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e60f8f12f0fdbb5e16f7519d34f398682193d432")]
 [assembly: System.Reflection.AssemblyProductAttribute("MarketAnalyzer.CollectorRunner")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MarketAnalyzer.CollectorRunner")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
