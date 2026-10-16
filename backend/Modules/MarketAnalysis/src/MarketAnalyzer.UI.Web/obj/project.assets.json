@@ -721,12 +721,29 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
+      "MarketAnalyzer.Abstractions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "8.0.10"
+        },
+        "compile": {
+          "bin/placeholder/MarketAnalyzer.Abstractions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MarketAnalyzer.Abstractions.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "MarketAnalyzer.Analysis.Infrastructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "EFCore.BulkExtensions": "10.0.1",
           "HtmlAgilityPack": "1.12.4",
+          "MarketAnalyzer.Abstractions": "1.0.0",
           "MarketAnalyzer.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "8.0.22",
           "Microsoft.EntityFrameworkCore.Sqlite": "8.0.22",
@@ -1819,6 +1836,11 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "MarketAnalyzer.Abstractions/1.0.0": {
+      "type": "project",
+      "path": "../../../../Common/src/MarketAnalyzer.Abstractions/MarketAnalyzer.Abstractions.csproj",
+      "msbuildProject": "../../../../Common/src/MarketAnalyzer.Abstractions/MarketAnalyzer.Abstractions.csproj"
     },
     "MarketAnalyzer.Analysis.Infrastructure/1.0.0": {
       "type": "project",

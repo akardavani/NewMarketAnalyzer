@@ -107,6 +107,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "C:\\Total Project\\New project\\NewMarketAnalyzer\\backend\\Common\\src\\MarketAnalyzer.Abstractions\\MarketAnalyzer.Abstractions.csproj": {
+                "projectPath": "C:\\Total Project\\New project\\NewMarketAnalyzer\\backend\\Common\\src\\MarketAnalyzer.Abstractions\\MarketAnalyzer.Abstractions.csproj"
+              },
               "C:\\Total Project\\New project\\NewMarketAnalyzer\\backend\\Modules\\MarketAnalysis\\src\\MarketAnalyzer.Domain\\MarketAnalyzer.Domain.csproj": {
                 "projectPath": "C:\\Total Project\\New project\\NewMarketAnalyzer\\backend\\Modules\\MarketAnalysis\\src\\MarketAnalyzer.Domain\\MarketAnalyzer.Domain.csproj"
               }

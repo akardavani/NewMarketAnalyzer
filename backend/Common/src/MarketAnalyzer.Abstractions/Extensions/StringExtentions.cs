@@ -29,5 +29,20 @@
 
             return (number.Length == 10) ? $"0{number}" : number;
         }
+
+        public static string ThousandsSeparator(this decimal value)
+        {
+            return value.ToString("#,##0");
+        }
+
+        public static string ThousandsSeparatorWithDecimals(this decimal value)
+        {
+            return value.ToString("#,##0.00");
+        }
+
+        public static string ThousandsSeparator(this long value)
+        {
+            return value.ToString("#,##0");
+        }
     }
 }

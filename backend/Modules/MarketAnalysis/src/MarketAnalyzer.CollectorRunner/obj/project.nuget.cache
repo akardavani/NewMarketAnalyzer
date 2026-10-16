@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "QkTLZNf9Ad6gRLuSc6gOEwhTWDxZGGARJfOYof3fW8ALU0nHWgmZ1qaxHUdICy6oIk5786L9f9VOfD3wxJpMow==",
+  "dgSpecHash": "yXaZodV8kj14bAh3guPP01AmqMcg04YpYI4g3BC2DHkKmgHF7y+QZbu8mm8h45JY9g1vqGrLhYD8uhPM735CrQ==",
   "success": true,
   "projectFilePath": "C:\\Total Project\\New project\\NewMarketAnalyzer\\backend\\Modules\\MarketAnalysis\\src\\MarketAnalyzer.CollectorRunner\\MarketAnalyzer.CollectorRunner.csproj",
   "expectedPackageFiles": [

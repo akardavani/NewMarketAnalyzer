@@ -2,6 +2,7 @@
 using MarketAnalyzer.Domain;
 using MarketAnalyzer.SharedKernel;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace MarketAnalyzer.Analysis.Infrastructure
 {

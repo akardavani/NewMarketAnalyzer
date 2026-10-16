@@ -30,6 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Common\src\MarketAnalyzer.Abstractions\MarketAnalyzer.Abstractions.csproj" />
     <ProjectReference Include="..\MarketAnalyzer.Domain\MarketAnalyzer.Domain.csproj" />
   </ItemGroup>
 

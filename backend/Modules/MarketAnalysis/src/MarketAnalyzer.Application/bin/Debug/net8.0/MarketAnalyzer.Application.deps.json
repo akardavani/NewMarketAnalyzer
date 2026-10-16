@@ -471,6 +471,7 @@
         "dependencies": {
           "EFCore.BulkExtensions": "10.0.1",
           "HtmlAgilityPack": "1.12.4",
+          "MarketAnalyzer.Abstractions": "1.0.0",
           "MarketAnalyzer.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "8.0.22",
           "Microsoft.EntityFrameworkCore.Sqlite": "8.0.22",

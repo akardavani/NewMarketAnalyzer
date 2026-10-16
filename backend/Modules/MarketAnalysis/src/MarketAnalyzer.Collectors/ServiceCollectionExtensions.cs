@@ -46,7 +46,9 @@ namespace MarketAnalyzer.Collectors
             services.AddScoped<IBaseImeFutureSymbolsProvider, ImeCandleSource>();
             services.AddScoped<ITseTmcClient, TseTmcClient>();
             services.AddScoped<IInvestmentFundClient, InvestmentFundClient>();
-         
+
+            // 5) Scheduled Tasks
+            services.AddScheduledTasks(assembly);
 
             return services;
         }

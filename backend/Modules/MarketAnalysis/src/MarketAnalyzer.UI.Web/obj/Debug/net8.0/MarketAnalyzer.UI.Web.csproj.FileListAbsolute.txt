@@ -96,3 +96,6 @@ C:\Total Project\New project\NewMarketAnalyzer\backend\Modules\MarketAnalysis\sr
 C:\Total Project\New project\NewMarketAnalyzer\backend\Modules\MarketAnalysis\src\MarketAnalyzer.UI.Web\obj\Debug\net8.0\MarketAnalyzer.UI.Web.pdb
 C:\Total Project\New project\NewMarketAnalyzer\backend\Modules\MarketAnalysis\src\MarketAnalyzer.UI.Web\obj\Debug\net8.0\MarketAnalyzer.UI.Web.genruntimeconfig.cache
 C:\Total Project\New project\NewMarketAnalyzer\backend\Modules\MarketAnalysis\src\MarketAnalyzer.UI.Web\obj\Debug\net8.0\ref\MarketAnalyzer.UI.Web.dll
+C:\Total Project\New project\NewMarketAnalyzer\backend\Modules\MarketAnalysis\src\MarketAnalyzer.UI.Web\bin\Debug\net8.0\MarketAnalyzer.Abstractions.dll
+C:\Total Project\New project\NewMarketAnalyzer\backend\Modules\MarketAnalysis\src\MarketAnalyzer.UI.Web\bin\Debug\net8.0\MarketAnalyzer.Abstractions.pdb
+C:\Total Project\New project\NewMarketAnalyzer\backend\Modules\MarketAnalysis\src\MarketAnalyzer.UI.Web\obj\Debug\net8.0\MarketAnalyzer.UI.Web.MvcApplicationPartsAssemblyInfo.cs

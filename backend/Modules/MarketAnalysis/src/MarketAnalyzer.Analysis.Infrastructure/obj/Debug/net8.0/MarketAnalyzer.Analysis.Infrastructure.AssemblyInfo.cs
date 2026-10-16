@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MarketAnalyzer.Analysis.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+531bb3d70918312f2a498839ef3816e0882fcdaf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fb4e48acd2cc0621523fbd40a4da334bf1cc87d1")]
 [assembly: System.Reflection.AssemblyProductAttribute("MarketAnalyzer.Analysis.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MarketAnalyzer.Analysis.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "K2fqyEoDGJfYCnNibUjjW0itSx4AHYluiRAyZPVsC6sKsltMRB2aSt70YfYlK+9lCKSlNGO38fghnJYsINHbWw==",
+  "dgSpecHash": "OPqmZ0QbipEjSJ6GH4WxCRNvLqgBkdLMn2UMsbun785uRah0Gw9GqDMsIBBTGj2QlPZ4zOprVUswBQUA8qNYxQ==",
   "success": true,
   "projectFilePath": "C:\\Total Project\\New project\\NewMarketAnalyzer\\backend\\Modules\\MarketAnalysis\\src\\MarketAnalyzer.Analysis.Infrastructure\\MarketAnalyzer.Analysis.Infrastructure.csproj",
   "expectedPackageFiles": [

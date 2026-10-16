@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MarketAnalyzer.Domain\MarketAnalyzer.Domain.csproj" />
+    <ProjectReference Include="..\..\..\..\Common\src\MarketAnalyzer.Abstractions\MarketAnalyzer.Abstractions.csproj" />
     <ProjectReference Include="..\MarketAnalyzer.Analysis.Infrastructure\MarketAnalyzer.Analysis.Infrastructure.csproj" />
   </ItemGroup>
 
