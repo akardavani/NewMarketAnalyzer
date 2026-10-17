@@ -1,0 +1,1172 @@
+[
+  {
+    "SubSectorCode": "1010",
+    "SectorCode": "10 ",
+    "SubSectorName": "استخراج و انبار زغال سنگ سخت"
+  },
+  {
+    "SubSectorCode": "111",
+    "SectorCode": "01 ",
+    "SubSectorName": "پرورش محصولات و باغبانی"
+  },
+  {
+    "SubSectorCode": "1110",
+    "SectorCode": "11 ",
+    "SubSectorName": "استخراج نفت خام و گاز طبیعی"
+  },
+  {
+    "SubSectorCode": "1120",
+    "SectorCode": "11 ",
+    "SubSectorName": "خدمات جنبی استخراج نفت گاز جز اکتشاف"
+  },
+  {
+    "SubSectorCode": "121",
+    "SectorCode": "01 ",
+    "SubSectorName": "کشاورزی، دامپروری و خدمات وابسته"
+  },
+  {
+    "SubSectorCode": "122",
+    "SectorCode": "01 ",
+    "SubSectorName": "پرورش حیوانات"
+  },
+  {
+    "SubSectorCode": "1310",
+    "SectorCode": "13 ",
+    "SubSectorName": "استخراج آهن"
+  },
+  {
+    "SubSectorCode": "1320",
+    "SectorCode": "13 ",
+    "SubSectorName": "استخراج کانه فلزی غیرآهن"
+  },
+  {
+    "SubSectorCode": "1399",
+    "SectorCode": "13 ",
+    "SubSectorName": "استخراج سایر کانه های فلزی"
+  },
+  {
+    "SubSectorCode": "140",
+    "SectorCode": "01 ",
+    "SubSectorName": "کشاورزی و خدمات دامپروری جز دامپزشکی"
+  },
+  {
+    "SubSectorCode": "141",
+    "SectorCode": "01 ",
+    "SubSectorName": "پرورش طیور"
+  },
+  {
+    "SubSectorCode": "1410",
+    "SectorCode": "14 ",
+    "SubSectorName": "استخراج سنگ، ماسه و خاک رس"
+  },
+  {
+    "SubSectorCode": "142",
+    "SectorCode": "01 ",
+    "SubSectorName": "پرورش حیوانات وتولید سایر محصولات حیوانی"
+  },
+  {
+    "SubSectorCode": "1421",
+    "SectorCode": "14 ",
+    "SubSectorName": "استخراج کانه های شیمیایی و کود"
+  },
+  {
+    "SubSectorCode": "1512",
+    "SectorCode": "15 ",
+    "SubSectorName": "پردازش و نگهداری ماهی و محصولات مرتبط"
+  },
+  {
+    "SubSectorCode": "1513",
+    "SectorCode": "15 ",
+    "SubSectorName": "پردازش و نگهداری میوه و سبزی"
+  },
+  {
+    "SubSectorCode": "1514",
+    "SectorCode": "15 ",
+    "SubSectorName": "گروه تولید روغن های حیوانی و نباتی"
+  },
+  {
+    "SubSectorCode": "1520",
+    "SectorCode": "15 ",
+    "SubSectorName": "گروه تولید لبنیات"
+  },
+  {
+    "SubSectorCode": "1531",
+    "SectorCode": "15 ",
+    "SubSectorName": "گروه تولید حبوبات"
+  },
+  {
+    "SubSectorCode": "1532",
+    "SectorCode": "15 ",
+    "SubSectorName": "گروه تولید نشاسته و محصولات وابسته"
+  },
+  {
+    "SubSectorCode": "1533",
+    "SectorCode": "15 ",
+    "SubSectorName": "گروه تولید خوراک آماده دام"
+  },
+  {
+    "SubSectorCode": "1541",
+    "SectorCode": "15 ",
+    "SubSectorName": "گروه تولید نان و محصولات وابسته"
+  },
+  {
+    "SubSectorCode": "1542",
+    "SectorCode": "15 ",
+    "SubSectorName": "گروه تولید شکر"
+  },
+  {
+    "SubSectorCode": "1543",
+    "SectorCode": "15 ",
+    "SubSectorName": "گروه تولید کاکائو، شکلات و شیرینیجات"
+  },
+  {
+    "SubSectorCode": "1549",
+    "SectorCode": "15 ",
+    "SubSectorName": "تولید سایر محصولات  غذایی"
+  },
+  {
+    "SubSectorCode": "1553",
+    "SectorCode": "15 ",
+    "SubSectorName": "گروه تولید جو و مااشعیر"
+  },
+  {
+    "SubSectorCode": "1554",
+    "SectorCode": "15 ",
+    "SubSectorName": "تولید نوشابه و آب معدنی"
+  },
+  {
+    "SubSectorCode": "161",
+    "SectorCode": "01 ",
+    "SubSectorName": "فعالیتهای حمایتی تولید محصولات"
+  },
+  {
+    "SubSectorCode": "1711",
+    "SectorCode": "17 ",
+    "SubSectorName": "آماده سازی و ریسندگی نخ، پارچه بافی"
+  },
+  {
+    "SubSectorCode": "1721",
+    "SectorCode": "17 ",
+    "SubSectorName": "تولید محصولات نساجی به غیر از پوشاک"
+  },
+  {
+    "SubSectorCode": "1722",
+    "SectorCode": "17 ",
+    "SubSectorName": "تولید و فروش فرش و قالی"
+  },
+  {
+    "SubSectorCode": "1920",
+    "SectorCode": "19 ",
+    "SubSectorName": "تولید کفش"
+  },
+  {
+    "SubSectorCode": "1999",
+    "SectorCode": "19 ",
+    "SubSectorName": "سایر محصولات چرمی"
+  },
+  {
+    "SubSectorCode": "2021",
+    "SectorCode": "20 ",
+    "SubSectorName": "تولید تخته چند لا و سایر تخته ها"
+  },
+  {
+    "SubSectorCode": "2029",
+    "SectorCode": "20 ",
+    "SubSectorName": "تولید دیگر محصولات چوبی"
+  },
+  {
+    "SubSectorCode": "210",
+    "SectorCode": "02 ",
+    "SubSectorName": "جنگل شناسی و دیگر فعالیتهای جنگلداری"
+  },
+  {
+    "SubSectorCode": "2101",
+    "SectorCode": "21 ",
+    "SubSectorName": "تولید خمیر کاغذ، کاغذ و مقوا"
+  },
+  {
+    "SubSectorCode": "2102",
+    "SectorCode": "21 ",
+    "SubSectorName": "تولید کاغذ و مقوای موجدار و محفظه آنها"
+  },
+  {
+    "SubSectorCode": "2109",
+    "SectorCode": "21 ",
+    "SubSectorName": "تولید سایر محصولات کاغذ و مقوا"
+  },
+  {
+    "SubSectorCode": "2221",
+    "SectorCode": "22 ",
+    "SubSectorName": "چاپ"
+  },
+  {
+    "SubSectorCode": "2308",
+    "SectorCode": "23 ",
+    "SubSectorName": "ساخت فرآورده های نفتی تصفیه شده"
+  },
+  {
+    "SubSectorCode": "2320",
+    "SectorCode": "23 ",
+    "SubSectorName": "تولید محصولات پالایش شده پتروشیمی"
+  },
+  {
+    "SubSectorCode": "2399",
+    "SectorCode": "23 ",
+    "SubSectorName": "سایر فراورده های نفتی و سوختی"
+  },
+  {
+    "SubSectorCode": "2411",
+    "SectorCode": "24 ",
+    "SubSectorName": "مواد شیمیایی پایه به جز کود"
+  },
+  {
+    "SubSectorCode": "2412",
+    "SectorCode": "24 ",
+    "SubSectorName": "گروه تولید کود و ترکیبات نیتروژن"
+  },
+  {
+    "SubSectorCode": "2413",
+    "SectorCode": "24 ",
+    "SubSectorName": "گروه تولید پلاستیک اولیه و لاستیک ترکیبی"
+  },
+  {
+    "SubSectorCode": "2421",
+    "SectorCode": "24 ",
+    "SubSectorName": "حشره کش و سایر محصولات شیمیایی کشاورزی"
+  },
+  {
+    "SubSectorCode": "2422",
+    "SectorCode": "24 ",
+    "SubSectorName": "تولید رنگ، بتونه، جوهر و پوشش های مشابه"
+  },
+  {
+    "SubSectorCode": "2423",
+    "SectorCode": "24 ",
+    "SubSectorName": "گروه تولید داروهای شیمیایی و گیاهی"
+  },
+  {
+    "SubSectorCode": "2424",
+    "SectorCode": "24 ",
+    "SubSectorName": "گروه شوینده ها، عطر و محصولات آرایشی"
+  },
+  {
+    "SubSectorCode": "2429",
+    "SectorCode": "24 ",
+    "SubSectorName": "گروه تولید سایر محصولات شیمیایی"
+  },
+  {
+    "SubSectorCode": "2430",
+    "SectorCode": "24 ",
+    "SubSectorName": "گروه تولید نخهای مصنوعی"
+  },
+  {
+    "SubSectorCode": "2511",
+    "SectorCode": "25 ",
+    "SubSectorName": "تولید تایر و بازسازی تایرهای لاستیکی"
+  },
+  {
+    "SubSectorCode": "2519",
+    "SectorCode": "25 ",
+    "SubSectorName": "تولید سایر محصولات لاستیکی"
+  },
+  {
+    "SubSectorCode": "2520",
+    "SectorCode": "25 ",
+    "SubSectorName": "تولید محصولات پلاستیکی"
+  },
+  {
+    "SubSectorCode": "2610",
+    "SectorCode": "26 ",
+    "SubSectorName": "تولید قطعات و بردهای الکترونیکی"
+  },
+  {
+    "SubSectorCode": "2620",
+    "SectorCode": "26 ",
+    "SubSectorName": "تولید رایانه و تجهیزات جانبی"
+  },
+  {
+    "SubSectorCode": "2630",
+    "SectorCode": "26 ",
+    "SubSectorName": "تولید تجهیزات الکترونیکی پیشرفته"
+  },
+  {
+    "SubSectorCode": "2691",
+    "SectorCode": "26 ",
+    "SubSectorName": "گروه تولید سرامیک غیرساختمانی"
+  },
+  {
+    "SubSectorCode": "2692",
+    "SectorCode": "26 ",
+    "SubSectorName": "گروه تولید محصولات سرامیکی نسوز"
+  },
+  {
+    "SubSectorCode": "2693",
+    "SectorCode": "26 ",
+    "SubSectorName": "تولید گل و سرامیک  ساختمانی"
+  },
+  {
+    "SubSectorCode": "2694",
+    "SectorCode": "26 ",
+    "SubSectorName": "تولید سیمان ، آهک و گچ"
+  },
+  {
+    "SubSectorCode": "2695",
+    "SectorCode": "26 ",
+    "SubSectorName": "تولید محصولات بتنی ، سیمانی و گچی"
+  },
+  {
+    "SubSectorCode": "2699",
+    "SectorCode": "26 ",
+    "SubSectorName": "تولید سایر محصولات  معدنی غیرفلزی"
+  },
+  {
+    "SubSectorCode": "2710",
+    "SectorCode": "27 ",
+    "SubSectorName": "تولید آهن و فولاد پایه"
+  },
+  {
+    "SubSectorCode": "2720",
+    "SectorCode": "27 ",
+    "SubSectorName": "تولید فلزات گرانبهای غیرآهن"
+  },
+  {
+    "SubSectorCode": "2731",
+    "SectorCode": "27 ",
+    "SubSectorName": "ریخته گری آهن و فولاد"
+  },
+  {
+    "SubSectorCode": "2799",
+    "SectorCode": "27 ",
+    "SubSectorName": "استخراج سایر فلزات اساسی"
+  },
+  {
+    "SubSectorCode": "2811",
+    "SectorCode": "28 ",
+    "SubSectorName": "تولید محصولات فلزی ساختمانی"
+  },
+  {
+    "SubSectorCode": "2812",
+    "SectorCode": "28 ",
+    "SubSectorName": "تولید مخزن و محفظه فلزات"
+  },
+  {
+    "SubSectorCode": "2813",
+    "SectorCode": "28 ",
+    "SubSectorName": "تولید مواد بخار به جز دیگهای بخار مرکزی"
+  },
+  {
+    "SubSectorCode": "2818",
+    "SectorCode": "28 ",
+    "SubSectorName": "ساخت ابزارهای دستی پرقدرت"
+  },
+  {
+    "SubSectorCode": "2893",
+    "SectorCode": "28 ",
+    "SubSectorName": "تولید کارد و چنگال، ابزار دستی و عمومی"
+  },
+  {
+    "SubSectorCode": "2899",
+    "SectorCode": "28 ",
+    "SubSectorName": "تولید سایر محصولات فلزی ساخته شده"
+  },
+  {
+    "SubSectorCode": "2911",
+    "SectorCode": "29 ",
+    "SubSectorName": "تولید موتور و توربین"
+  },
+  {
+    "SubSectorCode": "2912",
+    "SectorCode": "29 ",
+    "SubSectorName": "تولید پمپ، کمپرسور، مته و دریچه"
+  },
+  {
+    "SubSectorCode": "2913",
+    "SectorCode": "29 ",
+    "SubSectorName": "تولید یاتاقان، دنده و اجزای هدایتی"
+  },
+  {
+    "SubSectorCode": "2914",
+    "SectorCode": "29 ",
+    "SubSectorName": "تولید اجاق، کوره و مشعل کوره"
+  },
+  {
+    "SubSectorCode": "2915",
+    "SectorCode": "29 ",
+    "SubSectorName": "تولید تجهیزات بالابر و جابجایی"
+  },
+  {
+    "SubSectorCode": "2919",
+    "SectorCode": "29 ",
+    "SubSectorName": "تولید سایر ماشین آلات عمومی"
+  },
+  {
+    "SubSectorCode": "2921",
+    "SectorCode": "29 ",
+    "SubSectorName": "تولید ماشین آلات کشاورزی و باغبانی"
+  },
+  {
+    "SubSectorCode": "2922",
+    "SectorCode": "29 ",
+    "SubSectorName": "تولید ابزارهای ماشینی"
+  },
+  {
+    "SubSectorCode": "2924",
+    "SectorCode": "29 ",
+    "SubSectorName": "تولید ماشین آلات استخراج و  ساختمان"
+  },
+  {
+    "SubSectorCode": "2926",
+    "SectorCode": "29 ",
+    "SubSectorName": "تولید ماشین آلات نساجی و چرم سازی"
+  },
+  {
+    "SubSectorCode": "2930",
+    "SectorCode": "29 ",
+    "SubSectorName": "تولید وسایل خانگی"
+  },
+  {
+    "SubSectorCode": "2999",
+    "SectorCode": "29 ",
+    "SubSectorName": "تولید سایر ماشین آلات و تجهیزات"
+  },
+  {
+    "SubSectorCode": "3110",
+    "SectorCode": "31 ",
+    "SubSectorName": "تولید موتورها، مولدها و مبدلهای الکتریکی"
+  },
+  {
+    "SubSectorCode": "3120",
+    "SectorCode": "31 ",
+    "SubSectorName": "تولید تجهیزات توزیع و کنترل برق"
+  },
+  {
+    "SubSectorCode": "3130",
+    "SectorCode": "31 ",
+    "SubSectorName": "تولید سیم و کابل عایق"
+  },
+  {
+    "SubSectorCode": "3140",
+    "SectorCode": "31 ",
+    "SubSectorName": "تولید انباره، پیل و باتری ساده"
+  },
+  {
+    "SubSectorCode": "3150",
+    "SectorCode": "31 ",
+    "SubSectorName": "تولید لامپ برقی و تجهیزات روشنایی"
+  },
+  {
+    "SubSectorCode": "3220",
+    "SectorCode": "32 ",
+    "SubSectorName": "فرستنده رادیو، تلویزیون و تلفن و تلگراف"
+  },
+  {
+    "SubSectorCode": "3230",
+    "SectorCode": "32 ",
+    "SubSectorName": "گیرنده رادیو، تلویزیون و تجهیزات وابسته"
+  },
+  {
+    "SubSectorCode": "3312",
+    "SectorCode": "33 ",
+    "SubSectorName": "وسایل اندازه گیری غیر از کنترل صنعتی"
+  },
+  {
+    "SubSectorCode": "3410",
+    "SectorCode": "34 ",
+    "SubSectorName": "تولید وسایل نقلیه موتوری"
+  },
+  {
+    "SubSectorCode": "3420",
+    "SectorCode": "34 ",
+    "SubSectorName": "ساخت بدنه وسایل نقلیه موتوری ساخت تریلر"
+  },
+  {
+    "SubSectorCode": "3430",
+    "SectorCode": "34 ",
+    "SubSectorName": "قطعات یدکی و جانبی وسایل نقلیه موتوری"
+  },
+  {
+    "SubSectorCode": "3499",
+    "SectorCode": "34 ",
+    "SubSectorName": "سایر قطعات یدکی و وسایل نقلیه موتوری"
+  },
+  {
+    "SubSectorCode": "3511",
+    "SectorCode": "35 ",
+    "SubSectorName": "ساخت و تعمیر کشتی"
+  },
+  {
+    "SubSectorCode": "3591",
+    "SectorCode": "35 ",
+    "SubSectorName": "تولید موتوسیکلت"
+  },
+  {
+    "SubSectorCode": "3699",
+    "SectorCode": "36 ",
+    "SubSectorName": "تولید سایر موارد"
+  },
+  {
+    "SubSectorCode": "3842",
+    "SectorCode": "38 ",
+    "SubSectorName": "تولید شکر"
+  },
+  {
+    "SubSectorCode": "3999",
+    "SectorCode": "39 ",
+    "SubSectorName": "شرکتهای صنعتی چند رشته ای"
+  },
+  {
+    "SubSectorCode": "4010",
+    "SectorCode": "40 ",
+    "SubSectorName": "تولید انتقال و توزیع نیروی برق"
+  },
+  {
+    "SubSectorCode": "4011",
+    "SectorCode": "40 ",
+    "SubSectorName": "تولید،لنتقال و توزیع برق،گاز،بخاروآب گرم"
+  },
+  {
+    "SubSectorCode": "4030",
+    "SectorCode": "40 ",
+    "SubSectorName": "تامین بخار و آب گرم"
+  },
+  {
+    "SubSectorCode": "4100",
+    "SectorCode": "41 ",
+    "SubSectorName": "جمع آوری، تصفیه و توزیع آب"
+  },
+  {
+    "SubSectorCode": "4212",
+    "SectorCode": "42 ",
+    "SubSectorName": "پرورش و نگهداری ماهی و محصولات ماهی"
+  },
+  {
+    "SubSectorCode": "4213",
+    "SectorCode": "42 ",
+    "SubSectorName": "پرورش و نگهداری میوه جات و سبزیجات"
+  },
+  {
+    "SubSectorCode": "4214",
+    "SectorCode": "42 ",
+    "SubSectorName": "تولید روغن های حیوانی و نباتی"
+  },
+  {
+    "SubSectorCode": "4220",
+    "SectorCode": "42 ",
+    "SubSectorName": "تولید لبنیات"
+  },
+  {
+    "SubSectorCode": "4231",
+    "SectorCode": "42 ",
+    "SubSectorName": "تولید حبوبات"
+  },
+  {
+    "SubSectorCode": "4232",
+    "SectorCode": "42 ",
+    "SubSectorName": "تولید نشاسته و محصولات وابسته"
+  },
+  {
+    "SubSectorCode": "4233",
+    "SectorCode": "42 ",
+    "SubSectorName": "تولید خوراک آماده دام"
+  },
+  {
+    "SubSectorCode": "4241",
+    "SectorCode": "42 ",
+    "SubSectorName": "تولید نان و محصولات وابسته"
+  },
+  {
+    "SubSectorCode": "4243",
+    "SectorCode": "42 ",
+    "SubSectorName": "تولید کاکائو، شکلات و شیرینی جات"
+  },
+  {
+    "SubSectorCode": "4249",
+    "SectorCode": "42 ",
+    "SubSectorName": "تولید سایر محصولات غذایی"
+  },
+  {
+    "SubSectorCode": "4253",
+    "SectorCode": "42 ",
+    "SubSectorName": "تولید جو و ماءالشعیر"
+  },
+  {
+    "SubSectorCode": "4254",
+    "SectorCode": "42 ",
+    "SubSectorName": "تولید نوشیدنی و آبمیوه"
+  },
+  {
+    "SubSectorCode": "4299",
+    "SectorCode": "42 ",
+    "SubSectorName": "زیر گروه سایر محصولات غذایی"
+  },
+  {
+    "SubSectorCode": "4323",
+    "SectorCode": "43 ",
+    "SubSectorName": "تولید داروهای شیمیایی و گیاهی"
+  },
+  {
+    "SubSectorCode": "4399",
+    "SectorCode": "43 ",
+    "SubSectorName": "تولید سایر محصولات دارویی"
+  },
+  {
+    "SubSectorCode": "4411",
+    "SectorCode": "44 ",
+    "SubSectorName": "تولید مواد شیمیایی پایه به جز کود"
+  },
+  {
+    "SubSectorCode": "4412",
+    "SectorCode": "44 ",
+    "SubSectorName": "تولید کود و ترکیبات نیتروژن"
+  },
+  {
+    "SubSectorCode": "4413",
+    "SectorCode": "44 ",
+    "SubSectorName": "تولید پلاستیک اولیه و لاستیک ترکیبی"
+  },
+  {
+    "SubSectorCode": "4421",
+    "SectorCode": "44 ",
+    "SubSectorName": "تولید حشره کش و سایر محصولات شیمیایی"
+  },
+  {
+    "SubSectorCode": "4422",
+    "SectorCode": "44 ",
+    "SubSectorName": "تولید رنگ، بتونه، جوهر"
+  },
+  {
+    "SubSectorCode": "4424",
+    "SectorCode": "44 ",
+    "SubSectorName": "تولید شوینده ها، عطر و محصولات آرایشی"
+  },
+  {
+    "SubSectorCode": "4429",
+    "SectorCode": "44 ",
+    "SubSectorName": "تولید سایر محصولات شیمیایی"
+  },
+  {
+    "SubSectorCode": "4430",
+    "SectorCode": "44 ",
+    "SubSectorName": "تولید نخ های مصنوعی"
+  },
+  {
+    "SubSectorCode": "4499",
+    "SectorCode": "44 ",
+    "SubSectorName": "تولید محصولات شیمیایی دیگر"
+  },
+  {
+    "SubSectorCode": "4520",
+    "SectorCode": "45 ",
+    "SubSectorName": "ساختمان و مهندسی عمران"
+  },
+  {
+    "SubSectorCode": "4521",
+    "SectorCode": "45 ",
+    "SubSectorName": "پیمانکاری طرح های صنعتی"
+  },
+  {
+    "SubSectorCode": "4522",
+    "SectorCode": "45 ",
+    "SubSectorName": "مدیریت پسماند"
+  },
+  {
+    "SubSectorCode": "4599",
+    "SectorCode": "45 ",
+    "SubSectorName": "سایر فعالیت های پیمانکاری"
+  },
+  {
+    "SubSectorCode": "4610",
+    "SectorCode": "46 ",
+    "SubSectorName": "عمده فروشی براساس هزینه و یا قرارداد"
+  },
+  {
+    "SubSectorCode": "4652",
+    "SectorCode": "46 ",
+    "SubSectorName": "عمده فروشی تجهیزات وقطعات الکترونیکی"
+  },
+  {
+    "SubSectorCode": "4690",
+    "SectorCode": "46 ",
+    "SubSectorName": "تجارت عمده فروشی غیر تخصصی"
+  },
+  {
+    "SubSectorCode": "4711",
+    "SectorCode": "47 ",
+    "SubSectorName": "خرده فروشی انواع موادغذایی،نوشیدنی وغیره"
+  },
+  {
+    "SubSectorCode": "4721",
+    "SectorCode": "47 ",
+    "SubSectorName": "خرده فروشی موادغذایی در فروشگاههای تخصصی"
+  },
+  {
+    "SubSectorCode": "4993",
+    "SectorCode": "49 ",
+    "SubSectorName": "تولید گل و سرامیک ساختمانی"
+  },
+  {
+    "SubSectorCode": "5010",
+    "SectorCode": "50 ",
+    "SubSectorName": "فروش وسائط نقلیه"
+  },
+  {
+    "SubSectorCode": "5030",
+    "SectorCode": "50 ",
+    "SubSectorName": "فروش قطعات یدکی لوازم الحاقی وسایل نقلیه"
+  },
+  {
+    "SubSectorCode": "5110",
+    "SectorCode": "51 ",
+    "SubSectorName": "حمل و نقل هوایی مسافر"
+  },
+  {
+    "SubSectorCode": "5111",
+    "SectorCode": "51 ",
+    "SubSectorName": "حمل و نقل هوایی با برنامه زمانی"
+  },
+  {
+    "SubSectorCode": "5222",
+    "SectorCode": "52 ",
+    "SubSectorName": "فعالیتهای خدماتی وابسته به حمل و نقل آبی"
+  },
+  {
+    "SubSectorCode": "5223",
+    "SectorCode": "52 ",
+    "SubSectorName": "فعالیتهای خدماتی وابسته حمل ونقل هوایی"
+  },
+  {
+    "SubSectorCode": "5394",
+    "SectorCode": "53 ",
+    "SubSectorName": "تولید سیمان، آهک و گچ"
+  },
+  {
+    "SubSectorCode": "5395",
+    "SectorCode": "53 ",
+    "SubSectorName": "تولید بتون"
+  },
+  {
+    "SubSectorCode": "5410",
+    "SectorCode": "54 ",
+    "SubSectorName": "تولید شیشه"
+  },
+  {
+    "SubSectorCode": "5491",
+    "SectorCode": "54 ",
+    "SubSectorName": "تولید سرامیک غیرساختمانی"
+  },
+  {
+    "SubSectorCode": "5492",
+    "SectorCode": "54 ",
+    "SubSectorName": "تولید محصولات سرامیکی نسوز"
+  },
+  {
+    "SubSectorCode": "5495",
+    "SectorCode": "54 ",
+    "SubSectorName": "تولید محصولات بتنی، سیمانی و گچ"
+  },
+  {
+    "SubSectorCode": "5499",
+    "SectorCode": "54 ",
+    "SubSectorName": "تولید سایر محصولات معدنی غیرفلزی"
+  },
+  {
+    "SubSectorCode": "5510",
+    "SectorCode": "55 ",
+    "SubSectorName": "هتل ها ، اردو و دیگر تدارکات اقامت کوتاه"
+  },
+  {
+    "SubSectorCode": "5511",
+    "SectorCode": "55 ",
+    "SubSectorName": "کاربردهای تجاری اداری فرهنگی و گردشگری"
+  },
+  {
+    "SubSectorCode": "5520",
+    "SectorCode": "55 ",
+    "SubSectorName": "فعالیت خدماتی مربوط به غذا و آشامیدنی ها"
+  },
+  {
+    "SubSectorCode": "5699",
+    "SectorCode": "56 ",
+    "SubSectorName": "سایر واسطه های  مالی"
+  },
+  {
+    "SubSectorCode": "5719",
+    "SectorCode": "57 ",
+    "SubSectorName": "سایر  واسطه های پولی"
+  },
+  {
+    "SubSectorCode": "5720",
+    "SectorCode": "57 ",
+    "SubSectorName": "سایرواسطه های مالی"
+  },
+  {
+    "SubSectorCode": "5891",
+    "SectorCode": "58 ",
+    "SubSectorName": "لیزینگ  مالی"
+  },
+  {
+    "SubSectorCode": "5910",
+    "SectorCode": "59 ",
+    "SubSectorName": "اوراق حق تقدم استفاده از تسهیلات مسکن"
+  },
+  {
+    "SubSectorCode": "6003",
+    "SectorCode": "60 ",
+    "SubSectorName": "خدمات حمل و نقل دریایی"
+  },
+  {
+    "SubSectorCode": "6010",
+    "SectorCode": "60 ",
+    "SubSectorName": "حمل و نقل از طریق خطوط راه آهن"
+  },
+  {
+    "SubSectorCode": "6021",
+    "SectorCode": "60 ",
+    "SubSectorName": "سایر حمل و نقلهای زمینی برنامه ریزی شده"
+  },
+  {
+    "SubSectorCode": "6023",
+    "SectorCode": "60 ",
+    "SubSectorName": "حمل و نقل بار زمینی"
+  },
+  {
+    "SubSectorCode": "6110",
+    "SectorCode": "61 ",
+    "SubSectorName": "حمل و نقل دریایی وحمل ونقل درآبهای ساحلی"
+  },
+  {
+    "SubSectorCode": "6120",
+    "SectorCode": "61 ",
+    "SubSectorName": "سایر فعالیت های پشتیبانی و حمل و نقل"
+  },
+  {
+    "SubSectorCode": "6301",
+    "SectorCode": "63 ",
+    "SubSectorName": "جابجایی محموله"
+  },
+  {
+    "SubSectorCode": "6303",
+    "SectorCode": "63 ",
+    "SubSectorName": "حذف-سایر فعالیت های پشتیبانی و حمل و نقل"
+  },
+  {
+    "SubSectorCode": "6420",
+    "SectorCode": "64 ",
+    "SubSectorName": "مخابرات"
+  },
+  {
+    "SubSectorCode": "6519",
+    "SectorCode": "65 ",
+    "SubSectorName": "سایر واسطه های پولی"
+  },
+  {
+    "SubSectorCode": "6591",
+    "SectorCode": "65 ",
+    "SubSectorName": "لیزینگ مالی"
+  },
+  {
+    "SubSectorCode": "6592",
+    "SectorCode": "65 ",
+    "SubSectorName": "اعطای سایر اعتبارات"
+  },
+  {
+    "SubSectorCode": "6599",
+    "SectorCode": "65 ",
+    "SubSectorName": "سایر واسطه های مالی"
+  },
+  {
+    "SubSectorCode": "6601",
+    "SectorCode": "66 ",
+    "SubSectorName": "بیمه زندگی"
+  },
+  {
+    "SubSectorCode": "6603",
+    "SectorCode": "66 ",
+    "SubSectorName": "بیمه غیرزندگی"
+  },
+  {
+    "SubSectorCode": "6611",
+    "SectorCode": "66 ",
+    "SubSectorName": "فعالیتهای مالی و اجرائی"
+  },
+  {
+    "SubSectorCode": "6711",
+    "SectorCode": "67 ",
+    "SubSectorName": "اداره ی بازارهای مالی"
+  },
+  {
+    "SubSectorCode": "6712",
+    "SectorCode": "67 ",
+    "SubSectorName": "فعالیتهای مرتبط با اوراق بهادار"
+  },
+  {
+    "SubSectorCode": "6719",
+    "SectorCode": "67 ",
+    "SubSectorName": "بجز تامین وجوه بیمه و بازنشستگی"
+  },
+  {
+    "SubSectorCode": "6810",
+    "SectorCode": "68 ",
+    "SubSectorName": "صندوق سرمایه گذاری مختلط"
+  },
+  {
+    "SubSectorCode": "6811",
+    "SectorCode": "68 ",
+    "SubSectorName": "صندوق سرمایه گذاری در سهام"
+  },
+  {
+    "SubSectorCode": "6812",
+    "SectorCode": "68 ",
+    "SubSectorName": "صندوق سرمایه گذاری در اوراق با درآمدثابت"
+  },
+  {
+    "SubSectorCode": "6813",
+    "SectorCode": "68 ",
+    "SubSectorName": "صندوق های زمین و ساختمان"
+  },
+  {
+    "SubSectorCode": "6814",
+    "SectorCode": "68 ",
+    "SubSectorName": "صندوق های پروژه"
+  },
+  {
+    "SubSectorCode": "6815",
+    "SectorCode": "68 ",
+    "SubSectorName": "صندوق سرمایه گذاری جسورانه"
+  },
+  {
+    "SubSectorCode": "6816",
+    "SectorCode": "68 ",
+    "SubSectorName": "صندوق سرمایه گذاری خصوصی"
+  },
+  {
+    "SubSectorCode": "6817",
+    "SectorCode": "68 ",
+    "SubSectorName": "صندوق س. صندوق در صندوق"
+  },
+  {
+    "SubSectorCode": "6818",
+    "SectorCode": "68 ",
+    "SubSectorName": "صندوق سرمایه گذاری املاک و مستغلات"
+  },
+  {
+    "SubSectorCode": "6819",
+    "SectorCode": "68 ",
+    "SubSectorName": "صندوق سرمایه گذاری بخشی"
+  },
+  {
+    "SubSectorCode": "6910",
+    "SectorCode": "69 ",
+    "SubSectorName": "صکوک اجاره"
+  },
+  {
+    "SubSectorCode": "6911",
+    "SectorCode": "69 ",
+    "SubSectorName": "صکوک مرابحه"
+  },
+  {
+    "SubSectorCode": "6912",
+    "SectorCode": "69 ",
+    "SubSectorName": "صکوک استصناع"
+  },
+  {
+    "SubSectorCode": "6913",
+    "SectorCode": "69 ",
+    "SubSectorName": "اوراق رهنی"
+  },
+  {
+    "SubSectorCode": "6914",
+    "SectorCode": "69 ",
+    "SubSectorName": "صکوک تجاری اسلامی"
+  },
+  {
+    "SubSectorCode": "6920",
+    "SectorCode": "69 ",
+    "SubSectorName": "اوارق مشارکت دولتی"
+  },
+  {
+    "SubSectorCode": "6921",
+    "SectorCode": "69 ",
+    "SubSectorName": "اوراق مشارکت شهرداری ها"
+  },
+  {
+    "SubSectorCode": "6922",
+    "SectorCode": "69 ",
+    "SubSectorName": "اوراق گواهی اعتبار مولد"
+  },
+  {
+    "SubSectorCode": "6923",
+    "SectorCode": "69 ",
+    "SubSectorName": "اوراق مشارکت بخش خصوصی"
+  },
+  {
+    "SubSectorCode": "6924",
+    "SectorCode": "69 ",
+    "SubSectorName": "اوراق مشارکت دولتی بدون ضمانت دولت"
+  },
+  {
+    "SubSectorCode": "6925",
+    "SectorCode": "69 ",
+    "SubSectorName": "اوراق مشارکت منتشره بانکها"
+  },
+  {
+    "SubSectorCode": "6930",
+    "SectorCode": "69 ",
+    "SubSectorName": "گواهی سپرده عام"
+  },
+  {
+    "SubSectorCode": "6931",
+    "SectorCode": "69 ",
+    "SubSectorName": "گواهی سپرده خاص"
+  },
+  {
+    "SubSectorCode": "6940",
+    "SectorCode": "69 ",
+    "SubSectorName": "اسناد خزانه اسلامی"
+  },
+  {
+    "SubSectorCode": "6941",
+    "SectorCode": "69 ",
+    "SubSectorName": "اوراق تسویه خزانه"
+  },
+  {
+    "SubSectorCode": "6942",
+    "SectorCode": "69 ",
+    "SubSectorName": "اوراق اجاره دولتی با ضمانت دولت"
+  },
+  {
+    "SubSectorCode": "6943",
+    "SectorCode": "69 ",
+    "SubSectorName": "اوراق اجاره دولتی بدون ضمانت دولت"
+  },
+  {
+    "SubSectorCode": "6944",
+    "SectorCode": "69 ",
+    "SubSectorName": "اسناد خزانه اسلامی کوتاه مدت"
+  },
+  {
+    "SubSectorCode": "6945",
+    "SectorCode": "69 ",
+    "SubSectorName": "اوراق مرابحه دولتی با ضمانت دولت"
+  },
+  {
+    "SubSectorCode": "6946",
+    "SectorCode": "69 ",
+    "SubSectorName": "اوراق منفعت دولتی با ضمانت دولت"
+  },
+  {
+    "SubSectorCode": "6947",
+    "SectorCode": "69 ",
+    "SubSectorName": "اوراق منفعت خصوصی"
+  },
+  {
+    "SubSectorCode": "6948",
+    "SectorCode": "69 ",
+    "SubSectorName": "تامین مالی جمعی"
+  },
+  {
+    "SubSectorCode": "6949",
+    "SectorCode": "69 ",
+    "SubSectorName": "صکوک خرید دین"
+  },
+  {
+    "SubSectorCode": "6950",
+    "SectorCode": "69 ",
+    "SubSectorName": "اوراق قرض الحسنه"
+  },
+  {
+    "SubSectorCode": "7010",
+    "SectorCode": "70 ",
+    "SubSectorName": "املاک و مستغلات با ملک خود یا لیزینگ شده"
+  },
+  {
+    "SubSectorCode": "7021",
+    "SectorCode": "70 ",
+    "SubSectorName": "پیمانکاری املاک و مستغلات"
+  },
+  {
+    "SubSectorCode": "7099",
+    "SectorCode": "70 ",
+    "SubSectorName": "سایر فعالیت های املاک و مستغلات"
+  },
+  {
+    "SubSectorCode": "7120",
+    "SectorCode": "71 ",
+    "SubSectorName": "تجزیه و تحلیل و آزمایش فنی"
+  },
+  {
+    "SubSectorCode": "7200",
+    "SectorCode": "72 ",
+    "SubSectorName": "سایر فعالیت های رایانه ای"
+  },
+  {
+    "SubSectorCode": "7220",
+    "SectorCode": "72 ",
+    "SubSectorName": "مشاوره و تهیه نرم افزار"
+  },
+  {
+    "SubSectorCode": "7310",
+    "SectorCode": "73 ",
+    "SubSectorName": "خدمات ارزش افزوده"
+  },
+  {
+    "SubSectorCode": "7421",
+    "SectorCode": "74 ",
+    "SubSectorName": "فعالیتهای ساختمانی و مشاوره فنی مرتبط"
+  },
+  {
+    "SubSectorCode": "7422",
+    "SectorCode": "74 ",
+    "SubSectorName": "آزمایش و تحلیل فنی"
+  },
+  {
+    "SubSectorCode": "7490",
+    "SectorCode": "74 ",
+    "SubSectorName": "سایر فعالیتهای حرفه ای علمی و فنی"
+  },
+  {
+    "SubSectorCode": "7610",
+    "SectorCode": "76 ",
+    "SubSectorName": "اوراق بهادارشرکت س.خ مبتنی بردارایی فکری"
+  },
+  {
+    "SubSectorCode": "7611",
+    "SectorCode": "76 ",
+    "SubSectorName": "اوراق بهادار مبتنی بر دارایی فکری"
+  },
+  {
+    "SubSectorCode": "7612",
+    "SectorCode": "76 ",
+    "SubSectorName": "حق بهره برداری اوراق مبتنی بردارایی فکری"
+  },
+  {
+    "SubSectorCode": "7710",
+    "SectorCode": "77 ",
+    "SubSectorName": "اجاره و لیزینگ وسائط نقلیه موتوری"
+  },
+  {
+    "SubSectorCode": "8299",
+    "SectorCode": "82 ",
+    "SubSectorName": "فعالیت حمایت از مشاغل دیگر"
+  },
+  {
+    "SubSectorCode": "9000",
+    "SectorCode": "90 ",
+    "SubSectorName": "فعالیت های هنری"
+  },
+  {
+    "SubSectorCode": "9301",
+    "SectorCode": "93 ",
+    "SubSectorName": "فعالیتهای ورزشی"
+  },
+  {
+    "SubSectorCode": "9312",
+    "SectorCode": "93 ",
+    "SubSectorName": "فعالیت های باشگاه های ورزشی"
+  },
+  {
+    "SubSectorCode": "9899",
+    "SectorCode": "98 ",
+    "SubSectorName": "اوراق غیرفعال"
+  }
+]

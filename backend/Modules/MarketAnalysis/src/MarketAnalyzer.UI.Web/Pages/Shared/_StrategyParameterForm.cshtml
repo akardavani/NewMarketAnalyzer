@@ -1,0 +1,251 @@
+﻿
+@model MarketAnalyzer.UI.Web.Pages.StrategyParameterFormViewModel
+
+@using MarketAnalyzer.SharedKernel
+
+@if (Model.Definition != null)
+{
+    <hr />
+
+    <div class="row g-3">
+
+        @foreach (var parameter in Model.Definition.Parameters)
+        {
+            var currentValue = Model.Input.Parameters.GetValueOrDefault(parameter.Name);
+
+            <div class="col-12 col-md-4">
+
+                <label class="form-label d-block">
+                    @(string.IsNullOrWhiteSpace(parameter.Label) ? parameter.Name : parameter.Label)
+
+                    @if (parameter.IsRequired)
+                    {
+                        <span class="text-danger">*</span>
+                    }
+                </label>
+
+                @switch (parameter.Type)
+                {
+                    case StrategyParameterType.Text:
+                        <input class="form-control"
+                               name="Input.Parameters[@parameter.Name]"
+                               value="@currentValue" />
+                        break;
+
+                    case StrategyParameterType.Number:
+                        <input class="form-control"
+                               type="number"
+                               step="any"
+                               name="Input.Parameters[@parameter.Name]"
+                               value="@currentValue" />
+                        break;
+
+                    case StrategyParameterType.Date:
+                        <input type="text"
+                               class="form-control persian-date"
+                               name="Input.Parameters[@parameter.Name]"
+                               value="@currentValue"
+                               autocomplete="off" />
+                        break;
+
+                    case StrategyParameterType.Boolean:
+                        <select class="form-select searchable-select"
+                                name="Input.Parameters[@parameter.Name]">
+
+                            @if (currentValue == "true")
+                            {
+                                <option value="true" selected>Yes</option>
+                                <option value="false">No</option>
+                            }
+                            else
+                            {
+                                <option value="true">Yes</option>
+                                <option value="false" selected>No</option>
+                            }
+
+                        </select>
+                        break;
+
+                    case StrategyParameterType.Select:
+                    case StrategyParameterType.Timeframe:
+
+                        var selectedValues = new HashSet<string>(
+                            (currentValue ?? "")
+                                .Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries),
+                            StringComparer.OrdinalIgnoreCase
+                        );
+
+                        if (parameter.IsMultiple)
+                        {
+                            <select class="form-select searchable-select"
+                                    name="Input.Parameters[@parameter.Name]"
+                                    multiple>
+
+                                @foreach (var option in parameter.Options)
+                                {
+                                    if (selectedValues.Contains(option.Value))
+                                    {
+                                        <option value="@option.Value" selected>
+                                            @option.Text
+                                        </option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@option.Value">
+                                            @option.Text
+                                        </option>
+                                    }
+                                }
+
+                            </select>
+                        }
+                        else
+                        {
+                            <select class="form-select searchable-select"
+                                    name="Input.Parameters[@parameter.Name]">
+
+                                @foreach (var option in parameter.Options)
+                                {
+                                    if (currentValue == option.Value)
+                                    {
+                                        <option value="@option.Value" selected>@option.Text</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@option.Value">@option.Text</option>
+                                    }
+                                }
+
+                            </select>
+                        }
+
+                        break;
+
+                    case StrategyParameterType.File:
+                        <input class="form-control"
+                               type="file"
+                               name="Files_@parameter.Name" />
+                        break;
+
+                    case StrategyParameterType.Files:
+                        <input class="form-control"
+                               type="file"
+                               name="Files_@parameter.Name"
+                               multiple />
+                        break;
+                }
+
+            </div>
+        }
+
+    </div>
+}
+
+
+@* @model MarketAnalyzer.UI.Web.Pages.StrategyParameterFormViewModel
+
+@using MarketAnalyzer.SharedKernel
+
+@if (Model.Definition != null)
+{
+    <hr />
+
+    <div class="row g-3">
+
+        @foreach (var parameter in Model.Definition.Parameters)
+        {
+            var currentValue = Model.Input.Parameters.GetValueOrDefault(parameter.Name);
+
+            <div class="col-12 col-md-4">
+
+                <label class="form-label d-block">
+                    @(string.IsNullOrWhiteSpace(parameter.Label) ? parameter.Name : parameter.Label)
+
+                    @if (parameter.IsRequired)
+                    {
+                        <span class="text-danger">*</span>
+                    }
+                </label>
+
+                @switch (parameter.Type)
+                {
+                    case StrategyParameterType.Text:
+                        <input class="form-control"
+                               name="Input.Parameters[@parameter.Name]"
+                               value="@currentValue" />
+                        break;
+
+                    case StrategyParameterType.Number:
+                        <input class="form-control"
+                               type="number"
+                               step="any"
+                               name="Input.Parameters[@parameter.Name]"
+                               value="@currentValue" />
+                        break;
+
+                    case StrategyParameterType.Date:
+                        <input type="text"
+                               class="form-control persian-date"
+                               name="Input.Parameters[@parameter.Name]"
+                               value="@currentValue"
+                               autocomplete="off" />
+                        break;
+
+                    case StrategyParameterType.Boolean:
+                        <select class="form-select searchable-select"
+                                name="Input.Parameters[@parameter.Name]">
+
+                            @if (currentValue == "true")
+                            {
+                                <option value="true" selected>Yes</option>
+                                <option value="false">No</option>
+                            }
+                            else
+                            {
+                                <option value="true">Yes</option>
+                                <option value="false" selected>No</option>
+                            }
+
+                        </select>
+                        break;
+
+                    case StrategyParameterType.Select:
+                    case StrategyParameterType.Timeframe:
+                        <select class="form-select searchable-select"
+                                name="Input.Parameters[@parameter.Name]">
+
+                            @foreach (var option in parameter.Options)
+                            {
+                                if (currentValue == option.Value)
+                                {
+                                    <option value="@option.Value" selected>@option.Text</option>
+                                }
+                                else
+                                {
+                                    <option value="@option.Value">@option.Text</option>
+                                }
+                            }
+
+                        </select>
+                        break;
+
+                    case StrategyParameterType.File:
+                        <input class="form-control"
+                               type="file"
+                               name="Files_@parameter.Name" />
+                        break;
+
+                    case StrategyParameterType.Files:
+                        <input class="form-control"
+                               type="file"
+                               name="Files_@parameter.Name"
+                               multiple />
+                        break;
+                }
+
+            </div>
+        }
+
+    </div>
+}
+ *@

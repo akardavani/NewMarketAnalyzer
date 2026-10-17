@@ -1,0 +1,13 @@
+C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.DataProvider\bin\Debug\net8.0\MarketAnalyzer.DataProvider.deps.json
+C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.DataProvider\bin\Debug\net8.0\MarketAnalyzer.DataProvider.dll
+C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.DataProvider\bin\Debug\net8.0\MarketAnalyzer.DataProvider.pdb
+C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.DataProvider\obj\Debug\net8.0\MarketAnalyzer.DataProvider.csproj.AssemblyReference.cache
+C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.DataProvider\obj\Debug\net8.0\MarketAnalyzer.DataProvider.GeneratedMSBuildEditorConfig.editorconfig
+C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.DataProvider\obj\Debug\net8.0\MarketAnalyzer.DataProvider.AssemblyInfoInputs.cache
+C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.DataProvider\obj\Debug\net8.0\MarketAnalyzer.DataProvider.AssemblyInfo.cs
+C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.DataProvider\obj\Debug\net8.0\MarketAnalyzer.DataProvider.csproj.CoreCompileInputs.cache
+C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.DataProvider\obj\Debug\net8.0\MarketAnalyzer.DataProvider.sourcelink.json
+C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.DataProvider\obj\Debug\net8.0\MarketAnalyzer.DataProvider.dll
+C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.DataProvider\obj\Debug\net8.0\refint\MarketAnalyzer.DataProvider.dll
+C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.DataProvider\obj\Debug\net8.0\MarketAnalyzer.DataProvider.pdb
+C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.DataProvider\obj\Debug\net8.0\ref\MarketAnalyzer.DataProvider.dll

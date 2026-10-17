@@ -1,0 +1,1003 @@
+[
+  {
+    "Id": 1,
+    "Title": "صفحه اصلی",
+    "Path": "/",
+    "DisplayOrder": 0,
+    "Icon": "pa-home-page",
+    "RequiredRoute": null,
+    "IsActive": true
+  },
+
+  {
+    "Id": 100,
+    "Title": "مدیریت درخواست",
+    "Path": null,
+    "DisplayOrder": 100,
+    "Icon": "",
+    "RequiredRoute": null,
+    "IsActive": true,
+    "SubMenus": [
+      {
+        "Id": 101,
+        "Title": "درخواست‌ها",
+        "Path": "assets/requests",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "Request/GetAll",
+        "IsActive": true
+      },
+      {
+        "Id": 102,
+        "Title": "درخواست صدور",
+        "Path": "assets/issuance-request",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "Request/Issue",
+        "IsActive": false
+      },
+      {
+        "Id": 103,
+        "Title": "درخواست ابطال",
+        "Path": "assets/cancellation-request",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "Request/Cancel",
+        "IsActive": false
+      },
+      {
+        "Id": 104,
+        "Title": "صدور و ابطال دسته‌ای",
+        "Path": "assets/batch-request",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "Request/CreateBatchRequests",
+        "IsActive": true,
+        "RequiredInvestmentTypes": [ 2 ]
+      },
+      {
+        "Id": 105,
+        "Title": "درخواست وثیقه",
+        "Path": "assets/collateral-request",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "CollateralRequest/Create",
+        "IsActive": true
+      },
+      {
+        "Id": 106,
+        "Title": "ثبت گواهی ممتاز",
+        "Path": "assets/super-unit-issuance",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "Request/SuperUnitIssue",
+        "IsActive": false
+      },
+      {
+        "Id": 107,
+        "Title": "پذیره نویسی",
+        "Path": "assets/under-writing-request",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "Request/UnderWriting",
+        "IsActive": true
+      },
+      {
+        "Id": 108,
+        "Title": "لیست گواهی‌ها",
+        "Path": "assets/certificates",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "InvestorPortfolio/Certificates",
+        "IsActive": true
+      }
+
+    ]
+  },
+
+  {
+    "Id": 200,
+    "Title": "خالص ارزش دارایی‌ها",
+    "Path": null,
+    "DisplayOrder": 200,
+    "Icon": "",
+    "RequiredRoute": null,
+    "IsActive": true,
+    "SubMenus": [
+      {
+        "Id": 201,
+        "Title": "گزارش NAV",
+        "Path": "assets/nav-report",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "NetAssetValue/GetAll",
+        "IsActive": true
+      },
+      {
+        "Id": 202,
+        "Title": "لیست NAV",
+        "Path": "assets/nav-list",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "NetAssetValue/NetAssetValuesListGetAll",
+        "IsActive": true
+      },
+      {
+        "Id": 203,
+        "Title": "محاسبه NAV",
+        "Path": "assets/calculate-nav",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "NetAssetValue/Calculate",
+        "IsActive": true
+      },
+      {
+        "Id": 206,
+        "Title": "ترکیب دارایی‌های صندوق",
+        "Path": "assets/asset-composition",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "NetAssetValue/AssetComposition",
+        "IsActive": true
+      },
+
+      {
+        "Id": 209,
+        "Title": "دریافت فایل XML",
+        "Path": "assets/fund-xml-report",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "FundXmlReport/GetAll",
+        "IsActive": true
+      }
+    ]
+  },
+
+  {
+    "Id": 300,
+    "Title": "حسابداری",
+    "Path": null,
+    "DisplayOrder": 300,
+    "Icon": "",
+    "RequiredRoute": null,
+    "IsActive": true,
+    "SubMenus": [
+      {
+        "Id": 301,
+        "Title": "اسناد",
+        "Path": "accounting/vouchers",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "Voucher/GetAll",
+        "IsActive": true
+      },
+      {
+        "Id": 302,
+        "Title": "دفتر روزنامه",
+        "Path": "accounting/journal",
+        "DisplayOrder": 1,
+        "Icon": "",
+        "RequiredRoute": "Accounting/JournalBook",
+        "IsActive": true
+      },
+      {
+        "Id": 303,
+        "Title": "دفتر حساب",
+        "Path": "accounting/accounting-book",
+        "DisplayOrder": 2,
+        "Icon": "",
+        "RequiredRoute": "Accounting/AccountingBook",
+        "IsActive": true
+      },
+      {
+        "Id": 304,
+        "Title": "گزارش سود و زیان",
+        "Path": "accounting/income-statement",
+        "DisplayOrder": 3,
+        "Icon": "",
+        "RequiredRoute": "Accounting/IncomeStatement",
+        "IsActive": true
+      },
+      {
+        "Id": 305,
+        "Title": "تراز آزمایشی",
+        "Path": "accounting/trial-balance",
+        "DisplayOrder": 4,
+        "Icon": "",
+        "RequiredRoute": "Accounting/TrialBalance",
+        "IsActive": true
+      },
+      {
+        "Id": 306,
+        "Title": "ترازنامه",
+        "Path": "accounting/balance-sheet",
+        "DisplayOrder": 5,
+        "Icon": "",
+        "RequiredRoute": "Accounting/BalanceSheet",
+        "IsActive": true
+      },
+      {
+        "Id": 307,
+        "Title": "ترازنامه به ارزش روز",
+        "Path": "accounting/fair-value-balance-sheet",
+        "DisplayOrder": 6,
+        "Icon": "",
+        "RequiredRoute": "Accounting/FairValueBalanceSheet",
+        "IsActive": true
+      },
+      {
+        "Id": 308,
+        "Title": "مدیریت حساب‌ها",
+        "Path": "accounting/accounts",
+        "DisplayOrder": 7,
+        "Icon": "",
+        "RequiredRoute": "Accounting/GetAllAccounts",
+        "IsActive": true
+      },
+      {
+        "Id": 309,
+        "Title": "مدیریت سال مالی",
+        "Path": "accounting/fiscal-years",
+        "DisplayOrder": 8,
+        "Icon": "",
+        "RequiredRoute": "FiscalYear/GetAll",
+        "IsActive": true
+      },
+      {
+        "Id": 312,
+        "Title": "واریزی نامشخص",
+        "Path": "cash/unknown-deposit",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "UnknownDeposit/GetAll",
+        "IsActive": true
+      },
+      {
+        "Id": 313,
+        "Title": "تنظیمات حسابداری",
+        "Path": "accounting/settings",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "AccountingConfig/GetAllVoucherTypeIndicators'",
+        "IsActive": true
+      }
+    ]
+  },
+
+  {
+    "Id": 400,
+    "Title": "بورس",
+    "Path": null,
+    "DisplayOrder": 400,
+    "Icon": "",
+    "RequiredRoute": null,
+    "IsActive": true,
+    "SubMenus": [
+      {
+        "Id": 402,
+        "Title": "عملکرد سبد",
+        "Path": "bourse/portfolios",
+        "DisplayOrder": 402,
+        "Icon": "",
+        "RequiredRoute": "Portfolio/GetByStock",
+        "IsActive": true
+      },
+      {
+        "Id": 415,
+        "Title": "عملکرد اوراق با درآمد ثابت",
+        "Path": "bourse/bond-portfolios",
+        "DisplayOrder": 415,
+        "Icon": "",
+        "RequiredRoute": "Portfolio/GetByBond",
+        "IsActive": true
+      },
+      {
+        "Id": 403,
+        "Title": "کاردکس سهام",
+        "Path": "bourse/cardex",
+        "DisplayOrder": 403,
+        "Icon": "",
+        "RequiredRoute": "Portfolio/GetCardices",
+        "IsActive": true
+      },
+      {
+        "Id": 404,
+        "Title": "اختیار",
+        "Path": "bourse/options",
+        "DisplayOrder": 404,
+        "Icon": "",
+        "RequiredRoute": "Derivatives/Options",
+        "IsActive": true
+      },
+      {
+        "Id": 405,
+        "Title": "تبعی",
+        "Path": "bourse/embeddeds",
+        "DisplayOrder": 405,
+        "Icon": "",
+        "RequiredRoute": "Derivatives/Embeddeds",
+        "IsActive": true
+      },
+      {
+        "Id": 406,
+        "Title": "بارگزاری فایل معاملاتی",
+        "Path": "bourse/upload-bbs",
+        "DisplayOrder": 406,
+        "Icon": "",
+        "RequiredRoute": "Trade/UploadBbsFile",
+        "IsActive": true
+      },
+      {
+        "Id": 408,
+        "Title": "دریافت سود سهام",
+        "Path": "bourse/dividends",
+        "DisplayOrder": 408,
+        "Icon": "",
+        "RequiredRoute": "Portfolio/ReceiveDividends",
+        "IsActive": true
+      },
+      {
+        "Id": 409,
+        "Title": "افزایش سرمایه",
+        "Path": "bourse/capital-changes",
+        "DisplayOrder": 409,
+        "Icon": "",
+        "RequiredRoute": "Portfolio/GetCapitalChanges",
+        "IsActive": true
+      },
+      {
+        "Id": 411,
+        "Title": "تعدیل قیمت",
+        "Path": "bourse/price-adjustments",
+        "DisplayOrder": 411,
+        "Icon": "",
+        "RequiredRoute": "PriceAdjustment/GetAll",
+        "IsActive": true
+      },
+      {
+        "Id": 412,
+        "Title": "لیست اوراق با درآمد ثابت",
+        "Path": "bourse/bonds-list",
+        "DisplayOrder": 412,
+        "Icon": "",
+        "RequiredRoute": "Portfolio/BondsList",
+        "IsActive": true
+      },
+      {
+        "Id": 414,
+        "Title": "لیست معاملات",
+        "Path": "bourse/trades",
+        "DisplayOrder": 414,
+        "Icon": "",
+        "RequiredRoute": "Trade/GetAll",
+        "IsActive": true
+      },
+      {
+        "Id": 416,
+        "Title": "کاردکس اوراق غیر بورسی",
+        "Path": "bourse/cardices",
+        "DisplayOrder": 416,
+        "Icon": "",
+        "RequiredRoute": "BankCertificateDepositPortfolio/GetCardices",
+        "IsActive": true
+      },
+      {
+        "Id": 413,
+        "Title": "نمادها",
+        "Path": "bourse/instrumnets",
+        "DisplayOrder": 413,
+        "Icon": "",
+        "RequiredRoute": "Instrument/GetAll",
+        "IsActive": true
+      },
+      {
+        "Id": 407,
+        "Title": "اوراق غیر بورسی",
+        "Path": "bourse/bank-certificate-deposit",
+        "DisplayOrder": 407,
+        "Icon": "",
+        "RequiredRoute": null,
+        "IsActive": true
+      },
+      {
+        "Id": 410,
+        "Title": "معاملات گواهی سپرده بانکی",
+        "Path": "bourse/bank-certificate-deposit-trades",
+        "DisplayOrder": 410,
+        "Icon": "",
+        "RequiredRoute": "Trade/GetAllBankCertificateDepositTrades",
+        "IsActive": true
+      },
+      {
+        "Id": 417,
+        "Title": "سبد صندوق‌های سرمایه گذاری",
+        "Path": "bourse/funds-portfolio",
+        "DisplayOrder": 417,
+        "Icon": "",
+        "RequiredRoute": null,
+        "IsActive": true
+      },
+      {
+        "Id": 418,
+        "Title": "کاردکس صندوق‌های سرمایه گذاری",
+        "Path": "bourse/funds-cardex",
+        "DisplayOrder": 418,
+        "Icon": "",
+        "RequiredRoute": null,
+        "IsActive": true
+      },
+      {
+        "Id": 419,
+        "Title": "معاملات صندوق‌های سرمایه گذاری",
+        "Path": "bourse/fund-trades",
+        "DisplayOrder": 419,
+        "Icon": "",
+        "RequiredRoute": null,
+        "IsActive": true
+      },
+      {
+        "Id": 420,
+        "Title": "صندوق‌های سرمایه گذاری",
+        "Path": "bourse/funds",
+        "DisplayOrder": 420,
+        "Icon": "",
+        "RequiredRoute": null,
+        "IsActive": true
+      },
+      {
+        "Id": 421,
+        "Title": "گزارش سود صندوق‌های سرمایه گذاری",
+        "Path": "bourse/funds-dividends",
+        "DisplayOrder": 421,
+        "Icon": "",
+        "RequiredRoute": null,
+        "IsActive": true
+      }
+    ]
+  },
+
+  {
+    "Id": 500,
+    "Title": "سرمایه گذاران",
+    "Path": null,
+    "DisplayOrder": 500,
+    "Icon": "",
+    "RequiredRoute": null,
+    "IsActive": true,
+    "SubMenus": [
+      {
+        "Id": 501,
+        "Title": "گردش حساب مشتریان",
+        "Path": "assets/investor-account-turnover",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "InvestorPortfolio/GetTurnover",
+        "IsActive": true
+      },
+      {
+        "Id": 502,
+        "Title": "کاردکس سرمایه‌گذار",
+        "Path": "assets/request-cardexes",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "Request/GetRequestCardexes",
+        "IsActive": true
+      },
+      {
+        "Id": 503,
+        "Title": "گزارش سود پرداختنی به سرمایه‌گذاران",
+        "Path": "assets/daily-interest-payable-to-investor",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "DailyInterestPayableToInvestor/GetAll",
+        "IsActive": true
+      }
+
+    ]
+  },
+
+  {
+    "Id": 600,
+    "Title": "فعالیت های جاری",
+    "Path": null,
+    "DisplayOrder": 600,
+    "Icon": "",
+    "RequiredRoute": null,
+    "IsActive": false,
+    "SubMenus": [
+
+    ]
+  },
+
+  {
+    "Id": 700,
+    "Title": "گزارش‌های صورت مالی",
+    "Path": null,
+    "DisplayOrder": 700,
+    "Icon": "",
+    "RequiredRoute": null,
+    "IsActive": true,
+    "SubMenus": [
+      {
+        "Id": 701,
+        "Title": "دارایی‌ها به تفکیک صنعت",
+        "Path": "assets/asset-composition-per-sector",
+        "DisplayOrder": 601,
+        "Icon": "",
+        "RequiredRoute": null,
+        "IsActive": true
+      },
+      {
+        "Id": 702,
+        "Title": "سود و زیان تحقق نیافته",
+        "Path": "bourse/unrealized-profit-loss",
+        "DisplayOrder": 602,
+        "Icon": "",
+        "RequiredRoute": "Portfolio/UnrealizedProfitLossReport",
+        "IsActive": true
+      },
+      {
+        "Id": 703,
+        "Title": "سود و زیان فروش",
+        "Path": "bourse/sales-profit-loss",
+        "DisplayOrder": 603,
+        "Icon": "",
+        "RequiredRoute": "Portfolio/SalesProfitLossReport",
+        "IsActive": true
+      },
+      {
+        "Id": 704,
+        "Title": "سود و زیان ناشی از اعمال اختیار",
+        "Path": "bourse/options-settlement-profit-loss",
+        "DisplayOrder": 604,
+        "Icon": "",
+        "RequiredRoute": "Derivatives/OptionsSettlementProfitLoss",
+        "IsActive": true
+      },
+      {
+        "Id": 705,
+        "Title": "صورت گردش خالص دارایی‌ها",
+        "Path": "assets/net-asset-turnover-statement",
+        "DisplayOrder": 605,
+        "Icon": "",
+        "RequiredRoute": "NetAssetValue/TurnoverStatement",
+        "IsActive": true
+      },
+      {
+        "Id": 706,
+        "Title": "گزارش افشای ماهانه پورتفو",
+        "Path": "bourse/portfolio-statement",
+        "DisplayOrder": 606,
+        "Icon": "",
+        "RequiredRoute": null,
+        "IsActive": true
+      },
+      {
+        "Id": 707,
+        "Title": "گزارش صورت‌های مالی",
+        "Path": "bourse/financial-statement-report",
+        "DisplayOrder": 607,
+        "Icon": "",
+        "RequiredRoute": null,
+        "IsActive": true
+      }
+    ]
+  },
+
+  {
+    "Id": 800,
+    "Title": "امنیت و دسترسی",
+    "Path": null,
+    "DisplayOrder": 800,
+    "Icon": "",
+    "RequiredRoute": null,
+    "IsActive": true,
+    "SubMenus": [
+      {
+        "Id": 801,
+        "Title": "کاربران",
+        "Path": "membership/users",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "User/GetAll",
+        "IsActive": true
+      },
+      {
+        "Id": 802,
+        "Title": "نقش‌ها",
+        "Path": "membership/roles",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "Role/GetAll",
+        "IsActive": true
+      },
+      {
+        "Id": 803,
+        "Title": "گزارش ورود و خروج کاربران",
+        "Path": "membership/users-login-history",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "Account/UsersLoginHistory",
+        "IsActive": true
+      },
+      {
+        "Id": 804,
+        "Title": "گزارش ورود و خروج ناشناس",
+        "Path": "membership/unknown-login-history",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "Account/UnknownLoginHistory",
+        "IsActive": true
+      }
+    ]
+  },
+
+  {
+    "Id": 900,
+    "Title": "عملیات بانکی",
+    "Path": null,
+    "DisplayOrder": 900,
+    "Icon": "",
+    "RequiredRoute": null,
+    "IsActive": true,
+    "SubMenus": [
+      {
+        "Id": 901,
+        "Title": "پرداخت به سرمایه گذار",
+        "Path": "cash/investors-payment",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "PaymentRequest/Investors",
+        "IsActive": true
+      },
+      {
+        "Id": 902,
+        "Title": "پرداخت به سایر",
+        "Path": "cash/others-payment",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "PaymentRequest/Others",
+        "IsActive": true
+      },
+      {
+        "Id": 903,
+        "Title": "انتقال وجه بانکی",
+        "Path": "cash/bank-transfer-money",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "PaymentOrder/BankMoneyTransfer",
+        "IsActive": false
+      },
+      {
+        "Id": 904,
+        "Title": "لیست دستور پرداخت",
+        "Path": "cash/payment-orders",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "PaymentOrder/GetAll",
+        "IsActive": true
+      },
+      {
+        "Id": 905,
+        "Title": "علت پرداخت",
+        "Path": "cash/payment-reason",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "PaymentReason/GetAll",
+        "IsActive": true
+      },
+      {
+        "Id": 906,
+        "Title": "دریافت سود بانک",
+        "Path": "cash/bank-interest",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "ReceiveBankInterest/GetAll",
+        "IsActive": true
+      },
+      {
+        "Id": 907,
+        "Title": "تسویه با کارگزاری",
+        "Path": "cash/brokers-settlement",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "PaymentRequest/Brokers",
+        "IsActive": true
+      }
+    ]
+  },
+
+  {
+    "Id": 1000,
+    "Title": "مدیریت محتوا",
+    "Path": null,
+    "DisplayOrder": 1000,
+    "Icon": "",
+    "RequiredRoute": null,
+    "IsActive": true,
+    "SubMenus": [
+      {
+        "Id": 1001,
+        "Title": "اخبار",
+        "Path": "cms/news",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "News/GetAll",
+        "IsActive": true
+      },
+      {
+        "Id": 1002,
+        "Title": "دسته بندی اخبار",
+        "Path": "cms/newsCategory",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "NewsCategory/GetAll",
+        "IsActive": true
+      },
+      {
+        "Id": 1003,
+        "Title": "مدیریت صفحات پرتال",
+        "Path": "cms/portal-pages-management",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "NewsCategory/GetAll",
+        "IsActive": true
+      }
+    ]
+  },
+
+  {
+    "Id": 1300,
+    "Title": "مدیریت اشخاص",
+    "Path": null,
+    "DisplayOrder": 1300,
+    "Icon": "",
+    "RequiredRoute": null,
+    "IsActive": true,
+    "SubMenus": [
+      {
+        "Id": 1301,
+        "Title": "فهرست اشخاص",
+        "Path": "crm/persons",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "Person/GetAll",
+        "IsActive": true
+      }
+    ]
+  },
+
+  {
+    "Id": 1400,
+    "Title": "سایر",
+    "Path": null,
+    "DisplayOrder": 1400,
+    "Icon": "",
+    "RequiredRoute": null,
+    "IsActive": true,
+    "SubMenus": [
+      {
+        "Id": 1401,
+        "Title": "هزینه‌های ثابت",
+        "Path": "assets/fixed-costs",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "FixedCosts/GetAll",
+        "IsActive": true
+      },
+      {
+        "Id": 1402,
+        "Title": "نوع هزینه‌های ثابت",
+        "Path": "assets/fixed-cost-type",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "FixedCostType/GetAll",
+        "IsActive": true
+      },
+      {
+        "Id": 1403,
+        "Title": "جزئیات کارمزد ارکان",
+        "Path": "assets/pillar-performance-based-details",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "Pillar/GetPerformanceBasedDetails",
+        "IsActive": true
+      },
+      {
+        "Id": 1404,
+        "Title": "گزارش هزینه متغیر نرم‌افزار",
+        "Path": "assets/software-costs-details",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "SoftwareCost/Details",
+        "IsActive": true
+      }
+    ]
+  },
+
+  {
+    "Id": 1100,
+    "Title": "تعاریف پایه",
+    "Path": null,
+    "DisplayOrder": 1100,
+    "Icon": "",
+    "RequiredRoute": null,
+    "IsActive": true,
+    "SubMenus": [
+      {
+        "Id": 1101,
+        "Title": "بانک",
+        "Path": "crm/bank",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "Bank/GetAll",
+        "IsActive": false
+      },
+      {
+        "Id": 1102,
+        "Title": "شعب بانک",
+        "Path": "crm/bank-branch",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "Bank/GetAllBranches",
+        "IsActive": false
+      },
+      {
+        "Id": 1103,
+        "Title": "حساب های بانکی صندوق",
+        "Path": "crm/company-bank-account",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "CompanyBankAccount/GetAll",
+        "IsActive": true
+      },
+      {
+        "Id": 1116,
+        "Title": "ثبت‌نام دسته‌ای سرمایه گذار",
+        "Path": "crm/create-batch-persons",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "Person/GetAll",
+        "IsActive": false
+      },
+      {
+        "Id": 1105,
+        "Title": "کارمزد معاملات",
+        "Path": "bourse/commission",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "Commission/GetAll",
+        "IsActive": true
+      },
+      {
+        "Id": 1106,
+        "Title": "تنظیمات",
+        "Path": "assets/fund-settings",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "FundSetting/Get",
+        "IsActive": true
+      },
+      {
+        "Id": 1107,
+        "Title": "جریمه ابطال",
+        "Path": "assets/cancellation-penalty",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "CancellationPenalty/GetAll",
+        "IsActive": true
+      },
+      {
+        "Id": 1109,
+        "Title": "ارکان صندوق",
+        "Path": "assets/pillars",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "Pillar/GetAll",
+        "IsActive": false
+      },
+      {
+        "Id": 1110,
+        "Title": "رزومه ارکان صندوق",
+        "Path": "assets/pillar-role-resume-file",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "Pillar/GetAllPillarRolesResumeFile",
+        "IsActive": true
+      },
+      {
+        "Id": 1111,
+        "Title": "هزینه نرم افزار",
+        "Path": "assets/software-cost",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "SoftwareCost/Upsert",
+        "IsActive": false
+      },
+      {
+        "Id": 1112,
+        "Title": "کارگزار",
+        "Path": "bourse/brokers",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "Broker/GetAll",
+        "IsActive": true
+      },
+      {
+        "Id": 1113,
+        "Title": "اساسنامه",
+        "Path": "cms/statutes",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "Statute/GetAll",
+        "IsActive": true
+      },
+      {
+        "Id": 1114,
+        "Title": "امیدنامه",
+        "Path": "cms/prospectus",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "Prospectus/GetAll",
+        "IsActive": true
+      },
+      {
+        "Id": 1115,
+        "Title": "بیانیه سیاست‌های سرمایه گذاری",
+        "Path": "cms/policy-statement",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "InvestmentPolicyStatement/GetAll",
+        "IsActive": true
+      },
+      {
+        "Id": 1117,
+        "Title": "وضعیت صندوق",
+        "Path": "assets/fund-status",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "NetAssetValue/FundStatus",
+        "IsActive": true
+      }
+    ]
+  },
+
+  {
+    "Id": 1200,
+    "Title": "متولی",
+    "Path": null,
+    "DisplayOrder": 1200,
+    "Icon": "",
+    "RequiredRoute": null,
+    "IsActive": true,
+    "SubMenus": [
+      {
+        "Id": 1201,
+        "Title": "تایید حساب بانکی",
+        "Path": "trustee/company-bank-account",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "Trustee/ConfirmBankAccounts",
+        "IsActive": true
+      },
+      {
+        "Id": 1202,
+        "Title": "تایید دستور پرداخت",
+        "Path": "trustee/payment-orders",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "Trustee/ConfirmPaymentOrders",
+        "IsActive": true
+      },
+      {
+        "Id": 1203,
+        "Title": "تایید بازگشت به عقب NAV",
+        "Path": "trustee/rollback-nav",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "Trustee/ConfirmRollbackNav",
+        "IsActive": true
+      }
+    ]
+  }
+]

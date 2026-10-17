@@ -1,0 +1,7625 @@
+[
+ {
+  "Id": 1,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "",
+  "Name": "منطقه 1",
+  "ContinueUrl": "tehran-region1",
+  "GlobalLocationId": 246740
+ },
+ {
+  "Id": 2,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "shahrak_laleh",
+  "Name": "شهرک لاله",
+  "ContinueUrl": "tehran-region1-shahrak_laleh",
+  "GlobalLocationId": 328354
+ },
+ {
+  "Id": 3,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "bolvar_daneshjou",
+  "Name": "بلوار دانشجو",
+  "ContinueUrl": "tehran-region1-bolvar_daneshjou",
+  "GlobalLocationId": 247503
+ },
+ {
+  "Id": 4,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "rahman_abad",
+  "Name": "رحمان اباد",
+  "ContinueUrl": "tehran-region1-rahman_abad",
+  "GlobalLocationId": 250314
+ },
+ {
+  "Id": 5,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "saad_abad",
+  "Name": "سعداباد",
+  "ContinueUrl": "tehran-region1-saad_abad",
+  "GlobalLocationId": 250199
+ },
+ {
+  "Id": 6,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "maydan_ghods",
+  "Name": "میدان قدس",
+  "ContinueUrl": "tehran-region1-maydan_ghods",
+  "GlobalLocationId": 250310
+ },
+ {
+  "Id": 7,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "farmaniyeh",
+  "Name": "فرمانیه ",
+  "ContinueUrl": "tehran-region1-farmaniyeh",
+  "GlobalLocationId": 328365
+ },
+ {
+  "Id": 8,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "manzariyeh",
+  "Name": "منظریه ",
+  "ContinueUrl": "tehran-region1-manzariyeh",
+  "GlobalLocationId": 247244
+ },
+ {
+  "Id": 9,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "hesar_buali",
+  "Name": "حصاربوعلی",
+  "ContinueUrl": "tehran-region1-hesar_buali",
+  "GlobalLocationId": 247145
+ },
+ {
+  "Id": 10,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "shahid_sadr",
+  "Name": "شهید صدر",
+  "ContinueUrl": "tehran-region1-shahid_sadr",
+  "GlobalLocationId": 0
+ },
+ {
+  "Id": 11,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "golabdarreh",
+  "Name": "گلاب دره",
+  "ContinueUrl": "tehran-region1-golabdarreh",
+  "GlobalLocationId": 247119
+ },
+ {
+  "Id": 12,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "khiyaban_kamraniye_jonoubi",
+  "Name": "کامرانیه جنوبی",
+  "ContinueUrl": "tehran-region1-khiyaban_kamraniye_jonoubi",
+  "GlobalLocationId": 250191
+ },
+ {
+  "Id": 13,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "kamraniyeh_shomali",
+  "Name": "کامرانیه شمالی",
+  "ContinueUrl": "tehran-region1-kamraniyeh_shomali",
+  "GlobalLocationId": 328351
+ },
+ {
+  "Id": 14,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "bahonar",
+  "Name": "باهنر ",
+  "ContinueUrl": "tehran-region1-bahonar",
+  "GlobalLocationId": 250200
+ },
+ {
+  "Id": 15,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "tajrish",
+  "Name": "تجریش ",
+  "ContinueUrl": "tehran-region1-tajrish",
+  "GlobalLocationId": 247141
+ },
+ {
+  "Id": 16,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "jamaran",
+  "Name": "جماران",
+  "ContinueUrl": "tehran-region1-jamaran",
+  "GlobalLocationId": 247144
+ },
+ {
+  "Id": 17,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "hekmat",
+  "Name": "حکمت",
+  "ContinueUrl": "tehran-region1-hekmat",
+  "GlobalLocationId": 247146
+ },
+ {
+  "Id": 18,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "araj",
+  "Name": "اراج",
+  "ContinueUrl": "tehran-region1-araj",
+  "GlobalLocationId": 247140
+ },
+ {
+  "Id": 19,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "bookan",
+  "Name": "بوکان ",
+  "ContinueUrl": "tehran-region1-bookan",
+  "GlobalLocationId": 328353
+ },
+ {
+  "Id": 20,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "niyavaran",
+  "Name": "نیاوران ",
+  "ContinueUrl": "tehran-region1-niyavaran",
+  "GlobalLocationId": 328366
+ },
+ {
+  "Id": 21,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "dezashib",
+  "Name": "دزاشیب",
+  "ContinueUrl": "tehran-region1-dezashib",
+  "GlobalLocationId": 247033
+ },
+ {
+  "Id": 22,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "yaser",
+  "Name": "یاسر ",
+  "ContinueUrl": "tehran-region1-yaser",
+  "GlobalLocationId": 247524
+ },
+ {
+  "Id": 23,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "shomale_kakh_niyavaran",
+  "Name": "شمال کاخ - نیاوران",
+  "ContinueUrl": "tehran-region1-shomale_kakh_niyavaran",
+  "GlobalLocationId": 328352
+ },
+ {
+  "Id": 24,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "amar",
+  "Name": "عمار ",
+  "ContinueUrl": "tehran-region1-amar",
+  "GlobalLocationId": 250329
+ },
+ {
+  "Id": 25,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "jamshidiyeh",
+  "Name": "جمشیدیه ",
+  "ContinueUrl": "tehran-region1-jamshidiyeh",
+  "GlobalLocationId": 247635
+ },
+ {
+  "Id": 26,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "zaferaniyeh",
+  "Name": "زعفرانیه ",
+  "ContinueUrl": "tehran-region1-zaferaniyeh",
+  "GlobalLocationId": 246807
+ },
+ {
+  "Id": 27,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "evin",
+  "Name": "اوین ",
+  "ContinueUrl": "tehran-region1-evin",
+  "GlobalLocationId": 246945
+ },
+ {
+  "Id": 28,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "mahmudiyeh",
+  "Name": "محمودیه ",
+  "ContinueUrl": "tehran-region1-mahmudiyeh",
+  "GlobalLocationId": 246886
+ },
+ {
+  "Id": 29,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "park_vey",
+  "Name": "پارک وی",
+  "ContinueUrl": "tehran-region1-park_vey",
+  "GlobalLocationId": 250194
+ },
+ {
+  "Id": 30,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "baghferdos",
+  "Name": "باغ فردوس",
+  "ContinueUrl": "tehran-region1-baghferdos",
+  "GlobalLocationId": 246801
+ },
+ {
+  "Id": 31,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "bagh_shater",
+  "Name": "باغ شاطر ",
+  "ContinueUrl": "tehran-region1-bagh_shater",
+  "GlobalLocationId": 250315
+ },
+ {
+  "Id": 32,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "imamzadeh_qasem",
+  "Name": "امام زاده قاسم",
+  "ContinueUrl": "tehran-region1-imamzadeh_qasem",
+  "GlobalLocationId": 247097
+ },
+ {
+  "Id": 33,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "shahrak_kosar",
+  "Name": "شهرک کوثر",
+  "ContinueUrl": "tehran-region1-shahrak_kosar",
+  "GlobalLocationId": 247643
+ },
+ {
+  "Id": 34,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "darabad",
+  "Name": "داراباد ",
+  "ContinueUrl": "tehran-region1-darabad",
+  "GlobalLocationId": 246949
+ },
+ {
+  "Id": 35,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "sohanak",
+  "Name": "سوهانک ",
+  "ContinueUrl": "tehran-region1-sohanak",
+  "GlobalLocationId": 247091
+ },
+ {
+  "Id": 36,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "shahrak_abouzar_artesh",
+  "Name": "شهرک ابوذر - ارتش",
+  "ContinueUrl": "tehran-region1-shahrak_abouzar_artesh",
+  "GlobalLocationId": 247809
+ },
+ {
+  "Id": 37,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "chizar",
+  "Name": "چیذر",
+  "ContinueUrl": "tehran-region1-chizar",
+  "GlobalLocationId": 247031
+ },
+ {
+  "Id": 38,
+  "Province": "tehran",
+  "Region": "darband",
+  "Zone": "",
+  "Name": "دربند ",
+  "ContinueUrl": "tehran-darband",
+  "GlobalLocationId": 273072
+ },
+ {
+  "Id": 39,
+  "Province": "tehran",
+  "Region": "velenjak",
+  "Zone": "",
+  "Name": "ولنجک ",
+  "ContinueUrl": "tehran-velenjak",
+  "GlobalLocationId": 273073
+ },
+ {
+  "Id": 40,
+  "Province": "tehran",
+  "Region": "kamraniyeh",
+  "Zone": "",
+  "Name": "کامرانیه ",
+  "ContinueUrl": "tehran-kamraniyeh",
+  "GlobalLocationId": 273078
+ },
+ {
+  "Id": 41,
+  "Province": "tehran",
+  "Region": "region2",
+  "Zone": "",
+  "Name": "منطقه 2",
+  "ContinueUrl": "tehran-region2",
+  "GlobalLocationId": 246742
+ },
+ {
+  "Id": 42,
+  "Province": "tehran",
+  "Region": "region2",
+  "Zone": "khiyaban_sazman_ab",
+  "Name": "سازمان اب ",
+  "ContinueUrl": "tehran-region2-khiyaban_sazman_ab",
+  "GlobalLocationId": 250215
+ },
+ {
+  "Id": 43,
+  "Province": "tehran",
+  "Region": "region2",
+  "Zone": "shahrak_zhandarmeri",
+  "Name": "شهرک ژاندارمری",
+  "ContinueUrl": "tehran-region2-shahrak_zhandarmeri",
+  "GlobalLocationId": 250202
+ },
+ {
+  "Id": 44,
+  "Province": "tehran",
+  "Region": "region2",
+  "Zone": "shahrak_farhangian_gharb",
+  "Name": "شهرک فرهنگیان غرب",
+  "ContinueUrl": "tehran-region2-shahrak_farhangian_gharb",
+  "GlobalLocationId": 250213
+ },
+ {
+  "Id": 45,
+  "Province": "tehran",
+  "Region": "region2",
+  "Zone": "marzdaran_qharbi",
+  "Name": "مرزداران غربی",
+  "ContinueUrl": "tehran-region2-marzdaran_qharbi",
+  "GlobalLocationId": 246813
+ },
+ {
+  "Id": 46,
+  "Province": "tehran",
+  "Region": "region2",
+  "Zone": "marzdaran_sharghi",
+  "Name": "مرزداران شرقی",
+  "ContinueUrl": "tehran-region2-marzdaran_sharghi",
+  "GlobalLocationId": 246812
+ },
+ {
+  "Id": 47,
+  "Province": "tehran",
+  "Region": "region2",
+  "Zone": "faraz",
+  "Name": "فراز",
+  "ContinueUrl": "tehran-region2-faraz",
+  "GlobalLocationId": 246810
+ },
+ {
+  "Id": 48,
+  "Province": "tehran",
+  "Region": "region2",
+  "Zone": "shahid_golab",
+  "Name": "شهید گلاب",
+  "ContinueUrl": "tehran-region2-shahid_golab",
+  "GlobalLocationId": 250201
+ },
+ {
+  "Id": 49,
+  "Province": "tehran",
+  "Region": "region2",
+  "Zone": "sepehr",
+  "Name": "سپهر ",
+  "ContinueUrl": "tehran-region2-sepehr",
+  "GlobalLocationId": 247853
+ },
+ {
+  "Id": 50,
+  "Province": "tehran",
+  "Region": "region2",
+  "Zone": "eyvanak",
+  "Name": "ایوانک",
+  "ContinueUrl": "tehran-region2-eyvanak",
+  "GlobalLocationId": 246887
+ },
+ {
+  "Id": 51,
+  "Province": "tehran",
+  "Region": "region2",
+  "Zone": "habibollahi",
+  "Name": "حبیب اللهی",
+  "ContinueUrl": "tehran-region2-habibollahi",
+  "GlobalLocationId": 247702
+ },
+ {
+  "Id": 52,
+  "Province": "tehran",
+  "Region": "region2",
+  "Zone": "patris_loumoumba",
+  "Name": "پاتریس لومومبا",
+  "ContinueUrl": "tehran-region2-patris_loumoumba",
+  "GlobalLocationId": 250212
+ },
+ {
+  "Id": 53,
+  "Province": "tehran",
+  "Region": "region2",
+  "Zone": "hormozan_shahrak_gharb",
+  "Name": "هرمزان - شهرک غرب",
+  "ContinueUrl": "tehran-region2-hormozan_shahrak_gharb",
+  "GlobalLocationId": 247631
+ },
+ {
+  "Id": 54,
+  "Province": "tehran",
+  "Region": "region2",
+  "Zone": "ati_saz",
+  "Name": "اتی ساز ",
+  "ContinueUrl": "tehran-region2-ati_saz",
+  "GlobalLocationId": 250218
+ },
+ {
+  "Id": 55,
+  "Province": "tehran",
+  "Region": "region2",
+  "Zone": "pol_modiriyat",
+  "Name": "پل مدیریت",
+  "ContinueUrl": "tehran-region2-pol_modiriyat",
+  "GlobalLocationId": 250219
+ },
+ {
+  "Id": 56,
+  "Province": "tehran",
+  "Region": "region2",
+  "Zone": "shahrak_ghods",
+  "Name": "شهرک قدس",
+  "ContinueUrl": "tehran-region2-shahrak_ghods",
+  "GlobalLocationId": 250222
+ },
+ {
+  "Id": 57,
+  "Province": "tehran",
+  "Region": "region2",
+  "Zone": "shahrak_homa",
+  "Name": "شهرک هما",
+  "ContinueUrl": "tehran-region2-shahrak_homa",
+  "GlobalLocationId": 247629
+ },
+ {
+  "Id": 58,
+  "Province": "tehran",
+  "Region": "region2",
+  "Zone": "kuy_nasr",
+  "Name": "کوی نصر",
+  "ContinueUrl": "tehran-region2-kuy_nasr",
+  "GlobalLocationId": 246892
+ },
+ {
+  "Id": 59,
+  "Province": "tehran",
+  "Region": "region2",
+  "Zone": "shahrara",
+  "Name": "شهرارا",
+  "ContinueUrl": "tehran-region2-shahrara",
+  "GlobalLocationId": 246867
+ },
+ {
+  "Id": 60,
+  "Province": "tehran",
+  "Region": "region2",
+  "Zone": "nasr_gisha",
+  "Name": "نصر - گیشا",
+  "ContinueUrl": "tehran-region2-nasr_gisha",
+  "GlobalLocationId": 250206
+ },
+ {
+  "Id": 61,
+  "Province": "tehran",
+  "Region": "region2",
+  "Zone": "tehranvila",
+  "Name": "تهران ویلا",
+  "ContinueUrl": "tehran-region2-tehranvila",
+  "GlobalLocationId": 247036
+ },
+ {
+  "Id": 62,
+  "Province": "tehran",
+  "Region": "region2",
+  "Zone": "daryanno",
+  "Name": "دریان نو",
+  "ContinueUrl": "tehran-region2-daryanno",
+  "GlobalLocationId": 246889
+ },
+ {
+  "Id": 63,
+  "Province": "tehran",
+  "Region": "region2",
+  "Zone": "tarasht",
+  "Name": "طرشت منطقه 2",
+  "ContinueUrl": "tehran-region2-tarasht",
+  "GlobalLocationId": 246891
+ },
+ {
+  "Id": 64,
+  "Province": "tehran",
+  "Region": "region2",
+  "Zone": "shadman",
+  "Name": "شادمان ",
+  "ContinueUrl": "tehran-region2-shadman",
+  "GlobalLocationId": 250211
+ },
+ {
+  "Id": 65,
+  "Province": "tehran",
+  "Region": "region2",
+  "Zone": "teymuri",
+  "Name": "تیموری منطقه 2",
+  "ContinueUrl": "tehran-region2-teymuri",
+  "GlobalLocationId": 247030
+ },
+ {
+  "Id": 66,
+  "Province": "tehran",
+  "Region": "region2",
+  "Zone": "simaye_iran",
+  "Name": "سیمای ایران",
+  "ContinueUrl": "tehran-region2-simaye_iran",
+  "GlobalLocationId": 250217
+ },
+ {
+  "Id": 67,
+  "Province": "tehran",
+  "Region": "region2",
+  "Zone": "kharazm",
+  "Name": "خوارزم ",
+  "ContinueUrl": "tehran-region2-kharazm",
+  "GlobalLocationId": 250220
+ },
+ {
+  "Id": 68,
+  "Province": "tehran",
+  "Region": "region2",
+  "Zone": "zarafshan",
+  "Name": "زرافشان ",
+  "ContinueUrl": "tehran-region2-zarafshan",
+  "GlobalLocationId": 250208
+ },
+ {
+  "Id": 69,
+  "Province": "tehran",
+  "Region": "region2",
+  "Zone": "punak",
+  "Name": "پونک ",
+  "ContinueUrl": "tehran-region2-punak",
+  "GlobalLocationId": 273114
+ },
+ {
+  "Id": 70,
+  "Province": "tehran",
+  "Region": "region2",
+  "Zone": "hamila",
+  "Name": "همیلا ",
+  "ContinueUrl": "tehran-region2-hamila",
+  "GlobalLocationId": 247466
+ },
+ {
+  "Id": 71,
+  "Province": "tehran",
+  "Region": "region2",
+  "Zone": "aseman",
+  "Name": "اسمان",
+  "ContinueUrl": "tehran-region2-aseman",
+  "GlobalLocationId": 246806
+ },
+ {
+  "Id": 72,
+  "Province": "tehran",
+  "Region": "region2",
+  "Zone": "parvaz",
+  "Name": "پرواز منطقه 2",
+  "ContinueUrl": "tehran-region2-parvaz",
+  "GlobalLocationId": 246888
+ },
+ {
+  "Id": 73,
+  "Province": "tehran",
+  "Region": "region2",
+  "Zone": "farahzad",
+  "Name": "فرحزاد منطقه 2",
+  "ContinueUrl": "tehran-region2-farahzad",
+  "GlobalLocationId": 246811
+ },
+ {
+  "Id": 74,
+  "Province": "tehran",
+  "Region": "region2",
+  "Zone": "derakhti",
+  "Name": "درختی منطقه 2",
+  "ContinueUrl": "tehran-region2-derakhti",
+  "GlobalLocationId": 247037
+ },
+ {
+  "Id": 75,
+  "Province": "tehran",
+  "Region": "region2",
+  "Zone": "bolvar_paknezhad",
+  "Name": "بلوار پاکنژاد",
+  "ContinueUrl": "tehran-region2-bolvar_paknezhad",
+  "GlobalLocationId": 250205
+ },
+ {
+  "Id": 76,
+  "Province": "tehran",
+  "Region": "region2",
+  "Zone": "dadman",
+  "Name": "دادمان‎ ",
+  "ContinueUrl": "tehran-region2-dadman",
+  "GlobalLocationId": 247812
+ },
+ {
+  "Id": 77,
+  "Province": "tehran",
+  "Region": "bargh_alestom",
+  "Zone": "",
+  "Name": "برق الستوم",
+  "ContinueUrl": "tehran-bargh_alestom",
+  "GlobalLocationId": 273085
+ },
+ {
+  "Id": 78,
+  "Province": "tehran",
+  "Region": "marzdaran",
+  "Zone": "",
+  "Name": "مرزداران ",
+  "ContinueUrl": "tehran-marzdaran",
+  "GlobalLocationId": 273087
+ },
+ {
+  "Id": 79,
+  "Province": "tehran",
+  "Region": "region3",
+  "Zone": "",
+  "Name": "منطقه 3",
+  "ContinueUrl": "tehran-region3",
+  "GlobalLocationId": 246690
+ },
+ {
+  "Id": 80,
+  "Province": "tehran",
+  "Region": "region3",
+  "Zone": "hoseinabad_zargandeh",
+  "Name": "حسین اباد - زرگنده",
+  "ContinueUrl": "tehran-region3-hoseinabad_zargandeh",
+  "GlobalLocationId": 246894
+ },
+ {
+  "Id": 81,
+  "Province": "tehran",
+  "Region": "region3",
+  "Zone": "amaniyeh",
+  "Name": "امانیه",
+  "ContinueUrl": "tehran-region3-amaniyeh",
+  "GlobalLocationId": 246881
+ },
+ {
+  "Id": 82,
+  "Province": "tehran",
+  "Region": "region3",
+  "Zone": "bolvar_afrigha",
+  "Name": "بلوار افریقا ",
+  "ContinueUrl": "tehran-region3-bolvar_afrigha",
+  "GlobalLocationId": 250237
+ },
+ {
+  "Id": 83,
+  "Province": "tehran",
+  "Region": "region3",
+  "Zone": "brazil",
+  "Name": "برزیل‎",
+  "ContinueUrl": "tehran-region3-brazil",
+  "GlobalLocationId": 250242
+ },
+ {
+  "Id": 84,
+  "Province": "tehran",
+  "Region": "region3",
+  "Zone": "esfandiyar",
+  "Name": "اسفندیار ",
+  "ContinueUrl": "tehran-region3-esfandiyar",
+  "GlobalLocationId": 250229
+ },
+ {
+  "Id": 85,
+  "Province": "tehran",
+  "Region": "region3",
+  "Zone": "gandi",
+  "Name": "گاندی‎ ",
+  "ContinueUrl": "tehran-region3-gandi",
+  "GlobalLocationId": 250247
+ },
+ {
+  "Id": 86,
+  "Province": "tehran",
+  "Region": "region3",
+  "Zone": "khiyaban_mola_sadra",
+  "Name": "خیابان ملاصدرا",
+  "ContinueUrl": "tehran-region3-khiyaban_mola_sadra",
+  "GlobalLocationId": 250246
+ },
+ {
+  "Id": 87,
+  "Province": "tehran",
+  "Region": "region3",
+  "Zone": "davudiyeh",
+  "Name": "داوودیه",
+  "ContinueUrl": "tehran-region3-davudiyeh",
+  "GlobalLocationId": 246988
+ },
+ {
+  "Id": 88,
+  "Province": "tehran",
+  "Region": "region3",
+  "Zone": "shariyati_zafar",
+  "Name": "شریعتی - ظفر",
+  "ContinueUrl": "tehran-region3-shariyati_zafar",
+  "GlobalLocationId": 328358
+ },
+ {
+  "Id": 89,
+  "Province": "tehran",
+  "Region": "region3",
+  "Zone": "naft_shomali",
+  "Name": "نفت شمالی - دکتر مصدق",
+  "ContinueUrl": "tehran-region3-naft_shomali",
+  "GlobalLocationId": 247476
+ },
+ {
+  "Id": 90,
+  "Province": "tehran",
+  "Region": "region3",
+  "Zone": "mirdamad",
+  "Name": "میرداماد ",
+  "ContinueUrl": "tehran-region3-mirdamad",
+  "GlobalLocationId": 273091
+ },
+ {
+  "Id": 91,
+  "Province": "tehran",
+  "Region": "region3",
+  "Zone": "razan_hesari",
+  "Name": "رازان - حصاری",
+  "ContinueUrl": "tehran-region3-razan_hesari",
+  "GlobalLocationId": 250228
+ },
+ {
+  "Id": 92,
+  "Province": "tehran",
+  "Region": "region3",
+  "Zone": "otouban_haghani",
+  "Name": "اتوبان حقانی",
+  "ContinueUrl": "tehran-region3-otouban_haghani",
+  "GlobalLocationId": 247703
+ },
+ {
+  "Id": 93,
+  "Province": "tehran",
+  "Region": "region3",
+  "Zone": "naft_jonoubi",
+  "Name": "نفت جنوبی",
+  "ContinueUrl": "tehran-region3-naft_jonoubi",
+  "GlobalLocationId": 249044
+ },
+ {
+  "Id": 94,
+  "Province": "tehran",
+  "Region": "region3",
+  "Zone": "qolhak",
+  "Name": "قلهک ",
+  "ContinueUrl": "tehran-region3-qolhak",
+  "GlobalLocationId": 328364
+ },
+ {
+  "Id": 95,
+  "Province": "tehran",
+  "Region": "region3",
+  "Zone": "yakhchal",
+  "Name": "یخچال",
+  "ContinueUrl": "tehran-region3-yakhchal",
+  "GlobalLocationId": 250238
+ },
+ {
+  "Id": 96,
+  "Province": "tehran",
+  "Region": "region3",
+  "Zone": "kavosiyeh",
+  "Name": "کاووسیه",
+  "ContinueUrl": "tehran-region3-kavosiyeh",
+  "GlobalLocationId": 246896
+ },
+ {
+  "Id": 97,
+  "Province": "tehran",
+  "Region": "region3",
+  "Zone": "arash_sharghi",
+  "Name": "ارش شرقی",
+  "ContinueUrl": "tehran-region3-arash_sharghi",
+  "GlobalLocationId": 247637
+ },
+ {
+  "Id": 98,
+  "Province": "tehran",
+  "Region": "region3",
+  "Zone": "darbe_dovom",
+  "Name": "درب دوم",
+  "ContinueUrl": "tehran-region3-darbe_dovom",
+  "GlobalLocationId": 246814
+ },
+ {
+  "Id": 99,
+  "Province": "tehran",
+  "Region": "region3",
+  "Zone": "dibaji_jonoubi",
+  "Name": "دیباجی جنوبی",
+  "ContinueUrl": "tehran-region3-dibaji_jonoubi",
+  "GlobalLocationId": 250239
+ },
+ {
+  "Id": 100,
+  "Province": "tehran",
+  "Region": "region3",
+  "Zone": "gol_nabi",
+  "Name": " گل نبی",
+  "ContinueUrl": "tehran-region3-gol_nabi",
+  "GlobalLocationId": 250233
+ },
+ {
+  "Id": 101,
+  "Province": "tehran",
+  "Region": "region3",
+  "Zone": "shaykh_bahaei_shomali",
+  "Name": "شیخ بهایی شمالی",
+  "ContinueUrl": "tehran-region3-shaykh_bahaei_shomali",
+  "GlobalLocationId": 250231
+ },
+ {
+  "Id": 102,
+  "Province": "tehran",
+  "Region": "region3",
+  "Zone": "bolvar_mirdamad",
+  "Name": "بلوار میرداماد",
+  "ContinueUrl": "tehran-region3-bolvar_mirdamad",
+  "GlobalLocationId": 247504
+ },
+ {
+  "Id": 103,
+  "Province": "tehran",
+  "Region": "region3",
+  "Zone": "bolvar_shahrzad",
+  "Name": "بلوار شهرزاد",
+  "ContinueUrl": "tehran-region3-bolvar_shahrzad",
+  "GlobalLocationId": 250232
+ },
+ {
+  "Id": 104,
+  "Province": "tehran",
+  "Region": "seyyed_khandan",
+  "Zone": "",
+  "Name": "سید خندان",
+  "ContinueUrl": "tehran-seyyed_khandan",
+  "GlobalLocationId": 273097
+ },
+ {
+  "Id": 105,
+  "Province": "tehran",
+  "Region": "dolat_kolahdouz",
+  "Zone": "",
+  "Name": "دولت - کلاهدوز",
+  "ContinueUrl": "tehran-dolat_kolahdouz",
+  "GlobalLocationId": 273094
+ },
+ {
+  "Id": 106,
+  "Province": "tehran",
+  "Region": "region3",
+  "Zone": "ekhtiyariyeh",
+  "Name": "اختیاریه",
+  "ContinueUrl": "tehran-region3-ekhtiyariyeh",
+  "GlobalLocationId": 247039
+ },
+ {
+  "Id": 107,
+  "Province": "tehran",
+  "Region": "qoba",
+  "Zone": "",
+  "Name": "قبا ",
+  "ContinueUrl": "tehran-qoba",
+  "GlobalLocationId": 273096
+ },
+ {
+  "Id": 108,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "",
+  "Name": "منطقه 4",
+  "ContinueUrl": "tehran-region4",
+  "GlobalLocationId": 246685
+ },
+ {
+  "Id": 109,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "kouye_daneshgah_hakimiye",
+  "Name": "کوی دانشگاه - حکیمیه",
+  "ContinueUrl": "tehran-region4-kouye_daneshgah_hakimiye",
+  "GlobalLocationId": 250268
+ },
+ {
+  "Id": 110,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "haydarkhani",
+  "Name": "حیدرخانی",
+  "ContinueUrl": "tehran-region4-haydarkhani",
+  "GlobalLocationId": 250267
+ },
+ {
+  "Id": 111,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "maleklou_elm_o_sanat",
+  "Name": "ملک لو - علم و صنعت",
+  "ContinueUrl": "tehran-region4-maleklou_elm_o_sanat",
+  "GlobalLocationId": 247518
+ },
+ {
+  "Id": 112,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "estakhr",
+  "Name": "استخر ",
+  "ContinueUrl": "tehran-region4-estakhr",
+  "GlobalLocationId": 247639
+ },
+ {
+  "Id": 113,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "qanat_kowsar",
+  "Name": "قنات کوثر",
+  "ContinueUrl": "tehran-region4-qanat_kowsar",
+  "GlobalLocationId": 247123
+ },
+ {
+  "Id": 114,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "tehranpars_qarbi",
+  "Name": "تهران پارس غربی",
+  "ContinueUrl": "tehran-region4-tehranpars_qarbi",
+  "GlobalLocationId": 247040
+ },
+ {
+  "Id": 115,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "tehranpars",
+  "Name": "تهران پارس",
+  "ContinueUrl": "tehran-region4-tehranpars",
+  "GlobalLocationId": 273106
+ },
+ {
+  "Id": 116,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "maydan_shahed",
+  "Name": "میدان شاهد",
+  "ContinueUrl": "tehran-region4-maydan_shahed",
+  "GlobalLocationId": 250283
+ },
+ {
+  "Id": 117,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "falake_sevom_tehranpars",
+  "Name": "فلکه سوم تهرانپارس",
+  "ContinueUrl": "tehran-region4-falake_sevom_tehranpars",
+  "GlobalLocationId": 247818
+ },
+ {
+  "Id": 118,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "jashnvare",
+  "Name": "جشنواره ",
+  "ContinueUrl": "tehran-region4-jashnvare",
+  "GlobalLocationId": 250272
+ },
+ {
+  "Id": 119,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "oqaf",
+  "Name": "اوقاف ",
+  "ContinueUrl": "tehran-region4-oqaf",
+  "GlobalLocationId": 328369
+ },
+ {
+  "Id": 120,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "hengam",
+  "Name": "هنگام",
+  "ContinueUrl": "tehran-region4-hengam",
+  "GlobalLocationId": 247638
+ },
+ {
+  "Id": 121,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "soroush",
+  "Name": "سروش ",
+  "ContinueUrl": "tehran-region4-soroush",
+  "GlobalLocationId": 250280
+ },
+ {
+  "Id": 122,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "delavaran",
+  "Name": "دلاوران",
+  "ContinueUrl": "tehran-region4-delavaran",
+  "GlobalLocationId": 247705
+ },
+ {
+  "Id": 123,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "seraj",
+  "Name": "سراج ",
+  "ContinueUrl": "tehran-region4-seraj",
+  "GlobalLocationId": 247641
+ },
+ {
+  "Id": 124,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "tehranpars_sharqi",
+  "Name": "تهران پارس شرقی",
+  "ContinueUrl": "tehran-region4-tehranpars_sharqi",
+  "GlobalLocationId": 246818
+ },
+ {
+  "Id": 125,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "javadiyeh",
+  "Name": "جوادیه ",
+  "ContinueUrl": "tehran-region4-javadiyeh",
+  "GlobalLocationId": 247014
+ },
+ {
+  "Id": 126,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "golshan",
+  "Name": "گلشن",
+  "ContinueUrl": "tehran-region4-golshan",
+  "GlobalLocationId": 246983
+ },
+ {
+  "Id": 127,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "majidabad",
+  "Name": "مجید اباد",
+  "ContinueUrl": "tehran-region4-majidabad",
+  "GlobalLocationId": 246984
+ },
+ {
+  "Id": 128,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "ordibehesht_shomali",
+  "Name": "اردیبهشت شمالی",
+  "ContinueUrl": "tehran-region4-ordibehesht_shomali",
+  "GlobalLocationId": 250257
+ },
+ {
+  "Id": 129,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "boustan_bolvar_esteghlal",
+  "Name": "بوستان - بلوار استقلال",
+  "ContinueUrl": "tehran-region4-boustan_bolvar_esteghlal",
+  "GlobalLocationId": 250279
+ },
+ {
+  "Id": 130,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "shahrak_pars",
+  "Name": "شهرک پارس",
+  "ContinueUrl": "tehran-region4-shahrak_pars",
+  "GlobalLocationId": 250252
+ },
+ {
+  "Id": 131,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "shahrak_farhangian",
+  "Name": "شهرک فرهنگیان",
+  "ContinueUrl": "tehran-region4-shahrak_farhangian",
+  "GlobalLocationId": 247670
+ },
+ {
+  "Id": 132,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "qaasemabad_dehnarmak",
+  "Name": "قاسم اباد - ده نارمک",
+  "ContinueUrl": "tehran-region4-qaasemabad_dehnarmak",
+  "GlobalLocationId": 246899
+ },
+ {
+  "Id": 133,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "norouziyan",
+  "Name": "نوروزیان ",
+  "ContinueUrl": "tehran-region4-norouziyan",
+  "GlobalLocationId": 250255
+ },
+ {
+  "Id": 134,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "saheb_alzaman_bagheri",
+  "Name": "صاحب الزمان - باقری",
+  "ContinueUrl": "tehran-region4-saheb_alzaman_bagheri",
+  "GlobalLocationId": 250282
+ },
+ {
+  "Id": 135,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "otouban_bagheri",
+  "Name": "اتوبان باقری",
+  "ContinueUrl": "tehran-region4-otouban_bagheri",
+  "GlobalLocationId": 250256
+ },
+ {
+  "Id": 136,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "narmak_shomali",
+  "Name": "نارمک شمالی",
+  "ContinueUrl": "tehran-region4-narmak_shomali",
+  "GlobalLocationId": 246902
+ },
+ {
+  "Id": 137,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "motahari_shahrak_omid",
+  "Name": "مطهری - شهرک امید",
+  "ContinueUrl": "tehran-region4-motahari_shahrak_omid",
+  "GlobalLocationId": 247485
+ },
+ {
+  "Id": 138,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "chaman_ara",
+  "Name": "چمن ارا",
+  "ContinueUrl": "tehran-region4-chaman_ara",
+  "GlobalLocationId": 250251
+ },
+ {
+  "Id": 139,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "shahrak_shahid_beheshti_estakhr",
+  "Name": "شهرک شهید بهشتی",
+  "ContinueUrl": "tehran-region4-shahrak_shahid_beheshti_estakhr",
+  "GlobalLocationId": 247578
+ },
+ {
+  "Id": 140,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "shahrak_shahid_shahpariyan",
+  "Name": "شهرک شهید شهپریان",
+  "ContinueUrl": "tehran-region4-shahrak_shahid_shahpariyan",
+  "GlobalLocationId": 247688
+ },
+ {
+  "Id": 141,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "shahrak_shahid_hashemi_nezhad",
+  "Name": "شهرک شهیدهاشمی نژاد",
+  "ContinueUrl": "tehran-region4-shahrak_shahid_hashemi_nezhad",
+  "GlobalLocationId": 250276
+ },
+ {
+  "Id": 142,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "varbaz",
+  "Name": "وارباز ",
+  "ContinueUrl": "tehran-region4-varbaz",
+  "GlobalLocationId": 250260
+ },
+ {
+  "Id": 143,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "paydarfard_amir_ebrahimi",
+  "Name": "پایدارفرد - امیر ابراهیمی",
+  "ContinueUrl": "tehran-region4-paydarfard_amir_ebrahimi",
+  "GlobalLocationId": 247704
+ },
+ {
+  "Id": 144,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "zarabkhaneh",
+  "Name": "ضرابخانه",
+  "ContinueUrl": "tehran-region4-zarabkhaneh",
+  "GlobalLocationId": 250250
+ },
+ {
+  "Id": 145,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "gilan",
+  "Name": "گیلان ",
+  "ContinueUrl": "tehran-region4-gilan",
+  "GlobalLocationId": 250253
+ },
+ {
+  "Id": 146,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "pasdaran_zarabkhaneh",
+  "Name": "پاسداران - ضرابخانه",
+  "ContinueUrl": "tehran-region4-pasdaran_zarabkhaneh",
+  "GlobalLocationId": 246897
+ },
+ {
+  "Id": 147,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "moghan",
+  "Name": "مغان ",
+  "ContinueUrl": "tehran-region4-moghan",
+  "GlobalLocationId": 250248
+ },
+ {
+  "Id": 148,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "hoseinabad_mobarakabad",
+  "Name": "حسین اباد - مبارک اباد",
+  "ContinueUrl": "tehran-region4-hoseinabad_mobarakabad",
+  "GlobalLocationId": 246898
+ },
+ {
+  "Id": 149,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "kouy_nobonyad",
+  "Name": "کوی نوبنیاد",
+  "ContinueUrl": "tehran-region4-kouy_nobonyad",
+  "GlobalLocationId": 250269
+ },
+ {
+  "Id": 150,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "shamsabad_majidiyeh",
+  "Name": "شمس اباد - مجیدیه",
+  "ContinueUrl": "tehran-region4-shamsabad_majidiyeh",
+  "GlobalLocationId": 246982
+ },
+ {
+  "Id": 151,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "kalad",
+  "Name": "کالاد",
+  "ContinueUrl": "tehran-region4-kalad",
+  "GlobalLocationId": 247041
+ },
+ {
+  "Id": 152,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "kouhak_farjam",
+  "Name": "فرجام",
+  "ContinueUrl": "tehran-region4-kouhak_farjam",
+  "GlobalLocationId": 250266
+ },
+ {
+  "Id": 153,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "ostad_hassan_bana_majidiye_shomali",
+  "Name": "استاد حسن بنا - مجیدیه شمالی ",
+  "ContinueUrl": "tehran-region4-ostad_hassan_bana_majidiye_shomali",
+  "GlobalLocationId": 247706
+ },
+ {
+  "Id": 154,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "rayhani",
+  "Name": "ریحانی ",
+  "ContinueUrl": "tehran-region4-rayhani",
+  "GlobalLocationId": 250259
+ },
+ {
+  "Id": 155,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "heravi",
+  "Name": "هروی ",
+  "ContinueUrl": "tehran-region4-heravi",
+  "GlobalLocationId": 273100
+ },
+ {
+  "Id": 156,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "vafamanesh",
+  "Name": "وفامنش ",
+  "ContinueUrl": "tehran-region4-vafamanesh",
+  "GlobalLocationId": 250275
+ },
+ {
+  "Id": 157,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "saghdoush",
+  "Name": "ساقدوش ",
+  "ContinueUrl": "tehran-region4-saghdoush",
+  "GlobalLocationId": 250258
+ },
+ {
+  "Id": 158,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "kazemabad",
+  "Name": "کاظم اباد",
+  "ContinueUrl": "tehran-region4-kazemabad",
+  "GlobalLocationId": 246809
+ },
+ {
+  "Id": 159,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "bani_hashem",
+  "Name": "بنی هاشم",
+  "ContinueUrl": "tehran-region4-bani_hashem",
+  "GlobalLocationId": 250264
+ },
+ {
+  "Id": 160,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "mehran",
+  "Name": "مهران",
+  "ContinueUrl": "tehran-region4-mehran",
+  "GlobalLocationId": 246901
+ },
+ {
+  "Id": 161,
+  "Province": "tehran",
+  "Region": "region4",
+  "Zone": "eslami",
+  "Name": "اسلامی ",
+  "ContinueUrl": "tehran-region4-eslami",
+  "GlobalLocationId": 250271
+ },
+ {
+  "Id": 162,
+  "Province": "tehran",
+  "Region": "takavaran",
+  "Zone": "",
+  "Name": "تکاوران",
+  "ContinueUrl": "tehran-takavaran",
+  "GlobalLocationId": 250273
+ },
+ {
+  "Id": 163,
+  "Province": "tehran",
+  "Region": "elmosanat",
+  "Zone": "",
+  "Name": "علم و صنعت",
+  "ContinueUrl": "tehran-elmosanat",
+  "GlobalLocationId": 273105
+ },
+ {
+  "Id": 164,
+  "Province": "tehran",
+  "Region": "kuhsar",
+  "Zone": "",
+  "Name": "کوهسار ",
+  "ContinueUrl": "tehran-kuhsar",
+  "GlobalLocationId": 273108
+ },
+ {
+  "Id": 165,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "",
+  "Name": "منطقه 5",
+  "ContinueUrl": "tehran-region5",
+  "GlobalLocationId": 246745
+ },
+ {
+  "Id": 166,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "apadana",
+  "Name": "اپادانا ",
+  "ContinueUrl": "tehran-region5-apadana",
+  "GlobalLocationId": 247124
+ },
+ {
+  "Id": 167,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "ekbatan",
+  "Name": "اکباتان ",
+  "ContinueUrl": "tehran-region5-ekbatan",
+  "GlobalLocationId": 247042
+ },
+ {
+  "Id": 168,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "sazman_barnameh_jonubi",
+  "Name": "سازمان برنامه جنوبی",
+  "ContinueUrl": "tehran-region5-sazman_barnameh_jonubi",
+  "GlobalLocationId": 247051
+ },
+ {
+  "Id": 169,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "sazman_ab",
+  "Name": "سازمان اب",
+  "ContinueUrl": "tehran-region5-sazman_ab",
+  "GlobalLocationId": 246824
+ },
+ {
+  "Id": 170,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "sharabiani_farsad",
+  "Name": "شربیانی - فرساد",
+  "ContinueUrl": "tehran-region5-sharabiani_farsad",
+  "GlobalLocationId": 328350
+ },
+ {
+  "Id": 171,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "shahreziba",
+  "Name": "شهر زیبا",
+  "ContinueUrl": "tehran-region5-shahreziba",
+  "GlobalLocationId": 328362
+ },
+ {
+  "Id": 172,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "bolvar_taavon",
+  "Name": " بلوار تعاون",
+  "ContinueUrl": "tehran-region5-bolvar_taavon",
+  "GlobalLocationId": 247723
+ },
+ {
+  "Id": 173,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "janatabad_markazi",
+  "Name": "جنت اباد مرکزی",
+  "ContinueUrl": "tehran-region5-janatabad_markazi",
+  "GlobalLocationId": 246991
+ },
+ {
+  "Id": 174,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "shahran_jonubi",
+  "Name": "شهران جنوبی",
+  "ContinueUrl": "tehran-region5-shahran_jonubi",
+  "GlobalLocationId": 246985
+ },
+ {
+  "Id": 175,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "shahran_shomali",
+  "Name": "شهران شمالی",
+  "ContinueUrl": "tehran-region5-shahran_shomali",
+  "GlobalLocationId": 246826
+ },
+ {
+  "Id": 176,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "falake_aval_shahran",
+  "Name": "فلکه اول شهران‎",
+  "ContinueUrl": "tehran-region5-falake_aval_shahran",
+  "GlobalLocationId": 247486
+ },
+ {
+  "Id": 177,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "baharan",
+  "Name": "بهاران",
+  "ContinueUrl": "tehran-region5-baharan",
+  "GlobalLocationId": 246822
+ },
+ {
+  "Id": 178,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "janatabad_shomali",
+  "Name": "جنت اباد شمالی",
+  "ContinueUrl": "tehran-region5-janatabad_shomali",
+  "GlobalLocationId": 247047
+ },
+ {
+  "Id": 179,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "kourosh_sharghi",
+  "Name": "کوروش شرقی",
+  "ContinueUrl": "tehran-region5-kourosh_sharghi",
+  "GlobalLocationId": 247506
+ },
+ {
+  "Id": 180,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "moradabad",
+  "Name": "مراد اباد",
+  "ContinueUrl": "tehran-region5-moradabad",
+  "GlobalLocationId": 246830
+ },
+ {
+  "Id": 181,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "shahrak_naft",
+  "Name": "شهرک نفت",
+  "ContinueUrl": "tehran-region5-shahrak_naft",
+  "GlobalLocationId": 246828
+ },
+ {
+  "Id": 182,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "almahdi",
+  "Name": "المهدی",
+  "ContinueUrl": "tehran-region5-almahdi",
+  "GlobalLocationId": 246833
+ },
+ {
+  "Id": 183,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "shahrak_daneshgah_tehran",
+  "Name": "شهرک دانشگاه تهران",
+  "ContinueUrl": "tehran-region5-shahrak_daneshgah_tehran",
+  "GlobalLocationId": 250294
+ },
+ {
+  "Id": 184,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "punak_shomali",
+  "Name": "پونک شمالی",
+  "ContinueUrl": "tehran-region5-punak_shomali",
+  "GlobalLocationId": 247058
+ },
+ {
+  "Id": 185,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "punak_jonubi",
+  "Name": "پونک جنوبی",
+  "ContinueUrl": "tehran-region5-punak_jonubi",
+  "GlobalLocationId": 247125
+ },
+ {
+  "Id": 186,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "bolvar_adl",
+  "Name": "بلوار عدل",
+  "ContinueUrl": "tehran-region5-bolvar_adl",
+  "GlobalLocationId": 250289
+ },
+ {
+  "Id": 187,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "35_metri_golestan_mokhberi",
+  "Name": "35متری گلستان - مخبری",
+  "ContinueUrl": "tehran-region5-35_metri_golestan_mokhberi",
+  "GlobalLocationId": 250302
+ },
+ {
+  "Id": 188,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "bolvar_mirza_babaei",
+  "Name": "بلوار میرزابابایی",
+  "ContinueUrl": "tehran-region5-bolvar_mirza_babaei",
+  "GlobalLocationId": 250290
+ },
+ {
+  "Id": 189,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "janatabad_jonubi",
+  "Name": "جنت اباد جنوبی",
+  "ContinueUrl": "tehran-region5-janatabad_jonubi",
+  "GlobalLocationId": 246823
+ },
+ {
+  "Id": 190,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "iranshahr_jonoubi",
+  "Name": "ایرانشهر جنوبی",
+  "ContinueUrl": "tehran-region5-iranshahr_jonoubi",
+  "GlobalLocationId": 250298
+ },
+ {
+  "Id": 191,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "hesarak",
+  "Name": "حصارک ",
+  "ContinueUrl": "tehran-region5-hesarak",
+  "GlobalLocationId": 246907
+ },
+ {
+  "Id": 192,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "bolvar_kouhsar",
+  "Name": "بلوار کوهسار ",
+  "ContinueUrl": "tehran-region5-bolvar_kouhsar",
+  "GlobalLocationId": 247521
+ },
+ {
+  "Id": 193,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "sangan_souleghan",
+  "Name": "سنگان - سولقان",
+  "ContinueUrl": "tehran-region5-sangan_souleghan",
+  "GlobalLocationId": 247708
+ },
+ {
+  "Id": 194,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "falake_dovom_shahran",
+  "Name": "فلکه دوم شهران",
+  "ContinueUrl": "tehran-region5-falake_dovom_shahran",
+  "GlobalLocationId": 247522
+ },
+ {
+  "Id": 195,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "baq_feyz",
+  "Name": "باغ فیض",
+  "ContinueUrl": "tehran-region5-baq_feyz",
+  "GlobalLocationId": 246905
+ },
+ {
+  "Id": 196,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "payambar_markazi",
+  "Name": "پیامبر مرکزی",
+  "ContinueUrl": "tehran-region5-payambar_markazi",
+  "GlobalLocationId": 247269
+ },
+ {
+  "Id": 197,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "bolvar_aghaghiya",
+  "Name": "بلوار اقاقیا",
+  "ContinueUrl": "tehran-region5-bolvar_aghaghiya",
+  "GlobalLocationId": 250295
+ },
+ {
+  "Id": 198,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "niloofar",
+  "Name": "نیلوفر ",
+  "ContinueUrl": "tehran-region5-niloofar",
+  "GlobalLocationId": 328349
+ },
+ {
+  "Id": 199,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "bozorgrah_alame_jafari",
+  "Name": "بزرگراه علامه جعفری",
+  "ContinueUrl": "tehran-region5-bozorgrah_alame_jafari",
+  "GlobalLocationId": 247827
+ },
+ {
+  "Id": 200,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "andisheh",
+  "Name": "اندیشه",
+  "ContinueUrl": "tehran-region5-andisheh",
+  "GlobalLocationId": 246904
+ },
+ {
+  "Id": 201,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "sazman_barnameh_shomali",
+  "Name": "سازمان برنامه شمالی",
+  "ContinueUrl": "tehran-region5-sazman_barnameh_shomali",
+  "GlobalLocationId": 246908
+ },
+ {
+  "Id": 202,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "bakeri",
+  "Name": "باکری ",
+  "ContinueUrl": "tehran-region5-bakeri",
+  "GlobalLocationId": 250297
+ },
+ {
+  "Id": 203,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "mehran",
+  "Name": "مهران",
+  "ContinueUrl": "tehran-region5-mehran",
+  "GlobalLocationId": 246901
+ },
+ {
+  "Id": 204,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "shahrak_parvaz",
+  "Name": "شهرک پرواز",
+  "ContinueUrl": "tehran-region5-shahrak_parvaz",
+  "GlobalLocationId": 246827
+ },
+ {
+  "Id": 205,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "eram",
+  "Name": "ارم",
+  "ContinueUrl": "tehran-region5-eram",
+  "GlobalLocationId": 246903
+ },
+ {
+  "Id": 206,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "ferdos",
+  "Name": "فردوس",
+  "ContinueUrl": "tehran-region5-ferdos",
+  "GlobalLocationId": 246909
+ },
+ {
+  "Id": 207,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "bimeh",
+  "Name": "بیمه ",
+  "ContinueUrl": "tehran-region5-bimeh",
+  "GlobalLocationId": 247045
+ },
+ {
+  "Id": 208,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "abazar",
+  "Name": "اباذر ",
+  "ContinueUrl": "tehran-region5-abazar",
+  "GlobalLocationId": 246821
+ },
+ {
+  "Id": 209,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "payambar_sharghi",
+  "Name": "پیامبر شرقی",
+  "ContinueUrl": "tehran-region5-payambar_sharghi",
+  "GlobalLocationId": 250300
+ },
+ {
+  "Id": 210,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "satari",
+  "Name": "ستاری ",
+  "ContinueUrl": "tehran-region5-satari",
+  "GlobalLocationId": 250303
+ },
+ {
+  "Id": 211,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "bolvar_kamali",
+  "Name": "بلوار کمالی",
+  "ContinueUrl": "tehran-region5-bolvar_kamali",
+  "GlobalLocationId": 247415
+ },
+ {
+  "Id": 212,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "sazman_barnameh_markazi",
+  "Name": "سازمان برنامه مرکزی",
+  "ContinueUrl": "tehran-region5-sazman_barnameh_markazi",
+  "GlobalLocationId": 247190
+ },
+ {
+  "Id": 213,
+  "Province": "tehran",
+  "Region": "region5",
+  "Zone": "chahar_divari",
+  "Name": "چهار دیواری",
+  "ContinueUrl": "tehran-region5-chahar_divari",
+  "GlobalLocationId": 250296
+ },
+ {
+  "Id": 214,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "",
+  "Name": "منطقه 6",
+  "ContinueUrl": "tehran-region6",
+  "GlobalLocationId": 246684
+ },
+ {
+  "Id": 215,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "nezami_ganjavi",
+  "Name": "نظامی گنجوی",
+  "ContinueUrl": "tehran-region6-nezami_ganjavi",
+  "GlobalLocationId": 247068
+ },
+ {
+  "Id": 216,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "shahid_gomnam",
+  "Name": "شهید گمنام",
+  "ContinueUrl": "tehran-region6-shahid_gomnam",
+  "GlobalLocationId": 250342
+ },
+ {
+  "Id": 217,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "maydan_golha",
+  "Name": "میدان گلها",
+  "ContinueUrl": "tehran-region6-maydan_golha",
+  "GlobalLocationId": 250335
+ },
+ {
+  "Id": 218,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "saei",
+  "Name": "ساعی ",
+  "ContinueUrl": "tehran-region6-saei",
+  "GlobalLocationId": 247009
+ },
+ {
+  "Id": 219,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "maydan_fatemi",
+  "Name": "میدان فاطمی",
+  "ContinueUrl": "tehran-region6-maydan_fatemi",
+  "GlobalLocationId": 250322
+ },
+ {
+  "Id": 220,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "nosrat",
+  "Name": "نصرت ",
+  "ContinueUrl": "tehran-region6-nosrat",
+  "GlobalLocationId": 247525
+ },
+ {
+  "Id": 221,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "maydan_valiasr",
+  "Name": "میدان ولیعصر ",
+  "ContinueUrl": "tehran-region6-maydan_valiasr",
+  "GlobalLocationId": 250309
+ },
+ {
+  "Id": 222,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "arzhantin",
+  "Name": "ارژانتین ",
+  "ContinueUrl": "tehran-region6-arzhantin",
+  "GlobalLocationId": 250334
+ },
+ {
+  "Id": 223,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "kargar_shomali",
+  "Name": "کارگر شمالی",
+  "ContinueUrl": "tehran-region6-kargar_shomali",
+  "GlobalLocationId": 247507
+ },
+ {
+  "Id": 224,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "sarbedaran",
+  "Name": "سربداران ",
+  "ContinueUrl": "tehran-region6-sarbedaran",
+  "GlobalLocationId": 247830
+ },
+ {
+  "Id": 225,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "zartosht",
+  "Name": "زرتشت ",
+  "ContinueUrl": "tehran-region6-zartosht",
+  "GlobalLocationId": 250343
+ },
+ {
+  "Id": 226,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "jahad",
+  "Name": "جهاد ",
+  "ContinueUrl": "tehran-region6-jahad",
+  "GlobalLocationId": 246832
+ },
+ {
+  "Id": 227,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "fatemi",
+  "Name": "فاطمی ",
+  "ContinueUrl": "tehran-region6-fatemi",
+  "GlobalLocationId": 246913
+ },
+ {
+  "Id": 228,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "jamalzade",
+  "Name": "جمالزاده ",
+  "ContinueUrl": "tehran-region6-jamalzade",
+  "GlobalLocationId": 246831
+ },
+ {
+  "Id": 229,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "keshavarz",
+  "Name": "کشاورز ",
+  "ContinueUrl": "tehran-region6-keshavarz",
+  "GlobalLocationId": 247126
+ },
+ {
+  "Id": 230,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "maydan_enghelab",
+  "Name": "میدان انقلاب",
+  "ContinueUrl": "tehran-region6-maydan_enghelab",
+  "GlobalLocationId": 250318
+ },
+ {
+  "Id": 231,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "eskandari_shomali",
+  "Name": "اسکندری شمالی",
+  "ContinueUrl": "tehran-region6-eskandari_shomali",
+  "GlobalLocationId": 250325
+ },
+ {
+  "Id": 232,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "yusefabad",
+  "Name": "یوسف اباد",
+  "ContinueUrl": "tehran-region6-yusefabad",
+  "GlobalLocationId": 246915
+ },
+ {
+  "Id": 233,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "valfajr",
+  "Name": "والفجر ",
+  "ContinueUrl": "tehran-region6-valfajr",
+  "GlobalLocationId": 247010
+ },
+ {
+  "Id": 234,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "maydan_asad_abadi",
+  "Name": "میدان اسد آبادی",
+  "ContinueUrl": "tehran-region6-maydan_asad_abadi",
+  "GlobalLocationId": 250353
+ },
+ {
+  "Id": 235,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "ebne_sina",
+  "Name": "ابن سینا",
+  "ContinueUrl": "tehran-region6-ebne_sina",
+  "GlobalLocationId": 250350
+ },
+ {
+  "Id": 236,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "iranshahr",
+  "Name": "ایرانشهر ",
+  "ContinueUrl": "tehran-region6-iranshahr",
+  "GlobalLocationId": 247043
+ },
+ {
+  "Id": 237,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "amirabad",
+  "Name": "امیراباد ",
+  "ContinueUrl": "tehran-region6-amirabad",
+  "GlobalLocationId": 247059
+ },
+ {
+  "Id": 238,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "jalal_al_ahmad",
+  "Name": "جلال ال احمد",
+  "ContinueUrl": "tehran-region6-jalal_al_ahmad",
+  "GlobalLocationId": 247725
+ },
+ {
+  "Id": 239,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "behjatabad",
+  "Name": "بهجت اباد",
+  "ContinueUrl": "tehran-region6-behjatabad",
+  "GlobalLocationId": 246910
+ },
+ {
+  "Id": 240,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "motahari_takht_tavus",
+  "Name": "مطهری - تخت طاووس",
+  "ContinueUrl": "tehran-region6-motahari_takht_tavus",
+  "GlobalLocationId": 250326
+ },
+ {
+  "Id": 241,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "mirzaye_shirazi",
+  "Name": "میرزای شیرازی",
+  "ContinueUrl": "tehran-region6-mirzaye_shirazi",
+  "GlobalLocationId": 250348
+ },
+ {
+  "Id": 242,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "vila_shomali",
+  "Name": "ویلا شمالی",
+  "ContinueUrl": "tehran-region6-vila_shomali",
+  "GlobalLocationId": 250347
+ },
+ {
+  "Id": 243,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "karimkhan_zand",
+  "Name": "کریم خان زند",
+  "ContinueUrl": "tehran-region6-karimkhan_zand",
+  "GlobalLocationId": 250344
+ },
+ {
+  "Id": 244,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "forsat_shirazi",
+  "Name": "فرصت شیرازی",
+  "ContinueUrl": "tehran-region6-forsat_shirazi",
+  "GlobalLocationId": 247526
+ },
+ {
+  "Id": 245,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "valiasr",
+  "Name": "ولیعصر ",
+  "ContinueUrl": "tehran-region6-valiasr",
+  "GlobalLocationId": 246914
+ },
+ {
+  "Id": 246,
+  "Province": "tehran",
+  "Region": "region11",
+  "Zone": "enqelab_felestin",
+  "Name": "انقلاب - فلسطین",
+  "ContinueUrl": "tehran-region11-enqelab_felestin",
+  "GlobalLocationId": 247104
+ },
+ {
+  "Id": 247,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "chaharrah_kalej",
+  "Name": "چهارراه کالج",
+  "ContinueUrl": "tehran-region6-chaharrah_kalej",
+  "GlobalLocationId": 250332
+ },
+ {
+  "Id": 248,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "maydan_ferdosi",
+  "Name": "میدان فردوسی",
+  "ContinueUrl": "tehran-region6-maydan_ferdosi",
+  "GlobalLocationId": 250338
+ },
+ {
+  "Id": 249,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "sanaei",
+  "Name": "سنایی ",
+  "ContinueUrl": "tehran-region6-sanaei",
+  "GlobalLocationId": 246834
+ },
+ {
+  "Id": 250,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "kheradmand_shomali",
+  "Name": "خردمند شمالی",
+  "ContinueUrl": "tehran-region6-kheradmand_shomali",
+  "GlobalLocationId": 250324
+ },
+ {
+  "Id": 251,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "ghaem_magham_farahani",
+  "Name": "قائم مقام فراهانی",
+  "ContinueUrl": "tehran-region6-ghaem_magham_farahani",
+  "GlobalLocationId": 250351
+ },
+ {
+  "Id": 252,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "hafte_tir",
+  "Name": "هفت تیر ",
+  "ContinueUrl": "tehran-region6-hafte_tir",
+  "GlobalLocationId": 250320
+ },
+ {
+  "Id": 253,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "fathi_shaghaghi",
+  "Name": "فتحی شقاقی",
+  "ContinueUrl": "tehran-region6-fathi_shaghaghi",
+  "GlobalLocationId": 247724
+ },
+ {
+  "Id": 254,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "daneshgah_tehran",
+  "Name": "دانشگاه تهران ",
+  "ContinueUrl": "tehran-region6-daneshgah_tehran",
+  "GlobalLocationId": 246911
+ },
+ {
+  "Id": 255,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "vesal_shirazi",
+  "Name": "وصال شیرازی",
+  "ContinueUrl": "tehran-region6-vesal_shirazi",
+  "GlobalLocationId": 250316
+ },
+ {
+  "Id": 256,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "16_azar",
+  "Name": "16آذر ",
+  "ContinueUrl": "tehran-region6-16_azar",
+  "GlobalLocationId": 247646
+ },
+ {
+  "Id": 257,
+  "Province": "tehran",
+  "Region": "region6",
+  "Zone": "felestin_shomali",
+  "Name": "فلسطین شمالی",
+  "ContinueUrl": "tehran-region6-felestin_shomali",
+  "GlobalLocationId": 247831
+ },
+ {
+  "Id": 258,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "",
+  "Name": "منطقه 7",
+  "ContinueUrl": "tehran-region7",
+  "GlobalLocationId": 246723
+ },
+ {
+  "Id": 259,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "matlab_nezhad",
+  "Name": " مطلب نژاد",
+  "ContinueUrl": "tehran-region7-matlab_nezhad",
+  "GlobalLocationId": 250369
+ },
+ {
+  "Id": 260,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "ghanbar_zade",
+  "Name": "قنبرزاده ",
+  "ContinueUrl": "tehran-region7-ghanbar_zade",
+  "GlobalLocationId": 250383
+ },
+ {
+  "Id": 261,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "ebne_yamin",
+  "Name": "ابن یمین",
+  "ContinueUrl": "tehran-region7-ebne_yamin",
+  "GlobalLocationId": 247651
+ },
+ {
+  "Id": 262,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "shaykh_safi",
+  "Name": "شیخ صفی",
+  "ContinueUrl": "tehran-region7-shaykh_safi",
+  "GlobalLocationId": 250356
+ },
+ {
+  "Id": 263,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "motahari",
+  "Name": "مطهری ",
+  "ContinueUrl": "tehran-region7-motahari",
+  "GlobalLocationId": 250387
+ },
+ {
+  "Id": 264,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "nezamabad",
+  "Name": " نظام اباد",
+  "ContinueUrl": "tehran-region7-nezamabad",
+  "GlobalLocationId": 247044
+ },
+ {
+  "Id": 265,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "dehgan_gorgan",
+  "Name": "گرگان ",
+  "ContinueUrl": "tehran-region7-dehgan_gorgan",
+  "GlobalLocationId": 246950
+ },
+ {
+  "Id": 266,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "kaj",
+  "Name": "کاج ",
+  "ContinueUrl": "tehran-region7-kaj",
+  "GlobalLocationId": 246993
+ },
+ {
+  "Id": 267,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "qasr_heshmatieh",
+  "Name": "قصر - حشمتیه",
+  "ContinueUrl": "tehran-region7-qasr_heshmatieh",
+  "GlobalLocationId": 246916
+ },
+ {
+  "Id": 268,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "marvdasht",
+  "Name": "مرودشت‎ ",
+  "ContinueUrl": "tehran-region7-marvdasht",
+  "GlobalLocationId": 250388
+ },
+ {
+  "Id": 269,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "majidieh_dabestan",
+  "Name": "مجیدیه - دبستان",
+  "ContinueUrl": "tehran-region7-majidieh_dabestan",
+  "GlobalLocationId": 246917
+ },
+ {
+  "Id": 270,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "moalem",
+  "Name": "معلم ",
+  "ContinueUrl": "tehran-region7-moalem",
+  "GlobalLocationId": 250386
+ },
+ {
+  "Id": 271,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "sohrevardi_baq_saba",
+  "Name": "سهروردی - باغ صبا",
+  "ContinueUrl": "tehran-region7-sohrevardi_baq_saba",
+  "GlobalLocationId": 246992
+ },
+ {
+  "Id": 272,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "shariati_malek",
+  "Name": "شریعتی - ملک",
+  "ContinueUrl": "tehran-region7-shariati_malek",
+  "GlobalLocationId": 247857
+ },
+ {
+  "Id": 273,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "motahari_mofateh",
+  "Name": "مطهری - مفتح",
+  "ContinueUrl": "tehran-region7-motahari_mofateh",
+  "GlobalLocationId": 250370
+ },
+ {
+  "Id": 274,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "bahar_shiraz",
+  "Name": "بهار شیراز",
+  "ContinueUrl": "tehran-region7-bahar_shiraz",
+  "GlobalLocationId": 250367
+ },
+ {
+  "Id": 275,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "bahar",
+  "Name": "بهار ",
+  "ContinueUrl": "tehran-region7-bahar",
+  "GlobalLocationId": 246986
+ },
+ {
+  "Id": 276,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "khajeh_nasir_tusi_hoquqi",
+  "Name": "خواجه نصیر - حقوقی",
+  "ContinueUrl": "tehran-region7-khajeh_nasir_tusi_hoquqi",
+  "GlobalLocationId": 246836
+ },
+ {
+  "Id": 277,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "enghelab_pich_shemiran",
+  "Name": "انقلاب - پیچ شمیران",
+  "ContinueUrl": "tehran-region7-enghelab_pich_shemiran",
+  "GlobalLocationId": 250371
+ },
+ {
+  "Id": 278,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "sepah",
+  "Name": "سپاه ",
+  "ContinueUrl": "tehran-region7-sepah",
+  "GlobalLocationId": 247834
+ },
+ {
+  "Id": 279,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "pol_choubi",
+  "Name": "پل چوبی",
+  "ContinueUrl": "tehran-region7-pol_choubi",
+  "GlobalLocationId": 247648
+ },
+ {
+  "Id": 280,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "eshrat_abad",
+  "Name": "عشرت اباد",
+  "ContinueUrl": "tehran-region7-eshrat_abad",
+  "GlobalLocationId": 247579
+ },
+ {
+  "Id": 281,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "se_rah_taleghani",
+  "Name": "سه راه طالقانی",
+  "ContinueUrl": "tehran-region7-se_rah_taleghani",
+  "GlobalLocationId": 250380
+ },
+ {
+  "Id": 282,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "torkamanestan",
+  "Name": "ترکمنستان ",
+  "ContinueUrl": "tehran-region7-torkamanestan",
+  "GlobalLocationId": 250358
+ },
+ {
+  "Id": 283,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "sohrevardi_jonoubi",
+  "Name": "سهروردی جنوبی",
+  "ContinueUrl": "tehran-region7-sohrevardi_jonoubi",
+  "GlobalLocationId": 250374
+ },
+ {
+  "Id": 284,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "abbasabad_andisheh",
+  "Name": "عباس اباد - اندیشه",
+  "ContinueUrl": "tehran-region7-abbasabad_andisheh",
+  "GlobalLocationId": 246838
+ },
+ {
+  "Id": 285,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "beheshti_mir_emad",
+  "Name": "بهشتی - میرعماد",
+  "ContinueUrl": "tehran-region7-beheshti_mir_emad",
+  "GlobalLocationId": 250373
+ },
+ {
+  "Id": 286,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "mofateh_shomali",
+  "Name": "مفتح شمالی",
+  "ContinueUrl": "tehran-region7-mofateh_shomali",
+  "GlobalLocationId": 250365
+ },
+ {
+  "Id": 287,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "nilufar_shahidqandi",
+  "Name": "نیلوفر - شهید قندی",
+  "ContinueUrl": "tehran-region7-nilufar_shahidqandi",
+  "GlobalLocationId": 247127
+ },
+ {
+  "Id": 288,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "sabounchi_mahnaz",
+  "Name": "صابونچی - مهناز ",
+  "ContinueUrl": "tehran-region7-sabounchi_mahnaz",
+  "GlobalLocationId": 250381
+ },
+ {
+  "Id": 289,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "sohrevardi_shomali",
+  "Name": "سهروردی شمالی",
+  "ContinueUrl": "tehran-region7-sohrevardi_shomali",
+  "GlobalLocationId": 247833
+ },
+ {
+  "Id": 290,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "police",
+  "Name": "پلیس‎‎ ",
+  "ContinueUrl": "tehran-region7-police",
+  "GlobalLocationId": 247650
+ },
+ {
+  "Id": 291,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "padegan_vali_asr",
+  "Name": "پادگان ولیعصر ",
+  "ContinueUrl": "tehran-region7-padegan_vali_asr",
+  "GlobalLocationId": 250382
+ },
+ {
+  "Id": 292,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "aramaneh",
+  "Name": "ارامنه ",
+  "ContinueUrl": "tehran-region7-aramaneh",
+  "GlobalLocationId": 246835
+ },
+ {
+  "Id": 293,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "heshmatiyeh",
+  "Name": "حشمتیه‎ ",
+  "ContinueUrl": "tehran-region7-heshmatiyeh",
+  "GlobalLocationId": 250384
+ },
+ {
+  "Id": 294,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "sabalan_shomali",
+  "Name": "سبلان شمالی",
+  "ContinueUrl": "tehran-region7-sabalan_shomali",
+  "GlobalLocationId": 250366
+ },
+ {
+  "Id": 295,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "shareq",
+  "Name": "شارق ",
+  "ContinueUrl": "tehran-region7-shareq",
+  "GlobalLocationId": 246837
+ },
+ {
+  "Id": 296,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "rajabi",
+  "Name": "رجبی ",
+  "ContinueUrl": "tehran-region7-rajabi",
+  "GlobalLocationId": 250364
+ },
+ {
+  "Id": 297,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "madani",
+  "Name": "مدنی ",
+  "ContinueUrl": "tehran-region7-madani",
+  "GlobalLocationId": 250376
+ },
+ {
+  "Id": 298,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "ansar_alhossein_damavand",
+  "Name": "انصارالحسین - دماوند",
+  "ContinueUrl": "tehran-region7-ansar_alhossein_damavand",
+  "GlobalLocationId": 250375
+ },
+ {
+  "Id": 299,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "maydan_namjou",
+  "Name": "میدان نامجو",
+  "ContinueUrl": "tehran-region7-maydan_namjou",
+  "GlobalLocationId": 250357
+ },
+ {
+  "Id": 300,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "amjadiyeh_khaqani",
+  "Name": "امجدیه - خاقانی",
+  "ContinueUrl": "tehran-region7-amjadiyeh_khaqani",
+  "GlobalLocationId": 247065
+ },
+ {
+  "Id": 301,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "moghadam_police",
+  "Name": "مقدم - پلیس",
+  "ContinueUrl": "tehran-region7-moghadam_police",
+  "GlobalLocationId": 250354
+ },
+ {
+  "Id": 302,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "namjou_shahid_madani",
+  "Name": "نامجو - شهید مدنی",
+  "ContinueUrl": "tehran-region7-namjou_shahid_madani",
+  "GlobalLocationId": 247832
+ },
+ {
+  "Id": 303,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "sabzikar",
+  "Name": "سبزیکاری ",
+  "ContinueUrl": "tehran-region7-sabzikar",
+  "GlobalLocationId": 247647
+ },
+ {
+  "Id": 304,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "maydan_emam_hossein",
+  "Name": "میدان امام حسین",
+  "ContinueUrl": "tehran-region7-maydan_emam_hossein",
+  "GlobalLocationId": 250385
+ },
+ {
+  "Id": 305,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "madani_jonoubi",
+  "Name": "مدنی جنوبی",
+  "ContinueUrl": "tehran-region7-madani_jonoubi",
+  "GlobalLocationId": 250378
+ },
+ {
+  "Id": 306,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "bakhshifard",
+  "Name": "بخشی فرد",
+  "ContinueUrl": "tehran-region7-bakhshifard",
+  "GlobalLocationId": 250355
+ },
+ {
+  "Id": 307,
+  "Province": "tehran",
+  "Region": "region7",
+  "Zone": "khajeh_nezamolmolk",
+  "Name": "خواجه نظام الملک",
+  "ContinueUrl": "tehran-region7-khajeh_nezamolmolk",
+  "GlobalLocationId": 247006
+ },
+ {
+  "Id": 308,
+  "Province": "tehran",
+  "Region": "region8",
+  "Zone": "",
+  "Name": "منطقه 8",
+  "ContinueUrl": "tehran-region8",
+  "GlobalLocationId": 246687
+ },
+ {
+  "Id": 309,
+  "Province": "tehran",
+  "Region": "region8",
+  "Zone": "janbazan_sharghi",
+  "Name": "جانبازان شرقی",
+  "ContinueUrl": "tehran-region8-janbazan_sharghi",
+  "GlobalLocationId": 250390
+ },
+ {
+  "Id": 310,
+  "Province": "tehran",
+  "Region": "region8",
+  "Zone": "samangan",
+  "Name": "سمنگان ",
+  "ContinueUrl": "tehran-region8-samangan",
+  "GlobalLocationId": 247671
+ },
+ {
+  "Id": 311,
+  "Province": "tehran",
+  "Region": "region8",
+  "Zone": "golbarg_gharbi",
+  "Name": "گلبرگ غربی",
+  "ContinueUrl": "tehran-region8-golbarg_gharbi",
+  "GlobalLocationId": 250391
+ },
+ {
+  "Id": 312,
+  "Province": "tehran",
+  "Region": "region8",
+  "Zone": "tehranpars",
+  "Name": "تهران پارس",
+  "ContinueUrl": "tehran-region8-tehranpars",
+  "GlobalLocationId": 273106
+ },
+ {
+  "Id": 313,
+  "Province": "tehran",
+  "Region": "region8",
+  "Zone": "bolvar_parvin",
+  "Name": "بلوار پروین ",
+  "ContinueUrl": "tehran-region8-bolvar_parvin",
+  "GlobalLocationId": 250398
+ },
+ {
+  "Id": 314,
+  "Province": "tehran",
+  "Region": "region8",
+  "Zone": "falake_aval_tehranpars",
+  "Name": "فلکه اول تهرانپارس",
+  "ContinueUrl": "tehran-region8-falake_aval_tehranpars",
+  "GlobalLocationId": 250395
+ },
+ {
+  "Id": 315,
+  "Province": "tehran",
+  "Region": "region8",
+  "Zone": "vahidiyeh",
+  "Name": "وحیدیه ",
+  "ContinueUrl": "tehran-region8-vahidiyeh",
+  "GlobalLocationId": 246842
+ },
+ {
+  "Id": 316,
+  "Province": "tehran",
+  "Region": "region8",
+  "Zone": "taslihat",
+  "Name": "تسلیحات ",
+  "ContinueUrl": "tehran-region8-taslihat",
+  "GlobalLocationId": 246976
+ },
+ {
+  "Id": 317,
+  "Province": "tehran",
+  "Region": "region8",
+  "Zone": "kerman",
+  "Name": "کرمان ",
+  "ContinueUrl": "tehran-region8-kerman",
+  "GlobalLocationId": 247011
+ },
+ {
+  "Id": 318,
+  "Province": "tehran",
+  "Region": "region8",
+  "Zone": "golshan_doust",
+  "Name": "گلشن دوست",
+  "ContinueUrl": "tehran-region8-golshan_doust",
+  "GlobalLocationId": 247487
+ },
+ {
+  "Id": 319,
+  "Province": "tehran",
+  "Region": "region8",
+  "Zone": "narmak",
+  "Name": "نارمک ",
+  "ContinueUrl": "tehran-region8-narmak",
+  "GlobalLocationId": 247084
+ },
+ {
+  "Id": 320,
+  "Province": "tehran",
+  "Region": "region8",
+  "Zone": "shahid_vashaghani",
+  "Name": "شهید واشقانی",
+  "ContinueUrl": "tehran-region8-shahid_vashaghani",
+  "GlobalLocationId": 250389
+ },
+ {
+  "Id": 321,
+  "Province": "tehran",
+  "Region": "region8",
+  "Zone": "dayhim",
+  "Name": "دیهیم ",
+  "ContinueUrl": "tehran-region8-dayhim",
+  "GlobalLocationId": 250394
+ },
+ {
+  "Id": 322,
+  "Province": "tehran",
+  "Region": "region8",
+  "Zone": "lashgar_sharqi",
+  "Name": " لشگر شرقی",
+  "ContinueUrl": "tehran-region8-lashgar_sharqi",
+  "GlobalLocationId": 246919
+ },
+ {
+  "Id": 323,
+  "Province": "tehran",
+  "Region": "region8",
+  "Zone": "lashgar_qarbi",
+  "Name": "لشگر غربی ",
+  "ContinueUrl": "tehran-region8-lashgar_qarbi",
+  "GlobalLocationId": 246840
+ },
+ {
+  "Id": 324,
+  "Province": "tehran",
+  "Region": "region8",
+  "Zone": "zarkesh",
+  "Name": "زرکش ",
+  "ContinueUrl": "tehran-region8-zarkesh",
+  "GlobalLocationId": 246839
+ },
+ {
+  "Id": 325,
+  "Province": "tehran",
+  "Region": "region8",
+  "Zone": "afshari",
+  "Name": "افشاری ",
+  "ContinueUrl": "tehran-region8-afshari",
+  "GlobalLocationId": 247836
+ },
+ {
+  "Id": 326,
+  "Province": "tehran",
+  "Region": "region8",
+  "Zone": "mehregan",
+  "Name": "مهرگان ",
+  "ContinueUrl": "tehran-region8-mehregan",
+  "GlobalLocationId": 250397
+ },
+ {
+  "Id": 327,
+  "Province": "tehran",
+  "Region": "region8",
+  "Zone": "sarsabz",
+  "Name": "سرسبز ",
+  "ContinueUrl": "tehran-region8-sarsabz",
+  "GlobalLocationId": 328356
+ },
+ {
+  "Id": 328,
+  "Province": "tehran",
+  "Region": "region8",
+  "Zone": "madaen",
+  "Name": "مدائن ",
+  "ContinueUrl": "tehran-region8-madaen",
+  "GlobalLocationId": 328372
+ },
+ {
+  "Id": 329,
+  "Province": "tehran",
+  "Region": "region8",
+  "Zone": "doktor_ayat",
+  "Name": "دکتر ایت",
+  "ContinueUrl": "tehran-region8-doktor_ayat",
+  "GlobalLocationId": 247835
+ },
+ {
+  "Id": 330,
+  "Province": "tehran",
+  "Region": "region8",
+  "Zone": "maydan_helal_ahmar",
+  "Name": "میدان هلال احمر",
+  "ContinueUrl": "tehran-region8-maydan_helal_ahmar",
+  "GlobalLocationId": 247655
+ },
+ {
+  "Id": 331,
+  "Province": "tehran",
+  "Region": "region8",
+  "Zone": "golestan",
+  "Name": "گلستان ",
+  "ContinueUrl": "tehran-region8-golestan",
+  "GlobalLocationId": 328355
+ },
+ {
+  "Id": 332,
+  "Province": "tehran",
+  "Region": "region8",
+  "Zone": "haft_hoz",
+  "Name": "هفت حوض",
+  "ContinueUrl": "tehran-region8-haft_hoz",
+  "GlobalLocationId": 328371
+ },
+ {
+  "Id": 333,
+  "Province": "tehran",
+  "Region": "region8",
+  "Zone": "bakhtiari",
+  "Name": "بختیاری ",
+  "ContinueUrl": "tehran-region8-bakhtiari",
+  "GlobalLocationId": 250396
+ },
+ {
+  "Id": 334,
+  "Province": "tehran",
+  "Region": "region9",
+  "Zone": "",
+  "Name": "منطقه 9",
+  "ContinueUrl": "tehran-region9",
+  "GlobalLocationId": 246720
+ },
+ {
+  "Id": 335,
+  "Province": "tehran",
+  "Region": "region9",
+  "Zone": "ostad_moein",
+  "Name": "استاد معین",
+  "ContinueUrl": "tehran-region9-ostad_moein",
+  "GlobalLocationId": 247087
+ },
+ {
+  "Id": 336,
+  "Province": "tehran",
+  "Region": "region9",
+  "Zone": "fath",
+  "Name": "فتح ",
+  "ContinueUrl": "tehran-region9-fath",
+  "GlobalLocationId": 246841
+ },
+ {
+  "Id": 337,
+  "Province": "tehran",
+  "Region": "region9",
+  "Zone": "maydan_fath",
+  "Name": "میدان فتح",
+  "ContinueUrl": "tehran-region9-maydan_fath",
+  "GlobalLocationId": 250077
+ },
+ {
+  "Id": 338,
+  "Province": "tehran",
+  "Region": "region9",
+  "Zone": "shishe_va_gaz",
+  "Name": "شیشه و گاز ",
+  "ContinueUrl": "tehran-region9-shishe_va_gaz",
+  "GlobalLocationId": 249949
+ },
+ {
+  "Id": 339,
+  "Province": "tehran",
+  "Region": "region9",
+  "Zone": "forudgah_mehrabad",
+  "Name": "فرودگاه مهراباد",
+  "ContinueUrl": "tehran-region9-forudgah_mehrabad",
+  "GlobalLocationId": 246922
+ },
+ {
+  "Id": 340,
+  "Province": "tehran",
+  "Region": "region9",
+  "Zone": "dastqeyb",
+  "Name": "دستغیب ",
+  "ContinueUrl": "tehran-region9-dastqeyb",
+  "GlobalLocationId": 246920
+ },
+ {
+  "Id": 341,
+  "Province": "tehran",
+  "Region": "region9",
+  "Zone": "nahr_firouz_abad",
+  "Name": "نهر فیروزاباد",
+  "ContinueUrl": "tehran-region9-nahr_firouz_abad",
+  "GlobalLocationId": 249890
+ },
+ {
+  "Id": 342,
+  "Province": "tehran",
+  "Region": "region9",
+  "Zone": "dr_hushyar",
+  "Name": "دکتر هوشیار",
+  "ContinueUrl": "tehran-region9-dr_hushyar",
+  "GlobalLocationId": 246921
+ },
+ {
+  "Id": 343,
+  "Province": "tehran",
+  "Region": "region9",
+  "Zone": "tajik_toos",
+  "Name": "تاجیک - طوس",
+  "ContinueUrl": "tehran-region9-tajik_toos",
+  "GlobalLocationId": 249797
+ },
+ {
+  "Id": 344,
+  "Province": "tehran",
+  "Region": "region9",
+  "Zone": "hashemi_dampezeshki",
+  "Name": "هاشمی - دامپزشکی",
+  "ContinueUrl": "tehran-region9-hashemi_dampezeshki",
+  "GlobalLocationId": 247580
+ },
+ {
+  "Id": 345,
+  "Province": "tehran",
+  "Region": "region9",
+  "Zone": "jey",
+  "Name": "جی ",
+  "ContinueUrl": "tehran-region9-jey",
+  "GlobalLocationId": 249951
+ },
+ {
+  "Id": 346,
+  "Province": "tehran",
+  "Region": "region9",
+  "Zone": "shahidan",
+  "Name": "شهیدان ",
+  "ContinueUrl": "tehran-region9-shahidan",
+  "GlobalLocationId": 249675
+ },
+ {
+  "Id": 347,
+  "Province": "tehran",
+  "Region": "region9",
+  "Zone": "emamzadeh_abdollah",
+  "Name": "امامزاده عبداله ",
+  "ContinueUrl": "tehran-region9-emamzadeh_abdollah",
+  "GlobalLocationId": 246994
+ },
+ {
+  "Id": 348,
+  "Province": "tehran",
+  "Region": "region9",
+  "Zone": "sar_lashgar_bakhtiyari",
+  "Name": "سرلشگر بختیاری",
+  "ContinueUrl": "tehran-region9-sar_lashgar_bakhtiyari",
+  "GlobalLocationId": 249917
+ },
+ {
+  "Id": 349,
+  "Province": "tehran",
+  "Region": "region9",
+  "Zone": "akbar_abad",
+  "Name": "اکبراباد ",
+  "ContinueUrl": "tehran-region9-akbar_abad",
+  "GlobalLocationId": 250062
+ },
+ {
+  "Id": 350,
+  "Province": "tehran",
+  "Region": "region9",
+  "Zone": "kouy_mehrabad",
+  "Name": "کوی مهراباد",
+  "ContinueUrl": "tehran-region9-kouy_mehrabad",
+  "GlobalLocationId": 249950
+ },
+ {
+  "Id": 351,
+  "Province": "tehran",
+  "Region": "region9",
+  "Zone": "sarasiyab_mehrabad",
+  "Name": "سراسیاب مهراباد",
+  "ContinueUrl": "tehran-region9-sarasiyab_mehrabad",
+  "GlobalLocationId": 247093
+ },
+ {
+  "Id": 352,
+  "Province": "tehran",
+  "Region": "region9",
+  "Zone": "shamshiri",
+  "Name": "شمشیری ",
+  "ContinueUrl": "tehran-region9-shamshiri",
+  "GlobalLocationId": 247128
+ },
+ {
+  "Id": 353,
+  "Province": "tehran",
+  "Region": "region9",
+  "Zone": "45_metri_zarand",
+  "Name": "45متری زرند",
+  "ContinueUrl": "tehran-region9-45_metri_zarand",
+  "GlobalLocationId": 247534
+ },
+ {
+  "Id": 354,
+  "Province": "tehran",
+  "Region": "region9",
+  "Zone": "kouy_mehrzad_ghasemlu",
+  "Name": "کوی مهرزاد قاسملو",
+  "ContinueUrl": "tehran-region9-kouy_mehrzad_ghasemlu",
+  "GlobalLocationId": 249851
+ },
+ {
+  "Id": 355,
+  "Province": "tehran",
+  "Region": "region9",
+  "Zone": "mehrabad_jonubi",
+  "Name": "مهراباد جنوبی",
+  "ContinueUrl": "tehran-region9-mehrabad_jonubi",
+  "GlobalLocationId": 246843
+ },
+ {
+  "Id": 356,
+  "Province": "tehran",
+  "Region": "region9",
+  "Zone": "maydan_azadi",
+  "Name": "میدان ازادی",
+  "ContinueUrl": "tehran-region9-maydan_azadi",
+  "GlobalLocationId": 249655
+ },
+ {
+  "Id": 357,
+  "Province": "tehran",
+  "Region": "region9",
+  "Zone": "sar_asiyab",
+  "Name": "سراسیاب ",
+  "ContinueUrl": "tehran-region9-sar_asiyab",
+  "GlobalLocationId": 247551
+ },
+ {
+  "Id": 358,
+  "Province": "tehran",
+  "Region": "region9",
+  "Zone": "najarzadegan",
+  "Name": "نجارزادگان ",
+  "ContinueUrl": "tehran-region9-najarzadegan",
+  "GlobalLocationId": 250153
+ },
+ {
+  "Id": 359,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "",
+  "Name": "منطقه 10",
+  "ContinueUrl": "tehran-region10",
+  "GlobalLocationId": 246686
+ },
+ {
+  "Id": 360,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "soleymaniteymuri",
+  "Name": "سلیمانی تیموری",
+  "ContinueUrl": "tehran-region10-soleymaniteymuri",
+  "GlobalLocationId": 247048
+ },
+ {
+  "Id": 361,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "amiri",
+  "Name": "امیری ",
+  "ContinueUrl": "tehran-region10-amiri",
+  "GlobalLocationId": 249589
+ },
+ {
+  "Id": 362,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "haftchenar",
+  "Name": "هفت چنار ",
+  "ContinueUrl": "tehran-region10-haftchenar",
+  "GlobalLocationId": 247102
+ },
+ {
+  "Id": 363,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "golestani",
+  "Name": "گلستانی ",
+  "ContinueUrl": "tehran-region10-golestani",
+  "GlobalLocationId": 249610
+ },
+ {
+  "Id": 364,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "pour_eslami",
+  "Name": "پور اسلامی",
+  "ContinueUrl": "tehran-region10-pour_eslami",
+  "GlobalLocationId": 247768
+ },
+ {
+  "Id": 365,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "beryanak",
+  "Name": "بریانک ",
+  "ContinueUrl": "tehran-region10-beryanak",
+  "GlobalLocationId": 247094
+ },
+ {
+  "Id": 366,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "mahboub_mojaz_gharbi_sina_gharbi",
+  "Name": "محبوب مجاز غربی - سینا غربی",
+  "ContinueUrl": "tehran-region10-mahboub_mojaz_gharbi_sina_gharbi",
+  "GlobalLocationId": 249910
+ },
+ {
+  "Id": 367,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "eftekari",
+  "Name": "افتکاری ",
+  "ContinueUrl": "tehran-region10-eftekari",
+  "GlobalLocationId": 250056
+ },
+ {
+  "Id": 368,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "salman_farsi",
+  "Name": "سلمان فارسی",
+  "ContinueUrl": "tehran-region10-salman_farsi",
+  "GlobalLocationId": 249936
+ },
+ {
+  "Id": 369,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "safdari",
+  "Name": "صفدری ",
+  "ContinueUrl": "tehran-region10-safdari",
+  "GlobalLocationId": 247573
+ },
+ {
+  "Id": 370,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "hashemi",
+  "Name": "هاشمی ",
+  "ContinueUrl": "tehran-region10-hashemi",
+  "GlobalLocationId": 246847
+ },
+ {
+  "Id": 371,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "nahr_firouz_abadi",
+  "Name": "نهر فیروزابادی",
+  "ContinueUrl": "tehran-region10-nahr_firouz_abadi",
+  "GlobalLocationId": 249594
+ },
+ {
+  "Id": 372,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "malek_ashtar_jeyhoun",
+  "Name": "مالک اشتر - جیحون",
+  "ContinueUrl": "tehran-region10-malek_ashtar_jeyhoun",
+  "GlobalLocationId": 249597
+ },
+ {
+  "Id": 373,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "zanjan_jonubi",
+  "Name": "زنجان جنوبی",
+  "ContinueUrl": "tehran-region10-zanjan_jonubi",
+  "GlobalLocationId": 246845
+ },
+ {
+  "Id": 374,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "salsabil_shomali",
+  "Name": "سلسبیل شمالی",
+  "ContinueUrl": "tehran-region10-salsabil_shomali",
+  "GlobalLocationId": 246975
+ },
+ {
+  "Id": 375,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "boustan_saadi",
+  "Name": "بوستان سعدی",
+  "ContinueUrl": "tehran-region10-boustan_saadi",
+  "GlobalLocationId": 250033
+ },
+ {
+  "Id": 376,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "roudaki_jonoubi",
+  "Name": "رودکی جنوبی",
+  "ContinueUrl": "tehran-region10-roudaki_jonoubi",
+  "GlobalLocationId": 249829
+ },
+ {
+  "Id": 377,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "azadi_azarbayjan",
+  "Name": "ازادی - اذربایجان",
+  "ContinueUrl": "tehran-region10-azadi_azarbayjan",
+  "GlobalLocationId": 249603
+ },
+ {
+  "Id": 378,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "maymanat",
+  "Name": "میمنت ",
+  "ContinueUrl": "tehran-region10-maymanat",
+  "GlobalLocationId": 249781
+ },
+ {
+  "Id": 379,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "karun_jonubi",
+  "Name": "کارون جنوبی",
+  "ContinueUrl": "tehran-region10-karun_jonubi",
+  "GlobalLocationId": 247129
+ },
+ {
+  "Id": 380,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "emam_khomeyni_jeyhoun",
+  "Name": "امام خمینی - جیحون",
+  "ContinueUrl": "tehran-region10-emam_khomeyni_jeyhoun",
+  "GlobalLocationId": 250400
+ },
+ {
+  "Id": 381,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "hosseini_doust",
+  "Name": "حسینی دوست",
+  "ContinueUrl": "tehran-region10-hosseini_doust",
+  "GlobalLocationId": 249934
+ },
+ {
+  "Id": 382,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "khiyaban_karoun",
+  "Name": "خیابان کارون",
+  "ContinueUrl": "tehran-region10-khiyaban_karoun",
+  "GlobalLocationId": 249952
+ },
+ {
+  "Id": 383,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "shobeyrijei",
+  "Name": "شبیری-جی",
+  "ContinueUrl": "tehran-region10-shobeyrijei",
+  "GlobalLocationId": 247055
+ },
+ {
+  "Id": 384,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "baradaran_falah",
+  "Name": "برادران فلاح",
+  "ContinueUrl": "tehran-region10-baradaran_falah",
+  "GlobalLocationId": 247730
+ },
+ {
+  "Id": 385,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "30_metri_jey",
+  "Name": "سی متری جی",
+  "ContinueUrl": "tehran-region10-30_metri_jey",
+  "GlobalLocationId": 249722
+ },
+ {
+  "Id": 386,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "sobhani",
+  "Name": "سبحانی ",
+  "ContinueUrl": "tehran-region10-sobhani",
+  "GlobalLocationId": 249739
+ },
+ {
+  "Id": 387,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "salsabil_jonubi",
+  "Name": "سلسبیل جنوبی",
+  "ContinueUrl": "tehran-region10-salsabil_jonubi",
+  "GlobalLocationId": 246846
+ },
+ {
+  "Id": 388,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "navab",
+  "Name": "نواب ",
+  "ContinueUrl": "tehran-region10-navab",
+  "GlobalLocationId": 250129
+ },
+ {
+  "Id": 389,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "khiyaban_komeil",
+  "Name": "خیابان کمیل",
+  "ContinueUrl": "tehran-region10-khiyaban_komeil",
+  "GlobalLocationId": 249922
+ },
+ {
+  "Id": 390,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "ghasr_aldasht",
+  "Name": "قصرالدشت ",
+  "ContinueUrl": "tehran-region10-ghasr_aldasht",
+  "GlobalLocationId": 250065
+ },
+ {
+  "Id": 391,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "karun_shomali",
+  "Name": "کارون شمالی",
+  "ContinueUrl": "tehran-region10-karun_shomali",
+  "GlobalLocationId": 247100
+ },
+ {
+  "Id": 392,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "behnoud",
+  "Name": "بهنود ",
+  "ContinueUrl": "tehran-region10-behnoud",
+  "GlobalLocationId": 247664
+ },
+ {
+  "Id": 393,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "dampezeshki",
+  "Name": "دامپزشکی ",
+  "ContinueUrl": "tehran-region10-dampezeshki",
+  "GlobalLocationId": 249587
+ },
+ {
+  "Id": 394,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "tous",
+  "Name": "طوس ",
+  "ContinueUrl": "tehran-region10-tous",
+  "GlobalLocationId": 250127
+ },
+ {
+  "Id": 395,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "mashouf",
+  "Name": "مشعوف ",
+  "ContinueUrl": "tehran-region10-mashouf",
+  "GlobalLocationId": 249708
+ },
+ {
+  "Id": 396,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "shahid_arab",
+  "Name": "شهید عرب",
+  "ContinueUrl": "tehran-region10-shahid_arab",
+  "GlobalLocationId": 249723
+ },
+ {
+  "Id": 397,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "azimi",
+  "Name": "عظیمی ",
+  "ContinueUrl": "tehran-region10-azimi",
+  "GlobalLocationId": 247715
+ },
+ {
+  "Id": 398,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "hesam_aldin",
+  "Name": "حسام الدین",
+  "ContinueUrl": "tehran-region10-hesam_aldin",
+  "GlobalLocationId": 249937
+ },
+ {
+  "Id": 399,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "khosh",
+  "Name": "خوش ",
+  "ContinueUrl": "tehran-region10-khosh",
+  "GlobalLocationId": 250117
+ },
+ {
+  "Id": 400,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "hajian",
+  "Name": "حاجیان ",
+  "ContinueUrl": "tehran-region10-hajian",
+  "GlobalLocationId": 247784
+ },
+ {
+  "Id": 401,
+  "Province": "tehran",
+  "Region": "region10",
+  "Zone": "sarsabil",
+  "Name": "سرسبیل ",
+  "ContinueUrl": "tehran-region10-sarsabil",
+  "GlobalLocationId": 250048
+ },
+ {
+  "Id": 402,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "",
+  "Name": "منطقه 12",
+  "ContinueUrl": "tehran-region12",
+  "GlobalLocationId": 246735
+ },
+ {
+  "Id": 403,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "sarhang_sakhaei",
+  "Name": "سرهنگ سخایی",
+  "ContinueUrl": "tehran-region12-sarhang_sakhaei",
+  "GlobalLocationId": 249908
+ },
+ {
+  "Id": 404,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "ashjaei",
+  "Name": "اشجعی ",
+  "ContinueUrl": "tehran-region12-ashjaei",
+  "GlobalLocationId": 247795
+ },
+ {
+  "Id": 405,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "qiyam",
+  "Name": "قیام ",
+  "ContinueUrl": "tehran-region12-qiyam",
+  "GlobalLocationId": 246851
+ },
+ {
+  "Id": 406,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "khatibi",
+  "Name": "خطیبی",
+  "ContinueUrl": "tehran-region12-khatibi",
+  "GlobalLocationId": 247694
+ },
+ {
+  "Id": 407,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "razavi",
+  "Name": "رضوی ",
+  "ContinueUrl": "tehran-region12-razavi",
+  "GlobalLocationId": 247783
+ },
+ {
+  "Id": 408,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "emamzadeh_yahya",
+  "Name": "امامزاده یحیی",
+  "ContinueUrl": "tehran-region12-emamzadeh_yahya",
+  "GlobalLocationId": 246912
+ },
+ {
+  "Id": 409,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "15_khordad_khiyaban_rey",
+  "Name": "15خرداد - خیابان ری",
+  "ContinueUrl": "tehran-region12-15_khordad_khiyaban_rey",
+  "GlobalLocationId": 247697
+ },
+ {
+  "Id": 410,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "ferdowsi",
+  "Name": "فردوسی ",
+  "ContinueUrl": "tehran-region12-ferdowsi",
+  "GlobalLocationId": 246927
+ },
+ {
+  "Id": 411,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "posht_shahrdari_bolvar_ferdosi",
+  "Name": "پشت شهرداری - بلوار فردوسی",
+  "ContinueUrl": "tehran-region12-posht_shahrdari_bolvar_ferdosi",
+  "GlobalLocationId": 250068
+ },
+ {
+  "Id": 412,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "lale_zar",
+  "Name": "لاله زار",
+  "ContinueUrl": "tehran-region12-lale_zar",
+  "GlobalLocationId": 249681
+ },
+ {
+  "Id": 413,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "manouchehri",
+  "Name": "منوچهری ",
+  "ContinueUrl": "tehran-region12-manouchehri",
+  "GlobalLocationId": 250114
+ },
+ {
+  "Id": 414,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "kouche_berlan",
+  "Name": "کوچه برلن",
+  "ContinueUrl": "tehran-region12-kouche_berlan",
+  "GlobalLocationId": 249650
+ },
+ {
+  "Id": 415,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "taghavi",
+  "Name": "تقوی ",
+  "ContinueUrl": "tehran-region12-taghavi",
+  "GlobalLocationId": 250120
+ },
+ {
+  "Id": 416,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "ghasemi",
+  "Name": "قاسمی ",
+  "ContinueUrl": "tehran-region12-ghasemi",
+  "GlobalLocationId": 249953
+ },
+ {
+  "Id": 417,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "iran",
+  "Name": "ایران",
+  "ContinueUrl": "tehran-region12-iran",
+  "GlobalLocationId": 247131
+ },
+ {
+  "Id": 418,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "ghaderi",
+  "Name": "قادری ",
+  "ContinueUrl": "tehran-region12-ghaderi",
+  "GlobalLocationId": 250125
+ },
+ {
+  "Id": 419,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "mardom_mojahedin_eslam",
+  "Name": "مردم - مجاهدین اسلام ",
+  "ContinueUrl": "tehran-region12-mardom_mojahedin_eslam",
+  "GlobalLocationId": 249805
+ },
+ {
+  "Id": 420,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "javan_tash",
+  "Name": "جوان تاش",
+  "ContinueUrl": "tehran-region12-javan_tash",
+  "GlobalLocationId": 250158
+ },
+ {
+  "Id": 421,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "khiyaban_iran",
+  "Name": "خیابان ایران",
+  "ContinueUrl": "tehran-region12-khiyaban_iran",
+  "GlobalLocationId": 247556
+ },
+ {
+  "Id": 422,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "davoudi",
+  "Name": "داوودی ",
+  "ContinueUrl": "tehran-region12-davoudi",
+  "GlobalLocationId": 250134
+ },
+ {
+  "Id": 423,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "diyalame",
+  "Name": "دیالمه ",
+  "ContinueUrl": "tehran-region12-diyalame",
+  "GlobalLocationId": 249933
+ },
+ {
+  "Id": 424,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "baharestan",
+  "Name": "بهارستان ",
+  "ContinueUrl": "tehran-region12-baharestan",
+  "GlobalLocationId": 247118
+ },
+ {
+  "Id": 425,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "khiyaban_amir_kabir_saadi",
+  "Name": "امیرکبیر - سعدی",
+  "ContinueUrl": "tehran-region12-khiyaban_amir_kabir_saadi",
+  "GlobalLocationId": 250047
+ },
+ {
+  "Id": 426,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "nour_mohamadi",
+  "Name": "نورمحمدی ",
+  "ContinueUrl": "tehran-region12-nour_mohamadi",
+  "GlobalLocationId": 249607
+ },
+ {
+  "Id": 427,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "melat",
+  "Name": "ملت ",
+  "ContinueUrl": "tehran-region12-melat",
+  "GlobalLocationId": 250128
+ },
+ {
+  "Id": 428,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "safi_alishah",
+  "Name": "صفی علیشاه",
+  "ContinueUrl": "tehran-region12-safi_alishah",
+  "GlobalLocationId": 249954
+ },
+ {
+  "Id": 429,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "bagh_sepahsalar",
+  "Name": "باغ سپهسالار",
+  "ContinueUrl": "tehran-region12-bagh_sepahsalar",
+  "GlobalLocationId": 249969
+ },
+ {
+  "Id": 430,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "javidi",
+  "Name": "جاویدی ",
+  "ContinueUrl": "tehran-region12-javidi",
+  "GlobalLocationId": 249766
+ },
+ {
+  "Id": 431,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "arg_pamenar",
+  "Name": "ارگ - پامنار",
+  "ContinueUrl": "tehran-region12-arg_pamenar",
+  "GlobalLocationId": 246987
+ },
+ {
+  "Id": 432,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "jamshid_pour",
+  "Name": "جمشیدپور ",
+  "ContinueUrl": "tehran-region12-jamshid_pour",
+  "GlobalLocationId": 249659
+ },
+ {
+  "Id": 433,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "khorasan",
+  "Name": "خراسان ",
+  "ContinueUrl": "tehran-region12-khorasan",
+  "GlobalLocationId": 249827
+ },
+ {
+  "Id": 434,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "khiyaban_rey",
+  "Name": "خیابان ری",
+  "ContinueUrl": "tehran-region12-khiyaban_rey",
+  "GlobalLocationId": 249660
+ },
+ {
+  "Id": 435,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "bazar",
+  "Name": "بازار ",
+  "ContinueUrl": "tehran-region12-bazar",
+  "GlobalLocationId": 246951
+ },
+ {
+  "Id": 436,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "bazar_zayd",
+  "Name": "بازار زید",
+  "ContinueUrl": "tehran-region12-bazar_zayd",
+  "GlobalLocationId": 249861
+ },
+ {
+  "Id": 437,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "bazar_bozorg",
+  "Name": "بازار بزرگ",
+  "ContinueUrl": "tehran-region12-bazar_bozorg",
+  "GlobalLocationId": 249814
+ },
+ {
+  "Id": 438,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "amin_aldole",
+  "Name": "امین الدوله",
+  "ContinueUrl": "tehran-region12-amin_aldole",
+  "GlobalLocationId": 250004
+ },
+ {
+  "Id": 439,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "mostafa_khomayni",
+  "Name": "مصطفی خمینی",
+  "ContinueUrl": "tehran-region12-mostafa_khomayni",
+  "GlobalLocationId": 247850
+ },
+ {
+  "Id": 440,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "kiyani",
+  "Name": "کیانی ",
+  "ContinueUrl": "tehran-region12-kiyani",
+  "GlobalLocationId": 249731
+ },
+ {
+  "Id": 441,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "sabze_maydan",
+  "Name": "بزرگ - سبزه میدان ",
+  "ContinueUrl": "tehran-region12-sabze_maydan",
+  "GlobalLocationId": 250101
+ },
+ {
+  "Id": 442,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "bazar_mesgarha",
+  "Name": "بازار مسگرها",
+  "ContinueUrl": "tehran-region12-bazar_mesgarha",
+  "GlobalLocationId": 249978
+ },
+ {
+  "Id": 443,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "mokhtari_takhti",
+  "Name": "مختاری - تختی",
+  "ContinueUrl": "tehran-region12-mokhtari_takhti",
+  "GlobalLocationId": 247066
+ },
+ {
+  "Id": 444,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "bayn_alharamayn",
+  "Name": "بین الحرمین",
+  "ContinueUrl": "tehran-region12-bayn_alharamayn",
+  "GlobalLocationId": 250081
+ },
+ {
+  "Id": 445,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "sanglaj",
+  "Name": "سنگلج ",
+  "ContinueUrl": "tehran-region12-sanglaj",
+  "GlobalLocationId": 247070
+ },
+ {
+  "Id": 446,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "mashhadi_rahim",
+  "Name": "مشهدی رحیم",
+  "ContinueUrl": "tehran-region12-mashhadi_rahim",
+  "GlobalLocationId": 249896
+ },
+ {
+  "Id": 447,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "harandi",
+  "Name": "هرندی ",
+  "ContinueUrl": "tehran-region12-harandi",
+  "GlobalLocationId": 247054
+ },
+ {
+  "Id": 448,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "pamenar",
+  "Name": "پامنار ",
+  "ContinueUrl": "tehran-region12-pamenar",
+  "GlobalLocationId": 249631
+ },
+ {
+  "Id": 449,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "maydan_ghiyam",
+  "Name": "میدان قیام",
+  "ContinueUrl": "tehran-region12-maydan_ghiyam",
+  "GlobalLocationId": 250005
+ },
+ {
+  "Id": 450,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "khiyaban_ekbatan_mellat",
+  "Name": "خیابان اکباتان - ملت ",
+  "ContinueUrl": "tehran-region12-khiyaban_ekbatan_mellat",
+  "GlobalLocationId": 247555
+ },
+ {
+  "Id": 451,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "bazar_bozorg_pele_norouzkhan",
+  "Name": "بازار بزرگ - پله نوروزخان",
+  "ContinueUrl": "tehran-region12-bazar_bozorg_pele_norouzkhan",
+  "GlobalLocationId": 247751
+ },
+ {
+  "Id": 452,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "mousavi_abshar",
+  "Name": "موسوی - ابشار",
+  "ContinueUrl": "tehran-region12-mousavi_abshar",
+  "GlobalLocationId": 247613
+ },
+ {
+  "Id": 453,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "konsoulgari_pamenar",
+  "Name": "کنسولگری - پامنار",
+  "ContinueUrl": "tehran-region12-konsoulgari_pamenar",
+  "GlobalLocationId": 249651
+ },
+ {
+  "Id": 454,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "mohebi",
+  "Name": "محبی ",
+  "ContinueUrl": "tehran-region12-mohebi",
+  "GlobalLocationId": 249674
+ },
+ {
+  "Id": 455,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "maydan_khorasan",
+  "Name": "میدان خراسان",
+  "ContinueUrl": "tehran-region12-maydan_khorasan",
+  "GlobalLocationId": 247679
+ },
+ {
+  "Id": 456,
+  "Province": "tehran",
+  "Region": "region12",
+  "Zone": "pahlevan_hasan",
+  "Name": "پهلوان حسن",
+  "ContinueUrl": "tehran-region12-pahlevan_hasan",
+  "GlobalLocationId": 249891
+ },
+ {
+  "Id": 457,
+  "Province": "tehran",
+  "Region": "region13",
+  "Zone": "",
+  "Name": "منطقه 13",
+  "ContinueUrl": "tehran-region13",
+  "GlobalLocationId": 246689
+ },
+ {
+  "Id": 458,
+  "Province": "tehran",
+  "Region": "region13",
+  "Zone": "shahid_ghafari",
+  "Name": "شهید غفاری",
+  "ContinueUrl": "tehran-region13-shahid_ghafari",
+  "GlobalLocationId": 247775
+ },
+ {
+  "Id": 459,
+  "Province": "tehran",
+  "Region": "region13",
+  "Zone": "pichak",
+  "Name": "پیچک ",
+  "ContinueUrl": "tehran-region13-pichak",
+  "GlobalLocationId": 247621
+ },
+ {
+  "Id": 460,
+  "Province": "tehran",
+  "Region": "region13",
+  "Zone": "tehran_no",
+  "Name": "تهران نو",
+  "ContinueUrl": "tehran-region13-tehran_no",
+  "GlobalLocationId": 250010
+ },
+ {
+  "Id": 461,
+  "Province": "tehran",
+  "Region": "region13",
+  "Zone": "piruzi",
+  "Name": "پیروزی ",
+  "ContinueUrl": "tehran-region13-piruzi",
+  "GlobalLocationId": 247017
+ },
+ {
+  "Id": 462,
+  "Province": "tehran",
+  "Region": "region13",
+  "Zone": "montazeri",
+  "Name": "منتظری ",
+  "ContinueUrl": "tehran-region13-montazeri",
+  "GlobalLocationId": 247495
+ },
+ {
+  "Id": 463,
+  "Province": "tehran",
+  "Region": "region13",
+  "Zone": "saeid_arab",
+  "Name": "سعید عرب",
+  "ContinueUrl": "tehran-region13-saeid_arab",
+  "GlobalLocationId": 247533
+ },
+ {
+  "Id": 464,
+  "Province": "tehran",
+  "Region": "region13",
+  "Zone": "padegan_nirou_havaei",
+  "Name": "پادگان نیرو هوایی",
+  "ContinueUrl": "tehran-region13-padegan_nirou_havaei",
+  "GlobalLocationId": 247792
+ },
+ {
+  "Id": 465,
+  "Province": "tehran",
+  "Region": "region13",
+  "Zone": "sorkhe_hesar",
+  "Name": "سرخه حصار ",
+  "ContinueUrl": "tehran-region13-sorkhe_hesar",
+  "GlobalLocationId": 247098
+ },
+ {
+  "Id": 466,
+  "Province": "tehran",
+  "Region": "region13",
+  "Zone": "zeynabiyeh",
+  "Name": "زینبیه ",
+  "ContinueUrl": "tehran-region13-zeynabiyeh",
+  "GlobalLocationId": 247106
+ },
+ {
+  "Id": 467,
+  "Province": "tehran",
+  "Region": "region13",
+  "Zone": "ashtiyani",
+  "Name": "اشتیانی ",
+  "ContinueUrl": "tehran-region13-ashtiyani",
+  "GlobalLocationId": 247077
+ },
+ {
+  "Id": 468,
+  "Province": "tehran",
+  "Region": "region13",
+  "Zone": "bozorgrah_abas_doran",
+  "Name": "بزرگراه عباس دوران",
+  "ContinueUrl": "tehran-region13-bozorgrah_abas_doran",
+  "GlobalLocationId": 249774
+ },
+ {
+  "Id": 469,
+  "Province": "tehran",
+  "Region": "region13",
+  "Zone": "kouy_zeynabeiyeh_kolahdouz",
+  "Name": "کوی زینبیه - کلاهدوز ",
+  "ContinueUrl": "tehran-region13-kouy_zeynabeiyeh_kolahdouz",
+  "GlobalLocationId": 249800
+ },
+ {
+  "Id": 470,
+  "Province": "tehran",
+  "Region": "region13",
+  "Zone": "shora",
+  "Name": "شورا ",
+  "ContinueUrl": "tehran-region13-shora",
+  "GlobalLocationId": 247095
+ },
+ {
+  "Id": 471,
+  "Province": "tehran",
+  "Region": "region13",
+  "Zone": "emamat",
+  "Name": "امامت ",
+  "ContinueUrl": "tehran-region13-emamat",
+  "GlobalLocationId": 247067
+ },
+ {
+  "Id": 472,
+  "Province": "tehran",
+  "Region": "region13",
+  "Zone": "bastami",
+  "Name": "بسطامی ",
+  "ContinueUrl": "tehran-region13-bastami",
+  "GlobalLocationId": 249968
+ },
+ {
+  "Id": 473,
+  "Province": "tehran",
+  "Region": "region13",
+  "Zone": "niru_havaei",
+  "Name": "نیروی هوایی",
+  "ContinueUrl": "tehran-region13-niru_havaei",
+  "GlobalLocationId": 246854
+ },
+ {
+  "Id": 474,
+  "Province": "tehran",
+  "Region": "region13",
+  "Zone": "jadidi",
+  "Name": "جدیدی ",
+  "ContinueUrl": "tehran-region13-jadidi",
+  "GlobalLocationId": 250092
+ },
+ {
+  "Id": 475,
+  "Province": "tehran",
+  "Region": "region13",
+  "Zone": "qasemabad",
+  "Name": "قاسم اباد",
+  "ContinueUrl": "tehran-region13-qasemabad",
+  "GlobalLocationId": 247061
+ },
+ {
+  "Id": 476,
+  "Province": "tehran",
+  "Region": "region13",
+  "Zone": "ghasemzadeh_damavand",
+  "Name": "قاسم زاده - دماوند",
+  "ContinueUrl": "tehran-region13-ghasemzadeh_damavand",
+  "GlobalLocationId": 250086
+ },
+ {
+  "Id": 477,
+  "Province": "tehran",
+  "Region": "region13",
+  "Zone": "hafeziyeh",
+  "Name": "حافظیه ",
+  "ContinueUrl": "tehran-region13-hafeziyeh",
+  "GlobalLocationId": 246872
+ },
+ {
+  "Id": 478,
+  "Province": "tehran",
+  "Region": "region13",
+  "Zone": "mehrjou",
+  "Name": "مهرجو ",
+  "ContinueUrl": "tehran-region13-mehrjou",
+  "GlobalLocationId": 249635
+ },
+ {
+  "Id": 479,
+  "Province": "tehran",
+  "Region": "region13",
+  "Zone": "maydan_lozi",
+  "Name": "میدان لوزی",
+  "ContinueUrl": "tehran-region13-maydan_lozi",
+  "GlobalLocationId": 249711
+ },
+ {
+  "Id": 480,
+  "Province": "tehran",
+  "Region": "region13",
+  "Zone": "zahed_gilani",
+  "Name": "زاهد گیلانی",
+  "ContinueUrl": "tehran-region13-zahed_gilani",
+  "GlobalLocationId": 246929
+ },
+ {
+  "Id": 481,
+  "Province": "tehran",
+  "Region": "region13",
+  "Zone": "safa",
+  "Name": "صفا ",
+  "ContinueUrl": "tehran-region13-safa",
+  "GlobalLocationId": 246853
+ },
+ {
+  "Id": 482,
+  "Province": "tehran",
+  "Region": "region13",
+  "Zone": "asadi",
+  "Name": "اسدی ",
+  "ContinueUrl": "tehran-region13-asadi",
+  "GlobalLocationId": 246928
+ },
+ {
+  "Id": 483,
+  "Province": "tehran",
+  "Region": "region13",
+  "Zone": "saralah",
+  "Name": "ثارالله",
+  "ContinueUrl": "tehran-region13-saralah",
+  "GlobalLocationId": 249760
+ },
+ {
+  "Id": 484,
+  "Province": "tehran",
+  "Region": "region13",
+  "Zone": "koleini_piroozi",
+  "Name": "کلینی - پیروزی",
+  "ContinueUrl": "tehran-region13-koleini_piroozi",
+  "GlobalLocationId": 250118
+ },
+ {
+  "Id": 485,
+  "Province": "tehran",
+  "Region": "region13",
+  "Zone": "falake_panjom_nirou_havaei",
+  "Name": "فلکه پنجم نیرو هوایی ",
+  "ContinueUrl": "tehran-region13-falake_panjom_nirou_havaei",
+  "GlobalLocationId": 250178
+ },
+ {
+  "Id": 486,
+  "Province": "tehran",
+  "Region": "region13",
+  "Zone": "masil_manouchehri",
+  "Name": "مسیل منوچهری",
+  "ContinueUrl": "tehran-region13-masil_manouchehri",
+  "GlobalLocationId": 249639
+ },
+ {
+  "Id": 487,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "",
+  "Name": "منطقه 14",
+  "ContinueUrl": "tehran-region14",
+  "GlobalLocationId": 246691
+ },
+ {
+  "Id": 488,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "niknam_dorudiyan",
+  "Name": "نیکنام - درودیان",
+  "ContinueUrl": "tehran-region14-niknam_dorudiyan",
+  "GlobalLocationId": 249750
+ },
+ {
+  "Id": 489,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "shaykh_alraeis",
+  "Name": "شیخ الرئیس",
+  "ContinueUrl": "tehran-region14-shaykh_alraeis",
+  "GlobalLocationId": 249740
+ },
+ {
+  "Id": 490,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "pirouzi_khiyaban_boroujerdi",
+  "Name": "خیابان بروجردی",
+  "ContinueUrl": "tehran-region14-pirouzi_khiyaban_boroujerdi",
+  "GlobalLocationId": 249973
+ },
+ {
+  "Id": 491,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "doshan_tape",
+  "Name": "دوشان تپه",
+  "ContinueUrl": "tehran-region14-doshan_tape",
+  "GlobalLocationId": 249688
+ },
+ {
+  "Id": 492,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "sarasiyab_dulab",
+  "Name": "سراسیاب دولاب",
+  "ContinueUrl": "tehran-region14-sarasiyab_dulab",
+  "GlobalLocationId": 246855
+ },
+ {
+  "Id": 493,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "dulab",
+  "Name": "دولاب",
+  "ContinueUrl": "tehran-region14-dulab",
+  "GlobalLocationId": 246883
+ },
+ {
+  "Id": 494,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "saheb_alzaman",
+  "Name": "صاحب الزمان",
+  "ContinueUrl": "tehran-region14-saheb_alzaman",
+  "GlobalLocationId": 246963
+ },
+ {
+  "Id": 495,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "aref",
+  "Name": "عارف ",
+  "ContinueUrl": "tehran-region14-aref",
+  "GlobalLocationId": 246931
+ },
+ {
+  "Id": 496,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "behzadibakhsh",
+  "Name": "بهزادی ",
+  "ContinueUrl": "tehran-region14-behzadibakhsh",
+  "GlobalLocationId": 250014
+ },
+ {
+  "Id": 497,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "hakimi_safari",
+  "Name": "حکیمی سفری ",
+  "ContinueUrl": "tehran-region14-hakimi_safari",
+  "GlobalLocationId": 249909
+ },
+ {
+  "Id": 498,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "saeidi",
+  "Name": "سعیدی ",
+  "ContinueUrl": "tehran-region14-saeidi",
+  "GlobalLocationId": 247511
+ },
+ {
+  "Id": 499,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "moshir_alsaltane",
+  "Name": "مشیرالسلطنه",
+  "ContinueUrl": "tehran-region14-moshir_alsaltane",
+  "GlobalLocationId": 249588
+ },
+ {
+  "Id": 500,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "mokhber_jonoubi",
+  "Name": "مخبر جنوبی",
+  "ContinueUrl": "tehran-region14-mokhber_jonoubi",
+  "GlobalLocationId": 249770
+ },
+ {
+  "Id": 501,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "gozar_paein_dulab",
+  "Name": "گذرپایین دولاب",
+  "ContinueUrl": "tehran-region14-gozar_paein_dulab",
+  "GlobalLocationId": 247071
+ },
+ {
+  "Id": 502,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "shirazi_doulab",
+  "Name": "شیرازی - دولاب",
+  "ContinueUrl": "tehran-region14-shirazi_doulab",
+  "GlobalLocationId": 249725
+ },
+ {
+  "Id": 503,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "hoseinabad_dulab",
+  "Name": "حسین اباد دولاب",
+  "ContinueUrl": "tehran-region14-hoseinabad_dulab",
+  "GlobalLocationId": 247132
+ },
+ {
+  "Id": 504,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "dahom_farvardin",
+  "Name": "دهم فروردین",
+  "ContinueUrl": "tehran-region14-dahom_farvardin",
+  "GlobalLocationId": 247566
+ },
+ {
+  "Id": 505,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "fereshte_azadi",
+  "Name": "فرشته ازادی",
+  "ContinueUrl": "tehran-region14-fereshte_azadi",
+  "GlobalLocationId": 249714
+ },
+ {
+  "Id": 506,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "nabi_akram",
+  "Name": "نبی اکرم",
+  "ContinueUrl": "tehran-region14-nabi_akram",
+  "GlobalLocationId": 247004
+ },
+ {
+  "Id": 507,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "maydan_emam_hassan_mojtaba",
+  "Name": "میدان امام حسن مجتبی ",
+  "ContinueUrl": "tehran-region14-maydan_emam_hassan_mojtaba",
+  "GlobalLocationId": 247658
+ },
+ {
+  "Id": 508,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "hejdah_metri_maysam",
+  "Name": "هجده متری میثم",
+  "ContinueUrl": "tehran-region14-hejdah_metri_maysam",
+  "GlobalLocationId": 247739
+ },
+ {
+  "Id": 509,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "alah_akbar",
+  "Name": "الله اکبر ",
+  "ContinueUrl": "tehran-region14-alah_akbar",
+  "GlobalLocationId": 250030
+ },
+ {
+  "Id": 510,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "shohaday_gomnam",
+  "Name": "شهدای گمنام",
+  "ContinueUrl": "tehran-region14-shohaday_gomnam",
+  "GlobalLocationId": 247021
+ },
+ {
+  "Id": 511,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "bolvar_kosar",
+  "Name": "بلوار کوثر",
+  "ContinueUrl": "tehran-region14-bolvar_kosar",
+  "GlobalLocationId": 249792
+ },
+ {
+  "Id": 512,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "taxirani",
+  "Name": "تاکسیرانی ",
+  "ContinueUrl": "tehran-region14-taxirani",
+  "GlobalLocationId": 247018
+ },
+ {
+  "Id": 513,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "shahin",
+  "Name": "شاهین ",
+  "ContinueUrl": "tehran-region14-shahin",
+  "GlobalLocationId": 246876
+ },
+ {
+  "Id": 514,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "shahid_tajik",
+  "Name": "شهید تاجیک",
+  "ContinueUrl": "tehran-region14-shahid_tajik",
+  "GlobalLocationId": 249924
+ },
+ {
+  "Id": 515,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "shahmirzadi",
+  "Name": "شهمیرزادی ",
+  "ContinueUrl": "tehran-region14-shahmirzadi",
+  "GlobalLocationId": 249593
+ },
+ {
+  "Id": 516,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "ahang",
+  "Name": "اهنگ",
+  "ContinueUrl": "tehran-region14-ahang",
+  "GlobalLocationId": 250095
+ },
+ {
+  "Id": 517,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "atabak",
+  "Name": "اتابک ",
+  "ContinueUrl": "tehran-region15-atabak",
+  "GlobalLocationId": 246934
+ },
+ {
+  "Id": 518,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "moradi_doulab",
+  "Name": "مرادی - دولاب",
+  "ContinueUrl": "tehran-region14-moradi_doulab",
+  "GlobalLocationId": 249819
+ },
+ {
+  "Id": 519,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "arjamandi_rad",
+  "Name": "ارجمندی راد",
+  "ContinueUrl": "tehran-region14-arjamandi_rad",
+  "GlobalLocationId": 249719
+ },
+ {
+  "Id": 520,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "shiva",
+  "Name": "شیوا ",
+  "ContinueUrl": "tehran-region14-shiva",
+  "GlobalLocationId": 246884
+ },
+ {
+  "Id": 521,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "shahid_davarzani",
+  "Name": "شهید داورزنی",
+  "ContinueUrl": "tehran-region14-shahid_davarzani",
+  "GlobalLocationId": 249935
+ },
+ {
+  "Id": 522,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "lorestan",
+  "Name": "لرستان ",
+  "ContinueUrl": "tehran-region14-lorestan",
+  "GlobalLocationId": 247778
+ },
+ {
+  "Id": 523,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "nademi",
+  "Name": "نادمی ",
+  "ContinueUrl": "tehran-region14-nademi",
+  "GlobalLocationId": 250099
+ },
+ {
+  "Id": 524,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "chahar_sad_dastgah",
+  "Name": "چهارصددستگاه",
+  "ContinueUrl": "tehran-region14-chahar_sad_dastgah",
+  "GlobalLocationId": 247050
+ },
+ {
+  "Id": 525,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "doumanlu",
+  "Name": "دومانلو ",
+  "ContinueUrl": "tehran-region14-doumanlu",
+  "GlobalLocationId": 250160
+ },
+ {
+  "Id": 526,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "zinati_afkham",
+  "Name": "زینتی افخم",
+  "ContinueUrl": "tehran-region14-zinati_afkham",
+  "GlobalLocationId": 250072
+ },
+ {
+  "Id": 527,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "bid_hendi",
+  "Name": "بیدهندی ",
+  "ContinueUrl": "tehran-region14-bid_hendi",
+  "GlobalLocationId": 249983
+ },
+ {
+  "Id": 528,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "berahman",
+  "Name": "برهمن ",
+  "ContinueUrl": "tehran-region14-berahman",
+  "GlobalLocationId": 249920
+ },
+ {
+  "Id": 529,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "nour_salehi",
+  "Name": "نورصالحی ",
+  "ContinueUrl": "tehran-region14-nour_salehi",
+  "GlobalLocationId": 250148
+ },
+ {
+  "Id": 530,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "azizi",
+  "Name": "عزیزی",
+  "ContinueUrl": "tehran-region14-azizi",
+  "GlobalLocationId": 250111
+ },
+ {
+  "Id": 531,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "sad_dastgah",
+  "Name": "صددستگاه ",
+  "ContinueUrl": "tehran-region14-sad_dastgah",
+  "GlobalLocationId": 247082
+ },
+ {
+  "Id": 532,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "akbar_abadi",
+  "Name": "اکبرابادی",
+  "ContinueUrl": "tehran-region14-akbar_abadi",
+  "GlobalLocationId": 250143
+ },
+ {
+  "Id": 533,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "javadiyeh",
+  "Name": "جوادیه ",
+  "ContinueUrl": "tehran-region14-javadiyeh",
+  "GlobalLocationId": 247014
+ },
+ {
+  "Id": 534,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "maydan_sar_asiyab",
+  "Name": "میدان سراسیاب",
+  "ContinueUrl": "tehran-region14-maydan_sar_asiyab",
+  "GlobalLocationId": 249987
+ },
+ {
+  "Id": 535,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "esmaeil_shakouri",
+  "Name": "اسماعیل شکوری",
+  "ContinueUrl": "tehran-region14-esmaeil_shakouri",
+  "GlobalLocationId": 249886
+ },
+ {
+  "Id": 536,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "delgosha",
+  "Name": "دلگشا ",
+  "ContinueUrl": "tehran-region14-delgosha",
+  "GlobalLocationId": 247032
+ },
+ {
+  "Id": 537,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "shahid_doroudiyan",
+  "Name": "شهید درودیان",
+  "ContinueUrl": "tehran-region14-shahid_doroudiyan",
+  "GlobalLocationId": 249583
+ },
+ {
+  "Id": 538,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "dezhkam",
+  "Name": "دژکام",
+  "ContinueUrl": "tehran-region14-dezhkam",
+  "GlobalLocationId": 249738
+ },
+ {
+  "Id": 539,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "khazrayi",
+  "Name": "خضرایی",
+  "ContinueUrl": "tehran-region14-khazrayi",
+  "GlobalLocationId": 247667
+ },
+ {
+  "Id": 540,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "kerman_gharbi",
+  "Name": "کرمان غربی",
+  "ContinueUrl": "tehran-region14-kerman_gharbi",
+  "GlobalLocationId": 249759
+ },
+ {
+  "Id": 541,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "shokufeh",
+  "Name": "شکوفه ",
+  "ContinueUrl": "tehran-region14-shokufeh",
+  "GlobalLocationId": 247062
+ },
+ {
+  "Id": 542,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "mina",
+  "Name": "مینا ",
+  "ContinueUrl": "tehran-region14-mina",
+  "GlobalLocationId": 246877
+ },
+ {
+  "Id": 543,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "gilaki",
+  "Name": "گیلکی ",
+  "ContinueUrl": "tehran-region14-gilaki",
+  "GlobalLocationId": 249901
+ },
+ {
+  "Id": 544,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "mokhber_shomali",
+  "Name": "مخبر شمالی",
+  "ContinueUrl": "tehran-region14-mokhber_shomali",
+  "GlobalLocationId": 247782
+ },
+ {
+  "Id": 545,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "tabatabaei_pour",
+  "Name": "طباطبایی پور ",
+  "ContinueUrl": "tehran-region14-tabatabaei_pour",
+  "GlobalLocationId": 249649
+ },
+ {
+  "Id": 546,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "shahid_babaei",
+  "Name": "شهید بابایی",
+  "ContinueUrl": "tehran-region14-shahid_babaei",
+  "GlobalLocationId": 249579
+ },
+ {
+  "Id": 547,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "davoud_abadi",
+  "Name": "داودابادی ",
+  "ContinueUrl": "tehran-region14-davoud_abadi",
+  "GlobalLocationId": 247242
+ },
+ {
+  "Id": 548,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "ghasr_e_firoozeh_1",
+  "Name": "قصر فیروزه 1",
+  "ContinueUrl": "tehran-region14-ghasr_e_firoozeh_1",
+  "GlobalLocationId": 249850
+ },
+ {
+  "Id": 549,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "ghasr_firouze",
+  "Name": "قصرفیروزه",
+  "ContinueUrl": "tehran-region14-ghasr_firouze",
+  "GlobalLocationId": 250027
+ },
+ {
+  "Id": 550,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "shahrak_sad_dastgah",
+  "Name": "شهرک صد دستگاه",
+  "ContinueUrl": "tehran-region14-shahrak_sad_dastgah",
+  "GlobalLocationId": 247734
+ },
+ {
+  "Id": 551,
+  "Province": "tehran",
+  "Region": "region14",
+  "Zone": "jafar_nezhad",
+  "Name": "جعفرنژاد ",
+  "ContinueUrl": "tehran-region14-jafar_nezhad",
+  "GlobalLocationId": 247624
+ },
+ {
+  "Id": 552,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "",
+  "Name": "منطقه 15",
+  "ContinueUrl": "tehran-region15",
+  "GlobalLocationId": 246724
+ },
+ {
+  "Id": 553,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "mesgarabad",
+  "Name": "مسگراباد ",
+  "ContinueUrl": "tehran-region15-mesgarabad",
+  "GlobalLocationId": 246935
+ },
+ {
+  "Id": 554,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "taghi_pour",
+  "Name": "تقی پور",
+  "ContinueUrl": "tehran-region15-taghi_pour",
+  "GlobalLocationId": 249657
+ },
+ {
+  "Id": 555,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "shahid_tari",
+  "Name": "شهید تاری",
+  "ContinueUrl": "tehran-region15-shahid_tari",
+  "GlobalLocationId": 250088
+ },
+ {
+  "Id": 556,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "shahrak_kianshahr",
+  "Name": "شهرک کیانشهر",
+  "ContinueUrl": "tehran-region15-shahrak_kianshahr",
+  "GlobalLocationId": 249768
+ },
+ {
+  "Id": 557,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "anisi",
+  "Name": "انیسی ",
+  "ContinueUrl": "tehran-region15-anisi",
+  "GlobalLocationId": 247796
+ },
+ {
+  "Id": 558,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "bozorgrah_besat_azadegan",
+  "Name": "بزرگراه بعثت - آزادگان",
+  "ContinueUrl": "tehran-region15-bozorgrah_besat_azadegan",
+  "GlobalLocationId": 249656
+ },
+ {
+  "Id": 559,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "takali_shoush",
+  "Name": "تکلی - شوش",
+  "ContinueUrl": "tehran-region15-takali_shoush",
+  "GlobalLocationId": 247530
+ },
+ {
+  "Id": 560,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "valiasr_bisim",
+  "Name": "ولیعصر - بیسیم",
+  "ContinueUrl": "tehran-region15-valiasr_bisim",
+  "GlobalLocationId": 246953
+ },
+ {
+  "Id": 561,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "mazaheri",
+  "Name": "مظاهری ",
+  "ContinueUrl": "tehran-region15-mazaheri",
+  "GlobalLocationId": 247109
+ },
+ {
+  "Id": 562,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "minabi",
+  "Name": "مینابی ",
+  "ContinueUrl": "tehran-region15-minabi",
+  "GlobalLocationId": 247078
+ },
+ {
+  "Id": 563,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "motahari",
+  "Name": "مطهری ",
+  "ContinueUrl": "tehran-region15-motahari",
+  "GlobalLocationId": 250387
+ },
+ {
+  "Id": 564,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "jahangard_bisim_valiasr",
+  "Name": "جهانگرد - بیسیم ولیعصر ",
+  "ContinueUrl": "tehran-region15-jahangard_bisim_valiasr",
+  "GlobalLocationId": 249866
+ },
+ {
+  "Id": 565,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "tayeb",
+  "Name": "طیب ",
+  "ContinueUrl": "tehran-region15-tayeb",
+  "GlobalLocationId": 247085
+ },
+ {
+  "Id": 566,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "shush",
+  "Name": "شوش ",
+  "ContinueUrl": "tehran-region15-shush",
+  "GlobalLocationId": 247023
+ },
+ {
+  "Id": 567,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "kiyanshahr_shomali",
+  "Name": "کیان شهر شمالی",
+  "ContinueUrl": "tehran-region15-kiyanshahr_shomali",
+  "GlobalLocationId": 246965
+ },
+ {
+  "Id": 568,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "bolvar_emam_reza_kiyanshahr_shomali",
+  "Name": "بلوار امام رضا - کیانشهر شمالی",
+  "ContinueUrl": "tehran-region15-bolvar_emam_reza_kiyanshahr_shomali",
+  "GlobalLocationId": 250181
+ },
+ {
+  "Id": 569,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "ravanbakhsh",
+  "Name": "روانبخش ",
+  "ContinueUrl": "tehran-region15-ravanbakhsh",
+  "GlobalLocationId": 249840
+ },
+ {
+  "Id": 570,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "siyamak",
+  "Name": "سیامک",
+  "ContinueUrl": "tehran-region15-siyamak",
+  "GlobalLocationId": 247797
+ },
+ {
+  "Id": 571,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "hashemabad",
+  "Name": "هاشم اباد",
+  "ContinueUrl": "tehran-region15-hashemabad",
+  "GlobalLocationId": 246885
+ },
+ {
+  "Id": 572,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "nabati",
+  "Name": "نباتی ",
+  "ContinueUrl": "tehran-region15-nabati",
+  "GlobalLocationId": 250162
+ },
+ {
+  "Id": 573,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "eslamabad_valfajr",
+  "Name": "اسلام اباد - والفجر",
+  "ContinueUrl": "tehran-region15-eslamabad_valfajr",
+  "GlobalLocationId": 247107
+ },
+ {
+  "Id": 574,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "felestin_gharbi",
+  "Name": "فلسطین غربی",
+  "ContinueUrl": "tehran-region15-felestin_gharbi",
+  "GlobalLocationId": 249591
+ },
+ {
+  "Id": 575,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "dastghayb_masoudiye",
+  "Name": "دستغیب - مسعودیه ",
+  "ContinueUrl": "tehran-region15-dastghayb_masoudiye",
+  "GlobalLocationId": 250044
+ },
+ {
+  "Id": 576,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "honarestan",
+  "Name": "هنرستان ",
+  "ContinueUrl": "tehran-region15-honarestan",
+  "GlobalLocationId": 247779
+ },
+ {
+  "Id": 577,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "gholami",
+  "Name": "غلامی ",
+  "ContinueUrl": "tehran-region15-gholami",
+  "GlobalLocationId": 247543
+ },
+ {
+  "Id": 578,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "bolvar_ghaem_eslam_abad",
+  "Name": "بلوار قائم - اسلام اباد",
+  "ContinueUrl": "tehran-region15-bolvar_ghaem_eslam_abad",
+  "GlobalLocationId": 249584
+ },
+ {
+  "Id": 579,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "afsariyeh_shomali",
+  "Name": " افسریه شمالی",
+  "ContinueUrl": "tehran-region15-afsariyeh_shomali",
+  "GlobalLocationId": 247096
+ },
+ {
+  "Id": 580,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "moshiriyeh",
+  "Name": "مشیریه ",
+  "ContinueUrl": "tehran-region15-moshiriyeh",
+  "GlobalLocationId": 246936
+ },
+ {
+  "Id": 581,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "masjed_bani_hashem",
+  "Name": "مسجد بنی هاشم",
+  "ContinueUrl": "tehran-region15-masjed_bani_hashem",
+  "GlobalLocationId": 247536
+ },
+ {
+  "Id": 582,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "shahid_kashi",
+  "Name": "شهید کاشی",
+  "ContinueUrl": "tehran-region15-shahid_kashi",
+  "GlobalLocationId": 249786
+ },
+ {
+  "Id": 583,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "ale_ebrahim",
+  "Name": "ال ابراهیم",
+  "ContinueUrl": "tehran-region15-ale_ebrahim",
+  "GlobalLocationId": 249690
+ },
+ {
+  "Id": 584,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "maydan_emam_reza",
+  "Name": "میدان امام رضا",
+  "ContinueUrl": "tehran-region15-maydan_emam_reza",
+  "GlobalLocationId": 249930
+ },
+ {
+  "Id": 585,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "kiyanshahr_jonubi",
+  "Name": "کیان شهر جنوبی",
+  "ContinueUrl": "tehran-region15-kiyanshahr_jonubi",
+  "GlobalLocationId": 247090
+ },
+ {
+  "Id": 586,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "shahrak_hejrat",
+  "Name": "شهرک هجرت",
+  "ContinueUrl": "tehran-region15-shahrak_hejrat",
+  "GlobalLocationId": 247738
+ },
+ {
+  "Id": 587,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "salimi",
+  "Name": "سلیمی ",
+  "ContinueUrl": "tehran-region15-salimi",
+  "GlobalLocationId": 247496
+ },
+ {
+  "Id": 588,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "borujerdi",
+  "Name": "بروجردی ",
+  "ContinueUrl": "tehran-region15-borujerdi",
+  "GlobalLocationId": 246996
+ },
+ {
+  "Id": 589,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "aziz_khani",
+  "Name": "عزیزخانی ",
+  "ContinueUrl": "tehran-region15-aziz_khani",
+  "GlobalLocationId": 249747
+ },
+ {
+  "Id": 590,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "khiyaban_shahid_boroujerdi",
+  "Name": "خیابان شهید بروجردی",
+  "ContinueUrl": "tehran-region15-khiyaban_shahid_boroujerdi",
+  "GlobalLocationId": 249960
+ },
+ {
+  "Id": 591,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "hashemi_afsariyeh",
+  "Name": "هاشمی - افسریه",
+  "ContinueUrl": "tehran-region15-hashemi_afsariyeh",
+  "GlobalLocationId": 247695
+ },
+ {
+  "Id": 592,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "qiamdasht",
+  "Name": "قیام دشت",
+  "ContinueUrl": "tehran-region15-qiamdasht",
+  "GlobalLocationId": 246865
+ },
+ {
+  "Id": 593,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "bolvar_valfajr_eslam_abad",
+  "Name": "بلوار والفجر - اسلام اباد ",
+  "ContinueUrl": "tehran-region15-bolvar_valfajr_eslam_abad",
+  "GlobalLocationId": 250140
+ },
+ {
+  "Id": 594,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "bozorgrah_emam_reza",
+  "Name": "بزرگراه امام رضا",
+  "ContinueUrl": "tehran-region15-bozorgrah_emam_reza",
+  "GlobalLocationId": 250130
+ },
+ {
+  "Id": 595,
+  "Province": "tehran",
+  "Region": "region15",
+  "Zone": "tayeb_shoush",
+  "Name": "طیب - شوش",
+  "ContinueUrl": "tehran-region15-tayeb_shoush",
+  "GlobalLocationId": 249806
+ },
+ {
+  "Id": 596,
+  "Province": "tehran",
+  "Region": "region16",
+  "Zone": "",
+  "Name": "منطقه 16",
+  "ContinueUrl": "tehran-region16",
+  "GlobalLocationId": 246722
+ },
+ {
+  "Id": 597,
+  "Province": "tehran",
+  "Region": "region16",
+  "Zone": "sabouniyan",
+  "Name": "صابونیان ",
+  "ContinueUrl": "tehran-region16-sabouniyan",
+  "GlobalLocationId": 249791
+ },
+ {
+  "Id": 598,
+  "Province": "tehran",
+  "Region": "region16",
+  "Zone": "shoush_maydan_rah_ahan",
+  "Name": "شوش - میدان راه اهن",
+  "ContinueUrl": "tehran-region16-shoush_maydan_rah_ahan",
+  "GlobalLocationId": 249947
+ },
+ {
+  "Id": 599,
+  "Province": "tehran",
+  "Region": "region16",
+  "Zone": "dardasht_khazaneh",
+  "Name": " دردشت - خزانه",
+  "ContinueUrl": "tehran-region16-dardasht_khazaneh",
+  "GlobalLocationId": 247680
+ },
+ {
+  "Id": 600,
+  "Province": "tehran",
+  "Region": "region16",
+  "Zone": "dah_metri_dovom_javadiye_akbari",
+  "Name": "ده متری دوم جوادیه - اکبری",
+  "ContinueUrl": "tehran-region16-dah_metri_dovom_javadiye_akbari",
+  "GlobalLocationId": 247678
+ },
+ {
+  "Id": 601,
+  "Province": "tehran",
+  "Region": "region16",
+  "Zone": "falake_sevom_khazane",
+  "Name": "فلکه سوم خزانه",
+  "ContinueUrl": "tehran-region16-falake_sevom_khazane",
+  "GlobalLocationId": 247824
+ },
+ {
+  "Id": 602,
+  "Province": "tehran",
+  "Region": "region16",
+  "Zone": "maydan_dardasht",
+  "Name": "میدان دردشت ",
+  "ContinueUrl": "tehran-region16-maydan_dardasht",
+  "GlobalLocationId": 249602
+ },
+ {
+  "Id": 603,
+  "Province": "tehran",
+  "Region": "region16",
+  "Zone": "javadiyeh",
+  "Name": "جوادیه",
+  "ContinueUrl": "tehran-region16-javadiyeh",
+  "GlobalLocationId": 247014
+ },
+ {
+  "Id": 604,
+  "Province": "tehran",
+  "Region": "region16",
+  "Zone": "pol_javadiye",
+  "Name": "پل جوادیه",
+  "ContinueUrl": "tehran-region16-pol_javadiye",
+  "GlobalLocationId": 250152
+ },
+ {
+  "Id": 605,
+  "Province": "tehran",
+  "Region": "region16",
+  "Zone": "khazane",
+  "Name": "خزانه ",
+  "ContinueUrl": "tehran-region16-khazane",
+  "GlobalLocationId": 247108
+ },
+ {
+  "Id": 606,
+  "Province": "tehran",
+  "Region": "region16",
+  "Zone": "falake_aval_khazane",
+  "Name": "فلکه اول خزانه",
+  "ContinueUrl": "tehran-region16-falake_aval_khazane",
+  "GlobalLocationId": 250079
+ },
+ {
+  "Id": 607,
+  "Province": "tehran",
+  "Region": "region16",
+  "Zone": "fardniyan",
+  "Name": "فردنیان ",
+  "ContinueUrl": "tehran-region16-fardniyan",
+  "GlobalLocationId": 249843
+ },
+ {
+  "Id": 608,
+  "Province": "tehran",
+  "Region": "region16",
+  "Zone": "aliabad_shomali",
+  "Name": "علی اباد شمالی ",
+  "ContinueUrl": "tehran-region16-aliabad_shomali",
+  "GlobalLocationId": 247112
+ },
+ {
+  "Id": 609,
+  "Province": "tehran",
+  "Region": "region16",
+  "Zone": "shahrak_besat",
+  "Name": "شهرک بعثت",
+  "ContinueUrl": "tehran-region16-shahrak_besat",
+  "GlobalLocationId": 247111
+ },
+ {
+  "Id": 610,
+  "Province": "tehran",
+  "Region": "region16",
+  "Zone": "aliabad_jonubi",
+  "Name": " علی اباد جنوبی",
+  "ContinueUrl": "tehran-region16-aliabad_jonubi",
+  "GlobalLocationId": 246859
+ },
+ {
+  "Id": 611,
+  "Province": "tehran",
+  "Region": "region16",
+  "Zone": "shahid_falahi",
+  "Name": "شهید فلاحی ",
+  "ContinueUrl": "tehran-region16-shahid_falahi",
+  "GlobalLocationId": 249622
+ },
+ {
+  "Id": 612,
+  "Province": "tehran",
+  "Region": "region16",
+  "Zone": "bolvar_abrisham",
+  "Name": " بلوار ابریشم ",
+  "ContinueUrl": "tehran-region16-bolvar_abrisham",
+  "GlobalLocationId": 247601
+ },
+ {
+  "Id": 613,
+  "Province": "tehran",
+  "Region": "region19",
+  "Zone": "khaniabad_jonubi",
+  "Name": "خانی اباد جنوبی",
+  "ContinueUrl": "tehran-region19-khaniabad_jonubi",
+  "GlobalLocationId": 247139
+ },
+ {
+  "Id": 614,
+  "Province": "tehran",
+  "Region": "region16",
+  "Zone": "shahrak_shahid_beheshti_bolvar_dastvareh",
+  "Name": "شهرک شهید بهشتی - بلوار دستواره",
+  "ContinueUrl": "tehran-region16-shahrak_shahid_beheshti_bolvar_dastvareh",
+  "GlobalLocationId": 247564
+ },
+ {
+  "Id": 615,
+  "Province": "tehran",
+  "Region": "region16",
+  "Zone": "ali_abad",
+  "Name": "علی اباد ",
+  "ContinueUrl": "tehran-region16-ali_abad",
+  "GlobalLocationId": 249919
+ },
+ {
+  "Id": 616,
+  "Province": "tehran",
+  "Region": "region16",
+  "Zone": "sarlak",
+  "Name": "سرلک ",
+  "ContinueUrl": "tehran-region16-sarlak",
+  "GlobalLocationId": 249600
+ },
+ {
+  "Id": 617,
+  "Province": "tehran",
+  "Region": "region16",
+  "Zone": "bolvar_dastvare",
+  "Name": "بلوار دستواره",
+  "ContinueUrl": "tehran-region16-bolvar_dastvare",
+  "GlobalLocationId": 249611
+ },
+ {
+  "Id": 618,
+  "Province": "tehran",
+  "Region": "region16",
+  "Zone": "bastani_pour",
+  "Name": "باستانی پور",
+  "ContinueUrl": "tehran-region16-bastani_pour",
+  "GlobalLocationId": 247604
+ },
+ {
+  "Id": 619,
+  "Province": "tehran",
+  "Region": "region16",
+  "Zone": "bozorgrah_rajaei_khazane",
+  "Name": "بزرگراه رجایی - خزانه",
+  "ContinueUrl": "tehran-region16-bozorgrah_rajaei_khazane",
+  "GlobalLocationId": 249785
+ },
+ {
+  "Id": 620,
+  "Province": "tehran",
+  "Region": "region16",
+  "Zone": "falake_dovom_khazane",
+  "Name": "فلکه دوم خزانه",
+  "ContinueUrl": "tehran-region16-falake_dovom_khazane",
+  "GlobalLocationId": 247681
+ },
+ {
+  "Id": 621,
+  "Province": "tehran",
+  "Region": "region16",
+  "Zone": "nazi_abad",
+  "Name": "نازی اباد",
+  "ContinueUrl": "tehran-region16-nazi_abad",
+  "GlobalLocationId": 246860
+ },
+ {
+  "Id": 622,
+  "Province": "tehran",
+  "Region": "region16",
+  "Zone": "baq_azari",
+  "Name": "باغ اذری",
+  "ContinueUrl": "tehran-region16-baq_azari",
+  "GlobalLocationId": 246857
+ },
+ {
+  "Id": 623,
+  "Province": "tehran",
+  "Region": "region16",
+  "Zone": "falake_aval_abasi",
+  "Name": "فلکه اول عباسی",
+  "ContinueUrl": "tehran-region16-falake_aval_abasi",
+  "GlobalLocationId": 249822
+ },
+ {
+  "Id": 624,
+  "Province": "tehran",
+  "Region": "region16",
+  "Zone": "yakhchiabad",
+  "Name": "یاخچی اباد",
+  "ContinueUrl": "tehran-region16-yakhchiabad",
+  "GlobalLocationId": 247072
+ },
+ {
+  "Id": 625,
+  "Province": "tehran",
+  "Region": "region16",
+  "Zone": "mehr_abadi",
+  "Name": "مهرابادی ",
+  "ContinueUrl": "tehran-region16-mehr_abadi",
+  "GlobalLocationId": 249775
+ },
+ {
+  "Id": 626,
+  "Province": "tehran",
+  "Region": "region16",
+  "Zone": "bozorgrah_rajaei_shoush",
+  "Name": "بزرگراه رجایی - شوش",
+  "ContinueUrl": "tehran-region16-bozorgrah_rajaei_shoush",
+  "GlobalLocationId": 249643
+ },
+ {
+  "Id": 627,
+  "Province": "tehran",
+  "Region": "region16",
+  "Zone": "hezar_dastgah",
+  "Name": "هزار دستگاه",
+  "ContinueUrl": "tehran-region16-hezar_dastgah",
+  "GlobalLocationId": 247531
+ },
+ {
+  "Id": 628,
+  "Province": "tehran",
+  "Region": "region16",
+  "Zone": "nik_nam_bou_ali_shomali",
+  "Name": " نیک نام - بوعلی شمالی",
+  "ContinueUrl": "tehran-region16-nik_nam_bou_ali_shomali",
+  "GlobalLocationId": 250003
+ },
+ {
+  "Id": 629,
+  "Province": "tehran",
+  "Region": "region16",
+  "Zone": "akbar_mashhadi",
+  "Name": " اکبر مشهدی",
+  "ContinueUrl": "tehran-region16-akbar_mashhadi",
+  "GlobalLocationId": 247608
+ },
+ {
+  "Id": 630,
+  "Province": "tehran",
+  "Region": "region16",
+  "Zone": "shahid_alireza_vafaei",
+  "Name": "شهید علیرضا وفایی",
+  "ContinueUrl": "tehran-region16-shahid_alireza_vafaei",
+  "GlobalLocationId": 247847
+ },
+ {
+  "Id": 631,
+  "Province": "tehran",
+  "Region": "region16",
+  "Zone": "badli_givi_nazi_abad",
+  "Name": "دلی گیوی - نازی اباد ",
+  "ContinueUrl": "tehran-region16-badli_givi_nazi_abad",
+  "GlobalLocationId": 249971
+ },
+ {
+  "Id": 632,
+  "Province": "tehran",
+  "Region": "region17",
+  "Zone": "",
+  "Name": "منطقه 17",
+  "ContinueUrl": "tehran-region17",
+  "GlobalLocationId": 246694
+ },
+ {
+  "Id": 633,
+  "Province": "tehran",
+  "Region": "region17",
+  "Zone": "ghofeili",
+  "Name": "قفیلی ",
+  "ContinueUrl": "tehran-region17-ghofeili",
+  "GlobalLocationId": 249581
+ },
+ {
+  "Id": 634,
+  "Province": "tehran",
+  "Region": "region17",
+  "Zone": "khosh_kerdar",
+  "Name": "خوش کردار",
+  "ContinueUrl": "tehran-region17-khosh_kerdar",
+  "GlobalLocationId": 247602
+ },
+ {
+  "Id": 635,
+  "Province": "tehran",
+  "Region": "region17",
+  "Zone": "zehtabi",
+  "Name": "زهتابی ",
+  "ContinueUrl": "tehran-region17-zehtabi",
+  "GlobalLocationId": 247134
+ },
+ {
+  "Id": 636,
+  "Province": "tehran",
+  "Region": "region17",
+  "Zone": "baq_khazaneh",
+  "Name": "باغ خزانه",
+  "ContinueUrl": "tehran-region17-baq_khazaneh",
+  "GlobalLocationId": 247019
+ },
+ {
+  "Id": 637,
+  "Province": "tehran",
+  "Region": "region17",
+  "Zone": "varzdar",
+  "Name": "ورزدار ",
+  "ContinueUrl": "tehran-region17-varzdar",
+  "GlobalLocationId": 250135
+ },
+ {
+  "Id": 638,
+  "Province": "tehran",
+  "Region": "region17",
+  "Zone": "amin_almolk",
+  "Name": "امین الملک",
+  "ContinueUrl": "tehran-region17-amin_almolk",
+  "GlobalLocationId": 249670
+ },
+ {
+  "Id": 639,
+  "Province": "tehran",
+  "Region": "region17",
+  "Zone": "sajad_shomali",
+  "Name": "سجاد شمالی",
+  "ContinueUrl": "tehran-region17-sajad_shomali",
+  "GlobalLocationId": 249782
+ },
+ {
+  "Id": 640,
+  "Province": "tehran",
+  "Region": "region17",
+  "Zone": "moqadam",
+  "Name": "مقدم ",
+  "ContinueUrl": "tehran-region17-moqadam",
+  "GlobalLocationId": 247113
+ },
+ {
+  "Id": 641,
+  "Province": "tehran",
+  "Region": "region17",
+  "Zone": "fereydoun_ahmadi",
+  "Name": "فریدون احمدی",
+  "ContinueUrl": "tehran-region17-fereydoun_ahmadi",
+  "GlobalLocationId": 250024
+ },
+ {
+  "Id": 642,
+  "Province": "tehran",
+  "Region": "region17",
+  "Zone": "abouzar_ghale_morghi",
+  "Name": "ابوذر - قلعه مرغی ",
+  "ContinueUrl": "tehran-region17-abouzar_ghale_morghi",
+  "GlobalLocationId": 249648
+ },
+ {
+  "Id": 643,
+  "Province": "tehran",
+  "Region": "region17",
+  "Zone": "ramezani",
+  "Name": "رمضانی ",
+  "ContinueUrl": "tehran-region17-ramezani",
+  "GlobalLocationId": 249802
+ },
+ {
+  "Id": 644,
+  "Province": "tehran",
+  "Region": "region17",
+  "Zone": "fathi",
+  "Name": "فتحی ",
+  "ContinueUrl": "tehran-region17-fathi",
+  "GlobalLocationId": 249678
+ },
+ {
+  "Id": 645,
+  "Province": "tehran",
+  "Region": "region17",
+  "Zone": "shahid_naeimi",
+  "Name": "شهید نعیمی",
+  "ContinueUrl": "tehran-region17-shahid_naeimi",
+  "GlobalLocationId": 250109
+ },
+ {
+  "Id": 646,
+  "Province": "tehran",
+  "Region": "region17",
+  "Zone": "razaghi",
+  "Name": "رزاقی ",
+  "ContinueUrl": "tehran-region17-razaghi",
+  "GlobalLocationId": 250023
+ },
+ {
+  "Id": 647,
+  "Province": "tehran",
+  "Region": "region17",
+  "Zone": "farkhonde",
+  "Name": "فرخنده ",
+  "ContinueUrl": "tehran-region17-farkhonde",
+  "GlobalLocationId": 249736
+ },
+ {
+  "Id": 648,
+  "Province": "tehran",
+  "Region": "region17",
+  "Zone": "golchin",
+  "Name": "گلچین ",
+  "ContinueUrl": "tehran-region17-golchin",
+  "GlobalLocationId": 247046
+ },
+ {
+  "Id": 649,
+  "Province": "tehran",
+  "Region": "region17",
+  "Zone": "babri",
+  "Name": "ببری ",
+  "ContinueUrl": "tehran-region17-babri",
+  "GlobalLocationId": 247491
+ },
+ {
+  "Id": 650,
+  "Province": "tehran",
+  "Region": "region17",
+  "Zone": "maydan_golchin",
+  "Name": "میدان گلچین",
+  "ContinueUrl": "tehran-region17-maydan_golchin",
+  "GlobalLocationId": 250028
+ },
+ {
+  "Id": 651,
+  "Province": "tehran",
+  "Region": "region17",
+  "Zone": "jahad_zehtabi",
+  "Name": "جهاد - زهتابی",
+  "ContinueUrl": "tehran-region17-jahad_zehtabi",
+  "GlobalLocationId": 250110
+ },
+ {
+  "Id": 652,
+  "Province": "tehran",
+  "Region": "region17",
+  "Zone": "eyvazkhani",
+  "Name": "عیوض خانی",
+  "ContinueUrl": "tehran-region17-eyvazkhani",
+  "GlobalLocationId": 247620
+ },
+ {
+  "Id": 653,
+  "Province": "tehran",
+  "Region": "region17",
+  "Zone": "ghodrati",
+  "Name": "قدرتی ",
+  "ContinueUrl": "tehran-region17-ghodrati",
+  "GlobalLocationId": 247622
+ },
+ {
+  "Id": 654,
+  "Province": "tehran",
+  "Region": "region17",
+  "Zone": "jalili",
+  "Name": "جلیلی ",
+  "ContinueUrl": "tehran-region17-jalili",
+  "GlobalLocationId": 246956
+ },
+ {
+  "Id": 655,
+  "Province": "tehran",
+  "Region": "region17",
+  "Zone": "aghayari",
+  "Name": "اقایاری ",
+  "ContinueUrl": "tehran-region17-aghayari",
+  "GlobalLocationId": 249743
+ },
+ {
+  "Id": 656,
+  "Province": "tehran",
+  "Region": "region17",
+  "Zone": "abuzar_qarbi",
+  "Name": "ابوذر غربی",
+  "ContinueUrl": "tehran-region17-abuzar_qarbi",
+  "GlobalLocationId": 247133
+ },
+ {
+  "Id": 657,
+  "Province": "tehran",
+  "Region": "region17",
+  "Zone": "ghorbani",
+  "Name": "قربانی ",
+  "ContinueUrl": "tehran-region17-ghorbani",
+  "GlobalLocationId": 249729
+ },
+ {
+  "Id": 658,
+  "Province": "tehran",
+  "Region": "region17",
+  "Zone": "vasfnard",
+  "Name": "وصفنارد ",
+  "ContinueUrl": "tehran-region17-vasfnard",
+  "GlobalLocationId": 247022
+ },
+ {
+  "Id": 659,
+  "Province": "tehran",
+  "Region": "region17",
+  "Zone": "asgari",
+  "Name": "عسگری ",
+  "ContinueUrl": "tehran-region17-asgari",
+  "GlobalLocationId": 249628
+ },
+ {
+  "Id": 660,
+  "Province": "tehran",
+  "Region": "region17",
+  "Zone": "abuzar_sharqi",
+  "Name": "ابوذر شرقی",
+  "ContinueUrl": "tehran-region17-abuzar_sharqi",
+  "GlobalLocationId": 247080
+ },
+ {
+  "Id": 661,
+  "Province": "tehran",
+  "Region": "region17",
+  "Zone": "masjed",
+  "Name": "مسجد ",
+  "ContinueUrl": "tehran-region17-masjed",
+  "GlobalLocationId": 249693
+ },
+ {
+  "Id": 662,
+  "Province": "tehran",
+  "Region": "region17",
+  "Zone": "bolurzasi",
+  "Name": "بلور سازی",
+  "ContinueUrl": "tehran-region17-bolurzasi",
+  "GlobalLocationId": 246937
+ },
+ {
+  "Id": 663,
+  "Province": "tehran",
+  "Region": "region17",
+  "Zone": "bahador_nezhad",
+  "Name": "بهادرنژاد",
+  "ContinueUrl": "tehran-region17-bahador_nezhad",
+  "GlobalLocationId": 249859
+ },
+ {
+  "Id": 664,
+  "Province": "tehran",
+  "Region": "region17",
+  "Zone": "rashidi_jahan",
+  "Name": "رشیدی جهان",
+  "ContinueUrl": "tehran-region17-rashidi_jahan",
+  "GlobalLocationId": 249647
+ },
+ {
+  "Id": 665,
+  "Province": "tehran",
+  "Region": "region17",
+  "Zone": "tashayo",
+  "Name": "تشیع ",
+  "ContinueUrl": "tehran-region17-tashayo",
+  "GlobalLocationId": 249873
+ },
+ {
+  "Id": 666,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "",
+  "Name": "منطقه 18",
+  "ContinueUrl": "tehran-region18",
+  "GlobalLocationId": 246696
+ },
+ {
+  "Id": 667,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "yadegar_kouy_mehrzad",
+  "Name": "یادگار - کوی مهرزاد",
+  "ContinueUrl": "tehran-region18-yadegar_kouy_mehrzad",
+  "GlobalLocationId": 249599
+ },
+ {
+  "Id": 668,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "sajadi",
+  "Name": "سجادی ",
+  "ContinueUrl": "tehran-region18-sajadi",
+  "GlobalLocationId": 249778
+ },
+ {
+  "Id": 669,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "noruzabad",
+  "Name": "نوروز اباد",
+  "ContinueUrl": "tehran-region18-noruzabad",
+  "GlobalLocationId": 247027
+ },
+ {
+  "Id": 670,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "mofateh",
+  "Name": "مفتح ",
+  "ContinueUrl": "tehran-region18-mofateh",
+  "GlobalLocationId": 247661
+ },
+ {
+  "Id": 671,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "bolvar_alghadir",
+  "Name": "بلوار الغدیر",
+  "ContinueUrl": "tehran-region18-bolvar_alghadir",
+  "GlobalLocationId": 249609
+ },
+ {
+  "Id": 672,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "sarhadi_hefdah_shahrivar",
+  "Name": "سرحدی - هفده شهریور ",
+  "ContinueUrl": "tehran-region18-sarhadi_hefdah_shahrivar",
+  "GlobalLocationId": 250185
+ },
+ {
+  "Id": 673,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "khalij_fars_jonubi",
+  "Name": "خلیج فارس جنوبی",
+  "ContinueUrl": "tehran-region18-khalij_fars_jonubi",
+  "GlobalLocationId": 246977
+ },
+ {
+  "Id": 674,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "shahid_rajaei",
+  "Name": "شهید رجایی",
+  "ContinueUrl": "tehran-region18-shahid_rajaei",
+  "GlobalLocationId": 247137
+ },
+ {
+  "Id": 675,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "maydan_pazhoutan",
+  "Name": "میدان پژوتن",
+  "ContinueUrl": "tehran-region18-maydan_pazhoutan",
+  "GlobalLocationId": 249878
+ },
+ {
+  "Id": 676,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "eslam_abad",
+  "Name": "اسلام اباد",
+  "ContinueUrl": "tehran-region18-eslam_abad",
+  "GlobalLocationId": 249803
+ },
+ {
+  "Id": 677,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "bozorgrah_ayatolah_saeidi",
+  "Name": "بزرگراه ایت الله سعیدی",
+  "ContinueUrl": "tehran-region18-bozorgrah_ayatolah_saeidi",
+  "GlobalLocationId": 250076
+ },
+ {
+  "Id": 678,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "sepide_mirzaei",
+  "Name": "سپیده - میرزایی",
+  "ContinueUrl": "tehran-region18-sepide_mirzaei",
+  "GlobalLocationId": 247581
+ },
+ {
+  "Id": 679,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "baradaran_bahrami",
+  "Name": "رادران بهرامی",
+  "ContinueUrl": "tehran-region18-baradaran_bahrami",
+  "GlobalLocationId": 249682
+ },
+ {
+  "Id": 680,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "tolid_daru",
+  "Name": "تولید دارو",
+  "ContinueUrl": "tehran-region18-tolid_daru",
+  "GlobalLocationId": 247076
+ },
+ {
+  "Id": 681,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "yaftabad_jonubi",
+  "Name": "یافت اباد جنوبی",
+  "ContinueUrl": "tehran-region18-yaftabad_jonubi",
+  "GlobalLocationId": 247138
+ },
+ {
+  "Id": 682,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "abou_saeid_sharghi",
+  "Name": " ابوسعید شرقی",
+  "ContinueUrl": "tehran-region18-abou_saeid_sharghi",
+  "GlobalLocationId": 249710
+ },
+ {
+  "Id": 683,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "bolvar_khalij_fars",
+  "Name": "بلوار خلیج فارس",
+  "ContinueUrl": "tehran-region18-bolvar_khalij_fars",
+  "GlobalLocationId": 249964
+ },
+ {
+  "Id": 684,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "norouz_abad",
+  "Name": "نوروزاباد ",
+  "ContinueUrl": "tehran-region18-norouz_abad",
+  "GlobalLocationId": 250007
+ },
+ {
+  "Id": 685,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "saeidabad",
+  "Name": "سعید اباد",
+  "ContinueUrl": "tehran-region18-saeidabad",
+  "GlobalLocationId": 246938
+ },
+ {
+  "Id": 686,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "maydan_isar",
+  "Name": "میدان ایثار",
+  "ContinueUrl": "tehran-region18-maydan_isar",
+  "GlobalLocationId": 249680
+ },
+ {
+  "Id": 687,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "sahebazzaman",
+  "Name": "صاحب الزمان",
+  "ContinueUrl": "tehran-region18-sahebazzaman",
+  "GlobalLocationId": 246863
+ },
+ {
+  "Id": 688,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "tohid_bolvar_moalem",
+  "Name": "توحید - بلوار معلم",
+  "ContinueUrl": "tehran-region18-tohid_bolvar_moalem",
+  "GlobalLocationId": 247478
+ },
+ {
+  "Id": 689,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "valiasr_jonubi",
+  "Name": "ولی عصر جنوبی",
+  "ContinueUrl": "tehran-region18-valiasr_jonubi",
+  "GlobalLocationId": 247024
+ },
+ {
+  "Id": 690,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "imam_khomeyni",
+  "Name": "امام خمینی",
+  "ContinueUrl": "tehran-region18-imam_khomeyni",
+  "GlobalLocationId": 247089
+ },
+ {
+  "Id": 691,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "ferdos",
+  "Name": "فردوس",
+  "ContinueUrl": "tehran-region18-ferdos",
+  "GlobalLocationId": 246909
+ },
+ {
+  "Id": 692,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "abresani",
+  "Name": "ابرسانی ",
+  "ContinueUrl": "tehran-region18-abresani",
+  "GlobalLocationId": 249816
+ },
+ {
+  "Id": 693,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "bazar_ahan",
+  "Name": "بازار اهن",
+  "ContinueUrl": "tehran-region18-bazar_ahan",
+  "GlobalLocationId": 250013
+ },
+ {
+  "Id": 694,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "shahrak_emamkhomeyni",
+  "Name": "شهرک امام خمینی",
+  "ContinueUrl": "tehran-region18-shahrak_emamkhomeyni",
+  "GlobalLocationId": 249679
+ },
+ {
+  "Id": 695,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "hefdah_shahrivar_yaft_abad",
+  "Name": "هفده شهریور - یافت اباد",
+  "ContinueUrl": "tehran-region18-hefdah_shahrivar_yaft_abad",
+  "GlobalLocationId": 249665
+ },
+ {
+  "Id": 696,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "bolvar_tavous",
+  "Name": "بلوار طاووس",
+  "ContinueUrl": "tehran-region18-bolvar_tavous",
+  "GlobalLocationId": 249962
+ },
+ {
+  "Id": 697,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "shadabad",
+  "Name": "شاد اباد",
+  "ContinueUrl": "tehran-region18-shadabad",
+  "GlobalLocationId": 246939
+ },
+ {
+  "Id": 698,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "solaymani",
+  "Name": "سلیمانی ",
+  "ContinueUrl": "tehran-region18-solaymani",
+  "GlobalLocationId": 249671
+ },
+ {
+  "Id": 699,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "shahsavari",
+  "Name": "شهسواری ",
+  "ContinueUrl": "tehran-region18-shahsavari",
+  "GlobalLocationId": 249586
+ },
+ {
+  "Id": 700,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "nik_maleki",
+  "Name": "نیک ملکی",
+  "ContinueUrl": "tehran-region18-nik_maleki",
+  "GlobalLocationId": 249961
+ },
+ {
+  "Id": 701,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "shaharak_moslemin",
+  "Name": "شهرک مسلمین",
+  "ContinueUrl": "tehran-region18-shaharak_moslemin",
+  "GlobalLocationId": 250035
+ },
+ {
+  "Id": 702,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "valiasr_shomali",
+  "Name": "ولی عصر شمالی",
+  "ContinueUrl": "tehran-region18-valiasr_shomali",
+  "GlobalLocationId": 246906
+ },
+ {
+  "Id": 703,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "shahrak_vali_asr_behkhiyal",
+  "Name": "شهرک ولیعصر - به خیال",
+  "ContinueUrl": "tehran-region18-shahrak_vali_asr_behkhiyal",
+  "GlobalLocationId": 250002
+ },
+ {
+  "Id": 704,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "vali_mohamadi",
+  "Name": "ولی محمدی",
+  "ContinueUrl": "tehran-region18-vali_mohamadi",
+  "GlobalLocationId": 249853
+ },
+ {
+  "Id": 705,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "behdasht",
+  "Name": "بهداشت ",
+  "ContinueUrl": "tehran-region18-behdasht",
+  "GlobalLocationId": 247135
+ },
+ {
+  "Id": 706,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "shamsabad",
+  "Name": "شاد اباد",
+  "ContinueUrl": "tehran-region18-shamsabad",
+  "GlobalLocationId": 273102
+ },
+ {
+  "Id": 707,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "17_shahrivar",
+  "Name": "هفده شهریور",
+  "ContinueUrl": "tehran-region18-17_shahrivar",
+  "GlobalLocationId": 246940
+ },
+ {
+  "Id": 708,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "kooy_hefdahom_e_shahrivar",
+  "Name": "کوی هفدهم شهریور",
+  "ContinueUrl": "tehran-region18-kooy_hefdahom_e_shahrivar",
+  "GlobalLocationId": 249608
+ },
+ {
+  "Id": 709,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "shahid_asghari",
+  "Name": "شهید اصغری",
+  "ContinueUrl": "tehran-region18-shahid_asghari",
+  "GlobalLocationId": 250073
+ },
+ {
+  "Id": 710,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "bolvar_boroujerdi",
+  "Name": "بلوار بروجردی",
+  "ContinueUrl": "tehran-region18-bolvar_boroujerdi",
+  "GlobalLocationId": 247595
+ },
+ {
+  "Id": 711,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "yaftabad_shomali",
+  "Name": "یافت اباد شمالی",
+  "ContinueUrl": "tehran-region18-yaftabad_shomali",
+  "GlobalLocationId": 246973
+ },
+ {
+  "Id": 712,
+  "Province": "tehran",
+  "Region": "region18",
+  "Zone": "abou_saeid_gharbi",
+  "Name": "ابوسعید غربی",
+  "ContinueUrl": "tehran-region18-abou_saeid_gharbi",
+  "GlobalLocationId": 249921
+ },
+ {
+  "Id": 713,
+  "Province": "tehran",
+  "Region": "region19",
+  "Zone": "",
+  "Name": "منطقه 19",
+  "ContinueUrl": "tehran-region19",
+  "GlobalLocationId": 246733
+ },
+ {
+  "Id": 714,
+  "Province": "tehran",
+  "Region": "region19",
+  "Zone": "khani_abad_no_jonoubi",
+  "Name": "خانی اباد نو جنوبی",
+  "ContinueUrl": "tehran-region19-khani_abad_no_jonoubi",
+  "GlobalLocationId": 249790
+ },
+ {
+  "Id": 715,
+  "Province": "tehran",
+  "Region": "region19",
+  "Zone": "maydan_ebne_sina",
+  "Name": "میدان ابن سینا ",
+  "ContinueUrl": "tehran-region19-maydan_ebne_sina",
+  "GlobalLocationId": 249946
+ },
+ {
+  "Id": 716,
+  "Province": "tehran",
+  "Region": "region19",
+  "Zone": "dolatkhah_jonubi",
+  "Name": "دولت خواه جنوبی",
+  "ContinueUrl": "tehran-region19-dolatkhah_jonubi",
+  "GlobalLocationId": 246957
+ },
+ {
+  "Id": 717,
+  "Province": "tehran",
+  "Region": "region19",
+  "Zone": "maydan_saralah",
+  "Name": "میدان ثارالله",
+  "ContinueUrl": "tehran-region19-maydan_saralah",
+  "GlobalLocationId": 249613
+ },
+ {
+  "Id": 718,
+  "Province": "tehran",
+  "Region": "region19",
+  "Zone": "baradaran_shokri",
+  "Name": "برادران شکری ",
+  "ContinueUrl": "tehran-region19-baradaran_shokri",
+  "GlobalLocationId": 249956
+ },
+ {
+  "Id": 719,
+  "Province": "tehran",
+  "Region": "region19",
+  "Zone": "shahid_latifi",
+  "Name": "شهید لطیفی",
+  "ContinueUrl": "tehran-region19-shahid_latifi",
+  "GlobalLocationId": 249832
+ },
+ {
+  "Id": 720,
+  "Province": "tehran",
+  "Region": "region19",
+  "Zone": "mina_khani_abad_no_shomali",
+  "Name": "مینا - خانی اباد نو شمالی ",
+  "ContinueUrl": "tehran-region19-mina_khani_abad_no_shomali",
+  "GlobalLocationId": 249737
+ },
+ {
+  "Id": 721,
+  "Province": "tehran",
+  "Region": "region19",
+  "Zone": "abdol_abad",
+  "Name": "عبدل اباد",
+  "ContinueUrl": "tehran-region19-abdol_abad",
+  "GlobalLocationId": 250060
+ },
+ {
+  "Id": 722,
+  "Province": "tehran",
+  "Region": "region19",
+  "Zone": "azadegan",
+  "Name": "ازادگان ",
+  "ContinueUrl": "tehran-region19-azadegan",
+  "GlobalLocationId": 249789
+ },
+ {
+  "Id": 723,
+  "Province": "tehran",
+  "Region": "region19",
+  "Zone": "shariati_shomali",
+  "Name": "شریعتی شمالی",
+  "ContinueUrl": "tehran-region19-shariati_shomali",
+  "GlobalLocationId": 247057
+ },
+ {
+  "Id": 724,
+  "Province": "tehran",
+  "Region": "region19",
+  "Zone": "amouzegar",
+  "Name": "اموزگار ",
+  "ContinueUrl": "tehran-region19-amouzegar",
+  "GlobalLocationId": 249793
+ },
+ {
+  "Id": 725,
+  "Province": "tehran",
+  "Region": "region19",
+  "Zone": "mahour",
+  "Name": "ماهور ",
+  "ContinueUrl": "tehran-region19-mahour",
+  "GlobalLocationId": 250098
+ },
+ {
+  "Id": 726,
+  "Province": "tehran",
+  "Region": "region19",
+  "Zone": "ehsani",
+  "Name": "احسانی ",
+  "ContinueUrl": "tehran-region19-ehsani",
+  "GlobalLocationId": 250170
+ },
+ {
+  "Id": 727,
+  "Province": "tehran",
+  "Region": "region19",
+  "Zone": "shaghayegh_abdol_abad",
+  "Name": "شقایق - عبدل اباد",
+  "ContinueUrl": "tehran-region19-shaghayegh_abdol_abad",
+  "GlobalLocationId": 247808
+ },
+ {
+  "Id": 728,
+  "Province": "tehran",
+  "Region": "region19",
+  "Zone": "dolatkhah_shomali",
+  "Name": "دولت خواه شمالی ",
+  "ContinueUrl": "tehran-region19-dolatkhah_shomali",
+  "GlobalLocationId": 247073
+ },
+ {
+  "Id": 729,
+  "Province": "tehran",
+  "Region": "region19",
+  "Zone": "shokufeh_shomali",
+  "Name": "شکوفه شمالی",
+  "ContinueUrl": "tehran-region19-shokufeh_shomali",
+  "GlobalLocationId": 247074
+ },
+ {
+  "Id": 730,
+  "Province": "tehran",
+  "Region": "region19",
+  "Zone": "esmaeilabad",
+  "Name": "اسماعیل اباد",
+  "ContinueUrl": "tehran-region19-esmaeilabad",
+  "GlobalLocationId": 247012
+ },
+ {
+  "Id": 731,
+  "Province": "tehran",
+  "Region": "region19",
+  "Zone": "shokufeh_jonubi",
+  "Name": "شکوفه جنوبی ",
+  "ContinueUrl": "tehran-region19-shokufeh_jonubi",
+  "GlobalLocationId": 247013
+ },
+ {
+  "Id": 732,
+  "Province": "tehran",
+  "Region": "region19",
+  "Zone": "firouz",
+  "Name": "فیروز ",
+  "ContinueUrl": "tehran-region19-firouz",
+  "GlobalLocationId": 250172
+ },
+ {
+  "Id": 733,
+  "Province": "tehran",
+  "Region": "region19",
+  "Zone": "shariati_jonubi",
+  "Name": "شریعتی جنوبی",
+  "ContinueUrl": "tehran-region19-shariati_jonubi",
+  "GlobalLocationId": 246868
+ },
+ {
+  "Id": 734,
+  "Province": "tehran",
+  "Region": "region19",
+  "Zone": "esfandiyari_bostan",
+  "Name": "اسفندیاری - بستان",
+  "ContinueUrl": "tehran-region19-esfandiyari_bostan",
+  "GlobalLocationId": 247110
+ },
+ {
+  "Id": 735,
+  "Province": "tehran",
+  "Region": "region19",
+  "Zone": "bahman",
+  "Name": "بهمن ",
+  "ContinueUrl": "tehran-region19-bahman",
+  "GlobalLocationId": 250154
+ },
+ {
+  "Id": 736,
+  "Province": "tehran",
+  "Region": "region19",
+  "Zone": "samadi",
+  "Name": "صمدی ",
+  "ContinueUrl": "tehran-region19-samadi",
+  "GlobalLocationId": 247683
+ },
+ {
+  "Id": 737,
+  "Province": "tehran",
+  "Region": "region19",
+  "Zone": "shahrak_resalat",
+  "Name": "شهرک رسالت",
+  "ContinueUrl": "tehran-region19-shahrak_resalat",
+  "GlobalLocationId": 247142
+ },
+ {
+  "Id": 738,
+  "Province": "tehran",
+  "Region": "region19",
+  "Zone": "esfandyari",
+  "Name": "اسفندیاری ",
+  "ContinueUrl": "tehran-region19-esfandyari",
+  "GlobalLocationId": 249598
+ },
+ {
+  "Id": 739,
+  "Province": "tehran",
+  "Region": "region19",
+  "Zone": "mahan",
+  "Name": "ماهان ",
+  "ContinueUrl": "tehran-region19-mahan",
+  "GlobalLocationId": 247596
+ },
+ {
+  "Id": 740,
+  "Province": "tehran",
+  "Region": "region19",
+  "Zone": "abdolah_abad",
+  "Name": "عبدالله اباد",
+  "ContinueUrl": "tehran-region19-abdolah_abad",
+  "GlobalLocationId": 249869
+ },
+ {
+  "Id": 741,
+  "Province": "tehran",
+  "Region": "region19",
+  "Zone": "khaniabadshomali",
+  "Name": "خانی اباد شمالی ",
+  "ContinueUrl": "tehran-region19-khaniabadshomali",
+  "GlobalLocationId": 246866
+ },
+ {
+  "Id": 742,
+  "Province": "tehran",
+  "Region": "region19",
+  "Zone": "bolvar_shaghayegh_esfandiyari",
+  "Name": "بلوار شقایق - اسفندیاری",
+  "ContinueUrl": "tehran-region19-bolvar_shaghayegh_esfandiyari",
+  "GlobalLocationId": 250119
+ },
+ {
+  "Id": 743,
+  "Province": "tehran",
+  "Region": "region19",
+  "Zone": "miaad_esfandiari",
+  "Name": "میعاد - اسفندیاری",
+  "ContinueUrl": "tehran-region19-miaad_esfandiari",
+  "GlobalLocationId": 250083
+ },
+ {
+  "Id": 744,
+  "Province": "tehran",
+  "Region": "region19",
+  "Zone": "ali_akbar_alinezhad",
+  "Name": "علی اکبر علی نژاد",
+  "ContinueUrl": "tehran-region19-ali_akbar_alinezhad",
+  "GlobalLocationId": 249938
+ },
+ {
+  "Id": 745,
+  "Province": "tehran",
+  "Region": "region19",
+  "Zone": "shahid_kazemi",
+  "Name": "شهید کاظمی",
+  "ContinueUrl": "tehran-region19-shahid_kazemi",
+  "GlobalLocationId": 246869
+ },
+ {
+  "Id": 746,
+  "Province": "tehran",
+  "Region": "region19",
+  "Zone": "nematabad",
+  "Name": "نعمت اباد",
+  "ContinueUrl": "tehran-region19-nematabad",
+  "GlobalLocationId": 246941
+ },
+ {
+  "Id": 747,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "firouz_abadi",
+  "Name": "فیروزابادی ",
+  "ContinueUrl": "tehran-region20-firouz_abadi",
+  "GlobalLocationId": 247758
+ },
+ {
+  "Id": 748,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "nafari",
+  "Name": "نفری ",
+  "ContinueUrl": "tehran-region20-nafari",
+  "GlobalLocationId": 249899
+ },
+ {
+  "Id": 749,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "shahrak_shahrdari_golshahr",
+  "Name": "شهرک شهرداری - گلشهر ",
+  "ContinueUrl": "tehran-region20-shahrak_shahrdari_golshahr",
+  "GlobalLocationId": 247712
+ },
+ {
+  "Id": 750,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "navaz",
+  "Name": "نواز ",
+  "ContinueUrl": "tehran-region20-navaz",
+  "GlobalLocationId": 247587
+ },
+ {
+  "Id": 751,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "dolatabad",
+  "Name": "دولت اباد",
+  "ContinueUrl": "tehran-region20-dolatabad",
+  "GlobalLocationId": 246942
+ },
+ {
+  "Id": 752,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "safaeiyeh",
+  "Name": "صفائیه ",
+  "ContinueUrl": "tehran-region20-safaeiyeh",
+  "GlobalLocationId": 246878
+ },
+ {
+  "Id": 753,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "cheshme_ali",
+  "Name": "چشمه علی",
+  "ContinueUrl": "tehran-region20-cheshme_ali",
+  "GlobalLocationId": 249689
+ },
+ {
+  "Id": 754,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "zahirabad",
+  "Name": "ظهیراباد ",
+  "ContinueUrl": "tehran-region20-zahirabad",
+  "GlobalLocationId": 246979
+ },
+ {
+  "Id": 755,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "ebnbabvey",
+  "Name": "ابن بابویه",
+  "ContinueUrl": "tehran-region20-ebnbabvey",
+  "GlobalLocationId": 246978
+ },
+ {
+  "Id": 756,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "se_rah_varamin",
+  "Name": "سه راه ورامین",
+  "ContinueUrl": "tehran-region20-se_rah_varamin",
+  "GlobalLocationId": 249966
+ },
+ {
+  "Id": 757,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "ghayouri",
+  "Name": "غیوری ",
+  "ContinueUrl": "tehran-region20-ghayouri",
+  "GlobalLocationId": 250087
+ },
+ {
+  "Id": 758,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "sartakht",
+  "Name": "سرتخت",
+  "ContinueUrl": "tehran-region20-sartakht",
+  "GlobalLocationId": 246874
+ },
+ {
+  "Id": 759,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "firuzabadi",
+  "Name": "فیروز ابادی",
+  "ContinueUrl": "tehran-region20-firuzabadi",
+  "GlobalLocationId": 246943
+ },
+ {
+  "Id": 760,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "ghadami_maydan_shahr_rey",
+  "Name": "قدمی - میدان شهر ری",
+  "ContinueUrl": "tehran-region20-ghadami_maydan_shahr_rey",
+  "GlobalLocationId": 249617
+ },
+ {
+  "Id": 761,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "ghaybi",
+  "Name": "غیبی ",
+  "ContinueUrl": "tehran-region20-ghaybi",
+  "GlobalLocationId": 250100
+ },
+ {
+  "Id": 762,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "sepahiyan_enghelab",
+  "Name": "سپاهیان انقلاب",
+  "ContinueUrl": "tehran-region20-sepahiyan_enghelab",
+  "GlobalLocationId": 249741
+ },
+ {
+  "Id": 763,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "valiabad",
+  "Name": "ولی اباد",
+  "ContinueUrl": "tehran-region20-valiabad",
+  "GlobalLocationId": 246875
+ },
+ {
+  "Id": 764,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "avini",
+  "Name": "اوینی ",
+  "ContinueUrl": "tehran-region20-avini",
+  "GlobalLocationId": 249637
+ },
+ {
+  "Id": 765,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "mohamad_fadaei",
+  "Name": "محمد فدایی",
+  "ContinueUrl": "tehran-region20-mohamad_fadaei",
+  "GlobalLocationId": 247490
+ },
+ {
+  "Id": 766,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "bolvar_qom_vali_abad",
+  "Name": "قم - ولی اباد ",
+  "ContinueUrl": "tehran-region20-bolvar_qom_vali_abad",
+  "GlobalLocationId": 250107
+ },
+ {
+  "Id": 767,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "13_aban",
+  "Name": "سیزده ابان ",
+  "ContinueUrl": "tehran-region20-13_aban",
+  "GlobalLocationId": 247099
+ },
+ {
+  "Id": 768,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "reza_zade",
+  "Name": "رضازاده ",
+  "ContinueUrl": "tehran-region20-reza_zade",
+  "GlobalLocationId": 250063
+ },
+ {
+  "Id": 769,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "rashidi",
+  "Name": "رشیدی ",
+  "ContinueUrl": "tehran-region20-rashidi",
+  "GlobalLocationId": 249812
+ },
+ {
+  "Id": 770,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "sadegh_amani",
+  "Name": "صادق امانی",
+  "ContinueUrl": "tehran-region20-sadegh_amani",
+  "GlobalLocationId": 249857
+ },
+ {
+  "Id": 771,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "molaei",
+  "Name": "مولایی ",
+  "ContinueUrl": "tehran-region20-molaei",
+  "GlobalLocationId": 250147
+ },
+ {
+  "Id": 772,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "hamzehabad",
+  "Name": "حمزه اباد",
+  "ContinueUrl": "tehran-region20-hamzehabad",
+  "GlobalLocationId": 246873
+ },
+ {
+  "Id": 773,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "dasar",
+  "Name": "داسار ",
+  "ContinueUrl": "tehran-region20-dasar",
+  "GlobalLocationId": 250173
+ },
+ {
+  "Id": 774,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "maydan_namaz_hamze_abad",
+  "Name": "میدان نماز - حمزه اباد",
+  "ContinueUrl": "tehran-region20-maydan_namaz_hamze_abad",
+  "GlobalLocationId": 247546
+ },
+ {
+  "Id": 775,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "shahrak_modares",
+  "Name": "شهرک مدرس ",
+  "ContinueUrl": "tehran-region20-shahrak_modares",
+  "GlobalLocationId": 250175
+ },
+ {
+  "Id": 776,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "enayati",
+  "Name": "عنایتی ",
+  "ContinueUrl": "tehran-region20-enayati",
+  "GlobalLocationId": 247571
+ },
+ {
+  "Id": 777,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "komayl_shahr_rey",
+  "Name": "کمیل - شهر ری",
+  "ContinueUrl": "tehran-region20-komayl_shahr_rey",
+  "GlobalLocationId": 247713
+ },
+ {
+  "Id": 778,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "astane",
+  "Name": "استانه ",
+  "ContinueUrl": "tehran-region20-astane",
+  "GlobalLocationId": 249959
+ },
+ {
+  "Id": 779,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "mansuriyeh_mangol",
+  "Name": "منصوریه منگل ",
+  "ContinueUrl": "tehran-region20-mansuriyeh_mangol",
+  "GlobalLocationId": 247020
+ },
+ {
+  "Id": 780,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "din_mohamadi",
+  "Name": "دین محمدی",
+  "ContinueUrl": "tehran-region20-din_mohamadi",
+  "GlobalLocationId": 247561
+ },
+ {
+  "Id": 781,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "aqdasiyeh_shahr_rey",
+  "Name": "اقدسیه - شهر ری",
+  "ContinueUrl": "tehran-region20-aqdasiyeh_shahr_rey",
+  "GlobalLocationId": 246959
+ },
+ {
+  "Id": 782,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "alaein",
+  "Name": "علائین ",
+  "ContinueUrl": "tehran-region20-alaein",
+  "GlobalLocationId": 246960
+ },
+ {
+  "Id": 783,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "shahrak_abbaspour",
+  "Name": "شهرک عباسپور ",
+  "ContinueUrl": "tehran-region20-shahrak_abbaspour",
+  "GlobalLocationId": 250102
+ },
+ {
+  "Id": 784,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "shahrak_shahrbani",
+  "Name": "شهرک شهربانی",
+  "ContinueUrl": "tehran-region20-shahrak_shahrbani",
+  "GlobalLocationId": 249925
+ },
+ {
+  "Id": 785,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "ghale_gabri",
+  "Name": "قلعه گبری",
+  "ContinueUrl": "tehran-region20-ghale_gabri",
+  "GlobalLocationId": 249958
+ },
+ {
+  "Id": 786,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "shahadat",
+  "Name": "شهادت ",
+  "ContinueUrl": "tehran-region20-shahadat",
+  "GlobalLocationId": 247026
+ },
+ {
+  "Id": 787,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "estakhr_shahr_rey",
+  "Name": "استخر - شهر ری",
+  "ContinueUrl": "tehran-region20-estakhr_shahr_rey",
+  "GlobalLocationId": 246870
+ },
+ {
+  "Id": 788,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "pour_hosseini",
+  "Name": "پورحسینی",
+  "ContinueUrl": "tehran-region20-pour_hosseini",
+  "GlobalLocationId": 249815
+ },
+ {
+  "Id": 789,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "hassan_pour",
+  "Name": "حسن پور ",
+  "ContinueUrl": "tehran-region20-hassan_pour",
+  "GlobalLocationId": 247565
+ },
+ {
+  "Id": 790,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "baradaran_ardestani_dolat_abad",
+  "Name": "اردستانی - دولت اباد",
+  "ContinueUrl": "tehran-region20-baradaran_ardestani_dolat_abad",
+  "GlobalLocationId": 249820
+ },
+ {
+  "Id": 791,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "boroujerdi_dolat_abad",
+  "Name": "بروجردی - دولت اباد ",
+  "ContinueUrl": "tehran-region20-boroujerdi_dolat_abad",
+  "GlobalLocationId": 247559
+ },
+ {
+  "Id": 792,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "parvin_etesami",
+  "Name": "پروین اعتصامی",
+  "ContinueUrl": "tehran-region20-parvin_etesami",
+  "GlobalLocationId": 250016
+ },
+ {
+  "Id": 793,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "mohamadi",
+  "Name": "محمدی ",
+  "ContinueUrl": "tehran-region20-mohamadi",
+  "GlobalLocationId": 250131
+ },
+ {
+  "Id": 794,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "javanmard_qassab",
+  "Name": "جوانمرد قصاب",
+  "ContinueUrl": "tehran-region20-javanmard_qassab",
+  "GlobalLocationId": 247143
+ },
+ {
+  "Id": 795,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "ali_akbar_dehkhoda",
+  "Name": "علی اکبر دهخدا",
+  "ContinueUrl": "tehran-region20-ali_akbar_dehkhoda",
+  "GlobalLocationId": 247494
+ },
+ {
+  "Id": 796,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "mohajeri",
+  "Name": "مهاجری ",
+  "ContinueUrl": "tehran-region20-mohajeri",
+  "GlobalLocationId": 250017
+ },
+ {
+  "Id": 797,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "shahid_taghi_pour",
+  "Name": "شهید تقی پور ",
+  "ContinueUrl": "tehran-region20-shahid_taghi_pour",
+  "GlobalLocationId": 249904
+ },
+ {
+  "Id": 798,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "zakariyaye_razi",
+  "Name": "زکریای رازی",
+  "ContinueUrl": "tehran-region20-zakariyaye_razi",
+  "GlobalLocationId": 247515
+ },
+ {
+  "Id": 799,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "mir_abedini",
+  "Name": "میرعابدینی",
+  "ContinueUrl": "tehran-region20-mir_abedini",
+  "GlobalLocationId": 247774
+ },
+ {
+  "Id": 800,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "taqiabad",
+  "Name": "تقی اباد",
+  "ContinueUrl": "tehran-region20-taqiabad",
+  "GlobalLocationId": 246958
+ },
+ {
+  "Id": 801,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "naser_reza",
+  "Name": "ناصر رضا",
+  "ContinueUrl": "tehran-region20-naser_reza",
+  "GlobalLocationId": 249749
+ },
+ {
+  "Id": 802,
+  "Province": "tehran",
+  "Region": "region20",
+  "Zone": "kouy_eslam",
+  "Name": "کوی اسلام",
+  "ContinueUrl": "tehran-region20-kouy_eslam",
+  "GlobalLocationId": 249948
+ },
+ {
+  "Id": 803,
+  "Province": "tehran",
+  "Region": "region21",
+  "Zone": "",
+  "Name": "منطقه 21",
+  "ContinueUrl": "tehran-region21",
+  "GlobalLocationId": 246719
+ },
+ {
+  "Id": 804,
+  "Province": "tehran",
+  "Region": "region21",
+  "Zone": "nakh_zarin",
+  "Name": "نخ زرین",
+  "ContinueUrl": "tehran-region21-nakh_zarin",
+  "GlobalLocationId": 247617
+ },
+ {
+  "Id": 805,
+  "Province": "tehran",
+  "Region": "region21",
+  "Zone": "shahrak_darya",
+  "Name": "شهرک دریا",
+  "ContinueUrl": "tehran-region21-shahrak_darya",
+  "GlobalLocationId": 246981
+ },
+ {
+  "Id": 806,
+  "Province": "tehran",
+  "Region": "region21",
+  "Zone": "shahrak_azadi",
+  "Name": "شهرک ازادی",
+  "ContinueUrl": "tehran-region21-shahrak_azadi",
+  "GlobalLocationId": 247081
+ },
+ {
+  "Id": 807,
+  "Province": "tehran",
+  "Region": "region21",
+  "Zone": "esteglal_daneshgah",
+  "Name": "استقلال دانشگاه",
+  "ContinueUrl": "tehran-region21-esteglal_daneshgah",
+  "GlobalLocationId": 247060
+ },
+ {
+  "Id": 808,
+  "Province": "tehran",
+  "Region": "region21",
+  "Zone": "bashgah_naft",
+  "Name": "باشگاه نفت",
+  "ContinueUrl": "tehran-region21-bashgah_naft",
+  "GlobalLocationId": 246966
+ },
+ {
+  "Id": 809,
+  "Province": "tehran",
+  "Region": "region21",
+  "Zone": "shaghayegh_sharghi",
+  "Name": "شقایق شرقی",
+  "ContinueUrl": "tehran-region21-shaghayegh_sharghi",
+  "GlobalLocationId": 247823
+ },
+ {
+  "Id": 810,
+  "Province": "tehran",
+  "Region": "region21",
+  "Zone": "ghobad",
+  "Name": "قباد ",
+  "ContinueUrl": "tehran-region21-ghobad",
+  "GlobalLocationId": 247473
+ },
+ {
+  "Id": 811,
+  "Province": "tehran",
+  "Region": "region21",
+  "Zone": "shahid_pandyar",
+  "Name": "شهید پندیار",
+  "ContinueUrl": "tehran-region21-shahid_pandyar",
+  "GlobalLocationId": 249578
+ },
+ {
+  "Id": 812,
+  "Province": "tehran",
+  "Region": "region21",
+  "Zone": "khosro_parviz",
+  "Name": "خسروپرویز",
+  "ContinueUrl": "tehran-region21-khosro_parviz",
+  "GlobalLocationId": 249875
+ },
+ {
+  "Id": 813,
+  "Province": "tehran",
+  "Region": "region21",
+  "Zone": "tehransar_qarbi",
+  "Name": "تهرانسرغربی",
+  "ContinueUrl": "tehran-region21-tehransar_qarbi",
+  "GlobalLocationId": 247016
+ },
+ {
+  "Id": 814,
+  "Province": "tehran",
+  "Region": "region21",
+  "Zone": "shahrak_pasdaran",
+  "Name": "شهرک پاسداران",
+  "ContinueUrl": "tehran-region21-shahrak_pasdaran",
+  "GlobalLocationId": 247793
+ },
+ {
+  "Id": 815,
+  "Province": "tehran",
+  "Region": "region21",
+  "Zone": "bozorgrah_lashkari",
+  "Name": "بزرگراه لشکری",
+  "ContinueUrl": "tehran-region21-bozorgrah_lashkari",
+  "GlobalLocationId": 247769
+ },
+ {
+  "Id": 816,
+  "Province": "tehran",
+  "Region": "region21",
+  "Zone": "otouban_fath_tehransar",
+  "Name": "اتوبان فتح - تهرانسر",
+  "ContinueUrl": "tehran-region21-otouban_fath_tehransar",
+  "GlobalLocationId": 249972
+ },
+ {
+  "Id": 817,
+  "Province": "tehran",
+  "Region": "region21",
+  "Zone": "ansar",
+  "Name": "انصار ",
+  "ContinueUrl": "tehran-region21-ansar",
+  "GlobalLocationId": 249685
+ },
+ {
+  "Id": 818,
+  "Province": "tehran",
+  "Region": "region21",
+  "Zone": "maydan_kamal_almolk",
+  "Name": "میدان کمال الملک",
+  "ContinueUrl": "tehran-region21-maydan_kamal_almolk",
+  "GlobalLocationId": 247721
+ },
+ {
+  "Id": 819,
+  "Province": "tehran",
+  "Region": "region21",
+  "Zone": "shahid_doulabi",
+  "Name": "شهید دولابی",
+  "ContinueUrl": "tehran-region21-shahid_doulabi",
+  "GlobalLocationId": 249855
+ },
+ {
+  "Id": 820,
+  "Province": "tehran",
+  "Region": "region21",
+  "Zone": "shaghayegh_gharbi",
+  "Name": "شقایق غربی",
+  "ContinueUrl": "tehran-region21-shaghayegh_gharbi",
+  "GlobalLocationId": 247736
+ },
+ {
+  "Id": 821,
+  "Province": "tehran",
+  "Region": "region21",
+  "Zone": "badakhshan",
+  "Name": "بدخشان ",
+  "ContinueUrl": "tehran-region21-badakhshan",
+  "GlobalLocationId": 249974
+ },
+ {
+  "Id": 822,
+  "Province": "tehran",
+  "Region": "region21",
+  "Zone": "yekom_ghazali",
+  "Name": "یکم غزالی",
+  "ContinueUrl": "tehran-region21-yekom_ghazali",
+  "GlobalLocationId": 247686
+ },
+ {
+  "Id": 823,
+  "Province": "tehran",
+  "Region": "region21",
+  "Zone": "malek_ashtar",
+  "Name": "مالک اشتر",
+  "ContinueUrl": "tehran-region21-malek_ashtar",
+  "GlobalLocationId": 250043
+ },
+ {
+  "Id": 824,
+  "Province": "tehran",
+  "Region": "region21",
+  "Zone": "tehransar_sharghi",
+  "Name": "تهرانسر شرقی",
+  "ContinueUrl": "tehran-region21-tehransar_sharghi",
+  "GlobalLocationId": 250080
+ },
+ {
+  "Id": 825,
+  "Province": "tehran",
+  "Region": "region21",
+  "Zone": "shahrak_aseman",
+  "Name": "شهرک اسمان",
+  "ContinueUrl": "tehran-region21-shahrak_aseman",
+  "GlobalLocationId": 249927
+ },
+ {
+  "Id": 826,
+  "Province": "tehran",
+  "Region": "region21",
+  "Zone": "tehransar_sharghi_ashouri",
+  "Name": "تهرانسر شرقی - عاشوری",
+  "ContinueUrl": "tehran-region21-tehransar_sharghi_ashouri",
+  "GlobalLocationId": 247592
+ },
+ {
+  "Id": 827,
+  "Province": "tehran",
+  "Region": "region21",
+  "Zone": "naft_shomali",
+  "Name": "نفت شمالی",
+  "ContinueUrl": "tehran-region21-naft_shomali",
+  "GlobalLocationId": 247168
+ },
+ {
+  "Id": 828,
+  "Province": "tehran",
+  "Region": "region21",
+  "Zone": "tehransar_sharghi_naft_jonoubi",
+  "Name": "تهرانسر شرقی - نفت جنوبی",
+  "ContinueUrl": "tehran-region21-tehransar_sharghi_naft_jonoubi",
+  "GlobalLocationId": 250187
+ },
+ {
+  "Id": 829,
+  "Province": "tehran",
+  "Region": "region21",
+  "Zone": "shahrak_kazemiyeh",
+  "Name": "شهرک کاظمیه",
+  "ContinueUrl": "tehran-region21-shahrak_kazemiyeh",
+  "GlobalLocationId": 247770
+ },
+ {
+  "Id": 830,
+  "Province": "tehran",
+  "Region": "region22",
+  "Zone": "",
+  "Name": "منطقه 22",
+  "ContinueUrl": "tehran-region22",
+  "GlobalLocationId": 246693
+ },
+ {
+  "Id": 831,
+  "Province": "tehran",
+  "Region": "region22",
+  "Zone": "mir_kamali",
+  "Name": "میرکمالی ",
+  "ContinueUrl": "tehran-region22-mir_kamali",
+  "GlobalLocationId": 247744
+ },
+ {
+  "Id": 832,
+  "Province": "tehran",
+  "Region": "region22",
+  "Zone": "sadra",
+  "Name": "صدرا ",
+  "ContinueUrl": "tehran-region22-sadra",
+  "GlobalLocationId": 247008
+ },
+ {
+  "Id": 833,
+  "Province": "tehran",
+  "Region": "region22",
+  "Zone": "alame_ghazvini",
+  "Name": "علامه قزوینی",
+  "ContinueUrl": "tehran-region22-alame_ghazvini",
+  "GlobalLocationId": 249884
+ },
+ {
+  "Id": 834,
+  "Province": "tehran",
+  "Region": "region22",
+  "Zone": "sahar_baharan",
+  "Name": "سحر - بهاران",
+  "ContinueUrl": "tehran-region22-sahar_baharan",
+  "GlobalLocationId": 250089
+ },
+ {
+  "Id": 835,
+  "Province": "tehran",
+  "Region": "region22",
+  "Zone": "shahrak_chitgar",
+  "Name": "شهرک چیتگر",
+  "ContinueUrl": "tehran-region22-shahrak_chitgar",
+  "GlobalLocationId": 249825
+ },
+ {
+  "Id": 836,
+  "Province": "tehran",
+  "Region": "region22",
+  "Zone": "marvdasht_jonoubi",
+  "Name": "مرودشت جنوبی",
+  "ContinueUrl": "tehran-region22-marvdasht_jonoubi",
+  "GlobalLocationId": 247848
+ },
+ {
+  "Id": 837,
+  "Province": "tehran",
+  "Region": "region22",
+  "Zone": "maydan_olampic",
+  "Name": "میدان المپیک",
+  "ContinueUrl": "tehran-region22-maydan_olampic",
+  "GlobalLocationId": 247672
+ },
+ {
+  "Id": 838,
+  "Province": "tehran",
+  "Region": "region22",
+  "Zone": "khajavi_kermani",
+  "Name": "خواجوی کرمانی ",
+  "ContinueUrl": "tehran-region22-khajavi_kermani",
+  "GlobalLocationId": 247682
+ },
+ {
+  "Id": 839,
+  "Province": "tehran",
+  "Region": "region22",
+  "Zone": "shahrak_sadra",
+  "Name": "شهرک صدرا ",
+  "ContinueUrl": "tehran-region22-shahrak_sadra",
+  "GlobalLocationId": 249771
+ },
+ {
+  "Id": 840,
+  "Province": "tehran",
+  "Region": "region22",
+  "Zone": "cheshme_gharbi",
+  "Name": "چشمه غربی",
+  "ContinueUrl": "tehran-region22-cheshme_gharbi",
+  "GlobalLocationId": 249821
+ },
+ {
+  "Id": 841,
+  "Province": "tehran",
+  "Region": "region22",
+  "Zone": "sahel_allameh_jafari",
+  "Name": "ساحل - علامه جعفری",
+  "ContinueUrl": "tehran-region22-sahel_allameh_jafari",
+  "GlobalLocationId": 247541
+ },
+ {
+  "Id": 842,
+  "Province": "tehran",
+  "Region": "region22",
+  "Zone": "banafshe",
+  "Name": "بنفشه ",
+  "ContinueUrl": "tehran-region22-banafshe",
+  "GlobalLocationId": 247700
+ },
+ {
+  "Id": 843,
+  "Province": "tehran",
+  "Region": "region22",
+  "Zone": "mozafar",
+  "Name": "مظفر ",
+  "ContinueUrl": "tehran-region22-mozafar",
+  "GlobalLocationId": 247497
+ },
+ {
+  "Id": 844,
+  "Province": "tehran",
+  "Region": "region22",
+  "Zone": "orkide_shahrak_cheshmeh",
+  "Name": "ارکیده - شهرک چشمه",
+  "ContinueUrl": "tehran-region22-orkide_shahrak_cheshmeh",
+  "GlobalLocationId": 250189
+ },
+ {
+  "Id": 845,
+  "Province": "tehran",
+  "Region": "region22",
+  "Zone": "cheshme_sharghi",
+  "Name": "چشمه شرقی ",
+  "ContinueUrl": "tehran-region22-cheshme_sharghi",
+  "GlobalLocationId": 247698
+ },
+ {
+  "Id": 846,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "elahiyeh",
+  "Name": "الهیه ",
+  "ContinueUrl": "tehran-region1-elahiyeh",
+  "GlobalLocationId": 0
+ },
+ {
+  "Id": 847,
+  "Province": "tehran",
+  "Region": "region1",
+  "Zone": "fereshte",
+  "Name": "فرشته ",
+  "ContinueUrl": "tehran-fereshte",
+  "GlobalLocationId": 0
+ }
+]

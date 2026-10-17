@@ -1,0 +1,514 @@
+[
+  {
+    "Id": 1,
+    "InsCode": "34408080767216529",
+    "SectorCode": "01",
+    "SectorName": "زراعت",
+    "Flow": 1,
+    "InstrumentId": "IRX6X01T0006"
+  },
+  {
+    "Id": 2,
+    "InsCode": "19219679288446732",
+    "SectorCode": "10",
+    "SectorName": "ذغال سنگ",
+    "Flow": 1,
+    "InstrumentId": "IRX6X10T0006"
+  },
+  {
+    "Id": 3,
+    "InsCode": "65675836323214668",
+    "SectorCode": "11",
+    "SectorName": "استخراج نفت جزكشف",
+    "Flow": 1,
+    "InstrumentId": "IRX6X11T0006"
+  },
+  {
+    "Id": 4,
+    "InsCode": "13235969998952202",
+    "SectorCode": "13",
+    "SectorName": "کانه فلزی",
+    "Flow": 1,
+    "InstrumentId": "IRX6X13T0006"
+  },
+  {
+    "Id": 5,
+    "InsCode": "62691002126902464",
+    "SectorCode": "14",
+    "SectorName": "سایر معادن",
+    "Flow": 1,
+    "InstrumentId": "IRX6X14T0006"
+  },
+  {
+    "Id": 6,
+    "InsCode": "59288237226302898",
+    "SectorCode": "17",
+    "SectorName": "منسوجات",
+    "Flow": 1,
+    "InstrumentId": "IRX6X17T0006"
+  },
+  {
+    "Id": 7,
+    "InsCode": "69306841376553334",
+    "SectorCode": "19",
+    "SectorName": "محصولات چرمی",
+    "Flow": 1,
+    "InstrumentId": "IRX6X19T0006"
+  },
+  {
+    "Id": 9,
+    "InsCode": "58440550086834602",
+    "SectorCode": "20",
+    "SectorName": "محصولات چوبي",
+    "Flow": 1,
+    "InstrumentId": "IRX6X20T0006"
+  },
+  {
+    "Id": 10,
+    "InsCode": "30106839080444358",
+    "SectorCode": "21",
+    "SectorName": "محصولات کاغذ",
+    "Flow": 1,
+    "InstrumentId": "IRX6X21T0006"
+  },
+  {
+    "Id": 11,
+    "InsCode": "25766336681098389",
+    "SectorCode": "22",
+    "SectorName": "انتشار و چاپ",
+    "Flow": 1,
+    "InstrumentId": "IRX6X22T0006"
+  },
+  {
+    "Id": 12,
+    "InsCode": "12331083953323969",
+    "SectorCode": "23",
+    "SectorName": "فراورده نفتی",
+    "Flow": 1,
+    "InstrumentId": "IRX6X23T0006"
+  },
+  {
+    "Id": 14,
+    "InsCode": "36469751685735891",
+    "SectorCode": "25",
+    "SectorName": "لاستیک",
+    "Flow": 1,
+    "InstrumentId": "IRX6X25T0006"
+  },
+  {
+    "Id": 15,
+    "InsCode": "32453344048876642",
+    "SectorCode": "27",
+    "SectorName": "فلزات اساسی",
+    "Flow": 1,
+    "InstrumentId": "IRX6X27T0006"
+  },
+  {
+    "Id": 16,
+    "InsCode": "1123534346391630",
+    "SectorCode": "28",
+    "SectorName": "محصولات فلزی",
+    "Flow": 1,
+    "InstrumentId": "IRX6X28T0006"
+  },
+  {
+    "Id": 18,
+    "InsCode": "11451389074113298",
+    "SectorCode": "29",
+    "SectorName": "ماشین آلات",
+    "Flow": 1,
+    "InstrumentId": "IRX6X29T0006"
+  },
+  {
+    "Id": 21,
+    "InsCode": "33878047680249697",
+    "SectorCode": "31",
+    "SectorName": "دستگاههای برقی",
+    "Flow": 1,
+    "InstrumentId": "IRX6X31T0006"
+  },
+  {
+    "Id": 22,
+    "InsCode": "24733701189547084",
+    "SectorCode": "32",
+    "SectorName": "وسایل ارتباطی",
+    "Flow": 1,
+    "InstrumentId": "IRX6X32T0006"
+  },
+  {
+    "Id": 23,
+    "InsCode": "61848754958448778",
+    "SectorCode": "33",
+    "SectorName": "ابزار پزشکی",
+    "Flow": 1,
+    "InstrumentId": "IRX6X33T0006"
+  },
+  {
+    "Id": 24,
+    "InsCode": "20213770409093165",
+    "SectorCode": "34",
+    "SectorName": "خودرو",
+    "Flow": 1,
+    "InstrumentId": "IRX6X34T0006"
+  },
+  {
+    "Id": 25,
+    "InsCode": "58231368623465359",
+    "SectorCode": "35",
+    "SectorName": "حمل و نقل",
+    "Flow": 1,
+    "InstrumentId": "IRX6X35T0006"
+  },
+  {
+    "Id": 26,
+    "InsCode": "29331053506731535",
+    "SectorCode": "36",
+    "SectorName": "مبلمان",
+    "Flow": 1,
+    "InstrumentId": "IRX6X36T0006"
+  },
+  {
+    "Id": 27,
+    "InsCode": "21948907150049163",
+    "SectorCode": "38",
+    "SectorName": "قند و شکر",
+    "Flow": 1,
+    "InstrumentId": "IRX6X38T0006"
+  },
+  {
+    "Id": 28,
+    "InsCode": "40355846462826897",
+    "SectorCode": "39",
+    "SectorName": "چند رشته ای ص",
+    "Flow": 1,
+    "InstrumentId": "IRX6X39T0006"
+  },
+  {
+    "Id": 29,
+    "InsCode": "54843635503648458",
+    "SectorCode": "40",
+    "SectorName": "تامین آب، برق، گاز",
+    "Flow": 1,
+    "InstrumentId": "IRX6X40T0006"
+  },
+  {
+    "Id": 30,
+    "InsCode": "15508900928481581",
+    "SectorCode": "42",
+    "SectorName": "غذایی بجز قند",
+    "Flow": 1,
+    "InstrumentId": "IRX6X42T0006"
+  },
+  {
+    "Id": 31,
+    "InsCode": "3615666621538524",
+    "SectorCode": "43",
+    "SectorName": "مواد دارویی",
+    "Flow": 1,
+    "InstrumentId": "IRX6X43T0006"
+  },
+  {
+    "Id": 32,
+    "InsCode": "33626672012415176",
+    "SectorCode": "44",
+    "SectorName": "شیمیایی",
+    "Flow": 1,
+    "InstrumentId": "IRX6X44T0006"
+  },
+  {
+    "Id": 33,
+    "InsCode": "41934470778361119",
+    "SectorCode": "45",
+    "SectorName": "پیمانکاری",
+    "Flow": 1,
+    "InstrumentId": "IRX6X45T0006"
+  },
+  {
+    "Id": 34,
+    "InsCode": "65986638607018835",
+    "SectorCode": "47",
+    "SectorName": "خرده فروشي به جز وسايل نقليه",
+    "Flow": 1,
+    "InstrumentId": "IRX6X47T0006"
+  },
+  {
+    "Id": 36,
+    "InsCode": "57616105980228781",
+    "SectorCode": "49",
+    "SectorName": "کاشی و سرامیک",
+    "Flow": 1,
+    "InstrumentId": "IRX6X49T0006"
+  },
+  {
+    "Id": 37,
+    "InsCode": "70077233737515808",
+    "SectorCode": "53",
+    "SectorName": "سیمان",
+    "Flow": 1,
+    "InstrumentId": "IRX6X53T0006"
+  },
+  {
+    "Id": 38,
+    "InsCode": "14651627750314021",
+    "SectorCode": "54",
+    "SectorName": "کانی غیرفلزی",
+    "Flow": 1,
+    "InstrumentId": "IRX6X54T0006"
+  },
+  {
+    "Id": 39,
+    "InsCode": "64514606457616199",
+    "SectorCode": "55",
+    "SectorName": "هتل و رستوران",
+    "Flow": 1,
+    "InstrumentId": "IRX6X55T0006"
+  },
+  {
+    "Id": 40,
+    "InsCode": "34295935482222451",
+    "SectorCode": "56",
+    "SectorName": "سرمایه گذاریها",
+    "Flow": 1,
+    "InstrumentId": "IRX6X56T0006"
+  },
+  {
+    "Id": 41,
+    "InsCode": "72002976013856737",
+    "SectorCode": "57",
+    "SectorName": "بانکها",
+    "Flow": 1,
+    "InstrumentId": "IRX6X57T0006"
+  },
+  {
+    "Id": 42,
+    "InsCode": "25163959460949732",
+    "SectorCode": "58",
+    "SectorName": "سایرمالی",
+    "Flow": 1,
+    "InstrumentId": "IRX6X58T0006"
+  },
+  {
+    "Id": 43,
+    "InsCode": "24187097921483699",
+    "SectorCode": "60",
+    "SectorName": "حمل و نقل",
+    "Flow": 1,
+    "InstrumentId": "IRX6X60T0006"
+  },
+  {
+    "Id": 44,
+    "InsCode": "41867092385281437",
+    "SectorCode": "64",
+    "SectorName": "رادیویی",
+    "Flow": 1,
+    "InstrumentId": "IRX6X64T0006"
+  },
+  {
+    "Id": 45,
+    "InsCode": "61247168213690670",
+    "SectorCode": "65",
+    "SectorName": "مالی",
+    "Flow": 1,
+    "InstrumentId": "IRX6X65T0006"
+  },
+  {
+    "Id": 46,
+    "InsCode": "59105676994811497",
+    "SectorCode": "66",
+    "SectorName": "بيمه و بازنشسته - بازار بورس",
+    "Flow": 1,
+    "InstrumentId": "IRX6X66T0006"
+  },
+  {
+    "Id": 47,
+    "InsCode": "61985386521682984",
+    "SectorCode": "67",
+    "SectorName": "اداره بازارهای مالی",
+    "Flow": 1,
+    "InstrumentId": "IRX6X67T0006"
+  },
+  {
+    "Id": 48,
+    "InsCode": "4654922806626448",
+    "SectorCode": "70",
+    "SectorName": "انبوه سازی",
+    "Flow": 1,
+    "InstrumentId": "IRX6X70T0006"
+  },
+  {
+    "Id": 49,
+    "InsCode": "8900726085939949",
+    "SectorCode": "72",
+    "SectorName": "رایانه",
+    "Flow": 1,
+    "InstrumentId": "IRX6X72T0006"
+  },
+  {
+    "Id": 50,
+    "InsCode": "18780171241610744",
+    "SectorCode": "73",
+    "SectorName": "اطلاعات و ارتباطات",
+    "Flow": 1,
+    "InstrumentId": "IRX6X73T0006"
+  },
+  {
+    "Id": 52,
+    "InsCode": "47233872677452574",
+    "SectorCode": "74",
+    "SectorName": "فنی مهندسی",
+    "Flow": 1,
+    "InstrumentId": "IRX6X74T0006"
+  },
+  {
+    "Id": 53,
+    "InsCode": "3454456635278563",
+    "SectorCode": null,
+    "SectorName": "شاخص كل هم وزن فرابورس - بازار فرابورس",
+    "Flow": 2,
+    "InstrumentId": null
+  },
+  {
+    "Id": 54,
+    "InsCode": "5798407779416661",
+    "SectorCode": null,
+    "SectorName": "شاخص قيمت(وزني-ارزشي) - بازار بورس",
+    "Flow": 1,
+    "InstrumentId": null
+  },
+  {
+    "Id": 55,
+    "InsCode": "8384385859414435",
+    "SectorCode": null,
+    "SectorName": "شاخص قيمت (هم وزن) - بازار بورس",
+    "Flow": 1,
+    "InstrumentId": null
+  },
+  {
+    "Id": 56,
+    "InsCode": "10523825119011581",
+    "SectorCode": null,
+    "SectorName": "شاخص 30 شركت بزرگ - بازار بورس",
+    "Flow": 1,
+    "InstrumentId": "IRX6XS300006"
+  },
+  {
+    "Id": 57,
+    "InsCode": "16385144332417446",
+    "SectorCode": null,
+    "SectorName": "شاخص قيمت فرابورس - بازار فرابورس",
+    "Flow": 2,
+    "InstrumentId": null
+  },
+  {
+    "Id": 58,
+    "InsCode": "24779787662870476",
+    "SectorCode": null,
+    "SectorName": "شاخص قيمت هم وزن فرابورس - بازار فرابورس",
+    "Flow": 2,
+    "InstrumentId": null
+  },
+  {
+    "Id": 59,
+    "InsCode": "30655480864841493",
+    "SectorCode": null,
+    "SectorName": "شاخص بازده نقدي قيمت - بازار بورس",
+    "Flow": 1,
+    "InstrumentId": null
+  },
+  {
+    "Id": 60,
+    "InsCode": "32097828799138957",
+    "SectorCode": null,
+    "SectorName": "شاخص كل - بازار بورس",
+    "Flow": 1,
+    "InstrumentId": "IRX6XTPI0006"
+  },
+  {
+    "Id": 61,
+    "InsCode": "35898516735559137",
+    "SectorCode": null,
+    "SectorName": "بازار دوم فرابورس - بازار فرابورس",
+    "Flow": 2,
+    "InstrumentId": null
+  },
+  {
+    "Id": 62,
+    "InsCode": "43685683301327984",
+    "SectorCode": null,
+    "SectorName": "شاخص كل فرابورس - بازار فرابورس",
+    "Flow": 2,
+    "InstrumentId": null
+  },
+  {
+    "Id": 63,
+    "InsCode": "43754960038275285",
+    "SectorCode": null,
+    "SectorName": "شاخص صنعت - بازار بورس",
+    "Flow": 1,
+    "InstrumentId": "IRX6XSNT0006"
+  },
+  {
+    "Id": 64,
+    "InsCode": "46342955726788357",
+    "SectorCode": null,
+    "SectorName": "شاخص50شركت فعالتر - بازار بورس",
+    "Flow": 1,
+    "InstrumentId": null
+  },
+  {
+    "Id": 65,
+    "InsCode": "49579049405614711",
+    "SectorCode": null,
+    "SectorName": "شاخص آزاد شناور - بازار بورس",
+    "Flow": 1,
+    "InstrumentId": null
+  },
+  {
+    "Id": 66,
+    "InsCode": "61953785757685638",
+    "SectorCode": null,
+    "SectorName": "شاخص اركان و نهادهاي مالي - بازار فرابورس",
+    "Flow": 2,
+    "InstrumentId": null
+  },
+  {
+    "Id": 67,
+    "InsCode": "62752761908615603",
+    "SectorCode": null,
+    "SectorName": "شاخص بازار اول - بازار بورس",
+    "Flow": 1,
+    "InstrumentId": null
+  },
+  {
+    "Id": 68,
+    "InsCode": "67130298613737946",
+    "SectorCode": null,
+    "SectorName": "شاخص كل (هم وزن) - بازار بورس",
+    "Flow": 1,
+    "InstrumentId": "IRX6XTPI0026"
+  },
+  {
+    "Id": 69,
+    "InsCode": "68337207779130851",
+    "SectorCode": null,
+    "SectorName": "بازار اول فرابورس - بازار فرابورس",
+    "Flow": 2,
+    "InstrumentId": null
+  },
+  {
+    "Id": 70,
+    "InsCode": "69932667409721265",
+    "SectorCode": null,
+    "SectorName": "شاخص قيمت 50 شركت - بازار بورس",
+    "Flow": 1,
+    "InstrumentId": null
+  },
+  {
+    "Id": 71,
+    "InsCode": "71704845530629737",
+    "SectorCode": null,
+    "SectorName": "شاخص بازار دوم - بازار بورس",
+    "Flow": 1,
+    "InstrumentId": null
+  }
+]

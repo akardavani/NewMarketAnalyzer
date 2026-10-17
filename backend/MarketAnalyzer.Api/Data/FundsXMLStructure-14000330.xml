@@ -1,0 +1,1920 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report checksum = "">
+	<Sequence/>
+	<!--شمارنده توالی-->
+	<ReturnDate/>
+	<!--تاریخ بازگشت به عقب-->
+	<ReportNo/>
+	<!--شماره گزارش-->
+	<ReportDate/>
+	<!-- تاریخ گزارش -->
+	<ProviderId/>
+	<!--شناسه منحصر به فرد شرکت ارائه دهنده گزارش-->
+	<MutualFunds>
+		<!--اطلاعات صندوق های سرمایه گذاری-->
+		<MutualFund>
+			<!--اطلاعات صندوق سرمایه گذاری-->
+			<BaseInfo>
+				<!--اطلاعات پایه صندوق-->
+				<Name/>
+				<!--نام ثبت شده صندوق نزد مرجع ثبت شرکت ها-->
+				<SEORegisterNo/>
+				<!--شماره ثبت صندوق نزد سازمان-->
+				<RegisterNo/>
+				<!--شماره ثبت صندوق نزد مرجع ثبت شرکت ها-->
+				<BourseCode/>
+				<!--کد معاملاتی صندوق -->
+				<RegisterDate/>
+				<!--تاریخ ثبت صندوق نزد مرجع ثبت شرکت ها -->
+				<RegisterPlace/>
+				<!--محل ثبت صندوق-->
+				<Email/>
+				<!--پست الکترونیکی صندوق-->
+				<PostalCode/>
+				<!--کد پستی صندوق-->
+				<TelNumber/>
+				<!--شماره تلفن صندوق-->
+				<WebSite/>
+				<!--وب سایت صندوق-->
+				<Address/>
+				<!--آدرس صندوق-->
+				<LicenseExpDate/>
+				<!-- تاریخ پایان اعتبار مجوز فعالیت صندوق-->
+				<StartPeriodDate/>
+				<!--تاریخ آغاز فعالیت صندوق مطابق با مجوز سازمان -->
+				<EndPeriodDate/>
+				<!--تاریخ تصفیه صندوق-->
+				<FundType/>
+				<!--نوع صندوق -->
+				<FundSize/>
+				<!--اندازه صندوق-->
+				<FixedIncomeFundType/>
+				<!--نوع صندوق با درآمد ثابت: با تضمین سود، با پیش بینی سود-->
+				<FixedSubscriptionCommission/>
+				<!--کارمزد ثابت صدور واحدهای سرمایه گذاری عادی-->
+				<VariableSubscriptionCommission/>
+				<!--نرخ کارمزد متغیر هر صدور واحدهای سرمایه گذاری عادی-->
+				<MaxVariableSubscriptionCommission/>
+				<!--سقف ریالی کارمزد متغیر هر صدور واحدهای سرمایه گذاری عادی-->
+				<FixedRedemptionCommission/>
+				<!--کارمزد ثابت ابطال واحدهای سرمایه گذاری عادی-->
+				<MinDayForProfit/>
+				<!--حداقل تعداد روزهای سرمایه گذاری در صندوق برای دریافت سود تضمین شده یا عدم شمول جریمه ابطال-->
+				<Penalties>
+					<!--جرائم-->
+					<Penalty>
+						<FromDay/>
+						<!--از روز-->
+						<ToDay/>
+						<!--تا روز-->
+						<Percent/>
+						<!--نرخ جریمه-->
+						<!--مثال : برای مدت سرمایه گذاری از 0 تا 7 روز نرخ جریمه 5 درصد می باشد-->
+					</Penalty>
+				</Penalties>
+				<!--نرخ جرایم ابطال-->
+				<GuaranteedProfitRates>
+					<GuaranteedProfitRate>
+						<!--نرخ سود تضمین شده برای صندوق های با تضمین سود-->
+						<FromDay/>
+						<ToDay/>
+						<Percent/>
+					</GuaranteedProfitRate>
+				</GuaranteedProfitRates>
+				<DividendDiscountRate/>
+				<!--نرخ تنزیل سود سهام دریافتنی که مطابق دستورالعمل تعیین می شود-->
+				<IPOFirstReceivedCash/>
+				<!--مجموع ارزش ریالی واحدهای عادی و ممتاز پذیره نویسی شده در زمان دریافت مجوز فعالیت -->
+			</BaseInfo>
+
+			<NAVReports>
+				<!--گزارشات خالص ارزش واحدهای سرمایه گذاری صندوق-->
+				<NAVReport>
+					<RedemptionNAV/>
+					<!--NAVابطال واحدهای سرمایه گذاری-->
+					<ProfitNAV/>
+					<!--سود تقسيمي پرداختي به هر واحد سرمايه گذاري در تاريخ NAV-->
+					<SplitedNAV/>
+					<!-- مقدار تجزیه-->
+					<SubscriptionNAV/>
+					<!--NAVصدور واحدهای سرمایه گذاری-->
+					<StatisticalNAV/>
+					<!--NAV آماری-->
+					<TotalUnit/>
+					<!--تعداد کل واحدهای سرمایه گذاری معتبر صندوق-->
+					<NoRetailInvestors/>
+					<!--تعداد دارندگان واحدهای معتبر سرمایه گذاری حقیقی-->
+					<NoInstitutionalInvestors/>
+					<!--تعداد دارندگان واحدهای معتبر سرمایه گذاری حقوقی-->
+					<Date/>
+					<!--گزارش ارائه شده در تاريخ آخرين NAV -->
+					<PercentageOwnershipRetailInvestors/>
+					<!--درصد مالکیت دارندگان واحدهای سرمایه گذاری حقیقی در صندوق-->
+					<PercentageOwnershipInstitutionalInvestors/>
+					<!--درصد مالکیت دارندگان واحدهای سرمایه گذاری حقوقی در صندوق-->
+					<YesterdayRedemptionNAV/>
+					<!-- NAVابطال واحدهای سرمایه گذاری در روز قبل-->
+				</NAVReport>
+			</NAVReports>
+
+			<FundConditions>
+				<!--محدودیت های صندوق با توجه به فایل کدینگ-->
+				<FundCondition>
+					<ConditionOn/>
+					<!--محدودیت بر روی-->
+					<ConditionValue/>
+					<!--مقدار محدودیت برای هر صندوق-->
+					<MaxOrMin/>
+					<!--محدودیت حداقلی یا حداکثری-->
+					<ValueType/>
+					<!--محدودیت ریالی یا نرخی-->
+				</FundCondition>
+			</FundConditions>
+
+			<FundPillars>
+				<!--اطلاعات ارکان صندوق-->
+				<Manager>
+					<!--مدیر صندوق-->
+					<ID/>
+					<!--شناسه منحصر به فرد مدیر صندوق-->
+					<ManagerCommissionOnStock/>
+					<!--نرخ کارمزد مدیر صندوق در سهام و حق تقدم تحت تملک صندوق-->
+					<ManagerCommissionOnNetAsset/>
+					<!--نرخ کارمزد مدیر صندوق در خالص ارزش دارایی های تحت تملک صندوق-->
+					<ManagerCommissionOnBankProfitLT/>
+					<!--نرخ کارمزد مدیر صندوق بابت ما به التفاوت سپرده های بانکی بلند مدت-->
+					<ManagerCommissionOnBankProfitST/>
+					<!--نرخ کارمزد مدیر صندوق بابت ما به التفاوت سپرده های بانکی کوتاه مدت-->
+					<ManagerCommissionOnFixedIncome/>
+					<!--نرخ کارمزد مدیر صندوق در اوراق با درآمد ثابت-->
+					<ManagerCommissionOnBankCertificateOfDeposit/>
+					<!--نرخ کارمزد مدیر صندوق در گواهی سپرده های تحت تملک صندوق که بخشی از اوراق بهادار با درآمد ثابت به شمار می آید-->
+				</Manager>
+				<Guarantor>
+					<!--ضامن (های) صندوق-->
+					<LiquidityGuarantors>
+						<!--ضامن نقد شوندگی صندوق-->
+						<LiquidityGuarantor>
+							<ID/>
+							<!--شناسه منحصر به فرد ضامن نقد شوندگی صندوق-->
+							<MinCommission/>
+							<!--حداقل ریالی کارمزد ضامن نقد شوندگی صندوق-->
+							<MaxCommission/>
+							<!--حداکثر ریالی کارمزد ضامن نقد شوندگی صندوق -->
+							<GuarantorCommissionOnStock/>
+							<!--نرخ کارمزد ضامن نقد شوندگی در سهام و حق تقدم سهام تحت تملک صندوق-->
+							<GuarantorCommissionOnAssetWithOutStock/>
+							<!--نرخ کارمزد ضامن نقد شوندگی در دارایی های صندوق غیر از سهام تحت تملک صندوق-->
+						</LiquidityGuarantor>
+					</LiquidityGuarantors>
+					<ProfitGuarantors>
+						<!--ضامن جبران خسارت یا سود صندوق-->
+						<ProfitGuarantor>
+							<ID/>
+							<!--شناسه منحصر به فرد  ضامن نقد شوندگی جبران خسارت یا سود صندوق-->
+							<MinCommission/>
+							<!--حداقل ریالی کارمزد ضامن جبران خسارت یا سود صندوق-->
+							<MaxCommission/>
+							<!--حداکثر ریالی کارمزد ضامن جبران خسارت یا سود صندوق-->
+							<GuarantorCommissionOnStock/>
+							<!--نرخ کارمزد ضامن جبران خسارت یا سود در سهام و حق تقدم سهام تحت تملک صندوق-->
+							<GuarantorCommissionOnAssetWithOutStock/>
+							<!--نرخ کارمزد ضامن جبران خسارت یا سود در دارایی های صندوق غیر از سهام تحت تملک صندوق-->
+						</ProfitGuarantor>
+					</ProfitGuarantors>
+				</Guarantor>
+				<Trustee>
+					<!--متولی صندوق-->
+					<ID/>
+					<!--شناسه منحصر به فرد متولی صندوق-->
+					<MinCommission/>
+					<!--حداقل ریالی کارمزد متولی صندوق-->
+					<MaxCommission/>
+					<!--حداکثر ریالی کارمزد متولی صندوق-->
+					<TrusteeCommission/>
+					<!--نرخ کارمزد متولی صندوق-->
+					<YearlyTrusteeCommission/>
+					<!---مبلغ ثابت سالانه-->
+				</Trustee>
+				<Auditor>
+					<!--کارمزد حسابرس صندوق-->
+					<ID/>
+					<!--شناسه منحصر به فرد حسابرس صندوق-->
+					<MinCommission/>
+					<!--حداقل ریالی کارمزد حسابرس صندوق-->
+					<MaxCommission/>
+					<!--حداکثر ریالی کارمزد حسابرس صندوق-->
+					<AuditorCommission/>
+					<!--نرخ کارمزد حسابرس صندوق-->
+				</Auditor>
+				<RegManagers>
+					<!--کارمزد مدیر ثبت صندوق-->
+					<RegManager>
+						<ID/>
+						<!--شناسه منحصر به فرد مدیر ثبت صندوق-->
+						<MinCommission/>
+						<!--- غير ضروري-->
+						<MaxCommission/>
+						<!--- غير ضروري-->
+					</RegManager>
+				</RegManagers>
+				<InvestmentManagers>
+					<!--کارمزد مدیران سرمایه گذاری صندوق-->
+					<InvestmentManager>
+						<ID/>
+						<!--شناسه منحصر به فرد مدیر سرمایه گذاری صندوق-->
+						<MinCommission/>
+						<!--در حال حاضر خالی باشد-->
+						<MaxCommission/>
+						<!--در حال حاضر خالی باشد-->
+					</InvestmentManager>
+				</InvestmentManagers>
+				<ExecutiveManager>
+					<!--کارمزد مدیر اجرای صندوق برای صندوق های نیکوکاری-->
+					<ID/>
+					<!--شناسه منحصر به فرد مدیر اجرای صندوق-->
+					<MinCommission/>
+					<!--حداقل ریالی کارمزد مدیر اجرای صندوق-->
+					<MaxCommission/>
+					<!--حداکثر ریالی کارمزد مدیر اجرای صندوق-->
+					<FromAllocatedProfit/>
+					<!--  کارمزد مدیر اجرای صندوق از محل منافع قابل تقسیم برای امور نیکوکارانه-->
+				</ExecutiveManager>
+				<Brokers>
+					<!--کارمزد کارگزار صندوق-->
+					<Broker>
+						<BrokerCode/>
+						<!-- کد کارگزار صندوق-->
+						<MinCommission/>
+						<!--- غير ضروري-->
+						<MaxCommission/>
+						<!--- غير ضروري-->
+					</Broker>
+				</Brokers>
+				<MarketMakers>
+					<!--بازارگردان ها-->
+					<MarketMaker>
+						<!--بازارگردان -->
+						<ID/>
+						<!--شناسه ملی بازارگردان-->
+					</MarketMaker>
+				</MarketMakers>
+			</FundPillars>
+
+			<!--اطلاعات کارگزاران صندوق-->
+			<Brokers>
+				<!--اطلاعات کارگزاران صندوق-->
+				<Broker>
+					<Code/>
+					<!-- کد کارگزار صندوق-->
+					<Name/>
+					<!-- نام کارگزار صندوق-->
+					<BrokerageAccountBalance>
+						<!--تراز حساب کارگزار صندوق-->
+						<AccountCode/>
+						<!--کد حساب کارگزار صندوق-->
+						<AccountBalance/>
+						<!--تراز یا مانده حساب کارگزار-->
+						<Debit/>
+						<!--گردش بدهکار-->
+						<Credit/>
+						<!--گردش بستانکار-->
+					</BrokerageAccountBalance>
+				</Broker>
+				<Summary>
+					<Residual/>
+					<!--مغایرت-->
+				</Summary>
+			</Brokers>
+
+			<Asset>
+				<!--دارایی های تحت تملک صندوق-->
+				<OtherAccountsReceivable>
+					<!--سایر حساب های دریافتنی صندوق-->
+					<InvestorReceivables>
+						<!--حساب های دریافتنی سرمایه گذاران-->
+						<Amount/>
+						<!--مانده حساب-->
+						<Debit/>
+						<!--گردش بدهکار-->
+						<Credit/>
+						<!--گردش بستانکار-->
+					</InvestorReceivables>
+					<CircularCheques>
+						<!--چک های در جریان وصول-->
+						<Amount/>
+						<!--مانده حساب-->
+						<Debit/>
+						<!--گردش بدهکار-->
+						<Credit/>
+						<!--گردش بستانکار-->
+					</CircularCheques>
+					<OtherReceivables>
+						<!--سایر حساب های دریافتنی-->
+						<Amount/>
+						<!--مانده حساب-->
+						<Debit/>
+						<!--گردش بدهکار-->
+						<Credit/>
+						<!--گردش بستانکار-->
+					</OtherReceivables>
+					<!--سایر حساب های دریافتنی-->
+					<Summary>
+						<Residual/>
+						<!--مغایرت-->
+					</Summary>
+				</OtherAccountsReceivable>
+				<Accounts>
+					<!--اطلاعات حساب های صندوق شامل نقد و باک و مدت دار-->
+					<Account>
+						<AccountNumber/>
+						<!--شماره حساب -->
+						<BankId/>
+						<!--شماره منحصر به فرد بانک افتتاح کننده حساب -->
+						<BranchName/>
+						<!--نام شعبه افتتاح کننده حساب -->
+						<BranchCode/>
+						<!--کد شعبه افتتاح کننده حساب -->
+						<AccountType/>
+						<!--نوع حساب صندوق-->
+						<DayValue/>
+						<!--ارزش روز مانده حساب های صندوق(برای حساب های مدت دار شامل ارزش اسمی و سود محقق شده تنزیل شده) -->
+						<ProfitPercent/>
+						<!-- نرخ سود حساب صندوق-->
+						<AccountBalance/>
+						<!-- مانده حساب صندوق-->
+						<Debit/>
+						<!--گردش بدهکار حساب-->
+						<Credit/>
+						<!--گردش بستانکار حساب-->
+						<GetProfitDateInMonth/>
+						<!--تاریخ دریافت سود حساب (ماهانه)-->
+					</Account>
+					<Summary>
+						<Residual1/>
+						<!--مغایرت-->
+						<Residual2/>
+						<!--مغایرت-->
+					</Summary>
+				</Accounts>
+				<FixedIncomes>
+					<FixedIncome>
+						<!-- اوراق با درآمد ثابت-->
+						<Type/>
+						<!-- نوع اوراق بهادار-->
+						<Value/>
+						<!-- خالص ارزش روز اوراق بهادار-->
+						<Market/>
+						<!-- بازاری که اوراق بهادار در آن مبادله می شودبورس-فرابورس)-->
+						<Publisher/>
+						<!-- شناسه ملی ناشر  -->
+						<SEOPermission/>
+						<!-- دارای مجوز سازمان می باشد یا خیر؟-->
+						<ReceivableProfit/>
+						<!--سود محقق شده دريافت نشده -->
+						<AnnualProfit1/>
+						<!-- نرخ سود علي الحساب-->
+						<AnnualProfit2/>
+						<!--نرخ سود بازخريد پيش از موعد -->
+						<ReceivedProfit/>
+						<!-- سود محقق شده دريافت شده-->
+						<Symbol/>
+						<!-- نماد معاملاتی ورقه بهادار-->
+						<ISINCode/>
+						<!-- کد منحصر به فرد ورقه بهادار-->
+						<NominalPrice/>
+						<!-- ارزش ورقه بهادار-->
+						<IssueDate/>
+						<!--تاریخ انتشار ورقه بهادار -->
+						<MaturityDate/>
+						<!-- تاریخ سر رسید ورقه بهادار-->
+						<Period/>
+						<!-- دوره سود: دوره زمانی که سود تعلق می گیرد-->
+						<Amount/>
+						<!-- ارزش مانده ورقه بهادار در سبد صندوق-->
+						<Debit/>
+						<!-- گردش بدهکار-->
+						<Credit/>
+						<!-- گردش بستانکار-->
+						<TotalBuyCount/>
+						<!-- کل تعداد خرید ورقه بهادار-->
+						<TotalSellCount/>
+						<!-- کل تعداد فروش ورقه بهادار-->
+						<ProfitOrLoss/>
+						<!-- سود (زیان) حاصل از فروش اوراق بهادار با درآمد ثابت -->
+						<ProfitOrLossDuetoChangesinFairValue/>
+						<!-- سود (زیان) حاصل از تغییر ارزش سرمایه گذاری واحد سرمایه گذاری -->
+						<TolatPrice/>
+						<!-- بهاي تمام شده کل ورقه بهادار-->
+						<ClosePrice/>
+						<!-- غير ضروري-->
+						<DayValue/>
+						<!--ارزش روز مانده ورق بهادار مربوطه با نظر كارشناسي-->
+						<UnderWritingRevenue/>
+						<!-- درآمد تعهد پذیره نویسی اوراق بهادار -->
+						<UnderWritingVolume/>
+						<!-- تعداد اوراق تحت تعهد پذیره نویسی -->
+						<AdjustedPrices>
+							<AdjustedPrice>
+								<!-- قیمت کارشناسی -->
+								<Price/>
+								<!-- قیمت کارشناسی ورقه بهادار -->
+								<InsertDate/>
+								<!-- تاریخ اعمال تعدیل قیمت -->
+							</AdjustedPrice>
+						</AdjustedPrices>
+						<Trades>
+							<TradeInfo>
+								<!-- اطلاعات معاملات اوراق با درآمد ثابت-->
+								<Profit/>
+								<!--؟ -->
+								<TradeDate/>
+								<!--تاریخ انجام معامله -->
+								<TradeType/>
+								<!-- نوع معامله(خرید یا فروش)-->
+								<InsertDate/>
+								<!--غير ضروري -->
+								<Volume/>
+								<!--حجم یا تعداد معامله ورقه بهادار -->
+								<Price/>
+								<!--قیمت ورقه بهادار -->
+								<TotalValue/>
+								<!--کل ارزش ریالی معامله -->
+								<VoucherID/>
+								<!--كد منحصربفرد شماره سند ثبت معامله ورقه بهادار -->
+								<VoucherNumber/>
+								<!--شماره سند ثبت معامله ورقه بهادار -->
+								<Commission/>
+								<!-- هزینه معاملات فروش اوراق بهادار با درآمد ثابت -->
+							</TradeInfo>
+						</Trades>
+					</FixedIncome>
+					<Summary>
+						<Residual/>
+						<!--مغایرت-->
+					</Summary>
+				</FixedIncomes>
+				<Stocks>
+					<Stock>
+						<!--سهام و حق تقدم -->
+						<Type/>
+						<!--نوع ورقه بهادار از نظر سهام یا حق تقدم بودن و بورسی یا فرابورسی بودن -->
+						<IsRight/>
+						<!--غير ضروري -->
+						<Symbol/>
+						<!--نماد معاملاتی ورقه بهادار -->
+						<ISINCode/>
+						<!--کد منحصر به فرد نماد معاملاتی ورقه بهادار -->
+						<Value/>
+						<!-- خالص ارزش روز اوراق بهادار-->
+						<Dividend/>
+						<!-- مجموع سود دریافتنی از محل ورقه بهادار مربوطه-->
+						<TotalResidue/>
+						<!-- تعداد مانده ورقه بهادار مربوطه در سبد صندوق-->
+						<DayValue/>
+						<!-- ارزش روز مانده ورقه بهادار مربوطه در سبد صندوق با نظر كارشناسي-->
+						<Amount/>
+						<!--ارزش ریالی مانده ورقه بهادار -->
+						<Debit/>
+						<!--گردش بدهکار -->
+						<Credit/>
+						<!--گردش بستانکار -->
+						<TotalBuyCount/>
+						<!--تعداد کل خرید ورقه بهادار -->
+						<TotalSellCount/>
+						<!--تعداد کل فروش ورقه بهادار -->
+						<ProfitOrLoss/>
+						<!-- سود (زیان) حاصل از فروش سهام و حق تقدم -->
+						<ProfitOrLossDuetoChangesinFairValue/>
+						<!-- سود (زیان) حاصل از تغییر ارزش سرمایه گذاری در سهام و حق تقدم -->
+						<TolatPrice/>
+						<!--بهاي تمام شده کل ورقه بهادار -->
+						<ClosePrice/>
+						<!--قیمت پایانی یا بسته شدن ورقه بهادار -->
+						<AdjustedPrices>
+							<AdjustedPrice>
+								<!-- قیمت کارشناسی-->
+								<Price/>
+								<!--قیمت کارشناسی ورقه بهادار -->
+								<InsertDate/>
+								<!--تاریخ اعمال قیمت کارشناسی -->
+							</AdjustedPrice>
+						</AdjustedPrices>
+						<Trades>
+							<TradeInfo>
+								<!--اطلاعات معاملات اوراق بهادار -->
+								<TradeDate/>
+								<!--تاریخ انجام معامله مربوط به اوراق بهادار -->
+								<TradeType/>
+								<!--نوع معامله خرید یا فروش -->
+								<Volume/>
+								<!--حجم یا تعداد معامله ورقه بهادار -->
+								<Price/>
+								<!--قیمت(فی) هر ورقه بهادار -->
+								<BrokerCode/>
+								<!--کد کارگزار معامله کننده -->
+								<TotalValue/>
+								<!--مجموع ارزش ریالی : تعداد ضربدر قیمت معامله ورقه بهادار -->
+								<VoucherID/>
+								<!--كد منحصربفرد شماره سند ثبت معامله ورقه بهادار -->
+								<VoucherNumber/>
+								<!--شماره سند ثبت معامله ورقه بهادار -->
+								<Tax/>
+								<!--هزینه مالیات فروش سهام و حق تقدم -->
+								<Commission/>
+								<!-- هزینه معاملات فروش سهام و حق تقدم -->
+							</TradeInfo>
+						</Trades>
+						<Subscriptions>
+							<!--مبالغ واریزی بابت پذیره نویسی افزایش سرمایه   -->
+							<!--جدید-->
+							<SubscriptionInfo>
+								<!--اطلاعات مبلغ واریزی بابت پذیره نویسی افزایش سرمایه -->
+								<!--جدید-->
+								<Amount/>
+								<!--کل مبلغ پذیره نویسی -->
+								<!--جدید-->
+								<Volume/>
+								<!--تعداد حق تقدم های پذیره نویسی شده -->
+								<!--جدید-->
+								<Date/>
+								<!--تاریخ واریز مبلغ پذیره نویسی-->
+								<!--جدید-->
+								<FishNumber/>
+								<!--شماره فیش واریزی-->
+								<!--جدید-->
+							</SubscriptionInfo>
+						</Subscriptions>
+						<EmbeddedPutOptions>
+							<EmbeddedPutOption>
+								<!--اختیار فروش تبعی -->
+								<Type/>
+								<!--تامین مالی (بله/خیر) -->
+								<ISINCode/>
+								<!--کد منحصر به فرد -->
+								<Symbol/>
+								<!--نماد -->
+								<ExercisePrice/>
+								<!--قیمت اعمال -->
+								<ExerciseDate/>
+								<!-- تاریخ اعمال-->
+								<TotalResidue/>
+								<!-- مانده تعداد -->
+							</EmbeddedPutOption>
+						</EmbeddedPutOptions>
+						<EmbeddedCallOptions>
+							<EmbeddedCallOption>
+								<!--اختیار خرید  تبعی -->
+								<ISINCode/>
+								<!--کد منحصر به فرد -->
+								<Symbol/>
+								<!--نماد -->
+								<ExercisePrice/>
+								<!--قیمت اعمال -->
+								<ExerciseDate/>
+								<!-- تاریخ اعمال-->
+								<TotalResidue/>
+								<!-- مانده تعداد -->
+							</EmbeddedCallOption>
+						</EmbeddedCallOptions>
+					</Stock>
+					<Summary>
+						<Residual/>
+						<!--مغایرت-->
+					</Summary>
+				</Stocks>
+				<Funds>
+					<Fund>
+						<SEOregNo/>
+						<!--شماره ثبت نزد سازمان -->
+						<ISINCode/>
+						<!--کد منحصر به فرد نماد معاملاتی ورقه بهادار -->
+						<TotalNetSellingValue/>
+						<!--کل خالص ارزش فروش -->
+						<QtyBalance/>
+						<!--مانده تعداد -->
+						<ClosingPrice/>
+						<!--قیمت پایانی -->
+						<LastRedemptionPrice/>
+						<!-- آخرین قیمت ابطال -->
+						<TotalCost/>
+						<!-- کل بهای تمام شده-->
+						<ProfitOrLoss/>
+						<!-- سود (زیان) حاصل از فروش یا ابطال  واحد سرمایه گذاری -->
+						<ProfitOrLossDuetoChangesinFairValue/>
+						<!-- سود (زیان) حاصل از تغییر ارزش سرمایه گذاری واحد سرمایه گذاری -->
+						<PeriodProfit/>
+						<!-- درآمد سود واحد سرمایه گذاری -->
+						<Trades>
+							<TradeInfo>
+								<!--اطلاعات معاملات اوراق بهادار -->
+								<TradeDate/>
+								<!--تاریخ انجام معامله -->
+								<TradeType/>
+								<!-- نوع معامله خرید یا فروش -->
+								<Volume/>
+								<!-- تعداد معامله -->
+								<Price/>
+								<!-- قیمت(فی) هرواحد سرمایه گذاری -->
+								<Commission/>
+								<!-- کارمزد -->
+							</TradeInfo>
+						</Trades>
+					</Fund>
+					<Summary>
+						<Residual/>
+						<!--مغایرت-->
+					</Summary>
+				</Funds>
+				<Options>
+					<CallOptions>
+						<CallOption>
+							<ISINCode/>
+							<!--کد منحصر به فرد -->
+							<Symbol/>
+							<!--نماد -->
+							<TotalNetSellingValue/>
+							<!--خالص ارزش فروش -->
+							<TotalCost/>
+							<!--کل بهای تمام شده -->
+							<QtyBalance/>
+							<!-- مانده تعداد -->
+							<ClosingPrice/>
+							<!--قیمت پایانی-->
+							<ExercisePrice/>
+							<!-- قیمت اعمال-->
+							<ExerciseDate/>
+							<!-- تاریخ پایان قرارداد-->
+							<ProfitOrLoss/>
+							<!-- سود (زیان) حاصل از فروش اختیار خرید -->
+							<ProfitOrLossDuetoChangesinFairValue/>
+							<!-- سود (زیان) حاصل از تغییر ارزش اختیار خرید -->
+							<Trades>
+								<TradeInfo>
+									<!--اطلاعات معاملات اوراق بهادار -->
+									<TradeDate/>
+									<!--تاریخ انجام معامله -->
+									<TradeType/>
+									<!-- نوع معامله خرید یا فروش -->
+									<Volume/>
+									<!-- تعداد معامله -->
+									<Price/>
+									<!-- قیمت(فی) هرورقه -->
+									<Commission/>
+									<!-- هزینه معاملات فرو ش اختیار معامله خرید -->
+								</TradeInfo>
+							</Trades>
+						</CallOption>
+					</CallOptions>
+					<PutOptions>
+						<PutOption>
+							<ISINCode/>
+							<!--کد منحصر به فرد -->
+							<Symbol/>
+							<!--نماد -->
+							<TotalNetSellingValue/>
+							<!--خالص ارزش فروش -->
+							<TotalCost/>
+							<!--کل بهای تمام شده -->
+							<QtyBalance/>
+							<!-- مانده تعداد -->
+							<ClosingPrice/>
+							<!--قیمت پایانی-->
+							<ExercisePrice/>
+							<!-- قیمت اعمال-->
+							<ExerciseDate/>
+							<!-- تاریخ پایان قرارداد-->
+							<ProfitOrLoss/>
+							<!-- سود (زیان) حاصل از فروش اختیار فروش -->
+							<ProfitOrLossDuetoChangesinFairValue/>
+							<!-- سود (زیان) حاصل از تغییر ارزش اختیار فروش -->
+							<Trades>
+								<TradeInfo>
+									<!--اطلاعات معاملات اوراق بهادار -->
+									<TradeDate/>
+									<!--تاریخ انجام معامله -->
+									<TradeType/>
+									<!-- نوع معامله خرید یا فروش -->
+									<Volume/>
+									<!-- تعداد معامله -->
+									<Price/>
+									<!-- قیمت(فی) هرورقه -->
+									<Commission/>
+									<!-- هزینه معاملات فرو ش اختیار معامله فروش -->
+								</TradeInfo>
+							</Trades>
+						</PutOption>
+					</PutOptions>
+					<Summary>
+						<Residual/>
+						<!--مغایرت-->
+					</Summary>
+				</Options>
+				<Futures>
+					<!--قراردادهای آتی -->
+					<Future>
+						<!--قرارداد آتی -->
+						<ISINCode/>
+						<!--آیزین کد -->
+						<Symbol/>
+						<!--نماد -->
+						<Type/>
+						<!--نوع موقعیت تعهدی -->
+						<QtyBalance/>
+						<!--اندازه قرارداد -->
+						<ClosingPrice/>
+						<!-- قیمت پایانی -->
+						<ExercisePrice/>
+						<!--قیمت اعمال-->
+						<ExerciseDate/>
+						<!--تاریخ سررسید-->
+						<Debit/>
+						<!--گردش بدهکار -->
+						<Credit/>
+						<!--گردش بستانکار -->
+						<Amount/>
+						<!--مانده ریالی-->
+						<ProfitOrLossDuetoChangesinFairValue/>
+						<!-- سود (زیان) حاصل از تغییر ارزش آتی کالا -->
+						<Commission/>
+						<!-- هزینه کارمزد قرارداد آتی -->
+					</Future>
+					<Summary>
+						<Residual/>
+						<!--مغایرت-->
+					</Summary>
+				</Futures>
+				<FutureCosts>
+					<!--مخارج انتقالی به دوره های آتی -->
+					<EstablishCost>
+						<!--مخارج یا هزینه تاسیس -->
+						<Debit/>
+						<!--گردش بدهکار -->
+						<Credit/>
+						<!--گردش بستانکار -->
+						<Amount/>
+						<!--مانده ریالی -->
+						<Expense/>
+						<!-- هزینه تاسیس -->
+					</EstablishCost>
+					<GAMCost>
+						<!--مخارج یا هزینه برگزاری مجمع سالیانه -->
+						<Debit/>
+						<!--گردش بدهکار -->
+						<Credit/>
+						<!--گردش بستانکار -->
+						<Amount/>
+						<!--مانده ریالی -->
+						<Expense/>
+						<!-- هزینه مجامع -->
+					</GAMCost>
+					<SoftwareCost>
+						<!--مخارج یا هزینه نرم افزار و تارنمای صندوق -->
+						<Debit/>
+						<!--گردش بدهکار -->
+						<Credit/>
+						<!--گردش بستانکار -->
+						<Amount/>
+						<!--مانده ریالی -->
+						<Expense/>
+						<!-- هزینه نرم افزار -->
+					</SoftwareCost>
+					<RegistrationAndMonitoringCost>
+						<!--مخارج یا هزینه ثبت و نظارت -->
+						<Debit/>
+						<!--گردش بدهکار -->
+						<Credit/>
+						<!--گردش بستانکار -->
+						<Amount/>
+						<!--مانده ریالی -->
+						<Expense/>
+						<!-- هزینه ثبت و نظارت -->
+					</RegistrationAndMonitoringCost>
+					<UnitsRegistaryCost>
+						<!--مخارج یا هزینه سپرده گذاری واحدهای سرمایه گذاری -->
+						<Debit/>
+						<!--گردش بدهکار -->
+						<Credit/>
+						<!--گردش بستانکار -->
+						<Amount/>
+						<!--مانده ریالی -->
+						<Expense/>
+						<!-- هزینه سپرده گذاری واحدهای سرمایه گذاری -->
+					</UnitsRegistaryCost>
+					<TangibleAssets>
+						<!--دارایی های ثابت -->
+						<Debit/>
+						<!--گردش بدهکار -->
+						<Credit/>
+						<!--گردش بستانکار -->
+						<Amount/>
+						<!--مانده ریالی -->
+						<Expense/>
+						<!-- هزینه استهلاک -->
+					</TangibleAssets>
+					<PrepaymentAssets>
+						<!--پیش پرداخت -->
+						<Debit/>
+						<!--گردش بدهکار -->
+						<Credit/>
+						<!--گردش بستانکار -->
+						<Amount/>
+						<!--مانده ریالی -->
+					</PrepaymentAssets>
+					<MembershipAssocCost>
+						<!--مخارج یا هزینه عضویت در کانون -->
+						<Debit/>
+						<!--گردش بدهکار -->
+						<Credit/>
+						<!--گردش بستانکار -->
+						<Amount/>
+						<!--مانده ریالی -->
+						<Expense/>
+						<!-- هزینه عضویت در کانون -->
+					</MembershipAssocCost>
+					<RankingMutualFund>
+						<!--مخارج یا هزینه درجه بندی صندوق -->
+						<Debit/>
+						<!--گردش بدهکار -->
+						<Credit/>
+						<!--گردش بستانکار -->
+						<Amount/>
+						<!--مانده ریالی -->
+						<Expense/>
+						<!-- هزینه رتبه بندی صندوق ها  -->
+					</RankingMutualFund>
+					<Summary>
+						<Residual/>
+						<!--مغایرت-->
+					</Summary>
+				</FutureCosts>
+			</Asset>
+	
+			<Liability>
+				<!-- بدهی ها-->
+				<CommercialAccountsPayable>
+					<!-- کل حساب های پرداختنی تجاری-->
+					<CommercialAccountsPayable>
+						<!-- -->
+						<Debit/>
+						<!--گردش بدهکار -->
+						<Credit/>
+						<!--گردش بستانکار -->
+						<Amount/>
+						<!--مانده ریالی -->
+					</CommercialAccountsPayable>
+					<PayableForOptions>
+						<!-- بدهی بابت انتشار اختیار معامله-->
+						<PayableForCallOptions>
+							<!-- بدهی بابت انتشار اختیار خریدها-->
+							<PayableForCallOption>
+								<!-- بدهی بابت انتشار اختیار خرید-->
+								<Debit/>
+								<!--گردش بدهکار -->
+								<Credit/>
+								<!--گردش بستانکار -->
+								<Amount/>
+								<!--مانده ریالی -->
+								<ISINCode/>
+								<!--کد منحصر به فرد ورقه بهادار-->
+								<Symbol/>
+								<!-- نماد-->
+								<QtyIssued/>
+								<!-- تعداد اختیار خرید منتشر شده -->
+								<ExerciseDate/>
+								<!-- تاریخ پایان قرارداد-->
+								<ExercisePrice/>
+								<!-- قیمت اعمال-->
+								<ClosingPrice/>
+								<!-- قیمت پایانی-->
+							</PayableForCallOption>
+						</PayableForCallOptions>
+						<PayableForPutOptions>
+							<!-- بدهی بابت انتشار اختیار فروشها-->
+							<PayableForPutOption>
+								<!-- بدهی بابت انتشار اختیار فروش-->
+								<Debit/>
+								<!--گردش بدهکار -->
+								<Credit/>
+								<!--گردش بستانکار -->
+								<Amount/>
+								<!--مانده ریالی -->
+								<ISINCode/>
+								<!-- کد منحصر به فرد ورقه بهادار-->
+								<Symbol/>
+								<!-- نماد-->
+								<QtyIssued/>
+								<!-- تعداد اختیار فروش منتشر شده-->
+								<ExerciseDate/>
+								<!-- تاریخ پایان قرارداد-->
+								<ExercisePrice/>
+								<!-- قیمت اعمال-->
+								<ClosingPrice/>
+								<!-- قیمت پایانی-->
+							</PayableForPutOption>
+						</PayableForPutOptions>
+					</PayableForOptions>
+					<Summary>
+						<Residual/>
+						<!--مغایرت-->
+					</Summary>
+				</CommercialAccountsPayable>
+				<LiabilitytoInvestors>
+					<!-- بدهی به سرمایه گذاران-->
+					<LiabilitytoSubscribePrefferedUnits>
+						<!-- بدهی بابت درخواست صدور واحدهای ممتاز-->
+						<Debit/>
+						<!--گردش بدهکار -->
+						<Credit/>
+						<!--گردش بستانکار -->
+						<Amount/>
+						<!--مانده ریالی -->
+					</LiabilitytoSubscribePrefferedUnits>
+					<LiabilitytoSubscribeUnits>
+						<!-- بدهی بابت صدور واحدهای عادی-->
+						<Debit/>
+						<!--گردش بدهکار -->
+						<Credit/>
+						<!--گردش بستانکار -->
+						<Amount/>
+						<!--مانده ریالی -->
+					</LiabilitytoSubscribeUnits>
+					<LiabilityforResidualUnits>
+						<!-- بدهی بابت تتمه واحدهای سرمایه گذاری صادر شده-->
+						<Debit/>
+						<!--گردش بدهکار -->
+						<Credit/>
+						<!--گردش بستانکار -->
+						<Amount/>
+						<!--مانده ریالی -->
+					</LiabilityforResidualUnits>
+					<RedemptionLiability>
+						<!-- بدهی بابت ابطال واحدهای سرمایه گذاری صندوق-->
+						<Debit/>
+						<!--گردش بدهکار -->
+						<Credit/>
+						<!--گردش بستانکار -->
+						<Amount/>
+						<!--مانده ریالی -->
+					</RedemptionLiability>
+					<PrefferedUnitsProfitLiability>
+						<!-- بدهی بابت سود پرداختنی واحدهای ممتاز صندوق-->
+						<Debit/>
+						<!--گردش بدهکار -->
+						<Credit/>
+						<!--گردش بستانکار -->
+						<Amount/>
+						<!--مانده ریالی -->
+					</PrefferedUnitsProfitLiability>
+					<UnitsProfitLiability>
+						<!-- بدهی بابت سود پرداختنی واحدهای عادی صندوق-->
+						<Debit/>
+						<!--گردش بدهکار -->
+						<Credit/>
+						<!--گردش بستانکار -->
+						<Amount/>
+						<!--مانده ریالی -->
+					</UnitsProfitLiability>
+					<Summary>
+						<Residual/>
+						<!--مغایرت-->
+					</Summary>
+					<TotalLiabilitytoInvestors>
+						<!-- مجموع بدهي به سرمايه گذاران -->
+						<Debit/>
+						<Credit/>
+						<Amount/>
+					</TotalLiabilitytoInvestors>
+				</LiabilitytoInvestors>
+				<PayablestoFundPillars>
+					<!--پرداختنی به ارکان -->
+					<Managers>
+						<Manager>
+							<!--مدیر صندوق-->
+							<ID/>
+							<!--کد منحصر به فرد مدیر صندوق-->
+							<Debit/>
+							<!--گردش بدهکار -->
+							<Credit/>
+							<!--گردش بستانکار -->
+							<Amount/>
+							<!--مانده ریالی -->
+							<Expense/>
+							<!-- هزینه کارمزد مدیر -->
+						</Manager>
+					</Managers>
+					<Trustees>
+						<Trustee>
+							<!--متولی صندوق-->
+							<ID/>
+							<!--کد منحصر به فرد متولی صندوق-->
+							<Debit/>
+							<!--گردش بدهکار -->
+							<Credit/>
+							<!--گردش بستانکار -->
+							<Amount/>
+							<!--مانده ریالی -->
+							<Expense/>
+							<!-- هزینه کارمزد متولی -->
+						</Trustee>
+					</Trustees>
+					<Guarantor>
+						<!--ضامن صندوق-->
+						<LiquidityGuarantors>
+							<LiquidityGuarantor>
+								<!--ضامن نقدشوندگی صندوق-->
+								<ID/>
+								<!--کد منحصر به فرد ضامن نقدشوندگی صندوق-->
+								<Debit/>
+								<!--گردش بدهکار -->
+								<Credit/>
+								<!--گردش بستانکار -->
+								<Amount/>
+								<!--مانده ریالی -->
+								<Expense/>
+								<!-- هزینه کارمزد ضامن نقد شوندگی -->
+							</LiquidityGuarantor>
+						</LiquidityGuarantors>
+						<ProfitGuarantors>
+							<ProfitGuarantor>
+								<!--ضامن جبران خسارت یا سود صندوق-->
+								<ID/>
+								<!--کد منحصر به فرد ضامن جبران خسارت یا سود صندوق-->
+								<Debit/>
+								<!--گردش بدهکار -->
+								<Credit/>
+								<!--گردش بستانکار -->
+								<Amount/>
+								<!--مانده ریالی -->
+							</ProfitGuarantor>
+						</ProfitGuarantors>
+					</Guarantor>
+					<Auditors>
+						<Auditor>
+							<!--حسابرس صندوق-->
+							<ID/>
+							<!--کد منحصر به فرد حسابرس صندوق-->
+							<Debit/>
+							<!--گردش بدهکار -->
+							<Credit/>
+							<!--گردش بستانکار -->
+							<Amount/>
+							<!--مانده ریالی -->
+							<Expense/>
+							<!-- هزینه کارمزد حسابرس -->
+						</Auditor>
+					</Auditors>
+					<RegManagers>
+						<RegManager>
+							<!--مدیر ثبت صندوق-->
+							<ID/>
+							<!--کد منحصر به فرد مدیر ثبت  صندوق-->
+							<Debit/>
+							<!--گردش بدهکار -->
+							<Credit/>
+							<!--گردش بستانکار -->
+							<Amount/>
+							<!--مانده ریالی -->
+						</RegManager>
+					</RegManagers>
+					<ExecutiveManagers>
+						<ExecutiveManager>
+							<!--مدیر اجرای صندوق-->
+							<ID/>
+							<!--کد منحصر به فرد مدیر اجرای صندوق-->
+							<Debit/>
+							<!--گردش بدهکار -->
+							<Credit/>
+							<!--گردش بستانکار -->
+							<Amount/>
+							<!--مانده ریالی -->
+							<Expense/>
+							<!-- هزینه کارمزد مدیر اجرا -->
+						</ExecutiveManager>
+					</ExecutiveManagers>
+					<MarketMakers>
+						<!--بازارگردان ها-->
+						<MarketMaker>
+							<!--بازارگردان-->
+							<ID/>
+							<!--شناسه ملی بازارگردان-->
+							<Debit/>
+							<!--گردش بدهکار -->
+							<Credit/>
+							<!--گردش بستانکار -->
+							<Amount/>
+							<!--مانده ریالی -->
+							<Expense/>
+							<!-- هزینه کارمزد بازارگردان -->
+						</MarketMaker>
+					</MarketMakers>
+					<Summary>
+						<Residual/>
+						<!--مغایرت-->
+					</Summary>
+				</PayablestoFundPillars>
+				<FundPillarCommissionReserves>
+					<!-- ذخیره کارمزد ارکان صندوق-->
+					<Managers>
+						<Manager>
+							<!--مدیر صندوق-->
+							<ID/>
+							<!--کد منحصر به فرد مدیر صندوق-->
+							<Debit/>
+							<!--گردش بدهکار -->
+							<Credit/>
+							<!--گردش بستانکار -->
+							<Amount/>
+							<!--مانده ریالی -->
+						</Manager>
+					</Managers>
+					<Trustees>
+						<Trustee>
+							<!--متولی صندوق-->
+							<ID/>
+							<!--کد منحصر به فرد متولی صندوق-->
+							<Debit/>
+							<!--گردش بدهکار -->
+							<Credit/>
+							<!--گردش بستانکار -->
+							<Amount/>
+							<!--مانده ریالی -->
+						</Trustee>
+					</Trustees>
+					<Guarantor>
+						<LiquidityGuarantors>
+							<LiquidityGuarantor>
+								<!--ضامن نقدشوندگی صندوق-->
+								<ID/>
+								<!--کد منحصر به فرد ضامن نقدشوندگی صندوق-->
+								<Debit/>
+								<!--گردش بدهکار -->
+								<Credit/>
+								<!--گردش بستانکار -->
+								<Amount/>
+								<!--مانده ریالی -->
+							</LiquidityGuarantor>
+						</LiquidityGuarantors>
+						<ProfitGuarantors>
+							<ProfitGuarantor>
+								<!--ضامن جبران خسارت یا سود صندوق-->
+								<ID/>
+								<!--کد منحصر به فرد ضامن جبران خسارت یا سود صندوق-->
+								<Debit/>
+								<!--گردش بدهکار -->
+								<Credit/>
+								<!--گردش بستانکار -->
+								<Amount/>
+								<!--مانده ریالی -->
+							</ProfitGuarantor>
+						</ProfitGuarantors>
+					</Guarantor>
+					<Auditors>
+						<Auditor>
+							<!--حسابرس صندوق-->
+							<ID/>
+							<!--کد منحصر به فرد حسابرس صندوق-->
+							<Debit/>
+							<!--گردش بدهکار -->
+							<Credit/>
+							<!--گردش بستانکار -->
+							<Amount/>
+							<!--مانده ریالی -->
+						</Auditor>
+					</Auditors>
+					<ExecutiveManagers>
+						<ExecutiveManager>
+							<!--مدیر اجرای صندوق-->
+							<ID/>
+							<!--کد منحصر به فرد مدیر اجرای صندوق-->
+							<Debit/>
+							<!--گردش بدهکار -->
+							<Credit/>
+							<!--گردش بستانکار -->
+							<Amount/>
+							<!--مانده ریالی -->
+						</ExecutiveManager>
+					</ExecutiveManagers>
+					<MarketMakers>
+						<!--بازارگردان ها-->
+						<MarketMaker>
+							<!--بازارگردان-->
+							<ID/>
+							<!--شناسه ملی بازارگردان-->
+							<Debit/>
+							<!--گردش بدهکار -->
+							<Credit/>
+							<!--گردش بستانکار -->
+							<Amount/>
+							<!--مانده ریالی -->
+						</MarketMaker>
+					</MarketMakers>
+					<Summary>
+						<Residual/>
+						<!--مغایرت-->
+					</Summary>
+				</FundPillarCommissionReserves>
+				<OtherAccountsPayable>
+					<!--  باقيمانده ي سایر حساب های پرداختنی صندوق-->
+					<CustodyExpenses>
+						<!-- هزینه نگهداری اوراق بهادار صندوق-->
+						<Debit/>
+						<!--گردش بدهکار -->
+						<Credit/>
+						<!--گردش بستانکار -->
+						<Amount/>
+						<!--مانده ریالی -->
+					</CustodyExpenses>
+					<SettlementCommissionReserve>
+						<!-- ذخیره کارمزد تصویه صندوق-->
+						<Debit/>
+						<!--گردش بدهکار -->
+						<Credit/>
+						<!--گردش بستانکار -->
+						<Amount/>
+						<!--مانده ریالی -->
+						<Expense/>
+						<!-- هزینه تصفیه -->
+					</SettlementCommissionReserve>
+					<UnknownWithdrawal>
+						<!-- بدهی ها بابت واریزی های نامشخص صندوق-->
+						<Debit/>
+						<!--گردش بدهکار -->
+						<Credit/>
+						<!--گردش بستانکار -->
+						<Amount/>
+						<!--مانده ریالی -->
+					</UnknownWithdrawal>
+					<DividendReturnReserve>
+						<!-- ؟-->
+						<Debit/>
+						<!--گردش بدهکار -->
+						<Credit/>
+						<!--گردش بستانکار -->
+						<Amount/>
+						<!--مانده ریالی -->
+					</DividendReturnReserve>
+					<BankProfitDiscountReserve>
+						<!-- ذخیره تنزیل سود بانکی-->
+						<Debit/>
+						<!--گردش بدهکار -->
+						<Credit/>
+						<!--گردش بستانکار -->
+						<Amount/>
+						<!--مانده ریالی -->
+						<Expense/>
+						<!-- هزینه تنزیل سود سپرده بانکی -->
+					</BankProfitDiscountReserve>
+					<DividendDiscountReserve>
+						<!-- ذخیره تنزیل سود سهام-->
+						<Debit/>
+						<!--گردش بدهکار -->
+						<Credit/>
+						<!--گردش بستانکار -->
+						<Amount/>
+						<!--مانده ریالی -->
+						<Expense/>
+						<!-- هزینه تنزیل سود سهام -->
+					</DividendDiscountReserve>
+					<TaxDeduction>
+						<!-- بدهی بابت مالیت تکلیفی مکسوره-->
+						<Debit/>
+						<!--گردش بدهکار -->
+						<Credit/>
+						<!--گردش بستانکار -->
+						<Amount/>
+						<!--مانده ریالی -->
+					</TaxDeduction>
+					<Summary>
+						<Residual/>
+						<!--مغایرت-->
+					</Summary>
+					<TotalOtherAccountsPayable>
+						<!-- سایر حساب های پرداختنی صندوق-->
+						<Debit/>
+						<!--گردش بدهکار -->
+						<Credit/>
+						<!--گردش بستانکار -->
+						<Amount/>
+						<!--مانده ریالی -->
+					</TotalOtherAccountsPayable>
+					<TheReturnInterestOfTheBankDepositReserve>
+						<!-- هزینه  برگشت سود گواهی سپرده بانکی -->
+						<Expense/>
+						<!-- هزینه  برگشت سود گواهی سپرده بانکی -->
+					</TheReturnInterestOfTheBankDepositReserve>
+					<SaveStockValueChange>
+						<!-- ذخیره تغییر ارزش سهام -->
+						<Debit/>
+						<!--گردش بدهکار -->
+						<Credit/>
+						<!--گردش بستانکار -->
+						<Amount/>
+						<!--مانده ریالی -->
+					</SaveStockValueChange>
+				</OtherAccountsPayable>
+				<FinancialFacilityReceivables>
+					<FinancialFacilityReceivable>
+						<!-- مجموع تسهیلات دریافتنی صندوق-->
+						<FacilityName/>
+						<!-- نام تسهیلات -->
+						<FacilityType/>
+						<!-- نوع تسهیلات -->
+						<Debit/>
+						<!--گردش بدهکار -->
+						<Credit/>
+						<!--گردش بستانکار -->
+						<Maturity/>
+						<!--تاریخ سررسید -->
+						<InterestRate/>
+						<!--تاریخ دریافت -->
+						<NameOfLender/>
+						<!--نام بانک و شعبه وام دهنده -->
+						<InstallmentPayment/>
+						<!--رقم ریالی اقصاط پرداختی -->
+						<Amount/>
+						<!--ارزش ریالی تسهیلات دریافتی -->
+						<Expense/>
+						<!-- هزینه تسهیلات -->
+					</FinancialFacilityReceivable>
+					<Summary>
+						<Residual/>
+						<!--مغایرت-->
+					</Summary>
+				</FinancialFacilityReceivables>
+				<Advanced>
+					<!--پیش دریافت ها-->
+					<AdvancedBankDepositProfits>
+						<AdvancedBankDepositProfit>
+							<!--پیش دریافت سود سپرده بانکی  -->
+							<AccountNumber/>
+							<!--شماره حساب  -->
+							<Amount/>
+							<!-- مانده پیش دریافت سود سپرده بانکی -->
+							<Debit/>
+							<!--گردش بدهکار حساب-->
+							<Credit/>
+							<!--گردش بستانکار حساب-->
+						</AdvancedBankDepositProfit>
+					</AdvancedBankDepositProfits>
+					<AdvancedFixedIncomeProfits>
+						<AdvancedFixedIncomeProfit>
+							<!-- پیش دریافت سود اوراق بهادار با درآمد ثابت -->
+							<Symbol/>
+							<!--نماد اوراق بهادار با درآمد ثابت  -->
+							<ISINCode/>
+							<!--کد منحصر به فرد ورقه بهادار  با درآمد ثابت  -->
+							<Amount/>
+							<!-- مانده پیش دریافت سود اوراق بهادار با درآمد ثابت -->
+							<Debit/>
+							<!--گردش بدهکار-->
+							<Credit/>
+							<!--گردش بستانکار-->
+						</AdvancedFixedIncomeProfit>
+					</AdvancedFixedIncomeProfits>
+					<Summary>
+						<Residual/>
+						<!--مغایرت-->
+					</Summary>
+				</Advanced>
+			</Liability>
+		
+			<Revenue>
+				<!-- درآمدها -->
+				<OtherRevenues>
+					<!-- سایر درآمدها -->
+					<InvestmentUnitRedemptionPenaltyFee>
+						<!-- کارمزد جریمه ابطال -->
+						<Income/>
+						<!-- درآمد ناشی از کارمزد جریمه ابطال -->
+					</InvestmentUnitRedemptionPenaltyFee>
+					<AdjustmentFeeBrokers>
+						<!-- تعدیل کارمزد کارگزاری -->
+						<AdjustmentFeeBroker>
+							<Code/>
+							<!-- شناسه ملی کارگزار -->
+							<Income/>
+							<!-- مبلغ -->
+						</AdjustmentFeeBroker>
+					</AdjustmentFeeBrokers>
+					<IncomeFromNonFulfillmentOfObligationsUnderFuturesContracts>
+						<!-- درآمد ناشی از عدم ایفای تعهدات قراردادهای آتی -->
+						<IncomeFromNonFulfillmentOfObligationsUnderFuturesContract>
+							<ISINCode/>
+							<!-- کد منحصر بفرد -->
+							<Income/>
+							<!-- مبلغ -->
+						</IncomeFromNonFulfillmentOfObligationsUnderFuturesContract>
+					</IncomeFromNonFulfillmentOfObligationsUnderFuturesContracts>
+					<OtherRevenue>
+						<!-- سایر درآمدها -->
+						<Income/>
+						<!-- مبلغ -->
+					</OtherRevenue>
+				</OtherRevenues>
+			</Revenue>
+		
+			<Cost>
+				<!-- هزینه ها -->
+				<OtherCosts>
+					<!-- سایر هزینه ها -->
+					<InvestmentUnitRedemptionPenaltyFeeExpenses>
+						<!-- هزینه جریمه ابطال واحد سرمایه گذاری صندوق-->
+						<Expense/>
+						<!-- مبلغ -->
+					</InvestmentUnitRedemptionPenaltyFeeExpenses>
+					<SettlementExpenses>
+						<!-- هزینه تسویه  قراردادهای آتی -->
+						<Expense/>
+						<!-- مبلغ -->
+					</SettlementExpenses>
+					<CostOfStorage>
+						<!-- هزينه انبارداري گواهی سپرده کالایی -->
+						<Expense/>
+						<!-- مبلغ -->
+					</CostOfStorage>
+					<VATCost>
+						<!-- هزينه ماليات بر ارزش افزوده -->
+						<Expense/>
+						<!-- مبلغ -->
+					</VATCost>
+					<BankingServiceFee>
+						<!-- هزینه کارمزد خدمات بانکی  -->
+						<Expense/>
+						<!-- مبلغ -->
+					</BankingServiceFee>
+					<OtherCost>
+						<!-- سایر هزینه ها -->
+						<Expense/>
+						<!-- مبلغ -->
+					</OtherCost>
+				</OtherCosts>
+			</Cost>
+	
+			<GAMs>
+				<GAM>
+					<!-- مجامع صندوق-->
+					<Symbol/>
+					<!-- ورقه بهادار که مجمع آن تشکیل می شود-->
+					<ISINCode/>
+					<!-- کد منحصر به فرد ورقه بهادار-->
+					<GAMDate/>
+					<!-- تاریخ برگزاری مجمع-->
+					<ApplyeDate/>
+					<!-- تاریخ اعمال مصوبات مجمع در محاسبات صندوق-->
+					<RightSubscriptionDate/>
+					<!-- تاریخ اعمال حق تقدم در مجامع افزایش سرمایه-->
+					<AnnounceProfitDate/>
+					<!-- تاریخ اعلام سود نماد مربوطه-->
+					<DividentReceiptDate/>
+					<!-- تاریخ دریافت سود تقسیمی از مجامع سالانه-->
+					<GAMType/>
+					<!-- نوع  مجمع-->
+					<RightCapitalIncrease/>
+					<!-- درصد افزایش سرمایه از محل آورده در مجامع افزایش سرمایه-->
+					<BonusCapitalIncrease/>
+					<!-- درصد افزایش سرمایه از محل سهام جایزه در مجامع افزایش سرمایه-->
+					<ReceivablesCapitalIncrease/>
+					<!-- درصد افزایش سرمایه از محل مطالبات سهامداران در مجامع افزایش سرمایه-->
+					<Dividend/>
+					<!-- درصد افزایش سرمایه از سود انباشته در مجامع افزایش سرمایه-->
+					<ApplyStatus/>
+					<!-- وضعیت اعمال مصوبات مجامع در صندوق-->
+					<StockCount/>
+					<!-- تعداد مانده سهام مربوطه در صندوق در زمان مجمع آن سهم-->
+				</GAM>
+			</GAMs>
+		
+			<Investors>
+				<Investor>
+					<!-- سرمایه گذاران یا دارندگان واحدهای سرمایه گذاری-->
+					<ID/>
+					<!-- کد منحصر به فرد سرمایه گذار-->
+					<NIN/>
+					<!--  کد ملی 10 رقمی سرمایه گذار حقیقی صندوق/شناسه اشخاص حقیقی خارجی سرمایه گذار صندوق-->
+					<Name/>
+					<!-- نام سرمایه گذار حقیقی/ نام کامل سرمایه گذار حقوقی-->
+					<SurName/>
+					<!-- نام خانوادگی سرمایه گذار حقیقی صندوق-->
+					<RegistrationNumber/>
+					<!-- شماره شناسه ملی 11 رقمی برای سرمایه گذاران حقوقی/شناسه اشخاص حقوقی خارجی سرمایه گذار صندوق-->
+					<InvestorType/>
+					<!-- نوع سرمایه گذار-->
+					<PreferredUnit/>
+					<!-- تعداد واحدهای ممتاز سرمایه گذار صندوق-->
+					<NormalUnit/>
+					<!-- تعداد واحدهای عادی سرمایه گذار صندوق-->
+					<Sex/>
+					<!--جنسیت برای سرمایه گذاران حقیقی-->
+					<FatherName/>
+					<!--نام پدر برای سرمایه گذاران حقیقی-->
+					<BirthDate/>
+					<!--تاریخ تولد برای سرمایه گذاران حقیقی-->
+					<IDNo/>
+					<!--شماره شناسنامه برای سرمایه گذاران حقیقی-->
+					<LetterSeries/>
+					<!--سری حرفی شناسنامه برای سرمایه گذاران حقیقی-->
+					<NumericalSeries/>
+					<!--سری عددی شناسنامه برای سرمایه گذاران حقیقی-->
+					<SerialNumber/>
+					<!--سریال شناسنامه برای سرمایه گذاران حقیقی-->
+					<PlaceOfIssue/>
+					<!--محل صدور شناسنامه برای سرمایه گذاران حقیقی-->
+					<RegisterationDate/>
+					<!--تاریخ ثبت برای سرمایه گذاران حقوقی-->
+					<RegisterationNo/>
+					<!--شماره ثبت برای سرمایه گذاران حقوقی-->
+					<RegisterationPlace/>
+					<!--کد محل ثبت برای سرمایه گذاران حقوقی-->
+					<InvestorCode/>
+					<!--کد بورسی سرمایه گذار-->
+					<Email/>
+					<!--آدرس ایمیل سرمایه گذار-->
+					<MobileNO/>
+					<!--شماره موبایل سرمایه گذار-->
+					<TelNumber/>
+					<!--شماره تلفن ثابت سرمایه گذار-->
+					<PostalCode/>
+					<!--کد پستی سرمایه گذار-->
+					<Address/>
+					<!--آدرس سرمایه گذار-->
+					<AccountNumber/>
+					<!--شماره حساب سرمایه گذار-->
+					<BankId/>
+					<!--شماره منحصر به فرد بانک افتتاح کننده حساب -->
+					<AccountType/>
+					<!--نوع حساب سرمایه گذار -->
+					<Shaba/>
+					<!--کد شبای حساب سرمایه گذار -->
+					<CreationDate/>
+					<!-- تاریخ اخرین صدور واحدهای سرمایه گذاری به نام سرمایه گذار -->
+					<SejamCode/>
+					<!--کد سجام سرمایه گذار-->
+					<Cardex>
+						<CardexDetail>
+							<!-- جزییات کاردکس صدور و ابطال واحدهای سرمایه گذاری برای سرمایه گذار در صندوق-->
+							<Amount/>
+							<!-- مبلغ واریزی یا پرداختی سرمایه گذار برای هر درخواست صدور یا ابطال-->
+							<OrderAmount/>
+							<!-- مبلغ ریالی واحدهای صادر شده-->
+							<BatchNumber/>
+							<!-- شماره فیش واریزی یا دریافتی بابت صدور یا ابطال واحدهای سرمایه گذاری-->
+							<RequestDate/>
+							<!-- تاریخ ارائه درخواست صدور یا ابطال -->
+							<RequestType/>
+							<!-- نوع درخواست(ابطال یا صدور)-->
+							<RequestDateConfirmed/>
+							<!-- تاریخ تایید درخواست صدور یا ابطال ارائه شده توسط سرمایه گذار-->
+							<Count/>
+							<!-- تعداد واحدهای سرمایه گذاری درخواست شده جهت صدور یا ابطال توسط سرمایه گذار-->
+							<FixedSubscriptionAmount/>
+							<!-- کارمزد ثابت پرداختی در زمان صدور واحدهای سرمایه گذاری -->
+							<VariableSubscriptionAmount/>
+							<!-- کارمزد متغیر پرداختی در زمان صدور واحدهای سرمایه گذاری -->
+							<FixedRedemptionAmount/>
+							<!-- کارمزد ثابت پرداختی در زمان ابطال واحدهای سرمایه گذاری -->
+							<VriableRedemptionCommission/>
+							<!-- کارمزد متغیر پرداختی در زمان ابطال واحدهای سرمایه گذاری -->
+							<PenaltyAmount/>
+							<!-- مبلغ ریالی جریمه پرداختی سرمایه گذار در زمان ابطال واحدهای سرمایه گذاری -->
+							<RequestStatus/>
+							<!-- وضعیت تایید یا عدم تایید درخواست صدور یا ابطال واحدهای سرمایه گذاری -->
+						</CardexDetail>
+					</Cardex>
+				</Investor>
+			</Investors>
+	
+			<PreferredUnitTransfers>
+				<PreferredUnitTransfer>
+					<!-- نقل و انتقال واحدهای سرمایه گذاری ممتاز صندوق-->
+					<SellerID/>
+					<!-- کد منحصر به فرد سرمایه گذار واگذار کننده-->
+					<BuyerID/>
+					<!-- کد منحصر به فرد سرمایه گذار دریافت کننده-->
+					<TransferDate/>
+					<!-- تاریخ نقل و انتقال واحدهای سرمایه گذاری ممتاز صندوق-->
+					<Count/>
+					<!-- تعداد واحدهای سرمایه گذاری ممتاز منتقل شده-->
+				</PreferredUnitTransfer>
+			</PreferredUnitTransfers>
+	
+			<Reductions>
+				<Reduction>
+					<!-- نرخ های تنزیل -->
+					<BankReduction/>
+					<!-- نرخ تنزیل سود بانکی -->
+					<BondReduction/>
+					<!-- نرخ تنزیل سود اوراق بهادار با درآمد ثابت -->
+					<StockReduction/>
+					<!-- نرخ تنزیل سود تقسیمی سهام -->
+				</Reduction>
+			</Reductions>
+		
+			<Balancesheet>
+				<!-- ترازنامه -->
+				<AccountsReceivables>
+					<!-- حساب های دریافتنی صندوق -->
+					<BankDepositProfitReceivables>
+						<!-- سود سپرده بانکی دریافتنی صندوق -->
+						<BankDepositProfitReceivable>
+							<AccountNumber/>
+							<!-- شماره حساب بانکی صندوق -->
+							<Debit/>
+							<!--گردش بدهکار -->
+							<Credit/>
+							<!--گردش بستانکار -->
+							<Amount/>
+							<!--مانده ریالی -->
+							<DayValue/>
+							<!--ارزش روز مانده ي ريالي بعلاوه ي سود تنزيل شده ي محقق شده دریافت نشده ورقه بهادار-->
+							<PeriodProfit/>
+							<!--درآمد سود سپرده بانکی -->
+						</BankDepositProfitReceivable>
+					</BankDepositProfitReceivables>
+					<FixedIncomeProfitReceivables>
+						<!-- سود دریافتنی اوراق بهادار با درآمد ثابت -->
+						<FixedIncomeProfitReceivable>
+							<Symbol/>
+							<!--نماد ورقه بهادار -->
+							<ISINCode/>
+							<!-- کد منحصر به فرد ورقه بهادار-->
+							<Market/>
+							<!-- بازار-->
+							<Publisher/>
+							<!-- شناسه ملی ناشر  -->
+							<Debit/>
+							<!--گردش بدهکار -->
+							<Credit/>
+							<!--گردش بستانکار -->
+							<Amount/>
+							<!--مانده ریالی -->
+							<Type/>
+							<!--نوع ورقه بهادار -->
+							<DayValue/>
+							<!-- ارزش روز بعلاوه ي سود تنزيل شده ي محقق شده دریافت نشده ورقه بهادار-->
+							<PeriodProfit/>
+							<!-- درآمد سود اوراق بهادار با درآمد ثابت -->
+						</FixedIncomeProfitReceivable>
+					</FixedIncomeProfitReceivables>
+					<StockDividentReceivables>
+						<!-- سود دریافتنی اوراق سهام -->
+						<StockDividentReceivable>
+							<Symbol/>
+							<!--نماد سهم -->
+							<ISINCode/>
+							<!-- کد منحصر به فرد ورقه بهادار-->
+							<Debit/>
+							<!--گردش بدهکار -->
+							<Credit/>
+							<!--گردش بستانکار -->
+							<Amount/>
+							<!--مانده ریالی -->
+							<DayValue/>
+							<!--ارزش روز بعلاوه ي سود تنزيل شده ي محقق شده دریافت نشده ورقه بهادار-->
+							<DividendIncomeAmount/>
+							<!-- درآمد سود سهام -->
+						</StockDividentReceivable>
+					</StockDividentReceivables>
+					<Summary>
+						<Residual/>
+						<!--مغایرت-->
+					</Summary>
+				</AccountsReceivables>
+				<BankAccounts>
+					<!--حساب های بانکی صندوق -->
+					<BankAccount>
+						<AccountNumber/>
+						<!--شماره حساب صندوق -->
+						<Debit/>
+						<!--گردش بدهکار -->
+						<Credit/>
+						<!--گردش بستانکار -->
+						<Amount/>
+						<!--مانده ریالی -->
+					</BankAccount>
+				</BankAccounts>
+				<PayableToInvestors>
+					<!--جرییات پرداختنی به سرمایه گذاران صندوق -->
+					<Investor>
+						<ID/>
+						<!--کد منحصر به فرد سرمایه گذار-->
+						<Amount/>
+						<!--مبلغ ریالی پرداختنی به سرمایه گذار-->
+					</Investor>
+				</PayableToInvestors>
+				<PaidProfitToInvestors>
+					<!--سود پرداخت شده به سرمایه گذاران صندوق -->
+					<Investor>
+						<ID/>
+						<!--کد منحصر به فرد سرمایه گذار-->
+						<Amount/>
+						<!--مبلغ ریالی سود پرداخت شده به سرمایه گذار-->
+						<FishNumber/>
+						<!--شماره فیش پرداختی به سرمایه گذار-->
+						<Date/>
+						<!--تاریخ پرداخت سود به سرمایه گذار-->
+					</Investor>
+				</PaidProfitToInvestors>
+				<PayableProfitToInvestors>
+					<!--سود پرداختنی به سرمایه گذاران صندوق -->
+					<PayableProfitToInvestor>
+						<SubsidaryLedgerCode/>
+						<!--كد معين حساب مربوطه-->
+						<Amount/>
+						<!--مبلغ ریالی سود پرداختنی به سرمایه گذار-->
+						<FishNumber/>
+						<!--غير ضروري-->
+						<InDate/>
+						<!--تاریخ تحقق سود سرمایه گذار-->
+						<InvestorID/>
+						<!--کد منحصر به فرد سرمایه گذار-->
+					</PayableProfitToInvestor>
+				</PayableProfitToInvestors>
+			</Balancesheet>
+	
+			<Receipt>
+				<!--دریافت های صندوق -->
+				<ReceiptFromFacilities>
+					<ReceiptFromFacility>
+						<!--دریافت از محل اخذ تسهیلات بانکی -->
+						<Amount/>
+						<!--مبلغ ریالی تسهیلات اخذ شده-->
+						<FishNumber/>
+						<!--شماره فیش دریافت تسهیلات-->
+						<Date/>
+						<!--تاریخ دریافت تسهیلات-->
+						<Name/>
+						<!--نام بانک ارائه دهنده تسهیلات-->
+					</ReceiptFromFacility>
+				</ReceiptFromFacilities>
+				<ReceiptFromProfitBonds>
+					<ReceiptFromProfitBond>
+						<!--دریافت از محل سود اوراق بهادار با درآمد ثابت-->
+						<Symbol/>
+						<!--نماد ورقه بهادار-->
+						<Amount/>
+						<!--رقم ریالی سود دریافتنی-->
+						<FishNumber/>
+						<!--فیش دریفت سود ورقه بهادار-->
+						<Date/>
+						<!--تاریخ دریافت سود-->
+						<ISINCode/>
+						<!--کد 12 رقمی نماد-->
+					</ReceiptFromProfitBond>
+				</ReceiptFromProfitBonds>
+				<ReceiptFromProfitsDPS>
+					<ReceiptFromProfitDPS>
+						<!--دریافت از محل سود سهام-->
+						<Amount/>
+						<!--رقم ریالی سود دریافتنی-->
+						<FishNumber/>
+						<!--فیش دریافت سود ورقه بهادار-->
+						<Date/>
+						<!--تاریخ دریافت سود-->
+						<ISINCode/>
+						<!--کد 12 رقمی نماد-->
+					</ReceiptFromProfitDPS>
+				</ReceiptFromProfitsDPS>
+			</Receipt>
+	
+			<Payment>
+				<!--پرداخت های صندوق سرمایه گذاری-->
+				<PaymentToPillars>
+					<!--پرداخت های صندوق به ارکان صندوق-->
+					<PaymentToPillar>
+						<Amount/>
+						<!--مبلغ یا رقم کارمزد پرداختی به رکن مربوطه-->
+						<FishNumber/>
+						<!--شماره فیش پرداخت به رکن مربوطه-->
+						<Date/>
+						<!--تاریخ پرداخت به رکن مربوطه-->
+						<ID/>
+						<!--کد منحصر به فرد رکن مربوطه-->
+						<PillarCode/>
+						<!--نوع رکن مربوطه-->
+					</PaymentToPillar>
+				</PaymentToPillars>
+				<PaymentToInvestors>
+					<!--پرداخت های صندوق به سرمایه گذاران-->
+					<PaymentToInvestor>
+						<Amount/>
+						<!--مبلغ ریالی پرداخت شده به سرمایه گذار-->
+						<FishNumber/>
+						<!--شماره فبش-->
+						<Date/>
+						<!--تاریخ پرداخت-->
+						<InvestorID/>
+						<!--کد منحصر به فرد سرمایه گذار-->
+					</PaymentToInvestor>
+				</PaymentToInvestors>
+				<PaymentToPillarsTax>
+					<PaymentToPillarTax>
+						<!--مالیات پرداخت شده از بابت کارمزد پرداختی به ارکان-->
+						<ID/>
+						<!--کد منحصر به فرد رکن مربوطه-->
+						<Amount/>
+						<!--مبلغ ریالی مالیت پرداختی از بابت ارکان-->
+						<FishNumber/>
+						<!--شماره فیش-->
+						<Date/>
+						<!--تاریخ پرداخت-->
+						<PillarCode/>
+						<!--نوع رکن مربوطه-->
+					</PaymentToPillarTax>
+				</PaymentToPillarsTax>
+				<PaymentForReceivedFacilities>
+					<PaymentForReceivedFacility>
+						<!--پرداخت ها بابت تسهیلات دریافت شده-->
+						<Amount/>
+						<!--مبلغ ریالی پرداختی از بابت تسهیلات دریافت شده-->
+						<FishNumber/>
+						<!--شماره فیش-->
+						<Date/>
+						<!--تاریخ پرداخت-->
+						<Name/>
+						<!--نام بانک ارائه دهنده تسهیلات-->
+					</PaymentForReceivedFacility>
+				</PaymentForReceivedFacilities>
+				<PaymentForInvestorsProfit>
+					<!--پرداخت ها بابت سود پرداخت شده به سرمایه گذاران-->
+					<PaymentForInvestorProfit>
+						<Amount/>
+						<!--مبلغ ریالی سود پرداخت شده-->
+						<FishNumber/>
+						<!--شماره فیش-->
+						<Date/>
+						<!--تاریخ پرداخت-->
+						<InvestorID/>
+						<!--کد منحصر به فرد سرمایه گذار-->
+					</PaymentForInvestorProfit>
+				</PaymentForInvestorsProfit>
+				<PaymentForSWSubCosts>
+					<!--پرداخت ها بابت دریافت خدمات نرم افزاری و تارنمای صندوق-->
+					<PaymentForSWSubCost>
+						<Amount/>
+						<!--مبلغ ریالی پرداخت شده-->
+						<FishNumber/>
+						<!--شماره فیش-->
+						<Date/>
+						<!--تاریخ پرداخت-->
+						<Desc/>
+						<!--غير ضروري-->
+					</PaymentForSWSubCost>
+				</PaymentForSWSubCosts>
+				<PaymentForEstablishmentCosts>
+					<PaymentForEstablishmentCost>
+						<!--پرداخت ها بابت هزینه تاسیس صندوق-->
+						<Amount/>
+						<!--مبلغ ریالی پرداخت شده-->
+						<FishNumber/>
+						<!--شماره فیش-->
+						<Date/>
+						<!--تاریخ پرداخت-->
+						<Desc/>
+						<!--غير ضروري-->
+					</PaymentForEstablishmentCost>
+				</PaymentForEstablishmentCosts>
+				<PaymentForGAMCosts>
+					<PaymentForGAMCost>
+						<!--پرداخت ها بابت هزینه برگزاری مجامع صندوق-->
+						<Amount/>
+						<!--مبلغ ریالی پرداخت شده-->
+						<FishNumber/>
+						<!--شماره فیش-->
+						<Date/>
+						<!--تاریخ پرداخت-->
+						<Desc/>
+						<!--غير ضروري-->
+					</PaymentForGAMCost>
+				</PaymentForGAMCosts>
+				<PaymentForAssocCosts>
+					<PaymentForAssocCost>
+						<!--پرداخت ها بابت هزینه عضویت در انجمن ها-->
+						<Amount/>
+						<!--مبلغ ریالی پرداخت شده-->
+						<FishNumber/>
+						<!--شماره فیش-->
+						<Date/>
+						<!--تاریخ پرداخت-->
+						<Desc/>
+						<!--غير ضروري-->
+					</PaymentForAssocCost>
+				</PaymentForAssocCosts>
+				<PaymentForOtherCosts>
+					<PaymentForOtherCost>
+						<!--پرداخت ها بابت سایر هزینه های صندوق-->
+						<Amount/>
+						<!--مبلغ ریالی پرداخت شده-->
+						<FishNumber/>
+						<!--شماره فیش-->
+						<Date/>
+						<!--تاریخ پرداخت-->
+						<Desc/>
+						<!--غير ضروري-->
+					</PaymentForOtherCost>
+				</PaymentForOtherCosts>
+			</Payment>
+			
+		</MutualFund>
+	</MutualFunds>
+</Report>

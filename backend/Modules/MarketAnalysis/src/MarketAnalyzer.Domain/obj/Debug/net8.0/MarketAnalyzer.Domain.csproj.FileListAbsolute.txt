@@ -1,0 +1,13 @@
+C:\Total Project\New project\NewMarketAnalyzer\backend\Modules\MarketAnalysis\src\MarketAnalyzer.Domain\bin\Debug\net8.0\MarketAnalyzer.Domain.deps.json
+C:\Total Project\New project\NewMarketAnalyzer\backend\Modules\MarketAnalysis\src\MarketAnalyzer.Domain\bin\Debug\net8.0\MarketAnalyzer.Domain.dll
+C:\Total Project\New project\NewMarketAnalyzer\backend\Modules\MarketAnalysis\src\MarketAnalyzer.Domain\bin\Debug\net8.0\MarketAnalyzer.Domain.pdb
+C:\Total Project\New project\NewMarketAnalyzer\backend\Modules\MarketAnalysis\src\MarketAnalyzer.Domain\obj\Debug\net8.0\MarketAnalyzer.Domain.csproj.AssemblyReference.cache
+C:\Total Project\New project\NewMarketAnalyzer\backend\Modules\MarketAnalysis\src\MarketAnalyzer.Domain\obj\Debug\net8.0\MarketAnalyzer.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Total Project\New project\NewMarketAnalyzer\backend\Modules\MarketAnalysis\src\MarketAnalyzer.Domain\obj\Debug\net8.0\MarketAnalyzer.Domain.AssemblyInfoInputs.cache
+C:\Total Project\New project\NewMarketAnalyzer\backend\Modules\MarketAnalysis\src\MarketAnalyzer.Domain\obj\Debug\net8.0\MarketAnalyzer.Domain.AssemblyInfo.cs
+C:\Total Project\New project\NewMarketAnalyzer\backend\Modules\MarketAnalysis\src\MarketAnalyzer.Domain\obj\Debug\net8.0\MarketAnalyzer.Domain.csproj.CoreCompileInputs.cache
+C:\Total Project\New project\NewMarketAnalyzer\backend\Modules\MarketAnalysis\src\MarketAnalyzer.Domain\obj\Debug\net8.0\MarketAnalyzer.Domain.sourcelink.json
+C:\Total Project\New project\NewMarketAnalyzer\backend\Modules\MarketAnalysis\src\MarketAnalyzer.Domain\obj\Debug\net8.0\MarketAnalyzer.Domain.dll
+C:\Total Project\New project\NewMarketAnalyzer\backend\Modules\MarketAnalysis\src\MarketAnalyzer.Domain\obj\Debug\net8.0\refint\MarketAnalyzer.Domain.dll
+C:\Total Project\New project\NewMarketAnalyzer\backend\Modules\MarketAnalysis\src\MarketAnalyzer.Domain\obj\Debug\net8.0\MarketAnalyzer.Domain.pdb
+C:\Total Project\New project\NewMarketAnalyzer\backend\Modules\MarketAnalysis\src\MarketAnalyzer.Domain\obj\Debug\net8.0\ref\MarketAnalyzer.Domain.dll

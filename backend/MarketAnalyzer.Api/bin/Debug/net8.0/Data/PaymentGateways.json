@@ -1,0 +1,24 @@
+[
+  //{
+  //  "Title": "تجارت",
+  //  "UniqueName": "Tejarat",
+  //  "DisplayName": "صندوق سرمایه‌گذاری مشترک مبین سرمایه",
+  //  "TerminalUrl": "https://ikc.shaparak.ir/iuiv3/IPG/Index",
+  //  "ServiceUrl": "https://ikc.shaparak.ir",
+  //  "Config": "{\"TerminalId\":\"08060537\",\"AcceptorId\":\"992180008060537\",\"PassPhrase\":\"DDB827088D351CAA\",\"PublicKey\":\"-----BEGIN PUBLIC KEY----- MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCkSWAweeIPYQgamE1d5QYsUOWU Z+M5oBkLCx11P72L+9FyUfVuL1i8ttX4gbSyUIDGjZmudyLhnG/5exkGNqqQAhMo +WuANYxLpZ1sx4DJ2IJEJqEpy5ucdA7hB0pV+tkhR4M6LoezcKc8ExHyeWlUrxRz zn2gIOdGeuniOducvwIDAQAB -----END PUBLIC KEY-----\"}",
+  //  "Description": "درگاه پرداخت تجارت",
+  //  "IsActive": true,
+  //  "BankAccountShebaNumber": "IR910180000000000104349404"
+  //},
+  //{
+  //  "Title": "ملت",
+  //  "UniqueName": "Mellat",
+  //  "DisplayName": "صندوق سرمایه‌گذاری مشترک مبین سرمایه",
+  //  "TerminalUrl": "https://bpm.shaparak.ir/pgwchannel/startpay.mellat",
+  //  "ServiceUrl": "https://bpm.shaparak.ir/pgwchannel/services/pgw?wsdl",
+  //  "Config": "{\"UserName\":\"mobinsarmayeh\",\"UserPassword\":\"15751973\",\"TerminalId\":5205725}",
+  //  "Description": "درگاه پرداخت ملت",
+  //  "IsActive": true,
+  //  "BankAccountShebaNumber": "IR780120000000008966509427"
+  //}
+]

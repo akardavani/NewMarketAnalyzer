@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\MarketAnalyzer.UI.Web.props" />
+</Project>

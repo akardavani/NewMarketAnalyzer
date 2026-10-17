@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="Menu.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Include="..\..\..\MarketAnalyzer.Persistence\Extensions\OwnedNavigationBuilderExtensions.cs" Link="OwnedNavigationBuilderExtensions.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="Menu.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\MarketAnalyzer.Cms.Domain\MarketAnalyzer.Cms.Domain.csproj" />
+	</ItemGroup>
+
+</Project>

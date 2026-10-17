@@ -1,0 +1,17 @@
+{
+  "ExtendedData": {
+    "inputs": [
+      "https://verify.sep.ir/Payments/ReferencePayment.asmx"
+    ],
+    "collectionTypes": [
+      "System.Array",
+      "System.Collections.Generic.Dictionary`2"
+    ],
+    "internalTypeAccess": true,
+    "namespaceMappings": [
+      "*, MarketAnalyzer.PaymentGateways.Saman"
+    ],
+    "targetFramework": "net7.0",
+    "typeReuseMode": "None"
+  }
+}

@@ -1,0 +1,241 @@
+﻿@page
+@model MarketAnalyzer.UI.Web.Pages.RunModel
+
+@using MarketAnalyzer.UI.Web
+@using MarketAnalyzer.SharedKernel
+
+@{
+    ViewData["Title"] = "Run Analysis";
+}
+
+<div class="container-fluid py-4">
+
+    <div class="card shadow-sm mb-4">
+
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <div>
+                <h5 class="mb-0">Strategy Lab</h5>
+                <small class="text-muted">ساخت داینامیک استراتژی</small>
+            </div>
+        </div>
+
+        <div class="card-body">
+
+            <form method="post" enctype="multipart/form-data" id="strategyRunForm">
+
+                <div class="row g-3 align-items-end">
+
+                    <div class="col-12 col-md-4">
+
+                        <label class="form-label">استراتژی:</label>
+
+                        <select asp-for="Input.Strategy"
+                                class="form-select"
+                                id="strategySelect">
+
+
+                            @foreach (var strategy in Model.Strategies)
+                            {
+                                if (Model.Input.Strategy == strategy.Strategy)
+                                {
+                                    <option value="@strategy.Strategy" selected>
+                                        @strategy.Title
+                                    </option>
+                                }
+                                else
+                                {
+                                    <option value="@strategy.Strategy">
+                                        @strategy.Title
+                                    </option>
+                                }
+                            }
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div id="strategyParametersHost">
+                    @if (Model.SelectedStrategyDefinition != null)
+                    {
+                        <partial name="_StrategyParameterForm"
+                                 model="new MarketAnalyzer.UI.Web.Pages.StrategyParameterFormViewModel
+                                 {
+                                     Definition = Model.SelectedStrategyDefinition,
+                                     Input = Model.Input
+                                 }" />
+                    }
+                </div>
+
+                <div class="mt-4 d-flex gap-2 align-items-center">
+                    <button type="submit" class="btn btn-primary">
+                        Run Analysis
+                    </button>
+
+                    <span id="strategyLoading" class="text-muted d-none">
+                        در حال بارگذاری فرم...
+                    </span>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div class="alert alert-danger">
+            <div asp-validation-summary="All"></div>
+        </div>
+    }
+
+    @if (Model.PageResult != null)
+    {
+        <div class="mt-4">
+
+            <h4 class="mb-3">@Model.PageResult.Strategy</h4>
+
+            @foreach (var section in Model.PageResult.Sections)
+            {
+                <div class="mb-4">
+
+                    @if (section.Type == UiSectionType.Metrics)
+                    {
+                        <partial name="_MetricSection" model="section.Data" />
+                    }
+                    else if (section.Type == UiSectionType.Table)
+                    {
+                        <partial name="_TableSection" model="section.Data" />
+                    }
+                    else if (section.Type == UiSectionType.Chart)
+                    {
+                        <partial name="_ChartSection" model="(UiChart)section.Data" />
+                    }
+                    else
+                    {
+                        <partial name="_JsonSection" model="section.Data" />
+                    }
+
+                </div>
+            }
+
+        </div>
+    }
+
+</div>
+
+@section Scripts {
+
+    <script>
+        let tomSelectInstances = [];
+
+        function destroyTomSelects() {
+            tomSelectInstances.forEach(function(instance) {
+                try {
+                    instance.destroy();
+                } catch { }
+            });
+
+            tomSelectInstances = [];
+        }
+
+                function initSearchableSelects() {
+            document.querySelectorAll(".searchable-select").forEach(function(el) {
+
+                if (el.tomselect) {
+                    return;
+                }
+
+                const isMultiple = el.hasAttribute("multiple");
+
+                const instance = new TomSelect(el, {
+                    create: false,
+                    plugins: isMultiple ? ['remove_button'] : [],
+                    sortField: {
+                        field: "text",
+                        direction: "asc"
+                    }
+                });
+
+                tomSelectInstances.push(instance);
+            });
+        }
+
+
+        function initPersianDates() {
+            if (!window.jQuery || !$.fn.persianDatepicker) {
+                return;
+            }
+
+            $(".persian-date").each(function () {
+                const $el = $(this);
+
+                if ($el.data("datepicker-initialized")) {
+                    return;
+                }
+
+                $el.persianDatepicker({
+                    format: "YYYY/MM/DD",
+                    autoClose: true,
+                    initialValue: false
+                });
+
+                $el.data("datepicker-initialized", true);
+            });
+        }
+
+        function initStrategyFormControls() {
+            initSearchableSelects();
+            initPersianDates();
+        }
+
+        async function loadStrategyForm(strategy) {
+            const host = document.getElementById("strategyParametersHost");
+            const loading = document.getElementById("strategyLoading");
+            const strategyFormUrl = '@Url.Page(null, "StrategyForm")';
+
+            loading.classList.remove("d-none");
+
+            try {
+                const url = `${strategyFormUrl}&strategy=${encodeURIComponent(strategy)}`;
+
+                const response = await fetch(url, {
+                    method: "GET",
+                    headers: {
+                        "X-Requested-With": "XMLHttpRequest"
+                    }
+                });
+
+                const html = await response.text();
+
+                destroyTomSelects();
+
+                host.innerHTML = html;
+
+                initStrategyFormControls();
+            }
+            finally {
+                loading.classList.add("d-none");
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            initStrategyFormControls();
+
+            const strategySelect = document.getElementById("strategySelect");
+
+            if (strategySelect) {
+                strategySelect.addEventListener("change", function () {
+                    loadStrategyForm(this.value);
+                });
+            }
+        });
+    </script>
+
+}
+
+
+
+

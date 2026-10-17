@@ -1,0 +1,20 @@
+﻿@using MarketAnalyzer.UI.Web
+@model List<UiMetric>
+
+<div class="row g-3 mb-4">
+    @foreach (var metric in Model)
+    {
+        <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <div class="text-muted small mb-1">
+                        @metric.Label
+                    </div>
+                    <div class="fs-4 fw-bold">
+                        @metric.Value
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
