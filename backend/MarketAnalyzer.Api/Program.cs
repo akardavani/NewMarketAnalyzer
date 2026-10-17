@@ -24,6 +24,7 @@ using System.Text.Json.Serialization;
 using MarketIntelligence.Application;
 using MarketIntelligence.Infrastructure;
 using MarketIntelligence.Collectors;
+using MarketAnalyzer.Infrastructure;
 
 
 #region [Service Injection]
@@ -110,6 +111,10 @@ builder.Services.Configure<JsonOptions>(options =>
 {
     options.JsonSerializerOptions.NumberHandling = JsonNumberHandling.AllowReadingFromString;
 });
+
+var urlSettings = SettingsLoader.LoadUrlSettings();
+builder.Services.AddSingleton(Options.Create(urlSettings));
+
 builder.Services.AddCms();
 builder.Services.AddMembership();
 builder.Services.AddMarketCollectors();
