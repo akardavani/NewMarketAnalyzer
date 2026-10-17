@@ -1,4 +1,0 @@
-﻿[*.{cs,vb}]
-
-# IDE0270: Use coalesce expression
-dotnet_diagnostic.IDE0270.severity = none
