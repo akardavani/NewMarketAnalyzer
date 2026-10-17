@@ -1,13 +1,14 @@
 ﻿using MarketIntelligence.Domain;
+using MarketAnalyzer.Abstractions;
 using Microsoft.EntityFrameworkCore;
 
 namespace MarketIntelligence.Infrastructure
 {
     public class EfUnifiedSymbolRepository : IUnifiedSymbolRepository
     {
-        private readonly MarketDbContext _db;
+        private readonly IDbContext _db;
 
-        public EfUnifiedSymbolRepository(MarketDbContext db)
+        public EfUnifiedSymbolRepository(IDbContext db)
         {
             _db = db;
         }
@@ -70,7 +71,7 @@ namespace MarketIntelligence.Infrastructure
             if (normalizedItems.Count == 0)
                 return;
 
-            await using var transaction = await _db.Database.BeginTransactionAsync(ct);
+            using var transaction = await _db.BeginTransactionAsync(ct);
 
             foreach (var marketGroup in normalizedItems.GroupBy(x => x.MarketId))
             {

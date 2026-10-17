@@ -1,13 +1,14 @@
 ﻿using MarketIntelligence.Domain;
+using MarketAnalyzer.Abstractions;
 using Microsoft.EntityFrameworkCore;
 
 namespace MarketIntelligence.Infrastructure
 {
     public sealed class UnifiedSymbolService : IUnifiedSymbolService
     {
-        private readonly MarketDbContext _db;
+        private readonly IDbContext _db;
 
-        public UnifiedSymbolService(MarketDbContext db)
+        public UnifiedSymbolService(IDbContext db)
         {
             _db = db;
         }
@@ -46,8 +47,8 @@ namespace MarketIntelligence.Infrastructure
             if (normalized.Count == 0)
                 return;
 
-            await using var tran =
-                await _db.Database.BeginTransactionAsync(cancellation);
+            using var tran =
+                await _db.BeginTransactionAsync(cancellation);
 
             // گروه‌بندی بر اساس MarketId (هر بازار جداگانه upsert می‌شود)
             foreach (var marketGroup in normalized.GroupBy(x => x.MarketId))

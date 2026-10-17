@@ -39,22 +39,36 @@ namespace MarketIntelligence.Collectors
                 services.AddScoped(typeof(ICandelClient), type);  // interface
             }
 
-            // 3) Factory
+            // 3) Candle source registrations used by CoreCandleCollector
+            var candleSourceTypes = assembly
+                .GetTypes()
+                .Where(t => t.IsClass && !t.IsAbstract && typeof(ICandleSource).IsAssignableFrom(t));
+
+            foreach (var type in candleSourceTypes)
+            {
+                services.AddScoped(typeof(ICandleSource), type);
+            }
+
+            services.AddScoped<ICandleSourceFactory, CandleSourceFactory>();
+
+            // 4) Legacy candle-client factory
             services.AddScoped<ICandelClientFactory, CandelClientFactory>();
 
-            // 4) Collectors
-            services.AddScoped<MarketCollector>();            
+            // 5) Collectors
+            services.AddScoped<MarketCollector>();
+            services.AddHttpClient<IDataFetcher, HttpDataFetcher>();
 
             services.AddScoped<ICryptoSpotSymbolsProvider, KucoinCandleSource>();
             services.AddScoped<IBaseImeFutureSymbolsProvider, ImeCandleSource>();
             services.AddScoped<ITseTmcClient, TseTmcClient>();
             services.AddScoped<IInvestmentFundClient, InvestmentFundClient>();
 
-            // 5) Scheduled Tasks
+            // 6) Scheduled Tasks
             services.AddScheduledTasks(assembly);
 
             return services;
         }
+
         public static IServiceCollection AddMarketCollectorRunner(this IServiceCollection services)
         {
             //services.AddSingleton<CronJobRegistrar>();

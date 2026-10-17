@@ -4,18 +4,15 @@ namespace MarketIntelligence.Infrastructure
 {
     public class StockService :  IStockService
     {
-        private readonly MarketDbContext _dbContext;
         private readonly IRepository<TseStaticThreshold> _tseStaticThresholdRepository;
         private readonly IRepository<TseBestLimit> _tseBestLimitRepository;
         private readonly IRepository<TseTradeLastDay> _tseTradeLastDayRepository;
 
         public StockService(
-            MarketDbContext dbContext,
             IRepository<TseStaticThreshold> tseStaticThresholdRepository,
             IRepository<TseBestLimit> tseBestLimitRepository,
             IRepository<TseTradeLastDay> tseTradeLastDayRepository) 
         {
-            _dbContext = dbContext;
             _tseStaticThresholdRepository = tseStaticThresholdRepository;
             _tseBestLimitRepository = tseBestLimitRepository;
             _tseTradeLastDayRepository = tseTradeLastDayRepository;

@@ -1,13 +1,14 @@
 ﻿using MarketIntelligence.Domain;
+using MarketAnalyzer.Abstractions;
 using Microsoft.EntityFrameworkCore;
 
 namespace MarketIntelligence.Infrastructure
 {
     public class EfUnifiedCandleRepository : IUnifiedCandleRepository
     {
-        private readonly MarketDbContext _db;
+        private readonly IDbContext _db;
 
-        public EfUnifiedCandleRepository(MarketDbContext db)
+        public EfUnifiedCandleRepository(IDbContext db)
         {
             _db = db;
         }

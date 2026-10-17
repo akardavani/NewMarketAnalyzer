@@ -1,29 +1,16 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
+using MarketAnalyzer.Abstractions;
+using MarketIntelligence.Domain;
 
 namespace MarketIntelligence.Infrastructure
 {
     public static class InfrastructureServiceCollectionExtensions
     {
-        public static IServiceCollection AddInfrastructureDependencyInjection(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddInfrastructureDependencyInjection(this IServiceCollection services)
         {
-            services.AddDbContext<MarketDbContext>((provider, options) =>
-            {
-                options.UseSqlServer(
-                    configuration.GetConnectionString("Defualt"),
-                    sqlOptions =>
-                    {
-                        sqlOptions.CommandTimeout(5 * 60);
-                        sqlOptions.MigrationsAssembly(
-                            typeof(MarketDbContext).Assembly.FullName);
-                    });
-
-                // فقط در صورتی لازم است که MarketDbContext
-                // از همان زیرساخت مترجم توابع SQL استفاده کند:
-                // options.UseInternalServiceProvider(provider);
-                // options.UseSqlServerMethodTranslator(provider);
-            });
+            // Make MarketIntelligence entities and EF configurations part of FundDbContext's model.
+            services.AddPersistenceApplicationPart(typeof(UnifiedSymbolRecord).Assembly, 0);
+            services.AddPersistenceApplicationPart(typeof(UnifiedSymbolRecordConfiguration).Assembly, 0);
 
             services.AddScoped<FinancialReportService>();
 

@@ -110,6 +110,11 @@ namespace MarketAnalyzer.Persistence
             return Set<TEntity>().Local.FirstOrDefault(predicate);
         }
 
+        public void ClearChangeTracker()
+        {
+            ChangeTracker.Clear();
+        }
+
         public bool IsAttached<TEntity>(Func<TEntity, bool> predicate, out TEntity entity) where TEntity : class
         {
             entity = Set<TEntity>().Local.FirstOrDefault(predicate);
@@ -278,8 +283,27 @@ namespace MarketAnalyzer.Persistence
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(FundDbContext).Assembly);
             foreach (var part in parts)
             {
+                RegisterMarketEntities(modelBuilder, part.Assembly);
                 ConfigureEnumerations(modelBuilder, part.Assembly);
                 modelBuilder.ApplyConfigurationsFromAssembly(part.Assembly);
+            }
+        }
+
+        private static void RegisterMarketEntities(ModelBuilder modelBuilder, Assembly assembly)
+        {
+            // MarketIntelligence.Domain is registered as a PersistenceApplicationPart.
+            // Keep MarketAnalyzer.Persistence independent of the MarketIntelligence project
+            // while allowing its IEntity types to participate in the shared EF model.
+            const string marketEntityInterface = "MarketIntelligence.Domain.IEntity";
+
+            foreach (var type in assembly.GetTypes().Where(type =>
+                         type.IsClass &&
+                         !type.IsAbstract &&
+                         type.GetInterfaces().Any(@interface => @interface.FullName == marketEntityInterface)))
+            {
+                // The former MarketDbContext used EF's default entity-name table mapping.
+                // Preserve it for unconfigured entities despite FundDbContext's pluralization convention.
+                modelBuilder.Entity(type).ToTable(type.Name);
             }
         }
 

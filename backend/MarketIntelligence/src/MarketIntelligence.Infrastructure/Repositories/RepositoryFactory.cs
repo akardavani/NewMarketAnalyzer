@@ -11,7 +11,7 @@ namespace MarketIntelligence.Infrastructure
             _serviceProvider = serviceProvider;
         }
 
-        public IRepository<T> Get<T>() where T : class, IEntity
+        public IRepository<T> Get<T>() where T : class, MarketIntelligence.Domain.IEntity
         {
             return _serviceProvider.GetRequiredService<IRepository<T>>();
         }

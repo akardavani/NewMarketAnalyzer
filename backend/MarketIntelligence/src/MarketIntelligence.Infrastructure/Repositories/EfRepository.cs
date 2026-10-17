@@ -1,14 +1,15 @@
 ﻿using MarketIntelligence.Domain;
+using MarketAnalyzer.Abstractions;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
 namespace MarketIntelligence.Infrastructure
 {
-    public class EfRepository<T> : IRepository<T> where T : class, IEntity
+    public class EfRepository<T> : IRepository<T> where T : class, MarketIntelligence.Domain.IEntity
     {
-        private readonly MarketDbContext _db;
+        private readonly IDbContext _db;
 
-        public EfRepository(MarketDbContext db)
+        public EfRepository(IDbContext db)
         {
             _db = db;
         }
@@ -47,7 +48,7 @@ namespace MarketIntelligence.Infrastructure
 
             await _db.SaveChangesAsync(cancellationToken);
 
-            _db.ChangeTracker.Clear();
+            _db.ClearChangeTracker();
         }
 
         public async Task AddRangeAsync(IEnumerable<T> entities, CancellationToken cancellationToken = default)
@@ -59,13 +60,13 @@ namespace MarketIntelligence.Infrastructure
 
             await _db.Set<T>().AddRangeAsync(list, cancellationToken);
             await _db.SaveChangesAsync(cancellationToken);
-            _db.ChangeTracker.Clear();
+            _db.ClearChangeTracker();
         }
 
 
         public void ClearTrackingAsync()
         {
-            _db.ChangeTracker.Clear();
+            _db.ClearChangeTracker();
         }
 
 
@@ -98,7 +99,7 @@ namespace MarketIntelligence.Infrastructure
 
             _db.Set<T>().RemoveRange(entities);
             await _db.SaveChangesAsync(cancellationToken);
-            _db.ChangeTracker.Clear();
+            _db.ClearChangeTracker();
         }
 
 
@@ -174,7 +175,7 @@ namespace MarketIntelligence.Infrastructure
             {
                 await _db.Set<T>().AddRangeAsync(toInsert, cancellationToken);
                 await _db.SaveChangesAsync(cancellationToken);
-                _db.ChangeTracker.Clear();
+                _db.ClearChangeTracker();
             }
         }
     }

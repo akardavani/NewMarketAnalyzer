@@ -3,7 +3,7 @@ namespace MarketIntelligence.Infrastructure
 {
     public interface IRepositoryFactory
     {
-        IRepository<T> Get<T>() where T : class, IEntity;
+        IRepository<T> Get<T>() where T : class, MarketIntelligence.Domain.IEntity;
     }
 
 }

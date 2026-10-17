@@ -2,7 +2,7 @@
 using System.Linq.Expressions;
 namespace MarketIntelligence.Infrastructure
 {
-    public interface IRepository<T> where T : class, IEntity
+    public interface IRepository<T> where T : class, MarketIntelligence.Domain.IEntity
     {
         
         Task<IEnumerable<T>> GetAllAsync(CancellationToken cancellationToken = default);        

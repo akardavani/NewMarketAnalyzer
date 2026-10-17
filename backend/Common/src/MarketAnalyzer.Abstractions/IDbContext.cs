@@ -12,6 +12,7 @@ namespace MarketAnalyzer.Abstractions
     {
         DbSet<TEntity> Set<TEntity>() where TEntity : class;
         Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
+        void ClearChangeTracker();
         Task<ITransaction> BeginTransactionAsync(CancellationToken cancellation = default);
         Task BeginTransactionAsync(Func<Task> func, CancellationToken cancellation = default);
         Task<T> BeginTransactionAsync<T>(Func<Task<T>> func, CancellationToken cancellation = default);
