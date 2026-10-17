@@ -167,8 +167,8 @@ namespace MarketAnalyzer.Persistence.Migrations
                     b.Property<DateTime?>("LastRunTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<TimeSpan>("Period")
-                        .HasColumnType("time");
+                    b.Property<long>("Period")
+                        .HasColumnType("bigint");
 
                     b.Property<TimeOnly>("StartTime")
                         .HasColumnType("time");

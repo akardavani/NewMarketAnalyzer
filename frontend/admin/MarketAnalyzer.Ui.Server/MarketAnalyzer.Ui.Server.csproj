@@ -4,7 +4,7 @@
 		<TargetFramework>net9.0</TargetFramework>
 		<SpaRoot>..\MarketAnalyzer.ui.client</SpaRoot>
 		<SpaProxyLaunchCommand>npm start</SpaProxyLaunchCommand>
-		<SpaProxyServerUrl>https://localhost:64100</SpaProxyServerUrl>
+		<SpaProxyServerUrl>https://localhost:64200</SpaProxyServerUrl>
 	</PropertyGroup>
 
 	<ItemGroup>

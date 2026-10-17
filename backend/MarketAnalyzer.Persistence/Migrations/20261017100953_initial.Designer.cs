@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MarketAnalyzer.Persistence.Migrations
 {
     [DbContext(typeof(FundDbContext))]
-    [Migration("20261017095657_new")]
-    partial class @new
+    [Migration("20261017100953_initial")]
+    partial class initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -170,8 +170,8 @@ namespace MarketAnalyzer.Persistence.Migrations
                     b.Property<DateTime?>("LastRunTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<TimeSpan>("Period")
-                        .HasColumnType("time");
+                    b.Property<long>("Period")
+                        .HasColumnType("bigint");
 
                     b.Property<TimeOnly>("StartTime")
                         .HasColumnType("time");

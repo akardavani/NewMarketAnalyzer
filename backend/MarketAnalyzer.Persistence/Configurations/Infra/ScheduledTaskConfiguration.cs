@@ -8,12 +8,24 @@ namespace MarketAnalyzer.Persistence.Configurations.Infra
     {
         public void Configure(EntityTypeBuilder<ScheduledTask> builder)
         {
+            //builder.HasKey(e => e.Id);
+            //builder.Property(e => e.Id)
+            //    .ValueGeneratedNever();
+
+            //builder.Property(e => e.Description)
+            //    .HasMaxLength(1000);
+
             builder.HasKey(e => e.Id);
+
             builder.Property(e => e.Id)
                 .ValueGeneratedNever();
 
             builder.Property(e => e.Description)
                 .HasMaxLength(1000);
+
+            builder.Property(e => e.Period)
+                .HasConversion<long>()
+                .HasColumnType("bigint");
         }
     }
 }
