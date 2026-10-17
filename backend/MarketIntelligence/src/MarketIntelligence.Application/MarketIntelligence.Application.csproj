@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.105.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\..\Common\src\MarketAnalyzer.Abstractions\MarketAnalyzer.Abstractions.csproj" />
     <ProjectReference Include="..\MarketIntelligence.Infrastructure\MarketIntelligence.Infrastructure.csproj" />
 	  <ProjectReference Include="..\MarketIntelligence.Domain\MarketIntelligence.Domain.csproj" />

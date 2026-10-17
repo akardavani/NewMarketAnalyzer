@@ -3,64 +3,32 @@
   "WorkspaceRootPath": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5A882175-9F36-424A-A7A5-89C0CB5CCCA7}|MarketIntelligence\\src\\MarketIntelligence.Persistence\\MarketIntelligence.Persistence.csproj|d:\\total solution\\newmarketanalyzer\\backend\\marketintelligence\\src\\marketintelligence.persistence\\context\\seed\\imesymbolseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5A882175-9F36-424A-A7A5-89C0CB5CCCA7}|MarketIntelligence\\src\\MarketIntelligence.Persistence\\MarketIntelligence.Persistence.csproj|solutionrelative:marketintelligence\\src\\marketintelligence.persistence\\context\\seed\\imesymbolseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4C17B54-68AE-4529-849C-4E1BF49BAD62}|MarketIntelligence\\src\\MarketIntelligence.Domain\\MarketIntelligence.Domain.csproj|d:\\total solution\\newmarketanalyzer\\backend\\marketintelligence\\src\\marketintelligence.domain\\marketintelligence.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{E4C17B54-68AE-4529-849C-4E1BF49BAD62}|MarketIntelligence\\src\\MarketIntelligence.Domain\\MarketIntelligence.Domain.csproj|solutionrelative:marketintelligence\\src\\marketintelligence.domain\\marketintelligence.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5A882175-9F36-424A-A7A5-89C0CB5CCCA7}|MarketIntelligence\\src\\MarketIntelligence.Persistence\\MarketIntelligence.Persistence.csproj|d:\\total solution\\newmarketanalyzer\\backend\\marketintelligence\\src\\marketintelligence.persistence\\marketintelligence.persistence.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{5A882175-9F36-424A-A7A5-89C0CB5CCCA7}|MarketIntelligence\\src\\MarketIntelligence.Persistence\\MarketIntelligence.Persistence.csproj|solutionrelative:marketintelligence\\src\\marketintelligence.persistence\\marketintelligence.persistence.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2ECA5571-106D-4DF4-8411-B1907AB0CAAE}|MarketIntelligence\\src\\MarketIntelligence.Application\\MarketIntelligence.Application.csproj|d:\\total solution\\newmarketanalyzer\\backend\\marketintelligence\\src\\marketintelligence.application\\marketintelligence.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{2ECA5571-106D-4DF4-8411-B1907AB0CAAE}|MarketIntelligence\\src\\MarketIntelligence.Application\\MarketIntelligence.Application.csproj|solutionrelative:marketintelligence\\src\\marketintelligence.application\\marketintelligence.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FECEF1F-EAEE-4047-BD1F-3CAF6BC8A91E}|MarketIntelligence\\src\\MarketIntelligence.Collectors\\MarketIntelligence.Collectors.csproj|d:\\total solution\\newmarketanalyzer\\backend\\marketintelligence\\src\\marketintelligence.collectors\\marketintelligence.collectors.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{2FECEF1F-EAEE-4047-BD1F-3CAF6BC8A91E}|MarketIntelligence\\src\\MarketIntelligence.Collectors\\MarketIntelligence.Collectors.csproj|solutionrelative:marketintelligence\\src\\marketintelligence.collectors\\marketintelligence.collectors.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{666DEEE3-CDA9-EF1B-D48C-D987C760D3AB}|MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\MarketIntelligence.Infrastructure.csproj|d:\\total solution\\newmarketanalyzer\\backend\\marketintelligence\\src\\marketintelligence.infrastructure\\marketintelligence.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{666DEEE3-CDA9-EF1B-D48C-D987C760D3AB}|MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\MarketIntelligence.Infrastructure.csproj|solutionrelative:marketintelligence\\src\\marketintelligence.infrastructure\\marketintelligence.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{0A0CAF9C-11E2-4AC8-B831-2D05AA840126}|MarketAnalyzer.Api\\MarketAnalyzer.Api.csproj|d:\\total solution\\newmarketanalyzer\\backend\\marketanalyzer.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A0CAF9C-11E2-4AC8-B831-2D05AA840126}|MarketAnalyzer.Api\\MarketAnalyzer.Api.csproj|solutionrelative:marketanalyzer.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{666DEEE3-CDA9-EF1B-D48C-D987C760D3AB}|MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\MarketIntelligence.Infrastructure.csproj|d:\\total solution\\newmarketanalyzer\\backend\\marketintelligence\\src\\marketintelligence.infrastructure\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{666DEEE3-CDA9-EF1B-D48C-D987C760D3AB}|MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\MarketIntelligence.Infrastructure.csproj|solutionrelative:marketintelligence\\src\\marketintelligence.infrastructure\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{666DEEE3-CDA9-EF1B-D48C-D987C760D3AB}|MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\MarketIntelligence.Infrastructure.csproj|d:\\total solution\\newmarketanalyzer\\backend\\marketintelligence\\src\\marketintelligence.infrastructure\\markettypename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{666DEEE3-CDA9-EF1B-D48C-D987C760D3AB}|MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\MarketIntelligence.Infrastructure.csproj|solutionrelative:marketintelligence\\src\\marketintelligence.infrastructure\\markettypename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5A882175-9F36-424A-A7A5-89C0CB5CCCA7}|MarketIntelligence\\src\\MarketIntelligence.Persistence\\MarketIntelligence.Persistence.csproj|d:\\total solution\\newmarketanalyzer\\backend\\marketintelligence\\src\\marketintelligence.persistence\\context\\marketdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A882175-9F36-424A-A7A5-89C0CB5CCCA7}|MarketIntelligence\\src\\MarketIntelligence.Persistence\\MarketIntelligence.Persistence.csproj|solutionrelative:marketintelligence\\src\\marketintelligence.persistence\\context\\marketdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{666DEEE3-CDA9-EF1B-D48C-D987C760D3AB}|MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\MarketIntelligence.Infrastructure.csproj|d:\\total solution\\newmarketanalyzer\\backend\\marketintelligence\\src\\marketintelligence.infrastructure\\featuresname.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{666DEEE3-CDA9-EF1B-D48C-D987C760D3AB}|MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\MarketIntelligence.Infrastructure.csproj|solutionrelative:marketintelligence\\src\\marketintelligence.infrastructure\\featuresname.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{666DEEE3-CDA9-EF1B-D48C-D987C760D3AB}|MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\MarketIntelligence.Infrastructure.csproj|d:\\total solution\\newmarketanalyzer\\backend\\marketintelligence\\src\\marketintelligence.infrastructure\\newservies\\efunifiedsymbolrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{666DEEE3-CDA9-EF1B-D48C-D987C760D3AB}|MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\MarketIntelligence.Infrastructure.csproj|solutionrelative:marketintelligence\\src\\marketintelligence.infrastructure\\newservies\\efunifiedsymbolrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6FA9188-37B6-4305-AAC6-815C535346A6}|Common\\src\\MarketAnalyzer.Abstractions\\MarketAnalyzer.Abstractions.csproj|d:\\total solution\\newmarketanalyzer\\backend\\common\\src\\marketanalyzer.abstractions\\extensions\\stringextentions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6FA9188-37B6-4305-AAC6-815C535346A6}|Common\\src\\MarketAnalyzer.Abstractions\\MarketAnalyzer.Abstractions.csproj|solutionrelative:common\\src\\marketanalyzer.abstractions\\extensions\\stringextentions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{666DEEE3-CDA9-EF1B-D48C-D987C760D3AB}|MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\MarketIntelligence.Infrastructure.csproj|d:\\total solution\\newmarketanalyzer\\backend\\marketintelligence\\src\\marketintelligence.infrastructure\\newservies\\efunifiedcandlerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{666DEEE3-CDA9-EF1B-D48C-D987C760D3AB}|MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\MarketIntelligence.Infrastructure.csproj|solutionrelative:marketintelligence\\src\\marketintelligence.infrastructure\\newservies\\efunifiedcandlerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FECEF1F-EAEE-4047-BD1F-3CAF6BC8A91E}|MarketIntelligence\\src\\MarketIntelligence.Collectors\\MarketIntelligence.Collectors.csproj|d:\\total solution\\newmarketanalyzer\\backend\\marketintelligence\\src\\marketintelligence.collectors\\client\\tsetmcclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FECEF1F-EAEE-4047-BD1F-3CAF6BC8A91E}|MarketIntelligence\\src\\MarketIntelligence.Collectors\\MarketIntelligence.Collectors.csproj|solutionrelative:marketintelligence\\src\\marketintelligence.collectors\\client\\tsetmcclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A0CAF9C-11E2-4AC8-B831-2D05AA840126}|MarketAnalyzer.Api\\MarketAnalyzer.Api.csproj|d:\\total solution\\newmarketanalyzer\\backend\\marketanalyzer.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A0CAF9C-11E2-4AC8-B831-2D05AA840126}|MarketAnalyzer.Api\\MarketAnalyzer.Api.csproj|solutionrelative:marketanalyzer.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2FECEF1F-EAEE-4047-BD1F-3CAF6BC8A91E}|MarketIntelligence\\src\\MarketIntelligence.Collectors\\MarketIntelligence.Collectors.csproj|d:\\total solution\\newmarketanalyzer\\backend\\marketintelligence\\src\\marketintelligence.collectors\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FECEF1F-EAEE-4047-BD1F-3CAF6BC8A91E}|MarketIntelligence\\src\\MarketIntelligence.Collectors\\MarketIntelligence.Collectors.csproj|solutionrelative:marketintelligence\\src\\marketintelligence.collectors\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0A0CAF9C-11E2-4AC8-B831-2D05AA840126}|MarketAnalyzer.Api\\MarketAnalyzer.Api.csproj|d:\\total solution\\newmarketanalyzer\\backend\\marketanalyzer.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{0A0CAF9C-11E2-4AC8-B831-2D05AA840126}|MarketAnalyzer.Api\\MarketAnalyzer.Api.csproj|solutionrelative:marketanalyzer.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2ECA5571-106D-4DF4-8411-B1907AB0CAAE}|MarketIntelligence\\src\\MarketIntelligence.Application\\MarketIntelligence.Application.csproj|d:\\total solution\\newmarketanalyzer\\backend\\marketintelligence\\src\\marketintelligence.application\\infrastructure\\excelreader\\excelreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2ECA5571-106D-4DF4-8411-B1907AB0CAAE}|MarketIntelligence\\src\\MarketIntelligence.Application\\MarketIntelligence.Application.csproj|solutionrelative:marketintelligence\\src\\marketintelligence.application\\infrastructure\\excelreader\\excelreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6FA9188-37B6-4305-AAC6-815C535346A6}|Common\\src\\MarketAnalyzer.Abstractions\\MarketAnalyzer.Abstractions.csproj|d:\\total solution\\newmarketanalyzer\\backend\\common\\src\\marketanalyzer.abstractions\\extensions\\datetimeextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6FA9188-37B6-4305-AAC6-815C535346A6}|Common\\src\\MarketAnalyzer.Abstractions\\MarketAnalyzer.Abstractions.csproj|solutionrelative:common\\src\\marketanalyzer.abstractions\\extensions\\datetimeextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 15,
           "Children": [
             {
               "$type": "Bookmark",
@@ -110,196 +78,94 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ImeSymbolSeeder.cs",
-              "DocumentMoniker": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\MarketIntelligence\\src\\MarketIntelligence.Persistence\\Context\\Seed\\ImeSymbolSeeder.cs",
-              "RelativeDocumentMoniker": "MarketIntelligence\\src\\MarketIntelligence.Persistence\\Context\\Seed\\ImeSymbolSeeder.cs",
-              "ToolTip": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\MarketIntelligence\\src\\MarketIntelligence.Persistence\\Context\\Seed\\ImeSymbolSeeder.cs",
-              "RelativeToolTip": "MarketIntelligence\\src\\MarketIntelligence.Persistence\\Context\\Seed\\ImeSymbolSeeder.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "EfUnifiedSymbolRepository.cs",
+              "DocumentMoniker": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\NewServies\\EfUnifiedSymbolRepository.cs",
+              "RelativeDocumentMoniker": "MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\NewServies\\EfUnifiedSymbolRepository.cs",
+              "ToolTip": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\NewServies\\EfUnifiedSymbolRepository.cs",
+              "RelativeToolTip": "MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\NewServies\\EfUnifiedSymbolRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-17T08:05:35.429Z",
+              "WhenOpened": "2026-10-17T09:05:54.216Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "MarketIntelligence.Collectors",
-              "DocumentMoniker": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\MarketIntelligence\\src\\MarketIntelligence.Collectors\\MarketIntelligence.Collectors.csproj",
-              "RelativeDocumentMoniker": "MarketIntelligence\\src\\MarketIntelligence.Collectors\\MarketIntelligence.Collectors.csproj",
-              "ToolTip": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\MarketIntelligence\\src\\MarketIntelligence.Collectors\\MarketIntelligence.Collectors.csproj",
-              "RelativeToolTip": "MarketIntelligence\\src\\MarketIntelligence.Collectors\\MarketIntelligence.Collectors.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-10-17T08:03:35.878Z",
+              "Title": "EfUnifiedCandleRepository.cs",
+              "DocumentMoniker": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\NewServies\\EfUnifiedCandleRepository.cs",
+              "RelativeDocumentMoniker": "MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\NewServies\\EfUnifiedCandleRepository.cs",
+              "ToolTip": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\NewServies\\EfUnifiedCandleRepository.cs",
+              "RelativeToolTip": "MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\NewServies\\EfUnifiedCandleRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-17T09:05:48.783Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "MarketIntelligence.Persistence",
-              "DocumentMoniker": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\MarketIntelligence\\src\\MarketIntelligence.Persistence\\MarketIntelligence.Persistence.csproj",
-              "RelativeDocumentMoniker": "MarketIntelligence\\src\\MarketIntelligence.Persistence\\MarketIntelligence.Persistence.csproj",
-              "ToolTip": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\MarketIntelligence\\src\\MarketIntelligence.Persistence\\MarketIntelligence.Persistence.csproj",
-              "RelativeToolTip": "MarketIntelligence\\src\\MarketIntelligence.Persistence\\MarketIntelligence.Persistence.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-10-17T07:59:23.128Z",
+              "Title": "MarketDbContext.cs",
+              "DocumentMoniker": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\MarketIntelligence\\src\\MarketIntelligence.Persistence\\Context\\MarketDbContext.cs",
+              "RelativeDocumentMoniker": "MarketIntelligence\\src\\MarketIntelligence.Persistence\\Context\\MarketDbContext.cs",
+              "ToolTip": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\MarketIntelligence\\src\\MarketIntelligence.Persistence\\Context\\MarketDbContext.cs",
+              "RelativeToolTip": "MarketIntelligence\\src\\MarketIntelligence.Persistence\\Context\\MarketDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-17T09:05:08.914Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "MarketIntelligence.Infrastructure",
-              "DocumentMoniker": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\MarketIntelligence.Infrastructure.csproj",
-              "RelativeDocumentMoniker": "MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\MarketIntelligence.Infrastructure.csproj",
-              "ToolTip": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\MarketIntelligence.Infrastructure.csproj",
-              "RelativeToolTip": "MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\MarketIntelligence.Infrastructure.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-10-17T07:59:20.504Z",
+              "Title": "ServiceCollectionExtensions.cs",
+              "DocumentMoniker": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\MarketIntelligence\\src\\MarketIntelligence.Collectors\\ServiceCollectionExtensions.cs",
+              "RelativeDocumentMoniker": "MarketIntelligence\\src\\MarketIntelligence.Collectors\\ServiceCollectionExtensions.cs",
+              "ToolTip": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\MarketIntelligence\\src\\MarketIntelligence.Collectors\\ServiceCollectionExtensions.cs",
+              "RelativeToolTip": "MarketIntelligence\\src\\MarketIntelligence.Collectors\\ServiceCollectionExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwDkAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-17T08:54:01.584Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MarketIntelligence.Domain",
-              "DocumentMoniker": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\MarketIntelligence\\src\\MarketIntelligence.Domain\\MarketIntelligence.Domain.csproj",
-              "RelativeDocumentMoniker": "MarketIntelligence\\src\\MarketIntelligence.Domain\\MarketIntelligence.Domain.csproj",
-              "ToolTip": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\MarketIntelligence\\src\\MarketIntelligence.Domain\\MarketIntelligence.Domain.csproj",
-              "RelativeToolTip": "MarketIntelligence\\src\\MarketIntelligence.Domain\\MarketIntelligence.Domain.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-10-17T07:59:18.832Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MarketIntelligence.Application",
-              "DocumentMoniker": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\MarketIntelligence\\src\\MarketIntelligence.Application\\MarketIntelligence.Application.csproj",
-              "RelativeDocumentMoniker": "MarketIntelligence\\src\\MarketIntelligence.Application\\MarketIntelligence.Application.csproj",
-              "ToolTip": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\MarketIntelligence\\src\\MarketIntelligence.Application\\MarketIntelligence.Application.csproj",
-              "RelativeToolTip": "MarketIntelligence\\src\\MarketIntelligence.Application\\MarketIntelligence.Application.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-10-17T07:58:48.903Z",
+              "Title": "ServiceCollectionExtensions.cs",
+              "DocumentMoniker": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\ServiceCollectionExtensions.cs",
+              "RelativeDocumentMoniker": "MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\ServiceCollectionExtensions.cs",
+              "ToolTip": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\ServiceCollectionExtensions.cs*",
+              "RelativeToolTip": "MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\ServiceCollectionExtensions.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-17T08:48:18.925Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "ServiceCollectionExtensions.cs",
-              "DocumentMoniker": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\ServiceCollectionExtensions.cs",
-              "RelativeDocumentMoniker": "MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\ServiceCollectionExtensions.cs",
-              "ToolTip": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\ServiceCollectionExtensions.cs",
-              "RelativeToolTip": "MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\ServiceCollectionExtensions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-17T07:58:32.575Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MarketTypeName.cs",
-              "DocumentMoniker": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\MarketTypeName.cs",
-              "RelativeDocumentMoniker": "MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\MarketTypeName.cs",
-              "ToolTip": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\MarketTypeName.cs",
-              "RelativeToolTip": "MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\MarketTypeName.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-17T07:58:31.21Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "FeaturesName.cs",
-              "DocumentMoniker": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\FeaturesName.cs",
-              "RelativeDocumentMoniker": "MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\FeaturesName.cs",
-              "ToolTip": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\FeaturesName.cs",
-              "RelativeToolTip": "MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\FeaturesName.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-17T07:58:28.936Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\MarketAnalyzer.Api\\appsettings.Development.json",
               "RelativeDocumentMoniker": "MarketAnalyzer.Api\\appsettings.Development.json",
               "ToolTip": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\MarketAnalyzer.Api\\appsettings.Development.json",
               "RelativeToolTip": "MarketAnalyzer.Api\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-10-17T07:50:34.515Z",
+              "WhenOpened": "2026-10-17T08:40:28.998Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\MarketAnalyzer.Api\\Program.cs",
               "RelativeDocumentMoniker": "MarketAnalyzer.Api\\Program.cs",
               "ToolTip": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\MarketAnalyzer.Api\\Program.cs",
               "RelativeToolTip": "MarketAnalyzer.Api\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHEAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAlwIYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-17T07:49:09.061Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ExcelReader.cs",
-              "DocumentMoniker": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\MarketIntelligence\\src\\MarketIntelligence.Application\\Infrastructure\\ExcelReader\\ExcelReader.cs",
-              "RelativeDocumentMoniker": "MarketIntelligence\\src\\MarketIntelligence.Application\\Infrastructure\\ExcelReader\\ExcelReader.cs",
-              "ToolTip": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\MarketIntelligence\\src\\MarketIntelligence.Application\\Infrastructure\\ExcelReader\\ExcelReader.cs",
-              "RelativeToolTip": "MarketIntelligence\\src\\MarketIntelligence.Application\\Infrastructure\\ExcelReader\\ExcelReader.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAcwB4AAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-17T07:46:38.896Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "TseTmcClient.cs",
-              "DocumentMoniker": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\MarketIntelligence\\src\\MarketIntelligence.Collectors\\Client\\TseTmcClient.cs",
-              "RelativeDocumentMoniker": "MarketIntelligence\\src\\MarketIntelligence.Collectors\\Client\\TseTmcClient.cs",
-              "ToolTip": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\MarketIntelligence\\src\\MarketIntelligence.Collectors\\Client\\TseTmcClient.cs",
-              "RelativeToolTip": "MarketIntelligence\\src\\MarketIntelligence.Collectors\\Client\\TseTmcClient.cs",
-              "ViewState": "AgIAACYBAAAAAAAAAAAvwD0BAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-17T07:46:26.166Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "StringExtentions.cs",
-              "DocumentMoniker": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\Common\\src\\MarketAnalyzer.Abstractions\\Extensions\\StringExtentions.cs",
-              "RelativeDocumentMoniker": "Common\\src\\MarketAnalyzer.Abstractions\\Extensions\\StringExtentions.cs",
-              "ToolTip": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\Common\\src\\MarketAnalyzer.Abstractions\\Extensions\\StringExtentions.cs",
-              "RelativeToolTip": "Common\\src\\MarketAnalyzer.Abstractions\\Extensions\\StringExtentions.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAuwBgAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-16T07:41:00.151Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "DateTimeExtensions.cs",
-              "DocumentMoniker": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\Common\\src\\MarketAnalyzer.Abstractions\\Extensions\\DateTimeExtensions.cs",
-              "RelativeDocumentMoniker": "Common\\src\\MarketAnalyzer.Abstractions\\Extensions\\DateTimeExtensions.cs",
-              "ToolTip": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\Common\\src\\MarketAnalyzer.Abstractions\\Extensions\\DateTimeExtensions.cs",
-              "RelativeToolTip": "Common\\src\\MarketAnalyzer.Abstractions\\Extensions\\DateTimeExtensions.cs",
-              "ViewState": "AgIAABQBAAAAAAAAAAAAAAMBAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-16T07:36:01.482Z"
             }
           ]
         }

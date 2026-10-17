@@ -1,11 +1,1 @@
-{
-  "Version": 1,
-  "Hash": "c6qbBbKNQxHgev0hInY/6UTYWlcjyATpAsb+gPe9/qM=",
-  "Source": "MarketAnalyzer.Api",
-  "BasePath": "_content/MarketAnalyzer.Api",
-  "Mode": "Default",
-  "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
-}
+{"Version":1,"Hash":"JzOt5C1RWfkYcUWEYct0NyM1gmT5f/KjgW0nebq5OtU=","Source":"MarketAnalyzer.Api","BasePath":"_content/MarketAnalyzer.Api","Mode":"Default","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}

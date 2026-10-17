@@ -1,5 +1,6 @@
 ﻿using MarketAnalyzer.Collector;
 using Microsoft.Extensions.DependencyInjection;
+using System.Reflection;
 
 namespace MarketIntelligence.Collectors
 {    
@@ -7,7 +8,9 @@ namespace MarketIntelligence.Collectors
     {
         public static IServiceCollection AddMarketCollectors(this IServiceCollection services)
         {
-            
+            services.AddHttpClient<IDataFetcher, HttpDataFetcher>();
+            services.AddHttpClient<IPostDataFetcher, HttpPostDataFetcher>();
+
             var assembly = typeof(StockCollector).Assembly;
 
             // -----------------------------
@@ -49,6 +52,39 @@ namespace MarketIntelligence.Collectors
 
             // 5) Scheduled Tasks
             services.AddScheduledTasks(assembly);
+
+            return services;
+        }
+        public static IServiceCollection AddMarketCollectorRunner(this IServiceCollection services)
+        {
+            //services.AddSingleton<CronJobRegistrar>();
+            //services.AddSingleton<ICollectorScheduler, CollectorScheduler>();
+            //services.AddHostedService<CronSchedulerWorker>();
+
+            RegisterCandleSources(services);
+            return services;
+        }
+
+        private static IServiceCollection RegisterCandleSources(
+            this IServiceCollection services,
+            params Assembly[] assemblies)
+        {
+            services.AddScoped<ICandleSourceFactory, CandleSourceFactory>();
+            services.AddScoped<ICandleIngestionService, CandleIngestionService>();
+
+            var candleSourceType = typeof(ICandleSource);
+
+            var sourceTypes = AppDomain.CurrentDomain.GetAssemblies() // تمام اسمبلی‌های لود شده
+                .SelectMany(x => x.GetTypes())
+                .Where(x =>
+                    x is { IsClass: true, IsAbstract: false } &&
+                    candleSourceType.IsAssignableFrom(x))
+                .ToList();
+
+            foreach (var sourceType in sourceTypes)
+            {
+                services.AddScoped(candleSourceType, sourceType);
+            }
 
             return services;
         }

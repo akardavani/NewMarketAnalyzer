@@ -1,7 +1,7 @@
 ﻿
 using MarketIntelligence.Domain;
-using MarketAnalyzer.SharedKernel;
 using Microsoft.EntityFrameworkCore;
+
 using System;
 
 namespace MarketIntelligence.Infrastructure
@@ -229,7 +229,8 @@ namespace MarketIntelligence.Infrastructure
                     {
                         InstrumentId = data.Symbol,
                         Timeframe = (int)data.Timeframe,
-                        PersianDate = e.Date.ToPersian(),
+                        //PersianDate = e.Date.ToPersian(),
+                        PersianDate = DateTimeExtensions.ToPersian(e.Date),
                         Close = e.Close,
                         Date = e.Date,
                         High = e.High,

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "i8EiSq61MjU=",
+  "dgSpecHash": "1mmtuYNm3AY=",
   "success": true,
   "projectFilePath": "D:\\Total Solution\\NewMarketAnalyzer\\backend\\MarketIntelligence\\src\\MarketIntelligence.Infrastructure\\MarketIntelligence.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\kardavani.POUYAANDISHAN\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\kardavani.POUYAANDISHAN\\.nuget\\packages\\efcore.bulkextensions.core\\8.1.3\\efcore.bulkextensions.core.8.1.3.nupkg.sha512",
     "C:\\Users\\kardavani.POUYAANDISHAN\\.nuget\\packages\\efcore.bulkextensions.sqlserver\\8.1.3\\efcore.bulkextensions.sqlserver.8.1.3.nupkg.sha512",
+    "C:\\Users\\kardavani.POUYAANDISHAN\\.nuget\\packages\\htmlagilitypack\\1.12.4\\htmlagilitypack.1.12.4.nupkg.sha512",
     "C:\\Users\\kardavani.POUYAANDISHAN\\.nuget\\packages\\medalliontopologicalsort\\1.0.0\\medalliontopologicalsort.1.0.0.nupkg.sha512",
     "C:\\Users\\kardavani.POUYAANDISHAN\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\kardavani.POUYAANDISHAN\\.nuget\\packages\\microsoft.bcl.cryptography\\8.0.0\\microsoft.bcl.cryptography.8.0.0.nupkg.sha512",
