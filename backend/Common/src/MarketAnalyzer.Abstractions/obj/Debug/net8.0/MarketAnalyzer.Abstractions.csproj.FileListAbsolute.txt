@@ -11,3 +11,16 @@ C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer
 C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Abstractions\obj\Debug\net8.0\refint\MarketAnalyzer.Abstractions.dll
 C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Abstractions\obj\Debug\net8.0\MarketAnalyzer.Abstractions.pdb
 C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Abstractions\obj\Debug\net8.0\ref\MarketAnalyzer.Abstractions.dll
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Abstractions\bin\Debug\net8.0\MarketAnalyzer.Abstractions.deps.json
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Abstractions\bin\Debug\net8.0\MarketAnalyzer.Abstractions.dll
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Abstractions\bin\Debug\net8.0\MarketAnalyzer.Abstractions.pdb
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Abstractions\obj\Debug\net8.0\MarketAnalyzer.Abstractions.csproj.AssemblyReference.cache
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Abstractions\obj\Debug\net8.0\MarketAnalyzer.Abstractions.GeneratedMSBuildEditorConfig.editorconfig
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Abstractions\obj\Debug\net8.0\MarketAnalyzer.Abstractions.AssemblyInfoInputs.cache
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Abstractions\obj\Debug\net8.0\MarketAnalyzer.Abstractions.AssemblyInfo.cs
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Abstractions\obj\Debug\net8.0\MarketAnalyzer.Abstractions.csproj.CoreCompileInputs.cache
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Abstractions\obj\Debug\net8.0\MarketAnalyzer.Abstractions.sourcelink.json
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Abstractions\obj\Debug\net8.0\MarketAnalyzer.Abstractions.dll
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Abstractions\obj\Debug\net8.0\refint\MarketAnalyzer.Abstractions.dll
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Abstractions\obj\Debug\net8.0\MarketAnalyzer.Abstractions.pdb
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Abstractions\obj\Debug\net8.0\ref\MarketAnalyzer.Abstractions.dll

@@ -457,3 +457,15 @@ C:\Total Project\New project\NewMarketAnalyzer\backend\MarketAnalyzer.Api\obj\De
 C:\Total Project\New project\NewMarketAnalyzer\backend\MarketAnalyzer.Api\obj\Debug\net8.0\MarketAnalyzer.Api.pdb
 C:\Total Project\New project\NewMarketAnalyzer\backend\MarketAnalyzer.Api\obj\Debug\net8.0\MarketAnalyzer.Api.genruntimeconfig.cache
 C:\Total Project\New project\NewMarketAnalyzer\backend\MarketAnalyzer.Api\obj\Debug\net8.0\ref\MarketAnalyzer.Api.dll
+D:\Total Solution\NewMarketAnalyzer\backend\MarketAnalyzer.Api\obj\Debug\net8.0\MarketAnalyzer.Api.csproj.AssemblyReference.cache
+D:\Total Solution\NewMarketAnalyzer\backend\MarketAnalyzer.Api\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\Total Solution\NewMarketAnalyzer\backend\MarketAnalyzer.Api\obj\Debug\net8.0\MarketAnalyzer.Api.GeneratedMSBuildEditorConfig.editorconfig
+D:\Total Solution\NewMarketAnalyzer\backend\MarketAnalyzer.Api\obj\Debug\net8.0\MarketAnalyzer.Api.AssemblyInfoInputs.cache
+D:\Total Solution\NewMarketAnalyzer\backend\MarketAnalyzer.Api\obj\Debug\net8.0\MarketAnalyzer.Api.AssemblyInfo.cs
+D:\Total Solution\NewMarketAnalyzer\backend\MarketAnalyzer.Api\obj\Debug\net8.0\MarketAnalyzer.Api.csproj.CoreCompileInputs.cache
+D:\Total Solution\NewMarketAnalyzer\backend\MarketAnalyzer.Api\obj\Debug\net8.0\MarketAnalyzer.Api.MvcApplicationPartsAssemblyInfo.cache
+D:\Total Solution\NewMarketAnalyzer\backend\MarketAnalyzer.Api\obj\Debug\net8.0\MarketAnalyzer.Api.sourcelink.json
+D:\Total Solution\NewMarketAnalyzer\backend\MarketAnalyzer.Api\obj\Debug\net8.0\MarketAnalyzer.Api.dll
+D:\Total Solution\NewMarketAnalyzer\backend\MarketAnalyzer.Api\obj\Debug\net8.0\refint\MarketAnalyzer.Api.dll
+D:\Total Solution\NewMarketAnalyzer\backend\MarketAnalyzer.Api\obj\Debug\net8.0\MarketAnalyzer.Api.xml
+D:\Total Solution\NewMarketAnalyzer\backend\MarketAnalyzer.Api\obj\Debug\net8.0\MarketAnalyzer.Api.pdb

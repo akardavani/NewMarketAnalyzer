@@ -10,3 +10,15 @@ C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer
 C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Sejam\obj\Debug\net8.0\refint\MarketAnalyzer.Sejam.dll
 C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Sejam\obj\Debug\net8.0\MarketAnalyzer.Sejam.pdb
 C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Sejam\obj\Debug\net8.0\ref\MarketAnalyzer.Sejam.dll
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Sejam\bin\Debug\net8.0\MarketAnalyzer.Sejam.deps.json
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Sejam\bin\Debug\net8.0\MarketAnalyzer.Sejam.dll
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Sejam\bin\Debug\net8.0\MarketAnalyzer.Sejam.pdb
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Sejam\obj\Debug\net8.0\MarketAnalyzer.Sejam.GeneratedMSBuildEditorConfig.editorconfig
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Sejam\obj\Debug\net8.0\MarketAnalyzer.Sejam.AssemblyInfoInputs.cache
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Sejam\obj\Debug\net8.0\MarketAnalyzer.Sejam.AssemblyInfo.cs
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Sejam\obj\Debug\net8.0\MarketAnalyzer.Sejam.csproj.CoreCompileInputs.cache
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Sejam\obj\Debug\net8.0\MarketAnalyzer.Sejam.sourcelink.json
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Sejam\obj\Debug\net8.0\MarketAnalyzer.Sejam.dll
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Sejam\obj\Debug\net8.0\refint\MarketAnalyzer.Sejam.dll
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Sejam\obj\Debug\net8.0\MarketAnalyzer.Sejam.pdb
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.Sejam\obj\Debug\net8.0\ref\MarketAnalyzer.Sejam.dll

@@ -22,3 +22,27 @@ C:\Total Project\New project\NewMarketAnalyzer\backend\Membership\src\MarketAnal
 C:\Total Project\New project\NewMarketAnalyzer\backend\Membership\src\MarketAnalyzer.Membership.Application\obj\Debug\net8.0\refint\MarketAnalyzer.Membership.Application.dll
 C:\Total Project\New project\NewMarketAnalyzer\backend\Membership\src\MarketAnalyzer.Membership.Application\obj\Debug\net8.0\MarketAnalyzer.Membership.Application.pdb
 C:\Total Project\New project\NewMarketAnalyzer\backend\Membership\src\MarketAnalyzer.Membership.Application\obj\Debug\net8.0\ref\MarketAnalyzer.Membership.Application.dll
+D:\Total Solution\NewMarketAnalyzer\backend\Membership\src\MarketAnalyzer.Membership.Application\bin\Debug\net8.0\MarketAnalyzer.Membership.Application.deps.json
+D:\Total Solution\NewMarketAnalyzer\backend\Membership\src\MarketAnalyzer.Membership.Application\bin\Debug\net8.0\MarketAnalyzer.Membership.Application.dll
+D:\Total Solution\NewMarketAnalyzer\backend\Membership\src\MarketAnalyzer.Membership.Application\bin\Debug\net8.0\MarketAnalyzer.Membership.Application.pdb
+D:\Total Solution\NewMarketAnalyzer\backend\Membership\src\MarketAnalyzer.Membership.Application\bin\Debug\net8.0\MarketAnalyzer.Abstractions.dll
+D:\Total Solution\NewMarketAnalyzer\backend\Membership\src\MarketAnalyzer.Membership.Application\bin\Debug\net8.0\MarketAnalyzer.Membership.Domain.dll
+D:\Total Solution\NewMarketAnalyzer\backend\Membership\src\MarketAnalyzer.Membership.Application\bin\Debug\net8.0\MarketAnalyzer.Membership.Persistence.dll
+D:\Total Solution\NewMarketAnalyzer\backend\Membership\src\MarketAnalyzer.Membership.Application\bin\Debug\net8.0\MarketAnalyzer.Sejam.dll
+D:\Total Solution\NewMarketAnalyzer\backend\Membership\src\MarketAnalyzer.Membership.Application\bin\Debug\net8.0\MarketAnalyzer.SharedKernel.dll
+D:\Total Solution\NewMarketAnalyzer\backend\Membership\src\MarketAnalyzer.Membership.Application\bin\Debug\net8.0\MarketAnalyzer.Sejam.pdb
+D:\Total Solution\NewMarketAnalyzer\backend\Membership\src\MarketAnalyzer.Membership.Application\bin\Debug\net8.0\MarketAnalyzer.Membership.Persistence.pdb
+D:\Total Solution\NewMarketAnalyzer\backend\Membership\src\MarketAnalyzer.Membership.Application\bin\Debug\net8.0\MarketAnalyzer.Abstractions.pdb
+D:\Total Solution\NewMarketAnalyzer\backend\Membership\src\MarketAnalyzer.Membership.Application\bin\Debug\net8.0\MarketAnalyzer.Membership.Domain.pdb
+D:\Total Solution\NewMarketAnalyzer\backend\Membership\src\MarketAnalyzer.Membership.Application\bin\Debug\net8.0\MarketAnalyzer.SharedKernel.pdb
+D:\Total Solution\NewMarketAnalyzer\backend\Membership\src\MarketAnalyzer.Membership.Application\obj\Debug\net8.0\MarketAnalyzer.Membership.Application.csproj.AssemblyReference.cache
+D:\Total Solution\NewMarketAnalyzer\backend\Membership\src\MarketAnalyzer.Membership.Application\obj\Debug\net8.0\MarketAnalyzer.Membership.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Total Solution\NewMarketAnalyzer\backend\Membership\src\MarketAnalyzer.Membership.Application\obj\Debug\net8.0\MarketAnalyzer.Membership.Application.AssemblyInfoInputs.cache
+D:\Total Solution\NewMarketAnalyzer\backend\Membership\src\MarketAnalyzer.Membership.Application\obj\Debug\net8.0\MarketAnalyzer.Membership.Application.AssemblyInfo.cs
+D:\Total Solution\NewMarketAnalyzer\backend\Membership\src\MarketAnalyzer.Membership.Application\obj\Debug\net8.0\MarketAnalyzer.Membership.Application.csproj.CoreCompileInputs.cache
+D:\Total Solution\NewMarketAnalyzer\backend\Membership\src\MarketAnalyzer.Membership.Application\obj\Debug\net8.0\MarketAnalyzer.Membership.Application.sourcelink.json
+D:\Total Solution\NewMarketAnalyzer\backend\Membership\src\MarketAnalyzer.Membership.Application\obj\Debug\net8.0\MarketAn.65599A4C.Up2Date
+D:\Total Solution\NewMarketAnalyzer\backend\Membership\src\MarketAnalyzer.Membership.Application\obj\Debug\net8.0\MarketAnalyzer.Membership.Application.dll
+D:\Total Solution\NewMarketAnalyzer\backend\Membership\src\MarketAnalyzer.Membership.Application\obj\Debug\net8.0\refint\MarketAnalyzer.Membership.Application.dll
+D:\Total Solution\NewMarketAnalyzer\backend\Membership\src\MarketAnalyzer.Membership.Application\obj\Debug\net8.0\MarketAnalyzer.Membership.Application.pdb
+D:\Total Solution\NewMarketAnalyzer\backend\Membership\src\MarketAnalyzer.Membership.Application\obj\Debug\net8.0\ref\MarketAnalyzer.Membership.Application.dll

@@ -14,3 +14,19 @@ C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer
 C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.PaymentGateways\obj\Debug\net8.0\refint\MarketAnalyzer.PaymentGateways.dll
 C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.PaymentGateways\obj\Debug\net8.0\MarketAnalyzer.PaymentGateways.pdb
 C:\Total Project\New project\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.PaymentGateways\obj\Debug\net8.0\ref\MarketAnalyzer.PaymentGateways.dll
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.PaymentGateways\bin\Debug\net8.0\MarketAnalyzer.PaymentGateways.deps.json
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.PaymentGateways\bin\Debug\net8.0\MarketAnalyzer.PaymentGateways.dll
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.PaymentGateways\bin\Debug\net8.0\MarketAnalyzer.PaymentGateways.pdb
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.PaymentGateways\bin\Debug\net8.0\MarketAnalyzer.Abstractions.dll
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.PaymentGateways\bin\Debug\net8.0\MarketAnalyzer.Abstractions.pdb
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.PaymentGateways\obj\Debug\net8.0\MarketAnalyzer.PaymentGateways.csproj.AssemblyReference.cache
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.PaymentGateways\obj\Debug\net8.0\MarketAnalyzer.PaymentGateways.GeneratedMSBuildEditorConfig.editorconfig
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.PaymentGateways\obj\Debug\net8.0\MarketAnalyzer.PaymentGateways.AssemblyInfoInputs.cache
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.PaymentGateways\obj\Debug\net8.0\MarketAnalyzer.PaymentGateways.AssemblyInfo.cs
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.PaymentGateways\obj\Debug\net8.0\MarketAnalyzer.PaymentGateways.csproj.CoreCompileInputs.cache
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.PaymentGateways\obj\Debug\net8.0\MarketAnalyzer.PaymentGateways.sourcelink.json
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.PaymentGateways\obj\Debug\net8.0\MarketAn.81BBAE82.Up2Date
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.PaymentGateways\obj\Debug\net8.0\MarketAnalyzer.PaymentGateways.dll
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.PaymentGateways\obj\Debug\net8.0\refint\MarketAnalyzer.PaymentGateways.dll
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.PaymentGateways\obj\Debug\net8.0\MarketAnalyzer.PaymentGateways.pdb
+D:\Total Solution\NewMarketAnalyzer\backend\Common\src\MarketAnalyzer.PaymentGateways\obj\Debug\net8.0\ref\MarketAnalyzer.PaymentGateways.dll

@@ -1,0 +1,6 @@
+D:\Total Solution\NewMarketAnalyzer\backend\MarketIntelligence\src\MarketIntelligence.Persistence\obj\Debug\net8.0\MarketIntelligence.Persistence.csproj.AssemblyReference.cache
+D:\Total Solution\NewMarketAnalyzer\backend\MarketIntelligence\src\MarketIntelligence.Persistence\obj\Debug\net8.0\MarketIntelligence.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+D:\Total Solution\NewMarketAnalyzer\backend\MarketIntelligence\src\MarketIntelligence.Persistence\obj\Debug\net8.0\MarketIntelligence.Persistence.AssemblyInfoInputs.cache
+D:\Total Solution\NewMarketAnalyzer\backend\MarketIntelligence\src\MarketIntelligence.Persistence\obj\Debug\net8.0\MarketIntelligence.Persistence.AssemblyInfo.cs
+D:\Total Solution\NewMarketAnalyzer\backend\MarketIntelligence\src\MarketIntelligence.Persistence\obj\Debug\net8.0\MarketIntelligence.Persistence.csproj.CoreCompileInputs.cache
+D:\Total Solution\NewMarketAnalyzer\backend\MarketIntelligence\src\MarketIntelligence.Persistence\obj\Debug\net8.0\MarketIntelligence.Persistence.sourcelink.json

@@ -20,3 +20,25 @@ C:\Total Project\New project\NewMarketAnalyzer\backend\Cms\src\MarketAnalyzer.Cm
 C:\Total Project\New project\NewMarketAnalyzer\backend\Cms\src\MarketAnalyzer.Cms.Application\obj\Debug\net8.0\refint\MarketAnalyzer.Cms.Application.dll
 C:\Total Project\New project\NewMarketAnalyzer\backend\Cms\src\MarketAnalyzer.Cms.Application\obj\Debug\net8.0\MarketAnalyzer.Cms.Application.pdb
 C:\Total Project\New project\NewMarketAnalyzer\backend\Cms\src\MarketAnalyzer.Cms.Application\obj\Debug\net8.0\ref\MarketAnalyzer.Cms.Application.dll
+D:\Total Solution\NewMarketAnalyzer\backend\Cms\src\MarketAnalyzer.Cms.Application\bin\Debug\net8.0\MarketAnalyzer.Cms.Application.deps.json
+D:\Total Solution\NewMarketAnalyzer\backend\Cms\src\MarketAnalyzer.Cms.Application\bin\Debug\net8.0\MarketAnalyzer.Cms.Application.dll
+D:\Total Solution\NewMarketAnalyzer\backend\Cms\src\MarketAnalyzer.Cms.Application\bin\Debug\net8.0\MarketAnalyzer.Cms.Application.pdb
+D:\Total Solution\NewMarketAnalyzer\backend\Cms\src\MarketAnalyzer.Cms.Application\bin\Debug\net8.0\MarketAnalyzer.Abstractions.dll
+D:\Total Solution\NewMarketAnalyzer\backend\Cms\src\MarketAnalyzer.Cms.Application\bin\Debug\net8.0\MarketAnalyzer.Cms.Domain.dll
+D:\Total Solution\NewMarketAnalyzer\backend\Cms\src\MarketAnalyzer.Cms.Application\bin\Debug\net8.0\MarketAnalyzer.Cms.Persistence.dll
+D:\Total Solution\NewMarketAnalyzer\backend\Cms\src\MarketAnalyzer.Cms.Application\bin\Debug\net8.0\MarketAnalyzer.SharedKernel.dll
+D:\Total Solution\NewMarketAnalyzer\backend\Cms\src\MarketAnalyzer.Cms.Application\bin\Debug\net8.0\MarketAnalyzer.Cms.Persistence.pdb
+D:\Total Solution\NewMarketAnalyzer\backend\Cms\src\MarketAnalyzer.Cms.Application\bin\Debug\net8.0\MarketAnalyzer.Abstractions.pdb
+D:\Total Solution\NewMarketAnalyzer\backend\Cms\src\MarketAnalyzer.Cms.Application\bin\Debug\net8.0\MarketAnalyzer.Cms.Domain.pdb
+D:\Total Solution\NewMarketAnalyzer\backend\Cms\src\MarketAnalyzer.Cms.Application\bin\Debug\net8.0\MarketAnalyzer.SharedKernel.pdb
+D:\Total Solution\NewMarketAnalyzer\backend\Cms\src\MarketAnalyzer.Cms.Application\obj\Debug\net8.0\MarketAnalyzer.Cms.Application.csproj.AssemblyReference.cache
+D:\Total Solution\NewMarketAnalyzer\backend\Cms\src\MarketAnalyzer.Cms.Application\obj\Debug\net8.0\MarketAnalyzer.Cms.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Total Solution\NewMarketAnalyzer\backend\Cms\src\MarketAnalyzer.Cms.Application\obj\Debug\net8.0\MarketAnalyzer.Cms.Application.AssemblyInfoInputs.cache
+D:\Total Solution\NewMarketAnalyzer\backend\Cms\src\MarketAnalyzer.Cms.Application\obj\Debug\net8.0\MarketAnalyzer.Cms.Application.AssemblyInfo.cs
+D:\Total Solution\NewMarketAnalyzer\backend\Cms\src\MarketAnalyzer.Cms.Application\obj\Debug\net8.0\MarketAnalyzer.Cms.Application.csproj.CoreCompileInputs.cache
+D:\Total Solution\NewMarketAnalyzer\backend\Cms\src\MarketAnalyzer.Cms.Application\obj\Debug\net8.0\MarketAnalyzer.Cms.Application.sourcelink.json
+D:\Total Solution\NewMarketAnalyzer\backend\Cms\src\MarketAnalyzer.Cms.Application\obj\Debug\net8.0\MarketAn.FE9D5A71.Up2Date
+D:\Total Solution\NewMarketAnalyzer\backend\Cms\src\MarketAnalyzer.Cms.Application\obj\Debug\net8.0\MarketAnalyzer.Cms.Application.dll
+D:\Total Solution\NewMarketAnalyzer\backend\Cms\src\MarketAnalyzer.Cms.Application\obj\Debug\net8.0\refint\MarketAnalyzer.Cms.Application.dll
+D:\Total Solution\NewMarketAnalyzer\backend\Cms\src\MarketAnalyzer.Cms.Application\obj\Debug\net8.0\MarketAnalyzer.Cms.Application.pdb
+D:\Total Solution\NewMarketAnalyzer\backend\Cms\src\MarketAnalyzer.Cms.Application\obj\Debug\net8.0\ref\MarketAnalyzer.Cms.Application.dll

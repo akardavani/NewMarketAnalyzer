@@ -1,4 +1,4 @@
-using Asp.Versioning;
+﻿using Asp.Versioning;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
@@ -21,8 +21,10 @@ using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Globalization;
 using System.Linq;
 using System.Text.Json.Serialization;
-using MarketAnalyzer.AnalysisStrategy;
-using MarketAnalyzer.Analysis.Infrastructure;
+using MarketIntelligence.Application;
+using MarketIntelligence.Infrastructure;
+using MarketIntelligence.Collectors;
+
 
 #region [Service Injection]
 
@@ -62,9 +64,9 @@ builder.Services.AddPaymentGateways();
 builder.Services.AddFundPersistence(builder.Configuration);
 builder.Services.AddCors();
 
-// ثبت سرویس‌های تحلیلگر بازار
-builder.Services.AddAnalysisStrategyServices(); // اکستنشن داخل MarketAnalyzer.AnalysisStrategy
-builder.Services.AddInfrastructureDependencyInjection(); // لایه دیتابیس SQLite / Context تحلیلی
+// Ø«Ø¨Øª Ø³Ø±ÙˆÛŒØ³â€ŒÙ‡Ø§ÛŒ ØªØ­Ù„ÛŒÙ„Ú¯Ø± Ø¨Ø§Ø²Ø§Ø±
+builder.Services.AddAnalysisStrategyServices(); // Ø§Ú©Ø³ØªÙ†Ø´Ù† Ø¯Ø§Ø®Ù„ MarketIntelligence.Application
+//builder.Services.AddInfrastructureDependencyInjection(); // Ù„Ø§ÛŒÙ‡ Ø¯ÛŒØªØ§Ø¨ÛŒØ³ SQLite / Context ØªØ­Ù„ÛŒÙ„ÛŒ
 
 
 builder.Services.AddApiVersioning(options =>
@@ -92,7 +94,7 @@ builder.Services.Configure<ApiBehaviorOptions>(options =>
     static string GetErrorMessage(string key, ModelError error)
     {
         return string.IsNullOrEmpty(error.ErrorMessage) ?
-            $"مقدار وارد شده برای `{key}` معتبر نیست." :
+            $"Ù…Ù‚Ø¯Ø§Ø± ÙˆØ§Ø±Ø¯ Ø´Ø¯Ù‡ Ø¨Ø±Ø§ÛŒ `{key}` Ù…Ø¹ØªØ¨Ø± Ù†ÛŒØ³Øª." :
             error.ErrorMessage;
     }
 
@@ -110,6 +112,8 @@ builder.Services.Configure<JsonOptions>(options =>
 });
 builder.Services.AddCms();
 builder.Services.AddMembership();
+builder.Services.AddMarketCollectors();
+
 builder.Services.AddSejamClient(builder.Configuration);
 builder.Services.AddFundInfrastructure(builder.Configuration, true);
 
