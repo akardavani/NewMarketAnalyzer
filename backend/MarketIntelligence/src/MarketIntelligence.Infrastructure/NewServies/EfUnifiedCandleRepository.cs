@@ -5,9 +5,9 @@ namespace MarketIntelligence.Infrastructure
 {
     public class EfUnifiedCandleRepository : IUnifiedCandleRepository
     {
-        private readonly MarketDbContext _db;
+        private readonly FundDbContext _db;
 
-        public EfUnifiedCandleRepository(MarketDbContext db)
+        public EfUnifiedCandleRepository(FundDbContext db)
         {
             _db = db;
         }
