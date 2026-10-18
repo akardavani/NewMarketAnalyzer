@@ -138,6 +138,10 @@ builder.Services.Configure<CorsOptions>(builder.Configuration.GetSection(nameof(
 #region [Application Configure]
 
 var app = builder.Build();
+
+
+
+
 await app.SeedDataAsync();
 app.Use((context, next) =>
 {
