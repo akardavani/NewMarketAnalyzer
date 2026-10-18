@@ -15,6 +15,8 @@ export const routes: Routes = [
       { path: 'login-history', title: 'گزارش ورود و خروج کاربر', component: LoginHistoryComponent },
       { path: '', title: 'میزکار', loadComponent: () => import('./pages/dashboard/dashboard.component').then(e => e.DashboardComponent) },
       { path: 'cms', title: 'مدیریت محتوا', loadChildren: () => import('../modules/cms/cms.routes').then(e => e.routes) },
+      { path: 'strategies', title: 'استراتژی‌های تحلیل', loadComponent: () => import('./pages/strategies/strategies.component').then(e => e.StrategiesComponent) },
+
       { path: 'membership', title: 'مدیریت کاربران', loadChildren: () => import('../modules/membership/membership.routes').then(e => e.routes) },
     ]
   },

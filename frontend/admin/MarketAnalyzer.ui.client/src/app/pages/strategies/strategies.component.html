@@ -1,0 +1,33 @@
+<div class="container-fluid p-4">
+  <h5 class="mb-3">اجرای استراتژی‌های تحلیل بازار</h5>
+
+  <div class="mb-3">
+    <label class="form-label">استراتژی</label>
+    <select class="form-select" [(ngModel)]="selected">
+      @for (name of strategies(); track name) {
+        <option [value]="name">{{ name }}</option>
+      }
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">پارامترها (JSON)</label>
+    <textarea class="form-control font-monospace" rows="8" [(ngModel)]="parametersText" dir="ltr"></textarea>
+    <div class="form-text" dir="ltr">مثال: &#123;"InputFilePath": "C:\\data\\file.xlsx"&#125;</div>
+  </div>
+
+  <button type="button" class="btn btn-primary" [disabled]="running() || !selected" (click)="run()">
+    @if (running()) { در حال اجرا... } @else { اجرا }
+  </button>
+
+  @if (errors().length) {
+    <div class="alert alert-danger mt-3">
+      @for (e of errors(); track $index) { <div>{{ e }}</div> }
+    </div>
+  }
+
+  @if (result() !== null) {
+    <h6 class="mt-4">نتیجه</h6>
+    <pre class="bg-light p-3 rounded" dir="ltr" style="max-height: 60vh; overflow: auto">{{ result() | json }}</pre>
+  }
+</div>
