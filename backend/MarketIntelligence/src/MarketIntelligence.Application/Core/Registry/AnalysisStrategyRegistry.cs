@@ -1,4 +1,5 @@
-﻿namespace MarketIntelligence.Application
+﻿using System.Linq;
+namespace MarketIntelligence.Application
 {
     public class AnalysisStrategyRegistry
     {
@@ -10,6 +11,8 @@
             foreach (var s in strategies)
                 _strategies[s.Name] = s;
         }
+
+        public IReadOnlyCollection<string> Names => _strategies.Keys.OrderBy(k => k).ToList();
 
         public IAnalysisStrategy Get(string name)
         {

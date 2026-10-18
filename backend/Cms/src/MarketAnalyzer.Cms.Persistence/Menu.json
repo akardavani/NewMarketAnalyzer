@@ -10,7 +10,7 @@
   },
   {
     "Id": 200,
-    "Title": "خالص ارزش دارایی‌ها",
+    "Title": "استراتژی‌های تحلیل",
     "Path": null,
     "DisplayOrder": 200,
     "Icon": "",
@@ -19,48 +19,20 @@
     "SubMenus": [
       {
         "Id": 201,
+        "Title": "لیست استراتژی ها",
+        "Path": "assets/nav-report",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "StrategyController/GetAll",
+        "IsActive": true
+      },
+      {
+        "Id": 202,
         "Title": "گزارش NAV",
         "Path": "assets/nav-report",
         "DisplayOrder": 0,
         "Icon": "",
         "RequiredRoute": "NetAssetValue/GetAll",
-        "IsActive": true
-      },
-      {
-        "Id": 202,
-        "Title": "لیست NAV",
-        "Path": "assets/nav-list",
-        "DisplayOrder": 0,
-        "Icon": "",
-        "RequiredRoute": "NetAssetValue/NetAssetValuesListGetAll",
-        "IsActive": true
-      },
-      {
-        "Id": 203,
-        "Title": "محاسبه NAV",
-        "Path": "assets/calculate-nav",
-        "DisplayOrder": 0,
-        "Icon": "",
-        "RequiredRoute": "NetAssetValue/Calculate",
-        "IsActive": true
-      },
-      {
-        "Id": 206,
-        "Title": "ترکیب دارایی‌های صندوق",
-        "Path": "assets/asset-composition",
-        "DisplayOrder": 0,
-        "Icon": "",
-        "RequiredRoute": "NetAssetValue/AssetComposition",
-        "IsActive": true
-      },
-
-      {
-        "Id": 209,
-        "Title": "دریافت فایل XML",
-        "Path": "assets/fund-xml-report",
-        "DisplayOrder": 0,
-        "Icon": "",
-        "RequiredRoute": "FundXmlReport/GetAll",
         "IsActive": true
       }
     ]
@@ -613,6 +585,26 @@
         "DisplayOrder": 0,
         "Icon": "",
         "RequiredRoute": "Trustee/ConfirmRollbackNav",
+        "IsActive": true
+      }
+    ]
+  },
+  {
+    "Id": 1300,
+    "Title": "تحلیل بازار",
+    "Path": null,
+    "DisplayOrder": 1300,
+    "Icon": "",
+    "RequiredRoute": null,
+    "IsActive": true,
+    "SubMenus": [
+      {
+        "Id": 1301,
+        "Title": "استراتژی‌های تحلیل",
+        "Path": "strategies",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "Strategy/GetAll",
         "IsActive": true
       }
     ]
