@@ -7,9 +7,11 @@ namespace MarketIntelligence.Infrastructure
     {
         public static async Task SeedAllAsync(IServiceProvider services)
         {
-            // اول تنظیمات URL، چون بقیه‌ی کارها ممکن است به آن نیاز داشته باشند
-            var urlSettingService = services.GetRequiredService<IUrlSettingService>();
-            await UrlSettingSeeder.SeedAsync(urlSettingService);
+            // IUrlSettingService هنوز پیاده‌سازی DB ندارد؛ اگر ثبت نشده باشد رد می‌شود
+            // (تنظیمات URL از فایل Setting/url_settings.json خوانده می‌شوند).
+            var urlSettingService = services.GetService<IUrlSettingService>();
+            if (urlSettingService != null)
+                await UrlSettingSeeder.SeedAsync(urlSettingService);
 
             var unifiedSymbolService = services.GetRequiredService<IUnifiedSymbolService>();
 
@@ -17,8 +19,6 @@ namespace MarketIntelligence.Infrastructure
             await MacroSymbolSeeder.SeedAsync(unifiedSymbolService);
             await CryptoTomanSymbolSeeder.SeedAsync(unifiedSymbolService);
             await ImeSymbolSeeder.SeedAsync(unifiedSymbolService);
-            await TseTmcIndexSeeder.SeedAsync(unifiedSymbolService);
-
             await TseTmcIndexSeeder.SeedAsync(unifiedSymbolService);
         }
     }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7FsPibn9FWWjJUPyRmi46mE5yko3IV6C28IJf6F4QW+cDltmJycP+CuHw5qXPVxF+LqHJzbub38Bx4auQKEW5g==",
+  "dgSpecHash": "Zve4JW3BSZA=",
   "success": true,
-  "projectFilePath": "C:\\Total Project\\NewMarketAnalyzer\\shared\\MarketAnalyzer.ApiClient\\MarketAnalyzer.ApiClient.csproj",
+  "projectFilePath": "D:\\Total Solution\\NewMarketAnalyzer\\shared\\MarketAnalyzer.ApiClient\\MarketAnalyzer.ApiClient.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

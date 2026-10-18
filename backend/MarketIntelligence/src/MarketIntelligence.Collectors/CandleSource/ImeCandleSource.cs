@@ -1,7 +1,6 @@
 ﻿using MarketAnalyzer.Collector;
 using MarketIntelligence.Collectors;
 using MarketIntelligence.Domain;
-using MarketIntelligence.Infrastructure;
 using Microsoft.Extensions.Options;
 using System.Text.Json;
 

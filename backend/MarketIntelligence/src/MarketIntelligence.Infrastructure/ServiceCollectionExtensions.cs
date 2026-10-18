@@ -11,6 +11,9 @@ namespace MarketIntelligence.Infrastructure
             // Make MarketIntelligence entities and EF configurations part of FundDbContext's model.
             services.AddPersistenceApplicationPart(typeof(UnifiedSymbolRecord).Assembly, 0);
             services.AddPersistenceApplicationPart(typeof(UnifiedSymbolRecordConfiguration).Assembly, 0);
+            
+            // اسمبلی Infrastructure شامل MarketIntelligenceDataSeed است که seederها را اجرا می‌کند
+            services.AddPersistenceApplicationPart(typeof(MarketIntelligenceDataSeed).Assembly, 0);
 
             services.AddScoped<FinancialReportService>();
 

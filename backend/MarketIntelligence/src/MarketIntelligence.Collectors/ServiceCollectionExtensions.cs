@@ -1,5 +1,8 @@
 ﻿using MarketAnalyzer.Collector;
+using MarketIntelligence.Domain;
+using MarketIntelligence.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 using System.Reflection;
 
 namespace MarketIntelligence.Collectors
@@ -71,6 +74,21 @@ namespace MarketIntelligence.Collectors
 
         public static IServiceCollection AddMarketCollectorRunner(this IServiceCollection services)
         {
+            // قبلاً:
+            // var urlSettings = SettingsLoader.LoadUrlSettings();
+            // services.AddSingleton(Options.Create(urlSettings));
+
+            // حالا: lazy و از دیتابیس
+            //services.AddScoped<IUrlSettingService, UrlSettingService>(); // پیاده‌سازی خودتان
+            //services.AddSingleton<IOptions<UrlSettings>>(sp =>
+            //{
+            //    using var scope = sp.CreateScope();
+            //    var urlSettingService = scope.ServiceProvider.GetRequiredService<IUrlSettingService>();
+            //    var settings = UrlSettingLoader.LoadAsync(urlSettingService).GetAwaiter().GetResult();
+            //    return Options.Create(settings);
+            //});
+
+
             //services.AddSingleton<CronJobRegistrar>();
             //services.AddSingleton<ICollectorScheduler, CollectorScheduler>();
             //services.AddHostedService<CronSchedulerWorker>();

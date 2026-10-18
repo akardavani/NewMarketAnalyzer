@@ -70,6 +70,7 @@ builder.Services.AddAnalysisStrategyServices(); // Ø§Ú©Ø³ØªÙ†Ø´Ù�
 builder.Services.AddInfrastructureDependencyInjection();
 
 
+
 builder.Services.AddApiVersioning(options =>
 {
     options.ReportApiVersions = true;

@@ -2,9 +2,10 @@
 
 public class UrlSetting
 {
-    public string Section { get; set; } = null!;   // مثلاً ImeSettings
-    public string Key { get; set; } = null!;       // مثلاً CandleChartUrl
-    public string Value { get; set; } = null!;
+    public int Id { get; set; }
+    public string Section { get; set; } = "";
+    public string Key { get; set; } = "";
+    public string Value { get; set; } = "";
 }
 
 public interface IUrlSettingService

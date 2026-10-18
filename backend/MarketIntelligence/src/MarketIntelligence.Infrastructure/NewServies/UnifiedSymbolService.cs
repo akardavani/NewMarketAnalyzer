@@ -74,7 +74,11 @@ namespace MarketIntelligence.Infrastructure
                     if (!existingMap.TryGetValue(item.SymbolKey, out var existing))
                     {
                         // insert جدید
+                        if (string.IsNullOrEmpty(item.Id))
+                            item.Id = Guid.NewGuid().ToString();
+
                         await Symbols.AddAsync(item, cancellation);
+
                         continue;
                     }
 
