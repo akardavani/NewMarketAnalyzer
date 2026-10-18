@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Total Solution\\NewMarketAnalyzer\\shared\\MarketAnalyzer.ApiClient\\MarketAnalyzer.ApiClient.csproj": {}
+    "C:\\Total Project\\NewMarketAnalyzer\\shared\\MarketAnalyzer.ApiClient\\MarketAnalyzer.ApiClient.csproj": {}
   },
   "projects": {
-    "D:\\Total Solution\\NewMarketAnalyzer\\shared\\MarketAnalyzer.ApiClient\\MarketAnalyzer.ApiClient.csproj": {
+    "C:\\Total Project\\NewMarketAnalyzer\\shared\\MarketAnalyzer.ApiClient\\MarketAnalyzer.ApiClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Total Solution\\NewMarketAnalyzer\\shared\\MarketAnalyzer.ApiClient\\MarketAnalyzer.ApiClient.csproj",
+        "projectUniqueName": "C:\\Total Project\\NewMarketAnalyzer\\shared\\MarketAnalyzer.ApiClient\\MarketAnalyzer.ApiClient.csproj",
         "projectName": "MarketAnalyzer.ApiClient",
-        "projectPath": "D:\\Total Solution\\NewMarketAnalyzer\\shared\\MarketAnalyzer.ApiClient\\MarketAnalyzer.ApiClient.csproj",
-        "packagesPath": "C:\\Users\\kardavani.POUYAANDISHAN\\.nuget\\packages\\",
-        "outputPath": "D:\\Total Solution\\NewMarketAnalyzer\\shared\\MarketAnalyzer.ApiClient\\obj\\",
+        "projectPath": "C:\\Total Project\\NewMarketAnalyzer\\shared\\MarketAnalyzer.ApiClient\\MarketAnalyzer.ApiClient.csproj",
+        "packagesPath": "C:\\Users\\Mobin\\.nuget\\packages\\",
+        "outputPath": "C:\\Total Project\\NewMarketAnalyzer\\shared\\MarketAnalyzer.ApiClient\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "D:\\Total Solution\\NewMarketAnalyzer\\backend\\NuGet.Config",
-          "C:\\Users\\kardavani.POUYAANDISHAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Total Project\\NewMarketAnalyzer\\backend\\NuGet.Config",
+          "C:\\Users\\Mobin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,8 +44,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -69,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
