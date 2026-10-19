@@ -1,0 +1,51 @@
+<button type="button" class="ibtn" (click)="toggle()" aria-label="یادداشت‌ها" title="یادداشت‌ها" [attr.aria-expanded]="open()">
+  <i class="pa pa-edit" aria-hidden="true"></i>
+</button>
+
+@if (open()) {
+<div class="panel" dir="rtl" role="dialog" aria-label="یادداشت‌ها">
+  <aside class="list">
+    <button type="button" class="add" (click)="add()">+ یادداشت جدید</button>
+    @for (n of notes(); track n.id) {
+    <div class="item" [class.active]="n.id === activeId()" (click)="select(n.id)">
+      <span class="t">{{ label(n) }}</span>
+      <button type="button" class="del" (click)="remove(n); $event.stopPropagation()" title="حذف">×</button>
+    </div>
+    } @empty {
+    <div class="empty">یادداشتی نیست</div>
+    }
+  </aside>
+
+  <section class="body">
+    @if (active; as n) {
+    <input class="title" placeholder="عنوان" [value]="n.title" (input)="onTitle(n, $any($event.target).value)" />
+    <div class="toolbar">
+      <button type="button" (mousedown)="$event.preventDefault()" (click)="exec('bold')" title="درشت"><b>B</b></button>
+      <button type="button" (mousedown)="$event.preventDefault()" (click)="exec('italic')" title="کج"><i>I</i></button>
+      <button type="button" (mousedown)="$event.preventDefault()" (click)="exec('underline')" title="زیرخط"><u>U</u></button>
+      <button type="button" (mousedown)="$event.preventDefault()" (click)="heading('h2')" title="تیتر">H</button>
+      <button type="button" (mousedown)="$event.preventDefault()" (click)="heading('p')" title="متن">¶</button>
+      <button type="button" (mousedown)="$event.preventDefault()" (click)="exec('insertUnorderedList')" title="لیست">•</button>
+      <button type="button" (mousedown)="$event.preventDefault()" (click)="exec('insertOrderedList')" title="لیست عددی">1.</button>
+      <button type="button" (mousedown)="$event.preventDefault()" (click)="checklist()" title="چک‌لیست">☑</button>
+      <button type="button" (mousedown)="$event.preventDefault()" (click)="link()" title="لینک">🔗</button>
+      <span class="state">
+        @switch (state()) {
+          @case ('saving') { در حال ذخیره… }
+          @case ('saved') { ذخیره شد }
+          @case ('error') { خطا در ذخیره }
+        }
+      </span>
+    </div>
+    @for (k of [n.id]; track k) {
+    <div class="editor" contenteditable="true" dir="rtl"
+         [innerHTML]="n.content"
+         (input)="onContent(n, $any($event.target))"
+         (click)="onEditorClick($event)"></div>
+    }
+    } @else {
+    <div class="empty">یک یادداشت انتخاب یا ایجاد کنید</div>
+    }
+  </section>
+</div>
+}

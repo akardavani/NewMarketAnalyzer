@@ -38,6 +38,7 @@
 		<ProjectReference Include="..\MarketIntelligence\src\MarketAnalyzer.MarketIntelligence.Application\MarketAnalyzer.MarketIntelligence.Application.csproj" />
 		<ProjectReference Include="..\MarketIntelligence\src\MarketAnalyzer.MarketIntelligence.Persistence\MarketAnalyzer.MarketIntelligence.Persistence.csproj" />
 		<ProjectReference Include="..\MarketIntelligence\src\MarketAnalyzer.MarketIntelligence.Collectors\MarketAnalyzer.MarketIntelligence.Collectors.csproj" />
+		<ProjectReference Include="..\Tools\src\MarketAnalyzer.Tools.Application\MarketAnalyzer.Tools.Application.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

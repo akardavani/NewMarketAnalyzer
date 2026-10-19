@@ -1,0 +1,27 @@
+:host { position: relative; display: inline-block; font-family: 'Vazirmatn', sans-serif; }
+.panel {
+  position: absolute; top: calc(100% + 8px); inset-inline-end: 0; z-index: 1000;
+  width: 640px; max-width: 95vw; height: 420px; display: flex;
+  background: var(--surface, #fff); color: inherit;
+  border: 1px solid rgba(128,128,128,.3); border-radius: 10px; box-shadow: 0 8px 28px rgba(0,0,0,.2); overflow: hidden;
+}
+.list { width: 190px; border-inline-end: 1px solid rgba(128,128,128,.25); overflow: auto; padding: 8px; display: flex; flex-direction: column; gap: 4px; }
+.add { padding: 6px; border-radius: 6px; border: 1px dashed rgba(128,128,128,.5); background: none; cursor: pointer; color: inherit; }
+.item { display: flex; align-items: center; justify-content: space-between; padding: 6px 8px; border-radius: 6px; cursor: pointer;
+  &:hover { background: rgba(128,128,128,.12); } &.active { background: rgba(80,120,255,.18); }
+  .t { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 13px; }
+  .del { border: 0; background: none; cursor: pointer; color: inherit; opacity: .5; &:hover { opacity: 1; color: #d33; } }
+}
+.body { flex: 1; display: flex; flex-direction: column; min-width: 0; padding: 8px; gap: 6px; }
+.title { border: 0; border-bottom: 1px solid rgba(128,128,128,.3); background: none; color: inherit; font: inherit; font-weight: 600; padding: 4px; outline: none; }
+.toolbar { display: flex; gap: 2px; align-items: center; flex-wrap: wrap;
+  button { min-width: 28px; height: 28px; border: 0; border-radius: 4px; background: none; cursor: pointer; color: inherit; &:hover { background: rgba(128,128,128,.2); } }
+  .state { margin-inline-start: auto; font-size: 11px; opacity: .65; } }
+.editor { flex: 1; overflow: auto; outline: none; padding: 6px; line-height: 1.9; font-size: 14px;
+  h2 { font-size: 18px; margin: 6px 0; }
+  a { color: #2f6fed; text-decoration: underline; }
+  ul[data-type='todo'] { list-style: none; padding-inline-start: 0;
+    li { position: relative; padding-inline-start: 26px;
+      &::before { content: '☐'; position: absolute; inset-inline-start: 0; cursor: pointer; font-size: 16px; }
+      &[data-checked='true'] { text-decoration: line-through; opacity: .6; &::before { content: '☑'; } } } } }
+.empty { opacity: .6; font-size: 13px; padding: 12px; text-align: center; }
