@@ -21,7 +21,7 @@
                 @for (o of f.options ?? []; track o.value) { <option [value]="o.value">{{ o.text }}</option> }
               </select>
             }
-            @case ('date') { <input type="date" dir="ltr" [(ngModel)]="values[f.name]" /> }
+            @case ('date') { <input type="text" dir="ltr" placeholder="1405/07/26" [(ngModel)]="values[f.name]" /> }
             @case ('number') { <input type="number" dir="ltr" [(ngModel)]="values[f.name]" /> }
             @case ('symbols') {
               <div class="chips">
@@ -60,14 +60,14 @@
   @if (chart(); as c) {
     <div class="card-box">
       <h6>نمودار</h6>
-      <div class="chart-wrap"><svg [attr.viewBox]="'0 0 ' + chartW + ' ' + chartH" class="chart" dir="ltr">
-        <line [attr.x1]="chartPad" [attr.y1]="chartH - chartPad" [attr.x2]="chartW - chartPad" [attr.y2]="chartH - chartPad" stroke="#999" />
-        <line [attr.x1]="chartPad" [attr.y1]="chartPad" [attr.x2]="chartPad" [attr.y2]="chartH - chartPad" stroke="#999" />
-        <text [attr.x]="4" [attr.y]="chartPad" class="axis">{{ c.yMax.toFixed(2) }}</text>
-        <text [attr.x]="4" [attr.y]="chartH - chartPad" class="axis">{{ c.yMin.toFixed(2) }}</text>
-        <text [attr.x]="chartPad" [attr.y]="chartH - 10" class="axis">{{ c.xLabels[0] }}</text>
-        <text [attr.x]="chartW / 2" [attr.y]="chartH - 10" class="axis" text-anchor="middle">{{ c.xLabels[1] }}</text>
-        <text [attr.x]="chartW - chartPad" [attr.y]="chartH - 10" class="axis" text-anchor="end">{{ c.xLabels[2] }}</text>
+      <div class="chart-wrap"><svg [attr.viewBox]="'0 0 ' + chartW + ' ' + chartH" class="chart" dir="ltr" style="overflow: visible">
+        <line [attr.x1]="padL" [attr.y1]="chartH - padB" [attr.x2]="chartW - padR" [attr.y2]="chartH - padB" stroke="#999" />
+        <line [attr.x1]="padL" [attr.y1]="padT" [attr.x2]="padL" [attr.y2]="chartH - padB" stroke="#999" />
+        <text [attr.x]="padL - 8" [attr.y]="padT + 4" class="axis" text-anchor="end">{{ c.yMax.toFixed(2) }}</text>
+        <text [attr.x]="padL - 8" [attr.y]="chartH - padB" class="axis" text-anchor="end">{{ c.yMin.toFixed(2) }}</text>
+        <text [attr.x]="padL" [attr.y]="chartH - 20" class="axis" text-anchor="start">{{ c.xLabels[0] }}</text>
+        <text [attr.x]="chartW / 2" [attr.y]="chartH - 20" class="axis" text-anchor="middle">{{ c.xLabels[1] }}</text>
+        <text [attr.x]="chartW - padR" [attr.y]="chartH - 20" class="axis" text-anchor="end">{{ c.xLabels[2] }}</text>
         @for (s of c.series; track s.label) {
           <polyline [attr.points]="s.points" fill="none" [attr.stroke]="s.color" stroke-width="2" />
         }

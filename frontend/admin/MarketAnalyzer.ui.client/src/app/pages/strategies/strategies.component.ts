@@ -24,13 +24,65 @@ interface StrategySchema {
   fields: StrategyField[];
 }
 
+// Jalali <-> Gregorian (jalaali-js algorithm)
+const div = (a: number, b: number): number => Math.trunc(a / b);
+const g2j = (gy: number, gm: number, gd: number): [number, number, number] => {
+  const gdm = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334];
+  const gy2 = gm > 2 ? gy + 1 : gy;
+  let days = 355666 + 365 * gy + div(gy2 + 3, 4) - div(gy2 + 99, 100) + div(gy2 + 399, 400) + gd + gdm[gm - 1];
+  let jy = -1595 + 33 * div(days, 12053);
+  days %= 12053;
+  jy += 4 * div(days, 1461);
+  days %= 1461;
+  if (days > 365) { jy += div(days - 1, 365); days = (days - 1) % 365; }
+  const jm = days < 186 ? 1 + div(days, 31) : 7 + div(days - 186, 30);
+  const jd = 1 + (days < 186 ? days % 31 : (days - 186) % 30);
+  return [jy, jm, jd];
+};
+const j2g = (jy: number, jm: number, jd: number): [number, number, number] => {
+  jy += 1595;
+  let days = -355668 + 365 * jy + div(jy, 33) * 8 + div((jy % 33) + 3, 4) + jd + (jm < 7 ? (jm - 1) * 31 : (jm - 7) * 30 + 186);
+  let gy = 400 * div(days, 146097);
+  days %= 146097;
+  if (days > 36524) {
+    gy += 100 * div(--days, 36524);
+    days %= 36524;
+    if (days >= 365) days++;
+  }
+  gy += 4 * div(days, 1461);
+  days %= 1461;
+  if (days > 365) { gy += div(days - 1, 365); days = (days - 1) % 365; }
+  let gd = days + 1;
+  const feb = (gy % 4 === 0 && gy % 100 !== 0) || gy % 400 === 0 ? 29 : 28;
+  const md = [0, 31, feb, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  let gm = 0;
+  while (gm < 13 && gd > md[gm]) gd -= md[gm++];
+  return [gy, gm, gd];
+};
+const pad2 = (n: number): string => String(n).padStart(2, '0');
+const toJalaliText = (d: Date): string => {
+  const [y, m, dd] = g2j(d.getFullYear(), d.getMonth() + 1, d.getDate());
+  return `${y}/${pad2(m)}/${pad2(dd)}`;
+};
+const normDigits = (s: string): string =>
+  s.replace(/[۰-۹]/g, c => String(c.charCodeAt(0) - 1776)).replace(/[٠-٩]/g, c => String(c.charCodeAt(0) - 1632));
+/** Jalali 'yyyy/MM/dd' -> Gregorian 'yyyy-MM-dd', or null if invalid. */
+const jalaliTextToIso = (text: string): string | null => {
+  const m = /^(\d{4})[\/\-.](\d{1,2})[\/\-.](\d{1,2})$/.exec(normDigits(text.trim()));
+  if (!m) return null;
+  const [jy, jm, jd] = [+m[1], +m[2], +m[3]];
+  if (jm < 1 || jm > 12 || jd < 1 || jd > 31) return null;
+  const [gy, gm, gd] = j2g(jy, jm, jd);
+  return `${gy}-${pad2(gm)}-${pad2(gd)}`;
+};
+
 const daysAgo = (days: number): string => {
   const d = new Date();
   d.setDate(d.getDate() - days);
-  return d.toISOString().substring(0, 10);
+  return toJalaliText(d);
 };
 
-const today = (): string => new Date().toISOString().substring(0, 10);
+const today = (): string => toJalaliText(new Date());
 
 const TIMEFRAME_OPTIONS: SelectOption[] = [
   { text: 'Daily', value: 'Daily' }
@@ -46,7 +98,7 @@ interface SymbolItem { symbolKey: string; symbol: string; name: string; market: 
 interface ChartSeries { label: string; color: string; points: string; }
 interface ChartModel { series: ChartSeries[]; xLabels: string[]; yMin: number; yMax: number; }
 const COLORS = ['#0d6efd', '#dc3545', '#198754', '#fd7e14', '#6f42c1', '#20c997', '#d63384', '#6c757d'];
-const W = 1000, H = 420, PAD = 40;
+const W = 1000, H = 420, PADL = 70, PADR = 70, PADT = 30, PADB = 50;
 
 const SCHEMAS: Record<string, StrategySchema> = {
   IranEquityMain: {
@@ -147,7 +199,7 @@ export class StrategiesComponent implements OnInit {
     const d = this.payload() as any;
     if (!Array.isArray(d) || !d.length) return null;
     const raw: { label: string; rows: any[] }[] = Array.isArray(d[0]?.results)
-      ? d.map((x: any) => ({ label: x.symbol ?? x.instrumentId, rows: x.results }))
+      ? d.map((x: any) => ({ label: this.symbolLabel(x.symbol ?? x.instrumentId), rows: x.results }))
       : ('growth' in d[0] || 'value' in d[0]) && 'persianDate' in d[0]
         ? [{ label: this.selected, rows: d }]
         : [];
@@ -162,7 +214,7 @@ export class StrategiesComponent implements OnInit {
       label: s.label,
       color: COLORS[i % COLORS.length],
       points: s.rows.map((r, j) =>
-        `${(PAD + (j / n) * (W - 2 * PAD)).toFixed(1)},${(H - PAD - ((val(r) - yMin) / span) * (H - 2 * PAD)).toFixed(1)}`
+        `${(PADL + (j / n) * (W - PADL - PADR)).toFixed(1)},${(H - PADB - ((val(r) - yMin) / span) * (H - PADT - PADB)).toFixed(1)}`
       ).join(' ')
     }));
     const xLabels = [0, Math.floor(n / 2), n].map(i => longest.rows[i]?.persianDate ?? '');
@@ -182,7 +234,15 @@ export class StrategiesComponent implements OnInit {
 
   readonly chartW = W;
   readonly chartH = H;
-  readonly chartPad = PAD;
+  readonly padL = PADL;
+  readonly padR = PADR;
+  readonly padT = PADT;
+  readonly padB = PADB;
+
+  private symbolLabel(key: string): string {
+    const s = this.selectedSymbols.find(x => x.symbolKey === key || x.symbol === key);
+    return s ? `${s.name || s.symbol} (${s.symbolKey})` : key;
+  }
 
   onSymbolInput(): void {
     clearTimeout(this.searchTimer);
@@ -242,6 +302,14 @@ export class StrategiesComponent implements OnInit {
       return;
     }
 
+    const badDates = (this.schema?.fields ?? [])
+      .filter(f => f.type === 'date' && !jalaliTextToIso(String(this.values[f.name] ?? '')))
+      .map(f => `تاریخ "${f.label}" نامعتبر است (نمونه: 1405/07/26).`);
+    if (badDates.length) {
+      this.errors.set(badDates);
+      return;
+    }
+
     const parameters: Record<string, unknown> = {};
     for (const field of this.schema?.fields ?? []) {
       const raw = this.values[field.name];
@@ -251,6 +319,9 @@ export class StrategiesComponent implements OnInit {
           break;
         case 'symbols':
           parameters[field.name] = this.selectedSymbols.map(x => x.symbolKey);
+          break;
+        case 'date':
+          parameters[field.name] = jalaliTextToIso(String(raw));
           break;
         default:
           parameters[field.name] = raw;
