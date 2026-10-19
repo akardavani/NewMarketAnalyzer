@@ -46,7 +46,7 @@ interface SymbolItem { symbolKey: string; symbol: string; name: string; market: 
 interface ChartSeries { label: string; color: string; points: string; }
 interface ChartModel { series: ChartSeries[]; xLabels: string[]; yMin: number; yMax: number; }
 const COLORS = ['#0d6efd', '#dc3545', '#198754', '#fd7e14', '#6f42c1', '#20c997', '#d63384', '#6c757d'];
-const W = 800, H = 320, PAD = 40;
+const W = 1000, H = 420, PAD = 40;
 
 const SCHEMAS: Record<string, StrategySchema> = {
   IranEquityMain: {

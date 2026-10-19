@@ -2,7 +2,7 @@
   <h5 class="title">اجرای استراتژی‌های تحلیل بازار</h5>
 
   <div class="card-box">
-    <div class="field">
+    <div class="field strategy-field">
       <label>استراتژی</label>
       <select [ngModel]="selected" (ngModelChange)="onStrategyChange($event)">
         @for (name of strategies(); track name) {
@@ -60,7 +60,7 @@
   @if (chart(); as c) {
     <div class="card-box">
       <h6>نمودار</h6>
-      <svg [attr.viewBox]="'0 0 ' + chartW + ' ' + chartH" class="chart" dir="ltr">
+      <div class="chart-wrap"><svg [attr.viewBox]="'0 0 ' + chartW + ' ' + chartH" class="chart" dir="ltr">
         <line [attr.x1]="chartPad" [attr.y1]="chartH - chartPad" [attr.x2]="chartW - chartPad" [attr.y2]="chartH - chartPad" stroke="#999" />
         <line [attr.x1]="chartPad" [attr.y1]="chartPad" [attr.x2]="chartPad" [attr.y2]="chartH - chartPad" stroke="#999" />
         <text [attr.x]="4" [attr.y]="chartPad" class="axis">{{ c.yMax.toFixed(2) }}</text>
@@ -71,7 +71,7 @@
         @for (s of c.series; track s.label) {
           <polyline [attr.points]="s.points" fill="none" [attr.stroke]="s.color" stroke-width="2" />
         }
-      </svg>
+      </svg></div>
       <div class="legend">
         @for (s of c.series; track s.label) {
           <span><i [style.background]="s.color"></i>{{ s.label }}</span>
