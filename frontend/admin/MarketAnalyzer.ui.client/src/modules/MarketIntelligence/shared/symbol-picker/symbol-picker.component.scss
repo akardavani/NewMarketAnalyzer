@@ -1,0 +1,9 @@
+:host { display: block; max-width: 360px; }
+input { width: 100%; box-sizing: border-box; padding: .45rem .6rem; border: 1px solid #ced4da; border-radius: 6px; font: inherit; }
+.picker { position: relative; }
+.chips { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: .4rem; }
+.chip { display: inline-flex; align-items: center; gap: .35rem; background: #e7f1ff; border-radius: 999px; padding: .15rem .6rem;
+  button { border: 0; background: transparent; cursor: pointer; font-size: 1.1rem; line-height: 1; } }
+.options { position: absolute; inset-inline: 0; top: 100%; z-index: 10; max-height: 260px; overflow: auto; margin: 2px 0 0; padding: 0;
+  list-style: none; background: #fff; border: 1px solid #ced4da; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,.12);
+  li { padding: .45rem .75rem; cursor: pointer; &:hover { background: #f1f3f5; } small { color: #6c757d; } } }

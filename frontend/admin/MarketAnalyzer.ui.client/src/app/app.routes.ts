@@ -12,18 +12,64 @@ export const routes: Routes = [
     loadComponent: () => import('./layout/layout.component').then(e => e.LayoutComponent),
     canActivate: RouteGuard,
     children: [
-      { path: 'login-history', title: 'گزارش ورود و خروج کاربر', component: LoginHistoryComponent },
-      { path: '', title: 'میزکار', loadComponent: () => import('./pages/dashboard/dashboard.component').then(e => e.DashboardComponent) },
-      { path: 'cms', title: 'مدیریت محتوا', loadChildren: () => import('../modules/cms/cms.routes').then(e => e.routes) },
-      { path: 'strategies', title: 'استراتژی‌های تحلیل', loadComponent: () => import('./pages/strategies/strategies.component').then(e => e.StrategiesComponent) },
-
-      { path: 'membership', title: 'مدیریت کاربران', loadChildren: () => import('../modules/membership/membership.routes').then(e => e.routes) },
+      {
+        path: 'login-history',
+        title: 'گزارش ورود و خروج کاربر',
+        component: LoginHistoryComponent
+      },
+      {
+        path: '', title: 'میزکار',
+        loadComponent: () =>
+          import('./pages/dashboard/dashboard.component')
+            .then(e => e.DashboardComponent)
+      },
+      {
+        path: 'cms', title:
+          'مدیریت محتوا', loadChildren: () =>
+          import('../modules/cms/cms.routes')
+            .then(e => e.routes)
+      },
+      //{
+      //  path: 'strategies',
+      //  title: 'استراتژی‌های تحلیل', loadComponent: () =>
+      //    import('./pages/strategies/strategies.component')
+      //      .then(e => e.StrategiesComponent)
+      //},
+      {
+        path: 'market-intelligence',
+        title: 'تحلیل بازار',
+        loadChildren: () =>
+          import('../modules/MarketIntelligence/market-intelligence.routes')
+            .then(m => m.routes)
+      },
+      {
+        path: 'membership',
+        title: 'مدیریت کاربران', loadChildren: () =>
+          import('../modules/membership/membership.routes')
+            .then(e => e.routes)
+      },
     ]
   },
-  { path: 'login', title: 'ورود', loadComponent: () => LoginComponent, data: { allowAnonymous: true } },
-  { path: 'forgot-password', title: 'فراموشی رمز عبور', loadComponent: () => ForgotPasswordComponent, data: { allowAnonymous: true }, },
-  { path: 'reset-password', title: 'بازنشانی رمز عبور', loadComponent: () => ResetPasswordComponent, data: { allowAnonymous: true } },
-  { path: 'not-found', title: 'محتوای ناموجود', loadComponent: () => NotFoundComponent, data: { allowAnonymous: true } },
+  {
+    path: 'login',
+    title: 'ورود', loadComponent: () =>
+      LoginComponent, data: { allowAnonymous: true }
+  },
+  {
+    path: 'forgot-password',
+    title: 'فراموشی رمز عبور', loadComponent: () =>
+      ForgotPasswordComponent, data: { allowAnonymous: true },
+  },
+  {
+    path: 'reset-password',
+    title: 'بازنشانی رمز عبور', loadComponent: () =>
+      ResetPasswordComponent, data: { allowAnonymous: true }
+  },
+  {
+    path: 'not-found',
+    title: 'محتوای ناموجود', loadComponent: () =>
+      NotFoundComponent, data: { allowAnonymous: true }
+  },
   { path: '**', redirectTo: '/not-found', data: { allowAnonymous: true } },
   { path: '', redirectTo: '', pathMatch: 'full' }
 ];

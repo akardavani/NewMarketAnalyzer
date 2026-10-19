@@ -1,0 +1,27 @@
+<div class="page">
+  <h4>واگرایی اندیکاتورها (MultiIndicatorDivergence)</h4>
+  <div class="card-box">
+    <div class="grid">
+      <div class="field wide">
+        <label>مسیر فایل اکسل *</label>
+        <input type="text" dir="ltr" [(ngModel)]="inputFilePath" />
+        <small class="hint">مسیر کامل فایل روی سرور</small>
+      </div>
+    </div>
+    <button type="button" class="btn-run" [disabled]="running()" (click)="run()">
+      @if (running()) { در حال اجرا... } @else { اجرا }
+    </button>
+  </div>
+
+  @if (errors().length) {
+    <div class="alert">@for (e of errors(); track $index) { <div>{{ e }}</div> }</div>
+  }
+
+  @if (data(); as d) {
+    @if (d.totalSymbolsAnalyzed !== undefined) {
+      <div class="card-box summary"><span>تعداد نمادهای تحلیل‌شده: <b>{{ d.totalSymbolsAnalyzed }}</b></span></div>
+    }
+    <mi-data-table title="فرصت‌ها" [rows]="rows" [columns]="cols" />
+  }
+  @if (data() && isEmpty()) { <div class="card-box">نتیجه‌ای برای نمایش وجود ندارد{{ status() ? ' (' + status() + ')' : '' }}.</div> }
+</div>

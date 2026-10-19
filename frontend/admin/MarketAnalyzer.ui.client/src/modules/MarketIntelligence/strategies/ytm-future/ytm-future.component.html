@@ -1,0 +1,26 @@
+<div class="page">
+  <h4>YTM (YtmFuture)</h4>
+  <div class="card-box">
+    <div class="grid">
+      <div class="field"><label>تاریخ شروع *</label><input type="text" dir="ltr" placeholder="1405/07/26" [(ngModel)]="startDate" /></div>
+      <div class="field"><label>تاریخ پایان *</label><input type="text" dir="ltr" placeholder="1405/07/26" [(ngModel)]="endDate" /></div>
+      <div class="field"><label>نماد *</label>
+        <select [(ngModel)]="symbol">@for (o of symbolOptions; track o.value) { <option [value]="o.value">{{ o.text }}</option> }</select></div>
+      <div class="field"><label>محاسبات *</label>
+        <select [(ngModel)]="calculates">@for (o of calcOptions; track o.value) { <option [value]="o.value">{{ o.text }}</option> }</select></div>
+    </div>
+    <button type="button" class="btn-run" [disabled]="running()" (click)="run()">
+      @if (running()) { در حال اجرا... } @else { اجرا }
+    </button>
+  </div>
+
+  @if (errors().length) {
+    <div class="alert">@for (e of errors(); track $index) { <div>{{ e }}</div> }</div>
+  }
+
+  @if (data() && rows.length) {
+    <mi-line-chart [title]="'نمودار ' + series[0].label" [series]="series" />
+    <mi-data-table title="جدول مقادیر" [rows]="rows" [columns]="cols" />
+  }
+  @if (data() && isEmpty()) { <div class="card-box">نتیجه‌ای برای نمایش وجود ندارد{{ status() ? ' (' + status() + ')' : '' }}.</div> }
+</div>

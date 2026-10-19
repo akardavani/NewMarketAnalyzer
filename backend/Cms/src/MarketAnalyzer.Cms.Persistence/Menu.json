@@ -18,10 +18,55 @@
     "IsActive": true,
     "SubMenus": [
       {
-        "Id": 1301,
-        "Title": "استراتژی‌های تحلیل",
-        "Path": "strategies",
+        "Id": 101,
+        "Title": "سهم‌های برتر بازار",
+        "Path": "market-intelligence/iran-equity-main",
         "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": "Strategy/GetAll",
+        "IsActive": true
+      },
+      {
+        "Id": 102,
+        "Title": "برگشت از کف",
+        "Path": "market-intelligence/bottom-reversal",
+        "DisplayOrder": 1,
+        "Icon": "",
+        "RequiredRoute": "Strategy/GetAll",
+        "IsActive": true
+      },
+      {
+        "Id": 103,
+        "Title": "صف خرید",
+        "Path": "market-intelligence/iran-queue",
+        "DisplayOrder": 2,
+        "Icon": "",
+        "RequiredRoute": "Strategy/GetAll",
+        "IsActive": true
+      },
+      {
+        "Id": 104,
+        "Title": "واگرایی اندیکاتورها",
+        "Path": "market-intelligence/multi-indicator-divergence",
+        "DisplayOrder": 3,
+        "Icon": "",
+        "RequiredRoute": "Strategy/GetAll",
+        "IsActive": true
+      },
+      {
+        "Id": 105,
+        "Title": "نسبت نمادها",
+        "Path": "market-intelligence/ratio-candles",
+        "DisplayOrder": 4,
+        "Icon": "",
+        "RequiredRoute": "Strategy/GetAll",
+        "IsActive": true
+      },
+      {
+        "Id": 106,
+        "Title": "YTM",
+        "Path": "market-intelligence/ytm-future",
+        "DisplayOrder": 5,
         "Icon": "",
         "RequiredRoute": "Strategy/GetAll",
         "IsActive": true

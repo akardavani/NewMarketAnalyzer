@@ -1,0 +1,15 @@
+@if (rows?.length) {
+  <div class="card-box">
+    @if (title) { <h6>{{ title }}</h6> }
+    <div class="wrap">
+      <table>
+        <thead><tr>@for (c of cols; track c.key) { <th>{{ c.label ?? c.key }}</th> }</tr></thead>
+        <tbody>
+          @for (r of rows; track $index) {
+            <tr>@for (c of cols; track c.key) { <td>{{ cell(r, c.key) }}</td> }</tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+}

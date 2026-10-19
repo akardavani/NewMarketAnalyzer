@@ -1,0 +1,21 @@
+<div class="page">
+  <h4>نسبت نمادها (RatioCandles)</h4>
+  <div class="card-box">
+    <div class="grid">
+      <div class="field wide"><label>نمادها *</label><mi-symbol-picker [(selected)]="symbols" /></div>
+      <div class="field"><label>تاریخ شروع *</label><input type="text" dir="ltr" placeholder="1405/07/26" [(ngModel)]="startDate" /></div>
+      <div class="field"><label>تاریخ پایان *</label><input type="text" dir="ltr" placeholder="1405/07/26" [(ngModel)]="endDate" /></div>
+      <div class="field"><label>تایم‌فریم</label><select [(ngModel)]="timeframe"><option value="Daily">Daily</option></select></div>
+    </div>
+    <button type="button" class="btn-run" [disabled]="running()" (click)="run()">
+      @if (running()) { در حال اجرا... } @else { اجرا }
+    </button>
+  </div>
+
+  @if (errors().length) {
+    <div class="alert">@for (e of errors(); track $index) { <div>{{ e }}</div> }</div>
+  }
+
+  @if (data()) { <mi-line-chart title="رشد نسبت نمادها" [series]="series" /> }
+  @if (data() && isEmpty()) { <div class="card-box">نتیجه‌ای برای نمایش وجود ندارد{{ status() ? ' (' + status() + ')' : '' }}.</div> }
+</div>

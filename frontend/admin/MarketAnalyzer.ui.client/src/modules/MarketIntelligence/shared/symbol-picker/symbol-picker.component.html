@@ -1,0 +1,16 @@
+<div class="chips">
+  @for (s of selected; track s.symbolKey) {
+    <span class="chip">{{ s.name || s.symbol }} <small>({{ s.symbolKey }})</small>
+      <button type="button" (click)="remove(s)">×</button></span>
+  }
+</div>
+<div class="picker">
+  <input type="text" placeholder="جستجوی نماد..." [(ngModel)]="text" (ngModelChange)="onInput()" />
+  @if (options.length) {
+    <ul class="options">
+      @for (o of options; track o.symbolKey) {
+        <li (click)="add(o)">{{ o.name || o.symbol }} <small>{{ o.symbolKey }} · {{ o.market }}</small></li>
+      }
+    </ul>
+  }
+</div>
