@@ -43,6 +43,8 @@ namespace MarketIntelligence.Infrastructure
                 q = q.Where(x => x.Date <= query.To.Value);
             }
 
+
+            var ss = q.ToQueryString();
             return await q
                 //.Include(x => x.Market)
                 //.Include(x => x.Timeframe)

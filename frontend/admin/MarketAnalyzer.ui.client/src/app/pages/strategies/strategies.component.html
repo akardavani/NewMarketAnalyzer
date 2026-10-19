@@ -1,33 +1,99 @@
-<div class="container-fluid p-4">
-  <h5 class="mb-3">اجرای استراتژی‌های تحلیل بازار</h5>
+<div class="page" dir="rtl">
+  <h5 class="title">اجرای استراتژی‌های تحلیل بازار</h5>
 
-  <div class="mb-3">
-    <label class="form-label">استراتژی</label>
-    <select class="form-select" [(ngModel)]="selected">
-      @for (name of strategies(); track name) {
-        <option [value]="name">{{ name }}</option>
+  <div class="card-box">
+    <div class="field">
+      <label>استراتژی</label>
+      <select [ngModel]="selected" (ngModelChange)="onStrategyChange($event)">
+        @for (name of strategies(); track name) {
+          <option [value]="name">{{ SCHEMAS_TITLE(name) }}</option>
+        }
+      </select>
+    </div>
+
+    <div class="grid">
+      @for (f of schema?.fields ?? []; track f.name) {
+        <div class="field" [class.wide]="f.type === 'symbols'">
+          <label>{{ f.label }}@if (f.required) { <span class="req">*</span> }</label>
+          @switch (f.type) {
+            @case ('select') {
+              <select [(ngModel)]="values[f.name]">
+                @for (o of f.options ?? []; track o.value) { <option [value]="o.value">{{ o.text }}</option> }
+              </select>
+            }
+            @case ('date') { <input type="date" dir="ltr" [(ngModel)]="values[f.name]" /> }
+            @case ('number') { <input type="number" dir="ltr" [(ngModel)]="values[f.name]" /> }
+            @case ('symbols') {
+              <div class="chips">
+                @for (s of selectedSymbols; track s.symbolKey) {
+                  <span class="chip">{{ s.name || s.symbol }} <small>({{ s.symbolKey }})</small>
+                    <button type="button" (click)="removeSymbol(s)">×</button></span>
+                }
+              </div>
+              <div class="picker">
+                <input type="text" placeholder="جستجوی نماد..." [(ngModel)]="symbolText" (ngModelChange)="onSymbolInput()" />
+                @if (symbolOptions().length) {
+                  <ul class="options">
+                    @for (o of symbolOptions(); track o.symbolKey) {
+                      <li (click)="addSymbol(o)">{{ o.name || o.symbol }} <small>{{ o.symbolKey }} · {{ o.market }}</small></li>
+                    }
+                  </ul>
+                }
+              </div>
+            }
+            @default { <input type="text" [dir]="'ltr'" [(ngModel)]="values[f.name]" /> }
+          }
+          @if (f.hint) { <small class="hint">{{ f.hint }}</small> }
+        </div>
       }
-    </select>
-  </div>
+    </div>
 
-  <div class="mb-3">
-    <label class="form-label">پارامترها (JSON)</label>
-    <textarea class="form-control font-monospace" rows="8" [(ngModel)]="parametersText" dir="ltr"></textarea>
-    <div class="form-text" dir="ltr">مثال: &#123;"InputFilePath": "C:\\data\\file.xlsx"&#125;</div>
+    <button type="button" class="btn-run" [disabled]="running() || !selected" (click)="run()">
+      @if (running()) { در حال اجرا... } @else { اجرا }
+    </button>
   </div>
-
-  <button type="button" class="btn btn-primary" [disabled]="running() || !selected" (click)="run()">
-    @if (running()) { در حال اجرا... } @else { اجرا }
-  </button>
 
   @if (errors().length) {
-    <div class="alert alert-danger mt-3">
-      @for (e of errors(); track $index) { <div>{{ e }}</div> }
+    <div class="alert">@for (e of errors(); track $index) { <div>{{ e }}</div> }</div>
+  }
+
+  @if (chart(); as c) {
+    <div class="card-box">
+      <h6>نمودار</h6>
+      <svg [attr.viewBox]="'0 0 ' + chartW + ' ' + chartH" class="chart" dir="ltr">
+        <line [attr.x1]="chartPad" [attr.y1]="chartH - chartPad" [attr.x2]="chartW - chartPad" [attr.y2]="chartH - chartPad" stroke="#999" />
+        <line [attr.x1]="chartPad" [attr.y1]="chartPad" [attr.x2]="chartPad" [attr.y2]="chartH - chartPad" stroke="#999" />
+        <text [attr.x]="4" [attr.y]="chartPad" class="axis">{{ c.yMax.toFixed(2) }}</text>
+        <text [attr.x]="4" [attr.y]="chartH - chartPad" class="axis">{{ c.yMin.toFixed(2) }}</text>
+        <text [attr.x]="chartPad" [attr.y]="chartH - 10" class="axis">{{ c.xLabels[0] }}</text>
+        <text [attr.x]="chartW / 2" [attr.y]="chartH - 10" class="axis" text-anchor="middle">{{ c.xLabels[1] }}</text>
+        <text [attr.x]="chartW - chartPad" [attr.y]="chartH - 10" class="axis" text-anchor="end">{{ c.xLabels[2] }}</text>
+        @for (s of c.series; track s.label) {
+          <polyline [attr.points]="s.points" fill="none" [attr.stroke]="s.color" stroke-width="2" />
+        }
+      </svg>
+      <div class="legend">
+        @for (s of c.series; track s.label) {
+          <span><i [style.background]="s.color"></i>{{ s.label }}</span>
+        }
+      </div>
     </div>
   }
 
-  @if (result() !== null) {
-    <h6 class="mt-4">نتیجه</h6>
-    <pre class="bg-light p-3 rounded" dir="ltr" style="max-height: 60vh; overflow: auto">{{ result() | json }}</pre>
+  @if (table(); as t) {
+    <div class="card-box table-wrap">
+      <table>
+        <thead><tr>@for (col of t.cols; track col) { <th>{{ col }}</th> }</tr></thead>
+        <tbody>
+          @for (row of t.rows; track $index) {
+            <tr>@for (col of t.cols; track col) { <td>{{ row[col] }}</td> }</tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+
+  @if (result() !== null && !chart() && !table()) {
+    <div class="card-box"><p>نتیجه‌ای برای نمایش جدولی/نموداری وجود ندارد.</p></div>
   }
 </div>

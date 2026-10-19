@@ -58,7 +58,7 @@ namespace MarketIntelligence.Application
                    SymbolKeys = symbols,
                    Markets = new[]
                    {
-                        //MarketType.Tse,
+                        MarketType.Tse,
                         MarketType.Macro,
                         MarketType.Crypto,
                         MarketType.TseIndex,
@@ -76,7 +76,7 @@ namespace MarketIntelligence.Application
                 {
                     Markets = new[]
                     {
-                        //MarketType.Tse,
+                        MarketType.Tse,
                         MarketType.Macro,
                         MarketType.Crypto,
                         MarketType.TseIndex,

@@ -3,12 +3,12 @@ window.appSettings = {
   "captchaLifetime": 300000,
   "apiUrl": "https://localhost:7160/v1/",
   "version": "1.0.0",
-  "appName": "Pouya.Fund",
-  "productName": "صندوق مشترک مبین سرمایه",
-  "productFullName": "صندوق سرمایه‌گذاری مشترک مبین سرمایه",
+  "appName": "MarketAnalyzer",
+  "productName": "تحلیل بازار",
+  "productFullName": "سیستم جامع سیستم تحلیل بازار",
   "managerName": "سبدگردان مروارید",
-  "companyName": "پویا اندیشان رسام رایان",
+  "companyName": "فین ست",
   "logoUrl": "",
-  "quickActionLabel": "درخواست جدید",
-  "quickActionPath": "/assets/requests"
+  //"quickActionLabel": "درخواست جدید",
+  //"quickActionPath": "/assets/requests"
 };
