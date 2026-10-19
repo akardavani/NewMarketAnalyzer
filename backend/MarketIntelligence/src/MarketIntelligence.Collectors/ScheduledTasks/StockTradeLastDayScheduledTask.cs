@@ -16,7 +16,7 @@ namespace MarketIntelligence.Collectors.ScheduledTasks
                  period: TimeSpan.FromHours(23),
                  startTime: new TimeOnly(22, 0, 0),
                  endTime: new TimeOnly(23, 59, 59),
-                 description: "Ø¯Ø±ÛŒØ§ÙØª Ù…Ø¹Ø§Ù…Ù„Ø§Øª Ø¢Ø®Ø±ÛŒÙ† Ø±ÙˆØ² Ø³Ù‡Ø§Ù…");
+                 description: "دریافت معاملات آخرین روز سهام");
 
             return task;
         }
