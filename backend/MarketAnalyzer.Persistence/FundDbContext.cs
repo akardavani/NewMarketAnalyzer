@@ -287,14 +287,28 @@ namespace MarketAnalyzer.Persistence
                 ConfigureEnumerations(modelBuilder, part.Assembly);
                 modelBuilder.ApplyConfigurationsFromAssembly(part.Assembly);
             }
+
+            // All MarketIntelligence entities live in the "marketintelligence" schema.
+            // Applied last so it also overrides entities configured with ToTable("...") without a schema.
+            foreach (var entityType in modelBuilder.Model.GetEntityTypes())
+            {
+                if (entityType.IsOwned())
+                    continue;
+
+                var ns = entityType.ClrType?.Namespace;
+                if (ns != null && ns.StartsWith("MarketAnalyzer.MarketIntelligence.", StringComparison.Ordinal))
+                {
+                    entityType.SetSchema("marketintelligence");
+                }
+            }
         }
 
         private static void RegisterMarketEntities(ModelBuilder modelBuilder, Assembly assembly)
         {
-            // MarketIntelligence.Domain is registered as a PersistenceApplicationPart.
+            // MarketAnalyzer.MarketIntelligence.Domain is registered as a PersistenceApplicationPart.
             // Keep MarketAnalyzer.Persistence independent of the MarketIntelligence project
             // while allowing its IEntity types to participate in the shared EF model.
-            const string marketEntityInterface = "MarketIntelligence.Domain.IEntity";
+            const string marketEntityInterface = "MarketAnalyzer.MarketIntelligence.Domain.IEntity";
 
             foreach (var type in assembly.GetTypes().Where(type =>
                          type.IsClass &&

@@ -35,9 +35,9 @@
 
 		<ProjectReference Include="..\MarketAnalyzer.Persistence\MarketAnalyzer.Persistence.csproj" />
 		<ProjectReference Include="..\Common\src\MarketAnalyzer.Infrastructure\MarketAnalyzer.Infrastructure.csproj" />
-		<ProjectReference Include="..\MarketIntelligence\src\MarketIntelligence.Application\MarketIntelligence.Application.csproj" />
-		<ProjectReference Include="..\MarketIntelligence\src\MarketIntelligence.Persistence\MarketIntelligence.Persistence.csproj" />
-		<ProjectReference Include="..\MarketIntelligence\src\MarketIntelligence.Collectors\MarketIntelligence.Collectors.csproj" />
+		<ProjectReference Include="..\MarketIntelligence\src\MarketAnalyzer.MarketIntelligence.Application\MarketAnalyzer.MarketIntelligence.Application.csproj" />
+		<ProjectReference Include="..\MarketIntelligence\src\MarketAnalyzer.MarketIntelligence.Persistence\MarketAnalyzer.MarketIntelligence.Persistence.csproj" />
+		<ProjectReference Include="..\MarketIntelligence\src\MarketAnalyzer.MarketIntelligence.Collectors\MarketAnalyzer.MarketIntelligence.Collectors.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

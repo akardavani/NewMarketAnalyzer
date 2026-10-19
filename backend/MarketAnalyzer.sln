@@ -49,15 +49,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarketAnalyzer.ApiClient", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MarketIntelligence", "MarketIntelligence", "{D46FE58B-DF6D-96A7-A280-4C4543FFD6BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketIntelligence.Application", "MarketIntelligence\src\MarketIntelligence.Application\MarketIntelligence.Application.csproj", "{2ECA5571-106D-4DF4-8411-B1907AB0CAAE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketAnalyzer.MarketIntelligence.Application", "MarketIntelligence\src\MarketAnalyzer.MarketIntelligence.Application\MarketAnalyzer.MarketIntelligence.Application.csproj", "{2ECA5571-106D-4DF4-8411-B1907AB0CAAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketIntelligence.Collectors", "MarketIntelligence\src\MarketIntelligence.Collectors\MarketIntelligence.Collectors.csproj", "{2FECEF1F-EAEE-4047-BD1F-3CAF6BC8A91E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketAnalyzer.MarketIntelligence.Collectors", "MarketIntelligence\src\MarketAnalyzer.MarketIntelligence.Collectors\MarketAnalyzer.MarketIntelligence.Collectors.csproj", "{2FECEF1F-EAEE-4047-BD1F-3CAF6BC8A91E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketIntelligence.Domain", "MarketIntelligence\src\MarketIntelligence.Domain\MarketIntelligence.Domain.csproj", "{E4C17B54-68AE-4529-849C-4E1BF49BAD62}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketAnalyzer.MarketIntelligence.Domain", "MarketIntelligence\src\MarketAnalyzer.MarketIntelligence.Domain\MarketAnalyzer.MarketIntelligence.Domain.csproj", "{E4C17B54-68AE-4529-849C-4E1BF49BAD62}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketIntelligence.Persistence", "MarketIntelligence\src\MarketIntelligence.Persistence\MarketIntelligence.Persistence.csproj", "{5A882175-9F36-424A-A7A5-89C0CB5CCCA7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketAnalyzer.MarketIntelligence.Persistence", "MarketIntelligence\src\MarketAnalyzer.MarketIntelligence.Persistence\MarketAnalyzer.MarketIntelligence.Persistence.csproj", "{5A882175-9F36-424A-A7A5-89C0CB5CCCA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketIntelligence.Infrastructure", "MarketIntelligence\src\MarketIntelligence.Infrastructure\MarketIntelligence.Infrastructure.csproj", "{666DEEE3-CDA9-EF1B-D48C-D987C760D3AB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketAnalyzer.MarketIntelligence.Infrastructure", "MarketIntelligence\src\MarketAnalyzer.MarketIntelligence.Infrastructure\MarketAnalyzer.MarketIntelligence.Infrastructure.csproj", "{666DEEE3-CDA9-EF1B-D48C-D987C760D3AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

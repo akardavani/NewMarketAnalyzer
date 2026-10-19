@@ -21,9 +21,9 @@ using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Globalization;
 using System.Linq;
 using System.Text.Json.Serialization;
-using MarketIntelligence.Application;
-using MarketIntelligence.Infrastructure;
-using MarketIntelligence.Collectors;
+using MarketAnalyzer.MarketIntelligence.Application;
+using MarketAnalyzer.MarketIntelligence.Infrastructure;
+using MarketAnalyzer.MarketIntelligence.Collectors;
 using MarketAnalyzer.Infrastructure;
 
 
@@ -66,7 +66,7 @@ builder.Services.AddFundPersistence(builder.Configuration);
 builder.Services.AddCors();
 
 // Ø«Ø¨Øª Ø³Ø±ÙˆÛŒØ³â€ŒÙ‡Ø§ÛŒ ØªØ­Ù„ÛŒÙ„Ú¯Ø± Ø¨Ø§Ø²Ø§Ø±
-builder.Services.AddAnalysisStrategyServices(); // Ø§Ú©Ø³ØªÙ†Ø´Ù† Ø¯Ø§Ø®Ù„ MarketIntelligence.Application
+builder.Services.AddAnalysisStrategyServices(); // Ø§Ú©Ø³ØªÙ†Ø´Ù† Ø¯Ø§Ø®Ù„ MarketAnalyzer.MarketIntelligence.Application
 builder.Services.AddInfrastructureDependencyInjection();
 
 builder.Services.AddApiVersioning(options =>

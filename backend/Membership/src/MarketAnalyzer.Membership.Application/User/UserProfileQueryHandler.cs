@@ -1,9 +1,10 @@
 ﻿using MarketAnalyzer.Abstractions;
 using MarketAnalyzer.Membership.Domain;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Linq;
-using Microsoft.EntityFrameworkCore;
 
 namespace MarketAnalyzer.Membership.Application
 {
@@ -24,7 +25,7 @@ namespace MarketAnalyzer.Membership.Application
                 .Select(e => new UserProfileQueryResult()
                 {
                     FullName = e.FullName,
-                    LastLoginDate = e.LastLoginDate.Value
+                    LastLoginDate = e.LastLoginDate ?? DateTime.MinValue
                 })
                 .FirstOrDefaultAsync(cancellationToken);
         }

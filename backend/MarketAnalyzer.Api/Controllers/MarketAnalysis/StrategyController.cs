@@ -1,7 +1,7 @@
 ﻿using MarketAnalyzer.Abstractions;
 using MarketAnalyzer.Abstractions.Routes;
-using MarketIntelligence.Application;
-using MarketIntelligence.Infrastructure;
+using MarketAnalyzer.MarketIntelligence.Application;
+using MarketAnalyzer.MarketIntelligence.Infrastructure;
 using System.Linq;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
