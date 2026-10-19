@@ -61,15 +61,13 @@ builder.Host.UseSerilog((context, configuration) =>
     }
 });
 
-builder.Services.AddPaymentGateways();
+//builder.Services.AddPaymentGateways();
 builder.Services.AddFundPersistence(builder.Configuration);
 builder.Services.AddCors();
 
 // Ø«Ø¨Øª Ø³Ø±ÙˆÛŒØ³â€ŒÙ‡Ø§ÛŒ ØªØ­Ù„ÛŒÙ„Ú¯Ø± Ø¨Ø§Ø²Ø§Ø±
 builder.Services.AddAnalysisStrategyServices(); // Ø§Ú©Ø³ØªÙ†Ø´Ù† Ø¯Ø§Ø®Ù„ MarketIntelligence.Application
 builder.Services.AddInfrastructureDependencyInjection();
-
-
 
 builder.Services.AddApiVersioning(options =>
 {
@@ -121,7 +119,7 @@ builder.Services.AddMembership();
 builder.Services.AddMarketCollectors();
 builder.Services.AddMarketCollectorRunner();
 
-builder.Services.AddSejamClient(builder.Configuration);
+//builder.Services.AddSejamClient(builder.Configuration);
 builder.Services.AddFundInfrastructure(builder.Configuration, true);
 
 
