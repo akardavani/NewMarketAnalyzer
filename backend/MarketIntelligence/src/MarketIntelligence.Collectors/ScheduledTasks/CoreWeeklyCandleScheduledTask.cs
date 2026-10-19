@@ -18,7 +18,7 @@ namespace MarketIntelligence.Collectors.ScheduledTasks
                  period: TimeSpan.FromDays(6),
                  startTime: GetStartTime(new TimeOnly(18, 0, 0)),
                  endTime: new TimeOnly(23, 59, 59),
-                 description: "Ø­Ø°Ù Ùˆ Ø¯Ø±ÛŒØ§ÙØª Ù…Ø¬Ø¯Ø¯ Ù‡ÙØªÚ¯ÛŒ Ú©Ù†Ø¯Ù„â€ŒÙ‡Ø§ÛŒ Ø¨Ø§Ø²Ø§Ø± ØªÙ‡Ø±Ø§Ù†");
+                 description: "حذف و دریافت مجدد کندل‌های هفتگی بازار تهران");
 
             return task;
         }

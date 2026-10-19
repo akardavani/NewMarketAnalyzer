@@ -16,7 +16,7 @@ namespace MarketIntelligence.Collectors.ScheduledTasks
                  period: TimeSpan.FromHours(23),
                  startTime: new TimeOnly(22, 0, 0),
                  endTime: new TimeOnly(23, 59, 59),
-                 description: "Ø¯Ø±ÛŒØ§ÙØª Ù†Ù…ÙˆØ¯Ø§Ø± ØµÙ†Ø¯ÙˆÙ‚â€ŒÙ‡Ø§ÛŒ Ø³Ø±Ù…Ø§ÛŒÙ‡â€ŒÚ¯Ø°Ø§Ø±ÛŒ");
+                 description: "دریافت نمودار صندوق‌های سرمایه‌گذاری");
 
             return task;
         }

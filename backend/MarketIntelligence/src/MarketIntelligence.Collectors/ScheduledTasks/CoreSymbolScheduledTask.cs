@@ -20,7 +20,7 @@ namespace MarketIntelligence.Collectors.ScheduledTasks
                  startTime: GetStartTime(new TimeOnly(18, 0, 0)),
                  //startTime: new TimeOnly(0, 0, 0),
                  endTime: new TimeOnly(23, 59, 59),
-                 description: "Ø¯Ø±ÛŒØ§ÙØª Ù‡ÙØªÚ¯ÛŒ Ù†Ù…Ø§Ø¯Ù‡Ø§ÛŒ Ù‡Ù…Ù‡ Ø¨Ø§Ø²Ø§Ø±Ù‡Ø§");
+                 description: "دریافت هفتگی نمادهای همه بازارها");
 
             return task;
         }
