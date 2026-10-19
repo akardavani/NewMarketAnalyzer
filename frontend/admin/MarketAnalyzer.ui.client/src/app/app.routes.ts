@@ -29,12 +29,6 @@ export const routes: Routes = [
           import('../modules/cms/cms.routes')
             .then(e => e.routes)
       },
-      //{
-      //  path: 'strategies',
-      //  title: 'استراتژی‌های تحلیل', loadComponent: () =>
-      //    import('./pages/strategies/strategies.component')
-      //      .then(e => e.StrategiesComponent)
-      //},
       {
         path: 'market-intelligence',
         title: 'تحلیل بازار',
