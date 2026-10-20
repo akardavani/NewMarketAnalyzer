@@ -2007,6 +2007,148 @@ namespace MarketAnalyzer.Persistence.Migrations
                     b.ToTable("Notes", "Tools");
                 });
 
+            modelBuilder.Entity("MarketAnalyzer.Tools.Domain.Resource", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreationTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Creator")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)");
+
+                    b.Property<DateTime>("LastModificationTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("LastModifier")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Link")
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Resources", "Tools");
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.Tools.Domain.ResourceFile", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<byte[]>("Content")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<string>("ContentType")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
+
+                    b.Property<DateTime>("CreationTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Creator")
+                        .HasColumnType("int");
+
+                    b.Property<string>("FileName")
+                        .IsRequired()
+                        .HasMaxLength(260)
+                        .HasColumnType("nvarchar(260)");
+
+                    b.Property<DateTime>("LastModificationTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("LastModifier")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ResourceId")
+                        .HasColumnType("int");
+
+                    b.Property<long>("Size")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ResourceId");
+
+                    b.ToTable("ResourceFiles", "Tools");
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.Tools.Domain.ResourceTag", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreationTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Creator")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("LastModificationTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("LastModifier")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId", "Name")
+                        .IsUnique();
+
+                    b.ToTable("ResourceTags", "Tools");
+                });
+
+            modelBuilder.Entity("ResourceResourceTag", b =>
+                {
+                    b.Property<int>("ResourceId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TagsId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ResourceId", "TagsId");
+
+                    b.HasIndex("TagsId");
+
+                    b.ToTable("ResourceTagLinks", "Tools");
+                });
+
             modelBuilder.Entity("MarketAnalyzer.Cms.Domain.ContactUs", b =>
                 {
                     b.HasOne("MarketAnalyzer.Cms.Domain.User", "Responder")
@@ -2382,6 +2524,30 @@ namespace MarketAnalyzer.Persistence.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("MarketAnalyzer.Tools.Domain.ResourceFile", b =>
+                {
+                    b.HasOne("MarketAnalyzer.Tools.Domain.Resource", null)
+                        .WithMany("Files")
+                        .HasForeignKey("ResourceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("ResourceResourceTag", b =>
+                {
+                    b.HasOne("MarketAnalyzer.Tools.Domain.Resource", null)
+                        .WithMany()
+                        .HasForeignKey("ResourceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MarketAnalyzer.Tools.Domain.ResourceTag", null)
+                        .WithMany()
+                        .HasForeignKey("TagsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("MarketAnalyzer.Cms.Domain.FilePurpose", b =>
                 {
                     b.Navigation("AcceptableTypes");
@@ -2390,6 +2556,11 @@ namespace MarketAnalyzer.Persistence.Migrations
             modelBuilder.Entity("MarketAnalyzer.Cms.Domain.Menu", b =>
                 {
                     b.Navigation("SubMenus");
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.Tools.Domain.Resource", b =>
+                {
+                    b.Navigation("Files");
                 });
 #pragma warning restore 612, 618
         }

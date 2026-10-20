@@ -1,0 +1,93 @@
+<button type="button" class="ibtn" (click)="toggle()" aria-label="منابع" title="منابع">
+  <i class="pa pa-folder" aria-hidden="true">🗂</i>
+</button>
+
+@if (open()) {
+<div class="backdrop" (click)="close()"></div>
+<div class="modal" dir="rtl" role="dialog" aria-label="منابع">
+  <header class="mh">
+    <h3>منابع و یادداشت‌ها</h3>
+    <button type="button" class="x" (click)="close()" aria-label="بستن">×</button>
+  </header>
+
+  <div class="mb">
+    <!-- لیست -->
+    <aside class="list">
+      <div class="lh">
+        <input class="inp" type="search" placeholder="جست‌وجو در عنوان و توضیحات..." [value]="search()" (input)="onSearch($any($event.target).value)" />
+        <button type="button" class="btn" (click)="newItem()">+ جدید</button>
+      </div>
+      <div class="scroll" (scroll)="onScroll($event)">
+        @for (r of items(); track r.id) {
+        <div class="item" [class.active]="r.id === activeId()" (click)="select(r)">
+          <div class="it">
+            <b>{{ r.title }}</b>
+            <button type="button" class="del" (click)="remove(r, $event)" title="حذف">×</button>
+          </div>
+          @if (r.description) { <div class="id">{{ r.description }}</div> }
+          <div class="im">
+            @for (t of r.tags; track t) { <span class="chip">{{ t }}</span> }
+            <span class="dt">{{ date(r.lastModificationTime) }}</span>
+          </div>
+        </div>
+        } @empty {
+        @if (!loading()) { <div class="empty">موردی یافت نشد</div> }
+        }
+        @if (loading()) { <div class="empty">در حال بارگذاری...</div> }
+      </div>
+    </aside>
+
+    <!-- فرم -->
+    <section class="form scroll">
+      <label>عنوان <span class="req">*</span></label>
+      <input class="inp" [value]="title()" (input)="title.set($any($event.target).value)" maxlength="200" placeholder="عنوان" />
+
+      <label>توضیحات</label>
+      <textarea class="inp" rows="5" maxlength="2000" [value]="description()" (input)="description.set($any($event.target).value)" placeholder="توضیحات"></textarea>
+      <small class="cnt">{{ description().length }}/2000</small>
+
+      <label>تگ‌ها <small>(با ; یا Enter جدا کنید)</small></label>
+      <div class="tags">
+        @for (t of tags(); track t) {
+        <span class="chip">{{ t }}<button type="button" (click)="removeTag(t)" aria-label="حذف تگ">×</button></span>
+        }
+        <input class="tin" [value]="tagInput()" (input)="onTagInput($any($event.target).value)" (keydown)="onTagKey($event)" placeholder="تگ..." />
+      </div>
+      @if (suggestions().length) {
+      <div class="sugg">
+        @for (s of suggestions(); track s) { <button type="button" (click)="addTag(s)">{{ s }}</button> }
+      </div>
+      }
+
+      <label>لینک <small>(اختیاری)</small></label>
+      <div class="linkrow">
+        <input class="inp" dir="ltr" [value]="link()" (input)="link.set($any($event.target).value)" placeholder="https://example.com" />
+        @if (safeLink(link()); as l) { <a class="btn" [href]="l" target="_blank" rel="noopener noreferrer">باز کردن</a> }
+      </div>
+
+      <label>فایل‌ها</label>
+      <div class="files">
+        @for (f of files(); track f.id) {
+        <div class="file">
+          <span class="fn" [title]="f.fileName">{{ f.fileName }}</span>
+          <small>{{ size(f.size) }}</small>
+          <button type="button" class="btn" (click)="download(f)">دانلود</button>
+          <button type="button" class="btn" (click)="rep.click()">جایگزینی</button>
+          <input #rep type="file" hidden (change)="upload(rep, f)" />
+          <button type="button" class="btn danger" (click)="removeFile(f)">حذف</button>
+        </div>
+        }
+        <button type="button" class="btn dashed" (click)="add.click()" [disabled]="busy()">+ افزودن فایل</button>
+        <input #add type="file" hidden (change)="upload(add)" />
+        @if (!activeId()) { <small>برای افزودن فایل، ابتدا ذخیره کنید.</small> }
+      </div>
+    </section>
+  </div>
+
+  <footer class="mf">
+    @if (error()) { <span class="err">{{ error() }}</span> }
+    <button type="button" class="btn" (click)="close()">بستن</button>
+    <button type="button" class="btn primary" (click)="save()" [disabled]="busy()">{{ busy() ? '...' : 'ذخیره' }}</button>
+  </footer>
+</div>
+}
