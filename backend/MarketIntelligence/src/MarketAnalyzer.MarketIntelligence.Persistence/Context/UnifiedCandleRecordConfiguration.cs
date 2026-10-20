@@ -20,13 +20,13 @@ public class UnifiedCandleRecordConfiguration : IEntityTypeConfiguration<Unified
         builder.Property(x => x.Date)
             .IsRequired();
 
-        builder.Property(x => x.Open).HasColumnType("decimal(18,8)");
-        builder.Property(x => x.High).HasColumnType("decimal(18,8)");
-        builder.Property(x => x.Low).HasColumnType("decimal(18,8)");
-        builder.Property(x => x.Close).HasColumnType("decimal(18,8)");
+        builder.Property(x => x.Open).HasColumnType("decimal(28,8)");
+        builder.Property(x => x.High).HasColumnType("decimal(28,8)");
+        builder.Property(x => x.Low).HasColumnType("decimal(28,8)");
+        builder.Property(x => x.Close).HasColumnType("decimal(28,8)");
 
-        builder.Property(x => x.Volume).HasColumnType("decimal(18,8)");
-        builder.Property(x => x.Value).HasColumnType("decimal(18,8)");
+        builder.Property(x => x.Volume).HasColumnType("decimal(28,8)");
+        builder.Property(x => x.Value).HasColumnType("decimal(28,8)");
 
         builder.HasIndex(x => new { x.MarketId, x.SymbolKey, x.TimeframeId, x.Date })
             .IsUnique();

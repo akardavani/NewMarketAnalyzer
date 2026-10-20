@@ -13,6 +13,7 @@ import { ThemeCustomizerComponent } from '@components/theme-customizer/theme-cus
 import { ChangePasswordComponent } from '../pages/change-password/change-password.component';
 import { NotificationComponent } from '../components/notification/notification.component';
 import { CommandPaletteComponent } from './command-palette/command-palette.component';
+import { NotesPanelComponent } from '../../modules/tools/notes/notes-panel.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { GlobalImports } from '@imports';
 import { DateTime } from '@xobin/globalization';
@@ -24,7 +25,7 @@ import { bind, formatDateTime } from '@utils';
  */
 @Component({
   selector: 'fd-layout',
-  imports: [...GlobalImports, RouterOutlet, SidebarComponent, CommandPaletteComponent, ThemeCustomizerComponent],
+  imports: [...GlobalImports, RouterOutlet, SidebarComponent, CommandPaletteComponent, ThemeCustomizerComponent, NotesPanelComponent],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss'
 })

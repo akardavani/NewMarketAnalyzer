@@ -1,4 +1,14 @@
 ﻿using Asp.Versioning;
+using MarketAnalyzer.Abstractions;
+using MarketAnalyzer.Api.Infrastructure;
+using MarketAnalyzer.Cms.Application;
+using MarketAnalyzer.Infrastructure;
+using MarketAnalyzer.Infrastructure.Authentication.ApiKey;
+using MarketAnalyzer.MarketIntelligence.Application;
+using MarketAnalyzer.MarketIntelligence.Collectors;
+using MarketAnalyzer.MarketIntelligence.Infrastructure;
+using MarketAnalyzer.Membership.Application;
+using MarketAnalyzer.Tools.Application;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
@@ -8,11 +18,6 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using MarketAnalyzer.Abstractions;
-using MarketAnalyzer.Api.Infrastructure;
-using MarketAnalyzer.Cms.Application;
-using MarketAnalyzer.Infrastructure.Authentication.ApiKey;
-using MarketAnalyzer.Membership.Application;
 using Serilog;
 using Serilog.Events;
 using Serilog.Exceptions;
@@ -21,10 +26,6 @@ using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Globalization;
 using System.Linq;
 using System.Text.Json.Serialization;
-using MarketAnalyzer.MarketIntelligence.Application;
-using MarketAnalyzer.MarketIntelligence.Infrastructure;
-using MarketAnalyzer.MarketIntelligence.Collectors;
-using MarketAnalyzer.Infrastructure;
 
 
 #region [Service Injection]
@@ -116,6 +117,7 @@ builder.Services.AddSingleton(Options.Create(urlSettings));
 
 builder.Services.AddCms();
 builder.Services.AddMembership();
+builder.Services.AddTools();
 builder.Services.AddMarketCollectors();
 builder.Services.AddMarketCollectorRunner();
 
@@ -127,7 +129,9 @@ builder.Services.AddMediator(
 [
     CmsMarker.Assembly,
     MembershipMarker.Assembly,
+    ToolsMarker.Assembly,
 ]);
+
 
 builder.Services.TryAddScoped<IApiKeyValidator, AdminApiKeyValidator>();
 builder.Services.Configure<CorsOptions>(builder.Configuration.GetSection(nameof(CorsOptions)));

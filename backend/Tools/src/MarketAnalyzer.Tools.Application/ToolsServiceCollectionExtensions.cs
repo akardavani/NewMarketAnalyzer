@@ -7,8 +7,7 @@ namespace Microsoft.Extensions.DependencyInjection
     {
         public static IServiceCollection AddTools(this IServiceCollection services)
         {
-            services.AddPersistenceApplicationPart(typeof(Note).Assembly, 700);
-            services.AddPersistenceApplicationPart(ToolsPersistenceMarker.Assembly, 700);
+            services.AddPersistenceApplicationPart(ToolsPersistenceMarker.Assembly, 0);
             return services;
         }
     }

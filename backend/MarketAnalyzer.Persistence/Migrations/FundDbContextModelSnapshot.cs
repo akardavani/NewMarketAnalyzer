@@ -1526,7 +1526,7 @@ namespace MarketAnalyzer.Persistence.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<decimal>("Close")
-                        .HasColumnType("decimal(18,8)");
+                        .HasColumnType("decimal(28,8)");
 
                     b.Property<DateTime>("CreatedAtUtc")
                         .HasColumnType("datetime2");
@@ -1535,16 +1535,16 @@ namespace MarketAnalyzer.Persistence.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<decimal>("High")
-                        .HasColumnType("decimal(18,8)");
+                        .HasColumnType("decimal(28,8)");
 
                     b.Property<decimal>("Low")
-                        .HasColumnType("decimal(18,8)");
+                        .HasColumnType("decimal(28,8)");
 
                     b.Property<int>("MarketId")
                         .HasColumnType("int");
 
                     b.Property<decimal>("Open")
-                        .HasColumnType("decimal(18,8)");
+                        .HasColumnType("decimal(28,8)");
 
                     b.Property<string>("PersianDate")
                         .IsRequired()
@@ -1559,10 +1559,10 @@ namespace MarketAnalyzer.Persistence.Migrations
                         .HasColumnType("int");
 
                     b.Property<decimal?>("Value")
-                        .HasColumnType("decimal(18,8)");
+                        .HasColumnType("decimal(28,8)");
 
                     b.Property<decimal?>("Volume")
-                        .HasColumnType("decimal(18,8)");
+                        .HasColumnType("decimal(28,8)");
 
                     b.HasKey("Id");
 
@@ -1962,6 +1962,45 @@ namespace MarketAnalyzer.Persistence.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("UserRoles", "membership");
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.Tools.Domain.Note", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreationTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Creator")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("LastModificationTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("LastModifier")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Notes", "Tools");
                 });
 
             modelBuilder.Entity("MarketAnalyzer.Cms.Domain.ContactUs", b =>
