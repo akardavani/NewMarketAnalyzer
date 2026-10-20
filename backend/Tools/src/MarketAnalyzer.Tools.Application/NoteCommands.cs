@@ -1,13 +1,12 @@
-//using Ganss.Xss;
+using Ganss.Xss;
 using Microsoft.EntityFrameworkCore;
 using MarketAnalyzer.Abstractions;
 using MarketAnalyzer.Tools.Domain;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
+using System.Linq;
 using System.Threading;
-using Ganss.Xss;
 
 namespace MarketAnalyzer.Tools.Application
 {
@@ -16,6 +15,7 @@ namespace MarketAnalyzer.Tools.Application
         public int Id { get; init; }
         public string Title { get; init; } = "";
         public string Content { get; init; } = "";
+        public string? Color { get; init; }
         public DateTime LastModificationTime { get; init; }
     }
 
@@ -34,7 +34,7 @@ namespace MarketAnalyzer.Tools.Application
             => _db.Set<Note>()
                 .Where(e => e.UserId == request.UserId)
                 .OrderByDescending(e => e.LastModificationTime)
-                .Select(e => new NoteItem { Id = e.Id, Title = e.Title, Content = e.Content, LastModificationTime = e.LastModificationTime })
+                .Select(e => new NoteItem { Id = e.Id, Title = e.Title, Content = e.Content, Color = e.Color, LastModificationTime = e.LastModificationTime })
                 .ToListAsync(cancellationToken);
     }
 
@@ -44,6 +44,7 @@ namespace MarketAnalyzer.Tools.Application
         public required int UserId { get; init; }
         public string? Title { get; init; }
         public string? Content { get; init; }
+        public string? Color { get; init; }
     }
 
     internal class CreateNoteCommandHandler : IRequestHandler<CreateNoteCommand, ApiResult<int>>
@@ -53,7 +54,7 @@ namespace MarketAnalyzer.Tools.Application
 
         public async Task<ApiResult<int>> HandleAsync(CreateNoteCommand request, CancellationToken cancellationToken = default)
         {
-            var note = Note.Create(request.UserId, NoteSanitizer.Title(request.Title), NoteSanitizer.Html(request.Content));
+            var note = Note.Create(request.UserId, NoteSanitizer.Title(request.Title), NoteSanitizer.Html(request.Content), NoteSanitizer.Color(request.Color));
             _db.Set<Note>().Add(note);
             await _db.SaveChangesAsync(cancellationToken);
             return ApiResult.From(note.Id);
@@ -67,6 +68,7 @@ namespace MarketAnalyzer.Tools.Application
         public required int UserId { get; init; }
         public string? Title { get; init; }
         public string? Content { get; init; }
+        public string? Color { get; init; }
     }
 
     internal class UpdateNoteCommandHandler : IRequestHandler<UpdateNoteCommand, ApiResult<int>>
@@ -78,7 +80,7 @@ namespace MarketAnalyzer.Tools.Application
         {
             var note = await _db.Set<Note>().FirstOrDefaultAsync(e => e.Id == request.Id && e.UserId == request.UserId, cancellationToken);
             if (note is null) return ApiResult.FromError<int>("یادداشت وجود ندارد.");
-            note.Update(NoteSanitizer.Title(request.Title), NoteSanitizer.Html(request.Content));
+            note.Update(NoteSanitizer.Title(request.Title), NoteSanitizer.Html(request.Content), NoteSanitizer.Color(request.Color));
             await _db.SaveChangesAsync(cancellationToken);
             return ApiResult.From(note.Id);
         }
@@ -125,6 +127,9 @@ namespace MarketAnalyzer.Tools.Application
         }
 
         public static string Html(string? html) => string.IsNullOrWhiteSpace(html) ? "" : Sanitizer.Sanitize(html);
+
+        public static string? Color(string? c)
+            => !string.IsNullOrWhiteSpace(c) && System.Text.RegularExpressions.Regex.IsMatch(c.Trim(), "^#[0-9a-fA-F]{6}$") ? c.Trim().ToLowerInvariant() : null;
 
         public static string Title(string? t)
         {

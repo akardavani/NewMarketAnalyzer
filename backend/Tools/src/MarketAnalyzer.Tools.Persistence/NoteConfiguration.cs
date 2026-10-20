@@ -11,6 +11,7 @@ namespace MarketAnalyzer.Tools.Persistence
             builder.ToTable("Notes", "Tools");
             builder.Property(e => e.Title).HasMaxLength(200).IsRequired();
             builder.Property(e => e.Content).IsRequired();
+            builder.Property(e => e.Color).HasMaxLength(7);
             builder.HasIndex(e => e.UserId);
         }
     }

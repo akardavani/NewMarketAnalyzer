@@ -6,8 +6,9 @@
 <div class="panel" dir="rtl" role="dialog" aria-label="یادداشت‌ها">
   <aside class="list">
     <button type="button" class="add" (click)="add()">+ یادداشت جدید</button>
-    @for (n of notes(); track n.id) {
-    <div class="item" [class.active]="n.id === activeId()" (click)="select(n.id)">
+    <button type="button" class="sortc" [class.on]="sortByColor()" (click)="sortByColor.set(!sortByColor())">🎨 چیدن بر اساس رنگ</button>
+    @for (n of sorted(); track n.id) {
+    <div class="item" [class.active]="n.id === activeId()" [style.--nc]="n.color" [class.colored]="!!n.color" (click)="select(n.id)">
       <span class="t">{{ label(n) }}</span>
       <button type="button" class="del" (click)="remove(n); $event.stopPropagation()" title="حذف">×</button>
     </div>
@@ -18,7 +19,14 @@
 
   <section class="body">
     @if (active; as n) {
-    <input class="title" placeholder="عنوان" [value]="n.title" (input)="onTitle(n, $any($event.target).value)" />
+    <div class="head">
+      <input class="title" placeholder="عنوان" [value]="n.title" (input)="onTitle(n, $any($event.target).value)" />
+      <label class="color" title="انتخاب رنگ یادداشت" [style.background]="n.color || 'transparent'">
+        @if (!n.color) { <span>🎨</span> }
+        <input type="color" [value]="n.color || '#ffd54f'" (input)="onColor(n, $any($event.target).value)" />
+      </label>
+      @if (n.color) { <button type="button" class="noc" (click)="clearColor(n)" title="حذف رنگ">×</button> }
+    </div>
     <div class="toolbar">
       <button type="button" (mousedown)="$event.preventDefault()" (click)="exec('bold')" title="درشت"><b>B</b></button>
       <button type="button" (mousedown)="$event.preventDefault()" (click)="exec('italic')" title="کج"><i>I</i></button>
@@ -38,7 +46,7 @@
       </span>
     </div>
     @for (k of [n.id]; track k) {
-    <div class="editor" contenteditable="true" dir="rtl"
+    <div class="editor" contenteditable="true" dir="rtl" [style.--nc]="n.color" [class.colored]="!!n.color"
          [innerHTML]="seed(n)"
          (input)="onContent(n, $any($event.target))"
          (click)="onEditorClick($event)"></div>

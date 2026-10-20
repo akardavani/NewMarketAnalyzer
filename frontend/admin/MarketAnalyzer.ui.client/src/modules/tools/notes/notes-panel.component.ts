@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, inject, signal } from '@angular/core';
+import { Component, computed, ElementRef, HostListener, inject, signal } from '@angular/core';
 import { Subject, debounceTime, switchMap } from 'rxjs';
 import { Note, NotesService } from './notes.service';
 
@@ -18,13 +18,19 @@ export class NotesPanelComponent {
   readonly notes = signal<Note[]>([]);
   readonly activeId = signal<number | null>(null);
   readonly state = signal<SaveState>('idle');
+  readonly sortByColor = signal(false);
+
+  readonly sorted = computed(() => {
+    const l = this.notes();
+    return this.sortByColor() ? [...l].sort((a, b) => this.hueKey(a.color) - this.hueKey(b.color)) : l;
+  });
 
   private readonly changes$ = new Subject<Note>();
 
   constructor() {
     this.changes$.pipe(
       debounceTime(1000),
-      switchMap(n => { this.state.set('saving'); return this.api.update(n.id, n.title, n.content); })
+      switchMap(n => { this.state.set('saving'); return this.api.update(n.id, n.title, n.content, n.color); })
     ).subscribe({
       next: () => this.state.set('saved'),
       error: () => this.state.set('error')
@@ -99,7 +105,7 @@ export class NotesPanelComponent {
     const n = this.pending;
     if (!n) return;
     this.pending = undefined;
-    this.api.update(n.id, n.title, n.content).subscribe({ next: () => this.state.set('saved'), error: () => this.state.set('error') });
+    this.api.update(n.id, n.title, n.content, n.color).subscribe({ next: () => this.state.set('saved'), error: () => this.state.set('error') });
   }
 
   // ---- toolbar
@@ -135,6 +141,19 @@ export class NotesPanelComponent {
     const n = this.active;
     if (el && n) this.onContent(n, el);
   }
+
+  /** کلید مرتب‌سازی رنگ: بی‌رنگ‌ها آخر، بقیه بر اساس hue و سپس روشنایی */
+  private hueKey(hex?: string | null): number {
+    if (!hex || !/^#[0-9a-f]{6}$/i.test(hex)) return 1e9;
+    const r = parseInt(hex.slice(1, 3), 16) / 255, g = parseInt(hex.slice(3, 5), 16) / 255, b = parseInt(hex.slice(5, 7), 16) / 255;
+    const max = Math.max(r, g, b), min = Math.min(r, g, b), d = max - min;
+    if (d === 0) return 1000 + max;
+    const h = max === r ? ((g - b) / d + 6) % 6 : max === g ? (b - r) / d + 2 : (r - g) / d + 4;
+    return h * 60 + max / 10;
+  }
+
+  onColor(n: Note, value: string): void { n.color = value; this.notes.update(l => [...l]); this.changed(n); }
+  clearColor(n: Note): void { n.color = null; this.notes.update(l => [...l]); this.changed(n); }
 
   trackId = (_: number, n: Note) => n.id;
   label(n: Note): string { return n.title.trim() || 'بدون عنوان'; }
