@@ -67,19 +67,30 @@
 
       <label>فایل‌ها</label>
       <div class="files">
+        <div class="dropzone" [class.dragover]="dragOver()" (dragover)="onDragOver($event)" (dragleave)="onDragLeave($event)" (drop)="onDrop($event)" (click)="add.click()">
+          <strong>فایل‌ها را اینجا رها کنید یا برای انتخاب کلیک کنید</strong>
+          <small>انتخاب هم‌زمان چند فایل مجاز است؛ حداکثر ۲۰ مگابایت برای هر فایل</small>
+          <small>فایل‌های اجرایی و اسکریپتی مانند EXE، DLL، BAT و PS1 مسدود هستند.</small>
+          <input #add type="file" multiple hidden (change)="upload(add)" (click)="$event.stopPropagation()" />
+        </div>
         @for (f of files(); track f.id) {
         <div class="file">
           <span class="fn" [title]="f.fileName">{{ f.fileName }}</span>
           <small>{{ size(f.size) }}</small>
           <button type="button" class="btn" (click)="download(f)">دانلود</button>
-          <button type="button" class="btn" (click)="rep.click()">جایگزینی</button>
+          <button type="button" class="btn" (click)="rep.click()" [disabled]="busy()">جایگزینی</button>
           <input #rep type="file" hidden (change)="upload(rep, f)" />
           <button type="button" class="btn danger" (click)="removeFile(f)">حذف</button>
         </div>
         }
-        <button type="button" class="btn dashed" (click)="add.click()" [disabled]="busy()">+ افزودن فایل</button>
-        <input #add type="file" hidden (change)="upload(add)" />
-        @if (!activeId()) { <small>برای افزودن فایل، ابتدا ذخیره کنید.</small> }
+        @for (f of pendingFiles(); track f.name + f.size + $index) {
+        <div class="file pending-file">
+          <span class="fn" [title]="f.name">{{ f.name }}</span>
+          <small>{{ size(f.size) }}</small>
+          <span class="pending-label">پس از ذخیره آپلود می‌شود</span>
+          <button type="button" class="btn danger" (click)="removePendingFile(f)">حذف</button>
+        </div>
+        }
       </div>
     </section>
   </div>

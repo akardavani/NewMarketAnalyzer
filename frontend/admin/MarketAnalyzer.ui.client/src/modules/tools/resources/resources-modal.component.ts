@@ -1,5 +1,5 @@
 import { Component, inject, signal } from '@angular/core';
-import { Subject, debounceTime, distinctUntilChanged, switchMap } from 'rxjs';
+import { Subject, debounceTime, distinctUntilChanged, switchMap, from, concatMap, toArray } from 'rxjs';
 import { ResourceFile, ResourceItem, ResourcesService } from './resources.service';
 
 const PAGE = 20;
@@ -28,6 +28,8 @@ export class ResourcesModalComponent {
   readonly link = signal('');
   readonly tags = signal<string[]>([]);
   readonly files = signal<ResourceFile[]>([]);
+  readonly pendingFiles = signal<File[]>([]);
+  readonly dragOver = signal(false);
   readonly tagInput = signal('');
   readonly suggestions = signal<string[]>([]);
 
@@ -76,6 +78,7 @@ export class ResourcesModalComponent {
     this.link.set(r?.link ?? '');
     this.tags.set([...(r?.tags ?? [])]);
     this.files.set([...(r?.files ?? [])]);
+    this.pendingFiles.set([]);
     this.tagInput.set(''); this.suggestions.set([]);
   }
 
@@ -107,7 +110,24 @@ export class ResourcesModalComponent {
     if (this.tagInput().trim()) this.addTag(this.tagInput());
     this.busy.set(true); this.error.set('');
     this.api.save({ id: this.activeId(), title: this.title(), description: this.description(), link: this.link(), tags: this.tags() }).subscribe({
-      next: id => { this.busy.set(false); this.activeId.set(id); this.reload(); },
+      next: id => {
+        this.activeId.set(id);
+        const queued = this.pendingFiles();
+        this.pendingFiles.set([]);
+        if (!queued.length) { this.busy.set(false); this.reload(); return; }
+        from(queued).pipe(
+          concatMap(file => this.api.uploadFile(id, 0, file)),
+          toArray()
+        ).subscribe({
+          next: uploaded => {
+            this.files.update(existing => [...existing, ...uploaded]);
+            this.busy.set(false);
+            this.syncFiles();
+            this.reload();
+          },
+          error: e => { this.busy.set(false); this.error.set(e.message || 'ذخیره انجام شد، اما آپلود یکی از فایل‌ها ناموفق بود.'); this.reload(); }
+        });
+      },
       error: e => { this.busy.set(false); this.error.set(e.message); }
     });
   }
@@ -118,22 +138,67 @@ export class ResourcesModalComponent {
     this.api.remove(r.id).subscribe({ next: () => { if (this.activeId() === r.id) this.newItem(); this.reload(); }, error: e => this.error.set(e.message) });
   }
 
-  // ---- فایل‌ها (مستقل از ذخیرهٔ فرم)
+  // ---- فایل‌ها: چندانتخابی، drag & drop و صف فایل برای مورد جدید
+  private readonly blockedExtensions = new Set([
+    'exe', 'dll', 'bat', 'cmd', 'com', 'scr', 'msi', 'msp', 'ps1', 'psm1',
+    'vbs', 'vbe', 'js', 'jse', 'wsf', 'wsh', 'hta', 'reg', 'lnk', 'cpl'
+  ]);
+
+  private validateFile(file: File): string | null {
+    const ext = file.name.split('.').pop()?.toLowerCase() ?? '';
+    if (this.blockedExtensions.has(ext)) return `فایل ${file.name} مجاز نیست؛ پسوند .${ext} مسدود است.`;
+    if (file.size === 0) return `فایل ${file.name} خالی است.`;
+    if (file.size > 20 * 1024 * 1024) return `حجم فایل ${file.name} بیشتر از ۲۰ مگابایت است.`;
+    return null;
+  }
+
+  onDragOver(e: DragEvent): void { e.preventDefault(); this.dragOver.set(true); }
+  onDragLeave(e: DragEvent): void { e.preventDefault(); this.dragOver.set(false); }
+  onDrop(e: DragEvent): void {
+    e.preventDefault(); this.dragOver.set(false);
+    this.acceptFiles(Array.from(e.dataTransfer?.files ?? []));
+  }
+
   upload(input: HTMLInputElement, replace?: ResourceFile): void {
-    const file = input.files?.[0];
+    const selected = Array.from(input.files ?? []);
     input.value = '';
-    if (!file) return;
-    if (!this.activeId()) { this.error.set('ابتدا مورد را ذخیره کنید، سپس فایل اضافه کنید.'); return; }
-    this.busy.set(true); this.error.set('');
-    this.api.uploadFile(this.activeId(), replace?.id ?? 0, file).subscribe({
-      next: f => {
+    if (!selected.length) return;
+    this.acceptFiles(replace ? selected.slice(0, 1) : selected, replace);
+  }
+
+  private acceptFiles(selected: File[], replace?: ResourceFile): void {
+    const valid: File[] = [];
+    const errors: string[] = [];
+    for (const file of selected) {
+      const issue = this.validateFile(file);
+      if (issue) errors.push(issue); else valid.push(file);
+    }
+    if (errors.length) this.error.set(errors.join(' '));
+    else this.error.set('');
+    if (!valid.length) return;
+
+    if (!this.activeId()) {
+      this.pendingFiles.update(old => replace ? valid.slice(0, 1) : [...old, ...valid]);
+      return;
+    }
+
+    this.busy.set(true);
+    from(valid).pipe(
+      concatMap(file => this.api.uploadFile(this.activeId(), replace?.id ?? 0, file)),
+      toArray()
+    ).subscribe({
+      next: uploaded => {
         this.busy.set(false);
-        this.files.update(l => replace ? l.map(x => x.id === replace.id ? f : x) : [...l, f]);
+        this.files.update(existing => replace
+          ? existing.map(x => x.id === replace.id ? uploaded[0] : x)
+          : [...existing, ...uploaded]);
         this.syncFiles();
       },
-      error: e => { this.busy.set(false); this.error.set(e.message || 'خطا در آپلود'); }
+      error: e => { this.busy.set(false); this.error.set(e.message || 'خطا در آپلود فایل‌ها'); }
     });
   }
+
+  removePendingFile(file: File): void { this.pendingFiles.update(list => list.filter(x => x !== file)); }
   removeFile(f: ResourceFile): void {
     this.api.removeFile(f.id).subscribe({
       next: () => { this.files.update(l => l.filter(x => x.id !== f.id)); this.syncFiles(); },

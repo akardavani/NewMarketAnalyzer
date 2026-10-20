@@ -1,10 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using MarketAnalyzer.Abstractions;
 using MarketAnalyzer.Tools.Domain;
-using System.Collections.Generic;
-using System;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 using System.Linq;
+using System;
 using System.Threading;
 using System.IO;
 
@@ -170,6 +170,14 @@ namespace MarketAnalyzer.Tools.Application
         {
             if (r.Content.Length == 0) return ApiResult.FromError<ResourceFileItem>("فایل خالی است.");
             if (r.Content.Length > MaxBytes) return ApiResult.FromError<ResourceFileItem>("حجم فایل بیش از ۲۰ مگابایت است.");
+            var extension = Path.GetExtension(r.FileName).ToLowerInvariant();
+            var blockedExtensions = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+            {
+                ".exe", ".dll", ".bat", ".cmd", ".com", ".scr", ".msi", ".msp", ".ps1", ".psm1",
+                ".vbs", ".vbe", ".js", ".jse", ".wsf", ".wsh", ".hta", ".reg", ".lnk", ".cpl"
+            };
+            if (blockedExtensions.Contains(extension))
+                return ApiResult.FromError<ResourceFileItem>($"آپلود فایل با پسوند {extension} مجاز نیست.");
             if (!await _db.Set<Resource>().AnyAsync(e => e.Id == r.ResourceId && e.UserId == r.UserId, ct))
                 return ApiResult.FromError<ResourceFileItem>("مورد وجود ندارد.");
             var name = Path.GetFileName(r.FileName);

@@ -29,12 +29,39 @@ export class ResourcesService {
   remove(id: number): Observable<number> {
     return this.http.post<ApiResult<number>>(apiUrl('Resources/Remove'), { id }).pipe(map(x => this.unwrap(x)));
   }
-  uploadFile(resourceId: number, fileId: number, file: File): Observable<ResourceFile> {
+  uploadFile(
+    resourceId: number,
+    fileId: number,
+    file: File
+  ): Observable<ResourceFile> {
     const fd = new FormData();
+
     fd.append('resourceId', String(resourceId));
     fd.append('fileId', String(fileId));
     fd.append('file', file, file.name);
-    return this.http.post<ApiResult<ResourceFile>>(apiUrl('Resources/UploadFile'), fd).pipe(map(x => this.unwrap(x)));
+
+
+
+
+    console.log('FormData entries:');
+
+    fd.forEach((value, key) => {
+      console.log(
+        key,
+        value instanceof File
+          ? { name: value.name, size: value.size, type: value.type }
+          : value
+      );
+    });
+
+
+
+    return this.http
+      .post<ApiResult<ResourceFile>>(
+        apiUrl('Resources/UploadFile'),
+        fd
+      )
+      .pipe(map(res => this.unwrap(res)));
   }
   removeFile(id: number): Observable<number> {
     return this.http.post<ApiResult<number>>(apiUrl('Resources/RemoveFile'), { id }).pipe(map(x => this.unwrap(x)));

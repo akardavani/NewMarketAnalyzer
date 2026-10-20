@@ -3,10 +3,11 @@ using Microsoft.AspNetCore.Mvc;
 using MarketAnalyzer.Abstractions;
 using MarketAnalyzer.Abstractions.Routes;
 using MarketAnalyzer.Tools.Application;
-using System.Collections.Generic;
 using System.Threading.Tasks;
-using System.Threading;
 using System.IO;
+using System.Collections.Generic;
+using System;
+using System.Threading;
 
 namespace MarketAnalyzer.Api.Controllers
 {
@@ -45,10 +46,25 @@ namespace MarketAnalyzer.Api.Controllers
 
         /// <summary>fileId=0 → افزودن، وگرنه جایگزینی همان فایل</summary>
         [HttpPost]
+        [Consumes("multipart/form-data")]
         [RequestSizeLimit(21 * 1024 * 1024)]
         [ProducesResponseType(typeof(ApiResult<ResourceFileItem>), StatusCodes.Status200OK)]
-        public async Task<IActionResult> UploadFile([FromForm] int resourceId, [FromForm] int fileId, IFormFile file, CancellationToken ct)
+        public async Task<IActionResult> UploadFile([FromForm] int resourceId, [FromForm] int fileId, IFormFile? file, CancellationToken ct)
         {
+            if (file is null || file.Length == 0)
+                return BadRequest(ApiResult.FromError<ResourceFileItem>("فایل انتخاب نشده یا خالی است."));
+            if (file.Length > 20 * 1024 * 1024)
+                return BadRequest(ApiResult.FromError<ResourceFileItem>("حجم هر فایل حداکثر ۲۰ مگابایت است."));
+
+            var extension = Path.GetExtension(file.FileName).ToLowerInvariant();
+            var blockedExtensions = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+            {
+                ".exe", ".dll", ".bat", ".cmd", ".com", ".scr", ".msi", ".msp", ".ps1", ".psm1",
+                ".vbs", ".vbe", ".js", ".jse", ".wsf", ".wsh", ".hta", ".reg", ".lnk", ".cpl", ".hta"
+            };
+            if (blockedExtensions.Contains(extension))
+                return BadRequest(ApiResult.FromError<ResourceFileItem>($"آپلود فایل با پسوند {extension} مجاز نیست."));
+
             using var ms = new MemoryStream();
             await file.CopyToAsync(ms, ct);
             return Ok(await Mediator.ExecuteAsync(new SaveResourceFileCommand
