@@ -39,7 +39,7 @@
     </div>
     @for (k of [n.id]; track k) {
     <div class="editor" contenteditable="true" dir="rtl"
-         [innerHTML]="n.content"
+         [innerHTML]="seed(n)"
          (input)="onContent(n, $any($event.target))"
          (click)="onEditorClick($event)"></div>
     }

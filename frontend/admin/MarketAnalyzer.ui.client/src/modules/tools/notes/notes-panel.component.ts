@@ -33,7 +33,16 @@ export class NotesPanelComponent {
 
   get active(): Note | undefined { return this.notes().find(n => n.id === this.activeId()); }
 
+  private seedState?: { id: number; html: string };
+
+  /** محتوای اولیهٔ ادیتور؛ ثابت می‌ماند تا با هر تایپ innerHTML دوباره ست نشود و کرسر به اول نپرد */
+  seed(n: Note): string {
+    if (this.seedState?.id !== n.id) this.seedState = { id: n.id, html: n.content };
+    return this.seedState.html;
+  }
+
   toggle(): void {
+    this.seedState = undefined;
     this.open.update(v => !v);
     if (this.open()) this.load();
   }
@@ -56,7 +65,7 @@ export class NotesPanelComponent {
     });
   }
 
-  select(id: number): void { this.flush(); this.activeId.set(id); this.state.set('idle'); }
+  select(id: number): void { this.flush(); this.seedState = undefined; this.activeId.set(id); this.state.set('idle'); }
 
   add(): void {
     this.api.create('', '').subscribe(id => {
