@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 using MarketAnalyzer.Abstractions;
 using MarketAnalyzer.Abstractions.Routes;
 using MarketAnalyzer.Tools.Application;
-using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace MarketAnalyzer.Api.Controllers
 {
@@ -17,6 +17,7 @@ namespace MarketAnalyzer.Api.Controllers
             public int Id { get; set; }
             public string? Title { get; set; }
             public string? Content { get; set; }
+            public string? Color { get; set; }
         }
 
         [HttpGet]
@@ -30,12 +31,12 @@ namespace MarketAnalyzer.Api.Controllers
         [HttpPost]
         [ProducesResponseType(typeof(ApiResult<int>), StatusCodes.Status200OK)]
         public async Task<IActionResult> Create(NoteRequest r, CancellationToken ct)
-            => Ok(await Mediator.ExecuteAsync(new CreateNoteCommand { UserId = CurrentUserId, Title = r.Title, Content = r.Content }, ct));
+            => Ok(await Mediator.ExecuteAsync(new CreateNoteCommand { UserId = CurrentUserId, Title = r.Title, Content = r.Content, Color = r.Color }, ct));
 
         [HttpPost]
         [ProducesResponseType(typeof(ApiResult<int>), StatusCodes.Status200OK)]
         public async Task<IActionResult> Update(NoteRequest r, CancellationToken ct)
-            => Ok(await Mediator.ExecuteAsync(new UpdateNoteCommand { Id = r.Id, UserId = CurrentUserId, Title = r.Title, Content = r.Content }, ct));
+            => Ok(await Mediator.ExecuteAsync(new UpdateNoteCommand { Id = r.Id, UserId = CurrentUserId, Title = r.Title, Content = r.Content, Color = r.Color }, ct));
 
         [HttpPost]
         [ProducesResponseType(typeof(ApiResult<int>), StatusCodes.Status200OK)]
