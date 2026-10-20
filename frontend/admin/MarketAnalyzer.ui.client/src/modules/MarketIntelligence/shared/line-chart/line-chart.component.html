@@ -1,18 +1,27 @@
 @if (model; as c) {
   <div class="card-box">
     <h6>{{ title }}</h6>
-    <div class="chart-wrap"><svg [attr.viewBox]="'0 0 ' + W + ' ' + H" class="chart" dir="ltr" style="overflow: visible">
-      <line [attr.x1]="padL" [attr.y1]="H - padB" [attr.x2]="W - padR" [attr.y2]="H - padB" stroke="#999" />
-      <line [attr.x1]="padL" [attr.y1]="padT" [attr.x2]="padL" [attr.y2]="H - padB" stroke="#999" />
-      <text [attr.x]="padL - 8" [attr.y]="padT + 4" class="axis" text-anchor="end">{{ c.yMax.toFixed(2) }}</text>
-      <text [attr.x]="padL - 8" [attr.y]="H - padB" class="axis" text-anchor="end">{{ c.yMin.toFixed(2) }}</text>
-      <text [attr.x]="padL" [attr.y]="H - 20" class="axis" text-anchor="start">{{ c.xLabels[0] }}</text>
-      <text [attr.x]="W / 2" [attr.y]="H - 20" class="axis" text-anchor="middle">{{ c.xLabels[1] }}</text>
-      <text [attr.x]="W - padR" [attr.y]="H - 20" class="axis" text-anchor="end">{{ c.xLabels[2] }}</text>
-      @for (s of c.items; track s.label) {
-        <polyline [attr.points]="s.points" fill="none" [attr.stroke]="s.color" stroke-width="2" />
-      }
-    </svg></div>
+    <div class="chart-wrap">
+      <svg [attr.viewBox]="'0 0 ' + c.W + ' ' + H" class="chart" [style.min-width.px]="c.W" dir="ltr" style="overflow: visible" (mouseleave)="tip = null">
+        <line [attr.x1]="padL" [attr.y1]="H - padB" [attr.x2]="c.W - padR" [attr.y2]="H - padB" class="axis-line" stroke="var(--fd-line-strong)" />
+        <line [attr.x1]="padL" [attr.y1]="padT" [attr.x2]="padL" [attr.y2]="H - padB" stroke="var(--fd-line-strong)" />
+        @for (t of c.yTicks; track t.y) {
+          <line [attr.x1]="padL" [attr.x2]="c.W - padR" [attr.y1]="t.y" [attr.y2]="t.y" class="grid-line" />
+          <text [attr.x]="padL - 8" [attr.y]="t.y + 4" class="axis" text-anchor="end">{{ t.text }}</text>
+        }
+        @for (x of c.xTicks; track $index) {
+          <text [attr.x]="x.x" [attr.y]="H - padB + 20" class="xaxis" text-anchor="end"
+                [attr.transform]="'rotate(-60 ' + x.x + ' ' + (H - padB + 20) + ')'">{{ x.label }}</text>
+        }
+        @for (s of c.items; track s.label) {
+          <polyline [attr.points]="s.points" fill="none" [attr.stroke]="s.color" stroke-width="2" />
+          <polyline [attr.points]="s.points" fill="none" stroke="transparent" stroke-width="14" style="cursor: crosshair"
+                    (mousemove)="hover($event, s)" />
+        }
+        @if (tip) { <circle [attr.cx]="tip.cx" [attr.cy]="tip.cy" r="4" [attr.fill]="tip.color" /> }
+      </svg>
+      @if (tip) { <div class="tip" [style.left.px]="tip.left" [style.top.px]="tip.top">تاریخ: {{ tip.date }}<br>عدد: {{ tip.value }}</div> }
+    </div>
     <div class="legend">
       @for (s of c.items; track s.label) { <span><i [style.background]="s.color"></i>{{ s.label }}</span> }
     </div>

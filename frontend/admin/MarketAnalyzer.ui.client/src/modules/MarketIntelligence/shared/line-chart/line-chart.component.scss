@@ -1,9 +1,14 @@
-.card-box { background: #fff; border: 1px solid #dee2e6; border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1rem; }
+.card-box { background: var(--fd-surface); border: 1px solid var(--fd-line); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1rem; }
 h6 { margin: 0 0 .75rem; font-weight: 600; }
 .chart-wrap { overflow: auto; max-height: 75vh; }
 .chart { display: block; width: 100%; min-width: 1000px; height: auto; }
-.axis { font-size: 12px; fill: #666; }
+.axis { font-size: 12px; fill: var(--fd-text-3); }
 .legend { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: .5rem;
   span { display: inline-flex; align-items: center; gap: .35rem; }
   i { width: 12px; height: 12px; border-radius: 2px; display: inline-block; }
 }
+.tip { position: absolute; pointer-events: none; z-index: 5; background: var(--fd-surface-3); color: var(--fd-text); border: 1px solid var(--fd-line-strong);
+  border-radius: 6px; padding: .3rem .55rem; font-size: 12px; white-space: nowrap; box-shadow: var(--fd-shadow-pop); direction: rtl; text-align: right; }
+.chart-wrap { position: relative; }
+.grid-line { stroke: var(--fd-line); }
+.xaxis { font-size: 9px; fill: var(--fd-text-3); }

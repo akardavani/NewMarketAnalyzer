@@ -1,13 +1,13 @@
 :host { display: block; }
-.page { padding: 1.5rem; text-align: right; }
-.card-box { background: #fff; border: 1px solid #dee2e6; border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1rem; }
+.page { color: var(--fd-text); padding: 1.5rem; text-align: right; }
+.card-box { background: var(--fd-surface); border: 1px solid var(--fd-line); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1rem; }
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; margin: 1rem 0; }
 .field { display: flex; flex-direction: column; gap: .35rem; min-width: 0; }
-label { font-size: .85rem; color: #495057; }
-input, select { width: 100%; box-sizing: border-box; padding: .45rem .6rem; border: 1px solid #ced4da; border-radius: 6px; background: #fff; font: inherit; }
-.hint { color: #6c757d; }
-.btn-run { padding: .5rem 1.5rem; border: 0; border-radius: 6px; background: #0d6efd; color: #fff; cursor: pointer; &:disabled { opacity: .6; cursor: default; } }
-.alert { background: #f8d7da; color: #842029; border-radius: 6px; padding: .75rem 1rem; margin-bottom: 1rem; }
-.summary { display: flex; gap: 2rem; flex-wrap: wrap; color: #495057; }
-.badge { padding: .1rem .5rem; border-radius: 999px; background: #e7f1ff; }
+label { font-size: .85rem; color: var(--fd-text-2); }
+input, select { width: 100%; box-sizing: border-box; padding: .45rem .6rem; border: 1px solid var(--fd-line-strong); border-radius: 6px; background: var(--fd-field); color: var(--fd-text); font: inherit; }
+.hint { color: var(--fd-text-3); }
+.btn-run { padding: .5rem 1.5rem; border: 0; border-radius: 6px; background: var(--fd-primary); color: var(--fd-surface); cursor: pointer; &:disabled { opacity: .6; cursor: default; } }
+.alert { background: color-mix(in srgb, #dc3545 22%, transparent); color: var(--fd-text); border-radius: 6px; padding: .75rem 1rem; margin-bottom: 1rem; }
+.summary { display: flex; gap: 2rem; flex-wrap: wrap; color: var(--fd-text-2); }
+.badge { padding: .1rem .5rem; border-radius: 999px; background: color-mix(in srgb, var(--fd-primary) 18%, transparent); }
 h6 { margin: 0 0 .75rem; font-weight: 600; }
