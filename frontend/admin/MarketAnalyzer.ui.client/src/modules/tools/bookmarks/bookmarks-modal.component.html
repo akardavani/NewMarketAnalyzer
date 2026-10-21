@@ -1,0 +1,140 @@
+<button type="button" class="ibtn" (click)="toggle()" aria-label="لینک‌ها" title="لینک‌ها">
+  <i class="pa pa-link" aria-hidden="true">🔖</i>
+</button>
+
+@if (open()) {
+<div class="backdrop" (click)="close()"></div>
+<div class="modal" dir="rtl" role="dialog" aria-label="لینک‌ها">
+  <header class="mh">
+    <h3>مدیریت لینک‌ها</h3>
+    <button type="button" class="x" (click)="close()" aria-label="بستن">×</button>
+  </header>
+
+  <div class="mb">
+    <!-- سایدبار -->
+    <aside class="side scroll">
+      <div class="sec">
+        <div class="node" [class.active]="!fCollection() && !fFav()" (click)="setCollection(null)">همهٔ لینک‌ها</div>
+        <div class="node" [class.active]="fFav()" (click)="setFav()">★ علاقه‌مندی‌ها</div>
+      </div>
+      <div class="sh"><b>مجموعه‌ها</b><button type="button" class="btn sm" (click)="addCollection(null)">+</button></div>
+      @for (n of tree(); track n.c.id) {
+      <div class="node" [class.active]="fCollection() === n.c.id" [style.padding-inline-start.px]="8 + n.depth * 14" (click)="setCollection(n.c.id)">
+        <span class="nm">📁 {{ n.c.name }}</span><small>{{ n.c.count }}</small>
+        <span class="acts">
+          <button type="button" (click)="addCollection(n.c); $event.stopPropagation()" title="زیرمجموعه">+</button>
+          <button type="button" (click)="renameCollection(n.c, $event)" title="ویرایش">✎</button>
+          <button type="button" (click)="removeCollection(n.c, $event)" title="حذف">×</button>
+        </span>
+      </div>
+      }
+      <div class="sh"><b>تگ‌ها</b></div>
+      @for (t of allTags(); track t.name) {
+      <div class="node" [class.active]="fTag() === t.name" (click)="setTag(t.name)">
+        <span class="nm"># {{ t.name }}</span><small>{{ t.count }}</small>
+        <span class="acts">
+          <button type="button" (click)="renameTag(t, $event)" title="تغییر نام">✎</button>
+          <button type="button" (click)="removeTagGlobal(t, $event)" title="حذف">×</button>
+        </span>
+      </div>
+      }
+    </aside>
+
+    <!-- لیست -->
+    <section class="list">
+      <div class="lh">
+        <input class="inp" type="search" placeholder="جست‌وجو در عنوان، آدرس و یادداشت..." [value]="search()" (input)="onSearch($any($event.target).value)" />
+        <button type="button" class="btn" [class.on]="view() === 'list'" (click)="view.set('list')" title="لیست">☰</button>
+        <button type="button" class="btn" [class.on]="view() === 'card'" (click)="view.set('card')" title="کارت">▦</button>
+        <button type="button" class="btn primary" (click)="newItem()">+ جدید</button>
+      </div>
+      <div class="lh filters">
+        <select class="inp" [value]="fKind() ?? ''" (change)="setKind($any($event.target).value)" aria-label="نوع">
+          <option value="">همهٔ انواع</option>
+          @for (k of kinds; track k.k) { <option [value]="k.k">{{ k.v }}</option> }
+        </select>
+        <label class="dl">از <date-input class="dinp" minWidth="110px" [ngModel]="fFrom()" (ngModelChange)="setDate('from', $event)" /></label>
+        <label class="dl">تا <date-input class="dinp" minWidth="110px" [ngModel]="fTo()" (ngModelChange)="setDate('to', $event)" /></label>
+        @if (fTag()) { <span class="chip"># {{ fTag() }}<button type="button" (click)="setTag(fTag())" aria-label="حذف فیلتر">×</button></span> }
+        @if (hasFilter) { <button type="button" class="btn" (click)="clearFilters()">پاک‌کردن فیلترها</button> }
+      </div>
+
+      <div class="scroll" [class.cards]="view() === 'card'" (scroll)="onScroll($event)">
+        @for (b of items(); track b.id) {
+        <div class="item" [class.active]="b.id === activeId()" (click)="select(b)">
+          @if (view() === 'card' && b.imageUrl) { <img class="thumb" [src]="b.imageUrl" alt="" loading="lazy" referrerpolicy="no-referrer" /> }
+          <div class="it">
+            <b [title]="b.title">{{ b.title || host(b.url) }}</b>
+            <span class="row">
+              @if (safeLink(b.url); as l) { <a class="go" [href]="l" target="_blank" rel="noopener noreferrer" (click)="$event.stopPropagation()" title="باز کردن لینک">↗</a> }
+              <button type="button" class="star" [class.on]="b.isFavorite" (click)="toggleFav(b, $event)" title="علاقه‌مندی">{{ b.isFavorite ? '★' : '☆' }}</button>
+              <button type="button" class="del" (click)="remove(b, $event)" title="حذف">×</button>
+            </span>
+          </div>
+          <div class="id" dir="ltr">{{ host(b.url) }}</div>
+          @if (b.note) { <div class="id">{{ b.note }}</div> }
+          <div class="im">
+            <span class="chip kind">{{ kindLabel(b.kind) }}</span>
+            @for (t of b.tags; track t) { <span class="chip">{{ t }}</span> }
+            <span class="dt">{{ date(b.lastModificationTime) }}</span>
+          </div>
+        </div>
+        } @empty {
+        @if (!loading()) { <div class="empty">موردی یافت نشد</div> }
+        }
+        @if (loading()) { <div class="empty">در حال بارگذاری...</div> }
+      </div>
+    </section>
+
+    <!-- فرم -->
+    @if (showForm()) {
+    <section class="form scroll">
+      <label>آدرس <span class="req">*</span></label>
+      <div class="linkrow">
+        <input class="inp" dir="ltr" [value]="url()" (input)="url.set($any($event.target).value)" placeholder="https://example.com" />
+        <button type="button" class="btn" (click)="autoFill()" [disabled]="fetching()">{{ fetching() ? '...' : 'دریافت اطلاعات' }}</button>
+        @if (safeLink(url()); as l) { <a class="btn" [href]="l" target="_blank" rel="noopener noreferrer">باز کردن</a> }
+      </div>
+
+      <label>عنوان</label>
+      <input class="inp" [value]="title()" (input)="title.set($any($event.target).value)" maxlength="200" placeholder="عنوان" />
+
+      @if (imageUrl()) { <img class="prev" [src]="imageUrl()" alt="" referrerpolicy="no-referrer" /> }
+
+      <label>نوع</label>
+      <select class="inp" [value]="kind()" (change)="setFormKind($any($event.target).value)">
+        @for (k of kinds; track k.k) { <option [value]="k.k" [selected]="k.k === kind()">{{ k.v }}</option> }
+      </select>
+
+      <label>مجموعه</label>
+      <select class="inp" (change)="collectionId.set($any($event.target).value ? +$any($event.target).value : null)">
+        <option value="" [selected]="!collectionId()">بدون مجموعه</option>
+        @for (n of tree(); track n.c.id) { <option [value]="n.c.id" [selected]="n.c.id === collectionId()">{{ '— '.repeat(n.depth) }}{{ n.c.name }}</option> }
+      </select>
+
+      <label>توضیحات</label>
+      <textarea class="inp" rows="4" maxlength="2000" [value]="note()" (input)="note.set($any($event.target).value)" placeholder="توضیحات"></textarea>
+
+      <label>تگ‌ها <small>(با ; یا Enter جدا کنید)</small></label>
+      <div class="tags">
+        @for (t of tags(); track t) {
+        <span class="chip">{{ t }}<button type="button" (click)="removeTag(t)" aria-label="حذف تگ">×</button></span>
+        }
+        <input class="tin" [value]="tagInput()" (input)="onTagInput($any($event.target).value)" (keydown)="onTagKey($event)" placeholder="تگ..." />
+      </div>
+      @if (suggestions().length) {
+      <div class="sugg">
+        @for (s of suggestions(); track s) { <button type="button" (click)="addTag(s)">{{ s }}</button> }
+      </div>
+      }
+    </section>
+    }
+  </div>
+
+  <footer class="mf">
+    @if (error()) { <span class="err">{{ error() }}</span> }
+    <button type="button" class="btn" (click)="close()">بستن</button>
+    @if (showForm()) { <button type="button" class="btn primary" (click)="save()" [disabled]="busy()">{{ busy() ? '...' : 'ذخیره' }}</button> }
+  </footer>
+</div>
+}

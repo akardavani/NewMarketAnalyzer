@@ -25,15 +25,12 @@ export class AppHttpInterceptor implements HttpInterceptor {
 
 
 
+
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     let headers = request.headers;
 
-    console.log('URL:', request.url);
-    console.log('Body constructor:', request.body?.constructor?.name);
-    console.log('Body value:', request.body);
-
     if (request.body instanceof FormData) {
-      // مرورگر باید Content-Type و boundary را خودش تنظیم کند.
+      // اجازه بده مرورگر Content-Type و boundary را تنظیم کند.
       headers = headers.delete('Content-Type');
 
       request = request.clone({ headers });
@@ -49,10 +46,6 @@ export class AppHttpInterceptor implements HttpInterceptor {
       request = request.clone({ headers });
     }
 
-    console.log('Interceptor URL:', request.url);
-    console.log('Interceptor Content-Type:', request.headers.get('Content-Type'));
-    console.log('Interceptor is FormData:', request.body instanceof FormData);
-
     return next
       .handle(request)
       .pipe(
@@ -67,7 +60,6 @@ export class AppHttpInterceptor implements HttpInterceptor {
         catchError(this.handleError)
       );
   }
-
 
   @bind()
   private tapResponse(response: HttpEvent<any>) {

@@ -22,6 +22,21 @@ namespace MarketAnalyzer.Persistence.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("BookmarkBookmarkTag", b =>
+                {
+                    b.Property<int>("BookmarkId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TagsId")
+                        .HasColumnType("int");
+
+                    b.HasKey("BookmarkId", "TagsId");
+
+                    b.HasIndex("TagsId");
+
+                    b.ToTable("BookmarkTagLinks", "Tools");
+                });
+
             modelBuilder.Entity("MarketAnalyzer.Abstractions.Audit", b =>
                 {
                     b.Property<long>("Id")
@@ -1964,6 +1979,138 @@ namespace MarketAnalyzer.Persistence.Migrations
                     b.ToTable("UserRoles", "membership");
                 });
 
+            modelBuilder.Entity("MarketAnalyzer.Tools.Domain.Bookmark", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("CollectionId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreationTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Creator")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ImageUrl")
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)");
+
+                    b.Property<bool>("IsFavorite")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Kind")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("LastModificationTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("LastModifier")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Note")
+                        .IsRequired()
+                        .HasMaxLength(4000)
+                        .HasColumnType("nvarchar(4000)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(300)
+                        .HasColumnType("nvarchar(300)");
+
+                    b.Property<string>("Url")
+                        .IsRequired()
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId", "CollectionId");
+
+                    b.ToTable("Bookmarks", "Tools");
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.Tools.Domain.BookmarkCollection", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreationTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Creator")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("LastModificationTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("LastModifier")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<int?>("ParentId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId", "ParentId");
+
+                    b.ToTable("BookmarkCollections", "Tools");
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.Tools.Domain.BookmarkTag", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreationTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Creator")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("LastModificationTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("LastModifier")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId", "Name")
+                        .IsUnique();
+
+                    b.ToTable("BookmarkTags", "Tools");
+                });
+
             modelBuilder.Entity("MarketAnalyzer.Tools.Domain.Note", b =>
                 {
                     b.Property<int>("Id")
@@ -2147,6 +2294,21 @@ namespace MarketAnalyzer.Persistence.Migrations
                     b.HasIndex("TagsId");
 
                     b.ToTable("ResourceTagLinks", "Tools");
+                });
+
+            modelBuilder.Entity("BookmarkBookmarkTag", b =>
+                {
+                    b.HasOne("MarketAnalyzer.Tools.Domain.Bookmark", null)
+                        .WithMany()
+                        .HasForeignKey("BookmarkId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MarketAnalyzer.Tools.Domain.BookmarkTag", null)
+                        .WithMany()
+                        .HasForeignKey("TagsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("MarketAnalyzer.Cms.Domain.ContactUs", b =>
