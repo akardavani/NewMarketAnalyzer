@@ -2154,6 +2154,95 @@ namespace MarketAnalyzer.Persistence.Migrations
                     b.ToTable("Notes", "Tools");
                 });
 
+            modelBuilder.Entity("MarketAnalyzer.Tools.Domain.PasswordEntry", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Cipher")
+                        .IsRequired()
+                        .HasMaxLength(32000)
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreationTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Creator")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Iv")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<DateTime>("LastModificationTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("LastModifier")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("PasswordEntries", "Tools");
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.Tools.Domain.PasswordVault", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreationTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Creator")
+                        .HasColumnType("int");
+
+                    b.Property<int>("KdfIterations")
+                        .HasColumnType("int");
+
+                    b.Property<string>("KdfSalt")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<DateTime>("LastModificationTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("LastModifier")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("VerifierCipher")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("VerifierIv")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId")
+                        .IsUnique();
+
+                    b.ToTable("PasswordVaults", "Tools");
+                });
+
             modelBuilder.Entity("MarketAnalyzer.Tools.Domain.Resource", b =>
                 {
                     b.Property<int>("Id")

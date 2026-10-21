@@ -16,6 +16,7 @@ import { CommandPaletteComponent } from './command-palette/command-palette.compo
 import { NotesPanelComponent } from '../../modules/tools/notes/notes-panel.component';
 import { ResourcesModalComponent } from '../../modules/tools/resources/resources-modal.component';
 import { BookmarksModalComponent } from '../../modules/tools/bookmarks/bookmarks-modal.component';
+import { PasswordsModalComponent } from '../../modules/tools/passwords/passwords-modal.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { GlobalImports } from '@imports';
 import { DateTime } from '@xobin/globalization';
@@ -27,7 +28,7 @@ import { bind, formatDateTime } from '@utils';
  */
 @Component({
   selector: 'fd-layout',
-  imports: [...GlobalImports, RouterOutlet, SidebarComponent, CommandPaletteComponent, ThemeCustomizerComponent, NotesPanelComponent, ResourcesModalComponent, BookmarksModalComponent],
+  imports: [...GlobalImports, RouterOutlet, SidebarComponent, CommandPaletteComponent, ThemeCustomizerComponent, NotesPanelComponent, ResourcesModalComponent, BookmarksModalComponent, PasswordsModalComponent],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss'
 })
