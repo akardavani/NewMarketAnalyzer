@@ -64,9 +64,9 @@
         <div class="item" [class.active]="b.id === activeId()" (click)="select(b)">
           @if (view() === 'card' && b.imageUrl) { <img class="thumb" [src]="b.imageUrl" alt="" loading="lazy" referrerpolicy="no-referrer" /> }
           <div class="it">
-            <b [title]="b.title">{{ b.title || host(b.url) }}</b>
+            <span class="tt"><b [title]="b.title">{{ b.title || host(b.url) }}</b>
+              @if (safeLink(b.url); as l) { <a class="go" [href]="l" target="_blank" rel="noopener noreferrer" (click)="$event.stopPropagation()" title="باز کردن لینک"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.7-1.7"/></svg></a> }</span>
             <span class="row">
-              @if (safeLink(b.url); as l) { <a class="go" [href]="l" target="_blank" rel="noopener noreferrer" (click)="$event.stopPropagation()" title="باز کردن لینک">↗</a> }
               <button type="button" class="star" [class.on]="b.isFavorite" (click)="toggleFav(b, $event)" title="علاقه‌مندی">{{ b.isFavorite ? '★' : '☆' }}</button>
               <button type="button" class="del" (click)="remove(b, $event)" title="حذف">×</button>
             </span>

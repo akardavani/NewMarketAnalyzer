@@ -61,3 +61,5 @@ textarea.inp { resize: vertical; }
 
 .go { text-decoration: none; color: var(--fd-text); padding: 0 4px; font-size: 14px; }
 .dinp { display: inline-block; width: 140px; }
+.tt { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.go { display: inline-flex; flex: none; color: var(--fd-primary); opacity: .85; &:hover { opacity: 1; } }

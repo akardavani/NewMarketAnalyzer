@@ -35,8 +35,8 @@ export class BookmarksModalComponent {
   readonly fCollection = signal<number | null>(null);
   readonly fFav = signal(false);
   readonly fKind = signal<number | null>(null);
-  readonly fFrom = signal<Date | null>(null);
-  readonly fTo = signal<Date | null>(null);
+  readonly fFrom = signal<Date | null>((() => { const d = new Date(); d.setMonth(d.getMonth() - 1); return d; })());
+  readonly fTo = signal<Date | null>(new Date());
 
   // فرم
   readonly activeId = signal(0);
@@ -117,10 +117,10 @@ export class BookmarksModalComponent {
   setDate(which: 'from' | 'to', v: Date | null): void { (which === 'from' ? this.fFrom : this.fTo).set(v); this.reload(); }
   clearFilters(): void {
     this.search.set(''); this.fTag.set(''); this.fCollection.set(null); this.fFav.set(false);
-    this.fKind.set(null); this.fFrom.set(null); this.fTo.set(null); this.reload();
+    this.fKind.set(null); const d = new Date(); this.fTo.set(d); const f = new Date(d); f.setMonth(f.getMonth() - 1); this.fFrom.set(f); this.reload();
   }
   get hasFilter(): boolean {
-    return !!(this.search() || this.fTag() || this.fCollection() || this.fFav() || this.fKind() !== null || this.fFrom() || this.fTo());
+    return !!(this.search() || this.fTag() || this.fCollection() || this.fFav() || this.fKind() !== null);
   }
 
   // ---- مجموعه‌ها
