@@ -69,6 +69,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketAnalyzer.Tools.Persis
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketAnalyzer.Tools.Application", "Tools\src\MarketAnalyzer.Tools.Application\MarketAnalyzer.Tools.Application.csproj", "{28A51E84-C742-440B-8A41-472C67A43817}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6C7A79E8-6CD5-CF81-41AE-9999620526E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketAnalyzer.MarketIntelligence.Providers", "MarketIntelligence\src\MarketAnalyzer.MarketIntelligence.Providers\MarketAnalyzer.MarketIntelligence.Providers.csproj", "{FE165F95-2888-4C96-BCF1-6BD5AEEA877A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -343,6 +347,18 @@ Global
 		{28A51E84-C742-440B-8A41-472C67A43817}.Release|x64.Build.0 = Release|Any CPU
 		{28A51E84-C742-440B-8A41-472C67A43817}.Release|x86.ActiveCfg = Release|Any CPU
 		{28A51E84-C742-440B-8A41-472C67A43817}.Release|x86.Build.0 = Release|Any CPU
+		{FE165F95-2888-4C96-BCF1-6BD5AEEA877A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE165F95-2888-4C96-BCF1-6BD5AEEA877A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE165F95-2888-4C96-BCF1-6BD5AEEA877A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FE165F95-2888-4C96-BCF1-6BD5AEEA877A}.Debug|x64.Build.0 = Debug|Any CPU
+		{FE165F95-2888-4C96-BCF1-6BD5AEEA877A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FE165F95-2888-4C96-BCF1-6BD5AEEA877A}.Debug|x86.Build.0 = Debug|Any CPU
+		{FE165F95-2888-4C96-BCF1-6BD5AEEA877A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE165F95-2888-4C96-BCF1-6BD5AEEA877A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE165F95-2888-4C96-BCF1-6BD5AEEA877A}.Release|x64.ActiveCfg = Release|Any CPU
+		{FE165F95-2888-4C96-BCF1-6BD5AEEA877A}.Release|x64.Build.0 = Release|Any CPU
+		{FE165F95-2888-4C96-BCF1-6BD5AEEA877A}.Release|x86.ActiveCfg = Release|Any CPU
+		{FE165F95-2888-4C96-BCF1-6BD5AEEA877A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -374,6 +390,8 @@ Global
 		{D8D6B48E-5EAE-40FE-AAE7-C303551F3904} = {1F9B1030-7EBA-4D60-A841-5F111C61486D}
 		{3D80BCA3-60FE-4EC3-A1E5-329FDAF7D368} = {1F9B1030-7EBA-4D60-A841-5F111C61486D}
 		{28A51E84-C742-440B-8A41-472C67A43817} = {1F9B1030-7EBA-4D60-A841-5F111C61486D}
+		{6C7A79E8-6CD5-CF81-41AE-9999620526E2} = {D46FE58B-DF6D-96A7-A280-4C4543FFD6BF}
+		{FE165F95-2888-4C96-BCF1-6BD5AEEA877A} = {6C7A79E8-6CD5-CF81-41AE-9999620526E2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8BD56F41-07E7-414B-B8BC-C138471C8E33}

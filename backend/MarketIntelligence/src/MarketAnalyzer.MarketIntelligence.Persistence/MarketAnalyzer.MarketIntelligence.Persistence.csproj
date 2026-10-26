@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup><TargetFramework>net8.0</TargetFramework><ImplicitUsings>enable</ImplicitUsings><Nullable>disable</Nullable></PropertyGroup>
   <ItemGroup>
 	  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.13" />
@@ -6,5 +6,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MarketAnalyzer.MarketIntelligence.Domain\MarketAnalyzer.MarketIntelligence.Domain.csproj" />
+    <!-- Phase 2: Storeها از IDbContext (Abstractions) استفاده می‌کنند؛ Persistence نباید به Application یا FundDbContext وابسته شود. -->
+    <ProjectReference Include="..\..\..\Common\src\MarketAnalyzer.Abstractions\MarketAnalyzer.Abstractions.csproj" />
   </ItemGroup>
 </Project>

@@ -7,6 +7,7 @@ using MarketAnalyzer.Infrastructure.Authentication.ApiKey;
 using MarketAnalyzer.MarketIntelligence.Application;
 using MarketAnalyzer.MarketIntelligence.Collectors;
 using MarketAnalyzer.MarketIntelligence.Infrastructure;
+using MarketAnalyzer.MarketIntelligence.Providers;
 using MarketAnalyzer.Membership.Application;
 using MarketAnalyzer.Tools.Application;
 using Microsoft.AspNetCore.Builder;
@@ -120,6 +121,7 @@ builder.Services.AddMembership();
 builder.Services.AddTools();
 builder.Services.AddMarketCollectors();
 builder.Services.AddMarketCollectorRunner();
+builder.Services.AddMarketDataProviders();
 
 //builder.Services.AddSejamClient(builder.Configuration);
 builder.Services.AddFundInfrastructure(builder.Configuration, true);
