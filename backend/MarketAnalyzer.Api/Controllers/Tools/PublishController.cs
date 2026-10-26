@@ -20,8 +20,7 @@ namespace MarketAnalyzer.Api.Controllers
             public int Id { get; set; }
             public string? Key { get; set; }
             public string? Title { get; set; }
-            public string? Group { get; set; }
-            public string? Path { get; set; }
+            public List<PublishFolderItem>? Folders { get; set; }
             public string? OutputPath { get; set; }
             public int DisplayOrder { get; set; }
             public bool IsActive { get; set; } = true;
@@ -45,7 +44,7 @@ namespace MarketAnalyzer.Api.Controllers
         public async Task<IActionResult> Save(SaveRequest r, CancellationToken ct)
             => !Allowed ? NotFound() : Ok(await Mediator.ExecuteAsync(new SavePublishTargetCommand
             {
-                Id = r.Id, Key = r.Key, Title = r.Title, Group = r.Group, Path = r.Path,
+                Id = r.Id, Key = r.Key, Title = r.Title, Folders = r.Folders,
                 OutputPath = r.OutputPath, DisplayOrder = r.DisplayOrder, IsActive = r.IsActive
             }, ct));
 

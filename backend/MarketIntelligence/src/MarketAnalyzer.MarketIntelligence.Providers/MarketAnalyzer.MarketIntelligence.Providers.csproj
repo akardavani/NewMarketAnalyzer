@@ -7,6 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <!-- لازم برای کلاینت SOAP سرویس TSETMC (ConnectedServices/TsePublic) -->
+    <PackageReference Include="System.ServiceModel.Http" Version="8.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\MarketAnalyzer.MarketIntelligence.Domain\MarketAnalyzer.MarketIntelligence.Domain.csproj" />
     <ProjectReference Include="..\MarketAnalyzer.MarketIntelligence.Application\MarketAnalyzer.MarketIntelligence.Application.csproj" />
   </ItemGroup>

@@ -16,13 +16,14 @@ namespace MarketAnalyzer.Tools.Application
         public int Id { get; init; }
         public string Key { get; init; } = "";
         public string Title { get; init; } = "";
-        public string? Group { get; init; }
-        public string Path { get; init; } = "";
+        public List<PublishFolderItem> Folders { get; init; } = new();
         public string OutputPath { get; init; } = "";
         public int DisplayOrder { get; init; }
         public bool IsActive { get; init; }
         public bool Exists { get; init; }
     }
+
+    public class PublishFolderItem { public string Name { get; init; } = ""; public string Path { get; init; } = ""; }
 
     public class PublishResult { public string Path { get; init; } = ""; public long Size { get; init; } }
 
@@ -36,12 +37,12 @@ namespace MarketAnalyzer.Tools.Application
 
         public async Task<List<PublishTargetItem>> HandleAsync(PublishTargetsQuery r, CancellationToken ct = default)
         {
-            var rows = await _db.Set<PublishTarget>().OrderBy(e => e.DisplayOrder).ThenBy(e => e.Title).ToListAsync(ct);
+            var rows = await _db.Set<PublishTarget>().Include(e => e.Folders).OrderBy(e => e.DisplayOrder).ThenBy(e => e.Title).ToListAsync(ct);
             return rows.Select(e => new PublishTargetItem
             {
-                Id = e.Id, Key = e.Key, Title = e.Title, Group = e.Group, Path = e.Path,
+                Id = e.Id, Key = e.Key, Title = e.Title, Folders = e.Folders.Select(f => new PublishFolderItem { Name = f.Name, Path = f.Path }).ToList(),
                 OutputPath = e.OutputPath, DisplayOrder = e.DisplayOrder, IsActive = e.IsActive,
-                Exists = Directory.Exists(e.Path)
+                Exists = e.Folders.All(f => Directory.Exists(f.Path))
             }).ToList();
         }
     }
@@ -52,8 +53,7 @@ namespace MarketAnalyzer.Tools.Application
         public int Id { get; init; }
         public string? Key { get; init; }
         public string? Title { get; init; }
-        public string? Group { get; init; }
-        public string? Path { get; init; }
+        public List<PublishFolderItem>? Folders { get; init; }
         public string? OutputPath { get; init; }
         public int DisplayOrder { get; init; }
         public bool IsActive { get; init; } = true;
@@ -68,11 +68,20 @@ namespace MarketAnalyzer.Tools.Application
         {
             var key = (r.Key ?? "").Trim();
             var title = (r.Title ?? "").Trim();
-            var path = (r.Path ?? "").Trim();
             var output = (r.OutputPath ?? "").Trim();
-            if (key.Length == 0 || title.Length == 0 || path.Length == 0 || output.Length == 0)
-                return ApiResult.FromError<int>("کلید، عنوان، مسیر و مسیر خروجی الزامی است.");
-            if (key.Length > 64 || title.Length > 200 || path.Length > 500 || output.Length > 500)
+            if (key.Length == 0 || title.Length == 0 || output.Length == 0)
+                return ApiResult.FromError<int>("کلید، عنوان و مسیر خروجی الزامی است.");
+            var folders = (r.Folders ?? new()).Where(f => f != null)
+                .Select(f => (Name: (f.Name ?? "").Trim(), Path: (f.Path ?? "").Trim()))
+                .Where(f => f.Name.Length > 0 || f.Path.Length > 0).ToList();
+            if (folders.Count == 0) return ApiResult.FromError<int>("حداقل یک پوشه‌ی پروژه لازم است.");
+            if (folders.Any(f => f.Name.Length == 0 || f.Name.Length > 100 || f.Name == "." || f.Name == ".." || f.Name.IndexOfAny(System.IO.Path.GetInvalidFileNameChars()) >= 0))
+                return ApiResult.FromError<int>("نام پوشه خالی یا نامعتبر است (فقط نام ساده مثل api).");
+            if (folders.Select(f => f.Name).Distinct(StringComparer.OrdinalIgnoreCase).Count() != folders.Count)
+                return ApiResult.FromError<int>("نام پوشه‌ها باید یکتا باشد.");
+            if (folders.Any(f => f.Path.Length > 500 || !System.IO.Path.IsPathRooted(f.Path) || f.Path.IndexOfAny(System.IO.Path.GetInvalidPathChars()) >= 0))
+                return ApiResult.FromError<int>("مسیر پوشه باید کامل و معتبر باشد (مثلا D:\\...).");
+            if (key.Length > 64 || title.Length > 200 || output.Length > 500)
                 return ApiResult.FromError<int>("طول یکی از فیلدها بیش از حد مجاز است.");
 
             if (await _db.Set<PublishTarget>().AnyAsync(e => e.Key == key && e.Id != r.Id, ct))
@@ -86,11 +95,10 @@ namespace MarketAnalyzer.Tools.Application
             }
             else
             {
-                e = await _db.Set<PublishTarget>().FirstOrDefaultAsync(x => x.Id == r.Id, ct)!;
+                e = await _db.Set<PublishTarget>().Include(x => x.Folders).FirstOrDefaultAsync(x => x.Id == r.Id, ct)!;
                 if (e is null) return ApiResult.FromError<int>("مورد وجود ندارد.");
             }
-            var g = r.Group?.Trim();
-            e.Update(key, title, string.IsNullOrEmpty(g) ? null : g, path, output, r.DisplayOrder, r.IsActive);
+            e.Update(key, title, output, r.DisplayOrder, r.IsActive, folders);
             await _db.SaveChangesAsync(ct);
             return ApiResult.From(e.Id);
         }
@@ -106,7 +114,7 @@ namespace MarketAnalyzer.Tools.Application
 
         public async Task<ApiResult<int>> HandleAsync(RemovePublishTargetCommand r, CancellationToken ct = default)
         {
-            var e = await _db.Set<PublishTarget>().FirstOrDefaultAsync(x => x.Id == r.Id, ct);
+            var e = await _db.Set<PublishTarget>().Include(x => x.Folders).FirstOrDefaultAsync(x => x.Id == r.Id, ct);
             if (e is null) return ApiResult.FromError<int>("مورد وجود ندارد.");
             _db.Set<PublishTarget>().Remove(e);
             await _db.SaveChangesAsync(ct);
@@ -131,16 +139,19 @@ namespace MarketAnalyzer.Tools.Application
             var keys = (r.Keys ?? new()).Distinct().ToList();
             if (keys.Count == 0) return ApiResult.FromError<PublishResult>("هیچ پوشه‌ای انتخاب نشده است.");
 
-            var selected = await _db.Set<PublishTarget>().Where(t => keys.Contains(t.Key) && t.IsActive)
-                .OrderBy(t => t.DisplayOrder).ToListAsync(ct);
-            if (selected.Count != keys.Count) return ApiResult.FromError<PublishResult>("پوشه نامعتبر یا غیرفعال است.");
+            var selected = await _db.Set<PublishTarget>().Include(t => t.Folders)
+                .Where(t => keys.Contains(t.Key) && t.IsActive).OrderBy(t => t.DisplayOrder).ToListAsync(ct);
+            if (selected.Count != keys.Count) return ApiResult.FromError<PublishResult>("مورد نامعتبر یا غیرفعال است.");
 
-            var missing = selected.Where(s => !Directory.Exists(s.Path)).Select(s => s.Title).ToList();
+            var missing = new List<string>();
+            foreach (var t in selected)
+                foreach (var f in t.Folders)
+                    if (!Directory.Exists(f.Path)) missing.Add(f.Path);
             if (missing.Count > 0) return ApiResult.FromError<PublishResult>("مسیر یافت نشد: " + string.Join("، ", missing));
 
             var outDir = selected[0].OutputPath;
             var zipPath = System.IO.Path.Combine(outDir, $"Publish_{DateTime.Now:yyyyMMdd_HHmmss}.zip");
-            var items = selected.Select(s => (s.Path, s.Key)).ToList();
+            var jobs = selected.Select(t => (t.Key, Folders: t.Folders.Select(f => (f.Name, f.Path)).ToList())).ToList();
 
             await Gate.WaitAsync(ct);
             try
@@ -149,7 +160,9 @@ namespace MarketAnalyzer.Tools.Application
                 {
                     Directory.CreateDirectory(outDir);
                     using var zip = ZipFile.Open(zipPath, ZipArchiveMode.Create);
-                    foreach (var (root, prefix) in items) AddFolder(zip, root, prefix);
+                    foreach (var j in jobs)
+                        foreach (var f in j.Folders)
+                            AddFolder(zip, f.Path, $"{j.Key}/{f.Name}");
                 }, ct);
             }
             finally { Gate.Release(); }

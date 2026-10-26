@@ -724,6 +724,130 @@ namespace MarketAnalyzer.Persistence.Migrations
                     b.ToTable("Users", "cms");
                 });
 
+            modelBuilder.Entity("MarketAnalyzer.MarketIntelligence.Domain.CorporateAction", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<byte>("ActionType")
+                        .HasColumnType("tinyint");
+
+                    b.Property<decimal>("AdjustmentFactor")
+                        .HasColumnType("decimal(28,12)");
+
+                    b.Property<decimal?>("Amount")
+                        .HasColumnType("decimal(28,10)");
+
+                    b.Property<DateTime>("CreatedAtUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<DateOnly>("EffectiveDate")
+                        .HasColumnType("date");
+
+                    b.Property<bool>("IsDateApproximate")
+                        .HasColumnType("bit");
+
+                    b.Property<byte>("Origin")
+                        .HasColumnType("tinyint");
+
+                    b.Property<int>("SymbolId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SymbolId", "ActionType", "EffectiveDate")
+                        .IsUnique();
+
+                    b.ToTable("CorporateActions", "marketintelligence");
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.MarketIntelligence.Domain.CurrentOrderBookLevel", b =>
+                {
+                    b.Property<int>("SymbolId")
+                        .HasColumnType("int");
+
+                    b.Property<byte>("Side")
+                        .HasColumnType("tinyint");
+
+                    b.Property<int>("LevelNumber")
+                        .HasColumnType("int");
+
+                    b.Property<int>("OrderCount")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(28,10)");
+
+                    b.Property<DateTime>("SnapshotTimeUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal>("Volume")
+                        .HasColumnType("decimal(28,8)");
+
+                    b.HasKey("SymbolId", "Side", "LevelNumber");
+
+                    b.ToTable("CurrentOrderBookLevels", "marketintelligence");
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.MarketIntelligence.Domain.CurrentSymbolState", b =>
+                {
+                    b.Property<int>("SymbolId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal?>("ClosePrice")
+                        .HasColumnType("decimal(28,10)");
+
+                    b.Property<decimal?>("HighPrice")
+                        .HasColumnType("decimal(28,10)");
+
+                    b.Property<decimal?>("LastPrice")
+                        .HasColumnType("decimal(28,10)");
+
+                    b.Property<decimal?>("LowPrice")
+                        .HasColumnType("decimal(28,10)");
+
+                    b.Property<decimal?>("OpenPrice")
+                        .HasColumnType("decimal(28,10)");
+
+                    b.Property<decimal?>("PreviousClosePrice")
+                        .HasColumnType("decimal(28,10)");
+
+                    b.Property<decimal?>("PriceLimitMax")
+                        .HasColumnType("decimal(28,10)");
+
+                    b.Property<decimal?>("PriceLimitMin")
+                        .HasColumnType("decimal(28,10)");
+
+                    b.Property<DateTime>("ReceivedAtUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("SourceTimestampUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("TradeCount")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("UpdatedAtUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal?>("Value")
+                        .HasColumnType("decimal(28,8)");
+
+                    b.Property<decimal?>("Volume")
+                        .HasColumnType("decimal(28,8)");
+
+                    b.HasKey("SymbolId");
+
+                    b.ToTable("CurrentSymbolStates", "marketintelligence");
+                });
+
             modelBuilder.Entity("MarketAnalyzer.MarketIntelligence.Domain.FundNavGap", b =>
                 {
                     b.Property<string>("Id")
@@ -754,6 +878,86 @@ namespace MarketAnalyzer.Persistence.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("FundNavGap", "marketintelligence");
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.MarketIntelligence.Domain.FundNavPoint", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<decimal?>("CancellationNav")
+                        .HasColumnType("decimal(28,10)");
+
+                    b.Property<DateOnly>("Date")
+                        .HasColumnType("date");
+
+                    b.Property<decimal?>("IssuanceNav")
+                        .HasColumnType("decimal(28,10)");
+
+                    b.Property<DateTime>("ReceivedAtUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal?>("StatisticalNav")
+                        .HasColumnType("decimal(28,10)");
+
+                    b.Property<int>("SymbolId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SymbolId", "Date")
+                        .IsUnique();
+
+                    b.ToTable("FundNavPoints", "marketintelligence");
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.MarketIntelligence.Domain.HistoricalCandle", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<decimal>("Close")
+                        .HasColumnType("decimal(28,10)");
+
+                    b.Property<decimal>("High")
+                        .HasColumnType("decimal(28,10)");
+
+                    b.Property<decimal>("Low")
+                        .HasColumnType("decimal(28,10)");
+
+                    b.Property<decimal>("Open")
+                        .HasColumnType("decimal(28,10)");
+
+                    b.Property<DateTime>("OpenTimeUtc")
+                        .HasColumnType("datetime2(0)");
+
+                    b.Property<DateTime>("ReceivedAtUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("SymbolId")
+                        .HasColumnType("int");
+
+                    b.Property<byte>("Timeframe")
+                        .HasColumnType("tinyint");
+
+                    b.Property<decimal?>("Value")
+                        .HasColumnType("decimal(28,8)");
+
+                    b.Property<decimal?>("Volume")
+                        .HasColumnType("decimal(28,8)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SymbolId", "Timeframe", "OpenTimeUtc")
+                        .IsUnique();
+
+                    b.ToTable("HistoricalCandles", "marketintelligence");
                 });
 
             modelBuilder.Entity("MarketAnalyzer.MarketIntelligence.Domain.InvestmentFund", b =>
@@ -1044,6 +1248,120 @@ namespace MarketAnalyzer.Persistence.Migrations
                     b.ToTable("InvestmentFundType", "marketintelligence");
                 });
 
+            modelBuilder.Entity("MarketAnalyzer.MarketIntelligence.Domain.InvestorTradingActivity", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<long>("IndividualBuyCount")
+                        .HasColumnType("bigint");
+
+                    b.Property<decimal>("IndividualBuyValue")
+                        .HasColumnType("decimal(28,8)");
+
+                    b.Property<decimal>("IndividualBuyVolume")
+                        .HasColumnType("decimal(28,8)");
+
+                    b.Property<long>("IndividualSellCount")
+                        .HasColumnType("bigint");
+
+                    b.Property<decimal>("IndividualSellValue")
+                        .HasColumnType("decimal(28,8)");
+
+                    b.Property<decimal>("IndividualSellVolume")
+                        .HasColumnType("decimal(28,8)");
+
+                    b.Property<long>("InstitutionalBuyCount")
+                        .HasColumnType("bigint");
+
+                    b.Property<decimal>("InstitutionalBuyValue")
+                        .HasColumnType("decimal(28,8)");
+
+                    b.Property<decimal>("InstitutionalBuyVolume")
+                        .HasColumnType("decimal(28,8)");
+
+                    b.Property<long>("InstitutionalSellCount")
+                        .HasColumnType("bigint");
+
+                    b.Property<decimal>("InstitutionalSellValue")
+                        .HasColumnType("decimal(28,8)");
+
+                    b.Property<decimal>("InstitutionalSellVolume")
+                        .HasColumnType("decimal(28,8)");
+
+                    b.Property<DateTime>("ReceivedAtUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("SymbolId")
+                        .HasColumnType("int");
+
+                    b.Property<DateOnly>("TradingDate")
+                        .HasColumnType("date");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SymbolId", "TradingDate")
+                        .IsUnique();
+
+                    b.ToTable("InvestorTradingActivities", "marketintelligence");
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.MarketIntelligence.Domain.MarketDefinition", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<byte>("CalendarKind")
+                        .HasColumnType("tinyint");
+
+                    b.Property<DateTime>("CreatedAtUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CurrencyCode")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Key")
+                        .IsRequired()
+                        .HasMaxLength(64)
+                        .HasColumnType("nvarchar(64)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("PersianName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("TimeZoneId")
+                        .IsRequired()
+                        .HasMaxLength(64)
+                        .HasColumnType("nvarchar(64)");
+
+                    b.Property<DateTime>("UpdatedAtUtc")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Key")
+                        .IsUnique();
+
+                    b.ToTable("MarketDefinitions", "marketintelligence");
+                });
+
             modelBuilder.Entity("MarketAnalyzer.MarketIntelligence.Domain.MarketRecord", b =>
                 {
                     b.Property<int>("Id")
@@ -1126,6 +1444,97 @@ namespace MarketAnalyzer.Persistence.Migrations
                             IsActive = true,
                             Name = "کریپتو تومان"
                         });
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.MarketIntelligence.Domain.MarketSetting", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Key")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Scope")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<DateTime>("UpdatedAtUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Value")
+                        .IsRequired()
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Scope", "Key")
+                        .IsUnique();
+
+                    b.ToTable("MarketSettings", "marketintelligence");
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.MarketIntelligence.Domain.MarketSymbol", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAtUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ExternalId")
+                        .HasMaxLength(64)
+                        .HasColumnType("nvarchar(64)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("MarketId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("MetadataJson")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("MetadataVersion")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("PersianName")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("SymbolKey")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<DateTime>("UpdatedAtUtc")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MarketId", "ExternalId");
+
+                    b.HasIndex("MarketId", "SymbolKey")
+                        .IsUnique();
+
+                    b.ToTable("MarketSymbols", "marketintelligence");
                 });
 
             modelBuilder.Entity("MarketAnalyzer.MarketIntelligence.Domain.SourceRecord", b =>
@@ -2243,6 +2652,55 @@ namespace MarketAnalyzer.Persistence.Migrations
                     b.ToTable("PasswordVaults", "Tools");
                 });
 
+            modelBuilder.Entity("MarketAnalyzer.Tools.Domain.PublishTarget", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreationTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Creator")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DisplayOrder")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Key")
+                        .IsRequired()
+                        .HasMaxLength(64)
+                        .HasColumnType("nvarchar(64)");
+
+                    b.Property<DateTime>("LastModificationTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("LastModifier")
+                        .HasColumnType("int");
+
+                    b.Property<string>("OutputPath")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Key")
+                        .IsUnique();
+
+                    b.ToTable("PublishTargets", "Tools");
+                });
+
             modelBuilder.Entity("MarketAnalyzer.Tools.Domain.Resource", b =>
                 {
                     b.Property<int>("Id")
@@ -2502,6 +2960,83 @@ namespace MarketAnalyzer.Persistence.Migrations
                         .HasForeignKey("NewsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.MarketIntelligence.Domain.CorporateAction", b =>
+                {
+                    b.HasOne("MarketAnalyzer.MarketIntelligence.Domain.MarketSymbol", "Symbol")
+                        .WithMany()
+                        .HasForeignKey("SymbolId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Symbol");
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.MarketIntelligence.Domain.CurrentOrderBookLevel", b =>
+                {
+                    b.HasOne("MarketAnalyzer.MarketIntelligence.Domain.MarketSymbol", "Symbol")
+                        .WithMany()
+                        .HasForeignKey("SymbolId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Symbol");
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.MarketIntelligence.Domain.CurrentSymbolState", b =>
+                {
+                    b.HasOne("MarketAnalyzer.MarketIntelligence.Domain.MarketSymbol", "Symbol")
+                        .WithOne()
+                        .HasForeignKey("MarketAnalyzer.MarketIntelligence.Domain.CurrentSymbolState", "SymbolId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Symbol");
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.MarketIntelligence.Domain.FundNavPoint", b =>
+                {
+                    b.HasOne("MarketAnalyzer.MarketIntelligence.Domain.MarketSymbol", "Symbol")
+                        .WithMany()
+                        .HasForeignKey("SymbolId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Symbol");
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.MarketIntelligence.Domain.HistoricalCandle", b =>
+                {
+                    b.HasOne("MarketAnalyzer.MarketIntelligence.Domain.MarketSymbol", "Symbol")
+                        .WithMany()
+                        .HasForeignKey("SymbolId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Symbol");
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.MarketIntelligence.Domain.InvestorTradingActivity", b =>
+                {
+                    b.HasOne("MarketAnalyzer.MarketIntelligence.Domain.MarketSymbol", "Symbol")
+                        .WithMany()
+                        .HasForeignKey("SymbolId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Symbol");
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.MarketIntelligence.Domain.MarketSymbol", b =>
+                {
+                    b.HasOne("MarketAnalyzer.MarketIntelligence.Domain.MarketDefinition", "Market")
+                        .WithMany()
+                        .HasForeignKey("MarketId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Market");
                 });
 
             modelBuilder.Entity("MarketAnalyzer.MarketIntelligence.Domain.UnifiedCandleRecord", b =>
@@ -2773,6 +3308,42 @@ namespace MarketAnalyzer.Persistence.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.Tools.Domain.PublishTarget", b =>
+                {
+                    b.OwnsMany("MarketAnalyzer.Tools.Domain.PublishFolder", "Folders", b1 =>
+                        {
+                            b1.Property<int>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("int");
+
+                            SqlServerPropertyBuilderExtensions.UseIdentityColumn(b1.Property<int>("Id"));
+
+                            b1.Property<string>("Name")
+                                .IsRequired()
+                                .HasMaxLength(100)
+                                .HasColumnType("nvarchar(100)");
+
+                            b1.Property<string>("Path")
+                                .IsRequired()
+                                .HasMaxLength(500)
+                                .HasColumnType("nvarchar(500)");
+
+                            b1.Property<int>("PublishTargetId")
+                                .HasColumnType("int");
+
+                            b1.HasKey("Id");
+
+                            b1.HasIndex("PublishTargetId");
+
+                            b1.ToTable("PublishTargetFolders", "Tools");
+
+                            b1.WithOwner()
+                                .HasForeignKey("PublishTargetId");
+                        });
+
+                    b.Navigation("Folders");
                 });
 
             modelBuilder.Entity("MarketAnalyzer.Tools.Domain.ResourceFile", b =>

@@ -1,0 +1,88 @@
+<button type="button" class="ibtn" (click)="toggle()" aria-label="Publish" title="Publish">
+  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M12 16V4M7 9l5-5 5 5" />
+    <path d="M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3" />
+  </svg>
+</button>
+
+@if (open()) {
+<div class="backdrop" (click)="close()"></div>
+<div class="modal" dir="rtl" role="dialog" aria-label="Publish">
+  <header class="mh">
+    <h3>Publish</h3>
+    <button type="button" class="x" (click)="close()" aria-label="بستن">×</button>
+  </header>
+
+  <div class="mb">
+    <aside class="list">
+      <div class="lh">
+        <input class="inp" type="search" placeholder="جست‌وجو..." [value]="search()" (input)="search.set($any($event.target).value)" />
+        <button type="button" class="btn" (click)="newItem()">+ جدید</button>
+      </div>
+      <div class="scroll">
+        @for (r of items(); track r.id) {
+        <div class="item" [class.active]="r.id === activeId()" (click)="select(r)">
+          <div class="it">
+            <span>
+              <input class="pick" type="checkbox" [checked]="isChecked(r.key)" [disabled]="!r.isActive" (click)="check(r, $event)" />
+              <b>{{ r.title }}</b>
+            </span>
+            <button type="button" class="del" (click)="remove(r, $event)" title="حذف">×</button>
+          </div>
+          <div class="im">
+            <span class="chip">{{ folderNames(r) }}</span>
+            @if (!r.isActive) { <span class="chip">غیرفعال</span> }
+            @if (r.exists === false) { <span class="warn">مسیر یافت نشد</span> }
+          </div>
+        </div>
+        } @empty {
+        <div class="empty">موردی یافت نشد</div>
+        }
+      </div>
+    </aside>
+
+    <section class="form scroll">
+      <label>کلید <span class="req">*</span></label>
+      <input class="inp" dir="ltr" [value]="key()" (input)="key.set($any($event.target).value)" maxlength="100" />
+
+      <label>عنوان <span class="req">*</span></label>
+      <input class="inp" [value]="title()" (input)="title.set($any($event.target).value)" maxlength="200" />
+
+      <label>پوشه‌های پروژه <span class="req">*</span></label>
+      <div class="chips">
+        @for (f of folders(); track f) {
+        <span class="chip" dir="ltr"><b>{{ f.name }}</b> → {{ f.path }} <button type="button" class="del" (click)="removeFolder(f)" title="حذف">×</button></span>
+        }
+      </div>
+      <input class="inp" dir="ltr" placeholder="نام (مثلا api)" [value]="newName()" (input)="newName.set($any($event.target).value)" />
+      <div class="result">
+        <input class="inp" dir="ltr" placeholder="D:\Total Solution\NewMarketAnalyzer\backend\MarketAnalyzer.Api" [value]="newPath()" (input)="newPath.set($any($event.target).value)" (keydown.enter)="addFolder()" />
+        <button type="button" class="btn" (click)="addFolder()">+ افزودن</button>
+      </div>
+
+      <label>مسیر خروجی (zip) <span class="req">*</span></label>
+      <input class="inp" dir="ltr" [value]="outputPath()" (input)="outputPath.set($any($event.target).value)" />
+
+      <label>ترتیب نمایش</label>
+      <input class="inp" type="number" [value]="displayOrder()" (input)="displayOrder.set(+$any($event.target).value)" />
+
+      <label class="check"><input type="checkbox" [checked]="isActive()" (change)="isActive.set($any($event.target).checked)" /> فعال</label>
+
+      @if (resultPath()) {
+      <label>خروجی</label>
+      <div class="result">
+        <input class="inp" readonly [value]="resultPath()" />
+        <button type="button" class="btn" (click)="copy()">کپی</button>
+      </div>
+      }
+    </section>
+  </div>
+
+  <footer class="mf">
+    @if (error()) { <span class="err">{{ error() }}</span> }
+    <button type="button" class="btn" (click)="close()">بستن</button>
+    <button type="button" class="btn" (click)="run()" [disabled]="busy() || !checked().length">اجرا ({{ checked().length }})</button>
+    <button type="button" class="btn primary" (click)="save()" [disabled]="busy()">{{ busy() ? '...' : 'ذخیره' }}</button>
+  </footer>
+</div>
+}

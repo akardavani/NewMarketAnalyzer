@@ -4,16 +4,31 @@
     ViewData["Title"] = "ورود";
     Layout = "_RegistrationLayout";
 }
+<style>
+    .login-wrap { min-height: 100vh; display:flex; align-items:center; justify-content:center; padding: 32px 16px; background: #eef2f5; }
+    .login-card { width: 100%; max-width: 1100px; background:#fff; border-radius: 24px; overflow:hidden; box-shadow: 0 25px 60px rgba(4,80,80,.25); }
+    .login-card > .row { margin:0; }
+    .login-hero { position: relative; min-height: 640px; background: url("~/images/Slide_20231061141194.jpg") center/cover no-repeat; color:#fff; display:flex; flex-direction:column; align-items:center; justify-content:center; padding: 48px; }
+    .login-hero::before { content:""; position:absolute; inset:0; background: linear-gradient(160deg, rgba(4,80,80,.92), rgba(9,100,100,.75)); }
+    .login-hero > * { position: relative; }
+    .login-hero h2 { font-size: 1.9rem; font-weight: 800; margin-top: 16px; text-align:center; }
+    .login-hero p { opacity:.9; text-align:center; margin-top: 8px; }
+    .login-form-col { padding: 56px 64px !important; display:flex; flex-direction:column; justify-content:center; }
+    .login-form-col .regestration-form { max-width: 420px; margin: 0 auto; }
+    @media (max-width: 991px) { .login-hero { min-height: 220px; } .login-form-col { padding: 32px 24px !important; } }
+</style>
 
-<section class="signup-section d-flex align-items-center justify-content-center min-vh-100">
-    <div class="container shadow-lg h-auto rounded-3">
-        <div class="row">
-            <div class="col-lg-6 col-12 text-center p-lg-5">
-                <a asp-page="Index">
-                    <img class="logo img-fluid mt-4 d-lg-none" src="~/images/Mobin-Logo.png" alt="لوگوی مبین سرمایه" />
-                </a>
-                <header class="mt-4 w-100" data-type='pre-titles'>ورود به صندوق سرمایه‌گذاری مبین سرمایه</header>
-                <p data-type="small-text">در صورتی که سجامی نیستید، برای ثبت‌نام در سجام <a href="https://profilesejam.csdiran.ir/" class="hyper-link" target="_blank" rel="noopener">اینجا</a> کلیک کنید. </p>
+<section class="login-wrap">
+    <div class="login-card">
+        <div class="row g-0">
+            <div class="login-hero col-lg-5 col-12 order-lg-2">
+                <img class="logo img-fluid" style="max-width:220px" src="~/images/Mobin-Logo-White.png" alt="لوگوی مبین سرمایه" />
+                <h2>سامانه جامع تحلیل بازار</h2>
+                <p>صندوق سرمایه‌گذاری مشترک مبین سرمایه</p>
+            </div>
+            <div class="login-form-col col-lg-7 col-12 order-lg-1 text-center">
+                <header class="mt-2 mb-2 w-100 fw-bold" style="font-size:1.6rem" data-type='pre-titles'>ورود به حساب کاربری</header>
+                <p data-type="small-text">در صورتی که سجامی نیستید، برای ثبت‌نام در سجام <a href="https://profilesejam.csdiran.ir/" class="hyper-link" target="_blank" rel="noopener">اینجا</a> کلیک کنید.</p>
 
                 <div class="regestration-form w-100">
                     <div class="alert alert-danger mt-2" asp-validation-summary="ModelOnly"></div>
@@ -76,44 +91,6 @@
                         <p class="m-0">
                             <a asp-page="ForgotPassword" class="hyper-link">فراموشی رمز عبور</a>
                         </p>
-                    </div>
-                </div>
-            </div>
-            <div class="registration-left-col col-lg-6 col-12 rounded-3 py-5 mt-5 mt-md-0">
-                <div class="d-flex flex-column align-items-center justify-content-end">
-                    <a asp-page="Index">
-                        <img class="logo img-fluid my-4 d-none d-lg-block" src="~/images/Mobin-Logo-White.png" alt="لوگوی مبین سرمایه" />
-                    </a>
-                    <div class="security-tips px-5 py-2 text-right">
-                        <p class="fw-bold">نکات امنیتی</p>
-                        <ul class="security-tips-list mb-2">
-                            <li>
-                                شماره پشتیبانی مستقیم: 1579
-                            </li>
-                            <li>
-                                صندوق سرمایه‌گذاری مشترک این کارگزاری با استفاده از پروتکل امن SSL و به آدرس https://smart.mobinsb.ir در اختیار مشتریان کارگزاری قرار دارد.
-                            </li>
-                            <li>
-                                لطفاً پیش از ورود هرگونه اطلاعات، آدرس موجود در بخش مرورگر خود را با آدرس فوق مقایسه نمایید. درصورت مشاهده هر نوع مغایرت احتمالی، از ادامه کار منصرف شده و موضوع را با ما در میان بگذارید.
-                            </li>
-                            <li>
-                                هرگز نام کاربری و کلمه عبور خود را در اختیار دیگران قرار ندهید.
-                            </li>
-                            <li>
-                                پس از اتمام کار با سامانه، حتماً با استفاده از دکمه خروج، از حساب کاربری خود خارج شوید.
-                            </li>
-                            <li>از ذخیره نام کاربری و رمز عبور در مرورگر حتی المقدور خودداری نمایید.</li>
-                        </ul>
-                    </div>
-                    <div class="d-flex flex-column justify-content-center align-items-center mt-4 p-3 rounded-3 support-center">
-                        <p class="d-block">تماس با پشتیبانی</p>
-                        <a href="tel:1579">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" style="-webkit-transform: scaleX(-1);
-  transform: scaleX(-1);" class="bi bi-telephone-fill" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
-                            </svg>
-                            1579
-                        </a>
                     </div>
                 </div>
             </div>

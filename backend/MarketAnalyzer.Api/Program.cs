@@ -5,8 +5,10 @@ using MarketAnalyzer.Cms.Application;
 using MarketAnalyzer.Infrastructure;
 using MarketAnalyzer.Infrastructure.Authentication.ApiKey;
 using MarketAnalyzer.MarketIntelligence.Application;
+using MarketAnalyzer.MarketIntelligence.Application.MarketData.Ingestion;
 using MarketAnalyzer.MarketIntelligence.Collectors;
 using MarketAnalyzer.MarketIntelligence.Infrastructure;
+using MarketAnalyzer.MarketIntelligence.Persistence;
 using MarketAnalyzer.MarketIntelligence.Providers;
 using MarketAnalyzer.Membership.Application;
 using MarketAnalyzer.Tools.Application;
@@ -121,7 +123,10 @@ builder.Services.AddMembership();
 builder.Services.AddTools();
 builder.Services.AddMarketCollectors();
 builder.Services.AddMarketCollectorRunner();
-builder.Services.AddMarketDataProviders();
+
+builder.Services.AddMarketDataStores();      // Storeها (فاز ۲): IMarketDefinitionStore و بقیه
+builder.Services.AddMarketDataIngestion();   // هستهٔ ingestion + IProviderSettings + Resolver (فاز ۳ و ۴-الف)
+builder.Services.AddMarketDataProviders(builder.Configuration);
 
 //builder.Services.AddSejamClient(builder.Configuration);
 builder.Services.AddFundInfrastructure(builder.Configuration, true);

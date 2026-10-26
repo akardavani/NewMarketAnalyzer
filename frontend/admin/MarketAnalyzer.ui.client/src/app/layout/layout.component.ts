@@ -10,7 +10,17 @@ import { ShellStateService } from '@services/shell-state.service';
 import { ThemeService } from '@services/theme.service';
 import { ITreeNode } from '@components/tree-view/tree-view.component';
 import { ThemeCustomizerComponent } from '@components/theme-customizer/theme-customizer.component';
-import { PublishModalComponent } from '@components/publish-modal/publish-modal.component';
+
+// Tools
+
+import { PublishModalComponent } from '../../modules/tools/publish-modal/publish-modal.component';
+import { NotesPanelComponent } from '../../modules/tools/notes/notes-panel.component';
+import { ResourcesModalComponent } from '../../modules/tools/resources/resources-modal.component';
+import { BookmarksModalComponent } from '../../modules/tools/bookmarks/bookmarks-modal.component';
+import { PasswordsModalComponent } from '../../modules/tools/passwords/passwords-modal.component';
+
+// ***
+
 import { ChangePasswordComponent } from '../pages/change-password/change-password.component';
 import { NotificationComponent } from '../components/notification/notification.component';
 import { CommandPaletteComponent } from './command-palette/command-palette.component';
@@ -25,7 +35,8 @@ import { bind, formatDateTime } from '@utils';
  */
 @Component({
   selector: 'fd-layout',
-  imports: [...GlobalImports, RouterOutlet, SidebarComponent, CommandPaletteComponent, ThemeCustomizerComponent, PublishModalComponent],
+  imports: [...GlobalImports, RouterOutlet, SidebarComponent, CommandPaletteComponent, ThemeCustomizerComponent,
+                              PublishModalComponent, NotesPanelComponent, ResourcesModalComponent, BookmarksModalComponent, PasswordsModalComponent],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss'
 })
