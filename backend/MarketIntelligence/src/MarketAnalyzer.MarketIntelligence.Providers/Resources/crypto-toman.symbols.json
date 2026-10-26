@@ -1,0 +1,56 @@
+﻿[
+  {
+    "key": "USDT-IRT",
+    "base": "USDT",
+    "quote": "IRT",
+    "persianName": "تتر - تومان"
+  },
+  {
+    "key": "XAUT-IRT",
+    "base": "XAUT",
+    "quote": "IRT",
+    "persianName": "طلای کریپتو - تومان"
+  },
+  {
+    "key": "USOON-USDT",
+    "base": "USOON",
+    "quote": "USDT",
+    "persianName": "گواهی نفت دیجیتال - تتر"
+  },
+  {
+    "key": "BTC-IRT",
+    "base": "BTC",
+    "quote": "IRT",
+    "persianName": "بیتکوین - تومان"
+  },
+  {
+    "key": "TRX-IRT",
+    "base": "TRX",
+    "quote": "IRT",
+    "persianName": "ترون - تومان"
+  },
+  {
+    "key": "ETH-IRT",
+    "base": "ETH",
+    "quote": "IRT",
+    "persianName": "اتریموم - تومان"
+  },
+  {
+    "key": "BNB-IRT",
+    "base": "BNB",
+    "quote": "IRT",
+    "persianName": "بایننس - تومان"
+  },
+  {
+    "key": "LTC-IRT",
+    "base": "LTC",
+    "quote": "IRT",
+    "persianName": "لایت کوین - تومان"
+  },
+  {
+    "key": "LINK-IRT",
+    "base": "LINK",
+    "quote": "IRT",
+    "persianName": "لینک - تومان"
+  }
+]

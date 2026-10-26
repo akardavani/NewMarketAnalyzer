@@ -38,6 +38,12 @@ namespace MarketAnalyzer.MarketIntelligence.Application.MarketData.Providers
         /// <summary>وضعیت تعدیل کندل‌هایی که منبع می‌دهد.</summary>
         public AdjustmentMode Adjustment { get; init; } = AdjustmentMode.NotApplicable;
 
+        /// <summary>
+        /// وقتی یک بازار برای یک قابلیت چند Provider دارد و اپراتور هنوز انتخاب نکرده، Bootstrap این Provider را پیش‌فرض انتخاب می‌کند.
+        /// برای هر (بازار، قابلیت) حداکثر یک Provider باید true باشد.
+        /// </summary>
+        public bool IsDefault { get; init; }
+
         /// <summary>سقف تعداد درخواست در دقیقه به منبع؛ خالی یعنی محدودیت اعلام‌شده‌ای نیست.</summary>
         public int? MaxRequestsPerMinute { get; init; }
     }

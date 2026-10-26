@@ -12,6 +12,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <!-- فهرست‌های ثابت نمادها (کریپتو-تومان، ماکرو و...) داخل DLL می‌آیند؛ با Bootstrap به دیتابیس می‌روند، نه با Seed دستی. -->
+    <EmbeddedResource Include="Resources\**\*.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\MarketAnalyzer.MarketIntelligence.Domain\MarketAnalyzer.MarketIntelligence.Domain.csproj" />
     <ProjectReference Include="..\MarketAnalyzer.MarketIntelligence.Application\MarketAnalyzer.MarketIntelligence.Application.csproj" />
   </ItemGroup>

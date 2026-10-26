@@ -15,6 +15,8 @@
         /// <summary>نام فارسی.</summary>
         public string? PersianName { get; init; }
 
+        public string CurrencyCode { get; init; }
+
         /// <summary>آیا منبع نماد را فعال می‌داند؟</summary>
         public bool IsActive { get; init; } = true;
 

@@ -37,6 +37,27 @@ namespace MarketAnalyzer.MarketIntelligence.Providers
             AddProvider<TsetmcStockOrderBookProvider>(services);
             AddProvider<TsetmcStockInvestorActivityProvider>(services);
 
+            // --- کریپتو-تومان: فهرست ثابت + Wallex و Nobitex (قابل‌تعویض؛ پیش‌فرض Wallex) ---
+            services.AddSingleton<IProviderSettingDefaults, WallexSettingDefaults>();
+            services.AddSingleton<IProviderSettingDefaults, NobitexSettingDefaults>();
+            services.AddHttpClient<WallexCandleClient>(client => client.Timeout = TimeSpan.FromSeconds(30));
+            services.AddHttpClient<NobitexCandleClient>(client => client.Timeout = TimeSpan.FromSeconds(30));
+            AddProvider<CryptoTomanCatalogProvider>(services);
+            AddProvider<WallexCandleProvider>(services);
+            AddProvider<NobitexCandleProvider>(services);
+
+            // --- کلان (طلا و ارز): فهرست ثابت + Tgju ---
+            services.AddSingleton<IProviderSettingDefaults, TgjuSettingDefaults>();
+            services.AddHttpClient<TgjuCandleClient>(client => client.Timeout = TimeSpan.FromSeconds(30));
+            AddProvider<MacroCatalogProvider>(services);
+            AddProvider<TgjuCandleProvider>(services);
+
+            // --- کریپتوی دلاری: KuCoin (فهرست و کندل) ---
+            services.AddSingleton<IProviderSettingDefaults, KucoinSettingDefaults>();
+            services.AddHttpClient<KucoinClient>(client => client.Timeout = TimeSpan.FromSeconds(30));
+            AddProvider<KucoinCatalogProvider>(services);
+            AddProvider<KucoinCandleProvider>(services);
+
             return services;
         }
 

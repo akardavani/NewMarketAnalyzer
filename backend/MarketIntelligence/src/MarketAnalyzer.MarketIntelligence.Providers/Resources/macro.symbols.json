@@ -1,0 +1,128 @@
+﻿[
+  {
+    "key": "PRICE_DOLLAR_RL",
+    "persianName": "دلار",
+    "currency": "IRR",
+    "goldType": 1,
+    "parent": null
+  },
+  {
+    "key": "SEKEE",
+    "persianName": "سکه امامی",
+    "currency": "IRR",
+    "goldType": 1,
+    "parent": null
+  },
+  {
+    "key": "RETAIL_NIM",
+    "persianName": "نیم سکه",
+    "currency": "IRR",
+    "goldType": 1,
+    "parent": null
+  },
+  {
+    "key": "RETAIL_SEKEB",
+    "persianName": "سکه بهار آزادی",
+    "currency": "IRR",
+    "goldType": 1,
+    "parent": null
+  },
+  {
+    "key": "RETAIL_ROB",
+    "persianName": "ربع سکه",
+    "currency": "IRR",
+    "goldType": 1,
+    "parent": null
+  },
+  {
+    "key": "RETAIL_GERAMI",
+    "persianName": "سکه گرمی",
+    "currency": "IRR",
+    "goldType": 1,
+    "parent": null
+  },
+  {
+    "key": "MESGHAL",
+    "persianName": "مثقال",
+    "currency": "IRR",
+    "goldType": 1,
+    "parent": null
+  },
+  {
+    "key": "GOLD_MINI_SIZE",
+    "persianName": "طلای دست دوم",
+    "currency": "IRR",
+    "goldType": 1,
+    "parent": null
+  },
+  {
+    "key": "GERAM18",
+    "persianName": "طلای 18 عیار",
+    "currency": "IRR",
+    "goldType": 1,
+    "parent": null
+  },
+  {
+    "key": "GERAM24",
+    "persianName": "طلای 24 عیار",
+    "currency": "IRR",
+    "goldType": 1,
+    "parent": null
+  },
+  {
+    "key": "ONS",
+    "persianName": "انس جهانی",
+    "currency": "USD",
+    "goldType": 1,
+    "parent": null
+  },
+  {
+    "key": "silver_999",
+    "persianName": "نقره",
+    "currency": "IRR",
+    "goldType": 1,
+    "parent": null
+  },
+  {
+    "key": "nima_buy_usd",
+    "persianName": "دلار نیمایی",
+    "currency": "IRR",
+    "goldType": 1,
+    "parent": null
+  },
+  {
+    "key": "COIN_BLUBBER",
+    "persianName": "حباب سکه امامی",
+    "currency": "PCT",
+    "goldType": 2,
+    "parent": "SEKEE"
+  },
+  {
+    "key": "SEKEB_BLUBBER",
+    "persianName": "حباب سکه بهار آزادی",
+    "currency": "PCT",
+    "goldType": 2,
+    "parent": "RETAIL_SEKEB"
+  },
+  {
+    "key": "NIM_BLUBBER",
+    "persianName": "حباب نیم سکه",
+    "currency": "PCT",
+    "goldType": 2,
+    "parent": "RETAIL_NIM"
+  },
+  {
+    "key": "ROB_BLUBBER",
+    "persianName": "حباب ربع سکه",
+    "currency": "PCT",
+    "goldType": 2,
+    "parent": "RETAIL_ROB"
+  },
+  {
+    "key": "GERAMI_BLUBBER",
+    "persianName": "حباب سکه گرمی",
+    "currency": "PCT",
+    "goldType": 2,
+    "parent": "RETAIL_GERAMI"
+  }
+]
