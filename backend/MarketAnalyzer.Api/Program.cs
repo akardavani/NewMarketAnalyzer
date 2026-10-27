@@ -6,6 +6,7 @@ using MarketAnalyzer.Infrastructure;
 using MarketAnalyzer.Infrastructure.Authentication.ApiKey;
 using MarketAnalyzer.MarketIntelligence.Application;
 using MarketAnalyzer.MarketIntelligence.Application.MarketData.Ingestion;
+using MarketAnalyzer.MarketIntelligence.Application.MarketData.Operations;
 using MarketAnalyzer.MarketIntelligence.Collectors;
 using MarketAnalyzer.MarketIntelligence.Infrastructure;
 using MarketAnalyzer.MarketIntelligence.Persistence;
@@ -121,8 +122,13 @@ builder.Services.AddSingleton(Options.Create(urlSettings));
 builder.Services.AddCms();
 builder.Services.AddMembership();
 builder.Services.AddTools();
-builder.Services.AddMarketCollectors();
-builder.Services.AddMarketCollectorRunner();
+//builder.Services.AddMarketCollectors();
+//builder.Services.AddMarketCollectorRunner();
+
+builder.Services.AddMarketDataStores();
+builder.Services.AddMarketDataIngestion();
+builder.Services.AddMarketDataProviders(builder.Configuration);
+builder.Services.AddMarketDataOperations(builder.Configuration);
 
 builder.Services.AddMarketDataStores();      // Storeها (فاز ۲): IMarketDefinitionStore و بقیه
 builder.Services.AddMarketDataIngestion();   // هستهٔ ingestion + IProviderSettings + Resolver (فاز ۳ و ۴-الف)

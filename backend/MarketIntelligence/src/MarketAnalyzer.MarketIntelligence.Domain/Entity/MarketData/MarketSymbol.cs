@@ -20,6 +20,7 @@
 
         /// <summary>شناسهٔ نماد در منبع بیرونی (مثلاً InsCode در TSETMC). ممکن است خالی باشد.</summary>
         public string? ExternalId { get; set; }
+        public string CurrencyCode { get; set; }
 
         /// <summary>نام انگلیسی یا لاتین نماد.</summary>
         public string? Name { get; set; }
