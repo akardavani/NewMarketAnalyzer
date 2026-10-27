@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
+using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -122,7 +123,7 @@ namespace MarketAnalyzer.Tools.Application
         }
     }
 
-    // ---- run: zip انتخاب‌شده‌ها در OutputPath اولین مورد
+    // ---- run: publish selected projects, then zip only their publish output
     public class RunPublishCommand : IRequest<ApiResult<PublishResult>>
     {
         public required List<string> Keys { get; init; }
@@ -136,52 +137,204 @@ namespace MarketAnalyzer.Tools.Application
 
         public async Task<ApiResult<PublishResult>> HandleAsync(RunPublishCommand r, CancellationToken ct = default)
         {
-            var keys = (r.Keys ?? new()).Distinct().ToList();
-            if (keys.Count == 0) return ApiResult.FromError<PublishResult>("هیچ پوشه‌ای انتخاب نشده است.");
+            var keys = (r.Keys ?? new()).Where(k => !string.IsNullOrWhiteSpace(k))
+                .Distinct(StringComparer.OrdinalIgnoreCase).ToList();
+            if (keys.Count == 0)
+                return ApiResult.FromError<PublishResult>("هیچ پوشه‌ای انتخاب نشده است.");
 
             var selected = await _db.Set<PublishTarget>().Include(t => t.Folders)
-                .Where(t => keys.Contains(t.Key) && t.IsActive).OrderBy(t => t.DisplayOrder).ToListAsync(ct);
-            if (selected.Count != keys.Count) return ApiResult.FromError<PublishResult>("مورد نامعتبر یا غیرفعال است.");
+                .Where(t => keys.Contains(t.Key) && t.IsActive)
+                .OrderBy(t => t.DisplayOrder).ToListAsync(ct);
 
-            var missing = new List<string>();
-            foreach (var t in selected)
-                foreach (var f in t.Folders)
-                    if (!Directory.Exists(f.Path)) missing.Add(f.Path);
-            if (missing.Count > 0) return ApiResult.FromError<PublishResult>("مسیر یافت نشد: " + string.Join("، ", missing));
+            if (selected.Count != keys.Count)
+                return ApiResult.FromError<PublishResult>("مورد نامعتبر یا غیرفعال است.");
+
+            var invalidFolders = selected.SelectMany(t => t.Folders
+                    .Where(f => !Directory.Exists(f.Path))
+                    .Select(f => f.Path))
+                .ToList();
+            if (invalidFolders.Count > 0)
+                return ApiResult.FromError<PublishResult>("مسیر یافت نشد: " + string.Join("، ", invalidFolders));
 
             var outDir = selected[0].OutputPath;
-            var zipPath = System.IO.Path.Combine(outDir, $"Publish_{DateTime.Now:yyyyMMdd_HHmmss}.zip");
-            var jobs = selected.Select(t => (t.Key, Folders: t.Folders.Select(f => (f.Name, f.Path)).ToList())).ToList();
+            if (string.IsNullOrWhiteSpace(outDir))
+                return ApiResult.FromError<PublishResult>("مسیر خروجی ZIP معتبر نیست.");
+
+            var zipPath = Path.Combine(outDir, $"Publish_{DateTime.Now:yyyyMMdd_HHmmss}.zip");
+            var tempRoot = Path.Combine(Path.GetTempPath(), "PouyaFundPublish", Guid.NewGuid().ToString("N"));
 
             await Gate.WaitAsync(ct);
             try
             {
-                await Task.Run(() =>
-                {
-                    Directory.CreateDirectory(outDir);
-                    using var zip = ZipFile.Open(zipPath, ZipArchiveMode.Create);
-                    foreach (var j in jobs)
-                        foreach (var f in j.Folders)
-                            AddFolder(zip, f.Path, $"{j.Key}/{f.Name}");
-                }, ct);
-            }
-            finally { Gate.Release(); }
+                Directory.CreateDirectory(outDir);
+                Directory.CreateDirectory(tempRoot);
 
-            return ApiResult.From(new PublishResult { Path = zipPath, Size = new System.IO.FileInfo(zipPath).Length });
+                using (var zip = ZipFile.Open(zipPath, ZipArchiveMode.Create))
+                {
+                    foreach (var target in selected)
+                    {
+                        foreach (var folder in target.Folders)
+                        {
+                            ct.ThrowIfCancellationRequested();
+
+                            var projectFile = FindProjectFile(folder.Path);
+                            var safeKey = MakeSafeSegment(target.Key);
+                            var safeName = MakeSafeSegment(folder.Name);
+                            var publishDirectory = Path.Combine(tempRoot, safeKey, safeName);
+
+                            Directory.CreateDirectory(publishDirectory);
+                            await PublishProjectAsync(projectFile, publishDirectory, target.Title, folder.Name, ct);
+                            CleanPublishOutput(publishDirectory);
+                            AddFolder(zip, publishDirectory, $"{target.Key}/{folder.Name}");
+                        }
+                    }
+                }
+
+                return ApiResult.From(new PublishResult
+                {
+                    Path = zipPath,
+                    Size = new System.IO.FileInfo(zipPath).Length
+                });
+            }
+            catch (OperationCanceledException)
+            {
+                TryDeleteFile(zipPath);
+                throw;
+            }
+            catch (Exception ex)
+            {
+                TryDeleteFile(zipPath);
+                return ApiResult.FromError<PublishResult>("انتشار یا ساخت ZIP ناموفق بود: " + ex.Message);
+            }
+            finally
+            {
+                try
+                {
+                    if (Directory.Exists(tempRoot)) Directory.Delete(tempRoot, recursive: true);
+                }
+                catch
+                {
+                    // A temporary directory cleanup failure must not hide the publish result/error.
+                }
+                Gate.Release();
+            }
+        }
+
+        private static string FindProjectFile(string projectDirectory)
+        {
+            var projects = Directory.GetFiles(projectDirectory, "*.csproj", SearchOption.TopDirectoryOnly);
+            if (projects.Length != 1)
+                throw new InvalidOperationException(
+                    $"در مسیر '{projectDirectory}' باید دقیقاً یک فایل csproj وجود داشته باشد؛ تعداد پیدا شده: {projects.Length}.");
+            return projects[0];
+        }
+
+        private static async Task PublishProjectAsync(
+            string projectFile, string outputDirectory, string targetTitle, string folderName, CancellationToken ct)
+        {
+            var startInfo = new ProcessStartInfo
+            {
+                FileName = "dotnet",
+                UseShellExecute = false,
+                RedirectStandardOutput = true,
+                RedirectStandardError = true,
+                CreateNoWindow = true
+            };
+            startInfo.ArgumentList.Add("publish");
+            startInfo.ArgumentList.Add(projectFile);
+            startInfo.ArgumentList.Add("--configuration");
+            startInfo.ArgumentList.Add("Release");
+            startInfo.ArgumentList.Add("--output");
+            startInfo.ArgumentList.Add(outputDirectory);
+
+            using var process = new Process { StartInfo = startInfo };
+            try
+            {
+                if (!process.Start())
+                    throw new InvalidOperationException("اجرای dotnet publish شروع نشد.");
+            }
+            catch (System.ComponentModel.Win32Exception ex)
+            {
+                throw new InvalidOperationException("دستور dotnet پیدا نشد یا قابل اجرا نیست. نصب بودن .NET SDK و PATH را بررسی کنید.", ex);
+            }
+
+            var stdoutTask = process.StandardOutput.ReadToEndAsync();
+            var stderrTask = process.StandardError.ReadToEndAsync();
+            try
+            {
+                await process.WaitForExitAsync(ct);
+            }
+            catch (OperationCanceledException)
+            {
+                try { process.Kill(entireProcessTree: true); } catch { }
+                throw;
+            }
+
+            var stdout = await stdoutTask;
+            var stderr = await stderrTask;
+            if (process.ExitCode != 0)
+            {
+                var details = string.Join(Environment.NewLine,
+                    new[] { stdout.Trim(), stderr.Trim() }.Where(x => x.Length > 0));
+                if (details.Length > 5000) details = details[^5000..];
+                throw new InvalidOperationException(
+                    $"dotnet publish برای '{targetTitle} / {folderName}' ناموفق بود (ExitCode={process.ExitCode}).{Environment.NewLine}{details}");
+            }
+        }
+
+        private static void CleanPublishOutput(string directory)
+        {
+            // Same cleanup intent as Publish-PouyaFund.ps1.
+            foreach (var file in Directory.EnumerateFiles(directory, "*", SearchOption.AllDirectories).ToList())
+            {
+                var name = Path.GetFileName(file);
+                if ((name.StartsWith("appsettings", StringComparison.OrdinalIgnoreCase) &&
+                     name.EndsWith(".json", StringComparison.OrdinalIgnoreCase)) ||
+                    name.EndsWith(".log", StringComparison.OrdinalIgnoreCase) ||
+                    name.Contains(".log.", StringComparison.OrdinalIgnoreCase))
+                {
+                    File.Delete(file);
+                }
+            }
+
+            foreach (var folder in Directory.EnumerateDirectories(directory, "*", SearchOption.AllDirectories)
+                         .Where(d => Path.GetFileName(d).Equals("Logs", StringComparison.OrdinalIgnoreCase) ||
+                                     Path.GetFileName(d).Equals("Log", StringComparison.OrdinalIgnoreCase))
+                         .OrderByDescending(d => d.Length).ToList())
+            {
+                if (Directory.Exists(folder)) Directory.Delete(folder, recursive: true);
+            }
         }
 
         private static void AddFolder(ZipArchive zip, string root, string prefix)
         {
             foreach (var file in Directory.EnumerateFiles(root, "*", SearchOption.AllDirectories))
             {
-                var rel = System.IO.Path.GetRelativePath(root, file).Replace('\\', '/');
-                var name = System.IO.Path.GetFileName(file);
-                if (name.StartsWith("appsettings", StringComparison.OrdinalIgnoreCase) && name.EndsWith(".json", StringComparison.OrdinalIgnoreCase)) continue;
-                if (name.EndsWith(".log", StringComparison.OrdinalIgnoreCase)) continue;
-                var first = rel.Split('/')[0];
-                if (rel.Contains('/') && (first.Equals("logs", StringComparison.OrdinalIgnoreCase) || first.Equals("log", StringComparison.OrdinalIgnoreCase))) continue;
+                var rel = Path.GetRelativePath(root, file).Replace('\\', '/');
+                var name = Path.GetFileName(file);
+                if (name.StartsWith("appsettings", StringComparison.OrdinalIgnoreCase) &&
+                    name.EndsWith(".json", StringComparison.OrdinalIgnoreCase)) continue;
+                if (name.EndsWith(".log", StringComparison.OrdinalIgnoreCase) ||
+                    name.Contains(".log.", StringComparison.OrdinalIgnoreCase)) continue;
+                if (rel.Split('/').Any(part => part.Equals("logs", StringComparison.OrdinalIgnoreCase) ||
+                                               part.Equals("log", StringComparison.OrdinalIgnoreCase))) continue;
                 zip.CreateEntryFromFile(file, $"{prefix}/{rel}", CompressionLevel.Optimal);
             }
         }
+
+        private static string MakeSafeSegment(string value)
+        {
+            var invalid = Path.GetInvalidFileNameChars();
+            var cleaned = new string(value.Select(ch => invalid.Contains(ch) ? '_' : ch).ToArray());
+            if (string.IsNullOrWhiteSpace(cleaned) || cleaned == "." || cleaned == "..")
+                throw new InvalidOperationException("نام پوشه برای ساخت مسیر موقت معتبر نیست.");
+            return cleaned;
+        }
+
+        private static void TryDeleteFile(string path)
+        {
+            try { if (File.Exists(path)) File.Delete(path); } catch { }
+        }
     }
+
 }
