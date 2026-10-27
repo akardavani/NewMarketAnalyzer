@@ -1495,6 +1495,10 @@ namespace MarketAnalyzer.Persistence.Migrations
                     b.Property<DateTime>("CreatedAtUtc")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("CurrencyCode")
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
                     b.Property<string>("ExternalId")
                         .HasMaxLength(64)
                         .HasColumnType("nvarchar(64)");

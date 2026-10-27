@@ -22,7 +22,7 @@ namespace MarketAnalyzer.MarketIntelligence.Persistence
             builder.Property(x => x.Origin).HasConversion<byte>();
             builder.Property(x => x.AdjustmentFactor).HasColumnType(MarketDataModelConstants.FactorColumnType);
             builder.Property(x => x.Amount).HasColumnType(MarketDataModelConstants.PriceColumnType);
-            builder.Property(x => x.Description).HasMaxLength(500);
+            builder.Property(x => x.Description).HasMaxLength(500).IsRequired(false); // اختیاری (نگاه کن به توضیح MarketSymbolConfiguration)
 
             // یک رویداد از یک نوع در یک روز برای یک نماد فقط یک‌بار ثبت می‌شود.
             builder.HasIndex(x => new { x.SymbolId, x.ActionType, x.EffectiveDate }).IsUnique();

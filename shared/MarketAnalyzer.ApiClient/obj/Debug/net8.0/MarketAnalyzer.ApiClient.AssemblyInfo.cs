@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MarketAnalyzer.ApiClient")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6420031b1eacc811b12a522219f20b2879fef703")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+780dd5d221faad88e91d9f396b05f9e4b7748843")]
 [assembly: System.Reflection.AssemblyProductAttribute("MarketAnalyzer.ApiClient")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MarketAnalyzer.ApiClient")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -6,6 +6,9 @@
         /// <summary>شناسهٔ عددی نماد.</summary>
         public required int SymbolId { get; init; }
 
+        /// <summary>واحد پول قیمت‌های این نماد (واحد نماد، وگرنه واحد بازار). مصرف‌کننده‌ها برای تبدیل واحد فقط از همین استفاده کنند.</summary>
+        public required string CurrencyCode { get; init; }
+
         /// <summary>شناسهٔ بازار.</summary>
         public required int MarketId { get; init; }
 

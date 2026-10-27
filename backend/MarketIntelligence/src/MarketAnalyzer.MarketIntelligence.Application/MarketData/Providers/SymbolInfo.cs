@@ -9,13 +9,14 @@
         /// <summary>شناسهٔ نماد در منبع بیرونی (مثلاً InsCode)؛ ممکن است خالی باشد.</summary>
         public string? ExternalId { get; init; }
 
+        /// <summary>واحد پول قیمت این نماد اگر با واحد پیش‌فرض بازار (در ProviderDescriptor) فرق دارد؛ خالی یعنی همان واحد بازار.</summary>
+        public string? CurrencyCode { get; init; }
+
         /// <summary>نام انگلیسی یا لاتین.</summary>
         public string? Name { get; init; }
 
         /// <summary>نام فارسی.</summary>
         public string? PersianName { get; init; }
-
-        public string CurrencyCode { get; init; }
 
         /// <summary>آیا منبع نماد را فعال می‌داند؟</summary>
         public bool IsActive { get; init; } = true;

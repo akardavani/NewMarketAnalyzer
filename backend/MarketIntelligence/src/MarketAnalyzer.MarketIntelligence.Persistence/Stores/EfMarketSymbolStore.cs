@@ -60,6 +60,7 @@ namespace MarketAnalyzer.MarketIntelligence.Persistence
                     }
 
                     var changed = current.ExternalId != item.ExternalId
+                                  || current.CurrencyCode != item.CurrencyCode
                                   || current.Name != item.Name
                                   || current.PersianName != item.PersianName
                                   || current.MetadataJson != item.MetadataJson
@@ -69,6 +70,7 @@ namespace MarketAnalyzer.MarketIntelligence.Persistence
                         continue;
 
                     current.ExternalId = item.ExternalId;
+                    current.CurrencyCode = item.CurrencyCode;
                     current.Name = item.Name;
                     current.PersianName = item.PersianName;
                     current.MetadataJson = item.MetadataJson;

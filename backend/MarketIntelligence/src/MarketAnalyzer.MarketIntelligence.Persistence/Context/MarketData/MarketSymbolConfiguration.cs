@@ -20,6 +20,7 @@ namespace MarketAnalyzer.MarketIntelligence.Persistence
 
             builder.Property(x => x.SymbolKey).HasMaxLength(100).IsRequired();
             builder.Property(x => x.ExternalId).HasMaxLength(64);
+            builder.Property(x => x.CurrencyCode).HasMaxLength(10);
             builder.Property(x => x.Name).HasMaxLength(200);
             builder.Property(x => x.PersianName).HasMaxLength(200);
 

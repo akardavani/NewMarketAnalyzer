@@ -160,7 +160,10 @@ namespace MarketAnalyzer.MarketIntelligence.Application.MarketData.Operations
                         // هر نماد Scope جدا دارد: DbContext و Providerهای Scoped بین رشته‌ها مشترک نشوند.
                         using var symbolScope = _scopes.CreateScope();
                         var ssp = symbolScope.ServiceProvider;
-                        var symbolProvider = ssp.GetServices<IHistoricalCandleProvider>()
+                        // مشکل: Providerها فقط با IMarketDataProvider (و نوع خودشان) در DI ثبت می‌شوند، نه با IHistoricalCandleProvider؛
+                        // GetServices<IHistoricalCandleProvider>() خالی برمی‌گشت و First استثنا می‌داد. باید از فهرست عمومی فیلتر کرد.
+                        var symbolProvider = ssp.GetServices<IMarketDataProvider>()
+                            .OfType<IHistoricalCandleProvider>()
                             .First(p => p.Descriptor.ProviderKey == providerKey && p.Descriptor.MarketKey == market.Key);
 
                         SymbolIngestionResult r;

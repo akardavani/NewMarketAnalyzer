@@ -21,7 +21,7 @@ namespace MarketAnalyzer.MarketIntelligence.Persistence
             builder.Property(x => x.Scope).HasMaxLength(100).IsRequired();
             builder.Property(x => x.Key).HasMaxLength(100).IsRequired();
             builder.Property(x => x.Value).HasMaxLength(2000).IsRequired();
-            builder.Property(x => x.UpdatedBy).HasMaxLength(100);
+            builder.Property(x => x.UpdatedBy).HasMaxLength(100).IsRequired(false); // اختیاری (نگاه کن به توضیح MarketSymbolConfiguration)
 
             // یک تنظیم در هر محدوده فقط یک مقدار دارد.
             builder.HasIndex(x => new { x.Scope, x.Key }).IsUnique();

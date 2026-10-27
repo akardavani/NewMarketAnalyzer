@@ -15,6 +15,13 @@ namespace MarketAnalyzer.MarketIntelligence.Providers
         /// <param name="configuration">اختیاری؛ اگر داده شود بخش <see cref="TsetmcOptions.SectionName"/> (User Secrets / Environment) به TsetmcOptions bind می‌شود.</param>
         public static IServiceCollection AddMarketDataProviders(this IServiceCollection services, IConfiguration? configuration = null)
         {
+            // مشکل: اگر این متد دوبار صدا زده شود (مثلاً یک‌بار در Program.cs و یک‌بار داخل یک Extension دیگر)، هر Provider دوبار در
+            // IEnumerable<IMarketDataProvider> می‌آید و Resolver و Bootstrap «۲ Provider و ۲ پیش‌فرض» می‌بینند و هیچ منبعی انتخاب نمی‌شود.
+            // راه‌حل: ثبت idempotent است؛ بار دوم هیچ کاری نمی‌کند.
+            if (services.Any(d => d.ServiceType == typeof(ProvidersRegistrationMarker)))
+                return services;
+            services.AddSingleton<ProvidersRegistrationMarker>();
+
             if (configuration != null)
                 services.Configure<TsetmcOptions>(configuration.GetSection(TsetmcOptions.SectionName));
             else
@@ -89,5 +96,10 @@ namespace MarketAnalyzer.MarketIntelligence.Providers
             services.AddScoped<TProvider>();
             services.AddScoped<IMarketDataProvider>(sp => sp.GetRequiredService<TProvider>());
         }
+    }
+
+    /// <summary>نشانهٔ «ثبت Providerها انجام شده» برای جلوگیری از ثبت دوباره.</summary>
+    internal sealed class ProvidersRegistrationMarker
+    {
     }
 }

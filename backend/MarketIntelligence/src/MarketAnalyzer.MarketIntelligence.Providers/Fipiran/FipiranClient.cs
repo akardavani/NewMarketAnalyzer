@@ -52,7 +52,7 @@ namespace MarketAnalyzer.MarketIntelligence.Providers
             var url = await _settings.GetAsync(ProviderKey, FundsUrlKey, ct)
                       ?? throw new InvalidOperationException($"Setting '{FundsUrlKey}' of provider '{ProviderKey}' is not configured.");
 
-            using var doc = JsonDocument.Parse(await GetStringAsync(url, referer: "https://fipiran.ir/", ct));
+            using var doc = JsonDocument.Parse(await GetStringAsync(url, referer: "https://fipiran.ir/", ct, postOnMethodNotAllowed: true));
             var root = doc.RootElement;
 
             if (root.ValueKind != JsonValueKind.Object || !root.TryGetProperty("items", out var items) || items.ValueKind != JsonValueKind.Array)
@@ -73,20 +73,46 @@ namespace MarketAnalyzer.MarketIntelligence.Providers
             return await GetStringAsync(template.Replace("@RegNo", encoded), $"https://fipiran.ir/mf/profile/{encoded}/", ct);
         }
 
-        private async Task<string> GetStringAsync(string url, string referer, CancellationToken ct)
+        /// <summary>
+        /// درخواست GET. مشکل: آدرس فهرست صندوق‌ها (fundcompare) با GET پاسخ 405 (Method Not Allowed) می‌دهد؛ کد قدیمی خطا را می‌بلعید و
+        /// فهرست خالی برمی‌گرداند، پس هیچ‌وقت معلوم نبود. راه‌حل: با <paramref name="postOnMethodNotAllowed"/> بعد از 405 یک‌بار با POST و بدنهٔ
+        /// خالی JSON تلاش می‌شود. اگر این هم کار نکرد، درخواست واقعی سایت را از Network مرورگر بردار و بفرست.
+        /// </summary>
+        private async Task<string> GetStringAsync(string url, string referer, CancellationToken ct, bool postOnMethodNotAllowed = false)
         {
-            using var request = new HttpRequestMessage(HttpMethod.Get, url);
-            request.Headers.Accept.ParseAdd("application/json, text/plain, */*");
-            request.Headers.AcceptLanguage.ParseAdd("en-US,en;q=0.9,fa;q=0.8");
-            request.Headers.Referrer = new Uri(referer);
-
             var userAgent = await _settings.GetAsync(ProviderKey, UserAgentKey, ct);
-            if (!string.IsNullOrWhiteSpace(userAgent))
-                request.Headers.UserAgent.ParseAdd(userAgent);
 
-            using var response = await _http.SendAsync(request, ct);
-            response.EnsureSuccessStatusCode();
-            return await response.Content.ReadAsStringAsync(ct);
+            HttpRequestMessage Build(HttpMethod method)
+            {
+                var request = new HttpRequestMessage(method, url);
+                request.Headers.Accept.ParseAdd("application/json, text/plain, */*");
+                request.Headers.AcceptLanguage.ParseAdd("en-US,en;q=0.9,fa;q=0.8");
+                request.Headers.Referrer = new Uri(referer);
+                if (!string.IsNullOrWhiteSpace(userAgent))
+                    request.Headers.UserAgent.ParseAdd(userAgent);
+                if (method == HttpMethod.Post)
+                    request.Content = new StringContent("{}", System.Text.Encoding.UTF8, "application/json");
+                return request;
+            }
+
+            using var get = Build(HttpMethod.Get);
+            var response = await _http.SendAsync(get, ct);
+            try
+            {
+                if (response.StatusCode == System.Net.HttpStatusCode.MethodNotAllowed && postOnMethodNotAllowed)
+                {
+                    response.Dispose();
+                    using var post = Build(HttpMethod.Post);
+                    response = await _http.SendAsync(post, ct);
+                }
+
+                response.EnsureSuccessStatusCode();
+                return await response.Content.ReadAsStringAsync(ct);
+            }
+            finally
+            {
+                response.Dispose();
+            }
         }
     }
 }

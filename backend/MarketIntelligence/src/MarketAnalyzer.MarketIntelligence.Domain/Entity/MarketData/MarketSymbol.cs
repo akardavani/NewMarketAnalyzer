@@ -20,7 +20,12 @@
 
         /// <summary>شناسهٔ نماد در منبع بیرونی (مثلاً InsCode در TSETMC). ممکن است خالی باشد.</summary>
         public string? ExternalId { get; set; }
-        public string CurrencyCode { get; set; }
+
+        /// <summary>
+        /// واحد پول قیمت‌های این نماد (مثلاً IRR، IRT، USD، USDT) اگر با واحد پیش‌فرض بازار فرق دارد؛ خالی یعنی همان واحد بازار.
+        /// مثال: در بازار کریپتو، جفت‌ارز ETH-BTC قیمتش به BTC است نه USDT.
+        /// </summary>
+        public string? CurrencyCode { get; set; }
 
         /// <summary>نام انگلیسی یا لاتین نماد.</summary>
         public string? Name { get; set; }
