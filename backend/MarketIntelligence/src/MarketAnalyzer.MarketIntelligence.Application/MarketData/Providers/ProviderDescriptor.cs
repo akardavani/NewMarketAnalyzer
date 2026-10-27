@@ -44,6 +44,12 @@ namespace MarketAnalyzer.MarketIntelligence.Application.MarketData.Providers
         /// </summary>
         public bool IsDefault { get; init; }
 
+        /// <summary>
+        /// فاصلهٔ پیشنهادی دریافت کندل برای این بازار (پیش‌فرضی که Bootstrap در MarketSettings می‌نویسد).
+        /// برای منابع کم‌تغییر یا سنگین (مثل ماهانهٔ املاک با ۸۰۰+ نماد) بزرگ‌تر از پیش‌فرض عمومی (۶ ساعت) می‌گذاریم. خالی یعنی پیش‌فرض عمومی.
+        /// </summary>
+        public TimeSpan? CandleRefreshInterval { get; init; }
+
         /// <summary>سقف تعداد درخواست در دقیقه به منبع؛ خالی یعنی محدودیت اعلام‌شده‌ای نیست.</summary>
         public int? MaxRequestsPerMinute { get; init; }
     }

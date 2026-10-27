@@ -1,0 +1,807 @@
+﻿[
+  {
+    "key": "SILDY01",
+    "persianName": "قرارداد آتی نقره تحویل دی ماه 1401",
+    "deliveryDate": "2023-01-18",
+    "persianDeliveryDate": "1401/10/28",
+    "parent": "BaseIme-Silver"
+  },
+  {
+    "key": "ETCFA02",
+    "persianName": "قرارداد آتی صندوق طلا تحویل فروردین ماه 1402",
+    "deliveryDate": "2023-04-19",
+    "persianDeliveryDate": "1402/01/30",
+    "parent": "IRTKLOTF0001"
+  },
+  {
+    "key": "SAFOR02",
+    "persianName": "قرارداد آتی زعفران نگین تحویل اردیبهشت ماه 1402",
+    "deliveryDate": "2023-05-21",
+    "persianDeliveryDate": "1402/02/31",
+    "parent": null
+  },
+  {
+    "key": "SILBA01",
+    "persianName": "قرارداد آتی نقره تحویل بهمن ماه 1401",
+    "deliveryDate": "2023-02-13",
+    "persianDeliveryDate": "1401/11/24",
+    "parent": "BaseIme-Silver"
+  },
+  {
+    "key": "SILES01",
+    "persianName": "قرارداد آتی نقره تحویل اسفند ماه 1401",
+    "deliveryDate": "2023-03-13",
+    "persianDeliveryDate": "1401/12/22",
+    "parent": "BaseIme-Silver"
+  },
+  {
+    "key": "SAFTR02",
+    "persianName": "قرارداد آتی زعفران نگین تحویل تیر ماه 1402",
+    "deliveryDate": "2023-07-16",
+    "persianDeliveryDate": "1402/04/25",
+    "parent": null
+  },
+  {
+    "key": "ETCKH02",
+    "persianName": "قرارداد آتی صندوق طلا تحویل خرداد ماه 1402",
+    "deliveryDate": "2023-06-21",
+    "persianDeliveryDate": "1402/03/31",
+    "parent": "IRTKLOTF0001"
+  },
+  {
+    "key": "SAFSH02",
+    "persianName": "قرارداد آتی زعفران نگین تحویل شهریور ماه 1402",
+    "deliveryDate": "2023-09-18",
+    "persianDeliveryDate": "1402/06/27",
+    "parent": null
+  },
+  {
+    "key": "SILOR02",
+    "persianName": "قرارداد آتی نقره تحویل اردیبهشت ماه 1402",
+    "deliveryDate": "2023-05-09",
+    "persianDeliveryDate": "1402/02/19",
+    "parent": "BaseIme-Silver"
+  },
+  {
+    "key": "ETCMO02",
+    "persianName": "قرارداد آتی صندوق طلا تحویل مرداد ماه 1402",
+    "deliveryDate": "2023-08-16",
+    "persianDeliveryDate": "1402/05/25",
+    "parent": "IRTKLOTF0001"
+  },
+  {
+    "key": "ETCME02",
+    "persianName": "قرارداد آتی صندوق طلا تحویل مهر ماه 1402",
+    "deliveryDate": "2023-10-18",
+    "persianDeliveryDate": "1402/07/26",
+    "parent": "IRTKLOTF0001"
+  },
+  {
+    "key": "ETCAZ02",
+    "persianName": "قرارداد آتی صندوق طلای لوتوس تحویل آذر ماه 1402",
+    "deliveryDate": "2023-12-13",
+    "persianDeliveryDate": "1402/09/22",
+    "parent": "IRTKLOTF0001"
+  },
+  {
+    "key": "ETCBA02",
+    "persianName": "قرارداد آتی صندوق طلای لوتوس تحویل بهمن ماه 1402",
+    "deliveryDate": "2024-01-31",
+    "persianDeliveryDate": "1402/11/11",
+    "parent": "IRTKLOTF0001"
+  },
+  {
+    "key": "SILKH02",
+    "persianName": "قرارداد آتی نقره تحویل خرداد ماه 1402",
+    "deliveryDate": "2023-06-19",
+    "persianDeliveryDate": "1402/03/29",
+    "parent": "BaseIme-Silver"
+  },
+  {
+    "key": "GB19OR02",
+    "persianName": "قرارداد آتی شمش طلای خام 995 تحویل 19 اردیبهشت ماه 1402",
+    "deliveryDate": "2023-05-09",
+    "persianDeliveryDate": "1402/02/19",
+    "parent": null
+  },
+  {
+    "key": "GB22KH02",
+    "persianName": "قرارداد آتی شمش طلای خام 995 تحویل 22 خرداد ماه 1402",
+    "deliveryDate": "2023-06-12",
+    "persianDeliveryDate": "1402/03/22",
+    "parent": null
+  },
+  {
+    "key": "GB05TR02",
+    "persianName": "قرارداد آتی شمش طلای خام 995 تحویل 5 تیر ماه 1402",
+    "deliveryDate": "2023-06-26",
+    "persianDeliveryDate": "1402/04/05",
+    "parent": null
+  },
+  {
+    "key": "SILSH02",
+    "persianName": "قرارداد آتی نقره تحویل شهریور ماه 1402",
+    "deliveryDate": "2023-09-19",
+    "persianDeliveryDate": "1402/06/28",
+    "parent": "BaseIme-Silver"
+  },
+  {
+    "key": "SAFAB02",
+    "persianName": "قرارداد آتی زعفران نگین تحویل آبان ماه 1402",
+    "deliveryDate": "2023-11-19",
+    "persianDeliveryDate": "1402/08/28",
+    "parent": null
+  },
+  {
+    "key": "GB17TR02",
+    "persianName": "قرارداد آتی شمش طلای خام 995 تحویل 17 تیر ماه 1402",
+    "deliveryDate": "2023-07-08",
+    "persianDeliveryDate": "1402/04/17",
+    "parent": null
+  },
+  {
+    "key": "ETCFA03",
+    "persianName": "قرارداد آتی صندوق طلای لوتوس تحویل فروردین ماه 1403",
+    "deliveryDate": "2024-04-17",
+    "persianDeliveryDate": "1403/01/29",
+    "parent": "IRTKLOTF0001"
+  },
+  {
+    "key": "ETCKH03",
+    "persianName": "قرارداد آتی صندوق طلای لوتوس تحویل خرداد ماه 1403",
+    "deliveryDate": "2024-06-19",
+    "persianDeliveryDate": "1403/03/30",
+    "parent": "IRTKLOTF0001"
+  },
+  {
+    "key": "GB31TR02",
+    "persianName": "قرارداد آتی شمش طلای خام 995 تحویل 31 تیر ماه 1402",
+    "deliveryDate": "2023-07-22",
+    "persianDeliveryDate": "1402/04/31",
+    "parent": null
+  },
+  {
+    "key": "SILAZ02",
+    "persianName": "قرارداد آتی نقره تحویل آذر ماه 1402",
+    "deliveryDate": "2023-12-11",
+    "persianDeliveryDate": "1402/09/20",
+    "parent": "BaseIme-Silver"
+  },
+  {
+    "key": "GB28MO02",
+    "persianName": "قرارداد آتی شمش طلای خام 995 تحویل 28 مرداد ماه 1402",
+    "deliveryDate": "2023-08-19",
+    "persianDeliveryDate": "1402/05/28",
+    "parent": null
+  },
+  {
+    "key": "SILES02",
+    "persianName": "قرارداد آتی نقره تحویل اسفند ماه 1402",
+    "deliveryDate": "2024-03-04",
+    "persianDeliveryDate": "1402/12/14",
+    "parent": "BaseIme-Silver"
+  },
+  {
+    "key": "GB29SH02",
+    "persianName": "قرارداد آتی شمش طلای خام 995 تحویل 29 شهریور ماه 1402",
+    "deliveryDate": "2023-09-20",
+    "persianDeliveryDate": "1402/06/29",
+    "parent": null
+  },
+  {
+    "key": "GB29ME02",
+    "persianName": "قرارداد آتی شمش طلای خام 995 تحویل 29 مهر ماه 1402",
+    "deliveryDate": "2023-10-21",
+    "persianDeliveryDate": "1402/07/29",
+    "parent": null
+  },
+  {
+    "key": "GB30AB02",
+    "persianName": "قرارداد آتی شمش طلای خام 995 تحویل 30 آبان ماه 1402",
+    "deliveryDate": "2023-11-21",
+    "persianDeliveryDate": "1402/08/30",
+    "parent": null
+  },
+  {
+    "key": "SAFES02",
+    "persianName": "قرارداد آتی زعفران نگین تحویل اسفند ماه 1402",
+    "deliveryDate": "2024-03-09",
+    "persianDeliveryDate": "1402/12/19",
+    "parent": null
+  },
+  {
+    "key": "GB28AZ02",
+    "persianName": "قرارداد آتی شمش طلای خام 995 تحویل 28 آذر ماه 1402",
+    "deliveryDate": "2023-12-19",
+    "persianDeliveryDate": "1402/09/28",
+    "parent": null
+  },
+  {
+    "key": "ETCMO03",
+    "persianName": "قرارداد آتی صندوق طلای لوتوس تحویل مرداد ماه 1403",
+    "deliveryDate": "2024-08-14",
+    "persianDeliveryDate": "1403/05/24",
+    "parent": "IRTKLOTF0001"
+  },
+  {
+    "key": "SAFOR03",
+    "persianName": "قرارداد آتی زعفران نگین تحویل اردیبهشت ماه 1403",
+    "deliveryDate": "2024-05-14",
+    "persianDeliveryDate": "1403/02/25",
+    "parent": null
+  },
+  {
+    "key": "GB15ES02",
+    "persianName": "قرارداد آتی شمش طلای خام 995 تحویل 15 اسفند ماه 1402",
+    "deliveryDate": "2024-03-05",
+    "persianDeliveryDate": "1402/12/15",
+    "parent": null
+  },
+  {
+    "key": "PSAZ02",
+    "persianName": "قرارداد آتی پسته بادامی تحویل آذر ماه 1402",
+    "deliveryDate": "2023-12-09",
+    "persianDeliveryDate": "1402/09/18",
+    "parent": null
+  },
+  {
+    "key": "SILME02",
+    "persianName": "قرارداد آتی نقره تحویل مهر ماه 1402",
+    "deliveryDate": "2023-10-16",
+    "persianDeliveryDate": "1402/07/24",
+    "parent": "BaseIme-Silver"
+  },
+  {
+    "key": "PSBA02",
+    "persianName": "قرارداد آتی پسته بادامی تحویل بهمن ماه 1402",
+    "deliveryDate": "2024-02-19",
+    "persianDeliveryDate": "1402/11/30",
+    "parent": null
+  },
+  {
+    "key": "GB31OR03",
+    "persianName": "قرارداد آتی شمش طلای خام 995 تحویل 31 اردیبهشت ماه 1403",
+    "deliveryDate": "2024-05-21",
+    "persianDeliveryDate": "1403/03/01",
+    "parent": null
+  },
+  {
+    "key": "SILAB02",
+    "persianName": "قرارداد آتی نقره تحویل آبان ماه 1402",
+    "deliveryDate": "2023-11-14",
+    "persianDeliveryDate": "1402/08/23",
+    "parent": "BaseIme-Silver"
+  },
+  {
+    "key": "GB31TR03",
+    "persianName": "قرارداد آتی شمش طلای خام 995 تحویل 31 تیر ماه 1403",
+    "deliveryDate": "2024-07-21",
+    "persianDeliveryDate": "1403/04/31",
+    "parent": null
+  },
+  {
+    "key": "SAFTR03",
+    "persianName": "قرارداد آتی زعفران نگین تحویل تیر ماه 1403",
+    "deliveryDate": "2024-07-13",
+    "persianDeliveryDate": "1403/04/23",
+    "parent": null
+  },
+  {
+    "key": "KBBA02",
+    "persianName": "قرارداد آتی صندوق طلای کهربا تحویل بهمن ماه 1402",
+    "deliveryDate": "2024-02-13",
+    "persianDeliveryDate": "1402/11/24",
+    "parent": null
+  },
+  {
+    "key": "GB27SH03",
+    "persianName": "قرارداد آتی شمش طلای خام 995 تحویل 27 شهریور ماه 1403",
+    "deliveryDate": "2024-09-17",
+    "persianDeliveryDate": "1403/06/27",
+    "parent": null
+  },
+  {
+    "key": "KBFA03",
+    "persianName": "قرارداد آتی صندوق طلای کهربا تحویل فروردین ماه 1403",
+    "deliveryDate": "2024-04-09",
+    "persianDeliveryDate": "1403/01/21",
+    "parent": null
+  },
+  {
+    "key": "ETCME03",
+    "persianName": "قرارداد آتی صندوق طلای لوتوس تحویل مهر ماه 1403",
+    "deliveryDate": "2024-10-16",
+    "persianDeliveryDate": "1403/07/25",
+    "parent": "IRTKLOTF0001"
+  },
+  {
+    "key": "SILOR03",
+    "persianName": "قرارداد آتی نقره تحویل اردیبهشت ماه 1403",
+    "deliveryDate": "2024-05-07",
+    "persianDeliveryDate": "1403/02/18",
+    "parent": "BaseIme-Silver"
+  },
+  {
+    "key": "SILDY02",
+    "persianName": "قرارداد آتی نقره تحویل دی ماه 1402",
+    "deliveryDate": "2024-01-16",
+    "persianDeliveryDate": "1402/10/26",
+    "parent": "BaseIme-Silver"
+  },
+  {
+    "key": "PSFA03",
+    "persianName": "قرارداد آتی پسته بادامی تحویل فروردین ماه 1403",
+    "deliveryDate": "2024-04-16",
+    "persianDeliveryDate": "1403/01/28",
+    "parent": null
+  },
+  {
+    "key": "SILBA02",
+    "persianName": "قرارداد آتی نقره تحویل بهمن ماه 1402",
+    "deliveryDate": "2024-02-14",
+    "persianDeliveryDate": "1402/11/25",
+    "parent": "BaseIme-Silver"
+  },
+  {
+    "key": "KBKH03",
+    "persianName": "قرارداد آتی صندوق طلای کهربا تحویل خرداد ماه 1403",
+    "deliveryDate": "2024-06-11",
+    "persianDeliveryDate": "1403/03/22",
+    "parent": null
+  },
+  {
+    "key": "SAFSH03",
+    "persianName": "قرارداد آتی زعفران نگین تحویل شهریور ماه 1403",
+    "deliveryDate": "2024-09-09",
+    "persianDeliveryDate": "1403/06/19",
+    "parent": null
+  },
+  {
+    "key": "SILKH03",
+    "persianName": "قرارداد آتی نقره تحویل خرداد ماه 1403",
+    "deliveryDate": "2024-06-10",
+    "persianDeliveryDate": "1403/03/21",
+    "parent": "BaseIme-Silver"
+  },
+  {
+    "key": "PSKH03",
+    "persianName": "قرارداد آتی پسته بادامی تحویل خرداد ماه 1403",
+    "deliveryDate": "2024-06-08",
+    "persianDeliveryDate": "1403/03/19",
+    "parent": null
+  },
+  {
+    "key": "SAFAB03",
+    "persianName": "قرارداد آتی زعفران نگین تحویل آبان ماه 1403",
+    "deliveryDate": "2024-11-18",
+    "persianDeliveryDate": "1403/08/28",
+    "parent": null
+  },
+  {
+    "key": "SILTR03",
+    "persianName": "قرارداد آتی نقره تحویل تیر ماه 1403",
+    "deliveryDate": "2024-07-09",
+    "persianDeliveryDate": "1403/04/19",
+    "parent": "BaseIme-Silver"
+  },
+  {
+    "key": "ETCDY03",
+    "persianName": "قرارداد آتی صندوق طلای لوتوس تحویل دی ماه 1403",
+    "deliveryDate": "2025-01-08",
+    "persianDeliveryDate": "1403/10/19",
+    "parent": "IRTKLOTF0001"
+  },
+  {
+    "key": "KBSH03",
+    "persianName": "قرارداد آتی صندوق طلای کهربا تحویل شهریور ماه 1403",
+    "deliveryDate": "2024-09-07",
+    "persianDeliveryDate": "1403/06/17",
+    "parent": null
+  },
+  {
+    "key": "GB30AB03",
+    "persianName": "قرارداد آتی شمش طلای خام 995 تحویل آبان ماه 1403",
+    "deliveryDate": "2024-11-20",
+    "persianDeliveryDate": "1403/08/30",
+    "parent": null
+  },
+  {
+    "key": "PSMO03",
+    "persianName": "قرارداد آتی پسته بادامی تحویل مرداد ماه 1403",
+    "deliveryDate": "2024-08-11",
+    "persianDeliveryDate": "1403/05/21",
+    "parent": null
+  },
+  {
+    "key": "SILMO03",
+    "persianName": "قرارداد آتی نقره تحویل مرداد ماه 1403",
+    "deliveryDate": "2024-08-20",
+    "persianDeliveryDate": "1403/05/30",
+    "parent": "BaseIme-Silver"
+  },
+  {
+    "key": "KBAZ03",
+    "persianName": "قرارداد آتی صندوق طلای کهربا تحویل آذر ماه 1403",
+    "deliveryDate": "2024-12-10",
+    "persianDeliveryDate": "1403/09/20",
+    "parent": null
+  },
+  {
+    "key": "ETCFA04",
+    "persianName": "قرارداد آتی صندوق طلای لوتوس تحویل فروردین ماه 1404",
+    "deliveryDate": "2025-04-15",
+    "persianDeliveryDate": "1404/01/26",
+    "parent": "IRTKLOTF0001"
+  },
+  {
+    "key": "KBES03",
+    "persianName": "قرارداد آتی صندوق طلای کهربا تحویل اسفند ماه 1403",
+    "deliveryDate": "2025-03-02",
+    "persianDeliveryDate": "1403/12/12",
+    "parent": null
+  },
+  {
+    "key": "PSME03",
+    "persianName": "قرارداد آتی پسته بادامی تحویل مهر ماه 1403",
+    "deliveryDate": "2024-09-24",
+    "persianDeliveryDate": "1403/07/03",
+    "parent": null
+  },
+  {
+    "key": "SILSH03",
+    "persianName": "قرارداد آتی نقره تحویل شهریور ماه 1403",
+    "deliveryDate": "2024-09-18",
+    "persianDeliveryDate": "1403/06/28",
+    "parent": "BaseIme-Silver"
+  },
+  {
+    "key": "SAFDY03",
+    "persianName": "قرارداد آتی زعفران نگین تحویل دی ماه 1403",
+    "deliveryDate": "2024-12-25",
+    "persianDeliveryDate": "1403/10/05",
+    "parent": null
+  },
+  {
+    "key": "GB29BA03",
+    "persianName": "قرارداد آتی شمش طلای خام 995 تحویل بهمن ماه 1403",
+    "deliveryDate": "2025-02-17",
+    "persianDeliveryDate": "1403/11/29",
+    "parent": null
+  },
+  {
+    "key": "KBKH04",
+    "persianName": "قرارداد آتی صندوق طلای کهربا تحویل خرداد ماه 1404",
+    "deliveryDate": "2025-06-28",
+    "persianDeliveryDate": "1404/04/07",
+    "parent": null
+  },
+  {
+    "key": "ETCTR04",
+    "persianName": "قرارداد آتی صندوق طلای لوتوس تحویل تیر ماه 1404",
+    "deliveryDate": "2025-07-15",
+    "persianDeliveryDate": "1404/04/24",
+    "parent": "IRTKLOTF0001"
+  },
+  {
+    "key": "KBSH04",
+    "persianName": "قرارداد آتی صندوق طلای کهربا تحویل شهریور ماه 1404",
+    "deliveryDate": "2025-09-16",
+    "persianDeliveryDate": "1404/06/25",
+    "parent": null
+  },
+  {
+    "key": "SAFES03",
+    "persianName": "قرارداد آتی زعفران نگین تحویل اسفند ماه 1403",
+    "deliveryDate": "2025-03-04",
+    "persianDeliveryDate": "1403/12/14",
+    "parent": null
+  },
+  {
+    "key": "GB31OR04",
+    "persianName": "قرارداد آتی شمش طلای خام 995 تحویل اردیبهشت ماه 1404",
+    "deliveryDate": "2025-05-21",
+    "persianDeliveryDate": "1404/02/31",
+    "parent": null
+  },
+  {
+    "key": "ETCME04",
+    "persianName": "قرارداد آتی صندوق طلای لوتوس تحویل مهر ماه 1404",
+    "deliveryDate": "2025-10-14",
+    "persianDeliveryDate": "1404/07/22",
+    "parent": "IRTKLOTF0001"
+  },
+  {
+    "key": "SAFOR04",
+    "persianName": "قرارداد آتی زعفران نگین تحویل اردیبهشت ماه 1404",
+    "deliveryDate": "2025-05-19",
+    "persianDeliveryDate": "1404/02/29",
+    "parent": null
+  },
+  {
+    "key": "GB28MO04",
+    "persianName": "قرارداد آتی شمش طلای خام 995 تحویل مرداد ماه 1404",
+    "deliveryDate": "2025-08-19",
+    "persianDeliveryDate": "1404/05/28",
+    "parent": null
+  },
+  {
+    "key": "JZBA03",
+    "persianName": "قرارداد آتی صندوق طلای دنای زاگرس تحویل بهمن ماه 1403",
+    "deliveryDate": "2025-02-05",
+    "persianDeliveryDate": "1403/11/17",
+    "parent": null
+  },
+  {
+    "key": "SILES03",
+    "persianName": "قرارداد آتی گواهی سپرده نقره تحویل اسفند ماه 1403",
+    "deliveryDate": "2025-03-08",
+    "persianDeliveryDate": "1403/12/18",
+    "parent": "BaseIme-Silver"
+  },
+  {
+    "key": "SILKH04",
+    "persianName": "قرارداد آتی گواهی سپرده نقره تحویل خرداد ماه 1404",
+    "deliveryDate": "2025-06-10",
+    "persianDeliveryDate": "1404/03/20",
+    "parent": "BaseIme-Silver"
+  },
+  {
+    "key": "KBAZ04",
+    "persianName": "قرارداد آتی صندوق طلای کهربا تحویل آذر ماه 1404",
+    "deliveryDate": "2025-12-13",
+    "persianDeliveryDate": "1404/09/22",
+    "parent": null
+  },
+  {
+    "key": "JZOR04",
+    "persianName": "قرارداد آتی صندوق طلای دنای زاگرس تحویل اردیبهشت ماه 1404",
+    "deliveryDate": "2025-05-10",
+    "persianDeliveryDate": "1404/02/20",
+    "parent": null
+  },
+  {
+    "key": "SAFTR04",
+    "persianName": "قرارداد آتی زعفران نگین تحویل تیر ماه 1404",
+    "deliveryDate": "2025-07-22",
+    "persianDeliveryDate": "1404/04/31",
+    "parent": null
+  },
+  {
+    "key": "SILSH04",
+    "persianName": "قرارداد آتی گواهی سپرده نقره تحویل شهریور ماه 1404",
+    "deliveryDate": "2025-09-17",
+    "persianDeliveryDate": "1404/06/26",
+    "parent": "BaseIme-Silver"
+  },
+  {
+    "key": "JZMO04",
+    "persianName": "قرارداد آتی صندوق طلای دنای زاگرس تحویل مرداد ماه 1404",
+    "deliveryDate": "2025-08-16",
+    "persianDeliveryDate": "1404/05/25",
+    "parent": null
+  },
+  {
+    "key": "JZAB04",
+    "persianName": "قرارداد آتی صندوق طلای دنای زاگرس تحویل آبان ماه 1404",
+    "deliveryDate": "2025-11-08",
+    "persianDeliveryDate": "1404/08/17",
+    "parent": null
+  },
+  {
+    "key": "SILAZ04",
+    "persianName": "قرارداد آتی گواهی سپرده نقره تحویل آذر ماه 1404",
+    "deliveryDate": "2025-12-16",
+    "persianDeliveryDate": "1404/09/25",
+    "parent": "BaseIme-Silver"
+  },
+  {
+    "key": "GB20AB04",
+    "persianName": "قرارداد آتی شمش طلای خام 995 تحویل آبان ماه 1404",
+    "deliveryDate": "2025-11-11",
+    "persianDeliveryDate": "1404/08/20",
+    "parent": null
+  },
+  {
+    "key": "KBES04",
+    "persianName": "قرارداد آتی صندوق طلای کهربا تحویل اسفند ماه 1404",
+    "deliveryDate": "2026-03-03",
+    "persianDeliveryDate": "1404/12/12",
+    "parent": null
+  },
+  {
+    "key": "SAFSH04",
+    "persianName": "قرارداد آتی زعفران نگین تحویل شهریور ماه 1404",
+    "deliveryDate": "2025-09-20",
+    "persianDeliveryDate": "1404/06/29",
+    "parent": null
+  },
+  {
+    "key": "ETCDY04",
+    "persianName": "قرارداد آتی صندوق طلای لوتوس تحویل دی ماه 1404",
+    "deliveryDate": "2026-01-13",
+    "persianDeliveryDate": "1404/10/23",
+    "parent": "IRTKLOTF0001"
+  },
+  {
+    "key": "SAFAB04",
+    "persianName": "قرارداد آتی زعفران نگین تحویل آبان ماه 1404",
+    "deliveryDate": "2025-11-18",
+    "persianDeliveryDate": "1404/08/27",
+    "parent": null
+  },
+  {
+    "key": "GB28BA04",
+    "persianName": "قرارداد آتی شمش طلای خام 995 تحویل بهمن ماه 1404",
+    "deliveryDate": "2026-02-17",
+    "persianDeliveryDate": "1404/11/28",
+    "parent": null
+  },
+  {
+    "key": "SILES04",
+    "persianName": "قرارداد آتی گواهی سپرده نقره تحویل اسفند ماه 1404",
+    "deliveryDate": "2026-03-07",
+    "persianDeliveryDate": "1404/12/16",
+    "parent": "BaseIme-Silver"
+  },
+  {
+    "key": "JZBA04",
+    "persianName": "قرارداد آتی صندوق طلای دنای زاگرس تحویل بهمن ماه 1404",
+    "deliveryDate": "2026-02-18",
+    "persianDeliveryDate": "1404/11/29",
+    "parent": null
+  },
+  {
+    "key": "ETCFA05",
+    "persianName": "قرارداد آتی صندوق طلای لوتوس تحویل فروردین ماه 1405",
+    "deliveryDate": "2026-04-12",
+    "persianDeliveryDate": "1405/01/23",
+    "parent": "IRTKLOTF0001"
+  },
+  {
+    "key": "SAFDY04",
+    "persianName": "قرارداد آتی زعفران نگین تحویل دی ماه 1404",
+    "deliveryDate": "2025-12-27",
+    "persianDeliveryDate": "1404/10/06",
+    "parent": null
+  },
+  {
+    "key": "JZOR05",
+    "persianName": "قرارداد آتی صندوق طلای دنای زاگرس تحویل اردیبهشت ماه 1405",
+    "deliveryDate": "2026-05-16",
+    "persianDeliveryDate": "1405/02/26",
+    "parent": null
+  },
+  {
+    "key": "GB19OR05",
+    "persianName": "قرارداد آتی شمش طلای خام 995 تحویل اردیبهشت ماه 1405",
+    "deliveryDate": "2026-05-09",
+    "persianDeliveryDate": "1405/02/19",
+    "parent": null
+  },
+  {
+    "key": "KBKH05",
+    "persianName": "قرارداد آتی صندوق طلای کهربا تحویل خرداد ماه 1405",
+    "deliveryDate": "2026-06-13",
+    "persianDeliveryDate": "1405/03/23",
+    "parent": null
+  },
+  {
+    "key": "SILKH05",
+    "persianName": "قرارداد آتی گواهی سپرده نقره تحویل خرداد ماه 1405",
+    "deliveryDate": "2026-06-17",
+    "persianDeliveryDate": "1405/03/27",
+    "parent": "BaseIme-Silver"
+  },
+  {
+    "key": "SAFES04",
+    "persianName": "قرارداد آتی زعفران نگین تحویل اسفند ماه 1404",
+    "deliveryDate": "2026-03-09",
+    "persianDeliveryDate": "1404/12/18",
+    "parent": null
+  },
+  {
+    "key": "ETCTR05",
+    "persianName": "قرارداد آتی صندوق طلای لوتوس تحویل تیر ماه 1405",
+    "deliveryDate": "2026-07-14",
+    "persianDeliveryDate": "1405/04/23",
+    "parent": "IRTKLOTF0001"
+  },
+  {
+    "key": "SAFOR05",
+    "persianName": "قرارداد آتی زعفران نگین تحویل اردیبهشت ماه 1405",
+    "deliveryDate": "2026-05-13",
+    "persianDeliveryDate": "1405/02/23",
+    "parent": null
+  },
+  {
+    "key": "JZMO05",
+    "persianName": "قرارداد آتی صندوق طلای دنای زاگرس تحویل مرداد ماه 1405",
+    "deliveryDate": "2026-08-08",
+    "persianDeliveryDate": "1405/05/17",
+    "parent": null
+  },
+  {
+    "key": "GB19MO05",
+    "persianName": "قرارداد آتی شمش طلای خام 995 تحویل مرداد ماه 1405",
+    "deliveryDate": "2026-08-10",
+    "persianDeliveryDate": "1405/05/19",
+    "parent": null
+  },
+  {
+    "key": "SAFTR05",
+    "persianName": "قرارداد آتی زعفران نگین تحویل تیر ماه 1405",
+    "deliveryDate": "2026-07-11",
+    "persianDeliveryDate": "1405/04/20",
+    "parent": null
+  },
+  {
+    "key": "SILSH05",
+    "persianName": "قرارداد آتی گواهی سپرده نقره تحویل شهریور ماه 1405",
+    "deliveryDate": "2026-09-06",
+    "persianDeliveryDate": "1405/06/15",
+    "parent": "BaseIme-Silver"
+  },
+  {
+    "key": "COPES04",
+    "persianName": "قرارداد آتی گواهی سپرده مس کاتد تحویل اسفند ماه 1404",
+    "deliveryDate": "2026-02-28",
+    "persianDeliveryDate": "1404/12/09",
+    "parent": null
+  },
+  {
+    "key": "COPTR05",
+    "persianName": "قرارداد آتی گواهی سپرده مس کاتد تحویل تیر ماه 1405",
+    "deliveryDate": "2026-07-21",
+    "persianDeliveryDate": "1405/04/30",
+    "parent": null
+  },
+  {
+    "key": "COPME05",
+    "persianName": "قرارداد آتی گواهی سپرده مس کاتد تحویل مهر ماه 1405",
+    "deliveryDate": "2026-10-20",
+    "persianDeliveryDate": "1405/07/28",
+    "parent": null
+  },
+  {
+    "key": "KBSH05",
+    "persianName": "قرارداد آتی صندوق طلای کهربا تحویل شهریور ماه 1405",
+    "deliveryDate": "2026-09-07",
+    "persianDeliveryDate": "1405/06/16",
+    "parent": null
+  },
+  {
+    "key": "SILAZ05",
+    "persianName": "قرارداد آتی گواهی سپرده نقره تحویل آذر ماه 1405",
+    "deliveryDate": "2026-12-20",
+    "persianDeliveryDate": "1405/09/29",
+    "parent": "BaseIme-Silver"
+  },
+  {
+    "key": "SILES05",
+    "persianName": "قرارداد آتی گواهی سپرده نقره تحویل اسفند ماه 1405",
+    "deliveryDate": "2027-03-08",
+    "persianDeliveryDate": "1405/12/17",
+    "parent": "BaseIme-Silver"
+  },
+  {
+    "key": "ETCME05",
+    "persianName": "قرارداد آتی صندوق طلای لوتوس تحویل مهر ماه 1405",
+    "deliveryDate": "2026-10-13",
+    "persianDeliveryDate": "1405/07/21",
+    "parent": "IRTKLOTF0001"
+  },
+  {
+    "key": "GB17AB05",
+    "persianName": "قرارداد آتی شمش طلای خام 995 تحویل آبان ماه 1405",
+    "deliveryDate": "2026-11-08",
+    "persianDeliveryDate": "1405/08/17",
+    "parent": null
+  },
+  {
+    "key": "JZAB05",
+    "persianName": "قرارداد آتی صندوق طلای دنای زاگرس تحویل آبان ماه 1405",
+    "deliveryDate": "2026-11-16",
+    "persianDeliveryDate": "1405/08/25",
+    "parent": null
+  }
+]

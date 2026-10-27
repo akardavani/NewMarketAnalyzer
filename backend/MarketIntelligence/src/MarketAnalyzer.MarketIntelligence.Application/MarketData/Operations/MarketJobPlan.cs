@@ -19,7 +19,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application.MarketData.Operations
         /// پیش‌فرض کد. فرض‌ها (قابل‌تغییر در تنظیمات): بورس ایران ساعات معاملاتی ۰۸:۴۵ تا ۱۳:۰۰ به وقت تهران، شنبه تا چهارشنبه؛
         /// بقیهٔ بازارها ۲۴ ساعته و بدون پنجره.
         /// </summary>
-        public static MarketJobPlan Default(MarketJobKind job, TradingCalendarKind calendar)
+        public static MarketJobPlan Default(MarketJobKind job, TradingCalendarKind calendar, TimeSpan? candleInterval = null)
         {
             var iran = calendar == TradingCalendarKind.IranStockWeek;
             var session = iran ? (TimeOnly?)new TimeOnly(8, 45) : null;
@@ -28,10 +28,11 @@ namespace MarketAnalyzer.MarketIntelligence.Application.MarketData.Operations
             return job switch
             {
                 MarketJobKind.SyncCatalog => new MarketJobPlan(true, TimeSpan.FromHours(24), null, null),
-                MarketJobKind.IngestCandles => new MarketJobPlan(true, TimeSpan.FromHours(6), null, null),
+                MarketJobKind.IngestCandles => new MarketJobPlan(true, candleInterval ?? TimeSpan.FromHours(6), null, null),
                 MarketJobKind.RefreshCurrentState => new MarketJobPlan(true, TimeSpan.FromMinutes(1), session, sessionEnd),
                 MarketJobKind.RefreshOrderBook => new MarketJobPlan(true, TimeSpan.FromMinutes(1), session, sessionEnd),
                 MarketJobKind.RefreshInvestorActivity => new MarketJobPlan(true, TimeSpan.FromMinutes(30), iran ? new TimeOnly(9, 0) : null, iran ? new TimeOnly(19, 0) : null),
+                MarketJobKind.RefreshFundNav => new MarketJobPlan(true, TimeSpan.FromHours(24), null, null),
                 _ => throw new ArgumentOutOfRangeException(nameof(job), job, null)
             };
         }

@@ -27,6 +27,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application.MarketData.Operations
             MarketJobKind.RefreshCurrentState => ProviderCapability.CurrentState,
             MarketJobKind.RefreshOrderBook => ProviderCapability.OrderBook,
             MarketJobKind.RefreshInvestorActivity => ProviderCapability.InvestorActivity,
+            MarketJobKind.RefreshFundNav => ProviderCapability.FundNav,
             _ => throw new ArgumentOutOfRangeException(nameof(job), job, null)
         };
     }

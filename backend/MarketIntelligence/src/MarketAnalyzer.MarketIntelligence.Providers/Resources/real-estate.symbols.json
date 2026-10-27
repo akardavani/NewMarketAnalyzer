@@ -1,0 +1,6714 @@
+﻿[
+  {
+    "key": "246740",
+    "slug": "tehran-region1",
+    "persianName": "منطقه 1",
+    "province": "tehran",
+    "region": "region1",
+    "zone": null
+  },
+  {
+    "key": "328354",
+    "slug": "tehran-region1-shahrak_laleh",
+    "persianName": "شهرک لاله",
+    "province": "tehran",
+    "region": "region1",
+    "zone": "shahrak_laleh"
+  },
+  {
+    "key": "247503",
+    "slug": "tehran-region1-bolvar_daneshjou",
+    "persianName": "بلوار دانشجو",
+    "province": "tehran",
+    "region": "region1",
+    "zone": "bolvar_daneshjou"
+  },
+  {
+    "key": "250314",
+    "slug": "tehran-region1-rahman_abad",
+    "persianName": "رحمان اباد",
+    "province": "tehran",
+    "region": "region1",
+    "zone": "rahman_abad"
+  },
+  {
+    "key": "250199",
+    "slug": "tehran-region1-saad_abad",
+    "persianName": "سعداباد",
+    "province": "tehran",
+    "region": "region1",
+    "zone": "saad_abad"
+  },
+  {
+    "key": "250310",
+    "slug": "tehran-region1-maydan_ghods",
+    "persianName": "میدان قدس",
+    "province": "tehran",
+    "region": "region1",
+    "zone": "maydan_ghods"
+  },
+  {
+    "key": "328365",
+    "slug": "tehran-region1-farmaniyeh",
+    "persianName": "فرمانیه",
+    "province": "tehran",
+    "region": "region1",
+    "zone": "farmaniyeh"
+  },
+  {
+    "key": "247244",
+    "slug": "tehran-region1-manzariyeh",
+    "persianName": "منظریه",
+    "province": "tehran",
+    "region": "region1",
+    "zone": "manzariyeh"
+  },
+  {
+    "key": "247145",
+    "slug": "tehran-region1-hesar_buali",
+    "persianName": "حصاربوعلی",
+    "province": "tehran",
+    "region": "region1",
+    "zone": "hesar_buali"
+  },
+  {
+    "key": "0",
+    "slug": "tehran-region1-shahid_sadr",
+    "persianName": "شهید صدر",
+    "province": "tehran",
+    "region": "region1",
+    "zone": "shahid_sadr"
+  },
+  {
+    "key": "247119",
+    "slug": "tehran-region1-golabdarreh",
+    "persianName": "گلاب دره",
+    "province": "tehran",
+    "region": "region1",
+    "zone": "golabdarreh"
+  },
+  {
+    "key": "250191",
+    "slug": "tehran-region1-khiyaban_kamraniye_jonoubi",
+    "persianName": "کامرانیه جنوبی",
+    "province": "tehran",
+    "region": "region1",
+    "zone": "khiyaban_kamraniye_jonoubi"
+  },
+  {
+    "key": "328351",
+    "slug": "tehran-region1-kamraniyeh_shomali",
+    "persianName": "کامرانیه شمالی",
+    "province": "tehran",
+    "region": "region1",
+    "zone": "kamraniyeh_shomali"
+  },
+  {
+    "key": "250200",
+    "slug": "tehran-region1-bahonar",
+    "persianName": "باهنر",
+    "province": "tehran",
+    "region": "region1",
+    "zone": "bahonar"
+  },
+  {
+    "key": "247141",
+    "slug": "tehran-region1-tajrish",
+    "persianName": "تجریش",
+    "province": "tehran",
+    "region": "region1",
+    "zone": "tajrish"
+  },
+  {
+    "key": "247144",
+    "slug": "tehran-region1-jamaran",
+    "persianName": "جماران",
+    "province": "tehran",
+    "region": "region1",
+    "zone": "jamaran"
+  },
+  {
+    "key": "247146",
+    "slug": "tehran-region1-hekmat",
+    "persianName": "حکمت",
+    "province": "tehran",
+    "region": "region1",
+    "zone": "hekmat"
+  },
+  {
+    "key": "247140",
+    "slug": "tehran-region1-araj",
+    "persianName": "اراج",
+    "province": "tehran",
+    "region": "region1",
+    "zone": "araj"
+  },
+  {
+    "key": "328353",
+    "slug": "tehran-region1-bookan",
+    "persianName": "بوکان",
+    "province": "tehran",
+    "region": "region1",
+    "zone": "bookan"
+  },
+  {
+    "key": "328366",
+    "slug": "tehran-region1-niyavaran",
+    "persianName": "نیاوران",
+    "province": "tehran",
+    "region": "region1",
+    "zone": "niyavaran"
+  },
+  {
+    "key": "247033",
+    "slug": "tehran-region1-dezashib",
+    "persianName": "دزاشیب",
+    "province": "tehran",
+    "region": "region1",
+    "zone": "dezashib"
+  },
+  {
+    "key": "247524",
+    "slug": "tehran-region1-yaser",
+    "persianName": "یاسر",
+    "province": "tehran",
+    "region": "region1",
+    "zone": "yaser"
+  },
+  {
+    "key": "328352",
+    "slug": "tehran-region1-shomale_kakh_niyavaran",
+    "persianName": "شمال کاخ - نیاوران",
+    "province": "tehran",
+    "region": "region1",
+    "zone": "shomale_kakh_niyavaran"
+  },
+  {
+    "key": "250329",
+    "slug": "tehran-region1-amar",
+    "persianName": "عمار",
+    "province": "tehran",
+    "region": "region1",
+    "zone": "amar"
+  },
+  {
+    "key": "247635",
+    "slug": "tehran-region1-jamshidiyeh",
+    "persianName": "جمشیدیه",
+    "province": "tehran",
+    "region": "region1",
+    "zone": "jamshidiyeh"
+  },
+  {
+    "key": "246807",
+    "slug": "tehran-region1-zaferaniyeh",
+    "persianName": "زعفرانیه",
+    "province": "tehran",
+    "region": "region1",
+    "zone": "zaferaniyeh"
+  },
+  {
+    "key": "246945",
+    "slug": "tehran-region1-evin",
+    "persianName": "اوین",
+    "province": "tehran",
+    "region": "region1",
+    "zone": "evin"
+  },
+  {
+    "key": "246886",
+    "slug": "tehran-region1-mahmudiyeh",
+    "persianName": "محمودیه",
+    "province": "tehran",
+    "region": "region1",
+    "zone": "mahmudiyeh"
+  },
+  {
+    "key": "250194",
+    "slug": "tehran-region1-park_vey",
+    "persianName": "پارک وی",
+    "province": "tehran",
+    "region": "region1",
+    "zone": "park_vey"
+  },
+  {
+    "key": "246801",
+    "slug": "tehran-region1-baghferdos",
+    "persianName": "باغ فردوس",
+    "province": "tehran",
+    "region": "region1",
+    "zone": "baghferdos"
+  },
+  {
+    "key": "250315",
+    "slug": "tehran-region1-bagh_shater",
+    "persianName": "باغ شاطر",
+    "province": "tehran",
+    "region": "region1",
+    "zone": "bagh_shater"
+  },
+  {
+    "key": "247097",
+    "slug": "tehran-region1-imamzadeh_qasem",
+    "persianName": "امام زاده قاسم",
+    "province": "tehran",
+    "region": "region1",
+    "zone": "imamzadeh_qasem"
+  },
+  {
+    "key": "247643",
+    "slug": "tehran-region1-shahrak_kosar",
+    "persianName": "شهرک کوثر",
+    "province": "tehran",
+    "region": "region1",
+    "zone": "shahrak_kosar"
+  },
+  {
+    "key": "246949",
+    "slug": "tehran-region1-darabad",
+    "persianName": "داراباد",
+    "province": "tehran",
+    "region": "region1",
+    "zone": "darabad"
+  },
+  {
+    "key": "247091",
+    "slug": "tehran-region1-sohanak",
+    "persianName": "سوهانک",
+    "province": "tehran",
+    "region": "region1",
+    "zone": "sohanak"
+  },
+  {
+    "key": "247809",
+    "slug": "tehran-region1-shahrak_abouzar_artesh",
+    "persianName": "شهرک ابوذر - ارتش",
+    "province": "tehran",
+    "region": "region1",
+    "zone": "shahrak_abouzar_artesh"
+  },
+  {
+    "key": "247031",
+    "slug": "tehran-region1-chizar",
+    "persianName": "چیذر",
+    "province": "tehran",
+    "region": "region1",
+    "zone": "chizar"
+  },
+  {
+    "key": "273072",
+    "slug": "tehran-darband",
+    "persianName": "دربند",
+    "province": "tehran",
+    "region": "darband",
+    "zone": null
+  },
+  {
+    "key": "273073",
+    "slug": "tehran-velenjak",
+    "persianName": "ولنجک",
+    "province": "tehran",
+    "region": "velenjak",
+    "zone": null
+  },
+  {
+    "key": "273078",
+    "slug": "tehran-kamraniyeh",
+    "persianName": "کامرانیه",
+    "province": "tehran",
+    "region": "kamraniyeh",
+    "zone": null
+  },
+  {
+    "key": "246742",
+    "slug": "tehran-region2",
+    "persianName": "منطقه 2",
+    "province": "tehran",
+    "region": "region2",
+    "zone": null
+  },
+  {
+    "key": "250215",
+    "slug": "tehran-region2-khiyaban_sazman_ab",
+    "persianName": "سازمان اب",
+    "province": "tehran",
+    "region": "region2",
+    "zone": "khiyaban_sazman_ab"
+  },
+  {
+    "key": "250202",
+    "slug": "tehran-region2-shahrak_zhandarmeri",
+    "persianName": "شهرک ژاندارمری",
+    "province": "tehran",
+    "region": "region2",
+    "zone": "shahrak_zhandarmeri"
+  },
+  {
+    "key": "250213",
+    "slug": "tehran-region2-shahrak_farhangian_gharb",
+    "persianName": "شهرک فرهنگیان غرب",
+    "province": "tehran",
+    "region": "region2",
+    "zone": "shahrak_farhangian_gharb"
+  },
+  {
+    "key": "246813",
+    "slug": "tehran-region2-marzdaran_qharbi",
+    "persianName": "مرزداران غربی",
+    "province": "tehran",
+    "region": "region2",
+    "zone": "marzdaran_qharbi"
+  },
+  {
+    "key": "246812",
+    "slug": "tehran-region2-marzdaran_sharghi",
+    "persianName": "مرزداران شرقی",
+    "province": "tehran",
+    "region": "region2",
+    "zone": "marzdaran_sharghi"
+  },
+  {
+    "key": "246810",
+    "slug": "tehran-region2-faraz",
+    "persianName": "فراز",
+    "province": "tehran",
+    "region": "region2",
+    "zone": "faraz"
+  },
+  {
+    "key": "250201",
+    "slug": "tehran-region2-shahid_golab",
+    "persianName": "شهید گلاب",
+    "province": "tehran",
+    "region": "region2",
+    "zone": "shahid_golab"
+  },
+  {
+    "key": "247853",
+    "slug": "tehran-region2-sepehr",
+    "persianName": "سپهر",
+    "province": "tehran",
+    "region": "region2",
+    "zone": "sepehr"
+  },
+  {
+    "key": "246887",
+    "slug": "tehran-region2-eyvanak",
+    "persianName": "ایوانک",
+    "province": "tehran",
+    "region": "region2",
+    "zone": "eyvanak"
+  },
+  {
+    "key": "247702",
+    "slug": "tehran-region2-habibollahi",
+    "persianName": "حبیب اللهی",
+    "province": "tehran",
+    "region": "region2",
+    "zone": "habibollahi"
+  },
+  {
+    "key": "250212",
+    "slug": "tehran-region2-patris_loumoumba",
+    "persianName": "پاتریس لومومبا",
+    "province": "tehran",
+    "region": "region2",
+    "zone": "patris_loumoumba"
+  },
+  {
+    "key": "247631",
+    "slug": "tehran-region2-hormozan_shahrak_gharb",
+    "persianName": "هرمزان - شهرک غرب",
+    "province": "tehran",
+    "region": "region2",
+    "zone": "hormozan_shahrak_gharb"
+  },
+  {
+    "key": "250218",
+    "slug": "tehran-region2-ati_saz",
+    "persianName": "اتی ساز",
+    "province": "tehran",
+    "region": "region2",
+    "zone": "ati_saz"
+  },
+  {
+    "key": "250219",
+    "slug": "tehran-region2-pol_modiriyat",
+    "persianName": "پل مدیریت",
+    "province": "tehran",
+    "region": "region2",
+    "zone": "pol_modiriyat"
+  },
+  {
+    "key": "250222",
+    "slug": "tehran-region2-shahrak_ghods",
+    "persianName": "شهرک قدس",
+    "province": "tehran",
+    "region": "region2",
+    "zone": "shahrak_ghods"
+  },
+  {
+    "key": "247629",
+    "slug": "tehran-region2-shahrak_homa",
+    "persianName": "شهرک هما",
+    "province": "tehran",
+    "region": "region2",
+    "zone": "shahrak_homa"
+  },
+  {
+    "key": "246892",
+    "slug": "tehran-region2-kuy_nasr",
+    "persianName": "کوی نصر",
+    "province": "tehran",
+    "region": "region2",
+    "zone": "kuy_nasr"
+  },
+  {
+    "key": "246867",
+    "slug": "tehran-region2-shahrara",
+    "persianName": "شهرارا",
+    "province": "tehran",
+    "region": "region2",
+    "zone": "shahrara"
+  },
+  {
+    "key": "250206",
+    "slug": "tehran-region2-nasr_gisha",
+    "persianName": "نصر - گیشا",
+    "province": "tehran",
+    "region": "region2",
+    "zone": "nasr_gisha"
+  },
+  {
+    "key": "247036",
+    "slug": "tehran-region2-tehranvila",
+    "persianName": "تهران ویلا",
+    "province": "tehran",
+    "region": "region2",
+    "zone": "tehranvila"
+  },
+  {
+    "key": "246889",
+    "slug": "tehran-region2-daryanno",
+    "persianName": "دریان نو",
+    "province": "tehran",
+    "region": "region2",
+    "zone": "daryanno"
+  },
+  {
+    "key": "246891",
+    "slug": "tehran-region2-tarasht",
+    "persianName": "طرشت منطقه 2",
+    "province": "tehran",
+    "region": "region2",
+    "zone": "tarasht"
+  },
+  {
+    "key": "250211",
+    "slug": "tehran-region2-shadman",
+    "persianName": "شادمان",
+    "province": "tehran",
+    "region": "region2",
+    "zone": "shadman"
+  },
+  {
+    "key": "247030",
+    "slug": "tehran-region2-teymuri",
+    "persianName": "تیموری منطقه 2",
+    "province": "tehran",
+    "region": "region2",
+    "zone": "teymuri"
+  },
+  {
+    "key": "250217",
+    "slug": "tehran-region2-simaye_iran",
+    "persianName": "سیمای ایران",
+    "province": "tehran",
+    "region": "region2",
+    "zone": "simaye_iran"
+  },
+  {
+    "key": "250220",
+    "slug": "tehran-region2-kharazm",
+    "persianName": "خوارزم",
+    "province": "tehran",
+    "region": "region2",
+    "zone": "kharazm"
+  },
+  {
+    "key": "250208",
+    "slug": "tehran-region2-zarafshan",
+    "persianName": "زرافشان",
+    "province": "tehran",
+    "region": "region2",
+    "zone": "zarafshan"
+  },
+  {
+    "key": "273114",
+    "slug": "tehran-region2-punak",
+    "persianName": "پونک",
+    "province": "tehran",
+    "region": "region2",
+    "zone": "punak"
+  },
+  {
+    "key": "247466",
+    "slug": "tehran-region2-hamila",
+    "persianName": "همیلا",
+    "province": "tehran",
+    "region": "region2",
+    "zone": "hamila"
+  },
+  {
+    "key": "246806",
+    "slug": "tehran-region2-aseman",
+    "persianName": "اسمان",
+    "province": "tehran",
+    "region": "region2",
+    "zone": "aseman"
+  },
+  {
+    "key": "246888",
+    "slug": "tehran-region2-parvaz",
+    "persianName": "پرواز منطقه 2",
+    "province": "tehran",
+    "region": "region2",
+    "zone": "parvaz"
+  },
+  {
+    "key": "246811",
+    "slug": "tehran-region2-farahzad",
+    "persianName": "فرحزاد منطقه 2",
+    "province": "tehran",
+    "region": "region2",
+    "zone": "farahzad"
+  },
+  {
+    "key": "247037",
+    "slug": "tehran-region2-derakhti",
+    "persianName": "درختی منطقه 2",
+    "province": "tehran",
+    "region": "region2",
+    "zone": "derakhti"
+  },
+  {
+    "key": "250205",
+    "slug": "tehran-region2-bolvar_paknezhad",
+    "persianName": "بلوار پاکنژاد",
+    "province": "tehran",
+    "region": "region2",
+    "zone": "bolvar_paknezhad"
+  },
+  {
+    "key": "247812",
+    "slug": "tehran-region2-dadman",
+    "persianName": "دادمان‎",
+    "province": "tehran",
+    "region": "region2",
+    "zone": "dadman"
+  },
+  {
+    "key": "273085",
+    "slug": "tehran-bargh_alestom",
+    "persianName": "برق الستوم",
+    "province": "tehran",
+    "region": "bargh_alestom",
+    "zone": null
+  },
+  {
+    "key": "273087",
+    "slug": "tehran-marzdaran",
+    "persianName": "مرزداران",
+    "province": "tehran",
+    "region": "marzdaran",
+    "zone": null
+  },
+  {
+    "key": "246690",
+    "slug": "tehran-region3",
+    "persianName": "منطقه 3",
+    "province": "tehran",
+    "region": "region3",
+    "zone": null
+  },
+  {
+    "key": "246894",
+    "slug": "tehran-region3-hoseinabad_zargandeh",
+    "persianName": "حسین اباد - زرگنده",
+    "province": "tehran",
+    "region": "region3",
+    "zone": "hoseinabad_zargandeh"
+  },
+  {
+    "key": "246881",
+    "slug": "tehran-region3-amaniyeh",
+    "persianName": "امانیه",
+    "province": "tehran",
+    "region": "region3",
+    "zone": "amaniyeh"
+  },
+  {
+    "key": "250237",
+    "slug": "tehran-region3-bolvar_afrigha",
+    "persianName": "بلوار افریقا",
+    "province": "tehran",
+    "region": "region3",
+    "zone": "bolvar_afrigha"
+  },
+  {
+    "key": "250242",
+    "slug": "tehran-region3-brazil",
+    "persianName": "برزیل‎",
+    "province": "tehran",
+    "region": "region3",
+    "zone": "brazil"
+  },
+  {
+    "key": "250229",
+    "slug": "tehran-region3-esfandiyar",
+    "persianName": "اسفندیار",
+    "province": "tehran",
+    "region": "region3",
+    "zone": "esfandiyar"
+  },
+  {
+    "key": "250247",
+    "slug": "tehran-region3-gandi",
+    "persianName": "گاندی‎",
+    "province": "tehran",
+    "region": "region3",
+    "zone": "gandi"
+  },
+  {
+    "key": "250246",
+    "slug": "tehran-region3-khiyaban_mola_sadra",
+    "persianName": "خیابان ملاصدرا",
+    "province": "tehran",
+    "region": "region3",
+    "zone": "khiyaban_mola_sadra"
+  },
+  {
+    "key": "246988",
+    "slug": "tehran-region3-davudiyeh",
+    "persianName": "داوودیه",
+    "province": "tehran",
+    "region": "region3",
+    "zone": "davudiyeh"
+  },
+  {
+    "key": "328358",
+    "slug": "tehran-region3-shariyati_zafar",
+    "persianName": "شریعتی - ظفر",
+    "province": "tehran",
+    "region": "region3",
+    "zone": "shariyati_zafar"
+  },
+  {
+    "key": "247476",
+    "slug": "tehran-region3-naft_shomali",
+    "persianName": "نفت شمالی - دکتر مصدق",
+    "province": "tehran",
+    "region": "region3",
+    "zone": "naft_shomali"
+  },
+  {
+    "key": "273091",
+    "slug": "tehran-region3-mirdamad",
+    "persianName": "میرداماد",
+    "province": "tehran",
+    "region": "region3",
+    "zone": "mirdamad"
+  },
+  {
+    "key": "250228",
+    "slug": "tehran-region3-razan_hesari",
+    "persianName": "رازان - حصاری",
+    "province": "tehran",
+    "region": "region3",
+    "zone": "razan_hesari"
+  },
+  {
+    "key": "247703",
+    "slug": "tehran-region3-otouban_haghani",
+    "persianName": "اتوبان حقانی",
+    "province": "tehran",
+    "region": "region3",
+    "zone": "otouban_haghani"
+  },
+  {
+    "key": "249044",
+    "slug": "tehran-region3-naft_jonoubi",
+    "persianName": "نفت جنوبی",
+    "province": "tehran",
+    "region": "region3",
+    "zone": "naft_jonoubi"
+  },
+  {
+    "key": "328364",
+    "slug": "tehran-region3-qolhak",
+    "persianName": "قلهک",
+    "province": "tehran",
+    "region": "region3",
+    "zone": "qolhak"
+  },
+  {
+    "key": "250238",
+    "slug": "tehran-region3-yakhchal",
+    "persianName": "یخچال",
+    "province": "tehran",
+    "region": "region3",
+    "zone": "yakhchal"
+  },
+  {
+    "key": "246896",
+    "slug": "tehran-region3-kavosiyeh",
+    "persianName": "کاووسیه",
+    "province": "tehran",
+    "region": "region3",
+    "zone": "kavosiyeh"
+  },
+  {
+    "key": "247637",
+    "slug": "tehran-region3-arash_sharghi",
+    "persianName": "ارش شرقی",
+    "province": "tehran",
+    "region": "region3",
+    "zone": "arash_sharghi"
+  },
+  {
+    "key": "246814",
+    "slug": "tehran-region3-darbe_dovom",
+    "persianName": "درب دوم",
+    "province": "tehran",
+    "region": "region3",
+    "zone": "darbe_dovom"
+  },
+  {
+    "key": "250239",
+    "slug": "tehran-region3-dibaji_jonoubi",
+    "persianName": "دیباجی جنوبی",
+    "province": "tehran",
+    "region": "region3",
+    "zone": "dibaji_jonoubi"
+  },
+  {
+    "key": "250233",
+    "slug": "tehran-region3-gol_nabi",
+    "persianName": "گل نبی",
+    "province": "tehran",
+    "region": "region3",
+    "zone": "gol_nabi"
+  },
+  {
+    "key": "250231",
+    "slug": "tehran-region3-shaykh_bahaei_shomali",
+    "persianName": "شیخ بهایی شمالی",
+    "province": "tehran",
+    "region": "region3",
+    "zone": "shaykh_bahaei_shomali"
+  },
+  {
+    "key": "247504",
+    "slug": "tehran-region3-bolvar_mirdamad",
+    "persianName": "بلوار میرداماد",
+    "province": "tehran",
+    "region": "region3",
+    "zone": "bolvar_mirdamad"
+  },
+  {
+    "key": "250232",
+    "slug": "tehran-region3-bolvar_shahrzad",
+    "persianName": "بلوار شهرزاد",
+    "province": "tehran",
+    "region": "region3",
+    "zone": "bolvar_shahrzad"
+  },
+  {
+    "key": "273097",
+    "slug": "tehran-seyyed_khandan",
+    "persianName": "سید خندان",
+    "province": "tehran",
+    "region": "seyyed_khandan",
+    "zone": null
+  },
+  {
+    "key": "273094",
+    "slug": "tehran-dolat_kolahdouz",
+    "persianName": "دولت - کلاهدوز",
+    "province": "tehran",
+    "region": "dolat_kolahdouz",
+    "zone": null
+  },
+  {
+    "key": "247039",
+    "slug": "tehran-region3-ekhtiyariyeh",
+    "persianName": "اختیاریه",
+    "province": "tehran",
+    "region": "region3",
+    "zone": "ekhtiyariyeh"
+  },
+  {
+    "key": "273096",
+    "slug": "tehran-qoba",
+    "persianName": "قبا",
+    "province": "tehran",
+    "region": "qoba",
+    "zone": null
+  },
+  {
+    "key": "246685",
+    "slug": "tehran-region4",
+    "persianName": "منطقه 4",
+    "province": "tehran",
+    "region": "region4",
+    "zone": null
+  },
+  {
+    "key": "250268",
+    "slug": "tehran-region4-kouye_daneshgah_hakimiye",
+    "persianName": "کوی دانشگاه - حکیمیه",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "kouye_daneshgah_hakimiye"
+  },
+  {
+    "key": "250267",
+    "slug": "tehran-region4-haydarkhani",
+    "persianName": "حیدرخانی",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "haydarkhani"
+  },
+  {
+    "key": "247518",
+    "slug": "tehran-region4-maleklou_elm_o_sanat",
+    "persianName": "ملک لو - علم و صنعت",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "maleklou_elm_o_sanat"
+  },
+  {
+    "key": "247639",
+    "slug": "tehran-region4-estakhr",
+    "persianName": "استخر",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "estakhr"
+  },
+  {
+    "key": "247123",
+    "slug": "tehran-region4-qanat_kowsar",
+    "persianName": "قنات کوثر",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "qanat_kowsar"
+  },
+  {
+    "key": "247040",
+    "slug": "tehran-region4-tehranpars_qarbi",
+    "persianName": "تهران پارس غربی",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "tehranpars_qarbi"
+  },
+  {
+    "key": "273106",
+    "slug": "tehran-region4-tehranpars",
+    "persianName": "تهران پارس",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "tehranpars"
+  },
+  {
+    "key": "250283",
+    "slug": "tehran-region4-maydan_shahed",
+    "persianName": "میدان شاهد",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "maydan_shahed"
+  },
+  {
+    "key": "247818",
+    "slug": "tehran-region4-falake_sevom_tehranpars",
+    "persianName": "فلکه سوم تهرانپارس",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "falake_sevom_tehranpars"
+  },
+  {
+    "key": "250272",
+    "slug": "tehran-region4-jashnvare",
+    "persianName": "جشنواره",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "jashnvare"
+  },
+  {
+    "key": "328369",
+    "slug": "tehran-region4-oqaf",
+    "persianName": "اوقاف",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "oqaf"
+  },
+  {
+    "key": "247638",
+    "slug": "tehran-region4-hengam",
+    "persianName": "هنگام",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "hengam"
+  },
+  {
+    "key": "250280",
+    "slug": "tehran-region4-soroush",
+    "persianName": "سروش",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "soroush"
+  },
+  {
+    "key": "247705",
+    "slug": "tehran-region4-delavaran",
+    "persianName": "دلاوران",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "delavaran"
+  },
+  {
+    "key": "247641",
+    "slug": "tehran-region4-seraj",
+    "persianName": "سراج",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "seraj"
+  },
+  {
+    "key": "246818",
+    "slug": "tehran-region4-tehranpars_sharqi",
+    "persianName": "تهران پارس شرقی",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "tehranpars_sharqi"
+  },
+  {
+    "key": "247014",
+    "slug": "tehran-region4-javadiyeh",
+    "persianName": "جوادیه",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "javadiyeh"
+  },
+  {
+    "key": "246983",
+    "slug": "tehran-region4-golshan",
+    "persianName": "گلشن",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "golshan"
+  },
+  {
+    "key": "246984",
+    "slug": "tehran-region4-majidabad",
+    "persianName": "مجید اباد",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "majidabad"
+  },
+  {
+    "key": "250257",
+    "slug": "tehran-region4-ordibehesht_shomali",
+    "persianName": "اردیبهشت شمالی",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "ordibehesht_shomali"
+  },
+  {
+    "key": "250279",
+    "slug": "tehran-region4-boustan_bolvar_esteghlal",
+    "persianName": "بوستان - بلوار استقلال",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "boustan_bolvar_esteghlal"
+  },
+  {
+    "key": "250252",
+    "slug": "tehran-region4-shahrak_pars",
+    "persianName": "شهرک پارس",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "shahrak_pars"
+  },
+  {
+    "key": "247670",
+    "slug": "tehran-region4-shahrak_farhangian",
+    "persianName": "شهرک فرهنگیان",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "shahrak_farhangian"
+  },
+  {
+    "key": "246899",
+    "slug": "tehran-region4-qaasemabad_dehnarmak",
+    "persianName": "قاسم اباد - ده نارمک",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "qaasemabad_dehnarmak"
+  },
+  {
+    "key": "250255",
+    "slug": "tehran-region4-norouziyan",
+    "persianName": "نوروزیان",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "norouziyan"
+  },
+  {
+    "key": "250282",
+    "slug": "tehran-region4-saheb_alzaman_bagheri",
+    "persianName": "صاحب الزمان - باقری",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "saheb_alzaman_bagheri"
+  },
+  {
+    "key": "250256",
+    "slug": "tehran-region4-otouban_bagheri",
+    "persianName": "اتوبان باقری",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "otouban_bagheri"
+  },
+  {
+    "key": "246902",
+    "slug": "tehran-region4-narmak_shomali",
+    "persianName": "نارمک شمالی",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "narmak_shomali"
+  },
+  {
+    "key": "247485",
+    "slug": "tehran-region4-motahari_shahrak_omid",
+    "persianName": "مطهری - شهرک امید",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "motahari_shahrak_omid"
+  },
+  {
+    "key": "250251",
+    "slug": "tehran-region4-chaman_ara",
+    "persianName": "چمن ارا",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "chaman_ara"
+  },
+  {
+    "key": "247578",
+    "slug": "tehran-region4-shahrak_shahid_beheshti_estakhr",
+    "persianName": "شهرک شهید بهشتی",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "shahrak_shahid_beheshti_estakhr"
+  },
+  {
+    "key": "247688",
+    "slug": "tehran-region4-shahrak_shahid_shahpariyan",
+    "persianName": "شهرک شهید شهپریان",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "shahrak_shahid_shahpariyan"
+  },
+  {
+    "key": "250276",
+    "slug": "tehran-region4-shahrak_shahid_hashemi_nezhad",
+    "persianName": "شهرک شهیدهاشمی نژاد",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "shahrak_shahid_hashemi_nezhad"
+  },
+  {
+    "key": "250260",
+    "slug": "tehran-region4-varbaz",
+    "persianName": "وارباز",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "varbaz"
+  },
+  {
+    "key": "247704",
+    "slug": "tehran-region4-paydarfard_amir_ebrahimi",
+    "persianName": "پایدارفرد - امیر ابراهیمی",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "paydarfard_amir_ebrahimi"
+  },
+  {
+    "key": "250250",
+    "slug": "tehran-region4-zarabkhaneh",
+    "persianName": "ضرابخانه",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "zarabkhaneh"
+  },
+  {
+    "key": "250253",
+    "slug": "tehran-region4-gilan",
+    "persianName": "گیلان",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "gilan"
+  },
+  {
+    "key": "246897",
+    "slug": "tehran-region4-pasdaran_zarabkhaneh",
+    "persianName": "پاسداران - ضرابخانه",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "pasdaran_zarabkhaneh"
+  },
+  {
+    "key": "250248",
+    "slug": "tehran-region4-moghan",
+    "persianName": "مغان",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "moghan"
+  },
+  {
+    "key": "246898",
+    "slug": "tehran-region4-hoseinabad_mobarakabad",
+    "persianName": "حسین اباد - مبارک اباد",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "hoseinabad_mobarakabad"
+  },
+  {
+    "key": "250269",
+    "slug": "tehran-region4-kouy_nobonyad",
+    "persianName": "کوی نوبنیاد",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "kouy_nobonyad"
+  },
+  {
+    "key": "246982",
+    "slug": "tehran-region4-shamsabad_majidiyeh",
+    "persianName": "شمس اباد - مجیدیه",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "shamsabad_majidiyeh"
+  },
+  {
+    "key": "247041",
+    "slug": "tehran-region4-kalad",
+    "persianName": "کالاد",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "kalad"
+  },
+  {
+    "key": "250266",
+    "slug": "tehran-region4-kouhak_farjam",
+    "persianName": "فرجام",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "kouhak_farjam"
+  },
+  {
+    "key": "247706",
+    "slug": "tehran-region4-ostad_hassan_bana_majidiye_shomali",
+    "persianName": "استاد حسن بنا - مجیدیه شمالی",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "ostad_hassan_bana_majidiye_shomali"
+  },
+  {
+    "key": "250259",
+    "slug": "tehran-region4-rayhani",
+    "persianName": "ریحانی",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "rayhani"
+  },
+  {
+    "key": "273100",
+    "slug": "tehran-region4-heravi",
+    "persianName": "هروی",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "heravi"
+  },
+  {
+    "key": "250275",
+    "slug": "tehran-region4-vafamanesh",
+    "persianName": "وفامنش",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "vafamanesh"
+  },
+  {
+    "key": "250258",
+    "slug": "tehran-region4-saghdoush",
+    "persianName": "ساقدوش",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "saghdoush"
+  },
+  {
+    "key": "246809",
+    "slug": "tehran-region4-kazemabad",
+    "persianName": "کاظم اباد",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "kazemabad"
+  },
+  {
+    "key": "250264",
+    "slug": "tehran-region4-bani_hashem",
+    "persianName": "بنی هاشم",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "bani_hashem"
+  },
+  {
+    "key": "246901",
+    "slug": "tehran-region4-mehran",
+    "persianName": "مهران",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "mehran"
+  },
+  {
+    "key": "250271",
+    "slug": "tehran-region4-eslami",
+    "persianName": "اسلامی",
+    "province": "tehran",
+    "region": "region4",
+    "zone": "eslami"
+  },
+  {
+    "key": "250273",
+    "slug": "tehran-takavaran",
+    "persianName": "تکاوران",
+    "province": "tehran",
+    "region": "takavaran",
+    "zone": null
+  },
+  {
+    "key": "273105",
+    "slug": "tehran-elmosanat",
+    "persianName": "علم و صنعت",
+    "province": "tehran",
+    "region": "elmosanat",
+    "zone": null
+  },
+  {
+    "key": "273108",
+    "slug": "tehran-kuhsar",
+    "persianName": "کوهسار",
+    "province": "tehran",
+    "region": "kuhsar",
+    "zone": null
+  },
+  {
+    "key": "246745",
+    "slug": "tehran-region5",
+    "persianName": "منطقه 5",
+    "province": "tehran",
+    "region": "region5",
+    "zone": null
+  },
+  {
+    "key": "247124",
+    "slug": "tehran-region5-apadana",
+    "persianName": "اپادانا",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "apadana"
+  },
+  {
+    "key": "247042",
+    "slug": "tehran-region5-ekbatan",
+    "persianName": "اکباتان",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "ekbatan"
+  },
+  {
+    "key": "247051",
+    "slug": "tehran-region5-sazman_barnameh_jonubi",
+    "persianName": "سازمان برنامه جنوبی",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "sazman_barnameh_jonubi"
+  },
+  {
+    "key": "246824",
+    "slug": "tehran-region5-sazman_ab",
+    "persianName": "سازمان اب",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "sazman_ab"
+  },
+  {
+    "key": "328350",
+    "slug": "tehran-region5-sharabiani_farsad",
+    "persianName": "شربیانی - فرساد",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "sharabiani_farsad"
+  },
+  {
+    "key": "328362",
+    "slug": "tehran-region5-shahreziba",
+    "persianName": "شهر زیبا",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "shahreziba"
+  },
+  {
+    "key": "247723",
+    "slug": "tehran-region5-bolvar_taavon",
+    "persianName": "بلوار تعاون",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "bolvar_taavon"
+  },
+  {
+    "key": "246991",
+    "slug": "tehran-region5-janatabad_markazi",
+    "persianName": "جنت اباد مرکزی",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "janatabad_markazi"
+  },
+  {
+    "key": "246985",
+    "slug": "tehran-region5-shahran_jonubi",
+    "persianName": "شهران جنوبی",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "shahran_jonubi"
+  },
+  {
+    "key": "246826",
+    "slug": "tehran-region5-shahran_shomali",
+    "persianName": "شهران شمالی",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "shahran_shomali"
+  },
+  {
+    "key": "247486",
+    "slug": "tehran-region5-falake_aval_shahran",
+    "persianName": "فلکه اول شهران‎",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "falake_aval_shahran"
+  },
+  {
+    "key": "246822",
+    "slug": "tehran-region5-baharan",
+    "persianName": "بهاران",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "baharan"
+  },
+  {
+    "key": "247047",
+    "slug": "tehran-region5-janatabad_shomali",
+    "persianName": "جنت اباد شمالی",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "janatabad_shomali"
+  },
+  {
+    "key": "247506",
+    "slug": "tehran-region5-kourosh_sharghi",
+    "persianName": "کوروش شرقی",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "kourosh_sharghi"
+  },
+  {
+    "key": "246830",
+    "slug": "tehran-region5-moradabad",
+    "persianName": "مراد اباد",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "moradabad"
+  },
+  {
+    "key": "246828",
+    "slug": "tehran-region5-shahrak_naft",
+    "persianName": "شهرک نفت",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "shahrak_naft"
+  },
+  {
+    "key": "246833",
+    "slug": "tehran-region5-almahdi",
+    "persianName": "المهدی",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "almahdi"
+  },
+  {
+    "key": "250294",
+    "slug": "tehran-region5-shahrak_daneshgah_tehran",
+    "persianName": "شهرک دانشگاه تهران",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "shahrak_daneshgah_tehran"
+  },
+  {
+    "key": "247058",
+    "slug": "tehran-region5-punak_shomali",
+    "persianName": "پونک شمالی",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "punak_shomali"
+  },
+  {
+    "key": "247125",
+    "slug": "tehran-region5-punak_jonubi",
+    "persianName": "پونک جنوبی",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "punak_jonubi"
+  },
+  {
+    "key": "250289",
+    "slug": "tehran-region5-bolvar_adl",
+    "persianName": "بلوار عدل",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "bolvar_adl"
+  },
+  {
+    "key": "250302",
+    "slug": "tehran-region5-35_metri_golestan_mokhberi",
+    "persianName": "35متری گلستان - مخبری",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "35_metri_golestan_mokhberi"
+  },
+  {
+    "key": "250290",
+    "slug": "tehran-region5-bolvar_mirza_babaei",
+    "persianName": "بلوار میرزابابایی",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "bolvar_mirza_babaei"
+  },
+  {
+    "key": "246823",
+    "slug": "tehran-region5-janatabad_jonubi",
+    "persianName": "جنت اباد جنوبی",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "janatabad_jonubi"
+  },
+  {
+    "key": "250298",
+    "slug": "tehran-region5-iranshahr_jonoubi",
+    "persianName": "ایرانشهر جنوبی",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "iranshahr_jonoubi"
+  },
+  {
+    "key": "246907",
+    "slug": "tehran-region5-hesarak",
+    "persianName": "حصارک",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "hesarak"
+  },
+  {
+    "key": "247521",
+    "slug": "tehran-region5-bolvar_kouhsar",
+    "persianName": "بلوار کوهسار",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "bolvar_kouhsar"
+  },
+  {
+    "key": "247708",
+    "slug": "tehran-region5-sangan_souleghan",
+    "persianName": "سنگان - سولقان",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "sangan_souleghan"
+  },
+  {
+    "key": "247522",
+    "slug": "tehran-region5-falake_dovom_shahran",
+    "persianName": "فلکه دوم شهران",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "falake_dovom_shahran"
+  },
+  {
+    "key": "246905",
+    "slug": "tehran-region5-baq_feyz",
+    "persianName": "باغ فیض",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "baq_feyz"
+  },
+  {
+    "key": "247269",
+    "slug": "tehran-region5-payambar_markazi",
+    "persianName": "پیامبر مرکزی",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "payambar_markazi"
+  },
+  {
+    "key": "250295",
+    "slug": "tehran-region5-bolvar_aghaghiya",
+    "persianName": "بلوار اقاقیا",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "bolvar_aghaghiya"
+  },
+  {
+    "key": "328349",
+    "slug": "tehran-region5-niloofar",
+    "persianName": "نیلوفر",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "niloofar"
+  },
+  {
+    "key": "247827",
+    "slug": "tehran-region5-bozorgrah_alame_jafari",
+    "persianName": "بزرگراه علامه جعفری",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "bozorgrah_alame_jafari"
+  },
+  {
+    "key": "246904",
+    "slug": "tehran-region5-andisheh",
+    "persianName": "اندیشه",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "andisheh"
+  },
+  {
+    "key": "246908",
+    "slug": "tehran-region5-sazman_barnameh_shomali",
+    "persianName": "سازمان برنامه شمالی",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "sazman_barnameh_shomali"
+  },
+  {
+    "key": "250297",
+    "slug": "tehran-region5-bakeri",
+    "persianName": "باکری",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "bakeri"
+  },
+  {
+    "key": "246827",
+    "slug": "tehran-region5-shahrak_parvaz",
+    "persianName": "شهرک پرواز",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "shahrak_parvaz"
+  },
+  {
+    "key": "246903",
+    "slug": "tehran-region5-eram",
+    "persianName": "ارم",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "eram"
+  },
+  {
+    "key": "246909",
+    "slug": "tehran-region5-ferdos",
+    "persianName": "فردوس",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "ferdos"
+  },
+  {
+    "key": "247045",
+    "slug": "tehran-region5-bimeh",
+    "persianName": "بیمه",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "bimeh"
+  },
+  {
+    "key": "246821",
+    "slug": "tehran-region5-abazar",
+    "persianName": "اباذر",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "abazar"
+  },
+  {
+    "key": "250300",
+    "slug": "tehran-region5-payambar_sharghi",
+    "persianName": "پیامبر شرقی",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "payambar_sharghi"
+  },
+  {
+    "key": "250303",
+    "slug": "tehran-region5-satari",
+    "persianName": "ستاری",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "satari"
+  },
+  {
+    "key": "247415",
+    "slug": "tehran-region5-bolvar_kamali",
+    "persianName": "بلوار کمالی",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "bolvar_kamali"
+  },
+  {
+    "key": "247190",
+    "slug": "tehran-region5-sazman_barnameh_markazi",
+    "persianName": "سازمان برنامه مرکزی",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "sazman_barnameh_markazi"
+  },
+  {
+    "key": "250296",
+    "slug": "tehran-region5-chahar_divari",
+    "persianName": "چهار دیواری",
+    "province": "tehran",
+    "region": "region5",
+    "zone": "chahar_divari"
+  },
+  {
+    "key": "246684",
+    "slug": "tehran-region6",
+    "persianName": "منطقه 6",
+    "province": "tehran",
+    "region": "region6",
+    "zone": null
+  },
+  {
+    "key": "247068",
+    "slug": "tehran-region6-nezami_ganjavi",
+    "persianName": "نظامی گنجوی",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "nezami_ganjavi"
+  },
+  {
+    "key": "250342",
+    "slug": "tehran-region6-shahid_gomnam",
+    "persianName": "شهید گمنام",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "shahid_gomnam"
+  },
+  {
+    "key": "250335",
+    "slug": "tehran-region6-maydan_golha",
+    "persianName": "میدان گلها",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "maydan_golha"
+  },
+  {
+    "key": "247009",
+    "slug": "tehran-region6-saei",
+    "persianName": "ساعی",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "saei"
+  },
+  {
+    "key": "250322",
+    "slug": "tehran-region6-maydan_fatemi",
+    "persianName": "میدان فاطمی",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "maydan_fatemi"
+  },
+  {
+    "key": "247525",
+    "slug": "tehran-region6-nosrat",
+    "persianName": "نصرت",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "nosrat"
+  },
+  {
+    "key": "250309",
+    "slug": "tehran-region6-maydan_valiasr",
+    "persianName": "میدان ولیعصر",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "maydan_valiasr"
+  },
+  {
+    "key": "250334",
+    "slug": "tehran-region6-arzhantin",
+    "persianName": "ارژانتین",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "arzhantin"
+  },
+  {
+    "key": "247507",
+    "slug": "tehran-region6-kargar_shomali",
+    "persianName": "کارگر شمالی",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "kargar_shomali"
+  },
+  {
+    "key": "247830",
+    "slug": "tehran-region6-sarbedaran",
+    "persianName": "سربداران",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "sarbedaran"
+  },
+  {
+    "key": "250343",
+    "slug": "tehran-region6-zartosht",
+    "persianName": "زرتشت",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "zartosht"
+  },
+  {
+    "key": "246832",
+    "slug": "tehran-region6-jahad",
+    "persianName": "جهاد",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "jahad"
+  },
+  {
+    "key": "246913",
+    "slug": "tehran-region6-fatemi",
+    "persianName": "فاطمی",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "fatemi"
+  },
+  {
+    "key": "246831",
+    "slug": "tehran-region6-jamalzade",
+    "persianName": "جمالزاده",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "jamalzade"
+  },
+  {
+    "key": "247126",
+    "slug": "tehran-region6-keshavarz",
+    "persianName": "کشاورز",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "keshavarz"
+  },
+  {
+    "key": "250318",
+    "slug": "tehran-region6-maydan_enghelab",
+    "persianName": "میدان انقلاب",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "maydan_enghelab"
+  },
+  {
+    "key": "250325",
+    "slug": "tehran-region6-eskandari_shomali",
+    "persianName": "اسکندری شمالی",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "eskandari_shomali"
+  },
+  {
+    "key": "246915",
+    "slug": "tehran-region6-yusefabad",
+    "persianName": "یوسف اباد",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "yusefabad"
+  },
+  {
+    "key": "247010",
+    "slug": "tehran-region6-valfajr",
+    "persianName": "والفجر",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "valfajr"
+  },
+  {
+    "key": "250353",
+    "slug": "tehran-region6-maydan_asad_abadi",
+    "persianName": "میدان اسد آبادی",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "maydan_asad_abadi"
+  },
+  {
+    "key": "250350",
+    "slug": "tehran-region6-ebne_sina",
+    "persianName": "ابن سینا",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "ebne_sina"
+  },
+  {
+    "key": "247043",
+    "slug": "tehran-region6-iranshahr",
+    "persianName": "ایرانشهر",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "iranshahr"
+  },
+  {
+    "key": "247059",
+    "slug": "tehran-region6-amirabad",
+    "persianName": "امیراباد",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "amirabad"
+  },
+  {
+    "key": "247725",
+    "slug": "tehran-region6-jalal_al_ahmad",
+    "persianName": "جلال ال احمد",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "jalal_al_ahmad"
+  },
+  {
+    "key": "246910",
+    "slug": "tehran-region6-behjatabad",
+    "persianName": "بهجت اباد",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "behjatabad"
+  },
+  {
+    "key": "250326",
+    "slug": "tehran-region6-motahari_takht_tavus",
+    "persianName": "مطهری - تخت طاووس",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "motahari_takht_tavus"
+  },
+  {
+    "key": "250348",
+    "slug": "tehran-region6-mirzaye_shirazi",
+    "persianName": "میرزای شیرازی",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "mirzaye_shirazi"
+  },
+  {
+    "key": "250347",
+    "slug": "tehran-region6-vila_shomali",
+    "persianName": "ویلا شمالی",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "vila_shomali"
+  },
+  {
+    "key": "250344",
+    "slug": "tehran-region6-karimkhan_zand",
+    "persianName": "کریم خان زند",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "karimkhan_zand"
+  },
+  {
+    "key": "247526",
+    "slug": "tehran-region6-forsat_shirazi",
+    "persianName": "فرصت شیرازی",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "forsat_shirazi"
+  },
+  {
+    "key": "246914",
+    "slug": "tehran-region6-valiasr",
+    "persianName": "ولیعصر",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "valiasr"
+  },
+  {
+    "key": "247104",
+    "slug": "tehran-region11-enqelab_felestin",
+    "persianName": "انقلاب - فلسطین",
+    "province": "tehran",
+    "region": "region11",
+    "zone": "enqelab_felestin"
+  },
+  {
+    "key": "250332",
+    "slug": "tehran-region6-chaharrah_kalej",
+    "persianName": "چهارراه کالج",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "chaharrah_kalej"
+  },
+  {
+    "key": "250338",
+    "slug": "tehran-region6-maydan_ferdosi",
+    "persianName": "میدان فردوسی",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "maydan_ferdosi"
+  },
+  {
+    "key": "246834",
+    "slug": "tehran-region6-sanaei",
+    "persianName": "سنایی",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "sanaei"
+  },
+  {
+    "key": "250324",
+    "slug": "tehran-region6-kheradmand_shomali",
+    "persianName": "خردمند شمالی",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "kheradmand_shomali"
+  },
+  {
+    "key": "250351",
+    "slug": "tehran-region6-ghaem_magham_farahani",
+    "persianName": "قائم مقام فراهانی",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "ghaem_magham_farahani"
+  },
+  {
+    "key": "250320",
+    "slug": "tehran-region6-hafte_tir",
+    "persianName": "هفت تیر",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "hafte_tir"
+  },
+  {
+    "key": "247724",
+    "slug": "tehran-region6-fathi_shaghaghi",
+    "persianName": "فتحی شقاقی",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "fathi_shaghaghi"
+  },
+  {
+    "key": "246911",
+    "slug": "tehran-region6-daneshgah_tehran",
+    "persianName": "دانشگاه تهران",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "daneshgah_tehran"
+  },
+  {
+    "key": "250316",
+    "slug": "tehran-region6-vesal_shirazi",
+    "persianName": "وصال شیرازی",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "vesal_shirazi"
+  },
+  {
+    "key": "247646",
+    "slug": "tehran-region6-16_azar",
+    "persianName": "16آذر",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "16_azar"
+  },
+  {
+    "key": "247831",
+    "slug": "tehran-region6-felestin_shomali",
+    "persianName": "فلسطین شمالی",
+    "province": "tehran",
+    "region": "region6",
+    "zone": "felestin_shomali"
+  },
+  {
+    "key": "246723",
+    "slug": "tehran-region7",
+    "persianName": "منطقه 7",
+    "province": "tehran",
+    "region": "region7",
+    "zone": null
+  },
+  {
+    "key": "250369",
+    "slug": "tehran-region7-matlab_nezhad",
+    "persianName": "مطلب نژاد",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "matlab_nezhad"
+  },
+  {
+    "key": "250383",
+    "slug": "tehran-region7-ghanbar_zade",
+    "persianName": "قنبرزاده",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "ghanbar_zade"
+  },
+  {
+    "key": "247651",
+    "slug": "tehran-region7-ebne_yamin",
+    "persianName": "ابن یمین",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "ebne_yamin"
+  },
+  {
+    "key": "250356",
+    "slug": "tehran-region7-shaykh_safi",
+    "persianName": "شیخ صفی",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "shaykh_safi"
+  },
+  {
+    "key": "250387",
+    "slug": "tehran-region7-motahari",
+    "persianName": "مطهری",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "motahari"
+  },
+  {
+    "key": "247044",
+    "slug": "tehran-region7-nezamabad",
+    "persianName": "نظام اباد",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "nezamabad"
+  },
+  {
+    "key": "246950",
+    "slug": "tehran-region7-dehgan_gorgan",
+    "persianName": "گرگان",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "dehgan_gorgan"
+  },
+  {
+    "key": "246993",
+    "slug": "tehran-region7-kaj",
+    "persianName": "کاج",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "kaj"
+  },
+  {
+    "key": "246916",
+    "slug": "tehran-region7-qasr_heshmatieh",
+    "persianName": "قصر - حشمتیه",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "qasr_heshmatieh"
+  },
+  {
+    "key": "250388",
+    "slug": "tehran-region7-marvdasht",
+    "persianName": "مرودشت‎",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "marvdasht"
+  },
+  {
+    "key": "246917",
+    "slug": "tehran-region7-majidieh_dabestan",
+    "persianName": "مجیدیه - دبستان",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "majidieh_dabestan"
+  },
+  {
+    "key": "250386",
+    "slug": "tehran-region7-moalem",
+    "persianName": "معلم",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "moalem"
+  },
+  {
+    "key": "246992",
+    "slug": "tehran-region7-sohrevardi_baq_saba",
+    "persianName": "سهروردی - باغ صبا",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "sohrevardi_baq_saba"
+  },
+  {
+    "key": "247857",
+    "slug": "tehran-region7-shariati_malek",
+    "persianName": "شریعتی - ملک",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "shariati_malek"
+  },
+  {
+    "key": "250370",
+    "slug": "tehran-region7-motahari_mofateh",
+    "persianName": "مطهری - مفتح",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "motahari_mofateh"
+  },
+  {
+    "key": "250367",
+    "slug": "tehran-region7-bahar_shiraz",
+    "persianName": "بهار شیراز",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "bahar_shiraz"
+  },
+  {
+    "key": "246986",
+    "slug": "tehran-region7-bahar",
+    "persianName": "بهار",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "bahar"
+  },
+  {
+    "key": "246836",
+    "slug": "tehran-region7-khajeh_nasir_tusi_hoquqi",
+    "persianName": "خواجه نصیر - حقوقی",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "khajeh_nasir_tusi_hoquqi"
+  },
+  {
+    "key": "250371",
+    "slug": "tehran-region7-enghelab_pich_shemiran",
+    "persianName": "انقلاب - پیچ شمیران",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "enghelab_pich_shemiran"
+  },
+  {
+    "key": "247834",
+    "slug": "tehran-region7-sepah",
+    "persianName": "سپاه",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "sepah"
+  },
+  {
+    "key": "247648",
+    "slug": "tehran-region7-pol_choubi",
+    "persianName": "پل چوبی",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "pol_choubi"
+  },
+  {
+    "key": "247579",
+    "slug": "tehran-region7-eshrat_abad",
+    "persianName": "عشرت اباد",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "eshrat_abad"
+  },
+  {
+    "key": "250380",
+    "slug": "tehran-region7-se_rah_taleghani",
+    "persianName": "سه راه طالقانی",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "se_rah_taleghani"
+  },
+  {
+    "key": "250358",
+    "slug": "tehran-region7-torkamanestan",
+    "persianName": "ترکمنستان",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "torkamanestan"
+  },
+  {
+    "key": "250374",
+    "slug": "tehran-region7-sohrevardi_jonoubi",
+    "persianName": "سهروردی جنوبی",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "sohrevardi_jonoubi"
+  },
+  {
+    "key": "246838",
+    "slug": "tehran-region7-abbasabad_andisheh",
+    "persianName": "عباس اباد - اندیشه",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "abbasabad_andisheh"
+  },
+  {
+    "key": "250373",
+    "slug": "tehran-region7-beheshti_mir_emad",
+    "persianName": "بهشتی - میرعماد",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "beheshti_mir_emad"
+  },
+  {
+    "key": "250365",
+    "slug": "tehran-region7-mofateh_shomali",
+    "persianName": "مفتح شمالی",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "mofateh_shomali"
+  },
+  {
+    "key": "247127",
+    "slug": "tehran-region7-nilufar_shahidqandi",
+    "persianName": "نیلوفر - شهید قندی",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "nilufar_shahidqandi"
+  },
+  {
+    "key": "250381",
+    "slug": "tehran-region7-sabounchi_mahnaz",
+    "persianName": "صابونچی - مهناز",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "sabounchi_mahnaz"
+  },
+  {
+    "key": "247833",
+    "slug": "tehran-region7-sohrevardi_shomali",
+    "persianName": "سهروردی شمالی",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "sohrevardi_shomali"
+  },
+  {
+    "key": "247650",
+    "slug": "tehran-region7-police",
+    "persianName": "پلیس‎‎",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "police"
+  },
+  {
+    "key": "250382",
+    "slug": "tehran-region7-padegan_vali_asr",
+    "persianName": "پادگان ولیعصر",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "padegan_vali_asr"
+  },
+  {
+    "key": "246835",
+    "slug": "tehran-region7-aramaneh",
+    "persianName": "ارامنه",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "aramaneh"
+  },
+  {
+    "key": "250384",
+    "slug": "tehran-region7-heshmatiyeh",
+    "persianName": "حشمتیه‎",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "heshmatiyeh"
+  },
+  {
+    "key": "250366",
+    "slug": "tehran-region7-sabalan_shomali",
+    "persianName": "سبلان شمالی",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "sabalan_shomali"
+  },
+  {
+    "key": "246837",
+    "slug": "tehran-region7-shareq",
+    "persianName": "شارق",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "shareq"
+  },
+  {
+    "key": "250364",
+    "slug": "tehran-region7-rajabi",
+    "persianName": "رجبی",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "rajabi"
+  },
+  {
+    "key": "250376",
+    "slug": "tehran-region7-madani",
+    "persianName": "مدنی",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "madani"
+  },
+  {
+    "key": "250375",
+    "slug": "tehran-region7-ansar_alhossein_damavand",
+    "persianName": "انصارالحسین - دماوند",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "ansar_alhossein_damavand"
+  },
+  {
+    "key": "250357",
+    "slug": "tehran-region7-maydan_namjou",
+    "persianName": "میدان نامجو",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "maydan_namjou"
+  },
+  {
+    "key": "247065",
+    "slug": "tehran-region7-amjadiyeh_khaqani",
+    "persianName": "امجدیه - خاقانی",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "amjadiyeh_khaqani"
+  },
+  {
+    "key": "250354",
+    "slug": "tehran-region7-moghadam_police",
+    "persianName": "مقدم - پلیس",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "moghadam_police"
+  },
+  {
+    "key": "247832",
+    "slug": "tehran-region7-namjou_shahid_madani",
+    "persianName": "نامجو - شهید مدنی",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "namjou_shahid_madani"
+  },
+  {
+    "key": "247647",
+    "slug": "tehran-region7-sabzikar",
+    "persianName": "سبزیکاری",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "sabzikar"
+  },
+  {
+    "key": "250385",
+    "slug": "tehran-region7-maydan_emam_hossein",
+    "persianName": "میدان امام حسین",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "maydan_emam_hossein"
+  },
+  {
+    "key": "250378",
+    "slug": "tehran-region7-madani_jonoubi",
+    "persianName": "مدنی جنوبی",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "madani_jonoubi"
+  },
+  {
+    "key": "250355",
+    "slug": "tehran-region7-bakhshifard",
+    "persianName": "بخشی فرد",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "bakhshifard"
+  },
+  {
+    "key": "247006",
+    "slug": "tehran-region7-khajeh_nezamolmolk",
+    "persianName": "خواجه نظام الملک",
+    "province": "tehran",
+    "region": "region7",
+    "zone": "khajeh_nezamolmolk"
+  },
+  {
+    "key": "246687",
+    "slug": "tehran-region8",
+    "persianName": "منطقه 8",
+    "province": "tehran",
+    "region": "region8",
+    "zone": null
+  },
+  {
+    "key": "250390",
+    "slug": "tehran-region8-janbazan_sharghi",
+    "persianName": "جانبازان شرقی",
+    "province": "tehran",
+    "region": "region8",
+    "zone": "janbazan_sharghi"
+  },
+  {
+    "key": "247671",
+    "slug": "tehran-region8-samangan",
+    "persianName": "سمنگان",
+    "province": "tehran",
+    "region": "region8",
+    "zone": "samangan"
+  },
+  {
+    "key": "250391",
+    "slug": "tehran-region8-golbarg_gharbi",
+    "persianName": "گلبرگ غربی",
+    "province": "tehran",
+    "region": "region8",
+    "zone": "golbarg_gharbi"
+  },
+  {
+    "key": "250398",
+    "slug": "tehran-region8-bolvar_parvin",
+    "persianName": "بلوار پروین",
+    "province": "tehran",
+    "region": "region8",
+    "zone": "bolvar_parvin"
+  },
+  {
+    "key": "250395",
+    "slug": "tehran-region8-falake_aval_tehranpars",
+    "persianName": "فلکه اول تهرانپارس",
+    "province": "tehran",
+    "region": "region8",
+    "zone": "falake_aval_tehranpars"
+  },
+  {
+    "key": "246842",
+    "slug": "tehran-region8-vahidiyeh",
+    "persianName": "وحیدیه",
+    "province": "tehran",
+    "region": "region8",
+    "zone": "vahidiyeh"
+  },
+  {
+    "key": "246976",
+    "slug": "tehran-region8-taslihat",
+    "persianName": "تسلیحات",
+    "province": "tehran",
+    "region": "region8",
+    "zone": "taslihat"
+  },
+  {
+    "key": "247011",
+    "slug": "tehran-region8-kerman",
+    "persianName": "کرمان",
+    "province": "tehran",
+    "region": "region8",
+    "zone": "kerman"
+  },
+  {
+    "key": "247487",
+    "slug": "tehran-region8-golshan_doust",
+    "persianName": "گلشن دوست",
+    "province": "tehran",
+    "region": "region8",
+    "zone": "golshan_doust"
+  },
+  {
+    "key": "247084",
+    "slug": "tehran-region8-narmak",
+    "persianName": "نارمک",
+    "province": "tehran",
+    "region": "region8",
+    "zone": "narmak"
+  },
+  {
+    "key": "250389",
+    "slug": "tehran-region8-shahid_vashaghani",
+    "persianName": "شهید واشقانی",
+    "province": "tehran",
+    "region": "region8",
+    "zone": "shahid_vashaghani"
+  },
+  {
+    "key": "250394",
+    "slug": "tehran-region8-dayhim",
+    "persianName": "دیهیم",
+    "province": "tehran",
+    "region": "region8",
+    "zone": "dayhim"
+  },
+  {
+    "key": "246919",
+    "slug": "tehran-region8-lashgar_sharqi",
+    "persianName": "لشگر شرقی",
+    "province": "tehran",
+    "region": "region8",
+    "zone": "lashgar_sharqi"
+  },
+  {
+    "key": "246840",
+    "slug": "tehran-region8-lashgar_qarbi",
+    "persianName": "لشگر غربی",
+    "province": "tehran",
+    "region": "region8",
+    "zone": "lashgar_qarbi"
+  },
+  {
+    "key": "246839",
+    "slug": "tehran-region8-zarkesh",
+    "persianName": "زرکش",
+    "province": "tehran",
+    "region": "region8",
+    "zone": "zarkesh"
+  },
+  {
+    "key": "247836",
+    "slug": "tehran-region8-afshari",
+    "persianName": "افشاری",
+    "province": "tehran",
+    "region": "region8",
+    "zone": "afshari"
+  },
+  {
+    "key": "250397",
+    "slug": "tehran-region8-mehregan",
+    "persianName": "مهرگان",
+    "province": "tehran",
+    "region": "region8",
+    "zone": "mehregan"
+  },
+  {
+    "key": "328356",
+    "slug": "tehran-region8-sarsabz",
+    "persianName": "سرسبز",
+    "province": "tehran",
+    "region": "region8",
+    "zone": "sarsabz"
+  },
+  {
+    "key": "328372",
+    "slug": "tehran-region8-madaen",
+    "persianName": "مدائن",
+    "province": "tehran",
+    "region": "region8",
+    "zone": "madaen"
+  },
+  {
+    "key": "247835",
+    "slug": "tehran-region8-doktor_ayat",
+    "persianName": "دکتر ایت",
+    "province": "tehran",
+    "region": "region8",
+    "zone": "doktor_ayat"
+  },
+  {
+    "key": "247655",
+    "slug": "tehran-region8-maydan_helal_ahmar",
+    "persianName": "میدان هلال احمر",
+    "province": "tehran",
+    "region": "region8",
+    "zone": "maydan_helal_ahmar"
+  },
+  {
+    "key": "328355",
+    "slug": "tehran-region8-golestan",
+    "persianName": "گلستان",
+    "province": "tehran",
+    "region": "region8",
+    "zone": "golestan"
+  },
+  {
+    "key": "328371",
+    "slug": "tehran-region8-haft_hoz",
+    "persianName": "هفت حوض",
+    "province": "tehran",
+    "region": "region8",
+    "zone": "haft_hoz"
+  },
+  {
+    "key": "250396",
+    "slug": "tehran-region8-bakhtiari",
+    "persianName": "بختیاری",
+    "province": "tehran",
+    "region": "region8",
+    "zone": "bakhtiari"
+  },
+  {
+    "key": "246720",
+    "slug": "tehran-region9",
+    "persianName": "منطقه 9",
+    "province": "tehran",
+    "region": "region9",
+    "zone": null
+  },
+  {
+    "key": "247087",
+    "slug": "tehran-region9-ostad_moein",
+    "persianName": "استاد معین",
+    "province": "tehran",
+    "region": "region9",
+    "zone": "ostad_moein"
+  },
+  {
+    "key": "246841",
+    "slug": "tehran-region9-fath",
+    "persianName": "فتح",
+    "province": "tehran",
+    "region": "region9",
+    "zone": "fath"
+  },
+  {
+    "key": "250077",
+    "slug": "tehran-region9-maydan_fath",
+    "persianName": "میدان فتح",
+    "province": "tehran",
+    "region": "region9",
+    "zone": "maydan_fath"
+  },
+  {
+    "key": "249949",
+    "slug": "tehran-region9-shishe_va_gaz",
+    "persianName": "شیشه و گاز",
+    "province": "tehran",
+    "region": "region9",
+    "zone": "shishe_va_gaz"
+  },
+  {
+    "key": "246922",
+    "slug": "tehran-region9-forudgah_mehrabad",
+    "persianName": "فرودگاه مهراباد",
+    "province": "tehran",
+    "region": "region9",
+    "zone": "forudgah_mehrabad"
+  },
+  {
+    "key": "246920",
+    "slug": "tehran-region9-dastqeyb",
+    "persianName": "دستغیب",
+    "province": "tehran",
+    "region": "region9",
+    "zone": "dastqeyb"
+  },
+  {
+    "key": "249890",
+    "slug": "tehran-region9-nahr_firouz_abad",
+    "persianName": "نهر فیروزاباد",
+    "province": "tehran",
+    "region": "region9",
+    "zone": "nahr_firouz_abad"
+  },
+  {
+    "key": "246921",
+    "slug": "tehran-region9-dr_hushyar",
+    "persianName": "دکتر هوشیار",
+    "province": "tehran",
+    "region": "region9",
+    "zone": "dr_hushyar"
+  },
+  {
+    "key": "249797",
+    "slug": "tehran-region9-tajik_toos",
+    "persianName": "تاجیک - طوس",
+    "province": "tehran",
+    "region": "region9",
+    "zone": "tajik_toos"
+  },
+  {
+    "key": "247580",
+    "slug": "tehran-region9-hashemi_dampezeshki",
+    "persianName": "هاشمی - دامپزشکی",
+    "province": "tehran",
+    "region": "region9",
+    "zone": "hashemi_dampezeshki"
+  },
+  {
+    "key": "249951",
+    "slug": "tehran-region9-jey",
+    "persianName": "جی",
+    "province": "tehran",
+    "region": "region9",
+    "zone": "jey"
+  },
+  {
+    "key": "249675",
+    "slug": "tehran-region9-shahidan",
+    "persianName": "شهیدان",
+    "province": "tehran",
+    "region": "region9",
+    "zone": "shahidan"
+  },
+  {
+    "key": "246994",
+    "slug": "tehran-region9-emamzadeh_abdollah",
+    "persianName": "امامزاده عبداله",
+    "province": "tehran",
+    "region": "region9",
+    "zone": "emamzadeh_abdollah"
+  },
+  {
+    "key": "249917",
+    "slug": "tehran-region9-sar_lashgar_bakhtiyari",
+    "persianName": "سرلشگر بختیاری",
+    "province": "tehran",
+    "region": "region9",
+    "zone": "sar_lashgar_bakhtiyari"
+  },
+  {
+    "key": "250062",
+    "slug": "tehran-region9-akbar_abad",
+    "persianName": "اکبراباد",
+    "province": "tehran",
+    "region": "region9",
+    "zone": "akbar_abad"
+  },
+  {
+    "key": "249950",
+    "slug": "tehran-region9-kouy_mehrabad",
+    "persianName": "کوی مهراباد",
+    "province": "tehran",
+    "region": "region9",
+    "zone": "kouy_mehrabad"
+  },
+  {
+    "key": "247093",
+    "slug": "tehran-region9-sarasiyab_mehrabad",
+    "persianName": "سراسیاب مهراباد",
+    "province": "tehran",
+    "region": "region9",
+    "zone": "sarasiyab_mehrabad"
+  },
+  {
+    "key": "247128",
+    "slug": "tehran-region9-shamshiri",
+    "persianName": "شمشیری",
+    "province": "tehran",
+    "region": "region9",
+    "zone": "shamshiri"
+  },
+  {
+    "key": "247534",
+    "slug": "tehran-region9-45_metri_zarand",
+    "persianName": "45متری زرند",
+    "province": "tehran",
+    "region": "region9",
+    "zone": "45_metri_zarand"
+  },
+  {
+    "key": "249851",
+    "slug": "tehran-region9-kouy_mehrzad_ghasemlu",
+    "persianName": "کوی مهرزاد قاسملو",
+    "province": "tehran",
+    "region": "region9",
+    "zone": "kouy_mehrzad_ghasemlu"
+  },
+  {
+    "key": "246843",
+    "slug": "tehran-region9-mehrabad_jonubi",
+    "persianName": "مهراباد جنوبی",
+    "province": "tehran",
+    "region": "region9",
+    "zone": "mehrabad_jonubi"
+  },
+  {
+    "key": "249655",
+    "slug": "tehran-region9-maydan_azadi",
+    "persianName": "میدان ازادی",
+    "province": "tehran",
+    "region": "region9",
+    "zone": "maydan_azadi"
+  },
+  {
+    "key": "247551",
+    "slug": "tehran-region9-sar_asiyab",
+    "persianName": "سراسیاب",
+    "province": "tehran",
+    "region": "region9",
+    "zone": "sar_asiyab"
+  },
+  {
+    "key": "250153",
+    "slug": "tehran-region9-najarzadegan",
+    "persianName": "نجارزادگان",
+    "province": "tehran",
+    "region": "region9",
+    "zone": "najarzadegan"
+  },
+  {
+    "key": "246686",
+    "slug": "tehran-region10",
+    "persianName": "منطقه 10",
+    "province": "tehran",
+    "region": "region10",
+    "zone": null
+  },
+  {
+    "key": "247048",
+    "slug": "tehran-region10-soleymaniteymuri",
+    "persianName": "سلیمانی تیموری",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "soleymaniteymuri"
+  },
+  {
+    "key": "249589",
+    "slug": "tehran-region10-amiri",
+    "persianName": "امیری",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "amiri"
+  },
+  {
+    "key": "247102",
+    "slug": "tehran-region10-haftchenar",
+    "persianName": "هفت چنار",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "haftchenar"
+  },
+  {
+    "key": "249610",
+    "slug": "tehran-region10-golestani",
+    "persianName": "گلستانی",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "golestani"
+  },
+  {
+    "key": "247768",
+    "slug": "tehran-region10-pour_eslami",
+    "persianName": "پور اسلامی",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "pour_eslami"
+  },
+  {
+    "key": "247094",
+    "slug": "tehran-region10-beryanak",
+    "persianName": "بریانک",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "beryanak"
+  },
+  {
+    "key": "249910",
+    "slug": "tehran-region10-mahboub_mojaz_gharbi_sina_gharbi",
+    "persianName": "محبوب مجاز غربی - سینا غربی",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "mahboub_mojaz_gharbi_sina_gharbi"
+  },
+  {
+    "key": "250056",
+    "slug": "tehran-region10-eftekari",
+    "persianName": "افتکاری",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "eftekari"
+  },
+  {
+    "key": "249936",
+    "slug": "tehran-region10-salman_farsi",
+    "persianName": "سلمان فارسی",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "salman_farsi"
+  },
+  {
+    "key": "247573",
+    "slug": "tehran-region10-safdari",
+    "persianName": "صفدری",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "safdari"
+  },
+  {
+    "key": "246847",
+    "slug": "tehran-region10-hashemi",
+    "persianName": "هاشمی",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "hashemi"
+  },
+  {
+    "key": "249594",
+    "slug": "tehran-region10-nahr_firouz_abadi",
+    "persianName": "نهر فیروزابادی",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "nahr_firouz_abadi"
+  },
+  {
+    "key": "249597",
+    "slug": "tehran-region10-malek_ashtar_jeyhoun",
+    "persianName": "مالک اشتر - جیحون",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "malek_ashtar_jeyhoun"
+  },
+  {
+    "key": "246845",
+    "slug": "tehran-region10-zanjan_jonubi",
+    "persianName": "زنجان جنوبی",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "zanjan_jonubi"
+  },
+  {
+    "key": "246975",
+    "slug": "tehran-region10-salsabil_shomali",
+    "persianName": "سلسبیل شمالی",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "salsabil_shomali"
+  },
+  {
+    "key": "250033",
+    "slug": "tehran-region10-boustan_saadi",
+    "persianName": "بوستان سعدی",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "boustan_saadi"
+  },
+  {
+    "key": "249829",
+    "slug": "tehran-region10-roudaki_jonoubi",
+    "persianName": "رودکی جنوبی",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "roudaki_jonoubi"
+  },
+  {
+    "key": "249603",
+    "slug": "tehran-region10-azadi_azarbayjan",
+    "persianName": "ازادی - اذربایجان",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "azadi_azarbayjan"
+  },
+  {
+    "key": "249781",
+    "slug": "tehran-region10-maymanat",
+    "persianName": "میمنت",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "maymanat"
+  },
+  {
+    "key": "247129",
+    "slug": "tehran-region10-karun_jonubi",
+    "persianName": "کارون جنوبی",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "karun_jonubi"
+  },
+  {
+    "key": "250400",
+    "slug": "tehran-region10-emam_khomeyni_jeyhoun",
+    "persianName": "امام خمینی - جیحون",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "emam_khomeyni_jeyhoun"
+  },
+  {
+    "key": "249934",
+    "slug": "tehran-region10-hosseini_doust",
+    "persianName": "حسینی دوست",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "hosseini_doust"
+  },
+  {
+    "key": "249952",
+    "slug": "tehran-region10-khiyaban_karoun",
+    "persianName": "خیابان کارون",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "khiyaban_karoun"
+  },
+  {
+    "key": "247055",
+    "slug": "tehran-region10-shobeyrijei",
+    "persianName": "شبیری-جی",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "shobeyrijei"
+  },
+  {
+    "key": "247730",
+    "slug": "tehran-region10-baradaran_falah",
+    "persianName": "برادران فلاح",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "baradaran_falah"
+  },
+  {
+    "key": "249722",
+    "slug": "tehran-region10-30_metri_jey",
+    "persianName": "سی متری جی",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "30_metri_jey"
+  },
+  {
+    "key": "249739",
+    "slug": "tehran-region10-sobhani",
+    "persianName": "سبحانی",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "sobhani"
+  },
+  {
+    "key": "246846",
+    "slug": "tehran-region10-salsabil_jonubi",
+    "persianName": "سلسبیل جنوبی",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "salsabil_jonubi"
+  },
+  {
+    "key": "250129",
+    "slug": "tehran-region10-navab",
+    "persianName": "نواب",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "navab"
+  },
+  {
+    "key": "249922",
+    "slug": "tehran-region10-khiyaban_komeil",
+    "persianName": "خیابان کمیل",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "khiyaban_komeil"
+  },
+  {
+    "key": "250065",
+    "slug": "tehran-region10-ghasr_aldasht",
+    "persianName": "قصرالدشت",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "ghasr_aldasht"
+  },
+  {
+    "key": "247100",
+    "slug": "tehran-region10-karun_shomali",
+    "persianName": "کارون شمالی",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "karun_shomali"
+  },
+  {
+    "key": "247664",
+    "slug": "tehran-region10-behnoud",
+    "persianName": "بهنود",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "behnoud"
+  },
+  {
+    "key": "249587",
+    "slug": "tehran-region10-dampezeshki",
+    "persianName": "دامپزشکی",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "dampezeshki"
+  },
+  {
+    "key": "250127",
+    "slug": "tehran-region10-tous",
+    "persianName": "طوس",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "tous"
+  },
+  {
+    "key": "249708",
+    "slug": "tehran-region10-mashouf",
+    "persianName": "مشعوف",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "mashouf"
+  },
+  {
+    "key": "249723",
+    "slug": "tehran-region10-shahid_arab",
+    "persianName": "شهید عرب",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "shahid_arab"
+  },
+  {
+    "key": "247715",
+    "slug": "tehran-region10-azimi",
+    "persianName": "عظیمی",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "azimi"
+  },
+  {
+    "key": "249937",
+    "slug": "tehran-region10-hesam_aldin",
+    "persianName": "حسام الدین",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "hesam_aldin"
+  },
+  {
+    "key": "250117",
+    "slug": "tehran-region10-khosh",
+    "persianName": "خوش",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "khosh"
+  },
+  {
+    "key": "247784",
+    "slug": "tehran-region10-hajian",
+    "persianName": "حاجیان",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "hajian"
+  },
+  {
+    "key": "250048",
+    "slug": "tehran-region10-sarsabil",
+    "persianName": "سرسبیل",
+    "province": "tehran",
+    "region": "region10",
+    "zone": "sarsabil"
+  },
+  {
+    "key": "246735",
+    "slug": "tehran-region12",
+    "persianName": "منطقه 12",
+    "province": "tehran",
+    "region": "region12",
+    "zone": null
+  },
+  {
+    "key": "249908",
+    "slug": "tehran-region12-sarhang_sakhaei",
+    "persianName": "سرهنگ سخایی",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "sarhang_sakhaei"
+  },
+  {
+    "key": "247795",
+    "slug": "tehran-region12-ashjaei",
+    "persianName": "اشجعی",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "ashjaei"
+  },
+  {
+    "key": "246851",
+    "slug": "tehran-region12-qiyam",
+    "persianName": "قیام",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "qiyam"
+  },
+  {
+    "key": "247694",
+    "slug": "tehran-region12-khatibi",
+    "persianName": "خطیبی",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "khatibi"
+  },
+  {
+    "key": "247783",
+    "slug": "tehran-region12-razavi",
+    "persianName": "رضوی",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "razavi"
+  },
+  {
+    "key": "246912",
+    "slug": "tehran-region12-emamzadeh_yahya",
+    "persianName": "امامزاده یحیی",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "emamzadeh_yahya"
+  },
+  {
+    "key": "247697",
+    "slug": "tehran-region12-15_khordad_khiyaban_rey",
+    "persianName": "15خرداد - خیابان ری",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "15_khordad_khiyaban_rey"
+  },
+  {
+    "key": "246927",
+    "slug": "tehran-region12-ferdowsi",
+    "persianName": "فردوسی",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "ferdowsi"
+  },
+  {
+    "key": "250068",
+    "slug": "tehran-region12-posht_shahrdari_bolvar_ferdosi",
+    "persianName": "پشت شهرداری - بلوار فردوسی",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "posht_shahrdari_bolvar_ferdosi"
+  },
+  {
+    "key": "249681",
+    "slug": "tehran-region12-lale_zar",
+    "persianName": "لاله زار",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "lale_zar"
+  },
+  {
+    "key": "250114",
+    "slug": "tehran-region12-manouchehri",
+    "persianName": "منوچهری",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "manouchehri"
+  },
+  {
+    "key": "249650",
+    "slug": "tehran-region12-kouche_berlan",
+    "persianName": "کوچه برلن",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "kouche_berlan"
+  },
+  {
+    "key": "250120",
+    "slug": "tehran-region12-taghavi",
+    "persianName": "تقوی",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "taghavi"
+  },
+  {
+    "key": "249953",
+    "slug": "tehran-region12-ghasemi",
+    "persianName": "قاسمی",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "ghasemi"
+  },
+  {
+    "key": "247131",
+    "slug": "tehran-region12-iran",
+    "persianName": "ایران",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "iran"
+  },
+  {
+    "key": "250125",
+    "slug": "tehran-region12-ghaderi",
+    "persianName": "قادری",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "ghaderi"
+  },
+  {
+    "key": "249805",
+    "slug": "tehran-region12-mardom_mojahedin_eslam",
+    "persianName": "مردم - مجاهدین اسلام",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "mardom_mojahedin_eslam"
+  },
+  {
+    "key": "250158",
+    "slug": "tehran-region12-javan_tash",
+    "persianName": "جوان تاش",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "javan_tash"
+  },
+  {
+    "key": "247556",
+    "slug": "tehran-region12-khiyaban_iran",
+    "persianName": "خیابان ایران",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "khiyaban_iran"
+  },
+  {
+    "key": "250134",
+    "slug": "tehran-region12-davoudi",
+    "persianName": "داوودی",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "davoudi"
+  },
+  {
+    "key": "249933",
+    "slug": "tehran-region12-diyalame",
+    "persianName": "دیالمه",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "diyalame"
+  },
+  {
+    "key": "247118",
+    "slug": "tehran-region12-baharestan",
+    "persianName": "بهارستان",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "baharestan"
+  },
+  {
+    "key": "250047",
+    "slug": "tehran-region12-khiyaban_amir_kabir_saadi",
+    "persianName": "امیرکبیر - سعدی",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "khiyaban_amir_kabir_saadi"
+  },
+  {
+    "key": "249607",
+    "slug": "tehran-region12-nour_mohamadi",
+    "persianName": "نورمحمدی",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "nour_mohamadi"
+  },
+  {
+    "key": "250128",
+    "slug": "tehran-region12-melat",
+    "persianName": "ملت",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "melat"
+  },
+  {
+    "key": "249954",
+    "slug": "tehran-region12-safi_alishah",
+    "persianName": "صفی علیشاه",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "safi_alishah"
+  },
+  {
+    "key": "249969",
+    "slug": "tehran-region12-bagh_sepahsalar",
+    "persianName": "باغ سپهسالار",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "bagh_sepahsalar"
+  },
+  {
+    "key": "249766",
+    "slug": "tehran-region12-javidi",
+    "persianName": "جاویدی",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "javidi"
+  },
+  {
+    "key": "246987",
+    "slug": "tehran-region12-arg_pamenar",
+    "persianName": "ارگ - پامنار",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "arg_pamenar"
+  },
+  {
+    "key": "249659",
+    "slug": "tehran-region12-jamshid_pour",
+    "persianName": "جمشیدپور",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "jamshid_pour"
+  },
+  {
+    "key": "249827",
+    "slug": "tehran-region12-khorasan",
+    "persianName": "خراسان",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "khorasan"
+  },
+  {
+    "key": "249660",
+    "slug": "tehran-region12-khiyaban_rey",
+    "persianName": "خیابان ری",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "khiyaban_rey"
+  },
+  {
+    "key": "246951",
+    "slug": "tehran-region12-bazar",
+    "persianName": "بازار",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "bazar"
+  },
+  {
+    "key": "249861",
+    "slug": "tehran-region12-bazar_zayd",
+    "persianName": "بازار زید",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "bazar_zayd"
+  },
+  {
+    "key": "249814",
+    "slug": "tehran-region12-bazar_bozorg",
+    "persianName": "بازار بزرگ",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "bazar_bozorg"
+  },
+  {
+    "key": "250004",
+    "slug": "tehran-region12-amin_aldole",
+    "persianName": "امین الدوله",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "amin_aldole"
+  },
+  {
+    "key": "247850",
+    "slug": "tehran-region12-mostafa_khomayni",
+    "persianName": "مصطفی خمینی",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "mostafa_khomayni"
+  },
+  {
+    "key": "249731",
+    "slug": "tehran-region12-kiyani",
+    "persianName": "کیانی",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "kiyani"
+  },
+  {
+    "key": "250101",
+    "slug": "tehran-region12-sabze_maydan",
+    "persianName": "بزرگ - سبزه میدان",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "sabze_maydan"
+  },
+  {
+    "key": "249978",
+    "slug": "tehran-region12-bazar_mesgarha",
+    "persianName": "بازار مسگرها",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "bazar_mesgarha"
+  },
+  {
+    "key": "247066",
+    "slug": "tehran-region12-mokhtari_takhti",
+    "persianName": "مختاری - تختی",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "mokhtari_takhti"
+  },
+  {
+    "key": "250081",
+    "slug": "tehran-region12-bayn_alharamayn",
+    "persianName": "بین الحرمین",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "bayn_alharamayn"
+  },
+  {
+    "key": "247070",
+    "slug": "tehran-region12-sanglaj",
+    "persianName": "سنگلج",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "sanglaj"
+  },
+  {
+    "key": "249896",
+    "slug": "tehran-region12-mashhadi_rahim",
+    "persianName": "مشهدی رحیم",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "mashhadi_rahim"
+  },
+  {
+    "key": "247054",
+    "slug": "tehran-region12-harandi",
+    "persianName": "هرندی",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "harandi"
+  },
+  {
+    "key": "249631",
+    "slug": "tehran-region12-pamenar",
+    "persianName": "پامنار",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "pamenar"
+  },
+  {
+    "key": "250005",
+    "slug": "tehran-region12-maydan_ghiyam",
+    "persianName": "میدان قیام",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "maydan_ghiyam"
+  },
+  {
+    "key": "247555",
+    "slug": "tehran-region12-khiyaban_ekbatan_mellat",
+    "persianName": "خیابان اکباتان - ملت",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "khiyaban_ekbatan_mellat"
+  },
+  {
+    "key": "247751",
+    "slug": "tehran-region12-bazar_bozorg_pele_norouzkhan",
+    "persianName": "بازار بزرگ - پله نوروزخان",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "bazar_bozorg_pele_norouzkhan"
+  },
+  {
+    "key": "247613",
+    "slug": "tehran-region12-mousavi_abshar",
+    "persianName": "موسوی - ابشار",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "mousavi_abshar"
+  },
+  {
+    "key": "249651",
+    "slug": "tehran-region12-konsoulgari_pamenar",
+    "persianName": "کنسولگری - پامنار",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "konsoulgari_pamenar"
+  },
+  {
+    "key": "249674",
+    "slug": "tehran-region12-mohebi",
+    "persianName": "محبی",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "mohebi"
+  },
+  {
+    "key": "247679",
+    "slug": "tehran-region12-maydan_khorasan",
+    "persianName": "میدان خراسان",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "maydan_khorasan"
+  },
+  {
+    "key": "249891",
+    "slug": "tehran-region12-pahlevan_hasan",
+    "persianName": "پهلوان حسن",
+    "province": "tehran",
+    "region": "region12",
+    "zone": "pahlevan_hasan"
+  },
+  {
+    "key": "246689",
+    "slug": "tehran-region13",
+    "persianName": "منطقه 13",
+    "province": "tehran",
+    "region": "region13",
+    "zone": null
+  },
+  {
+    "key": "247775",
+    "slug": "tehran-region13-shahid_ghafari",
+    "persianName": "شهید غفاری",
+    "province": "tehran",
+    "region": "region13",
+    "zone": "shahid_ghafari"
+  },
+  {
+    "key": "247621",
+    "slug": "tehran-region13-pichak",
+    "persianName": "پیچک",
+    "province": "tehran",
+    "region": "region13",
+    "zone": "pichak"
+  },
+  {
+    "key": "250010",
+    "slug": "tehran-region13-tehran_no",
+    "persianName": "تهران نو",
+    "province": "tehran",
+    "region": "region13",
+    "zone": "tehran_no"
+  },
+  {
+    "key": "247017",
+    "slug": "tehran-region13-piruzi",
+    "persianName": "پیروزی",
+    "province": "tehran",
+    "region": "region13",
+    "zone": "piruzi"
+  },
+  {
+    "key": "247495",
+    "slug": "tehran-region13-montazeri",
+    "persianName": "منتظری",
+    "province": "tehran",
+    "region": "region13",
+    "zone": "montazeri"
+  },
+  {
+    "key": "247533",
+    "slug": "tehran-region13-saeid_arab",
+    "persianName": "سعید عرب",
+    "province": "tehran",
+    "region": "region13",
+    "zone": "saeid_arab"
+  },
+  {
+    "key": "247792",
+    "slug": "tehran-region13-padegan_nirou_havaei",
+    "persianName": "پادگان نیرو هوایی",
+    "province": "tehran",
+    "region": "region13",
+    "zone": "padegan_nirou_havaei"
+  },
+  {
+    "key": "247098",
+    "slug": "tehran-region13-sorkhe_hesar",
+    "persianName": "سرخه حصار",
+    "province": "tehran",
+    "region": "region13",
+    "zone": "sorkhe_hesar"
+  },
+  {
+    "key": "247106",
+    "slug": "tehran-region13-zeynabiyeh",
+    "persianName": "زینبیه",
+    "province": "tehran",
+    "region": "region13",
+    "zone": "zeynabiyeh"
+  },
+  {
+    "key": "247077",
+    "slug": "tehran-region13-ashtiyani",
+    "persianName": "اشتیانی",
+    "province": "tehran",
+    "region": "region13",
+    "zone": "ashtiyani"
+  },
+  {
+    "key": "249774",
+    "slug": "tehran-region13-bozorgrah_abas_doran",
+    "persianName": "بزرگراه عباس دوران",
+    "province": "tehran",
+    "region": "region13",
+    "zone": "bozorgrah_abas_doran"
+  },
+  {
+    "key": "249800",
+    "slug": "tehran-region13-kouy_zeynabeiyeh_kolahdouz",
+    "persianName": "کوی زینبیه - کلاهدوز",
+    "province": "tehran",
+    "region": "region13",
+    "zone": "kouy_zeynabeiyeh_kolahdouz"
+  },
+  {
+    "key": "247095",
+    "slug": "tehran-region13-shora",
+    "persianName": "شورا",
+    "province": "tehran",
+    "region": "region13",
+    "zone": "shora"
+  },
+  {
+    "key": "247067",
+    "slug": "tehran-region13-emamat",
+    "persianName": "امامت",
+    "province": "tehran",
+    "region": "region13",
+    "zone": "emamat"
+  },
+  {
+    "key": "249968",
+    "slug": "tehran-region13-bastami",
+    "persianName": "بسطامی",
+    "province": "tehran",
+    "region": "region13",
+    "zone": "bastami"
+  },
+  {
+    "key": "246854",
+    "slug": "tehran-region13-niru_havaei",
+    "persianName": "نیروی هوایی",
+    "province": "tehran",
+    "region": "region13",
+    "zone": "niru_havaei"
+  },
+  {
+    "key": "250092",
+    "slug": "tehran-region13-jadidi",
+    "persianName": "جدیدی",
+    "province": "tehran",
+    "region": "region13",
+    "zone": "jadidi"
+  },
+  {
+    "key": "247061",
+    "slug": "tehran-region13-qasemabad",
+    "persianName": "قاسم اباد",
+    "province": "tehran",
+    "region": "region13",
+    "zone": "qasemabad"
+  },
+  {
+    "key": "250086",
+    "slug": "tehran-region13-ghasemzadeh_damavand",
+    "persianName": "قاسم زاده - دماوند",
+    "province": "tehran",
+    "region": "region13",
+    "zone": "ghasemzadeh_damavand"
+  },
+  {
+    "key": "246872",
+    "slug": "tehran-region13-hafeziyeh",
+    "persianName": "حافظیه",
+    "province": "tehran",
+    "region": "region13",
+    "zone": "hafeziyeh"
+  },
+  {
+    "key": "249635",
+    "slug": "tehran-region13-mehrjou",
+    "persianName": "مهرجو",
+    "province": "tehran",
+    "region": "region13",
+    "zone": "mehrjou"
+  },
+  {
+    "key": "249711",
+    "slug": "tehran-region13-maydan_lozi",
+    "persianName": "میدان لوزی",
+    "province": "tehran",
+    "region": "region13",
+    "zone": "maydan_lozi"
+  },
+  {
+    "key": "246929",
+    "slug": "tehran-region13-zahed_gilani",
+    "persianName": "زاهد گیلانی",
+    "province": "tehran",
+    "region": "region13",
+    "zone": "zahed_gilani"
+  },
+  {
+    "key": "246853",
+    "slug": "tehran-region13-safa",
+    "persianName": "صفا",
+    "province": "tehran",
+    "region": "region13",
+    "zone": "safa"
+  },
+  {
+    "key": "246928",
+    "slug": "tehran-region13-asadi",
+    "persianName": "اسدی",
+    "province": "tehran",
+    "region": "region13",
+    "zone": "asadi"
+  },
+  {
+    "key": "249760",
+    "slug": "tehran-region13-saralah",
+    "persianName": "ثارالله",
+    "province": "tehran",
+    "region": "region13",
+    "zone": "saralah"
+  },
+  {
+    "key": "250118",
+    "slug": "tehran-region13-koleini_piroozi",
+    "persianName": "کلینی - پیروزی",
+    "province": "tehran",
+    "region": "region13",
+    "zone": "koleini_piroozi"
+  },
+  {
+    "key": "250178",
+    "slug": "tehran-region13-falake_panjom_nirou_havaei",
+    "persianName": "فلکه پنجم نیرو هوایی",
+    "province": "tehran",
+    "region": "region13",
+    "zone": "falake_panjom_nirou_havaei"
+  },
+  {
+    "key": "249639",
+    "slug": "tehran-region13-masil_manouchehri",
+    "persianName": "مسیل منوچهری",
+    "province": "tehran",
+    "region": "region13",
+    "zone": "masil_manouchehri"
+  },
+  {
+    "key": "246691",
+    "slug": "tehran-region14",
+    "persianName": "منطقه 14",
+    "province": "tehran",
+    "region": "region14",
+    "zone": null
+  },
+  {
+    "key": "249750",
+    "slug": "tehran-region14-niknam_dorudiyan",
+    "persianName": "نیکنام - درودیان",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "niknam_dorudiyan"
+  },
+  {
+    "key": "249740",
+    "slug": "tehran-region14-shaykh_alraeis",
+    "persianName": "شیخ الرئیس",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "shaykh_alraeis"
+  },
+  {
+    "key": "249973",
+    "slug": "tehran-region14-pirouzi_khiyaban_boroujerdi",
+    "persianName": "خیابان بروجردی",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "pirouzi_khiyaban_boroujerdi"
+  },
+  {
+    "key": "249688",
+    "slug": "tehran-region14-doshan_tape",
+    "persianName": "دوشان تپه",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "doshan_tape"
+  },
+  {
+    "key": "246855",
+    "slug": "tehran-region14-sarasiyab_dulab",
+    "persianName": "سراسیاب دولاب",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "sarasiyab_dulab"
+  },
+  {
+    "key": "246883",
+    "slug": "tehran-region14-dulab",
+    "persianName": "دولاب",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "dulab"
+  },
+  {
+    "key": "246963",
+    "slug": "tehran-region14-saheb_alzaman",
+    "persianName": "صاحب الزمان",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "saheb_alzaman"
+  },
+  {
+    "key": "246931",
+    "slug": "tehran-region14-aref",
+    "persianName": "عارف",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "aref"
+  },
+  {
+    "key": "250014",
+    "slug": "tehran-region14-behzadibakhsh",
+    "persianName": "بهزادی",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "behzadibakhsh"
+  },
+  {
+    "key": "249909",
+    "slug": "tehran-region14-hakimi_safari",
+    "persianName": "حکیمی سفری",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "hakimi_safari"
+  },
+  {
+    "key": "247511",
+    "slug": "tehran-region14-saeidi",
+    "persianName": "سعیدی",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "saeidi"
+  },
+  {
+    "key": "249588",
+    "slug": "tehran-region14-moshir_alsaltane",
+    "persianName": "مشیرالسلطنه",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "moshir_alsaltane"
+  },
+  {
+    "key": "249770",
+    "slug": "tehran-region14-mokhber_jonoubi",
+    "persianName": "مخبر جنوبی",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "mokhber_jonoubi"
+  },
+  {
+    "key": "247071",
+    "slug": "tehran-region14-gozar_paein_dulab",
+    "persianName": "گذرپایین دولاب",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "gozar_paein_dulab"
+  },
+  {
+    "key": "249725",
+    "slug": "tehran-region14-shirazi_doulab",
+    "persianName": "شیرازی - دولاب",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "shirazi_doulab"
+  },
+  {
+    "key": "247132",
+    "slug": "tehran-region14-hoseinabad_dulab",
+    "persianName": "حسین اباد دولاب",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "hoseinabad_dulab"
+  },
+  {
+    "key": "247566",
+    "slug": "tehran-region14-dahom_farvardin",
+    "persianName": "دهم فروردین",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "dahom_farvardin"
+  },
+  {
+    "key": "249714",
+    "slug": "tehran-region14-fereshte_azadi",
+    "persianName": "فرشته ازادی",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "fereshte_azadi"
+  },
+  {
+    "key": "247004",
+    "slug": "tehran-region14-nabi_akram",
+    "persianName": "نبی اکرم",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "nabi_akram"
+  },
+  {
+    "key": "247658",
+    "slug": "tehran-region14-maydan_emam_hassan_mojtaba",
+    "persianName": "میدان امام حسن مجتبی",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "maydan_emam_hassan_mojtaba"
+  },
+  {
+    "key": "247739",
+    "slug": "tehran-region14-hejdah_metri_maysam",
+    "persianName": "هجده متری میثم",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "hejdah_metri_maysam"
+  },
+  {
+    "key": "250030",
+    "slug": "tehran-region14-alah_akbar",
+    "persianName": "الله اکبر",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "alah_akbar"
+  },
+  {
+    "key": "247021",
+    "slug": "tehran-region14-shohaday_gomnam",
+    "persianName": "شهدای گمنام",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "shohaday_gomnam"
+  },
+  {
+    "key": "249792",
+    "slug": "tehran-region14-bolvar_kosar",
+    "persianName": "بلوار کوثر",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "bolvar_kosar"
+  },
+  {
+    "key": "247018",
+    "slug": "tehran-region14-taxirani",
+    "persianName": "تاکسیرانی",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "taxirani"
+  },
+  {
+    "key": "246876",
+    "slug": "tehran-region14-shahin",
+    "persianName": "شاهین",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "shahin"
+  },
+  {
+    "key": "249924",
+    "slug": "tehran-region14-shahid_tajik",
+    "persianName": "شهید تاجیک",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "shahid_tajik"
+  },
+  {
+    "key": "249593",
+    "slug": "tehran-region14-shahmirzadi",
+    "persianName": "شهمیرزادی",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "shahmirzadi"
+  },
+  {
+    "key": "250095",
+    "slug": "tehran-region14-ahang",
+    "persianName": "اهنگ",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "ahang"
+  },
+  {
+    "key": "246934",
+    "slug": "tehran-region15-atabak",
+    "persianName": "اتابک",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "atabak"
+  },
+  {
+    "key": "249819",
+    "slug": "tehran-region14-moradi_doulab",
+    "persianName": "مرادی - دولاب",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "moradi_doulab"
+  },
+  {
+    "key": "249719",
+    "slug": "tehran-region14-arjamandi_rad",
+    "persianName": "ارجمندی راد",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "arjamandi_rad"
+  },
+  {
+    "key": "246884",
+    "slug": "tehran-region14-shiva",
+    "persianName": "شیوا",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "shiva"
+  },
+  {
+    "key": "249935",
+    "slug": "tehran-region14-shahid_davarzani",
+    "persianName": "شهید داورزنی",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "shahid_davarzani"
+  },
+  {
+    "key": "247778",
+    "slug": "tehran-region14-lorestan",
+    "persianName": "لرستان",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "lorestan"
+  },
+  {
+    "key": "250099",
+    "slug": "tehran-region14-nademi",
+    "persianName": "نادمی",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "nademi"
+  },
+  {
+    "key": "247050",
+    "slug": "tehran-region14-chahar_sad_dastgah",
+    "persianName": "چهارصددستگاه",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "chahar_sad_dastgah"
+  },
+  {
+    "key": "250160",
+    "slug": "tehran-region14-doumanlu",
+    "persianName": "دومانلو",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "doumanlu"
+  },
+  {
+    "key": "250072",
+    "slug": "tehran-region14-zinati_afkham",
+    "persianName": "زینتی افخم",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "zinati_afkham"
+  },
+  {
+    "key": "249983",
+    "slug": "tehran-region14-bid_hendi",
+    "persianName": "بیدهندی",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "bid_hendi"
+  },
+  {
+    "key": "249920",
+    "slug": "tehran-region14-berahman",
+    "persianName": "برهمن",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "berahman"
+  },
+  {
+    "key": "250148",
+    "slug": "tehran-region14-nour_salehi",
+    "persianName": "نورصالحی",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "nour_salehi"
+  },
+  {
+    "key": "250111",
+    "slug": "tehran-region14-azizi",
+    "persianName": "عزیزی",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "azizi"
+  },
+  {
+    "key": "247082",
+    "slug": "tehran-region14-sad_dastgah",
+    "persianName": "صددستگاه",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "sad_dastgah"
+  },
+  {
+    "key": "250143",
+    "slug": "tehran-region14-akbar_abadi",
+    "persianName": "اکبرابادی",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "akbar_abadi"
+  },
+  {
+    "key": "249987",
+    "slug": "tehran-region14-maydan_sar_asiyab",
+    "persianName": "میدان سراسیاب",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "maydan_sar_asiyab"
+  },
+  {
+    "key": "249886",
+    "slug": "tehran-region14-esmaeil_shakouri",
+    "persianName": "اسماعیل شکوری",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "esmaeil_shakouri"
+  },
+  {
+    "key": "247032",
+    "slug": "tehran-region14-delgosha",
+    "persianName": "دلگشا",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "delgosha"
+  },
+  {
+    "key": "249583",
+    "slug": "tehran-region14-shahid_doroudiyan",
+    "persianName": "شهید درودیان",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "shahid_doroudiyan"
+  },
+  {
+    "key": "249738",
+    "slug": "tehran-region14-dezhkam",
+    "persianName": "دژکام",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "dezhkam"
+  },
+  {
+    "key": "247667",
+    "slug": "tehran-region14-khazrayi",
+    "persianName": "خضرایی",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "khazrayi"
+  },
+  {
+    "key": "249759",
+    "slug": "tehran-region14-kerman_gharbi",
+    "persianName": "کرمان غربی",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "kerman_gharbi"
+  },
+  {
+    "key": "247062",
+    "slug": "tehran-region14-shokufeh",
+    "persianName": "شکوفه",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "shokufeh"
+  },
+  {
+    "key": "246877",
+    "slug": "tehran-region14-mina",
+    "persianName": "مینا",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "mina"
+  },
+  {
+    "key": "249901",
+    "slug": "tehran-region14-gilaki",
+    "persianName": "گیلکی",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "gilaki"
+  },
+  {
+    "key": "247782",
+    "slug": "tehran-region14-mokhber_shomali",
+    "persianName": "مخبر شمالی",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "mokhber_shomali"
+  },
+  {
+    "key": "249649",
+    "slug": "tehran-region14-tabatabaei_pour",
+    "persianName": "طباطبایی پور",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "tabatabaei_pour"
+  },
+  {
+    "key": "249579",
+    "slug": "tehran-region14-shahid_babaei",
+    "persianName": "شهید بابایی",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "shahid_babaei"
+  },
+  {
+    "key": "247242",
+    "slug": "tehran-region14-davoud_abadi",
+    "persianName": "داودابادی",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "davoud_abadi"
+  },
+  {
+    "key": "249850",
+    "slug": "tehran-region14-ghasr_e_firoozeh_1",
+    "persianName": "قصر فیروزه 1",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "ghasr_e_firoozeh_1"
+  },
+  {
+    "key": "250027",
+    "slug": "tehran-region14-ghasr_firouze",
+    "persianName": "قصرفیروزه",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "ghasr_firouze"
+  },
+  {
+    "key": "247734",
+    "slug": "tehran-region14-shahrak_sad_dastgah",
+    "persianName": "شهرک صد دستگاه",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "shahrak_sad_dastgah"
+  },
+  {
+    "key": "247624",
+    "slug": "tehran-region14-jafar_nezhad",
+    "persianName": "جعفرنژاد",
+    "province": "tehran",
+    "region": "region14",
+    "zone": "jafar_nezhad"
+  },
+  {
+    "key": "246724",
+    "slug": "tehran-region15",
+    "persianName": "منطقه 15",
+    "province": "tehran",
+    "region": "region15",
+    "zone": null
+  },
+  {
+    "key": "246935",
+    "slug": "tehran-region15-mesgarabad",
+    "persianName": "مسگراباد",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "mesgarabad"
+  },
+  {
+    "key": "249657",
+    "slug": "tehran-region15-taghi_pour",
+    "persianName": "تقی پور",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "taghi_pour"
+  },
+  {
+    "key": "250088",
+    "slug": "tehran-region15-shahid_tari",
+    "persianName": "شهید تاری",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "shahid_tari"
+  },
+  {
+    "key": "249768",
+    "slug": "tehran-region15-shahrak_kianshahr",
+    "persianName": "شهرک کیانشهر",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "shahrak_kianshahr"
+  },
+  {
+    "key": "247796",
+    "slug": "tehran-region15-anisi",
+    "persianName": "انیسی",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "anisi"
+  },
+  {
+    "key": "249656",
+    "slug": "tehran-region15-bozorgrah_besat_azadegan",
+    "persianName": "بزرگراه بعثت - آزادگان",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "bozorgrah_besat_azadegan"
+  },
+  {
+    "key": "247530",
+    "slug": "tehran-region15-takali_shoush",
+    "persianName": "تکلی - شوش",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "takali_shoush"
+  },
+  {
+    "key": "246953",
+    "slug": "tehran-region15-valiasr_bisim",
+    "persianName": "ولیعصر - بیسیم",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "valiasr_bisim"
+  },
+  {
+    "key": "247109",
+    "slug": "tehran-region15-mazaheri",
+    "persianName": "مظاهری",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "mazaheri"
+  },
+  {
+    "key": "247078",
+    "slug": "tehran-region15-minabi",
+    "persianName": "مینابی",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "minabi"
+  },
+  {
+    "key": "249866",
+    "slug": "tehran-region15-jahangard_bisim_valiasr",
+    "persianName": "جهانگرد - بیسیم ولیعصر",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "jahangard_bisim_valiasr"
+  },
+  {
+    "key": "247085",
+    "slug": "tehran-region15-tayeb",
+    "persianName": "طیب",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "tayeb"
+  },
+  {
+    "key": "247023",
+    "slug": "tehran-region15-shush",
+    "persianName": "شوش",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "shush"
+  },
+  {
+    "key": "246965",
+    "slug": "tehran-region15-kiyanshahr_shomali",
+    "persianName": "کیان شهر شمالی",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "kiyanshahr_shomali"
+  },
+  {
+    "key": "250181",
+    "slug": "tehran-region15-bolvar_emam_reza_kiyanshahr_shomali",
+    "persianName": "بلوار امام رضا - کیانشهر شمالی",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "bolvar_emam_reza_kiyanshahr_shomali"
+  },
+  {
+    "key": "249840",
+    "slug": "tehran-region15-ravanbakhsh",
+    "persianName": "روانبخش",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "ravanbakhsh"
+  },
+  {
+    "key": "247797",
+    "slug": "tehran-region15-siyamak",
+    "persianName": "سیامک",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "siyamak"
+  },
+  {
+    "key": "246885",
+    "slug": "tehran-region15-hashemabad",
+    "persianName": "هاشم اباد",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "hashemabad"
+  },
+  {
+    "key": "250162",
+    "slug": "tehran-region15-nabati",
+    "persianName": "نباتی",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "nabati"
+  },
+  {
+    "key": "247107",
+    "slug": "tehran-region15-eslamabad_valfajr",
+    "persianName": "اسلام اباد - والفجر",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "eslamabad_valfajr"
+  },
+  {
+    "key": "249591",
+    "slug": "tehran-region15-felestin_gharbi",
+    "persianName": "فلسطین غربی",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "felestin_gharbi"
+  },
+  {
+    "key": "250044",
+    "slug": "tehran-region15-dastghayb_masoudiye",
+    "persianName": "دستغیب - مسعودیه",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "dastghayb_masoudiye"
+  },
+  {
+    "key": "247779",
+    "slug": "tehran-region15-honarestan",
+    "persianName": "هنرستان",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "honarestan"
+  },
+  {
+    "key": "247543",
+    "slug": "tehran-region15-gholami",
+    "persianName": "غلامی",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "gholami"
+  },
+  {
+    "key": "249584",
+    "slug": "tehran-region15-bolvar_ghaem_eslam_abad",
+    "persianName": "بلوار قائم - اسلام اباد",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "bolvar_ghaem_eslam_abad"
+  },
+  {
+    "key": "247096",
+    "slug": "tehran-region15-afsariyeh_shomali",
+    "persianName": "افسریه شمالی",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "afsariyeh_shomali"
+  },
+  {
+    "key": "246936",
+    "slug": "tehran-region15-moshiriyeh",
+    "persianName": "مشیریه",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "moshiriyeh"
+  },
+  {
+    "key": "247536",
+    "slug": "tehran-region15-masjed_bani_hashem",
+    "persianName": "مسجد بنی هاشم",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "masjed_bani_hashem"
+  },
+  {
+    "key": "249786",
+    "slug": "tehran-region15-shahid_kashi",
+    "persianName": "شهید کاشی",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "shahid_kashi"
+  },
+  {
+    "key": "249690",
+    "slug": "tehran-region15-ale_ebrahim",
+    "persianName": "ال ابراهیم",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "ale_ebrahim"
+  },
+  {
+    "key": "249930",
+    "slug": "tehran-region15-maydan_emam_reza",
+    "persianName": "میدان امام رضا",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "maydan_emam_reza"
+  },
+  {
+    "key": "247090",
+    "slug": "tehran-region15-kiyanshahr_jonubi",
+    "persianName": "کیان شهر جنوبی",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "kiyanshahr_jonubi"
+  },
+  {
+    "key": "247738",
+    "slug": "tehran-region15-shahrak_hejrat",
+    "persianName": "شهرک هجرت",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "shahrak_hejrat"
+  },
+  {
+    "key": "247496",
+    "slug": "tehran-region15-salimi",
+    "persianName": "سلیمی",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "salimi"
+  },
+  {
+    "key": "246996",
+    "slug": "tehran-region15-borujerdi",
+    "persianName": "بروجردی",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "borujerdi"
+  },
+  {
+    "key": "249747",
+    "slug": "tehran-region15-aziz_khani",
+    "persianName": "عزیزخانی",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "aziz_khani"
+  },
+  {
+    "key": "249960",
+    "slug": "tehran-region15-khiyaban_shahid_boroujerdi",
+    "persianName": "خیابان شهید بروجردی",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "khiyaban_shahid_boroujerdi"
+  },
+  {
+    "key": "247695",
+    "slug": "tehran-region15-hashemi_afsariyeh",
+    "persianName": "هاشمی - افسریه",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "hashemi_afsariyeh"
+  },
+  {
+    "key": "246865",
+    "slug": "tehran-region15-qiamdasht",
+    "persianName": "قیام دشت",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "qiamdasht"
+  },
+  {
+    "key": "250140",
+    "slug": "tehran-region15-bolvar_valfajr_eslam_abad",
+    "persianName": "بلوار والفجر - اسلام اباد",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "bolvar_valfajr_eslam_abad"
+  },
+  {
+    "key": "250130",
+    "slug": "tehran-region15-bozorgrah_emam_reza",
+    "persianName": "بزرگراه امام رضا",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "bozorgrah_emam_reza"
+  },
+  {
+    "key": "249806",
+    "slug": "tehran-region15-tayeb_shoush",
+    "persianName": "طیب - شوش",
+    "province": "tehran",
+    "region": "region15",
+    "zone": "tayeb_shoush"
+  },
+  {
+    "key": "246722",
+    "slug": "tehran-region16",
+    "persianName": "منطقه 16",
+    "province": "tehran",
+    "region": "region16",
+    "zone": null
+  },
+  {
+    "key": "249791",
+    "slug": "tehran-region16-sabouniyan",
+    "persianName": "صابونیان",
+    "province": "tehran",
+    "region": "region16",
+    "zone": "sabouniyan"
+  },
+  {
+    "key": "249947",
+    "slug": "tehran-region16-shoush_maydan_rah_ahan",
+    "persianName": "شوش - میدان راه اهن",
+    "province": "tehran",
+    "region": "region16",
+    "zone": "shoush_maydan_rah_ahan"
+  },
+  {
+    "key": "247680",
+    "slug": "tehran-region16-dardasht_khazaneh",
+    "persianName": "دردشت - خزانه",
+    "province": "tehran",
+    "region": "region16",
+    "zone": "dardasht_khazaneh"
+  },
+  {
+    "key": "247678",
+    "slug": "tehran-region16-dah_metri_dovom_javadiye_akbari",
+    "persianName": "ده متری دوم جوادیه - اکبری",
+    "province": "tehran",
+    "region": "region16",
+    "zone": "dah_metri_dovom_javadiye_akbari"
+  },
+  {
+    "key": "247824",
+    "slug": "tehran-region16-falake_sevom_khazane",
+    "persianName": "فلکه سوم خزانه",
+    "province": "tehran",
+    "region": "region16",
+    "zone": "falake_sevom_khazane"
+  },
+  {
+    "key": "249602",
+    "slug": "tehran-region16-maydan_dardasht",
+    "persianName": "میدان دردشت",
+    "province": "tehran",
+    "region": "region16",
+    "zone": "maydan_dardasht"
+  },
+  {
+    "key": "250152",
+    "slug": "tehran-region16-pol_javadiye",
+    "persianName": "پل جوادیه",
+    "province": "tehran",
+    "region": "region16",
+    "zone": "pol_javadiye"
+  },
+  {
+    "key": "247108",
+    "slug": "tehran-region16-khazane",
+    "persianName": "خزانه",
+    "province": "tehran",
+    "region": "region16",
+    "zone": "khazane"
+  },
+  {
+    "key": "250079",
+    "slug": "tehran-region16-falake_aval_khazane",
+    "persianName": "فلکه اول خزانه",
+    "province": "tehran",
+    "region": "region16",
+    "zone": "falake_aval_khazane"
+  },
+  {
+    "key": "249843",
+    "slug": "tehran-region16-fardniyan",
+    "persianName": "فردنیان",
+    "province": "tehran",
+    "region": "region16",
+    "zone": "fardniyan"
+  },
+  {
+    "key": "247112",
+    "slug": "tehran-region16-aliabad_shomali",
+    "persianName": "علی اباد شمالی",
+    "province": "tehran",
+    "region": "region16",
+    "zone": "aliabad_shomali"
+  },
+  {
+    "key": "247111",
+    "slug": "tehran-region16-shahrak_besat",
+    "persianName": "شهرک بعثت",
+    "province": "tehran",
+    "region": "region16",
+    "zone": "shahrak_besat"
+  },
+  {
+    "key": "246859",
+    "slug": "tehran-region16-aliabad_jonubi",
+    "persianName": "علی اباد جنوبی",
+    "province": "tehran",
+    "region": "region16",
+    "zone": "aliabad_jonubi"
+  },
+  {
+    "key": "249622",
+    "slug": "tehran-region16-shahid_falahi",
+    "persianName": "شهید فلاحی",
+    "province": "tehran",
+    "region": "region16",
+    "zone": "shahid_falahi"
+  },
+  {
+    "key": "247601",
+    "slug": "tehran-region16-bolvar_abrisham",
+    "persianName": "بلوار ابریشم",
+    "province": "tehran",
+    "region": "region16",
+    "zone": "bolvar_abrisham"
+  },
+  {
+    "key": "247139",
+    "slug": "tehran-region19-khaniabad_jonubi",
+    "persianName": "خانی اباد جنوبی",
+    "province": "tehran",
+    "region": "region19",
+    "zone": "khaniabad_jonubi"
+  },
+  {
+    "key": "247564",
+    "slug": "tehran-region16-shahrak_shahid_beheshti_bolvar_dastvareh",
+    "persianName": "شهرک شهید بهشتی - بلوار دستواره",
+    "province": "tehran",
+    "region": "region16",
+    "zone": "shahrak_shahid_beheshti_bolvar_dastvareh"
+  },
+  {
+    "key": "249919",
+    "slug": "tehran-region16-ali_abad",
+    "persianName": "علی اباد",
+    "province": "tehran",
+    "region": "region16",
+    "zone": "ali_abad"
+  },
+  {
+    "key": "249600",
+    "slug": "tehran-region16-sarlak",
+    "persianName": "سرلک",
+    "province": "tehran",
+    "region": "region16",
+    "zone": "sarlak"
+  },
+  {
+    "key": "249611",
+    "slug": "tehran-region16-bolvar_dastvare",
+    "persianName": "بلوار دستواره",
+    "province": "tehran",
+    "region": "region16",
+    "zone": "bolvar_dastvare"
+  },
+  {
+    "key": "247604",
+    "slug": "tehran-region16-bastani_pour",
+    "persianName": "باستانی پور",
+    "province": "tehran",
+    "region": "region16",
+    "zone": "bastani_pour"
+  },
+  {
+    "key": "249785",
+    "slug": "tehran-region16-bozorgrah_rajaei_khazane",
+    "persianName": "بزرگراه رجایی - خزانه",
+    "province": "tehran",
+    "region": "region16",
+    "zone": "bozorgrah_rajaei_khazane"
+  },
+  {
+    "key": "247681",
+    "slug": "tehran-region16-falake_dovom_khazane",
+    "persianName": "فلکه دوم خزانه",
+    "province": "tehran",
+    "region": "region16",
+    "zone": "falake_dovom_khazane"
+  },
+  {
+    "key": "246860",
+    "slug": "tehran-region16-nazi_abad",
+    "persianName": "نازی اباد",
+    "province": "tehran",
+    "region": "region16",
+    "zone": "nazi_abad"
+  },
+  {
+    "key": "246857",
+    "slug": "tehran-region16-baq_azari",
+    "persianName": "باغ اذری",
+    "province": "tehran",
+    "region": "region16",
+    "zone": "baq_azari"
+  },
+  {
+    "key": "249822",
+    "slug": "tehran-region16-falake_aval_abasi",
+    "persianName": "فلکه اول عباسی",
+    "province": "tehran",
+    "region": "region16",
+    "zone": "falake_aval_abasi"
+  },
+  {
+    "key": "247072",
+    "slug": "tehran-region16-yakhchiabad",
+    "persianName": "یاخچی اباد",
+    "province": "tehran",
+    "region": "region16",
+    "zone": "yakhchiabad"
+  },
+  {
+    "key": "249775",
+    "slug": "tehran-region16-mehr_abadi",
+    "persianName": "مهرابادی",
+    "province": "tehran",
+    "region": "region16",
+    "zone": "mehr_abadi"
+  },
+  {
+    "key": "249643",
+    "slug": "tehran-region16-bozorgrah_rajaei_shoush",
+    "persianName": "بزرگراه رجایی - شوش",
+    "province": "tehran",
+    "region": "region16",
+    "zone": "bozorgrah_rajaei_shoush"
+  },
+  {
+    "key": "247531",
+    "slug": "tehran-region16-hezar_dastgah",
+    "persianName": "هزار دستگاه",
+    "province": "tehran",
+    "region": "region16",
+    "zone": "hezar_dastgah"
+  },
+  {
+    "key": "250003",
+    "slug": "tehran-region16-nik_nam_bou_ali_shomali",
+    "persianName": "نیک نام - بوعلی شمالی",
+    "province": "tehran",
+    "region": "region16",
+    "zone": "nik_nam_bou_ali_shomali"
+  },
+  {
+    "key": "247608",
+    "slug": "tehran-region16-akbar_mashhadi",
+    "persianName": "اکبر مشهدی",
+    "province": "tehran",
+    "region": "region16",
+    "zone": "akbar_mashhadi"
+  },
+  {
+    "key": "247847",
+    "slug": "tehran-region16-shahid_alireza_vafaei",
+    "persianName": "شهید علیرضا وفایی",
+    "province": "tehran",
+    "region": "region16",
+    "zone": "shahid_alireza_vafaei"
+  },
+  {
+    "key": "249971",
+    "slug": "tehran-region16-badli_givi_nazi_abad",
+    "persianName": "دلی گیوی - نازی اباد",
+    "province": "tehran",
+    "region": "region16",
+    "zone": "badli_givi_nazi_abad"
+  },
+  {
+    "key": "246694",
+    "slug": "tehran-region17",
+    "persianName": "منطقه 17",
+    "province": "tehran",
+    "region": "region17",
+    "zone": null
+  },
+  {
+    "key": "249581",
+    "slug": "tehran-region17-ghofeili",
+    "persianName": "قفیلی",
+    "province": "tehran",
+    "region": "region17",
+    "zone": "ghofeili"
+  },
+  {
+    "key": "247602",
+    "slug": "tehran-region17-khosh_kerdar",
+    "persianName": "خوش کردار",
+    "province": "tehran",
+    "region": "region17",
+    "zone": "khosh_kerdar"
+  },
+  {
+    "key": "247134",
+    "slug": "tehran-region17-zehtabi",
+    "persianName": "زهتابی",
+    "province": "tehran",
+    "region": "region17",
+    "zone": "zehtabi"
+  },
+  {
+    "key": "247019",
+    "slug": "tehran-region17-baq_khazaneh",
+    "persianName": "باغ خزانه",
+    "province": "tehran",
+    "region": "region17",
+    "zone": "baq_khazaneh"
+  },
+  {
+    "key": "250135",
+    "slug": "tehran-region17-varzdar",
+    "persianName": "ورزدار",
+    "province": "tehran",
+    "region": "region17",
+    "zone": "varzdar"
+  },
+  {
+    "key": "249670",
+    "slug": "tehran-region17-amin_almolk",
+    "persianName": "امین الملک",
+    "province": "tehran",
+    "region": "region17",
+    "zone": "amin_almolk"
+  },
+  {
+    "key": "249782",
+    "slug": "tehran-region17-sajad_shomali",
+    "persianName": "سجاد شمالی",
+    "province": "tehran",
+    "region": "region17",
+    "zone": "sajad_shomali"
+  },
+  {
+    "key": "247113",
+    "slug": "tehran-region17-moqadam",
+    "persianName": "مقدم",
+    "province": "tehran",
+    "region": "region17",
+    "zone": "moqadam"
+  },
+  {
+    "key": "250024",
+    "slug": "tehran-region17-fereydoun_ahmadi",
+    "persianName": "فریدون احمدی",
+    "province": "tehran",
+    "region": "region17",
+    "zone": "fereydoun_ahmadi"
+  },
+  {
+    "key": "249648",
+    "slug": "tehran-region17-abouzar_ghale_morghi",
+    "persianName": "ابوذر - قلعه مرغی",
+    "province": "tehran",
+    "region": "region17",
+    "zone": "abouzar_ghale_morghi"
+  },
+  {
+    "key": "249802",
+    "slug": "tehran-region17-ramezani",
+    "persianName": "رمضانی",
+    "province": "tehran",
+    "region": "region17",
+    "zone": "ramezani"
+  },
+  {
+    "key": "249678",
+    "slug": "tehran-region17-fathi",
+    "persianName": "فتحی",
+    "province": "tehran",
+    "region": "region17",
+    "zone": "fathi"
+  },
+  {
+    "key": "250109",
+    "slug": "tehran-region17-shahid_naeimi",
+    "persianName": "شهید نعیمی",
+    "province": "tehran",
+    "region": "region17",
+    "zone": "shahid_naeimi"
+  },
+  {
+    "key": "250023",
+    "slug": "tehran-region17-razaghi",
+    "persianName": "رزاقی",
+    "province": "tehran",
+    "region": "region17",
+    "zone": "razaghi"
+  },
+  {
+    "key": "249736",
+    "slug": "tehran-region17-farkhonde",
+    "persianName": "فرخنده",
+    "province": "tehran",
+    "region": "region17",
+    "zone": "farkhonde"
+  },
+  {
+    "key": "247046",
+    "slug": "tehran-region17-golchin",
+    "persianName": "گلچین",
+    "province": "tehran",
+    "region": "region17",
+    "zone": "golchin"
+  },
+  {
+    "key": "247491",
+    "slug": "tehran-region17-babri",
+    "persianName": "ببری",
+    "province": "tehran",
+    "region": "region17",
+    "zone": "babri"
+  },
+  {
+    "key": "250028",
+    "slug": "tehran-region17-maydan_golchin",
+    "persianName": "میدان گلچین",
+    "province": "tehran",
+    "region": "region17",
+    "zone": "maydan_golchin"
+  },
+  {
+    "key": "250110",
+    "slug": "tehran-region17-jahad_zehtabi",
+    "persianName": "جهاد - زهتابی",
+    "province": "tehran",
+    "region": "region17",
+    "zone": "jahad_zehtabi"
+  },
+  {
+    "key": "247620",
+    "slug": "tehran-region17-eyvazkhani",
+    "persianName": "عیوض خانی",
+    "province": "tehran",
+    "region": "region17",
+    "zone": "eyvazkhani"
+  },
+  {
+    "key": "247622",
+    "slug": "tehran-region17-ghodrati",
+    "persianName": "قدرتی",
+    "province": "tehran",
+    "region": "region17",
+    "zone": "ghodrati"
+  },
+  {
+    "key": "246956",
+    "slug": "tehran-region17-jalili",
+    "persianName": "جلیلی",
+    "province": "tehran",
+    "region": "region17",
+    "zone": "jalili"
+  },
+  {
+    "key": "249743",
+    "slug": "tehran-region17-aghayari",
+    "persianName": "اقایاری",
+    "province": "tehran",
+    "region": "region17",
+    "zone": "aghayari"
+  },
+  {
+    "key": "247133",
+    "slug": "tehran-region17-abuzar_qarbi",
+    "persianName": "ابوذر غربی",
+    "province": "tehran",
+    "region": "region17",
+    "zone": "abuzar_qarbi"
+  },
+  {
+    "key": "249729",
+    "slug": "tehran-region17-ghorbani",
+    "persianName": "قربانی",
+    "province": "tehran",
+    "region": "region17",
+    "zone": "ghorbani"
+  },
+  {
+    "key": "247022",
+    "slug": "tehran-region17-vasfnard",
+    "persianName": "وصفنارد",
+    "province": "tehran",
+    "region": "region17",
+    "zone": "vasfnard"
+  },
+  {
+    "key": "249628",
+    "slug": "tehran-region17-asgari",
+    "persianName": "عسگری",
+    "province": "tehran",
+    "region": "region17",
+    "zone": "asgari"
+  },
+  {
+    "key": "247080",
+    "slug": "tehran-region17-abuzar_sharqi",
+    "persianName": "ابوذر شرقی",
+    "province": "tehran",
+    "region": "region17",
+    "zone": "abuzar_sharqi"
+  },
+  {
+    "key": "249693",
+    "slug": "tehran-region17-masjed",
+    "persianName": "مسجد",
+    "province": "tehran",
+    "region": "region17",
+    "zone": "masjed"
+  },
+  {
+    "key": "246937",
+    "slug": "tehran-region17-bolurzasi",
+    "persianName": "بلور سازی",
+    "province": "tehran",
+    "region": "region17",
+    "zone": "bolurzasi"
+  },
+  {
+    "key": "249859",
+    "slug": "tehran-region17-bahador_nezhad",
+    "persianName": "بهادرنژاد",
+    "province": "tehran",
+    "region": "region17",
+    "zone": "bahador_nezhad"
+  },
+  {
+    "key": "249647",
+    "slug": "tehran-region17-rashidi_jahan",
+    "persianName": "رشیدی جهان",
+    "province": "tehran",
+    "region": "region17",
+    "zone": "rashidi_jahan"
+  },
+  {
+    "key": "249873",
+    "slug": "tehran-region17-tashayo",
+    "persianName": "تشیع",
+    "province": "tehran",
+    "region": "region17",
+    "zone": "tashayo"
+  },
+  {
+    "key": "246696",
+    "slug": "tehran-region18",
+    "persianName": "منطقه 18",
+    "province": "tehran",
+    "region": "region18",
+    "zone": null
+  },
+  {
+    "key": "249599",
+    "slug": "tehran-region18-yadegar_kouy_mehrzad",
+    "persianName": "یادگار - کوی مهرزاد",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "yadegar_kouy_mehrzad"
+  },
+  {
+    "key": "249778",
+    "slug": "tehran-region18-sajadi",
+    "persianName": "سجادی",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "sajadi"
+  },
+  {
+    "key": "247027",
+    "slug": "tehran-region18-noruzabad",
+    "persianName": "نوروز اباد",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "noruzabad"
+  },
+  {
+    "key": "247661",
+    "slug": "tehran-region18-mofateh",
+    "persianName": "مفتح",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "mofateh"
+  },
+  {
+    "key": "249609",
+    "slug": "tehran-region18-bolvar_alghadir",
+    "persianName": "بلوار الغدیر",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "bolvar_alghadir"
+  },
+  {
+    "key": "250185",
+    "slug": "tehran-region18-sarhadi_hefdah_shahrivar",
+    "persianName": "سرحدی - هفده شهریور",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "sarhadi_hefdah_shahrivar"
+  },
+  {
+    "key": "246977",
+    "slug": "tehran-region18-khalij_fars_jonubi",
+    "persianName": "خلیج فارس جنوبی",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "khalij_fars_jonubi"
+  },
+  {
+    "key": "247137",
+    "slug": "tehran-region18-shahid_rajaei",
+    "persianName": "شهید رجایی",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "shahid_rajaei"
+  },
+  {
+    "key": "249878",
+    "slug": "tehran-region18-maydan_pazhoutan",
+    "persianName": "میدان پژوتن",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "maydan_pazhoutan"
+  },
+  {
+    "key": "249803",
+    "slug": "tehran-region18-eslam_abad",
+    "persianName": "اسلام اباد",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "eslam_abad"
+  },
+  {
+    "key": "250076",
+    "slug": "tehran-region18-bozorgrah_ayatolah_saeidi",
+    "persianName": "بزرگراه ایت الله سعیدی",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "bozorgrah_ayatolah_saeidi"
+  },
+  {
+    "key": "247581",
+    "slug": "tehran-region18-sepide_mirzaei",
+    "persianName": "سپیده - میرزایی",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "sepide_mirzaei"
+  },
+  {
+    "key": "249682",
+    "slug": "tehran-region18-baradaran_bahrami",
+    "persianName": "رادران بهرامی",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "baradaran_bahrami"
+  },
+  {
+    "key": "247076",
+    "slug": "tehran-region18-tolid_daru",
+    "persianName": "تولید دارو",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "tolid_daru"
+  },
+  {
+    "key": "247138",
+    "slug": "tehran-region18-yaftabad_jonubi",
+    "persianName": "یافت اباد جنوبی",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "yaftabad_jonubi"
+  },
+  {
+    "key": "249710",
+    "slug": "tehran-region18-abou_saeid_sharghi",
+    "persianName": "ابوسعید شرقی",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "abou_saeid_sharghi"
+  },
+  {
+    "key": "249964",
+    "slug": "tehran-region18-bolvar_khalij_fars",
+    "persianName": "بلوار خلیج فارس",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "bolvar_khalij_fars"
+  },
+  {
+    "key": "250007",
+    "slug": "tehran-region18-norouz_abad",
+    "persianName": "نوروزاباد",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "norouz_abad"
+  },
+  {
+    "key": "246938",
+    "slug": "tehran-region18-saeidabad",
+    "persianName": "سعید اباد",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "saeidabad"
+  },
+  {
+    "key": "249680",
+    "slug": "tehran-region18-maydan_isar",
+    "persianName": "میدان ایثار",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "maydan_isar"
+  },
+  {
+    "key": "246863",
+    "slug": "tehran-region18-sahebazzaman",
+    "persianName": "صاحب الزمان",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "sahebazzaman"
+  },
+  {
+    "key": "247478",
+    "slug": "tehran-region18-tohid_bolvar_moalem",
+    "persianName": "توحید - بلوار معلم",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "tohid_bolvar_moalem"
+  },
+  {
+    "key": "247024",
+    "slug": "tehran-region18-valiasr_jonubi",
+    "persianName": "ولی عصر جنوبی",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "valiasr_jonubi"
+  },
+  {
+    "key": "247089",
+    "slug": "tehran-region18-imam_khomeyni",
+    "persianName": "امام خمینی",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "imam_khomeyni"
+  },
+  {
+    "key": "249816",
+    "slug": "tehran-region18-abresani",
+    "persianName": "ابرسانی",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "abresani"
+  },
+  {
+    "key": "250013",
+    "slug": "tehran-region18-bazar_ahan",
+    "persianName": "بازار اهن",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "bazar_ahan"
+  },
+  {
+    "key": "249679",
+    "slug": "tehran-region18-shahrak_emamkhomeyni",
+    "persianName": "شهرک امام خمینی",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "shahrak_emamkhomeyni"
+  },
+  {
+    "key": "249665",
+    "slug": "tehran-region18-hefdah_shahrivar_yaft_abad",
+    "persianName": "هفده شهریور - یافت اباد",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "hefdah_shahrivar_yaft_abad"
+  },
+  {
+    "key": "249962",
+    "slug": "tehran-region18-bolvar_tavous",
+    "persianName": "بلوار طاووس",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "bolvar_tavous"
+  },
+  {
+    "key": "246939",
+    "slug": "tehran-region18-shadabad",
+    "persianName": "شاد اباد",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "shadabad"
+  },
+  {
+    "key": "249671",
+    "slug": "tehran-region18-solaymani",
+    "persianName": "سلیمانی",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "solaymani"
+  },
+  {
+    "key": "249586",
+    "slug": "tehran-region18-shahsavari",
+    "persianName": "شهسواری",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "shahsavari"
+  },
+  {
+    "key": "249961",
+    "slug": "tehran-region18-nik_maleki",
+    "persianName": "نیک ملکی",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "nik_maleki"
+  },
+  {
+    "key": "250035",
+    "slug": "tehran-region18-shaharak_moslemin",
+    "persianName": "شهرک مسلمین",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "shaharak_moslemin"
+  },
+  {
+    "key": "246906",
+    "slug": "tehran-region18-valiasr_shomali",
+    "persianName": "ولی عصر شمالی",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "valiasr_shomali"
+  },
+  {
+    "key": "250002",
+    "slug": "tehran-region18-shahrak_vali_asr_behkhiyal",
+    "persianName": "شهرک ولیعصر - به خیال",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "shahrak_vali_asr_behkhiyal"
+  },
+  {
+    "key": "249853",
+    "slug": "tehran-region18-vali_mohamadi",
+    "persianName": "ولی محمدی",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "vali_mohamadi"
+  },
+  {
+    "key": "247135",
+    "slug": "tehran-region18-behdasht",
+    "persianName": "بهداشت",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "behdasht"
+  },
+  {
+    "key": "273102",
+    "slug": "tehran-region18-shamsabad",
+    "persianName": "شاد اباد",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "shamsabad"
+  },
+  {
+    "key": "246940",
+    "slug": "tehran-region18-17_shahrivar",
+    "persianName": "هفده شهریور",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "17_shahrivar"
+  },
+  {
+    "key": "249608",
+    "slug": "tehran-region18-kooy_hefdahom_e_shahrivar",
+    "persianName": "کوی هفدهم شهریور",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "kooy_hefdahom_e_shahrivar"
+  },
+  {
+    "key": "250073",
+    "slug": "tehran-region18-shahid_asghari",
+    "persianName": "شهید اصغری",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "shahid_asghari"
+  },
+  {
+    "key": "247595",
+    "slug": "tehran-region18-bolvar_boroujerdi",
+    "persianName": "بلوار بروجردی",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "bolvar_boroujerdi"
+  },
+  {
+    "key": "246973",
+    "slug": "tehran-region18-yaftabad_shomali",
+    "persianName": "یافت اباد شمالی",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "yaftabad_shomali"
+  },
+  {
+    "key": "249921",
+    "slug": "tehran-region18-abou_saeid_gharbi",
+    "persianName": "ابوسعید غربی",
+    "province": "tehran",
+    "region": "region18",
+    "zone": "abou_saeid_gharbi"
+  },
+  {
+    "key": "246733",
+    "slug": "tehran-region19",
+    "persianName": "منطقه 19",
+    "province": "tehran",
+    "region": "region19",
+    "zone": null
+  },
+  {
+    "key": "249790",
+    "slug": "tehran-region19-khani_abad_no_jonoubi",
+    "persianName": "خانی اباد نو جنوبی",
+    "province": "tehran",
+    "region": "region19",
+    "zone": "khani_abad_no_jonoubi"
+  },
+  {
+    "key": "249946",
+    "slug": "tehran-region19-maydan_ebne_sina",
+    "persianName": "میدان ابن سینا",
+    "province": "tehran",
+    "region": "region19",
+    "zone": "maydan_ebne_sina"
+  },
+  {
+    "key": "246957",
+    "slug": "tehran-region19-dolatkhah_jonubi",
+    "persianName": "دولت خواه جنوبی",
+    "province": "tehran",
+    "region": "region19",
+    "zone": "dolatkhah_jonubi"
+  },
+  {
+    "key": "249613",
+    "slug": "tehran-region19-maydan_saralah",
+    "persianName": "میدان ثارالله",
+    "province": "tehran",
+    "region": "region19",
+    "zone": "maydan_saralah"
+  },
+  {
+    "key": "249956",
+    "slug": "tehran-region19-baradaran_shokri",
+    "persianName": "برادران شکری",
+    "province": "tehran",
+    "region": "region19",
+    "zone": "baradaran_shokri"
+  },
+  {
+    "key": "249832",
+    "slug": "tehran-region19-shahid_latifi",
+    "persianName": "شهید لطیفی",
+    "province": "tehran",
+    "region": "region19",
+    "zone": "shahid_latifi"
+  },
+  {
+    "key": "249737",
+    "slug": "tehran-region19-mina_khani_abad_no_shomali",
+    "persianName": "مینا - خانی اباد نو شمالی",
+    "province": "tehran",
+    "region": "region19",
+    "zone": "mina_khani_abad_no_shomali"
+  },
+  {
+    "key": "250060",
+    "slug": "tehran-region19-abdol_abad",
+    "persianName": "عبدل اباد",
+    "province": "tehran",
+    "region": "region19",
+    "zone": "abdol_abad"
+  },
+  {
+    "key": "249789",
+    "slug": "tehran-region19-azadegan",
+    "persianName": "ازادگان",
+    "province": "tehran",
+    "region": "region19",
+    "zone": "azadegan"
+  },
+  {
+    "key": "247057",
+    "slug": "tehran-region19-shariati_shomali",
+    "persianName": "شریعتی شمالی",
+    "province": "tehran",
+    "region": "region19",
+    "zone": "shariati_shomali"
+  },
+  {
+    "key": "249793",
+    "slug": "tehran-region19-amouzegar",
+    "persianName": "اموزگار",
+    "province": "tehran",
+    "region": "region19",
+    "zone": "amouzegar"
+  },
+  {
+    "key": "250098",
+    "slug": "tehran-region19-mahour",
+    "persianName": "ماهور",
+    "province": "tehran",
+    "region": "region19",
+    "zone": "mahour"
+  },
+  {
+    "key": "250170",
+    "slug": "tehran-region19-ehsani",
+    "persianName": "احسانی",
+    "province": "tehran",
+    "region": "region19",
+    "zone": "ehsani"
+  },
+  {
+    "key": "247808",
+    "slug": "tehran-region19-shaghayegh_abdol_abad",
+    "persianName": "شقایق - عبدل اباد",
+    "province": "tehran",
+    "region": "region19",
+    "zone": "shaghayegh_abdol_abad"
+  },
+  {
+    "key": "247073",
+    "slug": "tehran-region19-dolatkhah_shomali",
+    "persianName": "دولت خواه شمالی",
+    "province": "tehran",
+    "region": "region19",
+    "zone": "dolatkhah_shomali"
+  },
+  {
+    "key": "247074",
+    "slug": "tehran-region19-shokufeh_shomali",
+    "persianName": "شکوفه شمالی",
+    "province": "tehran",
+    "region": "region19",
+    "zone": "shokufeh_shomali"
+  },
+  {
+    "key": "247012",
+    "slug": "tehran-region19-esmaeilabad",
+    "persianName": "اسماعیل اباد",
+    "province": "tehran",
+    "region": "region19",
+    "zone": "esmaeilabad"
+  },
+  {
+    "key": "247013",
+    "slug": "tehran-region19-shokufeh_jonubi",
+    "persianName": "شکوفه جنوبی",
+    "province": "tehran",
+    "region": "region19",
+    "zone": "shokufeh_jonubi"
+  },
+  {
+    "key": "250172",
+    "slug": "tehran-region19-firouz",
+    "persianName": "فیروز",
+    "province": "tehran",
+    "region": "region19",
+    "zone": "firouz"
+  },
+  {
+    "key": "246868",
+    "slug": "tehran-region19-shariati_jonubi",
+    "persianName": "شریعتی جنوبی",
+    "province": "tehran",
+    "region": "region19",
+    "zone": "shariati_jonubi"
+  },
+  {
+    "key": "247110",
+    "slug": "tehran-region19-esfandiyari_bostan",
+    "persianName": "اسفندیاری - بستان",
+    "province": "tehran",
+    "region": "region19",
+    "zone": "esfandiyari_bostan"
+  },
+  {
+    "key": "250154",
+    "slug": "tehran-region19-bahman",
+    "persianName": "بهمن",
+    "province": "tehran",
+    "region": "region19",
+    "zone": "bahman"
+  },
+  {
+    "key": "247683",
+    "slug": "tehran-region19-samadi",
+    "persianName": "صمدی",
+    "province": "tehran",
+    "region": "region19",
+    "zone": "samadi"
+  },
+  {
+    "key": "247142",
+    "slug": "tehran-region19-shahrak_resalat",
+    "persianName": "شهرک رسالت",
+    "province": "tehran",
+    "region": "region19",
+    "zone": "shahrak_resalat"
+  },
+  {
+    "key": "249598",
+    "slug": "tehran-region19-esfandyari",
+    "persianName": "اسفندیاری",
+    "province": "tehran",
+    "region": "region19",
+    "zone": "esfandyari"
+  },
+  {
+    "key": "247596",
+    "slug": "tehran-region19-mahan",
+    "persianName": "ماهان",
+    "province": "tehran",
+    "region": "region19",
+    "zone": "mahan"
+  },
+  {
+    "key": "249869",
+    "slug": "tehran-region19-abdolah_abad",
+    "persianName": "عبدالله اباد",
+    "province": "tehran",
+    "region": "region19",
+    "zone": "abdolah_abad"
+  },
+  {
+    "key": "246866",
+    "slug": "tehran-region19-khaniabadshomali",
+    "persianName": "خانی اباد شمالی",
+    "province": "tehran",
+    "region": "region19",
+    "zone": "khaniabadshomali"
+  },
+  {
+    "key": "250119",
+    "slug": "tehran-region19-bolvar_shaghayegh_esfandiyari",
+    "persianName": "بلوار شقایق - اسفندیاری",
+    "province": "tehran",
+    "region": "region19",
+    "zone": "bolvar_shaghayegh_esfandiyari"
+  },
+  {
+    "key": "250083",
+    "slug": "tehran-region19-miaad_esfandiari",
+    "persianName": "میعاد - اسفندیاری",
+    "province": "tehran",
+    "region": "region19",
+    "zone": "miaad_esfandiari"
+  },
+  {
+    "key": "249938",
+    "slug": "tehran-region19-ali_akbar_alinezhad",
+    "persianName": "علی اکبر علی نژاد",
+    "province": "tehran",
+    "region": "region19",
+    "zone": "ali_akbar_alinezhad"
+  },
+  {
+    "key": "246869",
+    "slug": "tehran-region19-shahid_kazemi",
+    "persianName": "شهید کاظمی",
+    "province": "tehran",
+    "region": "region19",
+    "zone": "shahid_kazemi"
+  },
+  {
+    "key": "246941",
+    "slug": "tehran-region19-nematabad",
+    "persianName": "نعمت اباد",
+    "province": "tehran",
+    "region": "region19",
+    "zone": "nematabad"
+  },
+  {
+    "key": "247758",
+    "slug": "tehran-region20-firouz_abadi",
+    "persianName": "فیروزابادی",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "firouz_abadi"
+  },
+  {
+    "key": "249899",
+    "slug": "tehran-region20-nafari",
+    "persianName": "نفری",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "nafari"
+  },
+  {
+    "key": "247712",
+    "slug": "tehran-region20-shahrak_shahrdari_golshahr",
+    "persianName": "شهرک شهرداری - گلشهر",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "shahrak_shahrdari_golshahr"
+  },
+  {
+    "key": "247587",
+    "slug": "tehran-region20-navaz",
+    "persianName": "نواز",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "navaz"
+  },
+  {
+    "key": "246942",
+    "slug": "tehran-region20-dolatabad",
+    "persianName": "دولت اباد",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "dolatabad"
+  },
+  {
+    "key": "246878",
+    "slug": "tehran-region20-safaeiyeh",
+    "persianName": "صفائیه",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "safaeiyeh"
+  },
+  {
+    "key": "249689",
+    "slug": "tehran-region20-cheshme_ali",
+    "persianName": "چشمه علی",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "cheshme_ali"
+  },
+  {
+    "key": "246979",
+    "slug": "tehran-region20-zahirabad",
+    "persianName": "ظهیراباد",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "zahirabad"
+  },
+  {
+    "key": "246978",
+    "slug": "tehran-region20-ebnbabvey",
+    "persianName": "ابن بابویه",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "ebnbabvey"
+  },
+  {
+    "key": "249966",
+    "slug": "tehran-region20-se_rah_varamin",
+    "persianName": "سه راه ورامین",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "se_rah_varamin"
+  },
+  {
+    "key": "250087",
+    "slug": "tehran-region20-ghayouri",
+    "persianName": "غیوری",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "ghayouri"
+  },
+  {
+    "key": "246874",
+    "slug": "tehran-region20-sartakht",
+    "persianName": "سرتخت",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "sartakht"
+  },
+  {
+    "key": "246943",
+    "slug": "tehran-region20-firuzabadi",
+    "persianName": "فیروز ابادی",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "firuzabadi"
+  },
+  {
+    "key": "249617",
+    "slug": "tehran-region20-ghadami_maydan_shahr_rey",
+    "persianName": "قدمی - میدان شهر ری",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "ghadami_maydan_shahr_rey"
+  },
+  {
+    "key": "250100",
+    "slug": "tehran-region20-ghaybi",
+    "persianName": "غیبی",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "ghaybi"
+  },
+  {
+    "key": "249741",
+    "slug": "tehran-region20-sepahiyan_enghelab",
+    "persianName": "سپاهیان انقلاب",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "sepahiyan_enghelab"
+  },
+  {
+    "key": "246875",
+    "slug": "tehran-region20-valiabad",
+    "persianName": "ولی اباد",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "valiabad"
+  },
+  {
+    "key": "249637",
+    "slug": "tehran-region20-avini",
+    "persianName": "اوینی",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "avini"
+  },
+  {
+    "key": "247490",
+    "slug": "tehran-region20-mohamad_fadaei",
+    "persianName": "محمد فدایی",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "mohamad_fadaei"
+  },
+  {
+    "key": "250107",
+    "slug": "tehran-region20-bolvar_qom_vali_abad",
+    "persianName": "قم - ولی اباد",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "bolvar_qom_vali_abad"
+  },
+  {
+    "key": "247099",
+    "slug": "tehran-region20-13_aban",
+    "persianName": "سیزده ابان",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "13_aban"
+  },
+  {
+    "key": "250063",
+    "slug": "tehran-region20-reza_zade",
+    "persianName": "رضازاده",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "reza_zade"
+  },
+  {
+    "key": "249812",
+    "slug": "tehran-region20-rashidi",
+    "persianName": "رشیدی",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "rashidi"
+  },
+  {
+    "key": "249857",
+    "slug": "tehran-region20-sadegh_amani",
+    "persianName": "صادق امانی",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "sadegh_amani"
+  },
+  {
+    "key": "250147",
+    "slug": "tehran-region20-molaei",
+    "persianName": "مولایی",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "molaei"
+  },
+  {
+    "key": "246873",
+    "slug": "tehran-region20-hamzehabad",
+    "persianName": "حمزه اباد",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "hamzehabad"
+  },
+  {
+    "key": "250173",
+    "slug": "tehran-region20-dasar",
+    "persianName": "داسار",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "dasar"
+  },
+  {
+    "key": "247546",
+    "slug": "tehran-region20-maydan_namaz_hamze_abad",
+    "persianName": "میدان نماز - حمزه اباد",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "maydan_namaz_hamze_abad"
+  },
+  {
+    "key": "250175",
+    "slug": "tehran-region20-shahrak_modares",
+    "persianName": "شهرک مدرس",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "shahrak_modares"
+  },
+  {
+    "key": "247571",
+    "slug": "tehran-region20-enayati",
+    "persianName": "عنایتی",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "enayati"
+  },
+  {
+    "key": "247713",
+    "slug": "tehran-region20-komayl_shahr_rey",
+    "persianName": "کمیل - شهر ری",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "komayl_shahr_rey"
+  },
+  {
+    "key": "249959",
+    "slug": "tehran-region20-astane",
+    "persianName": "استانه",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "astane"
+  },
+  {
+    "key": "247020",
+    "slug": "tehran-region20-mansuriyeh_mangol",
+    "persianName": "منصوریه منگل",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "mansuriyeh_mangol"
+  },
+  {
+    "key": "247561",
+    "slug": "tehran-region20-din_mohamadi",
+    "persianName": "دین محمدی",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "din_mohamadi"
+  },
+  {
+    "key": "246959",
+    "slug": "tehran-region20-aqdasiyeh_shahr_rey",
+    "persianName": "اقدسیه - شهر ری",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "aqdasiyeh_shahr_rey"
+  },
+  {
+    "key": "246960",
+    "slug": "tehran-region20-alaein",
+    "persianName": "علائین",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "alaein"
+  },
+  {
+    "key": "250102",
+    "slug": "tehran-region20-shahrak_abbaspour",
+    "persianName": "شهرک عباسپور",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "shahrak_abbaspour"
+  },
+  {
+    "key": "249925",
+    "slug": "tehran-region20-shahrak_shahrbani",
+    "persianName": "شهرک شهربانی",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "shahrak_shahrbani"
+  },
+  {
+    "key": "249958",
+    "slug": "tehran-region20-ghale_gabri",
+    "persianName": "قلعه گبری",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "ghale_gabri"
+  },
+  {
+    "key": "247026",
+    "slug": "tehran-region20-shahadat",
+    "persianName": "شهادت",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "shahadat"
+  },
+  {
+    "key": "246870",
+    "slug": "tehran-region20-estakhr_shahr_rey",
+    "persianName": "استخر - شهر ری",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "estakhr_shahr_rey"
+  },
+  {
+    "key": "249815",
+    "slug": "tehran-region20-pour_hosseini",
+    "persianName": "پورحسینی",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "pour_hosseini"
+  },
+  {
+    "key": "247565",
+    "slug": "tehran-region20-hassan_pour",
+    "persianName": "حسن پور",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "hassan_pour"
+  },
+  {
+    "key": "249820",
+    "slug": "tehran-region20-baradaran_ardestani_dolat_abad",
+    "persianName": "اردستانی - دولت اباد",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "baradaran_ardestani_dolat_abad"
+  },
+  {
+    "key": "247559",
+    "slug": "tehran-region20-boroujerdi_dolat_abad",
+    "persianName": "بروجردی - دولت اباد",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "boroujerdi_dolat_abad"
+  },
+  {
+    "key": "250016",
+    "slug": "tehran-region20-parvin_etesami",
+    "persianName": "پروین اعتصامی",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "parvin_etesami"
+  },
+  {
+    "key": "250131",
+    "slug": "tehran-region20-mohamadi",
+    "persianName": "محمدی",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "mohamadi"
+  },
+  {
+    "key": "247143",
+    "slug": "tehran-region20-javanmard_qassab",
+    "persianName": "جوانمرد قصاب",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "javanmard_qassab"
+  },
+  {
+    "key": "247494",
+    "slug": "tehran-region20-ali_akbar_dehkhoda",
+    "persianName": "علی اکبر دهخدا",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "ali_akbar_dehkhoda"
+  },
+  {
+    "key": "250017",
+    "slug": "tehran-region20-mohajeri",
+    "persianName": "مهاجری",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "mohajeri"
+  },
+  {
+    "key": "249904",
+    "slug": "tehran-region20-shahid_taghi_pour",
+    "persianName": "شهید تقی پور",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "shahid_taghi_pour"
+  },
+  {
+    "key": "247515",
+    "slug": "tehran-region20-zakariyaye_razi",
+    "persianName": "زکریای رازی",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "zakariyaye_razi"
+  },
+  {
+    "key": "247774",
+    "slug": "tehran-region20-mir_abedini",
+    "persianName": "میرعابدینی",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "mir_abedini"
+  },
+  {
+    "key": "246958",
+    "slug": "tehran-region20-taqiabad",
+    "persianName": "تقی اباد",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "taqiabad"
+  },
+  {
+    "key": "249749",
+    "slug": "tehran-region20-naser_reza",
+    "persianName": "ناصر رضا",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "naser_reza"
+  },
+  {
+    "key": "249948",
+    "slug": "tehran-region20-kouy_eslam",
+    "persianName": "کوی اسلام",
+    "province": "tehran",
+    "region": "region20",
+    "zone": "kouy_eslam"
+  },
+  {
+    "key": "246719",
+    "slug": "tehran-region21",
+    "persianName": "منطقه 21",
+    "province": "tehran",
+    "region": "region21",
+    "zone": null
+  },
+  {
+    "key": "247617",
+    "slug": "tehran-region21-nakh_zarin",
+    "persianName": "نخ زرین",
+    "province": "tehran",
+    "region": "region21",
+    "zone": "nakh_zarin"
+  },
+  {
+    "key": "246981",
+    "slug": "tehran-region21-shahrak_darya",
+    "persianName": "شهرک دریا",
+    "province": "tehran",
+    "region": "region21",
+    "zone": "shahrak_darya"
+  },
+  {
+    "key": "247081",
+    "slug": "tehran-region21-shahrak_azadi",
+    "persianName": "شهرک ازادی",
+    "province": "tehran",
+    "region": "region21",
+    "zone": "shahrak_azadi"
+  },
+  {
+    "key": "247060",
+    "slug": "tehran-region21-esteglal_daneshgah",
+    "persianName": "استقلال دانشگاه",
+    "province": "tehran",
+    "region": "region21",
+    "zone": "esteglal_daneshgah"
+  },
+  {
+    "key": "246966",
+    "slug": "tehran-region21-bashgah_naft",
+    "persianName": "باشگاه نفت",
+    "province": "tehran",
+    "region": "region21",
+    "zone": "bashgah_naft"
+  },
+  {
+    "key": "247823",
+    "slug": "tehran-region21-shaghayegh_sharghi",
+    "persianName": "شقایق شرقی",
+    "province": "tehran",
+    "region": "region21",
+    "zone": "shaghayegh_sharghi"
+  },
+  {
+    "key": "247473",
+    "slug": "tehran-region21-ghobad",
+    "persianName": "قباد",
+    "province": "tehran",
+    "region": "region21",
+    "zone": "ghobad"
+  },
+  {
+    "key": "249578",
+    "slug": "tehran-region21-shahid_pandyar",
+    "persianName": "شهید پندیار",
+    "province": "tehran",
+    "region": "region21",
+    "zone": "shahid_pandyar"
+  },
+  {
+    "key": "249875",
+    "slug": "tehran-region21-khosro_parviz",
+    "persianName": "خسروپرویز",
+    "province": "tehran",
+    "region": "region21",
+    "zone": "khosro_parviz"
+  },
+  {
+    "key": "247016",
+    "slug": "tehran-region21-tehransar_qarbi",
+    "persianName": "تهرانسرغربی",
+    "province": "tehran",
+    "region": "region21",
+    "zone": "tehransar_qarbi"
+  },
+  {
+    "key": "247793",
+    "slug": "tehran-region21-shahrak_pasdaran",
+    "persianName": "شهرک پاسداران",
+    "province": "tehran",
+    "region": "region21",
+    "zone": "shahrak_pasdaran"
+  },
+  {
+    "key": "247769",
+    "slug": "tehran-region21-bozorgrah_lashkari",
+    "persianName": "بزرگراه لشکری",
+    "province": "tehran",
+    "region": "region21",
+    "zone": "bozorgrah_lashkari"
+  },
+  {
+    "key": "249972",
+    "slug": "tehran-region21-otouban_fath_tehransar",
+    "persianName": "اتوبان فتح - تهرانسر",
+    "province": "tehran",
+    "region": "region21",
+    "zone": "otouban_fath_tehransar"
+  },
+  {
+    "key": "249685",
+    "slug": "tehran-region21-ansar",
+    "persianName": "انصار",
+    "province": "tehran",
+    "region": "region21",
+    "zone": "ansar"
+  },
+  {
+    "key": "247721",
+    "slug": "tehran-region21-maydan_kamal_almolk",
+    "persianName": "میدان کمال الملک",
+    "province": "tehran",
+    "region": "region21",
+    "zone": "maydan_kamal_almolk"
+  },
+  {
+    "key": "249855",
+    "slug": "tehran-region21-shahid_doulabi",
+    "persianName": "شهید دولابی",
+    "province": "tehran",
+    "region": "region21",
+    "zone": "shahid_doulabi"
+  },
+  {
+    "key": "247736",
+    "slug": "tehran-region21-shaghayegh_gharbi",
+    "persianName": "شقایق غربی",
+    "province": "tehran",
+    "region": "region21",
+    "zone": "shaghayegh_gharbi"
+  },
+  {
+    "key": "249974",
+    "slug": "tehran-region21-badakhshan",
+    "persianName": "بدخشان",
+    "province": "tehran",
+    "region": "region21",
+    "zone": "badakhshan"
+  },
+  {
+    "key": "247686",
+    "slug": "tehran-region21-yekom_ghazali",
+    "persianName": "یکم غزالی",
+    "province": "tehran",
+    "region": "region21",
+    "zone": "yekom_ghazali"
+  },
+  {
+    "key": "250043",
+    "slug": "tehran-region21-malek_ashtar",
+    "persianName": "مالک اشتر",
+    "province": "tehran",
+    "region": "region21",
+    "zone": "malek_ashtar"
+  },
+  {
+    "key": "250080",
+    "slug": "tehran-region21-tehransar_sharghi",
+    "persianName": "تهرانسر شرقی",
+    "province": "tehran",
+    "region": "region21",
+    "zone": "tehransar_sharghi"
+  },
+  {
+    "key": "249927",
+    "slug": "tehran-region21-shahrak_aseman",
+    "persianName": "شهرک اسمان",
+    "province": "tehran",
+    "region": "region21",
+    "zone": "shahrak_aseman"
+  },
+  {
+    "key": "247592",
+    "slug": "tehran-region21-tehransar_sharghi_ashouri",
+    "persianName": "تهرانسر شرقی - عاشوری",
+    "province": "tehran",
+    "region": "region21",
+    "zone": "tehransar_sharghi_ashouri"
+  },
+  {
+    "key": "247168",
+    "slug": "tehran-region21-naft_shomali",
+    "persianName": "نفت شمالی",
+    "province": "tehran",
+    "region": "region21",
+    "zone": "naft_shomali"
+  },
+  {
+    "key": "250187",
+    "slug": "tehran-region21-tehransar_sharghi_naft_jonoubi",
+    "persianName": "تهرانسر شرقی - نفت جنوبی",
+    "province": "tehran",
+    "region": "region21",
+    "zone": "tehransar_sharghi_naft_jonoubi"
+  },
+  {
+    "key": "247770",
+    "slug": "tehran-region21-shahrak_kazemiyeh",
+    "persianName": "شهرک کاظمیه",
+    "province": "tehran",
+    "region": "region21",
+    "zone": "shahrak_kazemiyeh"
+  },
+  {
+    "key": "246693",
+    "slug": "tehran-region22",
+    "persianName": "منطقه 22",
+    "province": "tehran",
+    "region": "region22",
+    "zone": null
+  },
+  {
+    "key": "247744",
+    "slug": "tehran-region22-mir_kamali",
+    "persianName": "میرکمالی",
+    "province": "tehran",
+    "region": "region22",
+    "zone": "mir_kamali"
+  },
+  {
+    "key": "247008",
+    "slug": "tehran-region22-sadra",
+    "persianName": "صدرا",
+    "province": "tehran",
+    "region": "region22",
+    "zone": "sadra"
+  },
+  {
+    "key": "249884",
+    "slug": "tehran-region22-alame_ghazvini",
+    "persianName": "علامه قزوینی",
+    "province": "tehran",
+    "region": "region22",
+    "zone": "alame_ghazvini"
+  },
+  {
+    "key": "250089",
+    "slug": "tehran-region22-sahar_baharan",
+    "persianName": "سحر - بهاران",
+    "province": "tehran",
+    "region": "region22",
+    "zone": "sahar_baharan"
+  },
+  {
+    "key": "249825",
+    "slug": "tehran-region22-shahrak_chitgar",
+    "persianName": "شهرک چیتگر",
+    "province": "tehran",
+    "region": "region22",
+    "zone": "shahrak_chitgar"
+  },
+  {
+    "key": "247848",
+    "slug": "tehran-region22-marvdasht_jonoubi",
+    "persianName": "مرودشت جنوبی",
+    "province": "tehran",
+    "region": "region22",
+    "zone": "marvdasht_jonoubi"
+  },
+  {
+    "key": "247672",
+    "slug": "tehran-region22-maydan_olampic",
+    "persianName": "میدان المپیک",
+    "province": "tehran",
+    "region": "region22",
+    "zone": "maydan_olampic"
+  },
+  {
+    "key": "247682",
+    "slug": "tehran-region22-khajavi_kermani",
+    "persianName": "خواجوی کرمانی",
+    "province": "tehran",
+    "region": "region22",
+    "zone": "khajavi_kermani"
+  },
+  {
+    "key": "249771",
+    "slug": "tehran-region22-shahrak_sadra",
+    "persianName": "شهرک صدرا",
+    "province": "tehran",
+    "region": "region22",
+    "zone": "shahrak_sadra"
+  },
+  {
+    "key": "249821",
+    "slug": "tehran-region22-cheshme_gharbi",
+    "persianName": "چشمه غربی",
+    "province": "tehran",
+    "region": "region22",
+    "zone": "cheshme_gharbi"
+  },
+  {
+    "key": "247541",
+    "slug": "tehran-region22-sahel_allameh_jafari",
+    "persianName": "ساحل - علامه جعفری",
+    "province": "tehran",
+    "region": "region22",
+    "zone": "sahel_allameh_jafari"
+  },
+  {
+    "key": "247700",
+    "slug": "tehran-region22-banafshe",
+    "persianName": "بنفشه",
+    "province": "tehran",
+    "region": "region22",
+    "zone": "banafshe"
+  },
+  {
+    "key": "247497",
+    "slug": "tehran-region22-mozafar",
+    "persianName": "مظفر",
+    "province": "tehran",
+    "region": "region22",
+    "zone": "mozafar"
+  },
+  {
+    "key": "250189",
+    "slug": "tehran-region22-orkide_shahrak_cheshmeh",
+    "persianName": "ارکیده - شهرک چشمه",
+    "province": "tehran",
+    "region": "region22",
+    "zone": "orkide_shahrak_cheshmeh"
+  },
+  {
+    "key": "247698",
+    "slug": "tehran-region22-cheshme_sharghi",
+    "persianName": "چشمه شرقی",
+    "province": "tehran",
+    "region": "region22",
+    "zone": "cheshme_sharghi"
+  }
+]

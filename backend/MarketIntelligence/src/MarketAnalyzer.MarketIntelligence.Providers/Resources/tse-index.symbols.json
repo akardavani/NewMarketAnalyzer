@@ -1,0 +1,450 @@
+﻿[
+  {
+    "key": "IRX6X01T0006",
+    "insCode": "34408080767216529",
+    "sectorCode": "01",
+    "persianName": "زراعت",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X10T0006",
+    "insCode": "19219679288446732",
+    "sectorCode": "10",
+    "persianName": "ذغال سنگ",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X11T0006",
+    "insCode": "65675836323214668",
+    "sectorCode": "11",
+    "persianName": "استخراج نفت جزکشف",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X13T0006",
+    "insCode": "13235969998952202",
+    "sectorCode": "13",
+    "persianName": "کانه فلزی",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X14T0006",
+    "insCode": "62691002126902464",
+    "sectorCode": "14",
+    "persianName": "سایر معادن",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X17T0006",
+    "insCode": "59288237226302898",
+    "sectorCode": "17",
+    "persianName": "منسوجات",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X19T0006",
+    "insCode": "69306841376553334",
+    "sectorCode": "19",
+    "persianName": "محصولات چرمی",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X20T0006",
+    "insCode": "58440550086834602",
+    "sectorCode": "20",
+    "persianName": "محصولات چوبی",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X21T0006",
+    "insCode": "30106839080444358",
+    "sectorCode": "21",
+    "persianName": "محصولات کاغذ",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X22T0006",
+    "insCode": "25766336681098389",
+    "sectorCode": "22",
+    "persianName": "انتشار و چاپ",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X23T0006",
+    "insCode": "12331083953323969",
+    "sectorCode": "23",
+    "persianName": "فراورده نفتی",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X25T0006",
+    "insCode": "36469751685735891",
+    "sectorCode": "25",
+    "persianName": "لاستیک",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X27T0006",
+    "insCode": "32453344048876642",
+    "sectorCode": "27",
+    "persianName": "فلزات اساسی",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X28T0006",
+    "insCode": "1123534346391630",
+    "sectorCode": "28",
+    "persianName": "محصولات فلزی",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X29T0006",
+    "insCode": "11451389074113298",
+    "sectorCode": "29",
+    "persianName": "ماشین آلات",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X31T0006",
+    "insCode": "33878047680249697",
+    "sectorCode": "31",
+    "persianName": "دستگاههای برقی",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X32T0006",
+    "insCode": "24733701189547084",
+    "sectorCode": "32",
+    "persianName": "وسایل ارتباطی",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X33T0006",
+    "insCode": "61848754958448778",
+    "sectorCode": "33",
+    "persianName": "ابزار پزشکی",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X34T0006",
+    "insCode": "20213770409093165",
+    "sectorCode": "34",
+    "persianName": "خودرو",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X35T0006",
+    "insCode": "58231368623465359",
+    "sectorCode": "35",
+    "persianName": "حمل و نقل",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X36T0006",
+    "insCode": "29331053506731535",
+    "sectorCode": "36",
+    "persianName": "مبلمان",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X38T0006",
+    "insCode": "21948907150049163",
+    "sectorCode": "38",
+    "persianName": "قند و شکر",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X39T0006",
+    "insCode": "40355846462826897",
+    "sectorCode": "39",
+    "persianName": "چند رشته ای ص",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X40T0006",
+    "insCode": "54843635503648458",
+    "sectorCode": "40",
+    "persianName": "تامین آب، برق، گاز",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X42T0006",
+    "insCode": "15508900928481581",
+    "sectorCode": "42",
+    "persianName": "غذایی بجز قند",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X43T0006",
+    "insCode": "3615666621538524",
+    "sectorCode": "43",
+    "persianName": "مواد دارویی",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X44T0006",
+    "insCode": "33626672012415176",
+    "sectorCode": "44",
+    "persianName": "شیمیایی",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X45T0006",
+    "insCode": "41934470778361119",
+    "sectorCode": "45",
+    "persianName": "پیمانکاری",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X47T0006",
+    "insCode": "65986638607018835",
+    "sectorCode": "47",
+    "persianName": "خرده فروشی به جز وسایل نقلیه",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X49T0006",
+    "insCode": "57616105980228781",
+    "sectorCode": "49",
+    "persianName": "کاشی و سرامیک",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X53T0006",
+    "insCode": "70077233737515808",
+    "sectorCode": "53",
+    "persianName": "سیمان",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X54T0006",
+    "insCode": "14651627750314021",
+    "sectorCode": "54",
+    "persianName": "کانی غیرفلزی",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X55T0006",
+    "insCode": "64514606457616199",
+    "sectorCode": "55",
+    "persianName": "هتل و رستوران",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X56T0006",
+    "insCode": "34295935482222451",
+    "sectorCode": "56",
+    "persianName": "سرمایه گذاریها",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X57T0006",
+    "insCode": "72002976013856737",
+    "sectorCode": "57",
+    "persianName": "بانکها",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X58T0006",
+    "insCode": "25163959460949732",
+    "sectorCode": "58",
+    "persianName": "سایرمالی",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X60T0006",
+    "insCode": "24187097921483699",
+    "sectorCode": "60",
+    "persianName": "حمل و نقل",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X64T0006",
+    "insCode": "41867092385281437",
+    "sectorCode": "64",
+    "persianName": "رادیویی",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X65T0006",
+    "insCode": "61247168213690670",
+    "sectorCode": "65",
+    "persianName": "مالی",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X66T0006",
+    "insCode": "59105676994811497",
+    "sectorCode": "66",
+    "persianName": "بیمه و بازنشسته - بازار بورس",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X67T0006",
+    "insCode": "61985386521682984",
+    "sectorCode": "67",
+    "persianName": "اداره بازارهای مالی",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X70T0006",
+    "insCode": "4654922806626448",
+    "sectorCode": "70",
+    "persianName": "انبوه سازی",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X72T0006",
+    "insCode": "8900726085939949",
+    "sectorCode": "72",
+    "persianName": "رایانه",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X73T0006",
+    "insCode": "18780171241610744",
+    "sectorCode": "73",
+    "persianName": "اطلاعات و ارتباطات",
+    "flow": 1
+  },
+  {
+    "key": "IRX6X74T0006",
+    "insCode": "47233872677452574",
+    "sectorCode": "74",
+    "persianName": "فنی مهندسی",
+    "flow": 1
+  },
+  {
+    "key": "3454456635278563",
+    "insCode": "3454456635278563",
+    "sectorCode": null,
+    "persianName": "شاخص کل هم وزن فرابورس - بازار فرابورس",
+    "flow": 2
+  },
+  {
+    "key": "5798407779416661",
+    "insCode": "5798407779416661",
+    "sectorCode": null,
+    "persianName": "شاخص قیمت(وزنی-ارزشی) - بازار بورس",
+    "flow": 1
+  },
+  {
+    "key": "8384385859414435",
+    "insCode": "8384385859414435",
+    "sectorCode": null,
+    "persianName": "شاخص قیمت (هم وزن) - بازار بورس",
+    "flow": 1
+  },
+  {
+    "key": "IRX6XS300006",
+    "insCode": "10523825119011581",
+    "sectorCode": null,
+    "persianName": "شاخص 30 شرکت بزرگ - بازار بورس",
+    "flow": 1
+  },
+  {
+    "key": "16385144332417446",
+    "insCode": "16385144332417446",
+    "sectorCode": null,
+    "persianName": "شاخص قیمت فرابورس - بازار فرابورس",
+    "flow": 2
+  },
+  {
+    "key": "24779787662870476",
+    "insCode": "24779787662870476",
+    "sectorCode": null,
+    "persianName": "شاخص قیمت هم وزن فرابورس - بازار فرابورس",
+    "flow": 2
+  },
+  {
+    "key": "30655480864841493",
+    "insCode": "30655480864841493",
+    "sectorCode": null,
+    "persianName": "شاخص بازده نقدی قیمت - بازار بورس",
+    "flow": 1
+  },
+  {
+    "key": "IRX6XTPI0006",
+    "insCode": "32097828799138957",
+    "sectorCode": null,
+    "persianName": "شاخص کل - بازار بورس",
+    "flow": 1
+  },
+  {
+    "key": "35898516735559137",
+    "insCode": "35898516735559137",
+    "sectorCode": null,
+    "persianName": "بازار دوم فرابورس - بازار فرابورس",
+    "flow": 2
+  },
+  {
+    "key": "43685683301327984",
+    "insCode": "43685683301327984",
+    "sectorCode": null,
+    "persianName": "شاخص کل فرابورس - بازار فرابورس",
+    "flow": 2
+  },
+  {
+    "key": "IRX6XSNT0006",
+    "insCode": "43754960038275285",
+    "sectorCode": null,
+    "persianName": "شاخص صنعت - بازار بورس",
+    "flow": 1
+  },
+  {
+    "key": "46342955726788357",
+    "insCode": "46342955726788357",
+    "sectorCode": null,
+    "persianName": "شاخص50شرکت فعالتر - بازار بورس",
+    "flow": 1
+  },
+  {
+    "key": "49579049405614711",
+    "insCode": "49579049405614711",
+    "sectorCode": null,
+    "persianName": "شاخص آزاد شناور - بازار بورس",
+    "flow": 1
+  },
+  {
+    "key": "61953785757685638",
+    "insCode": "61953785757685638",
+    "sectorCode": null,
+    "persianName": "شاخص ارکان و نهادهای مالی - بازار فرابورس",
+    "flow": 2
+  },
+  {
+    "key": "62752761908615603",
+    "insCode": "62752761908615603",
+    "sectorCode": null,
+    "persianName": "شاخص بازار اول - بازار بورس",
+    "flow": 1
+  },
+  {
+    "key": "IRX6XTPI0026",
+    "insCode": "67130298613737946",
+    "sectorCode": null,
+    "persianName": "شاخص کل (هم وزن) - بازار بورس",
+    "flow": 1
+  },
+  {
+    "key": "68337207779130851",
+    "insCode": "68337207779130851",
+    "sectorCode": null,
+    "persianName": "بازار اول فرابورس - بازار فرابورس",
+    "flow": 2
+  },
+  {
+    "key": "69932667409721265",
+    "insCode": "69932667409721265",
+    "sectorCode": null,
+    "persianName": "شاخص قیمت 50 شرکت - بازار بورس",
+    "flow": 1
+  },
+  {
+    "key": "71704845530629737",
+    "insCode": "71704845530629737",
+    "sectorCode": null,
+    "persianName": "شاخص بازار دوم - بازار بورس",
+    "flow": 1
+  }
+]

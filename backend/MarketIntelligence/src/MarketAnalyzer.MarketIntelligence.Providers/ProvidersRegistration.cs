@@ -37,6 +37,27 @@ namespace MarketAnalyzer.MarketIntelligence.Providers
             AddProvider<TsetmcStockOrderBookProvider>(services);
             AddProvider<TsetmcStockInvestorActivityProvider>(services);
 
+            // --- شاخص‌های بورس: فهرست ثابت (کندل در بخش نهایت‌نگر ثبت شده) ---
+            AddProvider<TseIndexCatalogProvider>(services);
+
+            // --- بورس کالا (آتی): فهرست ثابت + کندل ---
+            services.AddSingleton<IProviderSettingDefaults, ImeSettingDefaults>();
+            services.AddHttpClient<ImeCandleClient>(client => client.Timeout = TimeSpan.FromSeconds(30));
+            AddProvider<ImeCatalogProvider>(services);
+            AddProvider<ImeCandleProvider>(services);
+
+            // --- مسکن (کیلید): فهرست ثابت مناطق + کندل ماهانه ---
+            services.AddSingleton<IProviderSettingDefaults, KilidSettingDefaults>();
+            services.AddHttpClient<KilidCandleClient>(client => client.Timeout = TimeSpan.FromSeconds(30));
+            AddProvider<KilidCatalogProvider>(services);
+            AddProvider<KilidCandleProvider>(services);
+
+            // --- صندوق‌ها (فیپیران): فهرست + NAV ---
+            services.AddSingleton<IProviderSettingDefaults, FipiranSettingDefaults>();
+            services.AddHttpClient<FipiranClient>(client => client.Timeout = TimeSpan.FromSeconds(60));
+            AddProvider<FipiranFundCatalogProvider>(services);
+            AddProvider<FipiranFundNavProvider>(services);
+
             // --- کریپتو-تومان: فهرست ثابت + Wallex و Nobitex (قابل‌تعویض؛ پیش‌فرض Wallex) ---
             services.AddSingleton<IProviderSettingDefaults, WallexSettingDefaults>();
             services.AddSingleton<IProviderSettingDefaults, NobitexSettingDefaults>();

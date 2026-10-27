@@ -91,7 +91,9 @@ namespace MarketAnalyzer.MarketIntelligence.Application.MarketData.Operations
                     if (!group.Any(p => ProviderCapabilities.Of(p).Contains(needed)))
                         continue;
 
-                    foreach (var (key, value) in MarketJobPlan.Default(job, market.CalendarKind).ToSettings(job))
+                    var candleInterval = group.Select(p => p.Descriptor.CandleRefreshInterval).Where(i => i.HasValue).Min();
+
+                    foreach (var (key, value) in MarketJobPlan.Default(job, market.CalendarKind, candleInterval).ToSettings(job))
                         await _settings.InsertIfMissingAsync(scope, key, value, cancellationToken);
                 }
             }

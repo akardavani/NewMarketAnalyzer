@@ -16,6 +16,9 @@
         RefreshOrderBook = 4,
 
         /// <summary>به‌روزرسانی فعالیت حقیقی/حقوقی.</summary>
-        RefreshInvestorActivity = 5
+        RefreshInvestorActivity = 5,
+
+        /// <summary>دریافت ارزش خالص دارایی (NAV) صندوق‌ها.</summary>
+        RefreshFundNav = 6
     }
 }

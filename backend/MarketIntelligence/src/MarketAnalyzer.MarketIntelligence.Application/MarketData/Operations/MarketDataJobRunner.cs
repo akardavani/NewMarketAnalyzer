@@ -58,6 +58,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application.MarketData.Operations
                 MarketJobKind.RefreshCurrentState => await RefreshCurrentStateAsync(sp, market, cancellationToken),
                 MarketJobKind.RefreshOrderBook => await RefreshOrderBookAsync(sp, market, cancellationToken),
                 MarketJobKind.RefreshInvestorActivity => await RefreshInvestorActivityAsync(sp, market, cancellationToken),
+                MarketJobKind.RefreshFundNav => await RefreshFundNavAsync(sp, market, cancellationToken),
                 _ => throw new ArgumentOutOfRangeException(nameof(job), job, null)
             };
 
@@ -333,6 +334,51 @@ namespace MarketAnalyzer.MarketIntelligence.Application.MarketData.Operations
 
             var stats = rows.Count == 0 ? default : await sp.GetRequiredService<IInvestorActivityStore>().UpsertAsync(rows, ct);
             return Done(market.Key, job, fetched, rows.Count, stats.Inserted + stats.Existing, unknown);
+        }
+
+        private async Task<MarketJobResult> RefreshFundNavAsync(IServiceProvider sp, MarketDefinition market, CancellationToken ct)
+        {
+            const MarketJobKind job = MarketJobKind.RefreshFundNav;
+            var provider = await sp.GetRequiredService<IMarketProviderResolver>()
+                .ResolveAsync<IFundNavProvider>(market.Key, ProviderCapability.FundNav, ct);
+            if (provider is null)
+                return MarketJobResult.Skipped(market.Key, job, "No fund NAV provider is selected.");
+
+            var fetched = await provider.FetchFundNavsAsync(ct);
+            // خروجی ناقص (چند صندوق شکست خورده‌اند) هم ذخیره می‌شود: NAV فقط Upsert است و چیزی حذف نمی‌شود.
+            if (!IsUsable(fetched, allowPartial: true, out var early, market.Key, job))
+                return early!;
+
+            var map = await LoadSymbolMapAsync(sp, market, ct);
+            var points = new List<FundNavPoint>(fetched.Data!.Count);
+            var unknown = 0;
+            foreach (var n in fetched.Data)
+            {
+                if (!map.TryGetValue(n.SymbolKey, out var id)) { unknown++; continue; }
+                points.Add(new FundNavPoint
+                {
+                    SymbolId = id, Date = n.Date, IssuanceNav = n.IssuanceNav,
+                    CancellationNav = n.CancellationNav, StatisticalNav = n.StatisticalNav
+                });
+            }
+
+            // تاریخچهٔ همهٔ صندوق‌ها صدها هزار ردیف می‌شود؛ تراکنش‌ها را کوچک نگه می‌داریم.
+            var store = sp.GetRequiredService<IFundNavStore>();
+            var inserted = 0;
+            foreach (var chunk in points.Chunk(20_000))
+            {
+                var stats = await store.UpsertAsync(chunk, ct);
+                inserted += stats.Inserted;
+            }
+
+            var result = Done(market.Key, job, fetched, points.Count, inserted, unknown);
+            return new MarketJobResult
+            {
+                MarketKey = result.MarketKey, Job = result.Job, Status = result.Status, Processed = result.Processed,
+                Updated = result.Updated, Message = $"newNavPoints={inserted}. {result.Message}",
+                Failed = fetched.Status == FetchStatus.Partial ? 1 : 0,
+                ErrorSamples = fetched.Status == FetchStatus.Partial && fetched.ErrorMessage is not null ? new[] { fetched.ErrorMessage } : Array.Empty<string>()
+            };
         }
 
         // ---------------------------------------------------------------- helpers
