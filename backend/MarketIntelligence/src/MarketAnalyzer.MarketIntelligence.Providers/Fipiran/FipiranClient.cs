@@ -29,6 +29,12 @@ namespace MarketAnalyzer.MarketIntelligence.Providers
         /// <summary>User-Agent درخواست‌ها.</summary>
         public const string UserAgentKey = "UserAgent";
 
+        /// <summary>متد HTTP دریافت فهرست صندوق‌ها: GET (پیش‌فرض) یا POST. اگر سایت عوض شد بدون انتشار دوباره قابل‌تغییر است.</summary>
+        public const string FundsMethodKey = "FundsMethod";
+
+        /// <summary>بدنهٔ JSON درخواست فهرست صندوق‌ها وقتی متد POST است (پیش‌فرض <c>{}</c>).</summary>
+        public const string FundsBodyKey = "FundsBody";
+
         private readonly HttpClient _http;
         private readonly IProviderSettings _settings;
 
@@ -52,7 +58,10 @@ namespace MarketAnalyzer.MarketIntelligence.Providers
             var url = await _settings.GetAsync(ProviderKey, FundsUrlKey, ct)
                       ?? throw new InvalidOperationException($"Setting '{FundsUrlKey}' of provider '{ProviderKey}' is not configured.");
 
-            using var doc = JsonDocument.Parse(await GetStringAsync(url, referer: "https://fipiran.ir/", ct, postOnMethodNotAllowed: true));
+            var method = (await _settings.GetAsync(ProviderKey, FundsMethodKey, ct))?.Trim().ToUpperInvariant() == "POST" ? HttpMethod.Post : HttpMethod.Get;
+            var body = await _settings.GetAsync(ProviderKey, FundsBodyKey, ct) ?? "{}";
+
+            using var doc = JsonDocument.Parse(await GetStringAsync(url, referer: "https://fipiran.ir/", ct, method, body, postOnMethodNotAllowed: true));
             var root = doc.RootElement;
 
             if (root.ValueKind != JsonValueKind.Object || !root.TryGetProperty("items", out var items) || items.ValueKind != JsonValueKind.Array)
@@ -78,7 +87,7 @@ namespace MarketAnalyzer.MarketIntelligence.Providers
         /// فهرست خالی برمی‌گرداند، پس هیچ‌وقت معلوم نبود. راه‌حل: با <paramref name="postOnMethodNotAllowed"/> بعد از 405 یک‌بار با POST و بدنهٔ
         /// خالی JSON تلاش می‌شود. اگر این هم کار نکرد، درخواست واقعی سایت را از Network مرورگر بردار و بفرست.
         /// </summary>
-        private async Task<string> GetStringAsync(string url, string referer, CancellationToken ct, bool postOnMethodNotAllowed = false)
+        private async Task<string> GetStringAsync(string url, string referer, CancellationToken ct, HttpMethod? firstMethod = null, string postBody = "{}", bool postOnMethodNotAllowed = false)
         {
             var userAgent = await _settings.GetAsync(ProviderKey, UserAgentKey, ct);
 
@@ -91,22 +100,29 @@ namespace MarketAnalyzer.MarketIntelligence.Providers
                 if (!string.IsNullOrWhiteSpace(userAgent))
                     request.Headers.UserAgent.ParseAdd(userAgent);
                 if (method == HttpMethod.Post)
-                    request.Content = new StringContent("{}", System.Text.Encoding.UTF8, "application/json");
+                    request.Content = new StringContent(postBody, System.Text.Encoding.UTF8, "application/json");
                 return request;
             }
 
-            using var get = Build(HttpMethod.Get);
+            using var get = Build(firstMethod ?? HttpMethod.Get);
             var response = await _http.SendAsync(get, ct);
             try
             {
-                if (response.StatusCode == System.Net.HttpStatusCode.MethodNotAllowed && postOnMethodNotAllowed)
+                if (response.StatusCode == System.Net.HttpStatusCode.MethodNotAllowed && postOnMethodNotAllowed && (firstMethod ?? HttpMethod.Get) == HttpMethod.Get)
                 {
                     response.Dispose();
                     using var post = Build(HttpMethod.Post);
                     response = await _http.SendAsync(post, ct);
                 }
 
-                response.EnsureSuccessStatusCode();
+                if (!response.IsSuccessStatusCode)
+                {
+                    // مشکل: پیام استاندارد فقط «405» می‌گفت و علت دیده نمی‌شد. شروع بدنهٔ پاسخ (سرور/WAF معمولاً دلیل را می‌نویسد) را هم می‌آوریم.
+                    var text = await response.Content.ReadAsStringAsync(ct);
+                    var snippet = text.Length > 200 ? text[..200] : text;
+                    throw new HttpRequestException($"HTTP {(int)response.StatusCode} {response.ReasonPhrase} from {url} (method {response.RequestMessage?.Method}). Body: {snippet}");
+                }
+
                 return await response.Content.ReadAsStringAsync(ct);
             }
             finally

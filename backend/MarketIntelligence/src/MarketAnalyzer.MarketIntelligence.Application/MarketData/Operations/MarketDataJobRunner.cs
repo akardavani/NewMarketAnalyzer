@@ -162,14 +162,17 @@ namespace MarketAnalyzer.MarketIntelligence.Application.MarketData.Operations
                         var ssp = symbolScope.ServiceProvider;
                         // مشکل: Providerها فقط با IMarketDataProvider (و نوع خودشان) در DI ثبت می‌شوند، نه با IHistoricalCandleProvider؛
                         // GetServices<IHistoricalCandleProvider>() خالی برمی‌گشت و First استثنا می‌داد. باید از فهرست عمومی فیلتر کرد.
-                        var symbolProvider = ssp.GetServices<IMarketDataProvider>()
-                            .OfType<IHistoricalCandleProvider>()
-                            .First(p => p.Descriptor.ProviderKey == providerKey && p.Descriptor.MarketKey == market.Key);
-
                         SymbolIngestionResult r;
                         try
                         {
-                            r = await ssp.GetRequiredService<IHistoricalCandleIngestor>().IngestAsync(symbolProvider, symbol, token);
+                            // نبودن Provider فقط شکست همین نماد است (First استثنا می‌داد و کل اجرای بازار می‌ترکید).
+                            var symbolProvider = ssp.GetServices<IMarketDataProvider>()
+                                .OfType<IHistoricalCandleProvider>()
+                                .FirstOrDefault(p => p.Descriptor.ProviderKey == providerKey && p.Descriptor.MarketKey == market.Key);
+
+                            r = symbolProvider is null
+                                ? SymbolIngestionResult.Failed(symbol.SymbolKey, $"Provider '{providerKey}' is not registered for market '{market.Key}'.")
+                                : await ssp.GetRequiredService<IHistoricalCandleIngestor>().IngestAsync(symbolProvider, symbol, token);
                         }
                         catch (Exception ex) when (ex is not OperationCanceledException)
                         {

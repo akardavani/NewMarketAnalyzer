@@ -26,6 +26,8 @@ namespace MarketAnalyzer.MarketIntelligence.Providers
         {
             [FipiranClient.FundsUrlKey] = _legacy?.InvestmentFundInfo?.FundsUrl ?? string.Empty,
             [FipiranClient.FundChartUrlKey] = _legacy?.InvestmentFundInfo?.FundChartUrl ?? string.Empty,
+            [FipiranClient.FundsMethodKey] = "GET",
+            [FipiranClient.FundsBodyKey] = "{}",
             [FipiranClient.RequestDelayMsKey] = "1000",
             [FipiranClient.NavHistoryDaysKey] = "0",
             [FipiranClient.UserAgentKey] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36"
