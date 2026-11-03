@@ -130,10 +130,6 @@ builder.Services.AddMarketDataIngestion();
 builder.Services.AddMarketDataProviders(builder.Configuration);
 builder.Services.AddMarketDataOperations(builder.Configuration);
 
-builder.Services.AddMarketDataStores();      // Storeها (فاز ۲): IMarketDefinitionStore و بقیه
-builder.Services.AddMarketDataIngestion();   // هستهٔ ingestion + IProviderSettings + Resolver (فاز ۳ و ۴-الف)
-builder.Services.AddMarketDataProviders(builder.Configuration);
-
 //builder.Services.AddSejamClient(builder.Configuration);
 builder.Services.AddFundInfrastructure(builder.Configuration, true);
 
