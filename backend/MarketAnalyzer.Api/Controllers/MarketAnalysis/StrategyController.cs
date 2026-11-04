@@ -7,6 +7,7 @@ using MarketAnalyzer.MarketIntelligence.Application.Strategies.BottomReversal;
 using MarketAnalyzer.MarketIntelligence.Application.Strategies.MultiIndicatorDivergence;
 using MarketAnalyzer.MarketIntelligence.Application.Strategies.YtmFuture;
 using MarketAnalyzer.MarketIntelligence.Application.Strategies.IranEquityMain;
+using MarketAnalyzer.MarketIntelligence.Application.Strategies.RsiDivergence;
 using MarketAnalyzer.MarketIntelligence.Infrastructure;
 using MarketAnalyzer.MarketData.Application.Reading;
 using System.Linq;
@@ -30,6 +31,7 @@ namespace MarketAnalyzer.Api.Controllers.MarketAnalysis
         private readonly MultiIndicatorDivergenceHandler _multiIndicatorDivergenceHandler;
         private readonly YtmFutureHandler _ytmFutureHandler;
         private readonly IranEquityMainHandler _iranEquityMainHandler;
+        private readonly RsiDivergenceHandler _rsiDivergenceHandler;
 
         public StrategyController(AnalysisStrategyRegistry registry, 
             IAnalysisEngine engine, 
@@ -39,7 +41,8 @@ namespace MarketAnalyzer.Api.Controllers.MarketAnalysis
             BottomReversalHandler bottomReversalHandler, 
             MultiIndicatorDivergenceHandler multiIndicatorDivergenceHandler, 
             YtmFutureHandler ytmFutureHandler, 
-            IranEquityMainHandler iranEquityMainHandler)
+            IranEquityMainHandler iranEquityMainHandler,
+            RsiDivergenceHandler rsiDivergenceHandler)
         {
             _symbolQuery = symbolQuery;
             _registry = registry;
@@ -50,6 +53,7 @@ namespace MarketAnalyzer.Api.Controllers.MarketAnalysis
             _multiIndicatorDivergenceHandler = multiIndicatorDivergenceHandler;
             _ytmFutureHandler = ytmFutureHandler;
             _iranEquityMainHandler = iranEquityMainHandler;
+            _rsiDivergenceHandler = rsiDivergenceHandler;
         }
 
         [HttpGet]
@@ -126,6 +130,15 @@ namespace MarketAnalyzer.Api.Controllers.MarketAnalysis
         public async Task<IActionResult> RunRatioCandles([FromBody] RunRatioCandlesQuery request, CancellationToken cancellationToken)
         {
             var result = await _ratioCandlesHandler.HandleAsync(request, cancellationToken);
+            return Ok(ApiResult.From(result));
+        }
+
+        [HttpPost]
+        [RouteInfo(DisplayName = "اجرای اسکن واگرایی مثبت RSI", AuthorizedRoles = [ConstStrings.TrusteeRoleName])]
+        [ProducesResponseType(typeof(ApiResult<RunRsiDivergenceResult>), StatusCodes.Status200OK)]
+        public async Task<IActionResult> RunRsiDivergence([FromBody] RunRsiDivergenceQuery request, CancellationToken cancellationToken)
+        {
+            var result = await _rsiDivergenceHandler.HandleAsync(request, cancellationToken);
             return Ok(ApiResult.From(result));
         }
 

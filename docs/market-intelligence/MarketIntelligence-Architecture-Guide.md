@@ -39,9 +39,15 @@ All four MarketData projects are under `backend/MarketData/src`. Their direct pr
 
 ## Historical candle read path
 
+### TSE historical stock sources
+
+TSE daily stock history has two provider paths. `NahayatnegarStockCandleProvider` requests the TradingView UDF chart endpoint with `adjustmentType=3` and marks its data `AlreadyAdjusted`. `TsetmcStockCandleProvider` requests TSETMC Export-txt using `MarketSettings(provider:tsetmc, StockHistoryUrl)`, maps the external `InsCode`, reverses the newest-first response, and applies the performance-adjustment ratio used by the supplied `pytse_client` path before returning daily candles. It also marks those candles `AlreadyAdjusted`, so ingestion will not apply corporate actions a second time. The provider key is `tsetmc`, shared with the TSETMC catalog/current-data providers; it is an alternative selected through the normal provider-switch flow and is not selected automatically. Its current default URL uses the legacy HTTP endpoint, so prefer a working HTTPS endpoint in settings if TSETMC supports it in the target environment.
+
+Both paths return adjusted OHLCV but use separate endpoints and adjustment implementations. A live comparison for `IRO1ABAD0001` and `IRO1FOLD0001` found close recent prices but material differences in older history; see [the dated comparison report](MarketData-Provider-Comparison-2026-11-04.md). Keep Nahayatnegar as the continuity default and TSETMC as an explicit alternative until a wider sample and adjustment-event review is complete. `RsiDivergence` reads stored candles and results can vary with their provider history.
+
 Collection providers return batches through contracts in `MarketData.Application.Providers`. `HistoricalCandleIngestor` validates results, applies adjustment/corporate-action logic, and persists daily rows through `IHistoricalCandleStore`. Providers without daily candles are rejected with a clear ingestion failure. The EF implementation is in `MarketData.Persistence/Stores/EfHistoricalCandleStore.cs`.
 
-The reader maps weekly/monthly requests to persisted daily rows, reads enough of each overlapping calendar period, applies corporate-action adjustments to daily values, and aggregates the adjusted rows at request time. Derived rows are not persisted. Verify parity for representative periods before dropping old weekly/monthly rows. Lower timeframes are intentionally unsupported pending the user's decision. The current real-estate market descriptor is monthly-only and that market remains excluded by the user's earlier instruction; revisit its source only if that market is brought back into scope.
+The reader maps weekly/monthly requests to persisted daily rows, reads enough of each overlapping calendar period, applies corporate-action adjustments to daily values, and aggregates the adjusted rows at request time. Derived rows are not persisted. Verify parity for representative periods before dropping old weekly/monthly rows. Lower timeframes are intentionally unsupported pending the user's decision. The real-estate market descriptor is monthly-only. The market remains registered, but its scheduled catalog sync and candle ingestion are temporarily disabled in Development due to Kilid errors; see the migration progress log before resuming it.
 
 `SuccessEmpty` is distinct from `Failed`. A seven-day `NoDataUntil` marker is only persisted for a valid empty full-history response when that symbol has no stored candles. Empty incremental responses and responses with no closed candles do not suppress further updates to an existing series. Failed or partial provider responses never trigger history deletion.
 
@@ -87,7 +93,7 @@ The requested database-maintenance page/action is not implemented yet. Before ad
 
 ## Strategy organization
 
-All six current strategy business flows now live in typed handlers with typed queries/results and strategy-specific API actions. The UI has one page and API call per strategy, with reusable controls under `shared/`. Thin `IAnalysisStrategy` adapters and the generic `AnalysisEngine` route remain as a compatibility path; check external consumers before removing them.
+All seven current strategy business flows now live in typed handlers with typed queries/results and strategy-specific API actions. The UI has one page and API call per strategy, with reusable controls under `shared/`. Thin `IAnalysisStrategy` adapters and the generic `AnalysisEngine` route remain as a compatibility path; check external consumers before removing them. `RsiDivergence` output parity and a wider live data-source comparison remain pending as documented in the strategy guide.
 
 For a new strategy, use its own typed request/handler/result, thin API action, dedicated UI page, and typed UI API method. Keep controllers thin and shared components generic. The detailed checklist, inventory, and add-strategy recipe are in [MarketIntelligence-Strategies.md](MarketIntelligence-Strategies.md).
 
@@ -132,7 +138,7 @@ After a significant architecture or behavior change, update this guide, the stra
 ## Remaining work
 
 1. Recheck candle and symbol read parity against Development, especially weekly/monthly boundaries, TSE calendars, and corporate-action adjustment; then inventory stored non-daily rows before final removal.
-2. Review API/UI behavior and output parity for all six typed strategy handlers. The generic route/adapters remain only as a compatibility path until external consumers are checked. Keep one UI page per strategy.
+2. Review API/UI behavior and output parity for all seven typed strategy handlers, including `RsiDivergence`. The generic route/adapters remain only as a compatibility path until external consumers are checked. Keep one UI page per strategy.
 3. Verify the settings page and authenticated JSON ZIP workflow in the running application, including real provider results and snapshot counts.
 4. Inventory table sizes and implement safe, previewed database maintenance in settings without deleting business data.
 5. Replace legacy URL-file defaults with a complete settings-backed path; keep credential-bearing values out of exported files.

@@ -11,6 +11,7 @@ export interface RunBottomReversalRequest { inputFilePath: string; startDate: st
 export interface RunMultiIndicatorDivergenceRequest { inputFilePath: string; }
 export interface RunYtmFutureRequest { symbol: string; calculates: string; startDate: string; endDate: string; }
 export interface RunIranEquityMainRequest { inputFilePath: string; }
+export interface RunRsiDivergenceRequest { includeSuspects: boolean; includeBacktest: boolean; }
 
 /** Typed calls for each strategy; the generic method remains for compatibility. */
 @Injectable({ providedIn: 'root' })
@@ -54,6 +55,10 @@ export class StrategyApiService {
 
   runIranEquityMain(request: RunIranEquityMainRequest): Observable<any> {
     return this.http.post<ApiResult<any>>(apiUrl('Strategy/RunIranEquityMain'), request).pipe(map(response => this.unwrap(response)));
+  }
+
+  runRsiDivergence(request: RunRsiDivergenceRequest): Observable<any> {
+    return this.http.post<ApiResult<any>>(apiUrl('Strategy/RunRsiDivergence'), request).pipe(map(response => this.unwrap(response)));
   }
 
   searchSymbols(text: string): Observable<SymbolItem[]> {

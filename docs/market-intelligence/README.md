@@ -16,12 +16,19 @@ Read this file first whenever work is requested in MarketData or MarketIntellige
 3. [Strategy development guide](MarketIntelligence-Strategies.md) — current strategy layout and the target backend-handler/UI pattern for adding a strategy.
 4. [Market data run report](MarketData-Run-Report-2026-11-03.md) — historical provider run results and concrete failures observed.
 
-The migration progress document is the live task ledger. Preserve its completed evidence and update its ordered remaining work after each meaningful change. The architecture and strategy guides describe the settled implementation and intended extension pattern. Keep the run report as historical evidence; add a dated report for later runs instead of silently rewriting old observations.
+The migration progress document is the live task ledger. Preserve its completed evidence and update its ordered remaining work after each meaningful change. The architecture and strategy guides describe the settled implementation and intended extension pattern. Keep the run report as historical evidence; add a dated report for later runs instead of silently rewriting old observations. The new TSE source comparison is a separate dated report so its live measurements remain auditable.
 
 ## Current direction and decisions
 
+The dated live Nahayatnegar/TSETMC comparison is recorded in [MarketData-Provider-Comparison-2026-11-04.md](MarketData-Provider-Comparison-2026-11-04.md). It covers two symbols, found significant older-history differences, and recommends keeping Nahayatnegar as the default while TSETMC remains an explicit option pending broader validation.
+
+Kilid (`real-estate`) scheduled catalog sync and candle ingestion are temporarily disabled in the Development database due to provider errors. See the migration progress log to resume those two settings later.
+
 - Persist **daily candles only**. Build weekly and monthly candles from daily data when requested. Do not decide or enable lower timeframes until the user does.
 - Continue storing the existing data during code migration. Inventory and count non-daily rows first; remove those rows only through the reviewed final database cleanup after daily-derived read parity is confirmed.
+- TSE historical candles can be collected from Nahayatnegar (already-adjusted chart candles) or TSETMC (Export-txt history with the `pytse_client` performance-adjustment calculation). TSETMC is an alternative under the existing `tsetmc` provider key. Do not switch the active TSE provider or claim numeric parity until representative series from both sources have been fetched and compared.
+- Starting the API does not immediately ingest TSE candles: the daily TSE candle job is scheduled for 20:00 Tehran time. To fetch now, sign in as a sysadmin, open Security & Access → Market Data Settings, expand Tehran Stock Exchange, and run **Sync symbol catalog** (job 1), then **Ingest historical candles** (job 2). Check the result panel for failures. Avoid the global catalog-refresh ZIP action when Kilid should remain quiet; that action manually calls catalog sync for every market and does not honor the scheduler's disabled flag.
+- `RsiDivergence` is implemented as the seventh typed strategy, but remains provisional pending live source comparison and output parity against the supplied Python script. See the immediate checklist in `MarketIntelligence-Migration-Progress.md`.
 - Move each strategy's orchestration and business rules into its own backend handler. Give each strategy its own UI page/component and API request/response contract where appropriate. Shared UI components remain reusable presentation controls, not a place for strategy-specific business rules.
 - Use the shared admin UI theme and card utilities (`.fd-page`, `.fd-card`, `.fd-card-header`) for new pages. Theme tokens and shell navigation are documented in the architecture guide; do not add per-page palette or dark/light controls.
 - Add a database maintenance section to MarketData settings. It must show its scope and preview before execution, preserve business data, and target only approved retention/maintenance data such as expired operational logs. Candle deletion is a separate, explicit operation.
@@ -35,8 +42,9 @@ The migration progress document is the live task ledger. Preserve its completed 
 2. Identify whether the request belongs to collection (MarketData), analysis (MarketIntelligence), or shared Common functionality.
 3. For a new market/provider, follow the provider and settings ownership described in the architecture guide; do not add market-specific collection code to analysis handlers.
 4. For a new strategy, follow `MarketIntelligence-Strategies.md`: backend handler, API contract/endpoint, dedicated UI page, navigation, and documentation.
-5. Update the matching guide and progress ledger with what changed, evidence, remaining work, and any real blocker.
-6. Preserve per-symbol/per-market failure continuation. Report actual keys and errors, and continue independent work.
+5. For the `RsiDivergence` strategy, compare representative TSETMC and Nahayatnegar daily candle series and check backend output against the supplied Python screener before claiming parity.
+6. Update the matching guide and progress ledger with what changed, evidence, remaining work, and any real blocker.
+7. Preserve per-symbol/per-market failure continuation. Report actual keys and errors, and continue independent work.
 
 ## How to give an AI a change request
 
@@ -51,6 +59,8 @@ Workspace edits, builds, and read-only inspections are authorized. Do not ask fo
 ## Documentation map
 
 All MarketData / MarketIntelligence working documents live under `docs/market-intelligence/`:
+
+The dated live TSE provider comparison is [MarketData-Provider-Comparison-2026-11-04.md](MarketData-Provider-Comparison-2026-11-04.md). Keep future provider measurements in similarly dated reports.
 
 - `README.md` — this index and contributor workflow.
 - `MarketIntelligence-Migration-Progress.md` — live status, evidence, ordered remaining tasks, blockers.

@@ -27,7 +27,8 @@ namespace MarketAnalyzer.MarketData.Providers
             TimeZoneId = "Asia/Tehran",
             // فعلاً فقط روزانه؛ هفتگی و ماهانه از روی روزانه ساخته می‌شوند. زیرروزانه بعداً با افزودن مقدار به این فهرست.
             NativeTimeframes = new[] { Timeframe.Daily },
-            Adjustment = AdjustmentMode.AlreadyAdjusted
+            Adjustment = AdjustmentMode.AlreadyAdjusted,
+            IsDefault = true
         };
 
         /// <inheritdoc />

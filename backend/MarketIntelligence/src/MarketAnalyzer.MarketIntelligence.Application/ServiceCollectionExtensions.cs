@@ -24,6 +24,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
             services.AddScoped<Strategies.MultiIndicatorDivergence.MultiIndicatorDivergenceHandler>();
             services.AddScoped<Strategies.YtmFuture.YtmFutureHandler>();
             services.AddScoped<Strategies.IranEquityMain.IranEquityMainHandler>();
+            services.AddScoped<Strategies.RsiDivergence.RsiDivergenceHandler>();
 
             services.AddScoped<ICalculateImeContractIndex, CalculateImeContractIndex>();
 

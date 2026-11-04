@@ -2,6 +2,28 @@
 
 Last updated: 2026-11-04
 
+## Temporary operator change: Kilid paused
+
+- On 2026-11-04, disabled `Scheduler:SyncCatalog:Enabled` and `Scheduler:IngestCandles:Enabled` in scope `market:real-estate` in the Development `MarketAnalyzer` database after the user reported Kilid errors.
+- This pauses scheduled Kilid catalog/candle requests while preserving the market record, provider registration, symbols, and stored data. No rows were deleted. The scheduler reloads settings on its 30-second cache interval; an already-running request may finish.
+- To resume later, set those two settings back to `true` in Market Data settings. This is a temporary runtime setting, not a source-code removal.
+
+## Current run status: TSE candles not yet due
+
+- On 2026-11-04 at 15:58 Tehran time, the API was listening on its Development port, but the `MarketAnalyzer` database still had zero TSE stock candles. The configured TSE candle schedule is daily at 20:00 Tehran time, so its automatic run had not yet become due.
+- To collect immediately, use the sysadmin Market Data Settings page and run `SyncCatalog` followed by `IngestCandles` for `tse`. The result panel reports processed symbols and errors. Do not use the all-market catalog ZIP action while Kilid is paused, because that manual endpoint runs catalog sync across all markets regardless of scheduler flags.
+
+## Current change: RSI positive-divergence screener
+
+- Sync completed before this work: commit `c75a0e6` was pushed to `origin/feature/market-intelligence-redesign`; the branch was synchronized before adding new changes.
+- Added the alternative TSETMC stock-history implementation in `MarketData.Providers/Tsetmc/TsetmcStockCandleProvider.cs`. It uses the configurable `tsetmc:StockHistoryUrl`, reads the TSETMC export history by `InsCode`, applies the `pytse_client` performance-adjustment calculation, and returns adjusted daily candles. It is registered with the existing TSETMC provider set and does not automatically replace the active provider.
+- Added the typed `RsiDivergence` query/handler/result, API action and compatibility adapter, plus a dedicated Angular page with signal, suspect, and backtest tables. The handler uses stored daily adjusted candles and derives weekly bars at read time; per-symbol calculation exceptions are included in the response while scanning continues.
+- Verification: `dotnet build backend/MarketAnalyzer.Api/MarketAnalyzer.Api.csproj --no-restore -v:q` passed with 0 errors and 171 warnings. `npm run build` passed; Angular reported existing initial-bundle/style budget and CommonJS warnings. No tests were run.
+- Not verified yet: invoking the TSETMC provider through the application settings/jobs path, active-provider switching, API/UI execution against Development, and output parity against the Python report. Do not claim these as done.
+- Live comparison now completed for `IRO1ABAD0001` and `IRO1FOLD0001`; both endpoints returned data. Recent OHLC was close, while 2005–2016 differences were large. Details and method are in [MarketData-Provider-Comparison-2026-11-04.md](MarketData-Provider-Comparison-2026-11-04.md). This does not establish full-universe parity.
+- Development currently has no stored TSE stock candles (311,648 candle rows belong to TSE-index, macro, and IME), so strategy execution against current stored TSE history is not yet meaningful. The API was not running on the configured development port during this check.
+- Known strategy output gaps: the supplied Python also creates manual-review tables, per-signal charts, HTML/CSV downloads, and richer staleness/failure summaries. The current UI shows structured signals, developing cases, backtest summary, and missing/stale/illiquid counts; parity work remains.
+
 This document is the current migration checklist. Start with [README.md](README.md), then use the [architecture guide](MarketIntelligence-Architecture-Guide.md) and [strategy guide](MarketIntelligence-Strategies.md). Keep this ledger and the relevant guide updated as implementation changes.
 
 ## Completed and verified
@@ -47,7 +69,7 @@ This document is the current migration checklist. Start with [README.md](README.
 - Applied Development startup seeds and verified representative seeded data: 1 membership user, 28 CMS menus, 68 MarketData settings, and 1,045 unified symbols.
 - Ran `docs/market-intelligence/transfer-tools-data.sql` from `db_MarketAnalyzer_GM` to `MarketAnalyzer`. All 13 Tools tables were empty before the copy and had matching source/target counts afterward (102 rows total). The script remains preview-only by default. The successful execution used `sqlcmd -I` because SQL Server requires `QUOTED_IDENTIFIER` for constraint validation.
 - Verified the final target has no `marketintelligence` schema, both migrations are applied, `dotnet ef migrations has-pending-model-changes` reports no model changes, and all 13 Tools source/target counts still match. The API build succeeded with 0 errors and 34 existing warnings, including decimal precision warnings.
-- Migrated all six active strategies (`IranEquityMain`, `BottomReversal`, `IranQueue`, `MultiIndicatorDivergence`, `RatioCandles`, and `YtmFuture`) to typed queries/handlers, dedicated API actions, and dedicated Angular API calls. Generic `IAnalysisStrategy` adapters still delegate to the handlers to preserve the older generic endpoint. Backend and Angular builds pass; runtime parity is unverified.
+- Migrated the original six active strategies (`IranEquityMain`, `BottomReversal`, `IranQueue`, `MultiIndicatorDivergence`, `RatioCandles`, and `YtmFuture`) to typed queries/handlers, dedicated API actions, and dedicated Angular API calls. `RsiDivergence` is now the seventh typed strategy. Generic `IAnalysisStrategy` adapters still delegate to handlers to preserve the older generic endpoint. Backend and Angular builds pass; runtime parity is unverified.
 - Add a safe database-maintenance feature to MarketData settings after live schema/retention inventory. It must preview the exact eligible operational data, preserve business data, and keep candle retention separate and explicit.
 - Added an analysis-owned TSE metadata DTO for the new `MetadataJson` shape, so active strategies no longer deserialize new MarketData rows into the legacy Collector metadata class.
 - Corrected market settings overview to mask secret-marked values, matching provider settings behavior; attempted secret writes remain rejected and credentials stay in environment/User Secrets.
@@ -69,9 +91,18 @@ This document is the current migration checklist. Start with [README.md](README.
 
 ## Ordered remaining work
 
-1. **Next:** run the API normally against Development and verify settings, menu placement, manual jobs, catalog refresh ZIP contents/report, and persisted daily candles. Seed and migration state are verified; authenticated UI/provider behavior is not.
+### Immediate work for RsiDivergence
+
+1. Expand the live source comparison to more symbols and corporate-action histories; inspect the large pre-2017 differences before any global provider switch. The current recommendation is to retain Nahayatnegar as default and keep TSETMC as an alternative that more closely follows the Python script's source path.
+2. Start the API and exercise the new TSETMC stock provider through the existing settings/jobs path. Confirm the setting is seeded, response parsing, daily persistence, adjustment mode, and retry behavior. Raw endpoint calls succeeded, but the provider job/API path is not yet verified.
+3. Ingest TSE stock candles for a controlled sample, then run `RsiDivergence` against a fixed local candle series and compare signals, confirmations, suspects, and backtest outputs with the Python script. Then complete or explicitly defer the script's manual-review tables, per-signal charts, and HTML/CSV exports.
+4. Run the authenticated API/UI against Development and confirm the navigation entry, result rendering, and per-symbol error continuation.
+
+After those steps, continue with the migration and final-cleanup items below.
+
+1. **After RSI parity:** run the API normally against Development and verify settings, menu placement, manual jobs, catalog refresh ZIP contents/report, and persisted daily candles. Seed and migration state are verified; authenticated UI/provider behavior is not.
 2. Recheck adjusted daily/weekly/monthly and strategy result parity. Inventory any existing non-daily candle rows, then remove them only after parity and counts are confirmed. The monthly-only real-estate provider remains excluded per the user's earlier instruction.
-3. Review API/UI behavior and output parity for the six typed strategy handlers. Retire the generic engine/adapters only after checking external consumers.
+3. Review API/UI behavior and output parity for all seven typed strategy handlers. Retire the generic engine/adapters only after checking external consumers.
 4. Verify the settings page and authenticated catalog ZIP with a sysadmin session, including real provider results and snapshot counts. The current Chrome extension is disconnected, so browser verification has not run.
 5. Implement safe database maintenance after live table-size inventory identifies disposable operational data. Show exact scope and preview; preserve business data. Current order-book rows are replaced on refresh and do not accumulate. No database-backed log table or retention period has been confirmed. Keep candle deletion separate.
 6. Resolve the legacy `url_settings.json` lifecycle. The two credential-bearing copies remain outside the ZIP, and the report records this. An attempted export of current database setting values was rejected by automatic review because it could expose credentials/tokens; do not retry through another format without explicit approval.

@@ -25,5 +25,6 @@
         /// برگشت از کف
         /// </summary>
         public static string BottomReversal => "BottomReversal";
+        public static string RsiDivergence => "RsiDivergence";
     }    
 }

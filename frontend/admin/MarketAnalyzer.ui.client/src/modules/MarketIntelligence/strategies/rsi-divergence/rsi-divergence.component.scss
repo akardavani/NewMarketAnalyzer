@@ -1,0 +1,6 @@
+@use '../../shared/strategy-page';
+
+.options { display: flex; gap: 1.25rem; flex-wrap: wrap; margin: .75rem 0 1rem; }
+.options label { display: inline-flex; align-items: center; gap: .45rem; }
+.options input { width: auto; }
+.page p { color: var(--fd-text-2); margin: 0; }

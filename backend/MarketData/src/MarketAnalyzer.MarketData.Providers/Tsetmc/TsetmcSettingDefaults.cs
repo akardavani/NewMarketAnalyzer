@@ -20,6 +20,9 @@ namespace MarketAnalyzer.MarketData.Providers
         /// <summary>کلید الگوی آدرس تاریخچهٔ شاخص TSETMC؛ جایگزین @InsCode.</summary>
         public const string IndexHistoryUrlKey = "IndexHistoryUrl";
 
+        /// <summary>الگوی آدرس تاریخچهٔ روزانهٔ سهام TSETMC؛ جایگزین @InsCode می‌شود.</summary>
+        public const string StockHistoryUrlKey = "StockHistoryUrl";
+
         private readonly UrlSettings _legacy;
 
         /// <summary>سازنده.</summary>
@@ -41,6 +44,7 @@ namespace MarketAnalyzer.MarketData.Providers
             [ClientTypeHistoryUrlKey] = "https://cdn.tsetmc.com/api/ClientType/GetClientTypeHistory/@InsCode",
             [IndexHistoryUrlKey] = _legacy?.TseTmcSettings?.TseTmcIndexCandle
                 ?? "https://cdn.tsetmc.com/api/Index/GetIndexB2History/@InsCode",
+            [StockHistoryUrlKey] = "http://old.tsetmc.com/tsev2/data/Export-txt.aspx?t=i&a=1&b=0&i=@InsCode",
             [InvestorActivityDaysKey] = "60"
         };
     }

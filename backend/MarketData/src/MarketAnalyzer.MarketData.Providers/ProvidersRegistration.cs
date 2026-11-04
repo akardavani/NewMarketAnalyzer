@@ -37,6 +37,8 @@ namespace MarketAnalyzer.MarketData.Providers
             services.AddSingleton<IProviderSettingDefaults, TsetmcSettingDefaults>();
             services.AddScoped<TsetmcWebServiceClient>();
             services.AddScoped<TseSymbolDirectory>();
+            services.AddHttpClient<TsetmcStockCandleProvider>(client => client.Timeout = TimeSpan.FromSeconds(30));
+            AddProvider<TsetmcStockCandleProvider>(services);
             services.AddHttpClient<TsetmcClientTypeClient>(client => client.Timeout = TimeSpan.FromSeconds(30));
             AddProvider<TsetmcStockCatalogProvider>(services);
             AddProvider<TsetmcStockCurrentStateProvider>(services);

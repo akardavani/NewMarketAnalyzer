@@ -70,6 +70,15 @@
         "Icon": "",
         "RequiredRoute": "Strategy/GetAll",
         "IsActive": true
+      },
+      {
+        "Id": 107,
+        "Title": "ÙˆØ§Ú¯Ø±Ø§ÛŒÛŒ Ù…Ø«Ø¨Øª RSI",
+        "Path": "market-intelligence/rsi-divergence",
+        "DisplayOrder": 6,
+        "Icon": "",
+        "RequiredRoute": "Strategy/GetAll",
+        "IsActive": true
       }
     ]
   },

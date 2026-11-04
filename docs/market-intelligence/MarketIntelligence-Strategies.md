@@ -10,7 +10,7 @@ This is the strategy-specific companion to [README.md](README.md) and [MarketInt
 - The Angular feature is under `frontend/admin/MarketAnalyzer.ui.client/src/modules/MarketIntelligence/`. Each strategy has its own page folder and uses its own typed API call; shared controls remain under `shared/`.
 - Route registration is in `market-intelligence.routes.ts`.
 
-All six current strategies have been moved to the typed handler/API/UI pattern. The remaining strategy work is output parity and checking whether the old generic endpoint has external consumers before retiring it.
+All seven strategies use the typed handler/API/UI pattern. Output parity and checking whether the old generic endpoint has external consumers remain before retiring it.
 
 ## Target backend pattern
 
@@ -46,7 +46,17 @@ For a new strategy, add one typed request/handler/result, register the handler, 
 7. Update this guide with the strategy's key files, inputs, outputs, and any special data assumptions. Update the architecture or migration progress guide if ownership or project boundaries changed.
 8. Build the affected projects. Run tests only when requested by the user or required by the repository's explicit task instructions.
 
+## RsiDivergence strategy
+
+The implementation is based on `C:/Users/kardavani.POUYAANDISHAN/Downloads/screener (1).py`. Its backend entry point is `backend/MarketIntelligence/src/MarketAnalyzer.MarketIntelligence.Application/Strategies/RsiDivergence/`; the typed action is `Strategy/RunRsiDivergence`, and the Angular page is `frontend/admin/MarketAnalyzer.ui.client/src/modules/MarketIntelligence/strategies/rsi-divergence/`.
+
+It reads the active TSE equity universe and stored daily adjusted candles through MarketData contracts. Weekly bars are aggregated from daily data at request time. Defaults preserve the source script's RSI windows (21 daily, 12 weekly), pivot strengths (3 left/2 right), RSI level 30, gap limits, confirmation windows, recent-signal limits, minimum history, liquidity threshold, and backtest assumptions. The UI returns confirmed/pending signals, developing candidates, and a compact historical backtest summary.
+
+Parity is not yet complete. The Python script additionally produces manual-review tables, per-signal charts, HTML/CSV exports, failure/staleness diagnostics, and suspect cases for RSI between 30 and 35. Its `all_symbols()` universe may differ from the app's tracked active-equity catalog. TSETMC and Nahayatnegar series also require a live sample comparison. Update this section as those outputs are ported or intentionally omitted, and do not claim full parity until signals and representative backtest records match for the same candle series.
+
 ## Migration inventory
+
+Added strategy: `RsiDivergenceStrategy` (typed handler `Strategies/RsiDivergence/RsiDivergenceHandler`, API `Strategy/RunRsiDivergence`, UI `strategies/rsi-divergence/`).
 
 Strategy components currently registered through `IAnalysisStrategy` include:
 
@@ -65,6 +75,7 @@ Migration status:
 - **Migrated:** `MultiIndicatorDivergence` now uses `Strategies/MultiIndicatorDivergence/RunMultiIndicatorDivergenceQuery` and `MultiIndicatorDivergenceHandler`, API action `Strategy/RunMultiIndicatorDivergence`, and `StrategyApiService.runMultiIndicatorDivergence`. The old generic adapter delegates to the handler for compatibility. Runtime output parity has not been checked.
 - **Migrated:** `YtmFuture` now uses `Strategies/YtmFuture/RunYtmFutureQuery` and `YtmFutureHandler`, API action `Strategy/RunYtmFuture`, and `StrategyApiService.runYtmFuture`. The old generic adapter delegates to the handler for compatibility. Runtime output parity has not been checked.
 - **Migrated:** `IranEquityMain` now uses `Strategies/IranEquityMain/RunIranEquityMainQuery` and `IranEquityMainHandler`, API action `Strategy/RunIranEquityMain`, and `StrategyApiService.runIranEquityMain`. The old generic adapter delegates to the handler for compatibility. Runtime output parity has not been checked.
-- **Current status:** all six active UI strategies call typed, strategy-specific API actions. The generic API and thin adapters remain as a compatibility path pending an external-consumer check; the strategy business rules live in typed handlers.
+- **Migrated:** `RsiDivergence` now uses `Strategies/RsiDivergence/RunRsiDivergenceQuery` and `RsiDivergenceHandler`, API action `Strategy/RunRsiDivergence`, and `StrategyApiService.runRsiDivergence`. It has a dedicated page/route and a `Menu.json` entry. The generic adapter delegates to the typed handler for compatibility. Live provider and Python-output parity remain pending.
+- **Current status:** all seven active UI strategies call typed, strategy-specific API actions. The generic API and thin adapters remain as a compatibility path pending an external-consumer check; the strategy business rules live in typed handlers.
 
 When a new strategy is added, update this section with its handler class, API contract/route, UI files, and verification evidence.
