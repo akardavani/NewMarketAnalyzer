@@ -1,63 +1,76 @@
-<aside class="sb" [class.collapsed]="collapsed()" aria-label="منوی اصلی">
-  <a class="brand" routerLink="/" [attr.title]="brand.productName">
-    @if (brand.logoUrl) {
-    <img class="logo logo-img" [src]="brand.logoUrl" alt="" />
-    } @else {
-    <span class="logo" aria-hidden="true">{{ initial }}</span>
-    }
-    <span class="brand-t">
-      <b>{{ brand.productName }}</b>
-      @if (brand.companyName) {
-      <span>{{ brand.companyName }}</span>
-      }
-    </span>
-  </a>
+<aside #sidebarRoot class="sb" aria-label="منوی اصلی" [style.--submenu-top.px]="submenuTop()">
+  <div class="sidebar-top">
+    <div class="account-host">
+      <button type="button" class="account-button" (click)="toggleAccount()" [attr.aria-expanded]="accountOpen()" aria-label="حساب کاربری" title="حساب کاربری">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.4"/><path d="M5.5 20c.6-3.6 2.8-5.4 6.5-5.4s5.9 1.8 6.5 5.4"/></svg>
+      </button>
+    </div>
+  </div>
 
-  <button type="button" class="edge" (click)="shell.toggleSidebar()"
-          [attr.aria-label]="collapsed() ? 'باز کردن منو' : 'بستن منو'" [attr.aria-expanded]="!collapsed()">
-    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6" /></svg>
-  </button>
+  <div class="sidebar-actions" aria-label="میانبرها">
+    <button type="button" class="sidebar-mini-button" data-tip="اعلان‌ها" aria-label="اعلان‌ها" title="اعلان‌ها" (click)="openNotifications()">
+      <i class="pa pa-notification" aria-hidden="true"></i>
+      @if (alertCount() > 0) { <span class="mini-badge">{{ alertCount() > 99 ? '99+' : alertCount() }}</span> }
+    </button>
+    <fd-notes-panel class="sidebar-notes" (click)="closeFlyouts()" />
+  </div>
 
   <nav class="nav">
-    <ng-container *ngTemplateOutlet="list; context: { $implicit: tree(), depth: 0 }" />
+    <ng-container *ngTemplateOutlet="list; context: { $implicit: mainTree(), depth: 0 }" />
+    <button type="button" class="rail-item tools-root" data-tip="ابزارها" [class.has-active]="selectedSection() === 'tools'" (click)="openTools($event)">
+      <span class="ico"><i class="pa pa-settings" aria-hidden="true"></i></span>
+    </button>
+    <ng-container *ngTemplateOutlet="list; context: { $implicit: securityTree(), depth: 0 }" />
   </nav>
+
+  @if (accountOpen()) {
+    <section class="submenu-flyout account-flyout" role="menu" aria-label="حساب کاربری">
+      <strong>{{ userFullname() || 'حساب کاربری' }}</strong>
+      <button type="button" role="menuitem" (click)="changePassword()">تغییر رمز عبور</button>
+      <a role="menuitem" routerLink="/login-history" (click)="closeFlyouts()">تاریخچه ورود</a>
+      <button type="button" role="menuitem" (click)="signOut()">خروج از حساب</button>
+    </section>
+  }
+
+  @if (selectedSectionNode(); as section) {
+    <section class="submenu-flyout" aria-label="زیرمنو">
+      <div class="flyout-content"><ng-container *ngTemplateOutlet="list; context: { $implicit: section.children, depth: 1 }" /></div>
+    </section>
+  } @else if (selectedSection() === 'tools') {
+    <section class="submenu-flyout tools-flyout" aria-label="ابزارها">
+      <div class="flyout-content tool-list">
+        @if (quickAction().path) { <a class="item tool-action" [routerLink]="quickAction().path"><span class="l">{{ quickAction().label }}</span></a> }
+        <button type="button" class="item tool-action" (click)="searchRequested.emit()"><span class="l">جستجو</span></button>
+        <fd-publish-modal /><fd-resources-modal /><fd-bookmarks-modal /><fd-passwords-modal />
+      </div>
+    </section>
+  }
 </aside>
 
 <ng-template #list let-nodes let-depth="depth">
   @for (n of nodes; track n.key) {
-  @if (n.children.length) {
-  @if (depth === 0) {
-  <!-- عنوان منوی اصلی = بخش آکاردئونی -->
-  <section class="sec" [class.is-closed]="!isOpen(n)" [class.has-active]="hasActive(n)">
-    <button type="button" class="sec-h" [attr.data-tip]="n.label" [attr.aria-expanded]="isOpen(n)" (click)="toggle(n)">
-      <span class="ico"><i [class]="iconFor(n)"></i></span>
-      <span class="t">{{ n.label }}</span>
-      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6" /></svg>
-    </button>
-    <div class="sec-body"><div>
-      <ng-container *ngTemplateOutlet="list; context: { $implicit: n.children, depth: depth + 1 }" />
-    </div></div>
-  </section>
-  } @else {
-  <!-- گروه تو‌در‌تو (عمق ≥ ۲) -->
-  <div class="grp" [class.is-closed]="!isOpen(n)" [class.has-active]="hasActive(n)">
-    <button type="button" class="item sub" [attr.data-tip]="n.label" [attr.aria-expanded]="isOpen(n)" (click)="toggle(n)">
-      <span class="l">{{ n.label }}</span>
-      <svg class="chev" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6" /></svg>
-    </button>
-    <div class="sec-body"><div class="nested">
-      <ng-container *ngTemplateOutlet="list; context: { $implicit: n.children, depth: depth + 1 }" />
-    </div></div>
-  </div>
-  }
-  } @else if (n.url) {
-  <a class="item" [class.sub]="depth > 0" [routerLink]="n.url" [class.on]="isActive(n)" [attr.data-tip]="n.label"
-     [attr.aria-current]="isActive(n) ? 'page' : null">
-    @if (depth === 0) {
-    <span class="ico"><i [class]="iconFor(n)"></i></span>
+    @if (n.children.length) {
+      @if (depth === 0) {
+        <button type="button" class="rail-item" [class.has-active]="hasActive(n)" [attr.data-tip]="n.label" (click)="openSection(n, $event)">
+          <span class="ico"><i [class]="iconFor(n)"></i></span>
+        </button>
+      } @else {
+        <div class="grp" [class.is-closed]="!isOpen(n)" [class.has-active]="hasActive(n)">
+          <button type="button" class="item sub" [attr.aria-expanded]="isOpen(n)" (click)="toggle(n)">
+            <span class="l">{{ n.label }}</span>
+            <svg class="chev" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6" /></svg>
+          </button>
+          <div class="sec-body"><div class="nested"><ng-container *ngTemplateOutlet="list; context: { $implicit: n.children, depth: depth + 1 }" /></div></div>
+        </div>
+      }
+    } @else if (n.url) {
+      @if (depth === 0) {
+        <a class="rail-item" [routerLink]="n.url" [class.on]="isActive(n)" [attr.data-tip]="n.label" (click)="closeFlyouts()">
+          <span class="ico"><i [class]="iconFor(n)"></i></span>
+        </a>
+      } @else {
+        <a class="item sub" [routerLink]="n.url" [class.on]="isActive(n)" (click)="closeFlyouts()"><span class="l">{{ n.label }}</span></a>
+      }
     }
-    <span class="l">{{ n.label }}</span>
-  </a>
-  }
   }
 </ng-template>

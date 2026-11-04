@@ -1,4 +1,5 @@
-﻿using MarketAnalyzer.MarketIntelligence.Domain;
+using MarketAnalyzer.MarketData.Domain;
+using MarketAnalyzer.MarketIntelligence.Domain;
 
 namespace MarketAnalyzer.MarketIntelligence.Application
 {
@@ -16,7 +17,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// نکته:
         /// RSI پایین به‌تنهایی سیگنال خرید نیست؛ باید کنار حمایت، حجم و کندل برگشتی بررسی شود.
         /// </summary>
-        public static decimal RSI(IReadOnlyList<MarketCandle> candles, int period = 14)
+        public static decimal RSI(IReadOnlyList<AnalysisCandle> candles, int period = 14)
         {
             if (period <= 0)
                 return 0;
@@ -76,7 +77,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// اگر Typical Price امروز بیشتر از دیروز باشد، جریان پول مثبت است.
         /// اگر کمتر باشد، جریان پول منفی است.
         /// </summary>
-        public static decimal MFI(IReadOnlyList<MarketCandle> candles, int period = 14)
+        public static decimal MFI(IReadOnlyList<AnalysisCandle> candles, int period = 14)
         {
             if (period <= 0)
                 return 0;
@@ -122,7 +123,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
 
 
         // ۱. RSI تاریخی
-        public static List<decimal> CalculateRsiList(IReadOnlyList<MarketCandle> sortedCandles, int period = 14)
+        public static List<decimal> CalculateRsiList(IReadOnlyList<AnalysisCandle> sortedCandles, int period = 14)
         {
             var rsiList = new List<decimal>(new decimal[sortedCandles.Count]);
             if (sortedCandles.Count < period + 1) return rsiList;
@@ -158,7 +159,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
 
         // ۲ و ۳. MACD و MACD Histogram
         public static (List<decimal> MacdLine, List<decimal> SignalLine, List<decimal> Histogram) CalculateMacd(
-            IReadOnlyList<MarketCandle> sortedCandles, int fastPeriod = 12, int slowPeriod = 26, int signalPeriod = 9)
+            IReadOnlyList<AnalysisCandle> sortedCandles, int fastPeriod = 12, int slowPeriod = 26, int signalPeriod = 9)
         {
             int count = sortedCandles.Count;
             var macdLine = new List<decimal>(new decimal[count]);
@@ -186,7 +187,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         }
 
         // ۴. Stochastic Oscillator (%K)
-        public static List<decimal> CalculateStochastic(IReadOnlyList<MarketCandle> sortedCandles, int period = 14)
+        public static List<decimal> CalculateStochastic(IReadOnlyList<AnalysisCandle> sortedCandles, int period = 14)
         {
             var stochList = new List<decimal>(new decimal[sortedCandles.Count]);
             if (sortedCandles.Count < period) return stochList;
@@ -210,7 +211,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         }
 
         // ۵. CCI (Commodity Channel Index)
-        public static List<decimal> CalculateCci(IReadOnlyList<MarketCandle> sortedCandles, int period = 20)
+        public static List<decimal> CalculateCci(IReadOnlyList<AnalysisCandle> sortedCandles, int period = 20)
         {
             var cciList = new List<decimal>(new decimal[sortedCandles.Count]);
             if (sortedCandles.Count < period) return cciList;
@@ -235,7 +236,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         }
 
         // ۶. Momentum (MOM)
-        public static List<decimal> CalculateMomentum(IReadOnlyList<MarketCandle> sortedCandles, int period = 10)
+        public static List<decimal> CalculateMomentum(IReadOnlyList<AnalysisCandle> sortedCandles, int period = 10)
         {
             var momList = new List<decimal>(new decimal[sortedCandles.Count]);
             if (sortedCandles.Count < period) return momList;
@@ -249,7 +250,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         }
 
         // ۷. OBV (On-Balance Volume)
-        public static List<decimal> CalculateObv(IReadOnlyList<MarketCandle> sortedCandles)
+        public static List<decimal> CalculateObv(IReadOnlyList<AnalysisCandle> sortedCandles)
         {
             var obvList = new List<decimal>(new decimal[sortedCandles.Count]);
             if (sortedCandles.Count == 0) return obvList;
@@ -269,7 +270,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         }
 
         // ۸. Volume Weighted MACD (VWMACD)
-        public static List<decimal> CalculateVwMacd(IReadOnlyList<MarketCandle> sortedCandles, int fastPeriod = 12, int slowPeriod = 26)
+        public static List<decimal> CalculateVwMacd(IReadOnlyList<AnalysisCandle> sortedCandles, int fastPeriod = 12, int slowPeriod = 26)
         {
             var vwMacdList = new List<decimal>(new decimal[sortedCandles.Count]);
             if (sortedCandles.Count < slowPeriod) return vwMacdList;
@@ -295,7 +296,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         }
 
         // ۹. Chaikin Money Flow (CMF)
-        public static List<decimal> CalculateCmf(IReadOnlyList<MarketCandle> sortedCandles, int period = 20)
+        public static List<decimal> CalculateCmf(IReadOnlyList<AnalysisCandle> sortedCandles, int period = 20)
         {
             var cmfList = new List<decimal>(new decimal[sortedCandles.Count]);
             if (sortedCandles.Count < period) return cmfList;
@@ -325,7 +326,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         }
 
         // ۱۰. Money Flow Index (MFI) به صورت آرایه کامل
-        public static List<decimal> CalculateMfiList(IReadOnlyList<MarketCandle> sortedCandles, int period = 14)
+        public static List<decimal> CalculateMfiList(IReadOnlyList<AnalysisCandle> sortedCandles, int period = 14)
         {
             var mfiList = new List<decimal>(new decimal[sortedCandles.Count]);
             if (sortedCandles.Count < period + 1) return mfiList;
@@ -373,7 +374,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// قیمت تیپیکال یا Typical Price.
         /// در MFI و بعضی اندیکاتورهای حجمی استفاده می‌شود.
         /// </summary>
-        private static decimal TypicalPrice(MarketCandle candle)
+        private static decimal TypicalPrice(AnalysisCandle candle)
         {
             if (candle == null)
                 return 0;

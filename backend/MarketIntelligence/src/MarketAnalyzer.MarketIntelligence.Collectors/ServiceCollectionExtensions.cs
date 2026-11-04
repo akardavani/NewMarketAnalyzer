@@ -1,4 +1,5 @@
-﻿using MarketAnalyzer.Collector;
+using MarketAnalyzer.Collector;
+using MarketAnalyzer.MarketData.Domain;
 using MarketAnalyzer.MarketIntelligence.Domain;
 using MarketAnalyzer.MarketIntelligence.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;

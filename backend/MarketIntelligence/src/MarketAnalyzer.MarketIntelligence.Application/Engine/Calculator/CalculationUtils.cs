@@ -1,4 +1,5 @@
-﻿using MarketAnalyzer.MarketIntelligence.Domain;
+using MarketAnalyzer.MarketData.Domain;
+using MarketAnalyzer.MarketIntelligence.Domain;
 
 namespace MarketAnalyzer.MarketIntelligence.Application
 {
@@ -53,10 +54,10 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// مرتب‌سازی کندل‌ها بر اساس تاریخ از قدیم به جدید.
         /// برای اکثر اندیکاتورها باید کندل‌ها به ترتیب زمانی باشند.
         /// </summary>
-        public static IReadOnlyList<MarketCandle> SortAscending(IReadOnlyList<MarketCandle> candles)
+        public static IReadOnlyList<AnalysisCandle> SortAscending(IReadOnlyList<AnalysisCandle> candles)
         {
             if (candles == null || candles.Count == 0)
-                return Array.Empty<MarketCandle>();
+                return Array.Empty<AnalysisCandle>();
 
             return candles
                 .OrderBy(x => x.Date)
@@ -66,7 +67,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// <summary>
         /// گرفتن آخرین کندل معتبر.
         /// </summary>
-        public static MarketCandle? Latest(IReadOnlyList<MarketCandle> candles)
+        public static AnalysisCandle? Latest(IReadOnlyList<AnalysisCandle> candles)
         {
             var sorted = SortAscending(candles);
 
@@ -79,7 +80,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// <summary>
         /// گرفتن کندل قبلی نسبت به آخرین کندل.
         /// </summary>
-        public static MarketCandle? Previous(IReadOnlyList<MarketCandle> candles)
+        public static AnalysisCandle? Previous(IReadOnlyList<AnalysisCandle> candles)
         {
             var sorted = SortAscending(candles);
 

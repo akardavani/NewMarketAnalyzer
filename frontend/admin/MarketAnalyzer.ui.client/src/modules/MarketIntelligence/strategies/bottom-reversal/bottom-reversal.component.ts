@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { StrategyPageBase } from '../../shared/strategy-page.base';
 import { daysAgo, today } from '../../shared/jalali';
 import { DataTableComponent } from '../../shared/data-table/data-table.component';
+import { RunBottomReversalRequest } from '../../shared/strategy-api.service';
 
 @Component({
   selector: 'mi-bottom-reversal',
@@ -21,6 +22,20 @@ export class BottomReversalComponent extends StrategyPageBase {
     const s = this.isoDate('تاریخ شروع', this.startDate, p);
     const e = this.isoDate('تاریخ پایان', this.endDate, p);
     return p.length ? null : { InputFilePath: this.inputFilePath.trim(), StartDate: s, EndDate: e };
+  }
+
+  override run(): void {
+    this.resetState();
+    const problems: string[] = [];
+    const params = this.buildParams(problems);
+    if (problems.length || !params) { this.errors.set(problems); return; }
+
+    const request: RunBottomReversalRequest = {
+      inputFilePath: String(params['InputFilePath']),
+      startDate: String(params['StartDate']),
+      endDate: String(params['EndDate'])
+    };
+    this.execute(this.api.runBottomReversal(request));
   }
 
   readonly pickCols = [

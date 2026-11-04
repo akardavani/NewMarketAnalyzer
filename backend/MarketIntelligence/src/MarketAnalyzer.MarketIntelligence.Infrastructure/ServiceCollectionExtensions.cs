@@ -1,5 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 using MarketAnalyzer.Abstractions;
+using MarketAnalyzer.MarketData.Domain;
 using MarketAnalyzer.MarketIntelligence.Domain;
 
 namespace MarketAnalyzer.MarketIntelligence.Infrastructure
@@ -20,6 +21,7 @@ namespace MarketAnalyzer.MarketIntelligence.Infrastructure
             services.AddInfrastructureServices();
             services.AddMarketInfrastructure();
             services.AddScoped<IUnifiedSymbolService, UnifiedSymbolService>();
+            services.AddScoped<MarketAnalyzer.MarketIntelligence.Application.Ports.LegacyCompatibility.ILegacySeedJsonSnapshotService, LegacySeedJsonSnapshotService>();
             services.AddScoped<IUnifiedCandleBatchService, UnifiedCandleBatchService>();
             services.AddScoped<IUnifiedSymbolRepository, EfUnifiedSymbolRepository>();
             services.AddScoped<IUnifiedCandleRepository, EfUnifiedCandleRepository>();
@@ -62,7 +64,8 @@ namespace MarketAnalyzer.MarketIntelligence.Infrastructure
 
         private static IServiceCollection AddInfrastructureServices(this IServiceCollection services)
         {
-            var assembly = typeof(IInfrastructureService).Assembly;
+            // Legacy contracts now live in Application; implementations remain in this Infrastructure assembly.
+            var assembly = typeof(StockService).Assembly;
 
             var implementations = assembly
                 .GetTypes()

@@ -1,4 +1,5 @@
-﻿using MarketAnalyzer.MarketIntelligence.Domain;
+using MarketAnalyzer.MarketData.Domain;
+using MarketAnalyzer.MarketIntelligence.Domain;
 
 namespace MarketAnalyzer.MarketIntelligence.Application
 {
@@ -17,8 +18,8 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// <param name="market">لیست کندل‌های شاخص کل بازار</param>
         /// <param name="days">بازه زمانی مورد نظر برای محاسبه (مثلاً 30، 60، 90 روز)</param>
         public static decimal RelativeStrengthVsMarket(
-            IReadOnlyList<MarketCandle> stock,
-            IReadOnlyList<MarketCandle> market,
+            IReadOnlyList<AnalysisCandle> stock,
+            IReadOnlyList<AnalysisCandle> market,
             int days)
         {
             var stockReturn =
@@ -41,8 +42,8 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// <param name="industry">لیست کندل‌های شاخص صنعت</param>
         /// <param name="days">بازه زمانی مورد نظر برای محاسبه</param>
         public static decimal RelativeStrengthVsIndustry(
-            IReadOnlyList<MarketCandle> stock,
-            IReadOnlyList<MarketCandle> industry,
+            IReadOnlyList<AnalysisCandle> stock,
+            IReadOnlyList<AnalysisCandle> industry,
             int days)
         {
             var stockReturn =

@@ -1,4 +1,5 @@
-﻿using MarketAnalyzer.MarketIntelligence.Domain;
+using MarketAnalyzer.MarketData.Domain;
+using MarketAnalyzer.MarketIntelligence.Domain;
 using MarketAnalyzer.MarketIntelligence.Infrastructure;
 
 namespace MarketAnalyzer.MarketIntelligence.Application
@@ -18,7 +19,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// <param name="baseCandle">نماد پایه</param>
         /// <param name="asPercent">آیا درصدی باشد</param>
         /// <returns></returns>
-        public static List<CandleResult> Calculate(List<MarketCandle> targetCandle, List<MarketCandle> baseCandle, bool asPercent)
+        public static List<CandleResult> Calculate(List<AnalysisCandle> targetCandle, List<AnalysisCandle> baseCandle, bool asPercent)
         {
             // ساخت نقشه‌های تاریخ → مقدار
             var futuresMap = targetCandle.ToDictionary(c => c.Date.ToDateOnly(), c => c.Close);

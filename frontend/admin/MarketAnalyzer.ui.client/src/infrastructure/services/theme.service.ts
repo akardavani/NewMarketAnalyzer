@@ -20,9 +20,9 @@ export interface ThemeSettings {
  * مقادیر پیش‌فرض هر محصول. برای BackOffice / سبدگردانی فقط palette را عوض کنید.
  */
 export const THEME_DEFAULTS: Readonly<ThemeSettings> = {
-  mode: 'dark',
-  palette: 'violet',
-  density: 'normal',
+  mode: 'light',
+  palette: 'blue',
+  density: 'compact',
   typeface: 'iransans',
   submit: 'theme'
 };
@@ -80,7 +80,8 @@ export class ThemeService {
       });
     }
 
-    this.settings.set(this.read());
+    // The product uses one fixed theme. Ignore any older per-user appearance settings.
+    this.settings.set({ ...THEME_DEFAULTS });
     this.apply();
   }
 

@@ -1,4 +1,6 @@
-﻿using System.ComponentModel;
+using MarketAnalyzer.MarketData.Domain;
+
+using System.ComponentModel;
 
 namespace MarketAnalyzer.MarketIntelligence.Domain
 {

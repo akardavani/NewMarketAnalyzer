@@ -1,4 +1,5 @@
-﻿using MarketAnalyzer.MarketIntelligence.Domain;
+using MarketAnalyzer.MarketData.Domain;
+using MarketAnalyzer.MarketIntelligence.Domain;
 using System.Linq.Expressions;
 namespace MarketAnalyzer.MarketIntelligence.Infrastructure
 {

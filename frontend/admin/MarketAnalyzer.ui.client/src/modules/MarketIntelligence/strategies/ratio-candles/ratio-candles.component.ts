@@ -4,7 +4,7 @@ import { StrategyPageBase } from '../../shared/strategy-page.base';
 import { daysAgo, today } from '../../shared/jalali';
 import { LineChartComponent, ChartSeriesInput } from '../../shared/line-chart/line-chart.component';
 import { SymbolPickerComponent } from '../../shared/symbol-picker/symbol-picker.component';
-import { SymbolItem } from '../../shared/strategy-api.service';
+import { RunRatioCandlesRequest, SymbolItem } from '../../shared/strategy-api.service';
 
 @Component({
   selector: 'mi-ratio-candles',
@@ -23,7 +23,15 @@ export class RatioCandlesComponent extends StrategyPageBase {
     if (!this.symbols.length) p.push('حداقل یک نماد انتخاب کنید.');
     const s = this.isoDate('تاریخ شروع', this.startDate, p);
     const e = this.isoDate('تاریخ پایان', this.endDate, p);
-    return p.length ? null : { Symbols: this.symbols.map(x => x.symbolKey), StartDate: s, EndDate: e, Timeframe: this.timeframe };
+    return p.length ? null : { symbols: this.symbols.map(x => x.symbolKey), startDate: s!, endDate: e! } satisfies RunRatioCandlesRequest;
+  }
+
+  override run(): void {
+    this.resetState();
+    const problems: string[] = [];
+    const request = this.buildParams(problems) as RunRatioCandlesRequest | null;
+    if (problems.length || !request) { this.errors.set(problems); return; }
+    this.execute(this.api.runRatioCandles(request));
   }
 
   private label(key: string): string {

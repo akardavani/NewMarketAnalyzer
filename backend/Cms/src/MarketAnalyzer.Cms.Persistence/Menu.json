@@ -157,26 +157,6 @@
   },
 
   {
-    "Id": 700,
-    "Title": "گزارش‌های صورت مالی",
-    "Path": null,
-    "DisplayOrder": 700,
-    "Icon": "",
-    "RequiredRoute": null,
-    "IsActive": true,
-    "SubMenus": [
-      {
-        "Id": 701,
-        "Title": "دارایی‌ها به تفکیک صنعت",
-        "Path": "assets/asset-composition-per-sector",
-        "DisplayOrder": 601,
-        "Icon": "",
-        "RequiredRoute": null,
-        "IsActive": true
-      }
-    ]
-  },
-  {
     "Id": 1000,
     "Title": "مدیریت محتوا",
     "Path": null,
@@ -257,6 +237,15 @@
         "DisplayOrder": 0,
         "Icon": "",
         "RequiredRoute": "Account/UnknownLoginHistory",
+        "IsActive": true
+      },
+      {
+        "Id": 805,
+        "Title": "تنظیمات دریافت داده‌های بازار",
+        "Path": "market-intelligence/settings",
+        "DisplayOrder": 4,
+        "Icon": "",
+        "RequiredRoute": "MarketDataSettings/Overview",
         "IsActive": true
       }
     ]

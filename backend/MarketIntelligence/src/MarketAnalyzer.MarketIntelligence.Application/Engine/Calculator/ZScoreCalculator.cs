@@ -1,4 +1,5 @@
-﻿using MarketAnalyzer.MarketIntelligence.Domain;
+using MarketAnalyzer.MarketData.Domain;
+using MarketAnalyzer.MarketIntelligence.Domain;
 
 namespace MarketAnalyzer.MarketIntelligence.Application;
 internal class ZScoreCalculator
@@ -41,8 +42,8 @@ internal class ZScoreCalculator
     /// <param name="industry"></param>
     /// <returns></returns>
     public static decimal StockVsIndustryZScore(
-        IReadOnlyList<MarketCandle> stock,
-        IReadOnlyList<MarketCandle> industry)
+        IReadOnlyList<AnalysisCandle> stock,
+        IReadOnlyList<AnalysisCandle> industry)
     {
         var ratio =
             RatioSeries(
@@ -54,8 +55,8 @@ internal class ZScoreCalculator
     }
 
     public static List<decimal> RatioSeries(
-        IReadOnlyList<MarketCandle> stock,
-        IReadOnlyList<MarketCandle> benchmark)
+        IReadOnlyList<AnalysisCandle> stock,
+        IReadOnlyList<AnalysisCandle> benchmark)
     {
         var count =
             Math.Min(

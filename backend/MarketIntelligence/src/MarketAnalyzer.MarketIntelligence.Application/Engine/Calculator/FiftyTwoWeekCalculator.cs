@@ -1,4 +1,5 @@
-﻿using MarketAnalyzer.MarketIntelligence.Domain;
+using MarketAnalyzer.MarketData.Domain;
+using MarketAnalyzer.MarketIntelligence.Domain;
 
 namespace MarketAnalyzer.MarketIntelligence.Application
 {
@@ -10,7 +11,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// <summary>
         /// سقف 52 هفته
         /// </summary>
-        public static decimal High52Week(IReadOnlyList<MarketCandle> candles)
+        public static decimal High52Week(IReadOnlyList<AnalysisCandle> candles)
         {
             return candles
                 .TakeLast(252)
@@ -21,7 +22,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// کف 52 هفته
         /// </summary>
         /// <returns></returns>
-        public static decimal Low52Week(IReadOnlyList<MarketCandle> candles)
+        public static decimal Low52Week(IReadOnlyList<AnalysisCandle> candles)
         {
             return candles
                 .TakeLast(252)
@@ -32,7 +33,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// فاصله تا سقف
         /// </summary>
         /// <returns></returns>
-        public static decimal DistanceTo52WeekHigh(IReadOnlyList<MarketCandle> candles)
+        public static decimal DistanceTo52WeekHigh(IReadOnlyList<AnalysisCandle> candles)
         {
             if (candles.Count == 0)
                 return 0;
@@ -53,7 +54,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// فاصله تا کف
         /// </summary>
         /// <returns></returns>
-        public static decimal DistanceTo52WeekLow(IReadOnlyList<MarketCandle> candles)
+        public static decimal DistanceTo52WeekLow(IReadOnlyList<AnalysisCandle> candles)
         {
             if (candles.Count == 0)
                 return 0;

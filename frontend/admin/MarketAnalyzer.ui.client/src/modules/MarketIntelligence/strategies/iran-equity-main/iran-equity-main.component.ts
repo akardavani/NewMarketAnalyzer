@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { StrategyPageBase } from '../../shared/strategy-page.base';
 import { daysAgo, today } from '../../shared/jalali';
 import { DataTableComponent } from '../../shared/data-table/data-table.component';
+import { RunIranEquityMainRequest } from '../../shared/strategy-api.service';
 
 @Component({
   selector: 'mi-iran-equity-main',
@@ -21,6 +22,16 @@ export class IranEquityMainComponent extends StrategyPageBase {
     const s = this.isoDate('تاریخ شروع', this.startDate, p);
     const e = this.isoDate('تاریخ پایان', this.endDate, p);
     return p.length ? null : { InputFilePath: this.inputFilePath.trim(), StartDate: s, EndDate: e };
+  }
+
+  override run(): void {
+    this.resetState();
+    const problems: string[] = [];
+    const params = this.buildParams(problems);
+    if (problems.length || !params) { this.errors.set(problems); return; }
+
+    const request: RunIranEquityMainRequest = { inputFilePath: String(params['InputFilePath']) };
+    this.execute(this.api.runIranEquityMain(request));
   }
 
   readonly pickCols = [

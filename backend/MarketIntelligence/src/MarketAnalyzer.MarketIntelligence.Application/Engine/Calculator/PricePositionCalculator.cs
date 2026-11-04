@@ -1,4 +1,5 @@
-﻿using MarketAnalyzer.MarketIntelligence.Domain;
+using MarketAnalyzer.MarketData.Domain;
+using MarketAnalyzer.MarketIntelligence.Domain;
 
 namespace MarketAnalyzer.MarketIntelligence.Application
 {
@@ -11,7 +12,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// <summary>
         /// پایین‌ترین Low در period کندل اخیر.
         /// </summary>
-        public static decimal LowestLow(IReadOnlyList<MarketCandle> candles, int period)
+        public static decimal LowestLow(IReadOnlyList<AnalysisCandle> candles, int period)
         {
             if (period <= 0)
                 return 0;
@@ -31,7 +32,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// <summary>
         /// بالاترین High در period کندل اخیر.
         /// </summary>
-        public static decimal HighestHigh(IReadOnlyList<MarketCandle> candles, int period)
+        public static decimal HighestHigh(IReadOnlyList<AnalysisCandle> candles, int period)
         {
             if (period <= 0)
                 return 0;
@@ -54,7 +55,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// مثال:
         /// قیمت فعلی 105 و کف دوره 100 باشد، خروجی 5 است.
         /// </summary>
-        public static decimal DistanceToLowestLow(IReadOnlyList<MarketCandle> candles, int period, decimal currentPrice)
+        public static decimal DistanceToLowestLow(IReadOnlyList<AnalysisCandle> candles, int period, decimal currentPrice)
         {
             var lowestLow = LowestLow(candles, period);
 
@@ -67,7 +68,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// مثال:
         /// قیمت فعلی 90 و سقف دوره 100 باشد، خروجی -10 است.
         /// </summary>
-        public static decimal DistanceToHighestHigh(IReadOnlyList<MarketCandle> candles, int period, decimal currentPrice)
+        public static decimal DistanceToHighestHigh(IReadOnlyList<AnalysisCandle> candles, int period, decimal currentPrice)
         {
             var highestHigh = HighestHigh(candles, period);
 
@@ -82,7 +83,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// یعنی قیمت حداکثر 5 درصد بالاتر از کف باشد.
         /// </summary>
         public static bool IsNearPeriodLow(
-            IReadOnlyList<MarketCandle> candles,
+            IReadOnlyList<AnalysisCandle> candles,
             int period,
             decimal currentPrice,
             decimal thresholdPercent)
@@ -99,7 +100,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// اینجا قدرمطلق فاصله بررسی می‌شود.
         /// </summary>
         public static bool IsNearPeriodHigh(
-            IReadOnlyList<MarketCandle> candles,
+            IReadOnlyList<AnalysisCandle> candles,
             int period,
             decimal currentPrice,
             decimal thresholdPercent)
@@ -115,7 +116,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// 100 یعنی نزدیک سقف دوره.
         /// این متریک برای تشخیص اینکه سهم در پایین رنج است یا بالای رنج کاربرد دارد.
         /// </summary>
-        public static decimal PositionInRangePercent(IReadOnlyList<MarketCandle> candles, int period, decimal currentPrice)
+        public static decimal PositionInRangePercent(IReadOnlyList<AnalysisCandle> candles, int period, decimal currentPrice)
         {
             var low = LowestLow(candles, period);
             var high = HighestHigh(candles, period);
@@ -132,7 +133,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// excludeCurrent = true یعنی سقف دوره بدون احتساب کندل امروز محاسبه شود.
         /// </summary>
         public static bool BreaksRecentHigh(
-            IReadOnlyList<MarketCandle> candles,
+            IReadOnlyList<AnalysisCandle> candles,
             int period,
             bool excludeCurrent = true)
         {
@@ -160,7 +161,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// برای تشخیص شکست حمایت یا فعال شدن حد ضرر کاربرد دارد.
         /// </summary>
         public static bool BreaksRecentLow(
-            IReadOnlyList<MarketCandle> candles,
+            IReadOnlyList<AnalysisCandle> candles,
             int period,
             bool excludeCurrent = true)
         {

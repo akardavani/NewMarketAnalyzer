@@ -1,4 +1,5 @@
-﻿using MarketAnalyzer.MarketIntelligence.Domain;
+using MarketAnalyzer.MarketData.Domain;
+using MarketAnalyzer.MarketIntelligence.Domain;
 
 namespace MarketAnalyzer.MarketIntelligence.Application
 {
@@ -15,8 +16,8 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// بتای کمتر از 1 یعنی سهم دفاعی‌تر یا کم‌نوسان‌تر از بازار است.
         /// </summary>
         public static decimal Beta(
-            IReadOnlyList<MarketCandle> stockCandles,
-            IReadOnlyList<MarketCandle> marketCandles,
+            IReadOnlyList<AnalysisCandle> stockCandles,
+            IReadOnlyList<AnalysisCandle> marketCandles,
             int period = 90)
         {
             if (period <= 1)
@@ -71,7 +72,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// محاسبه نوسان دوره‌ای بر اساس انحراف معیار بازده‌های روزانه.
         /// خروجی بر حسب درصد است.
         /// </summary>
-        public static decimal Volatility(IReadOnlyList<MarketCandle> candles, int period = 30)
+        public static decimal Volatility(IReadOnlyList<AnalysisCandle> candles, int period = 30)
         {
             if (period <= 1)
                 return 0;
@@ -108,7 +109,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// 2. Abs(High - PreviousClose)
         /// 3. Abs(Low - PreviousClose)
         /// </summary>
-        public static decimal ATR(IReadOnlyList<MarketCandle> candles, int period = 14)
+        public static decimal ATR(IReadOnlyList<AnalysisCandle> candles, int period = 14)
         {
             if (period <= 0)
                 return 0;
@@ -146,7 +147,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// ATR به درصد قیمت فعلی.
         /// برای مقایسه نوسان سهم‌های مختلف بهتر از ATR خام است.
         /// </summary>
-        public static decimal ATRPercent(IReadOnlyList<MarketCandle> candles, int period = 14)
+        public static decimal ATRPercent(IReadOnlyList<AnalysisCandle> candles, int period = 14)
         {
             var latest = CalculationUtils.Latest(candles);
 
@@ -163,7 +164,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// یعنی بیشترین افت از یک سقف تا کف بعدی.
         /// خروجی معمولاً منفی یا صفر است.
         /// </summary>
-        public static decimal MaxDrawdown(IReadOnlyList<MarketCandle> candles, int period)
+        public static decimal MaxDrawdown(IReadOnlyList<AnalysisCandle> candles, int period)
         {
             if (period <= 1)
                 return 0;
@@ -202,7 +203,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// بازده دوره / نوسان دوره
         /// برای مقایسه کیفیت حرکت سهم‌ها استفاده می‌شود.
         /// </summary>
-        public static decimal SharpeLike(IReadOnlyList<MarketCandle> candles, int period = 30)
+        public static decimal SharpeLike(IReadOnlyList<AnalysisCandle> candles, int period = 30)
         {
             var returnPercent = ReturnCalculator.Return(candles, period);
             var volatility = Volatility(candles, period);
@@ -217,7 +218,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// محاسبه بازده‌های روزانه بر اساس Close.
         /// خروجی بر حسب درصد است.
         /// </summary>
-        private static List<decimal> DailyReturns(IReadOnlyList<MarketCandle> candles)
+        private static List<decimal> DailyReturns(IReadOnlyList<AnalysisCandle> candles)
         {
             var result = new List<decimal>();
 

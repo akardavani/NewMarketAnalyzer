@@ -1,4 +1,5 @@
-﻿using MarketAnalyzer.MarketIntelligence.Domain;
+using MarketAnalyzer.MarketData.Domain;
+using MarketAnalyzer.MarketIntelligence.Domain;
 
 namespace MarketAnalyzer.MarketIntelligence.Application
 {
@@ -12,7 +13,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// حجم آخرین کندل موجود.
         /// اگر کندل روز جاری داخل دیتا باشد، این مقدار معادل حجم امروز است.
         /// </summary>
-        public static decimal LatestVolume(IReadOnlyList<MarketCandle> candles)
+        public static decimal LatestVolume(IReadOnlyList<AnalysisCandle> candles)
         {
             var latest = CalculationUtils.Latest(candles);
 
@@ -25,7 +26,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// AverageVolume(candles, 30)
         /// معادل میانگین حجم 30 روزه است.
         /// </summary>
-        public static decimal AverageVolume(IReadOnlyList<MarketCandle> candles, int period)
+        public static decimal AverageVolume(IReadOnlyList<AnalysisCandle> candles, int period)
         {
             if (period <= 0)
                 return 0;
@@ -46,7 +47,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// نسبت حجم آخرین روز به میانگین حجم یک دوره.
         /// اگر خروجی 2 باشد یعنی حجم امروز دو برابر میانگین دوره است.
         /// </summary>
-        public static decimal VolumeRatio(IReadOnlyList<MarketCandle> candles, int period)
+        public static decimal VolumeRatio(IReadOnlyList<AnalysisCandle> candles, int period)
         {
             var latestVolume = LatestVolume(candles);
             var averageVolume = AverageVolume(candles, period);
@@ -61,7 +62,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// نسبت حجم امروز به میانگین 20، 30 و 90 روزه محاسبه می‌شود
         /// و سپس با وزن بیشتر به کوتاه‌مدت ترکیب می‌شود.
         /// </summary>
-        public static decimal VolumeExpansionScore(IReadOnlyList<MarketCandle> candles)
+        public static decimal VolumeExpansionScore(IReadOnlyList<AnalysisCandle> candles)
         {
             var ratio20 = VolumeRatio(candles, 20);
             var ratio30 = VolumeRatio(candles, 30);
@@ -77,17 +78,17 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// تشخیص اینکه حجم امروز به شکل معنی‌دار از میانگین بالاتر است یا نه.
         /// برای استراتژی برگشت از کف معمولاً ratioThreshold بین 1.5 تا 2 مناسب است.
         /// </summary>
-        public static bool HasVolumeSpike(IReadOnlyList<MarketCandle> candles, int period = 20, decimal ratioThreshold = 1.5m)
+        public static bool HasVolumeSpike(IReadOnlyList<AnalysisCandle> candles, int period = 20, decimal ratioThreshold = 1.5m)
         {
             return VolumeRatio(candles, period) >= ratioThreshold;
         }
 
         /// <summary>
         /// میانگین ارزش معاملات در period کندل اخیر.
-        /// فقط وقتی قابل استفاده است که MarketCandle.Value مقدار داشته باشد.
+        /// فقط وقتی قابل استفاده است که AnalysisCandle.Value مقدار داشته باشد.
         /// برای بورس ایران ارزش معاملات از حجم خام کاربردی‌تر است.
         /// </summary>
-        public static decimal AverageTradeValue(IReadOnlyList<MarketCandle> candles, int period)
+        public static decimal AverageTradeValue(IReadOnlyList<AnalysisCandle> candles, int period)
         {
             if (period <= 0)
                 return 0;
@@ -109,7 +110,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// ارزش معاملات آخرین کندل.
         /// اگر Value در کندل موجود نباشد، صفر برمی‌گرداند.
         /// </summary>
-        public static decimal LatestTradeValue(IReadOnlyList<MarketCandle> candles)
+        public static decimal LatestTradeValue(IReadOnlyList<AnalysisCandle> candles)
         {
             var latest = CalculationUtils.Latest(candles);
 
@@ -120,7 +121,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// نسبت ارزش معاملات امروز به میانگین ارزش معاملات دوره.
         /// برای تشخیص ورود پول واقعی‌تر از VolumeRatio است.
         /// </summary>
-        public static decimal TradeValueRatio(IReadOnlyList<MarketCandle> candles, int period)
+        public static decimal TradeValueRatio(IReadOnlyList<AnalysisCandle> candles, int period)
         {
             var latestValue = LatestTradeValue(candles);
             var averageValue = AverageTradeValue(candles, period);

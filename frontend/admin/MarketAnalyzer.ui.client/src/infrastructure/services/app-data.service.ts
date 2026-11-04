@@ -37,6 +37,8 @@ export class AppDataService {
             this.appState = response.data.appState;
             this.fullName = response.data.fullName;
             this.lastLoginDate = response.data.lastLoginDate;
+          this.userAlerts = response.data.userAlerts ?? [];
+          this.valueChanges.next();
           }
         }),
         map((_) => void 0),

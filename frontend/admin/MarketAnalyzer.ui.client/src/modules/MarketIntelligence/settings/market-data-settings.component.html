@@ -1,0 +1,119 @@
+<main class="settings-page" dir="rtl">
+  <header class="page-header">
+    <div>
+      <h2>مدیریت دریافت داده‌های بازار</h2>
+      <p>منابع اطلاعات، زمان‌بندی دریافت و به‌روزرسانی کاتالوگ بازارها را مدیریت کنید.</p>
+    </div>
+    <button type="button" class="secondary" (click)="reload()" [disabled]="loading() || busy()">به‌روزرسانی</button>
+  </header>
+
+  @if (error()) { <div class="message error">{{ error() }}</div> }
+  @if (notice()) { <div class="message success">{{ notice() }}</div> }
+  @if (loading()) { <div class="panel muted">در حال بارگذاری تنظیمات…</div> }
+
+  <section class="panel catalog-panel">
+    <div>
+      <h3>به‌روزرسانی کاتالوگ و دریافت فایل‌های JSON</h3>
+      <p class="muted">اطلاعات کاتالوگ را از منبع دریافت می‌کند و یک فایل ZIP برای دانلود می‌سازد. فایل‌های داخل پروژه تغییر نمی‌کنند.</p>
+    </div>
+    <button type="button" (click)="refreshCatalogs()" [disabled]="busy() || loading()">
+      {{ busy() ? 'در حال دریافت…' : 'دریافت کاتالوگ‌ها و فایل ZIP' }}
+    </button>
+  </section>
+
+  <section class="markets-section">
+    <header class="section-header">
+      <div><h3>بازارها</h3><p class="muted">برای دیدن تنظیمات هر بازار، آن را باز کنید.</p></div>
+      <span class="count">{{ markets().length }} بازار</span>
+    </header>
+
+    @for (market of markets(); track market.key) {
+      <details class="panel market-card">
+        <summary class="market-summary">
+          <span class="market-title">
+            <strong>{{ market.persianName || market.name }}</strong>
+            <small>{{ market.key }} · {{ market.currencyCode }}</small>
+          </span>
+          <span class="badge" [class.off]="!market.isActive">{{ market.isActive ? 'فعال' : 'غیرفعال' }}</span>
+        </summary>
+
+        <div class="market-content">
+          <section>
+            <h4>منابع دریافت</h4>
+            <div class="capabilities">
+              @for (capability of market.capabilities; track capability.capability) {
+                <label class="capability">
+                  <span>{{ capabilityName(capability.capability) }}</span>
+                  <select [ngModel]="capability.activeProviderKey" (ngModelChange)="providerChanged(market, capability, $event)" [disabled]="busy()">
+                    @for (provider of capability.availableProviderKeys; track provider) { <option [value]="provider">{{ provider }}</option> }
+                  </select>
+                </label>
+              }
+            </div>
+          </section>
+
+          <details class="subsection">
+            <summary>زمان‌بندی و تنظیمات بازار</summary>
+            <p class="muted">برای هر مورد، مقدار را تغییر دهید و همان ردیف را ذخیره کنید. زمان‌ها با ساعت بازار تنظیم می‌شوند.</p>
+            <div class="settings-list">
+              @for (setting of marketSettings(market); track setting.key) {
+                <label class="setting-row">
+                  <span class="setting-name">{{ settingLabel(setting.key) }}</span>
+                  <input [type]="isSecret(setting.key) ? 'password' : 'text'" [(ngModel)]="setting.value" [disabled]="busy() || isSecret(setting.key)" [placeholder]="isSecret(setting.key) ? 'از Environment یا User Secrets تنظیم شود' : ''" />
+                  <button type="button" class="secondary" (click)="saveSetting(setting)" [disabled]="busy() || isSecret(setting.key)">ذخیره</button>
+                </label>
+              }
+            </div>
+
+            <details class="advanced-settings">
+              <summary>افزودن تنظیم پیشرفته</summary>
+              <p class="muted">فقط وقتی کلید تنظیم را می‌دانید از این بخش استفاده کنید.</p>
+              <div class="setting-row add-setting">
+                <input type="text" aria-label="کلید تنظیم جدید" placeholder="کلید تنظیم" [(ngModel)]="marketSettingDraft(market.key).key" [disabled]="busy()" />
+                <input type="text" aria-label="مقدار تنظیم جدید" placeholder="مقدار" [(ngModel)]="marketSettingDraft(market.key).value" [disabled]="busy()" />
+                <button type="button" class="secondary" (click)="addMarketSetting(market)" [disabled]="busy()">افزودن</button>
+              </div>
+            </details>
+          </details>
+
+          <details class="subsection">
+            <summary>اجرای دستی یک کار</summary>
+            <div class="run-job">
+              <select #jobSelect aria-label="انتخاب کار"><option value="">انتخاب کار</option>@for (job of jobs; track job.id) { <option [value]="job.id">{{ job.label }}</option> }</select>
+              <button type="button" (click)="jobSelect.value && runJob(market, +jobSelect.value)" [disabled]="busy() || !jobSelect.value">اجرا</button>
+            </div>
+          </details>
+        </div>
+      </details>
+    }
+  </section>
+
+  @if (lastJob(); as result) {
+    <section class="panel job-result">
+      <h3>نتیجهٔ اجرای {{ result.marketKey }}</h3>
+      <p>بررسی‌شده: {{ result.processed }} · به‌روزشده: {{ result.updated }} · بدون داده: {{ result.noData }} · خطا: {{ result.failed }}</p>
+      @if (result.message) { <p>{{ result.message }}</p> }
+      @for (sample of result.errorSamples; track $index) { <pre>{{ sample }}</pre> }
+    </section>
+  }
+
+  <details class="panel provider-panel">
+    <summary>تنظیمات پیشرفتهٔ منبع دریافت</summary>
+    <p class="muted">برای دیدن تنظیمات، منبع را انتخاب کنید. مقادیر محرمانه از API مخفی می‌مانند و باید در Environment یا User Secrets تنظیم شوند.</p>
+    <label class="provider-picker">منبع
+      <select [ngModel]="selectedProvider()" (ngModelChange)="selectProvider($event)"><option value="">انتخاب منبع</option>
+        @for (market of markets(); track market.key) { @for (capability of market.capabilities; track capability.capability) { @for (provider of capability.availableProviderKeys; track provider) { <option [value]="provider">{{ provider }}</option> } } }
+      </select>
+    </label>
+    @for (setting of providerSettings(); track setting.key) {
+      <label class="setting-row"><span class="setting-name">{{ settingLabel(setting.key) }}<small>{{ setting.key }}</small></span><input [type]="isSecret(setting.key) ? 'password' : 'text'" [(ngModel)]="setting.value" [disabled]="busy() || isSecret(setting.key)" [placeholder]="isSecret(setting.key) ? 'از Environment یا User Secrets تنظیم شود' : ''" /><button type="button" class="secondary" (click)="saveSetting(setting)" [disabled]="busy() || isSecret(setting.key)">ذخیره</button></label>
+    }
+    @if (selectedProvider()) {
+      <div class="setting-row add-setting">
+        <input type="text" aria-label="کلید تنظیم منبع" placeholder="کلید تنظیم" [(ngModel)]="providerSettingDraft.key" [disabled]="busy()" />
+        <input type="text" aria-label="مقدار تنظیم منبع" placeholder="مقدار" [(ngModel)]="providerSettingDraft.value" [disabled]="busy()" />
+        <button type="button" class="secondary" (click)="addProviderSetting()" [disabled]="busy()">افزودن</button>
+      </div>
+    }
+  </details>
+</main>

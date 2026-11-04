@@ -1,21 +1,25 @@
-﻿using MarketAnalyzer.MarketIntelligence.Domain;
+using MarketAnalyzer.MarketData.Domain;
+using MarketAnalyzer.MarketData.Application.Reading;
+using MarketAnalyzer.MarketIntelligence.Application.Ports;
+using MarketAnalyzer.MarketIntelligence.Domain;
 using MarketAnalyzer.MarketIntelligence.Infrastructure;
+using MarketAnalyzer.MarketIntelligence.Application.Ports.LegacyCompatibility;
 using MarketAnalyzer.SharedKernel;
 
 namespace MarketAnalyzer.MarketIntelligence.Application
 {
     public class CalculateImeContractIndex : ICalculateImeContractIndex
     {
-        private readonly IUnifiedSymbolRepository _unifiedSymbolRepository;
-        private readonly IUnifiedCandleQueryService _candleQueryService;
+        private readonly IMarketCatalogReader _catalogReader;
+        private readonly IAnalysisCandleReader _candleQueryService;
 
-        public CalculateImeContractIndex(IUnifiedSymbolRepository unifiedSymbolRepository, IUnifiedCandleQueryService candleQueryService)
+        public CalculateImeContractIndex(IMarketCatalogReader catalogReader, IAnalysisCandleReader candleQueryService)
         {
-            _unifiedSymbolRepository = unifiedSymbolRepository;
+            _catalogReader = catalogReader;
             _candleQueryService = candleQueryService;
         }
 
-        public async Task<List<MarketCandle>> CreateNearestDueDateContractIndex(
+        public async Task<List<AnalysisCandle>> CreateNearestDueDateContractIndex(
             string symbolStart,
             DateTime startDate,
             DateTime endDate,
@@ -25,7 +29,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
             return await BuildForwardIndex(symbols, startDate, endDate, cancellation);
         }
 
-        public async Task<List<MarketCandle>> CreateSecondDueDateContractIndex(
+        public async Task<List<AnalysisCandle>> CreateSecondDueDateContractIndex(
             string symbolStart,
             DateTime startDate,
             DateTime endDate,
@@ -42,7 +46,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
             return await BuildBackwardIndex(symbols, startDate, endDate, cancellation);
         }
 
-        public async Task<List<MarketCandle>> CreateLatestDueDateContractIndex(
+        public async Task<List<AnalysisCandle>> CreateLatestDueDateContractIndex(
             string symbolStart,
             DateTime startDate,
             DateTime endDate,
@@ -54,7 +58,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
             return await BuildBackwardIndex(symbols, startDate, endDate, cancellation);
         }
 
-        public async Task<List<MarketCandle>> CreateIndexByContractRank(
+        public async Task<List<AnalysisCandle>> CreateIndexByContractRank(
             string symbolStart,
             DateTime startDate,
             DateTime endDate,
@@ -64,7 +68,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
             var symbols = await GetOrderedSymbols(symbolStart, cancellation);
 
             if (rank < 1 || rank > symbols.Count)
-                return new List<MarketCandle>();
+                return new List<AnalysisCandle>();
 
             var selected = symbols.Take(rank).ToList();
 
@@ -74,7 +78,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
                 .GroupBy(x => x.InstrumentId)
                 .ToDictionary(x => x.Key, x => x.OrderBy(c => c.Date).ToList());
 
-            var result = new List<MarketCandle>();
+            var result = new List<AnalysisCandle>();
 
             for (int i = 0; i < selected.Count; i++)
             {
@@ -106,12 +110,12 @@ namespace MarketAnalyzer.MarketIntelligence.Application
             string symbolStart,
             CancellationToken cancellation)
         {
-            var imeSymbols = await _unifiedSymbolRepository
-               .GetAllAsync(MarketType.Ime, CancellationToken.None);
+            var imeSymbols = await _catalogReader.SearchAllAsync(
+                new SymbolSearchQuery { MarketKey = "ime", SymbolKeyPrefix = symbolStart, OnlyActive = false },
+                cancellation);
 
             var symbols = imeSymbols
-                .Where(e => e.SymbolKey.StartsWith(symbolStart))
-                .Select(x => x.ToImeSymbol())
+                .Select(x => x.ToImeAnalysisSymbol())
                 .ToList();
 
             return symbols
@@ -119,24 +123,24 @@ namespace MarketAnalyzer.MarketIntelligence.Application
                 .ToList();
         }
 
-        private async Task<List<MarketCandle>> GetCandles(
+        private async Task<List<AnalysisCandle>> GetCandles(
             IEnumerable<string> symbols,
             DateTime startDate,
             DateTime endDate,
             CancellationToken cancellation)
         {
             var dailyCandles = await _candleQueryService.GetCandlesAsync(
-                new CandleQuery
+                new MultiSymbolCandleQuery
                 {
                     From = startDate,
                     To = endDate,
                     Timeframe = Timeframe.Daily,
                     SymbolKeys = symbols.ToArray(),
-                    Markets = new[] { MarketType.Ime }
+                    Markets = new[] { "ime" }
                 },
                 cancellation);
 
-            return dailyCandles.Select(e => new MarketCandle(e)).ToList();
+            return dailyCandles.ToList();
 
             //return await _imeService.GetCandlesAsync(
             //    new MarketQueryBuilder()
@@ -146,7 +150,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
             //    cancellation);
         }
 
-        private async Task<List<MarketCandle>> BuildForwardIndex(
+        private async Task<List<AnalysisCandle>> BuildForwardIndex(
             List<ImeSymbol> symbols,
             DateTime startDate,
             DateTime endDate,
@@ -162,7 +166,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
                 .GroupBy(x => x.InstrumentId)
                 .ToDictionary(x => x.Key, x => x.OrderBy(c => c.Date).ToList());
 
-            var result = new List<MarketCandle>();
+            var result = new List<AnalysisCandle>();
 
             DateTime? lastDate = null;
 
@@ -187,7 +191,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
             return result;
         }
 
-        private async Task<List<MarketCandle>> BuildBackwardIndex(
+        private async Task<List<AnalysisCandle>> BuildBackwardIndex(
             List<ImeSymbol> symbols,
             DateTime startDate,
             DateTime endDate,
@@ -203,7 +207,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
                 .GroupBy(x => x.InstrumentId)
                 .ToDictionary(x => x.Key, x => x.OrderByDescending(c => c.Date).ToList());
 
-            var result = new List<MarketCandle>();
+            var result = new List<AnalysisCandle>();
 
             DateTime? boundaryExclusive = endDate;
 
@@ -231,6 +235,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
 }
 
 
+//using MarketAnalyzer.MarketData.Domain;
 //using MarketAnalyzer.MarketIntelligence.Domain;
 //using MarketAnalyzer.MarketIntelligence.Infrastructure;
 //using MarketAnalyzer.SharedKernel;
@@ -258,7 +263,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
 //        /// <summary>
 //        /// ایجاد ایندکس قرارداد، با نزدیکترین سر رسید
 //        /// </summary>
-//        public async Task<List<MarketCandle>> CreateNearestDueDateContractIndex(
+//        public async Task<List<AnalysisCandle>> CreateNearestDueDateContractIndex(
 //            string symbolStart,
 //            DateTime startDate,
 //            DateTime endDate,
@@ -278,7 +283,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
 //               .ForSymbols(symbolList.ToArray())
 //               .Build(), cancellation);
 
-//            var result = new List<MarketCandle>();
+//            var result = new List<AnalysisCandle>();
 //            DateTime? lastDate = null;
 
 //            foreach (var s in symbols)
@@ -308,7 +313,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
 //            return result;
 //        }
 
-//        public async Task<List<MarketCandle>> CreateNearestDueDateContractIndex1(
+//        public async Task<List<AnalysisCandle>> CreateNearestDueDateContractIndex1(
 //            string symbolStart,
 //            DateTime startDate,
 //            DateTime endDate, CancellationToken cancellation)
@@ -330,7 +335,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
 //               .ForSymbols(symbolList.ToArray())
 //               .Build(), cancellation);
 
-//            var result = new List<MarketCandle>();
+//            var result = new List<AnalysisCandle>();
 //            DateTime? boundaryExclusive = endDate; // محدودیت بالایی برای تاریخ‌های آینده
 
 //            foreach (var s in symbols)
@@ -368,7 +373,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
 //        /// <summary>
 //        /// ایجاد ایندکس قرارداد، سر رسید دوم
 //        /// </summary>
-//        public async Task<List<MarketCandle>> CreateSecondDueDateContractIndex(
+//        public async Task<List<AnalysisCandle>> CreateSecondDueDateContractIndex(
 //            string symbolStart,
 //            DateTime startDate,
 //            DateTime endDate, CancellationToken cancellation)
@@ -390,7 +395,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
 //               .ForSymbols(symbolList.ToArray())
 //               .Build(), cancellation);
 
-//            var result = new List<MarketCandle>();
+//            var result = new List<AnalysisCandle>();
 //            DateTime? boundaryExclusive = endDate; // محدودیت بالایی برای تاریخ‌های آینده
 
 //            foreach (var s in symbols)
@@ -428,7 +433,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
 //        /// <summary>
 //        /// ایجاد ایندکس قرارداد با دورترین سررسید
 //        /// </summary>
-//        public async Task<List<MarketCandle>> CreateLatestDueDateContractIndex(
+//        public async Task<List<AnalysisCandle>> CreateLatestDueDateContractIndex(
 //            string symbolStart,
 //            DateTime startDate,
 //            DateTime endDate,
@@ -448,7 +453,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
 //               .ForSymbols(symbolList.ToArray())
 //               .Build(), cancellation);
 
-//            var result = new List<MarketCandle>();
+//            var result = new List<AnalysisCandle>();
 //            DateTime? boundaryExclusive = endDate; // محدودیت بالایی برای تاریخ‌های آینده
 
 //            foreach (var s in symbols)
@@ -483,7 +488,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
 //            return result;
 //        }
 
-//        public async Task<List<MarketCandle>> CreateIndexByContractRank(
+//        public async Task<List<AnalysisCandle>> CreateIndexByContractRank(
 //            string symbolStart,
 //            DateTime startDate,
 //            DateTime endDate,
@@ -496,7 +501,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
 
 //            // 2) rank معتبر است؟
 //            if (rank < 1 || rank > symbols.Count)
-//                return new List<MarketCandle>();
+//                return new List<AnalysisCandle>();
 
 //            // 3) انتخاب نمادهای تا رنک مشخص
 //            var selected = symbols.Take(rank).ToList();
@@ -511,7 +516,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
 //            // 5) برای هر قرارداد، بازه خودش را می‌سازیم: 
 //            //     ابزار i: windowStart = (i == 0) ? startDate : previous.DeliveryDate.AddDays(1)
 //            //                windowEndExclusive = current.DeliveryDate
-//            var result = new List<MarketCandle>();
+//            var result = new List<AnalysisCandle>();
 
 //            for (int i = 0; i < rank; i++)
 //            {

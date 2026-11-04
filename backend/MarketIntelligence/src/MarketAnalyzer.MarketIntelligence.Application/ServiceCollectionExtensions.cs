@@ -1,4 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace MarketAnalyzer.MarketIntelligence.Application
 {
@@ -16,6 +16,14 @@ namespace MarketAnalyzer.MarketIntelligence.Application
 
             services.AddScoped<AnalysisStrategyRegistry>();
             services.AddScoped<IAnalysisEngine, AnalysisEngine>();
+            services.AddScoped<Ports.IAnalysisCandleReader, Ports.MarketDataAnalysisCandleReader>();
+            services.AddScoped<Ports.MarketDataIranEquitySymbolCatalog>();
+            services.AddScoped<Strategies.RatioCandles.RunRatioCandlesHandler>();
+            services.AddScoped<Strategies.IranQueue.RunIranQueueHandler>();
+            services.AddScoped<Strategies.BottomReversal.BottomReversalHandler>();
+            services.AddScoped<Strategies.MultiIndicatorDivergence.MultiIndicatorDivergenceHandler>();
+            services.AddScoped<Strategies.YtmFuture.YtmFutureHandler>();
+            services.AddScoped<Strategies.IranEquityMain.IranEquityMainHandler>();
 
             services.AddScoped<ICalculateImeContractIndex, CalculateImeContractIndex>();
 

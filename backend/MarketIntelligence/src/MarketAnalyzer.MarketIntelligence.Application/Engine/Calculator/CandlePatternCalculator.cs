@@ -1,4 +1,5 @@
-﻿using MarketAnalyzer.MarketIntelligence.Domain;
+using MarketAnalyzer.MarketData.Domain;
+using MarketAnalyzer.MarketIntelligence.Domain;
 
 namespace MarketAnalyzer.MarketIntelligence.Application
 {
@@ -8,7 +9,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
     /// </summary>
     public static class CandlePatternCalculator
     {
-        public static bool IsBullish(MarketCandle? candle)
+        public static bool IsBullish(AnalysisCandle? candle)
         {
             if (candle == null)
                 return false;
@@ -16,7 +17,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
             return candle.Close > candle.Open;
         }
 
-        public static bool IsBearish(MarketCandle? candle)
+        public static bool IsBearish(AnalysisCandle? candle)
         {
             if (candle == null)
                 return false;
@@ -24,7 +25,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
             return candle.Close < candle.Open;
         }
 
-        public static decimal Range(MarketCandle? candle)
+        public static decimal Range(AnalysisCandle? candle)
         {
             if (candle == null)
                 return 0;
@@ -32,7 +33,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
             return candle.High - candle.Low;
         }
 
-        public static decimal Body(MarketCandle? candle)
+        public static decimal Body(AnalysisCandle? candle)
         {
             if (candle == null)
                 return 0;
@@ -40,7 +41,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
             return Math.Abs(candle.Close - candle.Open);
         }
 
-        public static decimal BodyToRangeRatio(MarketCandle? candle)
+        public static decimal BodyToRangeRatio(AnalysisCandle? candle)
         {
             var range = Range(candle);
 
@@ -50,7 +51,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
             return Body(candle) / range;
         }
 
-        public static decimal LowerShadow(MarketCandle? candle)
+        public static decimal LowerShadow(AnalysisCandle? candle)
         {
             if (candle == null)
                 return 0;
@@ -59,7 +60,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
             return lowerBodyPrice - candle.Low;
         }
 
-        public static decimal UpperShadow(MarketCandle? candle)
+        public static decimal UpperShadow(AnalysisCandle? candle)
         {
             if (candle == null)
                 return 0;
@@ -68,7 +69,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
             return candle.High - upperBodyPrice;
         }
 
-        public static decimal LowerShadowRatio(MarketCandle? candle)
+        public static decimal LowerShadowRatio(AnalysisCandle? candle)
         {
             var range = Range(candle);
 
@@ -78,7 +79,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
             return LowerShadow(candle) / range;
         }
 
-        public static decimal UpperShadowRatio(MarketCandle? candle)
+        public static decimal UpperShadowRatio(AnalysisCandle? candle)
         {
             var range = Range(candle);
 
@@ -88,7 +89,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
             return UpperShadow(candle) / range;
         }
 
-        public static decimal CloseLocationValue(MarketCandle? candle)
+        public static decimal CloseLocationValue(AnalysisCandle? candle)
         {
             if (candle == null)
                 return 0;
@@ -101,12 +102,12 @@ namespace MarketAnalyzer.MarketIntelligence.Application
             return (candle.Close - candle.Low) / range;
         }
 
-        public static bool IsCloseNearHigh(MarketCandle? candle, decimal threshold = 0.7m)
+        public static bool IsCloseNearHigh(AnalysisCandle? candle, decimal threshold = 0.7m)
         {
             return CloseLocationValue(candle) >= threshold;
         }
 
-        public static bool IsCloseNearLow(MarketCandle? candle, decimal threshold = 0.3m)
+        public static bool IsCloseNearLow(AnalysisCandle? candle, decimal threshold = 0.3m)
         {
             return CloseLocationValue(candle) <= threshold;
         }
@@ -114,7 +115,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// <summary>
         /// امتیاز تک‌کندلی برگشتی بودن در بازه 0 تا 100
         /// </summary>
-        public static decimal ReversalCandleScore(MarketCandle? candle)
+        public static decimal ReversalCandleScore(AnalysisCandle? candle)
         {
             if (candle == null)
                 return 0;
@@ -146,7 +147,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// امتیاز چندکندلی برگشتی بودن در بازه 0 تا 100.
         /// این متد علاوه بر شکل کندل آخر، زمینه‌ی چند روز اخیر را هم بررسی می‌کند.
         /// </summary>
-        public static decimal ReversalCandleScore(IReadOnlyList<MarketCandle>? candles, int lookback = 3)
+        public static decimal ReversalCandleScore(IReadOnlyList<AnalysisCandle>? candles, int lookback = 3)
         {
             if (candles == null || candles.Count < 2)
                 return 0;
@@ -238,7 +239,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// - سایه بالایی کوتاه
         /// - بدنه نسبتاً کوچک تا متوسط
         /// </summary>
-        public static bool IsHammer(MarketCandle? candle)
+        public static bool IsHammer(AnalysisCandle? candle)
         {
             if (candle == null)
                 return false;
@@ -259,7 +260,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// <summary>
         /// آیا آخرین کندل چیزی شبیه Shooting Star / ضعف در بالا است؟
         /// </summary>
-        public static bool IsShootingStar(MarketCandle? candle)
+        public static bool IsShootingStar(AnalysisCandle? candle)
         {
             if (candle == null)
                 return false;

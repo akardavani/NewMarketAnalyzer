@@ -4,6 +4,7 @@ import { StrategyPageBase } from '../../shared/strategy-page.base';
 import { daysAgo, today } from '../../shared/jalali';
 import { LineChartComponent, ChartSeriesInput } from '../../shared/line-chart/line-chart.component';
 import { DataTableComponent } from '../../shared/data-table/data-table.component';
+import { RunYtmFutureRequest } from '../../shared/strategy-api.service';
 
 @Component({
   selector: 'mi-ytm-future',
@@ -28,6 +29,21 @@ export class YtmFutureComponent extends StrategyPageBase {
     const s = this.isoDate('تاریخ شروع', this.startDate, p);
     const e = this.isoDate('تاریخ پایان', this.endDate, p);
     return p.length ? null : { StartDate: s, EndDate: e, Symbol: this.symbol, Calculates: this.calculates };
+  }
+
+  override run(): void {
+    this.resetState();
+    const problems: string[] = [];
+    const params = this.buildParams(problems);
+    if (problems.length || !params) { this.errors.set(problems); return; }
+
+    const request: RunYtmFutureRequest = {
+      symbol: String(params['Symbol']),
+      calculates: String(params['Calculates']),
+      startDate: String(params['StartDate']),
+      endDate: String(params['EndDate'])
+    };
+    this.execute(this.api.runYtmFuture(request));
   }
 
   get rows(): any[] { return Array.isArray(this.data()) ? (this.data() as any[]) : []; }

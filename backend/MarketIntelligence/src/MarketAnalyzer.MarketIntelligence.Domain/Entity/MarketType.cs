@@ -1,4 +1,6 @@
-﻿namespace MarketAnalyzer.MarketIntelligence.Domain
+using MarketAnalyzer.MarketData.Domain;
+
+namespace MarketAnalyzer.MarketIntelligence.Domain
 {
     public enum MarketType
     {

@@ -1,4 +1,5 @@
-﻿using MarketAnalyzer.MarketIntelligence.Domain;
+using MarketAnalyzer.MarketData.Domain;
+using MarketAnalyzer.MarketIntelligence.Domain;
 
 namespace MarketAnalyzer.MarketIntelligence.Application
 {
@@ -12,7 +13,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// محاسبه آخرین مقدار SMA بر اساس قیمت پایانی.
         /// اگر تعداد کندل‌ها کمتر از period باشد، صفر برمی‌گرداند.
         /// </summary>
-        public static decimal SMA(IReadOnlyList<MarketCandle> candles, int period)
+        public static decimal SMA(IReadOnlyList<AnalysisCandle> candles, int period)
         {
             if (period <= 0)
                 return 0;
@@ -31,7 +32,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// محاسبه SMA روی لیست کامل و برگشت آخرین مقدار.
         /// این متد معادل SMA است، ولی نامش برای خوانایی بعضی جاها مفید است.
         /// </summary>
-        public static decimal LatestSMA(IReadOnlyList<MarketCandle> candles, int period)
+        public static decimal LatestSMA(IReadOnlyList<AnalysisCandle> candles, int period)
         {
             return SMA(candles, period);
         }
@@ -41,7 +42,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// برای بک‌تست مهم است چون نباید از آینده استفاده شود.
         /// index یعنی آخرین کندلی که اجازه داریم ببینیم.
         /// </summary>
-        public static decimal SMAAt(IReadOnlyList<MarketCandle> candles, int period, int index)
+        public static decimal SMAAt(IReadOnlyList<AnalysisCandle> candles, int period, int index)
         {
             if (period <= 0)
                 return 0;
@@ -65,7 +66,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// مثبت بودن یعنی قیمت بالاتر از میانگین است.
         /// منفی بودن یعنی قیمت پایین‌تر از میانگین است.
         /// </summary>
-        public static decimal DistanceToSMA(IReadOnlyList<MarketCandle> candles, int period, decimal currentPrice)
+        public static decimal DistanceToSMA(IReadOnlyList<AnalysisCandle> candles, int period, decimal currentPrice)
         {
             var sma = SMA(candles, period);
 
@@ -78,7 +79,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// کاربرد:
         /// تشخیص اینکه میانگین متحرک صعودی، نزولی یا خنثی شده است.
         /// </summary>
-        public static decimal SMASlopePercent(IReadOnlyList<MarketCandle> candles, int period, int lookback)
+        public static decimal SMASlopePercent(IReadOnlyList<AnalysisCandle> candles, int period, int lookback)
         {
             if (period <= 0 || lookback <= 0)
                 return 0;

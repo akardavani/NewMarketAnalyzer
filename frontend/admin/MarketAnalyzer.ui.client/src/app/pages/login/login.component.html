@@ -1,130 +1,74 @@
-<form [formGroup]="formGroup" (ngSubmit)="submit()" class="login-wrapper d-flex align-items-center justify-content-center p-3">
-
-  <div class="login-card-container d-flex flex-column flex-lg-row overflow-hidden">
-
-    <!-- Hero / Visual Panel (Left side in RTL) -->
-    <div class="hero-section d-flex flex-column justify-content-between p-4 p-md-5 position-relative">
-      <!-- Glow Accent Backgrounds -->
-      <div class="glow-bg glow-gold"></div>
-      <div class="glow-bg glow-blue"></div>
-
-      <!-- Header / Slogan -->
-      <div class="hero-header z-1">
-        <div class="brand-badge d-inline-flex align-items-center gap-2 mb-3">
-          <i class="bi bi-graph-up-arrow text-warning"></i>
-          <span class="fw-bold fs-5 text-light">{{ brand.productFullName || 'سامانه جامع تحلیل بازار' }}</span>
-        </div>
-        <h2 class="hero-title fw-bold text-white mb-2">
-          تصمیم‌های <span class="text-gold">بهتر</span>، با تحلیل‌های <span class="text-gold">دقیق‌تر</span>
-        </h2>
-        <p class="hero-subtitle text-light opacity-75">
-          دسترسی به تحلیل‌های حرفه‌ای، داده‌های لحظه‌ای و ابزارهای پیشرفته بازار سرمایه
-        </p>
+<form [formGroup]="formGroup" (ngSubmit)="submit()" class="login-page">
+  <div class="login-card">
+    <section class="login-art" aria-label="نمایی از بازارهای جهانی">
+      <div class="art-shade"></div>
+      <div class="art-brand">
+        <i class="pa pa-statistics" aria-hidden="true"></i>
+        <span>{{ brand.productFullName || 'سامانه جامع تحلیل بازار' }}</span>
       </div>
-
-      <!-- Center Visual Graphic (Cheetah Art via 02.png fallback/background) -->
-      <div class="hero-graphic position-relative my-3 text-center z-1">
-        <div class="cheetah-banner-box rounded-4 p-3 d-flex align-items-center justify-content-center">
-          <img src="/dist/browser/images/chita.png" alt="چیتای دیجیتال" class="cheetah-fixed-img">
-        </div>
+      <div class="art-caption">
+        <span class="art-eyebrow">دیدی گسترده‌تر، تصمیمی دقیق‌تر</span>
+        <h1>بازارها را با نگاهی تازه دنبال کنید</h1>
+        <p>داده‌ها و تحلیل‌های بازار، در یک فضای یکپارچه</p>
       </div>
+      <div class="art-credit">تحلیل بازار، با تمرکز بر آنچه اهمیت دارد</div>
+    </section>
 
-      <!-- Feature Badges Footer -->
-      <div class="hero-features d-flex justify-content-between align-items-center gap-2 z-1 pt-3 border-top border-secondary border-opacity-25">
-        <div class="feature-item text-center">
-          <i class="bi bi-shield-check text-gold fs-5 mb-1 d-block"></i>
-          <span class="fs-7 text-light">امنیت بالا</span>
-        </div>
-        <div class="feature-item text-center">
-          <i class="bi bi-lightning-charge text-warning fs-5 mb-1 d-block"></i>
-          <span class="fs-7 text-light">سرعت و پایداری</span>
-        </div>
-        <div class="feature-item text-center">
-          <i class="bi bi-bar-chart-line text-info fs-5 mb-1 d-block"></i>
-          <span class="fs-7 text-light">تحلیل‌های تخصصی</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Login Form Container (Right side in RTL) -->
-    <div class="form-container position-relative p-4 p-md-5 d-flex flex-column justify-content-between">
-
-      <!-- Loading Overlay -->
+    <section class="login-panel">
       <fd-loader *ngIf="loading" [message]="'در حال ورود...'"></fd-loader>
 
-      <!-- Form Header -->
-      <div class="form-header text-center mb-4">
-        <div class="logo-box mb-3 d-flex justify-content-center align-items-center">
-          <img *ngIf="brand.logoUrl; else defaultLogo" [src]="brand.logoUrl" class="broker-logo img-fluid" alt="Logo" />
-          <ng-template #defaultLogo>
-            <div class="default-avatar-logo rounded-circle d-flex align-items-center justify-content-center">
-              <i class="bi bi-person-circle fs-1 text-gold"></i>
-            </div>
-          </ng-template>
-        </div>
-        <h3 class="fw-bold text-white mb-1">خوش آمدید</h3>
-        <p class="text-light opacity-75 fs-7">جهت ادامه، وارد حساب کاربری خود شوید</p>
-      </div>
+      <header class="form-header">
+        @if (brand.logoUrl) {
+          <img [src]="brand.logoUrl" class="broker-logo" alt="نشان کارگزار" />
+        } @else {
+          <div class="default-logo" aria-hidden="true"><i class="pa pa-statistics"></i></div>
+        }
+        <h2>خوش آمدید</h2>
+        <p>برای ادامه، وارد حساب کاربری خود شوید</p>
+      </header>
 
-      <!-- Form Fields -->
-      <div class="d-flex flex-column gap-3">
-
-        <!-- Username Field -->
+      <div class="login-fields">
         <div class="input-group-custom">
           <fd-float-label label="نام کاربری">
-            <input type="text" formControlName="userName" class="form-control" />
+            <input type="text" formControlName="userName" class="form-control" autocomplete="username" />
           </fd-float-label>
-          <span class="text-danger fs-7" *ngIf="formGroup.get('userName')?.touched && formGroup.get('userName')?.errors?.['required']">
+          <span class="field-error" *ngIf="formGroup.get('userName')?.touched && formGroup.get('userName')?.errors?.['required']">
             وارد کردن نام کاربری الزامی است
           </span>
         </div>
 
-        <!-- Password Field -->
         <div class="input-group-custom">
           <fd-float-label label="رمز عبور">
             <fd-password formControlName="password"></fd-password>
           </fd-float-label>
-          <span class="text-danger fs-7" *ngIf="formGroup.get('password')?.touched && formGroup.get('password')?.errors?.['required']">
+          <span class="field-error" *ngIf="formGroup.get('password')?.touched && formGroup.get('password')?.errors?.['required']">
             وارد کردن رمز عبور الزامی است
           </span>
         </div>
 
-        <!-- Captcha Field -->
-        <div class="input-group-custom">
+        <div class="input-group-custom captcha-field">
           <fd-float-label label="کد امنیتی">
             <fd-captcha formControlName="captchaCode"></fd-captcha>
           </fd-float-label>
-          <span class="text-danger fs-7" *ngIf="formGroup.get('captchaCode')?.touched && formGroup.get('captchaCode')?.errors?.['required']">
+          <span class="field-error" *ngIf="formGroup.get('captchaCode')?.touched && formGroup.get('captchaCode')?.errors?.['required']">
             وارد کردن کد امنیتی الزامی است
           </span>
         </div>
 
-        <!-- Forgot Password Link -->
-        <div class="d-flex justify-content-end mb-2">
-          <a routerLink="/forgot-password" class="forgot-link fs-7 text-decoration-none">
-            <i class="bi bi-key me-1"></i>فراموشی کلمه عبور؟
-          </a>
+        <div class="login-options">
+          <a routerLink="/forgot-password" class="forgot-link">فراموشی رمز عبور؟</a>
         </div>
 
-        <!-- Submit Button -->
-        <button type="submit" [disabled]="loading" class="btn btn-gold btn-lg w-100 fw-bold d-flex align-items-center justify-content-center gap-2 shadow">
+        <button type="submit" [disabled]="loading" class="login-submit">
           <span>ورود به حساب</span>
-          <i class="bi bi-box-arrow-in-left fs-5"></i>
+          <i class="bi bi-box-arrow-in-left" aria-hidden="true"></i>
         </button>
-
       </div>
 
-      <!-- Form Footer -->
-      <div class="form-footer mt-4 pt-3 text-center border-top border-secondary border-opacity-25 fs-7 text-light opacity-75">
-        <div *ngIf="brand.companyName" class="mb-1">
-          طراحی شده توسط: <span class="fw-semibold text-white">{{ brand.companyName }}</span>
-        </div>
-        <div *ngIf="version">
-          نسخه: <span class="badge bg-secondary bg-opacity-50 text-light fw-normal">{{ version }}</span>
-        </div>
-      </div>
-
-    </div>
-
+      <footer class="form-footer">
+        <span *ngIf="brand.companyName">{{ brand.companyName }}</span>
+        <span *ngIf="version">نسخه {{ version }}</span>
+      </footer>
+    </section>
   </div>
 </form>

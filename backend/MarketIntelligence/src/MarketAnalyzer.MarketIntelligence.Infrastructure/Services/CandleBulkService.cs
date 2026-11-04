@@ -1,4 +1,5 @@
-﻿
+
+using MarketAnalyzer.MarketData.Domain;
 using MarketAnalyzer.MarketIntelligence.Domain;
 using Microsoft.EntityFrameworkCore;
 

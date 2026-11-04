@@ -22,6 +22,11 @@ namespace MarketAnalyzer.Api.Controllers
         {
             AppState appState;
             var userProfile = await GetUserProfileAsync(cancellationToken);
+            if (userProfile is null)
+            {
+                return Unauthorized(ApiResult.FromErrors<UserAppData>(
+                    new[] { "کاربر نشست جاری در پایگاه داده پیدا نشد. لطفاً دوباره وارد شوید." }));
+            }
 
             appState = AppState.Ready;
 

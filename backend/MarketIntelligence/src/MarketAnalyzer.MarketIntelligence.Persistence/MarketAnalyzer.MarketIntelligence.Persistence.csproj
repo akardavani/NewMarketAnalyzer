@@ -6,6 +6,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MarketAnalyzer.MarketIntelligence.Domain\MarketAnalyzer.MarketIntelligence.Domain.csproj" />
+    <ProjectReference Include="..\..\..\MarketData\src\MarketAnalyzer.MarketData.Domain\MarketAnalyzer.MarketData.Domain.csproj" />
     <!-- Phase 2: Storeها از IDbContext (Abstractions) استفاده می‌کنند؛ Persistence نباید به Application یا FundDbContext وابسته شود. -->
     <ProjectReference Include="..\..\..\Common\src\MarketAnalyzer.Abstractions\MarketAnalyzer.Abstractions.csproj" />
   </ItemGroup>

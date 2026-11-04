@@ -1,5 +1,6 @@
-﻿using MarketAnalyzer.Collector;
+using MarketAnalyzer.Collector;
 using MarketAnalyzer.ConnectedServices.TsePublic;
+using MarketAnalyzer.MarketData.Domain;
 using MarketAnalyzer.MarketIntelligence.Domain;
 using MarketAnalyzer.MarketIntelligence.Infrastructure;
 using Microsoft.Extensions.Options;

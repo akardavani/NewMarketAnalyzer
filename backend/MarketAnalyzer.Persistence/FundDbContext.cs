@@ -288,7 +288,7 @@ namespace MarketAnalyzer.Persistence
                 modelBuilder.ApplyConfigurationsFromAssembly(part.Assembly);
             }
 
-            // All MarketIntelligence entities live in the "marketintelligence" schema.
+            // Persist the remaining legacy MarketIntelligence data under MarketData during the migration.
             // Applied last so it also overrides entities configured with ToTable("...") without a schema.
             foreach (var entityType in modelBuilder.Model.GetEntityTypes())
             {
@@ -298,7 +298,7 @@ namespace MarketAnalyzer.Persistence
                 var ns = entityType.ClrType?.Namespace;
                 if (ns != null && ns.StartsWith("MarketAnalyzer.MarketIntelligence.", StringComparison.Ordinal))
                 {
-                    entityType.SetSchema("marketintelligence");
+                    entityType.SetSchema("marketdata");
                 }
             }
         }

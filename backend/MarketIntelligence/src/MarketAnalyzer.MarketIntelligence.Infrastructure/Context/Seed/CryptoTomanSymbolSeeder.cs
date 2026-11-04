@@ -1,6 +1,7 @@
-﻿
+
 using System.Reflection;
 using System.Text.Json;
+using MarketAnalyzer.MarketData.Domain;
 using MarketAnalyzer.MarketIntelligence.Domain;
 
 namespace MarketAnalyzer.MarketIntelligence.Infrastructure

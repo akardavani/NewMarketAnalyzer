@@ -1,0 +1,57 @@
+.settings-page { display: grid; gap: .75rem; max-width: 1320px; margin: 0 auto; padding: .9rem; color: var(--text-color, #1f2937); font-size: .92rem; }
+.page-header, .section-header, .catalog-panel, .market-summary, .capability, .setting-row, .run-job, .provider-picker { display: flex; align-items: center; gap: .65rem; }
+.page-header, .section-header, .catalog-panel, .market-summary { justify-content: space-between; }
+h2, h3, h4, p { margin: 0; }
+.page-header h2 { font-size: 1.25rem; }
+.page-header p, .muted { margin-top: .2rem; color: #6b7280; font-size: .84rem; }
+.panel { background: var(--surface-card, #fff); border: 1px solid #e5e7eb; border-radius: .65rem; padding: .75rem .9rem; }
+.catalog-panel { gap: 1rem; }
+.catalog-panel h3, .section-header h3 { font-size: 1rem; }
+.section-header { padding: .2rem .2rem 0; }
+.count { color: #6b7280; font-size: .82rem; }
+.markets-section { display: grid; gap: .55rem; }
+.market-card { padding: 0; overflow: hidden; }
+.market-summary { list-style: none; min-height: 3.3rem; padding: .6rem .85rem; cursor: pointer; }
+.market-summary::-webkit-details-marker, summary::-webkit-details-marker { display: none; }
+.market-summary::after, .subsection > summary::after, .advanced-settings > summary::after { content: '⌄'; color: #64748b; margin-right: .6rem; }
+details[open] > .market-summary::after, details[open] > summary::after { content: '⌃'; }
+.market-title { display: grid; gap: .12rem; }
+.market-title strong { font-size: .98rem; }
+.market-title small { color: #64748b; font-size: .78rem; direction: ltr; text-align: right; }
+.badge { color: #166534; background: #dcfce7; border-radius: 1rem; padding: .2rem .55rem; font-size: .75rem; }
+.badge.off { color: #991b1b; background: #fee2e2; }
+.market-content { display: grid; gap: .6rem; border-top: 1px solid #eef0f3; padding: .75rem .85rem; }
+.market-content h4 { font-size: .88rem; margin-bottom: .45rem; }
+.capabilities { display: grid; grid-template-columns: repeat(auto-fit, minmax(235px, 1fr)); gap: .45rem; }
+.capability { justify-content: space-between; min-width: 0; border: 1px solid #eef0f3; border-radius: .45rem; padding: .45rem .55rem; font-size: .83rem; }
+.capability select { max-width: 58%; }
+.subsection { border-top: 1px solid #eef0f3; padding-top: .55rem; }
+.subsection > summary, .advanced-settings > summary, .provider-panel > summary { cursor: pointer; font-weight: 600; font-size: .86rem; }
+.settings-list { margin-top: .35rem; }
+.setting-row { justify-content: flex-start; padding: .3rem 0; border-bottom: 1px solid #f1f2f4; }
+.setting-name { display: grid; width: min(280px, 30%); gap: .08rem; font-size: .82rem; }
+.setting-name small { color: #94a3b8; font-size: .68rem; direction: ltr; text-align: right; overflow-wrap: anywhere; }
+select, input { min-width: 0; border: 1px solid #d1d5db; border-radius: .38rem; padding: .42rem .5rem; background: #fff; font: inherit; }
+.setting-row input { flex: 1; }
+button { flex: 0 0 auto; border: 0; border-radius: .38rem; background: #2563eb; color: #fff; padding: .44rem .72rem; font: inherit; font-size: .82rem; cursor: pointer; }
+button.secondary { background: #eef2ff; color: #1e40af; }
+button:disabled { opacity: .55; cursor: wait; }
+.advanced-settings { margin-top: .5rem; padding: .5rem; background: #f8fafc; border-radius: .45rem; }
+.add-setting { margin-top: .35rem; }
+.run-job { justify-content: flex-start; margin-top: .45rem; }
+.run-job select { width: min(360px, 70%); }
+.provider-panel { display: grid; gap: .45rem; }
+.provider-picker select { flex: 1; max-width: 420px; }
+.message { border-radius: .45rem; padding: .6rem .8rem; }
+.message.error { color: #991b1b; background: #fee2e2; }
+.message.success { color: #166534; background: #dcfce7; }
+.job-result pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: .8rem; }
+@media (max-width: 700px) {
+  .settings-page { padding: .6rem; }
+  .page-header, .catalog-panel { align-items: stretch; flex-direction: column; }
+  .setting-row, .capability, .run-job { align-items: stretch; flex-direction: column; }
+  .setting-name { width: 100%; }
+  .capability select, .run-job select { max-width: none; width: 100%; }
+  .provider-picker { align-items: stretch; flex-direction: column; }
+  .provider-picker select { max-width: none; }
+}

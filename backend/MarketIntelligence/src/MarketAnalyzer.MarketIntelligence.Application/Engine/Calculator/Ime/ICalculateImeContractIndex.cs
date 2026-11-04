@@ -1,12 +1,13 @@
-﻿using MarketAnalyzer.MarketIntelligence.Domain;
+using MarketAnalyzer.MarketData.Domain;
+using MarketAnalyzer.MarketIntelligence.Domain;
 
 namespace MarketAnalyzer.MarketIntelligence.Application
 {
     public interface ICalculateImeContractIndex 
     {
-        Task<List<MarketCandle>> CreateNearestDueDateContractIndex(string symbolStart, DateTime startDate, DateTime endDate, CancellationToken cancellation);
-        Task<List<MarketCandle>> CreateSecondDueDateContractIndex(string symbolStart, DateTime startDate, DateTime endDate, CancellationToken cancellation);
+        Task<List<AnalysisCandle>> CreateNearestDueDateContractIndex(string symbolStart, DateTime startDate, DateTime endDate, CancellationToken cancellation);
+        Task<List<AnalysisCandle>> CreateSecondDueDateContractIndex(string symbolStart, DateTime startDate, DateTime endDate, CancellationToken cancellation);
 
-        Task<List<MarketCandle>> CreateLatestDueDateContractIndex(string symbolStart, DateTime startDate, DateTime endDate, CancellationToken cancellation);
+        Task<List<AnalysisCandle>> CreateLatestDueDateContractIndex(string symbolStart, DateTime startDate, DateTime endDate, CancellationToken cancellation);
     }
 }

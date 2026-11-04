@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { StrategyPageBase } from '../../shared/strategy-page.base';
 import { daysAgo, today } from '../../shared/jalali';
 import { DataTableComponent } from '../../shared/data-table/data-table.component';
+import { RunMultiIndicatorDivergenceRequest } from '../../shared/strategy-api.service';
 
 @Component({
   selector: 'mi-multi-indicator-divergence',
@@ -17,6 +18,16 @@ export class MultiIndicatorDivergenceComponent extends StrategyPageBase {
   protected buildParams(p: string[]) {
     this.required('مسیر فایل اکسل', this.inputFilePath, p);
     return p.length ? null : { InputFilePath: this.inputFilePath.trim() };
+  }
+
+  override run(): void {
+    this.resetState();
+    const problems: string[] = [];
+    const params = this.buildParams(problems);
+    if (problems.length || !params) { this.errors.set(problems); return; }
+
+    const request: RunMultiIndicatorDivergenceRequest = { inputFilePath: String(params['InputFilePath']) };
+    this.execute(this.api.runMultiIndicatorDivergence(request));
   }
 
   /** Flatten detectedDivergences into one readable column. */

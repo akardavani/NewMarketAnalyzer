@@ -1,4 +1,5 @@
-﻿using MarketAnalyzer.MarketIntelligence.Domain;
+using MarketAnalyzer.MarketData.Domain;
+using MarketAnalyzer.MarketIntelligence.Domain;
 
 namespace MarketAnalyzer.MarketIntelligence.Application
 {
@@ -9,7 +10,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// 3 سقف نزدیک به هم
         /// </summary>
         public static PriceZone? FindMonthlyResistance(
-            IReadOnlyList<MarketCandle> monthlyCandles,
+            IReadOnlyList<AnalysisCandle> monthlyCandles,
             decimal tolerancePercent = 3m)
         {
             if (monthlyCandles.Count < 12)
@@ -49,7 +50,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// <param name="tolerancePercent"></param>
         /// <returns></returns>
         public static PriceZone? FindMonthlySupport(
-    IReadOnlyList<MarketCandle> monthlyCandles,
+    IReadOnlyList<AnalysisCandle> monthlyCandles,
     decimal tolerancePercent = 3m)
         {
             if (monthlyCandles.Count < 12)

@@ -9,6 +9,67 @@
   border-radius: var(--fd-radius);
   box-shadow: var(--fd-shadow-card);
   min-width: 0;
+  padding: 16px;
+}
+
+.fd-page { display: grid; gap: 12px; min-width: 0; color: var(--fd-text); }
+.fd-card-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+
+.card,
+.modal-content,
+.dropdown-menu {
+  color: var(--fd-text);
+  background-color: var(--fd-surface);
+  border-color: var(--fd-line);
+  border-radius: var(--fd-radius);
+  box-shadow: var(--fd-shadow-card);
+}
+
+.card-header, .card-footer { background-color: var(--fd-surface-2); border-color: var(--fd-line); }
+.table { --bs-table-bg: var(--fd-surface); --bs-table-color: var(--fd-text); --bs-table-border-color: var(--fd-line); }
+
+// Shared page frame and reusable tool actions.
+.page-wrapper {
+  background: var(--fd-surface);
+  border: 1px solid var(--fd-line);
+  border-radius: var(--fd-radius);
+  box-shadow: var(--fd-shadow-card);
+}
+
+mi-data-table {
+  display: block;
+  margin-block: 10px;
+  padding: 12px;
+  overflow: hidden;
+  background: var(--fd-surface);
+  border: 1px solid var(--fd-line);
+  border-radius: var(--fd-radius);
+  box-shadow: var(--fd-shadow-card);
+}
+
+.tool-list fd-publish-modal,
+.tool-list fd-notes-panel,
+.tool-list fd-resources-modal,
+.tool-list fd-bookmarks-modal,
+.tool-list fd-passwords-modal { display: block; width: 100%; }
+
+.tool-trigger {
+  width: 100%;
+  min-height: 33px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #d4d2cb;
+  font: inherit;
+  font-size: 11.5px;
+  text-align: start;
+  cursor: pointer;
+
+  &:hover { background: rgb(255 255 255 / .09); color: #fff; }
+  &:focus-visible { outline: 2px solid #89b8ff; outline-offset: -2px; }
 }
 
 .fd-pill {

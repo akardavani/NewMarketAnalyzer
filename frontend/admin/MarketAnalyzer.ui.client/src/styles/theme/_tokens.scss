@@ -36,9 +36,9 @@
 
   // شکل
   --fd-radius: 18px;
-  --fd-radius-control: 12px;
-  --fd-row-h: 56px;
-  --fd-nav-h: 40px;
+  --fd-radius-control: 10px;
+  --fd-row-h: 50px;
+  --fd-nav-h: 36px;
 }
 
 :root[data-mode="dark"] {
@@ -52,5 +52,5 @@
 
 // تراکم
 :root[data-density="compact"] { --fd-row-h: 44px; --fd-nav-h: 34px; }
-:root[data-density="normal"]  { --fd-row-h: 56px; --fd-nav-h: 40px; }
+:root[data-density="normal"]  { --fd-row-h: 50px; --fd-nav-h: 36px; }
 :root[data-density="comfy"]   { --fd-row-h: 66px; --fd-nav-h: 46px; }

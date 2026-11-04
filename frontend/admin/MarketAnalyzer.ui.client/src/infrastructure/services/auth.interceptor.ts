@@ -27,6 +27,11 @@ export class AuthInterceptor implements HttpInterceptor {
       .pipe(
         catchError(response => {
           if (response instanceof HttpErrorResponse) {
+            if (response.status === 401) {
+              this.authService.signOut();
+              return throwError(() => response);
+            }
+
             const redirectPath = StatusCodeRedirectPath[response.status];
             if (redirectPath) {
               this.router.navigate([redirectPath]);

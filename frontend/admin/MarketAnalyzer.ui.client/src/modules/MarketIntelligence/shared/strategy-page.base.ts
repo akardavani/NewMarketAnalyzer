@@ -1,6 +1,7 @@
 import { Directive, inject, signal } from '@angular/core';
 import { StrategyApiService } from './strategy-api.service';
 import { jalaliTextToIso } from './jalali';
+import { Observable } from 'rxjs';
 
 /** Common run/loading/error handling. Each strategy page extends this and only supplies name + params. */
 @Directive()
@@ -25,17 +26,25 @@ export abstract class StrategyPageBase<TData = any> {
     if (String(value ?? '').trim() === '') problems.push(`فیلد "${label}" الزامی است.`);
   }
 
-  run(): void {
+  protected resetState(): void {
     this.errors.set([]);
     this.data.set(null);
-    const problems: string[] = [];
-    const parameters = this.buildParams(problems);
-    if (problems.length || !parameters) { this.errors.set(problems); return; }
+  }
 
+  protected execute(request: Observable<TData>): void {
+    this.resetState();
     this.running.set(true);
-    this.api.run(this.strategyName, parameters).subscribe({
+    request.subscribe({
       next: d => { this.running.set(false); this.data.set(d); },
       error: e => { this.running.set(false); this.errors.set([e?.error?.errors?.join(' ') || e?.message || 'خطای نامشخص']); }
     });
+  }
+
+  run(): void {
+    this.resetState();
+    const problems: string[] = [];
+    const parameters = this.buildParams(problems);
+    if (problems.length || !parameters) { this.errors.set(problems); return; }
+    this.execute(this.api.run(this.strategyName, parameters));
   }
 }

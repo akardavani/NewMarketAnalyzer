@@ -1,60 +1,130 @@
-﻿using MarketAnalyzer.MarketIntelligence.Domain;
+using MarketAnalyzer.Abstractions;
+using MarketAnalyzer.MarketData.Domain;
+using MarketAnalyzer.MarketIntelligence.Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace MarketAnalyzer.MarketIntelligence.Infrastructure
 {
-    public class UnifiedCandleQueryService : IUnifiedCandleQueryService
+    /// <summary>
+    /// سازگارکنندهٔ موقت برای مصرف‌کننده‌های قدیمی MarketIntelligence.
+    /// قرارداد UnifiedCandleRecord را نگه می‌دارد، اما داده را از HistoricalCandles می‌خواند.
+    /// </summary>
+    public sealed class UnifiedCandleQueryService : IUnifiedCandleQueryService
     {
-        private readonly IUnifiedCandleRepository _repo;
-
-        public UnifiedCandleQueryService(IUnifiedCandleRepository repo)
+        private static readonly IReadOnlyDictionary<MarketType, string> MarketKeys = new Dictionary<MarketType, string>
         {
-            _repo = repo;
+            [MarketType.Tse] = "tse",
+            [MarketType.Macro] = "macro",
+            [MarketType.Crypto] = "crypto",
+            [MarketType.Ime] = "ime",
+            [MarketType.InvestmentFund] = "fund",
+            [MarketType.RealEstate] = "real-estate",
+            [MarketType.TseIndex] = "tse-index",
+            [MarketType.CryptoToman] = "crypto-toman"
+        };
+
+        private readonly IDbContext _db;
+        private readonly IMarketDefinitionStore _markets;
+
+        public UnifiedCandleQueryService(IDbContext db, IMarketDefinitionStore markets)
+        {
+            _db = db;
+            _markets = markets;
         }
 
-        public async Task<List<UnifiedCandleRecord>> GetCandlesAsync(
-            CandleQuery query,
-            CancellationToken ct)
+        public async Task<List<UnifiedCandleRecord>> GetCandlesAsync(CandleQuery query, CancellationToken ct)
         {
-            var q = _repo.Query();
+            var selectedMarkets = query.Markets is { Count: > 0 }
+                ? query.Markets.Distinct().ToArray()
+                : MarketKeys.Keys.ToArray();
+            var definitions = await _markets.GetAllAsync(ct);
+            var results = new List<UnifiedCandleRecord>();
 
-            if (query.Markets is { Count: > 0 })
+            foreach (var marketType in selectedMarkets)
             {
-                q = q.Where(x => query.Markets.Contains(x.MarketId));
+                if (!MarketKeys.TryGetValue(marketType, out var marketKey))
+                    continue;
+
+                var market = definitions.FirstOrDefault(x => x.Key == marketKey);
+                if (market is null)
+                    continue;
+
+                var timeZone = TimeZoneInfo.FindSystemTimeZoneById(market.TimeZoneId);
+                var candles = _db.Set<HistoricalCandle>().AsNoTracking()
+                    .Where(x => x.Symbol.MarketId == market.Id);
+
+                if (query.SymbolKeys is { Count: > 0 })
+                    candles = candles.Where(x => query.SymbolKeys.Contains(x.Symbol.SymbolKey));
+                if (query.Timeframe.HasValue)
+                    candles = candles.Where(x => x.Timeframe == query.Timeframe.Value);
+                if (query.From.HasValue)
+                {
+                    var fromUtc = ToUtcBound(query.From.Value, timeZone);
+                    candles = candles.Where(x => x.OpenTimeUtc >= fromUtc);
+                }
+                if (query.To.HasValue)
+                {
+                    var toUtc = ToUtcBound(query.To.Value, timeZone);
+                    candles = candles.Where(x => x.OpenTimeUtc <= toUtc);
+                }
+
+                var rows = await candles
+                    .Select(x => new
+                    {
+                        x.Id,
+                        x.Timeframe,
+                        x.OpenTimeUtc,
+                        x.Open,
+                        x.High,
+                        x.Low,
+                        x.Close,
+                        x.Volume,
+                        x.Value,
+                        x.ReceivedAtUtc,
+                        x.Symbol.SymbolKey
+                    })
+                    .ToListAsync(ct);
+
+                foreach (var row in rows)
+                {
+                    var localDate = TimeZoneInfo.ConvertTimeFromUtc(AsUtc(row.OpenTimeUtc), timeZone);
+                    var record = new UnifiedCandleRecord
+                    {
+                        MarketId = marketType,
+                        TimeframeId = row.Timeframe,
+                        SymbolKey = row.SymbolKey,
+                        Open = row.Open,
+                        High = row.High,
+                        Low = row.Low,
+                        Close = row.Close,
+                        Volume = row.Volume,
+                        Value = row.Value,
+                        Date = localDate,
+                        PersianDate = localDate.ToPersian(),
+                        CreatedAtUtc = row.ReceivedAtUtc
+                    };
+                    record.GenerateId();
+                    results.Add(record);
+                }
             }
 
-            if (query.SymbolKeys is { Count: > 0 })
-            {
-                q = q.Where(x => query.SymbolKeys.Contains(x.SymbolKey));
-            }
-
-            if (query.Timeframe.HasValue)
-            {
-                q = q.Where(x => x.TimeframeId == query.Timeframe.Value);
-            }
-
-            if (query.From.HasValue)
-            {
-                q = q.Where(x => x.Date >= query.From.Value);
-            }
-
-            if (query.To.HasValue)
-            {
-                q = q.Where(x => x.Date <= query.To.Value);
-            }
-
-
-            var ss = q.ToQueryString();
-            return await q
-                //.Include(x => x.Market)
-                //.Include(x => x.Timeframe)
+            return results
                 .OrderBy(x => x.MarketId)
                 .ThenBy(x => x.SymbolKey)
                 .ThenBy(x => x.TimeframeId)
                 .ThenBy(x => x.Date)
-                .ToListAsync(ct);
+                .ToList();
         }
+
+        private static DateTime ToUtcBound(DateTime value, TimeZoneInfo timeZone)
+        {
+            if (value.Kind == DateTimeKind.Utc)
+                return value;
+
+            return TimeZoneInfo.ConvertTimeToUtc(DateTime.SpecifyKind(value, DateTimeKind.Unspecified), timeZone);
+        }
+
+        private static DateTime AsUtc(DateTime value)
+            => value.Kind == DateTimeKind.Utc ? value : DateTime.SpecifyKind(value, DateTimeKind.Utc);
     }
 }
-
-

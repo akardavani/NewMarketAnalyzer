@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
 	<PropertyGroup>
 		<TargetFramework>net8.0</TargetFramework>
@@ -32,14 +32,15 @@
 		<ProjectReference Include="..\..\shared\MarketAnalyzer.ApiClient\MarketAnalyzer.ApiClient.csproj" />
 		<ProjectReference Include="..\Cms\src\MarketAnalyzer.Cms.Application\MarketAnalyzer.Cms.Application.csproj" />
 		<ProjectReference Include="..\Common\src\MarketAnalyzer.DataProvider\MarketAnalyzer.DataProvider.csproj" />
-		<ProjectReference Include="..\MarketIntelligence\src\MarketAnalyzer.MarketIntelligence.Providers\MarketAnalyzer.MarketIntelligence.Providers.csproj" />
+		<ProjectReference Include="..\MarketData\src\MarketAnalyzer.MarketData.Providers\MarketAnalyzer.MarketData.Providers.csproj" />
 		<ProjectReference Include="..\Membership\src\MarketAnalyzer.Membership.Application\MarketAnalyzer.Membership.Application.csproj" />
 
 		<ProjectReference Include="..\MarketAnalyzer.Persistence\MarketAnalyzer.Persistence.csproj" />
 		<ProjectReference Include="..\Common\src\MarketAnalyzer.Infrastructure\MarketAnalyzer.Infrastructure.csproj" />
 		<ProjectReference Include="..\MarketIntelligence\src\MarketAnalyzer.MarketIntelligence.Application\MarketAnalyzer.MarketIntelligence.Application.csproj" />
-		<ProjectReference Include="..\MarketIntelligence\src\MarketAnalyzer.MarketIntelligence.Persistence\MarketAnalyzer.MarketIntelligence.Persistence.csproj" />
-		<ProjectReference Include="..\MarketIntelligence\src\MarketAnalyzer.MarketIntelligence.Collectors\MarketAnalyzer.MarketIntelligence.Collectors.csproj" />
+		<ProjectReference Include="..\MarketData\src\MarketAnalyzer.MarketData.Application\MarketAnalyzer.MarketData.Application.csproj" />
+		<ProjectReference Include="..\MarketData\src\MarketAnalyzer.MarketData.Persistence\MarketAnalyzer.MarketData.Persistence.csproj" />
+		<ProjectReference Include="..\MarketIntelligence\src\MarketAnalyzer.MarketIntelligence.Infrastructure\MarketAnalyzer.MarketIntelligence.Infrastructure.csproj" />
 		<ProjectReference Include="..\Tools\src\MarketAnalyzer.Tools.Application\MarketAnalyzer.Tools.Application.csproj" />
 		
 	</ItemGroup>

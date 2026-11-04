@@ -1,4 +1,5 @@
-﻿using MarketAnalyzer.MarketIntelligence.Domain;
+using MarketAnalyzer.MarketData.Domain;
+using MarketAnalyzer.MarketIntelligence.Domain;
 
 namespace MarketAnalyzer.MarketIntelligence.Application
 {
@@ -13,7 +14,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         ///  برای مومنتوم و RS ضروری است
         /// </summary>
         public static decimal CalculateReturn(
-            IReadOnlyList<MarketCandle> candles,
+            IReadOnlyList<AnalysisCandle> candles,
             int periods)
         {
             if (candles == null)
@@ -40,7 +41,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         ///  برای نوسان‌سنجی (Volatility) و Z-Score ضروری است
         /// </summary>
         public static List<decimal> CalculateReturns(
-            IReadOnlyList<MarketCandle> candles,
+            IReadOnlyList<AnalysisCandle> candles,
             int periods)
         {
             var result = new List<decimal>();
@@ -79,7 +80,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// مثال:
         /// اگر قیمت از 100 به 120 رسیده باشد، خروجی 20 است.
         /// </summary>
-        public static decimal Return(IReadOnlyList<MarketCandle> candles, int lookback)
+        public static decimal Return(IReadOnlyList<AnalysisCandle> candles, int lookback)
         {
             if (lookback <= 0)
                 return 0;
@@ -99,7 +100,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// بازدهی تقریبی یک ماه معاملاتی.
         /// در بازارها معمولاً 21 روز معاملاتی را حدود یک ماه در نظر می‌گیرند.
         /// </summary>
-        public static decimal Return1Month(IReadOnlyList<MarketCandle> candles)
+        public static decimal Return1Month(IReadOnlyList<AnalysisCandle> candles)
         {
             return Return(candles, 21);
         }
@@ -108,7 +109,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// بازدهی تقریبی سه ماه معاملاتی.
         /// 63 روز معاملاتی تقریباً معادل 3 ماه است.
         /// </summary>
-        public static decimal Return3Month(IReadOnlyList<MarketCandle> candles)
+        public static decimal Return3Month(IReadOnlyList<AnalysisCandle> candles)
         {
             return Return(candles, 63);
         }
@@ -117,7 +118,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// بازدهی تقریبی شش ماه معاملاتی.
         /// 126 روز معاملاتی تقریباً معادل 6 ماه است.
         /// </summary>
-        public static decimal Return6Month(IReadOnlyList<MarketCandle> candles)
+        public static decimal Return6Month(IReadOnlyList<AnalysisCandle> candles)
         {
             return Return(candles, 126);
         }
@@ -128,7 +129,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// در بورس ایران به خاطر تعطیلات ممکن است تعداد واقعی کمی فرق کند،
         /// ولی برای تحلیل عمومی عدد خوبی است.
         /// </summary>
-        public static decimal Return1Year(IReadOnlyList<MarketCandle> candles)
+        public static decimal Return1Year(IReadOnlyList<AnalysisCandle> candles)
         {
             return Return(candles, 252);
         }
@@ -138,7 +139,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// این متد برای بک‌تست استفاده می‌شود.
         /// مثلاً بررسی می‌کند 20 روز بعد از یک سیگنال، سهم چند درصد رشد کرده است.
         /// </summary>
-        public static decimal ForwardReturn(IReadOnlyList<MarketCandle> candles, int signalIndex, int forwardDays)
+        public static decimal ForwardReturn(IReadOnlyList<AnalysisCandle> candles, int signalIndex, int forwardDays)
         {
             if (forwardDays <= 0)
                 return 0;
@@ -165,7 +166,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// مثال:
         /// بعد از سیگنال، طی 20 روز آینده حداکثر چند درصد رشد کرده؟
         /// </summary>
-        public static decimal MaxForwardReturn(IReadOnlyList<MarketCandle> candles, int signalIndex, int forwardDays)
+        public static decimal MaxForwardReturn(IReadOnlyList<AnalysisCandle> candles, int signalIndex, int forwardDays)
         {
             if (forwardDays <= 0)
                 return 0;
@@ -194,7 +195,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         /// محاسبه بیشترین افت قیمت بعد از سیگنال تا تعداد روز مشخص.
         /// برای بررسی ریسک و حد ضرر در بک‌تست استفاده می‌شود.
         /// </summary>
-        public static decimal MaxForwardDrawdown(IReadOnlyList<MarketCandle> candles, int signalIndex, int forwardDays)
+        public static decimal MaxForwardDrawdown(IReadOnlyList<AnalysisCandle> candles, int signalIndex, int forwardDays)
         {
             if (forwardDays <= 0)
                 return 0;

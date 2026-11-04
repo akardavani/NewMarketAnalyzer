@@ -1,7 +1,7 @@
 window.appSettings = {
   "captchaUrl": "/captcha",
   "captchaLifetime": 300000,
-  "apiUrl": "https://localhost:7160/v1/",
+  "apiUrl": "https://localhost:7260/v1/",
   "version": "1.0.0",
   "appName": "MarketAnalyzer",
   "productName": "تحلیل بازار",

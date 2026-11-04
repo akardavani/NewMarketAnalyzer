@@ -3,6 +3,7 @@ import { Routes } from '@angular/router';
 /** Add a new strategy = add one folder under ./strategies and one line here. */
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'ratio-candles' },
+  { path: 'settings', title: 'مدیریت دریافت داده‌های بازار', loadComponent: () => import('./settings/market-data-settings.component').then(m => m.MarketDataSettingsComponent) },
   { path: 'iran-equity-main', title: 'سهم‌های برتر بازار', loadComponent: () => import('./strategies/iran-equity-main/iran-equity-main.component').then(m => m.IranEquityMainComponent) },
   { path: 'bottom-reversal', title: 'برگشت از کف', loadComponent: () => import('./strategies/bottom-reversal/bottom-reversal.component').then(m => m.BottomReversalComponent) },
   { path: 'iran-queue', title: 'صف خرید', loadComponent: () => import('./strategies/iran-queue/iran-queue.component').then(m => m.IranQueueComponent) },

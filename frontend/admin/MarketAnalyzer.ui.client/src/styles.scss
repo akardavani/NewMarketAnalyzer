@@ -165,16 +165,6 @@ router-outlet + * {
   color: var(--bs-danger);
 }
 
-.loader-wrapper {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 100;
-  background-color: color-mix(in srgb, var(--fd-surface) 95%, transparent);
-}
-
 .external-page {
   display: flex;
   flex-direction: column;

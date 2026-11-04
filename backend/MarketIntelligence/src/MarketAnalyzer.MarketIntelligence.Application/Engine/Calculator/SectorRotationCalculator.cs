@@ -1,10 +1,11 @@
-﻿using MarketAnalyzer.MarketIntelligence.Domain;
+using MarketAnalyzer.MarketData.Domain;
+using MarketAnalyzer.MarketIntelligence.Domain;
 
 namespace MarketAnalyzer.MarketIntelligence.Application
 {
     public static class SectorRotationCalculator
     {
-        public static decimal Score(IReadOnlyList<MarketCandle> industry)
+        public static decimal Score(IReadOnlyList<AnalysisCandle> industry)
         {
             var r30 =
                 ReturnCalculator.CalculateReturn(

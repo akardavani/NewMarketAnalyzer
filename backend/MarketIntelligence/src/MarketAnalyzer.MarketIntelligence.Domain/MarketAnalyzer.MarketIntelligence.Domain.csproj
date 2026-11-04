@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -16,6 +16,10 @@
     <!--<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.1" />-->
     <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
     <PackageReference Include="Skender.Stock.Indicators" Version="2.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\MarketData\src\MarketAnalyzer.MarketData.Domain\MarketAnalyzer.MarketData.Domain.csproj" />
   </ItemGroup>
 
 </Project>

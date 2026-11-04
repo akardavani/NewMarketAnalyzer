@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -12,7 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Common\src\MarketAnalyzer.Abstractions\MarketAnalyzer.Abstractions.csproj" />
-    <ProjectReference Include="..\MarketAnalyzer.MarketIntelligence.Infrastructure\MarketAnalyzer.MarketIntelligence.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\..\MarketData\src\MarketAnalyzer.MarketData.Application\MarketAnalyzer.MarketData.Application.csproj" />
 	  <ProjectReference Include="..\MarketAnalyzer.MarketIntelligence.Domain\MarketAnalyzer.MarketIntelligence.Domain.csproj" />
 
   </ItemGroup>

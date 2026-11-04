@@ -1,16 +1,15 @@
-﻿using Asp.Versioning;
+using Asp.Versioning;
 using MarketAnalyzer.Abstractions;
 using MarketAnalyzer.Api.Infrastructure;
 using MarketAnalyzer.Cms.Application;
 using MarketAnalyzer.Infrastructure;
 using MarketAnalyzer.Infrastructure.Authentication.ApiKey;
 using MarketAnalyzer.MarketIntelligence.Application;
-using MarketAnalyzer.MarketIntelligence.Application.MarketData.Ingestion;
-using MarketAnalyzer.MarketIntelligence.Application.MarketData.Operations;
-using MarketAnalyzer.MarketIntelligence.Collectors;
+using MarketAnalyzer.MarketData.Application.Ingestion;
+using MarketAnalyzer.MarketData.Application.Operations;
 using MarketAnalyzer.MarketIntelligence.Infrastructure;
-using MarketAnalyzer.MarketIntelligence.Persistence;
-using MarketAnalyzer.MarketIntelligence.Providers;
+using MarketAnalyzer.MarketData.Persistence;
+using MarketAnalyzer.MarketData.Providers;
 using MarketAnalyzer.Membership.Application;
 using MarketAnalyzer.Tools.Application;
 using Microsoft.AspNetCore.Builder;
@@ -122,9 +121,6 @@ builder.Services.AddSingleton(Options.Create(urlSettings));
 builder.Services.AddCms();
 builder.Services.AddMembership();
 builder.Services.AddTools();
-//builder.Services.AddMarketCollectors();
-//builder.Services.AddMarketCollectorRunner();
-
 builder.Services.AddMarketDataStores();
 builder.Services.AddMarketDataIngestion();
 builder.Services.AddMarketDataProviders(builder.Configuration);
@@ -154,7 +150,12 @@ var app = builder.Build();
 
 
 
-await app.SeedDataAsync();
+// EF tooling builds the API host before applying migrations; skip startup seeds in that design-time mode.
+var efStartupMode = System.Environment.GetEnvironmentVariable("EF_DESIGN_TIME");
+if (!string.Equals(efStartupMode, "1", System.StringComparison.Ordinal))
+{
+    await app.SeedDataAsync();
+}
 app.Use((context, next) =>
 {
     CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;

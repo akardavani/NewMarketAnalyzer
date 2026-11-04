@@ -1,4 +1,5 @@
-﻿using MarketAnalyzer.MarketIntelligence.Domain;
+using MarketAnalyzer.MarketData.Domain;
+using MarketAnalyzer.MarketIntelligence.Domain;
 
 namespace MarketAnalyzer.MarketIntelligence.Application;
 
@@ -17,13 +18,13 @@ public sealed class EnrichedStockData
 
     public decimal FreeFloatPercent { get; set; }
 
-    public IReadOnlyList<MarketCandle> DailyCandles { get; set; }
+    public IReadOnlyList<AnalysisCandle> DailyCandles { get; set; }
 
-    //public IReadOnlyList<MarketCandle> WeeklyCandles { get; set; }
+    //public IReadOnlyList<AnalysisCandle> WeeklyCandles { get; set; }
 
-    public IReadOnlyList<MarketCandle> MonthlyCandles { get; set; }
+    public IReadOnlyList<AnalysisCandle> MonthlyCandles { get; set; }
 
-    public IReadOnlyList<MarketCandle> IndustryIndexCandles { get; set; }
+    public IReadOnlyList<AnalysisCandle> IndustryIndexCandles { get; set; }
 
-    public IReadOnlyList<MarketCandle> MarketIndexCandles { get; set; }
+    public IReadOnlyList<AnalysisCandle> MarketIndexCandles { get; set; }
 }

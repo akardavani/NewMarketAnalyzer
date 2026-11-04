@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { StrategyPageBase } from '../../shared/strategy-page.base';
 import { daysAgo, today } from '../../shared/jalali';
 import { DataTableComponent } from '../../shared/data-table/data-table.component';
+import { RunIranQueueRequest } from '../../shared/strategy-api.service';
 
 @Component({
   selector: 'mi-iran-queue',
@@ -23,6 +24,21 @@ export class IranQueueComponent extends StrategyPageBase {
       InputFilePath: this.inputFilePath.trim(),
       FromRatio: Number(this.fromRatio), ToRatio: Number(this.toRatio), Return1Month: Number(this.return1Month)
     };
+  }
+
+  override run(): void {
+    this.resetState();
+    const problems: string[] = [];
+    const params = this.buildParams(problems);
+    if (problems.length || !params) { this.errors.set(problems); return; }
+
+    const request: RunIranQueueRequest = {
+      inputFilePath: String(params['InputFilePath']),
+      fromRatio: Number(params['FromRatio']),
+      toRatio: Number(params['ToRatio']),
+      return1Month: Number(params['Return1Month'])
+    };
+    this.execute(this.api.runIranQueue(request));
   }
 
   readonly cols = [

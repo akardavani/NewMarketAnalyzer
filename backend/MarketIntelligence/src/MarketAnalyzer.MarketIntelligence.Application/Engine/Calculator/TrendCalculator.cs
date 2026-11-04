@@ -1,10 +1,11 @@
-﻿using MarketAnalyzer.MarketIntelligence.Domain;
+using MarketAnalyzer.MarketData.Domain;
+using MarketAnalyzer.MarketIntelligence.Domain;
 
 namespace MarketAnalyzer.MarketIntelligence.Application
 {
     public static class TrendCalculator
     {
-        public static decimal ATR14(IReadOnlyList<MarketCandle> candles)
+        public static decimal ATR14(IReadOnlyList<AnalysisCandle> candles)
         {
             if (candles.Count < 15)
                 return 0;
@@ -41,7 +42,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         }
 
         public static decimal Volatility(
-            IReadOnlyList<MarketCandle> candles,
+            IReadOnlyList<AnalysisCandle> candles,
             int days = 30)
         {
             var returns = Returns(candles, days);
@@ -60,7 +61,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         }
 
         public static decimal SharpeLike(
-            IReadOnlyList<MarketCandle> candles,
+            IReadOnlyList<AnalysisCandle> candles,
             int days = 90)
         {
             var ret =
@@ -91,7 +92,7 @@ namespace MarketAnalyzer.MarketIntelligence.Application
         }
 
         private static List<double> Returns(
-            IReadOnlyList<MarketCandle> candles,
+            IReadOnlyList<AnalysisCandle> candles,
             int days)
         {
             var result = new List<double>();

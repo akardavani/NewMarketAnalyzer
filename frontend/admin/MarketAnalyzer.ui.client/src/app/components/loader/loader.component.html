@@ -1,2 +1,11 @@
-<div class="loader"></div>
-<div class="waiting-msg">{{message}}</div>
+<div class="loading-state" role="status" aria-live="polite" aria-busy="true">
+  <div class="loader-mark" aria-hidden="true">
+    <span class="loader-ring"></span>
+    <span class="loader-core"><i class="pa pa-statistics"></i></span>
+  </div>
+  <div class="loading-copy">
+    <span class="loading-kicker">Market Analyzer</span>
+    <span class="waiting-msg">{{message}}</span>
+    <span class="loading-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+  </div>
+</div>
