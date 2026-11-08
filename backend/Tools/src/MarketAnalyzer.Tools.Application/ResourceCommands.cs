@@ -128,24 +128,15 @@ namespace MarketAnalyzer.Tools.Application
     }
 
     // ---- remove
-    public class RemoveResourceCommand : IRequest<ApiResult<int>>
+    public class RemoveResourceCommand : IRemoveOwnedCommand
     {
         public required int Id { get; init; }
         public required int UserId { get; init; }
     }
 
-    internal class RemoveResourceCommandHandler : IRequestHandler<RemoveResourceCommand, ApiResult<int>>
+    internal class RemoveResourceCommandHandler : RemoveOwnedHandler<RemoveResourceCommand, Resource>
     {
-        private readonly IDbContext _db;
-        public RemoveResourceCommandHandler(IDbContext db) => _db = db;
-        public async Task<ApiResult<int>> HandleAsync(RemoveResourceCommand r, CancellationToken ct = default)
-        {
-            var e = await _db.Set<Resource>().FirstOrDefaultAsync(x => x.Id == r.Id && x.UserId == r.UserId, ct);
-            if (e is null) return ApiResult.FromError<int>("مورد وجود ندارد.");
-            _db.Set<Resource>().Remove(e);
-            await _db.SaveChangesAsync(ct);
-            return ApiResult.From(e.Id);
-        }
+        public RemoveResourceCommandHandler(IDbContext db) : base(db) { }
     }
 
     // ---- files

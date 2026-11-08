@@ -107,18 +107,10 @@ namespace MarketAnalyzer.Tools.Application
         }
     }
 
-    public class RemovePasswordEntryCommand : IRequest<ApiResult<int>> { public required int UserId { get; init; } public int Id { get; init; } }
-    internal class RemovePasswordEntryCommandHandler : IRequestHandler<RemovePasswordEntryCommand, ApiResult<int>>
+    public class RemovePasswordEntryCommand : IRemoveOwnedCommand { public required int UserId { get; init; } public int Id { get; init; } }
+    internal class RemovePasswordEntryCommandHandler : RemoveOwnedHandler<RemovePasswordEntryCommand, PasswordEntry>
     {
-        private readonly IDbContext _db;
-        public RemovePasswordEntryCommandHandler(IDbContext db) => _db = db;
-        public async Task<ApiResult<int>> HandleAsync(RemovePasswordEntryCommand r, CancellationToken ct = default)
-        {
-            var e = await _db.Set<PasswordEntry>().FirstOrDefaultAsync(x => x.Id == r.Id && x.UserId == r.UserId, ct);
-            if (e is null) return ApiResult.FromError<int>("مورد وجود ندارد.");
-            _db.Set<PasswordEntry>().Remove(e); await _db.SaveChangesAsync(ct);
-            return ApiResult.From(r.Id);
-        }
+        public RemovePasswordEntryCommandHandler(IDbContext db) : base(db) { }
     }
 
     public class PasswordRekeyItem { public int Id { get; init; } public string Cipher { get; init; } = ""; public string Iv { get; init; } = ""; }

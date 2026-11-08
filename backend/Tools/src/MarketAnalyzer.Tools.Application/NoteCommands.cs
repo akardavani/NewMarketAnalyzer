@@ -87,25 +87,16 @@ namespace MarketAnalyzer.Tools.Application
     }
 
     // ---- remove
-    public class RemoveNoteCommand : IRequest<ApiResult<int>>
+    public class RemoveNoteCommand : IRemoveOwnedCommand
     {
         public required int Id { get; init; }
         public required int UserId { get; init; }
     }
 
-    internal class RemoveNoteCommandHandler : IRequestHandler<RemoveNoteCommand, ApiResult<int>>
+    internal class RemoveNoteCommandHandler : RemoveOwnedHandler<RemoveNoteCommand, Note>
     {
-        private readonly IDbContext _db;
-        public RemoveNoteCommandHandler(IDbContext db) => _db = db;
-
-        public async Task<ApiResult<int>> HandleAsync(RemoveNoteCommand request, CancellationToken cancellationToken = default)
-        {
-            var note = await _db.Set<Note>().FirstOrDefaultAsync(e => e.Id == request.Id && e.UserId == request.UserId, cancellationToken);
-            if (note is null) return ApiResult.FromError<int>("یادداشت وجود ندارد.");
-            _db.Set<Note>().Remove(note);
-            await _db.SaveChangesAsync(cancellationToken);
-            return ApiResult.From(note.Id);
-        }
+        public RemoveNoteCommandHandler(IDbContext db) : base(db) { }
+        protected override string NotFoundMessage => "یادداشت وجود ندارد.";
     }
 
     internal static class NoteSanitizer

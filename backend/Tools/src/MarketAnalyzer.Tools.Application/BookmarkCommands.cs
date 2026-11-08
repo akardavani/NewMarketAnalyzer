@@ -184,17 +184,10 @@ namespace MarketAnalyzer.Tools.Application
         }
     }
 
-    public class RemoveBookmarkCommand : IRequest<ApiResult<int>> { public required int UserId { get; init; } public int Id { get; init; } }
-    internal class RemoveBookmarkCommandHandler : IRequestHandler<RemoveBookmarkCommand, ApiResult<int>>
+    public class RemoveBookmarkCommand : IRemoveOwnedCommand { public required int UserId { get; init; } public int Id { get; init; } }
+    internal class RemoveBookmarkCommandHandler : RemoveOwnedHandler<RemoveBookmarkCommand, Bookmark>
     {
-        private readonly IDbContext _db;
-        public RemoveBookmarkCommandHandler(IDbContext db) => _db = db;
-        public async Task<ApiResult<int>> HandleAsync(RemoveBookmarkCommand r, CancellationToken ct = default)
-        {
-            var b = await _db.Set<Bookmark>().FirstOrDefaultAsync(e => e.Id == r.Id && e.UserId == r.UserId, ct);
-            if (b is null) return ApiResult.FromError<int>("مورد وجود ندارد.");
-            _db.Set<Bookmark>().Remove(b); await _db.SaveChangesAsync(ct); return ApiResult.From(r.Id);
-        }
+        public RemoveBookmarkCommandHandler(IDbContext db) : base(db) { }
     }
 
     // ---- collections CRUD
