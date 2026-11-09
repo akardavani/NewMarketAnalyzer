@@ -1,0 +1,47 @@
+<button type="button" class="tool-trigger" (click)="open.set(true)"><span>فایل‌های تکراری</span></button>
+@if (open()) {
+  <div class="backdrop" (click)="close()"></div>
+  <section class="modal" dir="rtl" role="dialog" aria-modal="true" aria-labelledby="duplicate-files-title">
+    <header><h3 id="duplicate-files-title">پیدا کردن فایل‌های تکراری</h3><button type="button" (click)="close()" aria-label="بستن">×</button></header>
+    <main>
+      <p class="notice">مسیرها باید روی میزبان بک‌اند قابل دسترسی و در محدودهٔ مجاز سرور باشند. این ابزار فقط گزارش می‌دهد و هیچ فایلی را حذف نمی‌کند.</p>
+      <label for="duplicate-paths">مسیر کامل پوشه‌ها (هر مسیر در یک خط، حداکثر ۲۰ مسیر)</label>
+      <textarea id="duplicate-paths" dir="ltr" rows="3" placeholder="D:\Data" [disabled]="busy()" [value]="paths()" (input)="paths.set($any($event.target).value)"></textarea>
+      <label class="check"><input type="checkbox" [disabled]="busy()" [checked]="recursive()" (change)="recursive.set($any($event.target).checked)" /> بررسی زیرپوشه‌ها</label>
+      <p class="hint">مقایسه بر اساس اندازه و SHA-256 محتواست، مستقل از نام فایل. لینک‌ها بررسی نمی‌شوند. سقف هر اجرا: ۱۰۰٬۰۰۰ ورودی و ۶۰ ثانیه.</p>
+      @if (busy()) { <p role="status">در حال بررسی فایل‌ها…</p> }
+      @if (error()) { <p class="error" role="alert">{{ error() }}</p> }
+      @if (result(); as r) {
+        <div class="summary" role="status">
+          <span>فایل‌های شناسایی‌شده: {{ r.scannedFiles }}</span><span>هش‌شده: {{ r.hashedFiles }}</span>
+          <span>گروه‌های تکراری: {{ r.groups.length }}</span><span>حجم نسخه‌های اضافه: {{ formatBytes(r.duplicateBytes) }}</span>
+        </div>
+        @if (r.skippedEntries) {
+          <details><summary>موارد ردشده: {{ r.skippedEntries }} (نمایش حداکثر ۱۰۰ هشدار)</summary>
+            @for (warning of r.warnings; track $index) { <p class="path">{{ warning }}</p> }
+          </details>
+        }
+        @for (group of visibleGroups(); track group.hash + ':' + group.size) {
+          <article>
+            <strong>{{ group.paths.length }} فایل · اندازهٔ هر فایل: {{ formatBytes(group.size) }}</strong>
+            <small dir="ltr">SHA-256: {{ group.hash }}</small>
+            @for (path of group.paths; track path) {
+              <div class="file"><span class="path" dir="ltr">{{ path }}</span><button type="button" (click)="copy(path)">کپی مسیر</button></div>
+            }
+          </article>
+        } @empty { <p>فایل تکراری در موارد بررسی‌شده پیدا نشد.</p> }
+        @if (pages() > 1) {
+          <nav aria-label="صفحات نتایج"><button type="button" [disabled]="page() === 0" (click)="page.set(page() - 1)">قبلی</button>
+            <span>{{ page() + 1 }} / {{ pages() }}</span>
+            <button type="button" [disabled]="page() + 1 >= pages()" (click)="page.set(page() + 1)">بعدی</button></nav>
+        }
+      }
+    </main>
+    <footer>
+      @if (result()) { <button type="button" (click)="exportResult()">دریافت گزارش JSON</button> }
+      @if (busy()) { <button type="button" (click)="cancel()">لغو جست‌وجو</button> }
+      <button type="button" (click)="close()">بستن</button>
+      <button type="button" class="primary" [disabled]="busy() || !paths().trim()" (click)="scan()">شروع جست‌وجو</button>
+    </footer>
+  </section>
+}

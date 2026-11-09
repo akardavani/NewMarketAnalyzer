@@ -1,15 +1,8 @@
+@use '../../../styles/components/tool-shared' as t;
+@include t.ibtn;
+@include t.modal($top: 4vh, $width: 1280px, $height: 92vh);
+@include t.controls;
 :host { color: var(--fd-text); font-family: 'Vazirmatn', sans-serif; display: inline-block; }
-.ibtn { flex: none; width: 36px; height: 36px; padding: 0; display: grid; place-items: center; border: 0; border-radius: 10px; background: none; color: var(--fd-text-2); cursor: pointer; font-size: 18px;
-  &:hover { background: var(--fd-hover); color: var(--fd-text); } }
-.backdrop { position: fixed; inset: 0; z-index: 1100; background: rgba(0, 0, 0, .45); }
-.modal { position: fixed; z-index: 1101; top: 4vh; left: 50%; transform: translateX(-50%); width: min(1280px, 96vw); height: 92vh;
-  display: flex; flex-direction: column; background: var(--fd-surface); color: var(--fd-text);
-  border: 1px solid var(--fd-line-strong); border-radius: 14px; box-shadow: var(--fd-shadow-pop); overflow: hidden; }
-.mh { display: flex; align-items: center; justify-content: space-between; padding: 12px 18px; border-bottom: 1px solid var(--fd-line);
-  h3 { margin: 0; font-size: 16px; } }
-.x { border: 0; background: none; color: var(--fd-text); font-size: 24px; cursor: pointer; line-height: 1; }
-.mb { flex: 1; min-height: 0; display: flex; gap: 12px; padding: 12px; }
-.scroll { overflow: auto; min-height: 0; }
 
 .side { width: 220px; flex: none; border: 1px solid var(--fd-line); border-radius: 10px; background: var(--fd-surface-2); padding: 8px; display: flex; flex-direction: column; gap: 2px; }
 .sh { display: flex; justify-content: space-between; align-items: center; margin-top: 10px; font-size: 12px; opacity: .8; }
@@ -27,11 +20,8 @@
 
 .form { width: 340px; flex: none; border: 1px solid var(--fd-line); border-radius: 10px; padding: 12px 14px; display: flex; flex-direction: column; gap: 6px;
   label { font-weight: 600; font-size: 13px; margin-top: 8px; small { font-weight: 400; opacity: .65; } }
-  .req { color: #d33; } }
+  .req { color: var(--fd-danger); } }
 .prev { max-width: 100%; max-height: 140px; object-fit: cover; border-radius: 8px; }
-.inp { width: 100%; box-sizing: border-box; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--fd-line-strong); background: var(--fd-surface); color: var(--fd-text); font: inherit; outline: none;
-  &:focus { border-color: var(--fd-primary); } }
-textarea.inp { resize: vertical; }
 .btn { padding: 6px 12px; border-radius: 8px; border: 1px solid var(--fd-line-strong); background: var(--fd-surface); color: var(--fd-text); cursor: pointer; font: inherit; font-size: 13px; text-decoration: none; white-space: nowrap;
   &:hover:not(:disabled) { background: var(--fd-hover); } &:disabled { opacity: .5; cursor: default; }
   &.sm { padding: 0 8px; } &.on { border-color: var(--fd-primary); }
@@ -45,7 +35,7 @@ textarea.inp { resize: vertical; }
   .id { font-size: 12px; opacity: .7; margin-top: 2px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .im { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; margin-top: 6px; .dt { margin-inline-start: auto; font-size: 11px; opacity: .6; } }
   .del, .star { border: 0; background: none; color: var(--fd-text); opacity: .5; cursor: pointer; &:hover { opacity: 1; } }
-  .del:hover { color: #d33; } .star.on { color: #e6a700; opacity: 1; } }
+  .del:hover { color: var(--fd-danger); } .star.on { color: #e6a700; opacity: 1; } }
 .chip { display: inline-flex; align-items: center; gap: 4px; padding: 1px 8px; border-radius: 999px; font-size: 11px;
   background: color-mix(in srgb, var(--fd-primary) 16%, transparent); color: var(--fd-text);
   &.kind { background: var(--fd-surface-2); border: 1px solid var(--fd-line); }
@@ -55,8 +45,6 @@ textarea.inp { resize: vertical; }
 .sugg { display: flex; flex-wrap: wrap; gap: 4px;
   button { border: 1px dashed var(--fd-line-strong); background: var(--fd-surface-2); color: var(--fd-text); border-radius: 999px; padding: 2px 10px; cursor: pointer; font: inherit; font-size: 12px; &:hover { background: var(--fd-hover); } } }
 .linkrow { display: flex; gap: 6px; flex-wrap: wrap; }
-.mf { display: flex; align-items: center; justify-content: flex-end; gap: 8px; padding: 10px 18px; border-top: 1px solid var(--fd-line); background: var(--fd-surface);
-  .err { margin-inline-end: auto; color: #d33; font-size: 13px; } }
 .empty { opacity: .6; font-size: 13px; padding: 12px; text-align: center; grid-column: 1 / -1; }
 
 .go { text-decoration: none; color: var(--fd-text); padding: 0 4px; font-size: 14px; }
