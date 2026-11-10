@@ -1,0 +1,28 @@
+@use '../../../styles/components/tool-shared' as t;
+@include t.modal($top: 4vh, $width: 940px, $height: 88vh);
+@include t.controls;
+:host { color: var(--fd-text); font-family: 'Vazirmatn', sans-serif; display: inline-block; }
+
+.pane { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 8px; }
+label { font-weight: 600; font-size: 13px; }
+.check { display: flex; align-items: center; gap: 6px; font-weight: 400; cursor: pointer; }
+.notice { margin: 0; padding: 8px 10px; border-radius: 8px; font-size: 12px; background: color-mix(in srgb, var(--fd-primary) 10%, var(--fd-surface)); }
+.hint { margin: 0; font-size: 12px; opacity: .68; }
+.status { margin: 0; font-size: 13px; }
+.error { margin: 0; font-size: 13px; color: var(--fd-danger); }
+
+.summary { display: flex; flex-wrap: wrap; gap: 6px 14px; padding: 8px 10px; border: 1px solid var(--fd-line); border-radius: 8px; background: var(--fd-surface-2); font-size: 12px;
+  b { font-weight: 700; } }
+
+details { padding: 6px 10px; border: 1px solid var(--fd-line); border-radius: 8px; background: var(--fd-surface-2); font-size: 12px;
+  summary { cursor: pointer; } }
+.warn { margin: 4px 0; font-family: monospace; direction: ltr; font-size: 11px; opacity: .8; overflow-wrap: anywhere; }
+
+.groups { display: flex; flex-direction: column; gap: 8px; }
+.group { display: flex; flex-direction: column; gap: 4px; padding: 8px 10px; border: 1px solid var(--fd-line); border-radius: 10px; background: var(--fd-surface-2);
+  strong { font-size: 13px; } small { font-size: 11px; opacity: .65; overflow-wrap: anywhere; } }
+.file { display: flex; align-items: center; gap: 8px; }
+.path { flex: 1; min-width: 0; font-family: monospace; font-size: 12px; direction: ltr; text-align: left; overflow-wrap: anywhere; }
+
+.btn.sm { padding: 2px 8px; font-size: 12px; }
+.pager { display: flex; align-items: center; justify-content: center; gap: 10px; padding-top: 4px; font-size: 12px; }

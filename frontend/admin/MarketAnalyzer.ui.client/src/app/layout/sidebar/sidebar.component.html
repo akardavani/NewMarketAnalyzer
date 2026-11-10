@@ -41,7 +41,7 @@
       <div class="flyout-content tool-list">
         @if (quickAction().path) { <a class="item tool-action" [routerLink]="quickAction().path"><span class="l">{{ quickAction().label }}</span></a> }
         <button type="button" class="item tool-action" (click)="searchRequested.emit()"><span class="l">جستجو</span></button>
-        <fd-publish-modal /><fd-resources-modal /><fd-bookmarks-modal /><fd-passwords-modal />
+        <fd-publish-modal /><fd-resources-modal /><fd-bookmarks-modal /><fd-passwords-modal /><fd-duplicate-files-modal />
       </div>
     </section>
   }
