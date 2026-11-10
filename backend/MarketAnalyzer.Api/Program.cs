@@ -121,6 +121,7 @@ builder.Services.AddSingleton(Options.Create(urlSettings));
 builder.Services.AddCms();
 builder.Services.AddMembership();
 builder.Services.AddTools();
+
 builder.Services.AddMarketDataStores();
 builder.Services.AddMarketDataIngestion();
 builder.Services.AddMarketDataProviders(builder.Configuration);

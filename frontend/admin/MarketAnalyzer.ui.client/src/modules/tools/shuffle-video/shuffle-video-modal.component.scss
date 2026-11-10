@@ -1,0 +1,30 @@
+:host { display: block; }
+.trigger { width: 100%; text-align: right; background: transparent; border: 0; padding: 10px 14px; color: inherit; }
+button, input { font: inherit; }
+button { cursor: pointer; border: 1px solid #cbd5e1; border-radius: 7px; padding: 8px 12px; background: #fff; color: #1e293b; }
+button:disabled { opacity: .5; cursor: not-allowed; }
+button:focus-visible, input:focus-visible, summary:focus-visible { outline: 2px solid #2563eb; outline-offset: 2px; }
+dialog { width: min(940px, 94vw); max-height: 90dvh; padding: 0; border: 1px solid #cbd5e1; border-radius: 14px; background: #fff; color: #172033; box-shadow: 0 24px 80px #0005; }
+dialog::backdrop { background: #0f172a99; }
+.panel { display: flex; flex-direction: column; max-height: 89dvh; }
+header, footer { display: flex; align-items: center; gap: 10px; padding: 14px 18px; flex-wrap: wrap; }
+header { justify-content: space-between; border-bottom: 1px solid #e2e8f0; }
+h2 { font-size: 17px; margin: 0; }
+main { overflow: auto; padding: 16px 20px; }
+footer { border-top: 1px solid #e2e8f0; }
+fieldset { border: 0; padding: 0; min-width: 0; }
+label { display: block; margin: 10px 0; }
+input:not([type=checkbox]) { display: block; box-sizing: border-box; width: 100%; margin-top: 5px; padding: 9px; border: 1px solid #cbd5e1; border-radius: 7px; background: #fff; color: #172033; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.notice, .summary, .success { padding: 12px; border-radius: 8px; background: #eff6ff; }
+.success { background: #ecfdf5; }
+.hint { font-size: 12px; color: #475569; line-height: 1.9; }
+.error { color: #b91c1c; white-space: pre-wrap; }
+.warning { color: #854d0e; }
+details { margin: 10px 0; padding: 12px; border: 1px solid #e2e8f0; border-radius: 8px; }
+summary { cursor: pointer; }
+.file { padding: 10px 0; border-top: 1px solid #e2e8f0; margin-top: 8px; }
+.path { display: block; white-space: pre-wrap; overflow-wrap: anywhere; user-select: text; font-size: 12px; }
+.primary { background: #2563eb; color: white; border-color: #2563eb; }
+.check { display: flex; align-items: center; gap: 8px; }
+@media (max-width: 600px) { .grid { grid-template-columns: 1fr; gap: 0; } main { padding: 12px; } }

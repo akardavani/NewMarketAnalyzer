@@ -11,6 +11,7 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddPersistenceApplicationPart(ToolsPersistenceMarker.Assembly, 0);
             // Singleton: the scanner serializes disk scans behind an internal semaphore.
             services.AddSingleton<DuplicateFileScanner>();
+            services.AddSingleton<ShuffleVideoService>();
             return services;
         }
     }
