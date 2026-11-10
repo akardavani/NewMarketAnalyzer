@@ -1,46 +1,65 @@
-<button type="button" class="trigger" (click)="show()">چیدمان تصادفی ویدئو</button>
-<dialog #dialog dir="rtl" aria-labelledby="shuffle-title" (cancel)="$event.preventDefault(); close()" (click)="backdrop($event)">
-  <div class="panel">
-    <header><h2 id="shuffle-title">Shuffle Video — چیدمان تصادفی ویدئو</h2><button type="button" aria-label="بستن" (click)="close()">×</button></header>
-    <main>
-      <p class="notice">مسیرها مربوط به میزبان بک‌اند هستند، نه رایانهٔ مرورگر. فایل‌های اصلی تغییر نمی‌کنند؛ کپی فقط پس از تأیید شما انجام می‌شود.</p>
-      <fieldset [disabled]="!!busy()">
-        <label>پوشهٔ مبدأ<input autofocus dir="ltr" [(ngModel)]="form.sourcePath" (ngModelChange)="invalidate()" placeholder="D:\Videos" /></label>
-        <label>پوشهٔ مقصد موجود<input dir="ltr" [(ngModel)]="form.outputPath" (ngModelChange)="invalidate()" placeholder="E:\VideoMixes" /></label>
-        <div class="grid">
-          <label>پیشوند پوشه‌ها<input [(ngModel)]="form.prefix" (ngModelChange)="invalidate()" maxlength="40" /></label>
-          <label>تعداد پوشه<input type="number" min="1" max="50" step="1" [(ngModel)]="form.folderCount" (ngModelChange)="invalidate()" /></label>
-          <label>مدت هدف هر پوشه (دقیقه)<input type="number" min="1" max="1440" step="1" [(ngModel)]="form.targetMinutes" (ngModelChange)="invalidate()" /></label>
-        </div>
-      </fieldset>
-      <p class="hint">هر زیرپوشهٔ مستقیم مبدأ یک دسته است. در هر مجموعه حداکثر یک ویدئو از هر دسته انتخاب می‌شود. فایل تکراری بین مجموعه‌ها یا اجراهای قبلی انتخاب نمی‌شود. مدت نهایی ممکن است با افزودن آخرین ویدئو از هدف بیشتر شود.</p>
-      @if (busy()) { <p role="status">{{ busy() === 'preview' ? 'در حال خواندن مدت و ساخت پیش‌نمایش…' : 'در حال کپی فایل‌ها…' }}</p> }
-      @if (error()) { <p class="error" role="alert">{{ error() }}</p> }
-      @if (result(); as r) {
-        <section class="success" role="status"><strong>کپی {{ r.copiedFiles }} فایل انجام شد — {{ bytes(r.copiedBytes) }}</strong><p class="path" dir="ltr">{{ r.path }}</p><p>گزارش manifest.json نیز در پوشهٔ خروجی ذخیره شد.</p></section>
-      }
-      @if (plan(); as p) {
-        <section class="summary">قابل انتخاب: {{ p.availableFiles }} | استفاده‌شدهٔ قبلی: {{ p.previouslyUsed }} | انتخاب‌شده: {{ fileCount() }} | حجم کپی: {{ bytes(p.totalBytes) }}</section>
-        <p class="hint">این پیش‌نمایش ۱۵ دقیقه معتبر است. ویرایش ورودی‌ها آن را باطل می‌کند. هشدارها حداکثر ۱۰۰ مورد نمایش داده می‌شوند.</p>
-        @for (warning of p.warnings; track $index) { <p class="warning">{{ warning }}</p> }
-        @for (folder of p.folders; track folder.name) {
-          <details><summary>{{ folder.name }} — {{ folder.files.length }} فایل — {{ minutes(folder.seconds) }} دقیقه {{ folder.complete ? '✓' : '(ناقص)' }}</summary>
-            @for (file of folder.files; track file.path) {
-              <div class="file"><strong>{{ file.category }} — {{ minutes(file.seconds) }} دقیقه</strong><span class="path" dir="ltr">{{ file.path }}</span></div>
-            } @empty { <p>ویدئویی انتخاب نشده است؛ این پوشه ساخته نمی‌شود.</p> }
-          </details>
+<button type="button" class="tool-trigger" (click)="show()"><span>چیدمان تصادفی ویدئو</span></button>
+
+@if (open()) {
+  <div class="backdrop" (click)="close()"></div>
+  <div class="modal" dir="rtl" role="dialog" aria-modal="true" aria-labelledby="shuffle-title">
+    <header class="mh">
+      <h3 id="shuffle-title">Shuffle Video — چیدمان تصادفی ویدئو</h3>
+      <button type="button" class="x" (click)="close()" aria-label="بستن">×</button>
+    </header>
+
+    <div class="mb">
+      <div class="pane scroll">
+        <p class="notice">مسیرها مربوط به میزبان بک‌اند هستند، نه رایانهٔ مرورگر. فایل‌های اصلی تغییر نمی‌کنند؛ کپی فقط پس از تأیید شما انجام می‌شود.</p>
+
+        <fieldset [disabled]="!!busy()">
+          <label>پوشهٔ مبدأ<input class="inp" autofocus dir="ltr" [(ngModel)]="form.sourcePath" (ngModelChange)="invalidate()" placeholder="D:\Videos" /></label>
+          <label>پوشهٔ مقصد موجود<input class="inp" dir="ltr" [(ngModel)]="form.outputPath" (ngModelChange)="invalidate()" placeholder="E:\VideoMixes" /></label>
+          <div class="grid">
+            <label>پیشوند پوشه‌ها<input class="inp" [(ngModel)]="form.prefix" (ngModelChange)="invalidate()" maxlength="40" /></label>
+            <label>تعداد پوشه<input class="inp" type="number" min="1" max="50" step="1" [(ngModel)]="form.folderCount" (ngModelChange)="invalidate()" /></label>
+            <label>مدت هدف هر پوشه (دقیقه)<input class="inp" type="number" min="1" max="1440" step="1" [(ngModel)]="form.targetMinutes" (ngModelChange)="invalidate()" /></label>
+          </div>
+        </fieldset>
+
+        <p class="hint">هر زیرپوشهٔ مستقیم مبدأ یک دسته است. در هر مجموعه حداکثر یک ویدئو از هر دسته انتخاب می‌شود. فایل تکراری بین مجموعه‌ها یا اجراهای قبلی انتخاب نمی‌شود. مدت نهایی ممکن است با افزودن آخرین ویدئو از هدف بیشتر شود.</p>
+
+        @if (busy()) { <p class="status" role="status">{{ busy() === 'preview' ? 'در حال خواندن مدت و ساخت پیش‌نمایش…' : 'در حال کپی فایل‌ها…' }}</p> }
+        @if (error()) { <p class="error" role="alert">{{ error() }}</p> }
+
+        @if (result(); as r) {
+          <section class="success" role="status">
+            <strong>کپی {{ r.copiedFiles }} فایل انجام شد — {{ bytes(r.copiedBytes) }}</strong>
+            <p class="path" dir="ltr">{{ r.path }}</p>
+            <p>گزارش manifest.json نیز در پوشهٔ خروجی ذخیره شد.</p>
+          </section>
         }
-        @if (incomplete()) { <label class="check"><input type="checkbox" [(ngModel)]="allowIncomplete" [disabled]="!!busy()" /> کپی مجموعه‌های ناقص را تأیید می‌کنم.</label> }
-      }
-    </main>
-    <footer>
-      <button type="button" (click)="close()">بستن</button>
-      @if (busy()) { <button type="button" (click)="cancel()">لغو درخواست</button> }
+
+        @if (plan(); as p) {
+          <section class="summary">قابل انتخاب: <b>{{ p.availableFiles }}</b> | استفاده‌شدهٔ قبلی: <b>{{ p.previouslyUsed }}</b> | انتخاب‌شده: <b>{{ fileCount() }}</b> | حجم کپی: <b>{{ bytes(p.totalBytes) }}</b></section>
+          <p class="hint">این پیش‌نمایش ۱۵ دقیقه معتبر است. ویرایش ورودی‌ها آن را باطل می‌کند. هشدارها حداکثر ۱۰۰ مورد نمایش داده می‌شوند.</p>
+          @for (warning of p.warnings; track $index) { <p class="warning">{{ warning }}</p> }
+          @for (folder of p.folders; track folder.name) {
+            <details>
+              <summary>{{ folder.name }} — {{ folder.files.length }} فایل — {{ minutes(folder.seconds) }} دقیقه {{ folder.complete ? '✓' : '(ناقص)' }}</summary>
+              @for (file of folder.files; track file.path) {
+                <div class="file"><strong>{{ file.category }} — {{ minutes(file.seconds) }} دقیقه</strong><span class="path" dir="ltr">{{ file.path }}</span></div>
+              } @empty { <p>ویدئویی انتخاب نشده است؛ این پوشه ساخته نمی‌شود.</p> }
+            </details>
+          }
+          @if (incomplete()) { <label class="check"><input type="checkbox" [(ngModel)]="allowIncomplete" [disabled]="!!busy()" /> کپی مجموعه‌های ناقص را تأیید می‌کنم.</label> }
+        }
+      </div>
+    </div>
+
+    <footer class="mf">
+      <button type="button" class="btn" (click)="close()">بستن</button>
+      @if (busy()) { <button type="button" class="btn" (click)="cancel()">لغو درخواست</button> }
       @if (plan()) {
-        <button type="button" (click)="exportPlan()">گزارش پیش‌نمایش</button>
-        <button type="button" class="primary" [disabled]="!!busy() || !fileCount() || (incomplete() && !allowIncomplete)" (click)="run()">تأیید و کپی</button>
+        <button type="button" class="btn" (click)="exportPlan()">گزارش پیش‌نمایش</button>
+        <button type="button" class="btn primary" [disabled]="!!busy() || !fileCount() || (incomplete() && !allowIncomplete)" (click)="run()">تأیید و کپی</button>
       }
-      <button type="button" [disabled]="!!busy()" (click)="preview()">پیش‌نمایش تصادفی جدید</button>
+      <button type="button" class="btn" [disabled]="!!busy()" (click)="preview()">پیش‌نمایش تصادفی جدید</button>
     </footer>
   </div>
-</dialog>
+}

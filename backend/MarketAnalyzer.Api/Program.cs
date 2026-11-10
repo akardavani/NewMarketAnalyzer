@@ -69,8 +69,8 @@ builder.Host.UseSerilog((context, configuration) =>
 builder.Services.AddFundPersistence(builder.Configuration);
 builder.Services.AddCors();
 
-// Ø«Ø¨Øª Ø³Ø±ÙˆÛŒØ³â€ŒÙ‡Ø§ÛŒ ØªØ­Ù„ÛŒÙ„Ú¯Ø± Ø¨Ø§Ø²Ø§Ø±
-builder.Services.AddAnalysisStrategyServices(); // Ø§Ú©Ø³ØªÙ†Ø´Ù† Ø¯Ø§Ø®Ù„ MarketAnalyzer.MarketIntelligence.Application
+// ثبت سرویس‌های تحلیل‌گر بازار
+builder.Services.AddAnalysisStrategyServices(); // اکستنشن داخل MarketAnalyzer.MarketIntelligence.Application
 builder.Services.AddInfrastructureDependencyInjection();
 
 builder.Services.AddApiVersioning(options =>
@@ -97,9 +97,9 @@ builder.Services.Configure<ApiBehaviorOptions>(options =>
 {
     static string GetErrorMessage(string key, ModelError error)
     {
-        return string.IsNullOrEmpty(error.ErrorMessage) ?
-            $"Ù…Ù‚Ø¯Ø§Ø± ÙˆØ§Ø±Ø¯ Ø´Ø¯Ù‡ Ø¨Ø±Ø§ÛŒ `{key}` Ù…Ø¹ØªØ¨Ø± Ù†ÛŒØ³Øª." :
-            error.ErrorMessage;
+        return string.IsNullOrEmpty(error.ErrorMessage)
+            ? $"مقدار وارد شده برای `{key}` معتبر نیست."
+            : error.ErrorMessage;
     }
 
     options.InvalidModelStateResponseFactory = context =>

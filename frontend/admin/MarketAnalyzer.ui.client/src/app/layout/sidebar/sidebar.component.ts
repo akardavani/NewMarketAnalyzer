@@ -12,6 +12,7 @@ import { ResourcesModalComponent } from '../../../modules/tools/resources/resour
 import { BookmarksModalComponent } from '../../../modules/tools/bookmarks/bookmarks-modal.component';
 import { PasswordsModalComponent } from '../../../modules/tools/passwords/passwords-modal.component';
 import { DuplicateFilesModalComponent } from '../../../modules/tools/duplicate-files/duplicate-files-modal.component';
+import { ShuffleVideoModalComponent } from '../../../modules/tools/shuffle-video/shuffle-video-modal.component';
 import { AuthService } from '@services/auth.service';
 import { DialogService } from '@services/dialog.service';
 import { ChangePasswordComponent } from '../../pages/change-password/change-password.component';
@@ -34,7 +35,7 @@ interface NavNode {
  */
 @Component({
   selector: 'fd-sidebar',
-  imports: [RouterLink, NgTemplateOutlet, PublishModalComponent, NotesPanelComponent, ResourcesModalComponent, BookmarksModalComponent, PasswordsModalComponent, DuplicateFilesModalComponent],
+  imports: [RouterLink, NgTemplateOutlet, PublishModalComponent, NotesPanelComponent, ResourcesModalComponent, BookmarksModalComponent, PasswordsModalComponent, DuplicateFilesModalComponent, ShuffleVideoModalComponent],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -120,7 +121,7 @@ export class SidebarComponent {
       this.selectedSection.set(null);
       return;
     }
-    this.setFlyoutTop(event.currentTarget as HTMLElement, 365);
+    this.setFlyoutTop(event.currentTarget as HTMLElement, 400);
     this.selectedSection.set('tools');
   }
 

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, ElementRef, OnDestroy, computed, inject, signal, viewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostListener, OnDestroy, computed, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { ShufflePlan, ShuffleRequest, ShuffleResult, ShuffleVideoService } from './shuffle-video.service';
@@ -13,8 +13,8 @@ import { ShufflePlan, ShuffleRequest, ShuffleResult, ShuffleVideoService } from 
 })
 export class ShuffleVideoModalComponent implements OnDestroy {
   private readonly api = inject(ShuffleVideoService);
-  private readonly dialog = viewChild.required<ElementRef<HTMLDialogElement>>('dialog');
   private request?: Subscription;
+  readonly open = signal(false);
   readonly busy = signal<'preview' | 'copy' | null>(null);
   readonly error = signal('');
   readonly plan = signal<ShufflePlan | null>(null);
@@ -23,9 +23,10 @@ export class ShuffleVideoModalComponent implements OnDestroy {
   readonly fileCount = computed(() => this.plan()?.folders.reduce((n, f) => n + f.files.length, 0) ?? 0);
   allowIncomplete = false;
   form: ShuffleRequest = { sourcePath: '', outputPath: '', prefix: 'Mix-', folderCount: 1, targetMinutes: 60 };
-  show(): void { this.dialog().nativeElement.showModal(); }
-  close(): void { this.cancel(); this.dialog().nativeElement.close(); }
-  backdrop(event: MouseEvent): void { if (event.target === event.currentTarget) this.close(); }
+  show(): void { this.open.set(true); }
+  close(): void { this.cancel(); this.open.set(false); }
+  @HostListener('document:keydown.escape')
+  onEscape(): void { if (this.open()) this.close(); }
   invalidate(): void { this.plan.set(null); this.result.set(null); this.allowIncomplete = false; }
   preview(): void {
     if (this.busy()) return;
