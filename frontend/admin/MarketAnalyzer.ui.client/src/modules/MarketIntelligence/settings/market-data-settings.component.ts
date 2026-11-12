@@ -157,6 +157,16 @@ export class MarketDataSettingsComponent implements OnInit {
 
   isSecret(key: string): boolean { return /password|secret|token|apikey|username|credential/i.test(key); }
 
+  isBoolean(setting: SettingItem): boolean {
+    return ['true', 'false'].includes(setting.value.trim().toLowerCase());
+  }
+
+  booleanValue(setting: SettingItem): boolean { return setting.value.trim().toLowerCase() === 'true'; }
+
+  setBoolean(setting: SettingItem, event: Event): void {
+    setting.value = (event.target as HTMLInputElement).checked ? 'true' : 'false';
+  }
+
   private perform<T>(request: () => import('rxjs').Observable<T>, success: string, done?: (result: T) => void): void {
     this.busy.set(true);
     this.error.set('');

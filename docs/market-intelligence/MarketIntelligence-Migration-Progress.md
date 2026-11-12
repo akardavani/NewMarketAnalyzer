@@ -146,6 +146,10 @@ The API source compiled successfully to a temporary output path. A normal build 
 
 Remaining integration item: add the `تنظیمات داشبورد` root item to the CMS menu seed at `backend/Cms/src/MarketAnalyzer.Cms.Persistence/Menu.json`. The attempted edit left that file empty, and the automatic review rejected restoring it because it could discard pre-existing edits. Restore the seed file from its known-good copy, then add the menu item and rebuild/restart the API so menu seeding updates the database. Do not treat the sidebar entry as available until this is completed.
 
+Dashboard symbol settings now use the shared RatioCandles symbol picker for compact typeahead search and removable chips. The dashboard-specific `Dashboard/SearchSymbols` endpoint, per-user selection, save, and remove behavior remain intact. The Angular production build completed successfully; it reported existing bundle/style budget and CommonJS warnings.
+
+The dashboard settings panel is now constrained to a compact centered width. Market Data settings use responsive half/third-width market cards, and string-backed `true`/`false` values use checkboxes; saving still sends the same string values through the existing endpoint. The Angular production build completed with 0 errors; existing bundle/style budget and CommonJS warnings remain.
+
 ## Tools domain refactor (2026-11-12)
 
 Reviewed the Tools controllers, Application/Persistence projects, Angular tool modules, and sidebar composition. UI features are already separated by tool into dedicated components and services and use the shared theme/action styles; the Notes editor opens in its own fixed panel beside the sidebar. No UI restructuring was needed.

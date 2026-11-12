@@ -1,8 +1,11 @@
-import { Component, inject, OnInit, signal } from '@angular/core';
+import { Component, computed, inject, OnInit, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { GlobalImports } from '@imports';
 import { ApiResult } from '@typings';
 import { apiUrl } from '@utils';
+import { map } from 'rxjs';
+import { SymbolItem } from '../../../modules/MarketIntelligence/shared/strategy-api.service';
+import { SymbolPickerComponent } from '../../../modules/MarketIntelligence/shared/symbol-picker/symbol-picker.component';
 
 interface DashboardSymbolSelection {
   marketKey: string;
@@ -13,17 +16,30 @@ interface DashboardSymbolSelection {
 
 @Component({
   selector: 'fd-dashboard-settings',
-  imports: [...GlobalImports],
+  imports: [...GlobalImports, SymbolPickerComponent],
   templateUrl: './dashboard-settings.component.html',
   styleUrl: './dashboard-settings.component.scss'
 })
 export class DashboardSettingsComponent implements OnInit {
   private readonly http = inject(HttpClient);
-  protected readonly searchText = signal('');
-  protected readonly results = signal<DashboardSymbolSelection[]>([]);
   protected readonly selected = signal<DashboardSymbolSelection[]>([]);
+  protected readonly pickerSelection = computed(() => this.selected().map(item => ({
+    symbolKey: item.symbolKey,
+    symbol: item.name,
+    name: item.name,
+    market: item.marketKey
+  })));
   protected readonly message = signal('');
   protected readonly busy = signal(false);
+
+  protected readonly searchSymbols = (text: string) => this.http
+    .get<ApiResult<DashboardSymbolSelection[]>>(apiUrl('Dashboard/SearchSymbols'), { params: { text, take: 50 } })
+    .pipe(map(result => result.successed ? (result.data ?? []).map(item => ({
+      symbolKey: item.symbolKey,
+      symbol: item.name,
+      name: item.name,
+      market: item.marketKey
+    })) : []));
 
   ngOnInit(): void {
     this.http.get<ApiResult<DashboardSymbolSelection[]>>(apiUrl('Dashboard/GetSymbols'))
@@ -32,23 +48,17 @@ export class DashboardSettingsComponent implements OnInit {
       });
   }
 
-  protected search(): void {
-    const text = this.searchText().trim();
-    if (!text) {
-      this.results.set([]);
-      return;
-    }
-    this.http.get<ApiResult<DashboardSymbolSelection[]>>(apiUrl('Dashboard/SearchSymbols'), { params: { text, take: 50 } })
-      .subscribe(result => this.results.set(result.successed ? result.data ?? [] : []));
-  }
-
-  protected add(item: DashboardSymbolSelection): void {
-    if (this.selected().some(x => x.marketKey === item.marketKey && x.symbolKey === item.symbolKey)) return;
-    this.selected.update(items => [...items, item]);
-  }
-
-  protected remove(item: DashboardSymbolSelection): void {
-    this.selected.update(items => items.filter(x => x.marketKey !== item.marketKey || x.symbolKey !== item.symbolKey));
+  protected selectionChanged(items: SymbolItem[]): void {
+    const previous = this.selected();
+    this.selected.set(items.map(item => {
+      const existing = previous.find(x => x.marketKey === item.market && x.symbolKey === item.symbolKey);
+      return existing ?? {
+        marketKey: item.market,
+        symbolKey: item.symbolKey,
+        name: item.name || item.symbol,
+        currencyCode: ''
+      };
+    }));
   }
 
   protected save(): void {

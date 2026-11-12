@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Observable } from 'rxjs';
 import { StrategyApiService, SymbolItem } from '../strategy-api.service';
 
 @Component({
@@ -12,6 +13,7 @@ export class SymbolPickerComponent {
   private readonly api = inject(StrategyApiService);
   @Input() multiple = true;
   @Input() selected: SymbolItem[] = [];
+  @Input() searchSymbols?: (text: string) => Observable<SymbolItem[]>;
   @Output() selectedChange = new EventEmitter<SymbolItem[]>();
 
   text = '';
@@ -21,11 +23,13 @@ export class SymbolPickerComponent {
   onInput(): void {
     clearTimeout(this.timer);
     if (!this.text.trim()) { this.options = []; return; }
-    this.timer = setTimeout(() => this.api.searchSymbols(this.text.trim()).subscribe(o => (this.options = o)), 300);
+    this.timer = setTimeout(() => (this.searchSymbols ?? (text => this.api.searchSymbols(text)))(this.text.trim()).subscribe(o => (this.options = o)), 300);
   }
 
   add(item: SymbolItem): void {
-    const next = this.multiple ? [...this.selected.filter(x => x.symbolKey !== item.symbolKey), item] : [item];
+    const next = this.multiple
+      ? [...this.selected.filter(x => x.symbolKey !== item.symbolKey || x.market !== item.market), item]
+      : [item];
     this.selected = next;
     this.selectedChange.emit(next);
     this.text = '';
