@@ -1,11 +1,10 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 import { AppDataService } from '../../infrastructure/services/app-data.service';
 import { BrandService } from '@services/brand.service';
 import { DialogService } from '@services/dialog.service';
 import { ShellStateService } from '@services/shell-state.service';
-import { ITreeNode } from '@components/tree-view/tree-view.component';
 import { NotificationComponent } from '../components/notification/notification.component';
 import { CommandPaletteComponent } from './command-palette/command-palette.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -24,18 +23,11 @@ export class LayoutComponent {
   private readonly dialog = inject(DialogService);
   private readonly appData = inject(AppDataService);
 
-  protected readonly menuItems = signal<ReadonlyArray<ITreeNode>>(this.appData.menuItems);
-  protected readonly userFullname = signal(this.appData.fullName ?? '');
-
-  constructor() {
-    this.appData.valueChanges.subscribe(() => {
-      this.menuItems.set(this.appData.menuItems);
-      this.userFullname.set(this.appData.fullName ?? '');
-    });
-  }
+  protected readonly menuItems = this.appData.menuItems;
+  protected readonly userFullname = this.appData.fullName;
 
   get userAlertCount(): number {
-    return this.appData.userAlerts?.length ?? 0;
+    return this.appData.userAlerts().length;
   }
 
   openSearch(): void {

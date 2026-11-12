@@ -15,7 +15,7 @@ export class NotificationComponent {
     appData: AppDataService,
     public dialogRef: MatDialogRef<NotificationComponent>
   ) {
-    this.userAlert = appData.userAlerts ?? [];
+    this.userAlert = [...appData.userAlerts()];
   }
 
   public close(): void {

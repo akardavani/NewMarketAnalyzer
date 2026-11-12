@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { inject, Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 import { AuthService } from '@services/auth.service';
 import { ITreeNode } from '@components/tree-view/tree-view.component';
 import {
@@ -7,16 +7,16 @@ import {
   AppState,
 } from '@typings';
 import { apiUrl} from '@utils';
-import { firstValueFrom, map, Subject, tap } from 'rxjs';
+import { firstValueFrom, map, tap } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class AppDataService {
-  fullName!: string;  
-  appState!: AppState;
-  lastLoginDate!: Date;
-  menuItems: ReadonlyArray<ITreeNode> = [];
-  userAlerts!: UserAlertItem[];
-  valueChanges = new Subject<void>();
+  readonly fullName = signal('');
+  readonly appState = signal<AppState | undefined>(undefined);
+  readonly lastLoginDate = signal<Date | undefined>(undefined);
+  readonly menuItems = signal<ReadonlyArray<ITreeNode>>([]);
+  readonly userAlerts = signal<ReadonlyArray<UserAlertItem>>([]);
+  private initialization?: Promise<void>;
 
   constructor(
     private readonly auth: AuthService,
@@ -27,24 +27,30 @@ export class AppDataService {
     if (!this.auth.authenticated) {
       return Promise.resolve();
     }
+    if (this.initialization) {
+      return this.initialization;
+    }
 
     const request = this.client
       .get<ApiResult<AppData>>(apiUrl('Home/GetAppData'))
       .pipe(
         tap((response) => {
           if (response.successed) {
-            this.menuItems = response.data.menus;
-            this.appState = response.data.appState;
-            this.fullName = response.data.fullName;
-            this.lastLoginDate = response.data.lastLoginDate;
-          this.userAlerts = response.data.userAlerts ?? [];
-          this.valueChanges.next();
+            this.menuItems.set(response.data.menus ?? []);
+            this.appState.set(response.data.appState);
+            this.fullName.set(response.data.fullName ?? '');
+            this.lastLoginDate.set(response.data.lastLoginDate);
+            this.userAlerts.set(response.data.userAlerts ?? []);
           }
         }),
         map((_) => void 0),
       );
 
-    return firstValueFrom(request);
+    this.initialization = firstValueFrom(request).catch(error => {
+      this.initialization = undefined;
+      throw error;
+    });
+    return this.initialization;
   }
 }
 interface AppData {
