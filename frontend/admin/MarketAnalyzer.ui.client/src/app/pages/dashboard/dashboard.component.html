@@ -24,4 +24,33 @@
       <strong>{{ appData.appState() === 2 ? 'آماده به کار' : 'در حال بررسی' }}</strong>
     </article>
   </div>
+
+  @if (symbols().length > 0) {
+    <section class="price-section">
+      <header class="price-header fd-card">
+        <div>
+          <span class="eyebrow">داشبورد شخصی</span>
+          <h2>قیمت نمادهای انتخاب‌شده</h2>
+        </div>
+        <a routerLink="/dashboard/settings">تنظیم نمادها</a>
+      </header>
+      <div class="price-grid">
+        @for (item of symbols(); track item.marketKey + ':' + item.symbolKey) {
+          <article class="price-card fd-card">
+            <div class="symbol-title">
+              <strong>{{ item.name }}</strong>
+              <span>{{ item.marketKey }} · {{ item.symbolKey }}</span>
+            </div>
+            <strong class="price-value" dir="ltr">
+              @if (item.lastPrice == null) {
+                دادهٔ قیمت موجود نیست
+              } @else {
+                {{ item.lastPrice | number:'1.0-4' }} {{ item.currencyCode }}
+              }
+            </strong>
+          </article>
+        }
+      </div>
+    </section>
+  }
 </section>

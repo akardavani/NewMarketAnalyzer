@@ -12,6 +12,16 @@ p { margin: 0; color: var(--fd-text-3); font-size: 12px; }
 .summary-label { color: var(--fd-text-3); font-size: 11px; }
 .summary-card strong { color: var(--fd-text); font-size: 16px; font-weight: 700; }
 .summary-card.accent { background: #e9edda; }
+.price-section { margin-top: 16px; }
+.price-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.price-header h2 { margin: 5px 0 0; color: var(--fd-text); font-size: 17px; }
+.price-header a { color: var(--fd-primary); font-size: 12px; text-decoration: none; }
+.price-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+.price-card { min-height: 94px; display: flex; flex-direction: column; justify-content: space-between; gap: 14px; }
+.symbol-title { display: flex; flex-direction: column; gap: 4px; }
+.symbol-title strong { color: var(--fd-text); font-size: 14px; }
+.symbol-title span { color: var(--fd-text-3); font-size: 11px; }
+.price-value { color: var(--fd-text); font-size: 18px; }
 
 @media (max-width: 760px) {
   .welcome { align-items: flex-start; flex-direction: column; padding: 17px; }

@@ -1,0 +1,47 @@
+<section class="settings-page fd-page" dir="rtl">
+  <header class="page-heading fd-card">
+    <div>
+      <span class="eyebrow">داشبورد شخصی</span>
+      <h1>تنظیم نمادهای داشبورد</h1>
+      <p>نمادهایی را انتخاب کنید که قیمت آخرین دادهٔ ذخیره‌شدهٔ آن‌ها در صفحهٔ اول نمایش داده شود.</p>
+    </div>
+  </header>
+
+  <div class="settings-grid">
+    <section class="fd-card panel">
+      <h2>جستجوی نماد</h2>
+      <div class="search-row">
+        <input type="search" [ngModel]="searchText()" (ngModelChange)="searchText.set($event)" (keyup.enter)="search()" placeholder="نام یا نماد، مانند فملی یا بیت‌کوین">
+        <button type="button" class="fd-button" (click)="search()">جستجو</button>
+      </div>
+      <div class="symbol-list">
+        @for (item of results(); track item.marketKey + ':' + item.symbolKey) {
+          <article class="symbol-row">
+            <div><strong>{{ item.name }}</strong><span>{{ item.marketKey }} · {{ item.symbolKey }}</span></div>
+            <button type="button" class="icon-button" (click)="add(item)" aria-label="افزودن">+</button>
+          </article>
+        } @empty {
+          <p class="empty">برای یافتن نماد، عبارت موردنظر را جستجو کنید.</p>
+        }
+      </div>
+    </section>
+
+    <section class="fd-card panel">
+      <h2>نمادهای انتخاب‌شده <span>({{ selected().length }})</span></h2>
+      <div class="symbol-list selected-list">
+        @for (item of selected(); track item.marketKey + ':' + item.symbolKey) {
+          <article class="symbol-row">
+            <div><strong>{{ item.name }}</strong><span>{{ item.marketKey }} · {{ item.symbolKey }}</span></div>
+            <button type="button" class="remove-button" (click)="remove(item)">حذف</button>
+          </article>
+        } @empty {
+          <p class="empty">هنوز نمادی انتخاب نشده است؛ در این حالت داشبورد بخش قیمت‌ها را نشان نمی‌دهد.</p>
+        }
+      </div>
+      <footer class="actions">
+        <span role="status">{{ message() }}</span>
+        <button type="button" class="fd-button primary" [disabled]="busy()" (click)="save()">{{ busy() ? 'در حال ذخیره…' : 'ذخیره تنظیمات' }}</button>
+      </footer>
+    </section>
+  </div>
+</section>

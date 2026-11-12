@@ -120,6 +120,14 @@ After those steps, continue with the migration and final-cleanup items below.
 
 ## Documentation locations
 
+## Dashboard personalization
+
+The first per-user dashboard widget is implemented in code: users can search and select active symbols, their selection is stored in Membership, and the dashboard reads each latest stored price from MarketData. No provider is called by dashboard reads. The price widget is hidden when no symbols are selected; selected symbols without a current state remain visible without a price.
+
+The API and Angular build validation are recorded with this change. The `AddUserDashboardSymbols` migration has been generated but has **not** been applied to any database. Apply it before running the new API endpoints.
+
+Remaining integration item: add the `تنظیمات داشبورد` root item to the CMS menu seed at `backend/Cms/src/MarketAnalyzer.Cms.Persistence/Menu.json`. The attempted edit left that file empty, and the automatic review rejected restoring it because it could discard pre-existing edits. Restore the seed file from its known-good copy, then add the menu item and rebuild/restart the API so menu seeding updates the database. Do not treat the sidebar entry as available until this is completed.
+
 - `docs/market-intelligence/README.md` — AI contributor entry point, document index, project intent, and working rules.
 - `docs/market-intelligence/MarketIntelligence-Migration-Progress.md` — current status and ordered remaining work.
 - `docs/market-intelligence/MarketIntelligence-Architecture-Guide.md` — living AI-oriented project and operations guide; finalize at the end.

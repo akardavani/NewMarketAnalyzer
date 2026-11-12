@@ -18,6 +18,12 @@ export const routes: Routes = [
         component: LoginHistoryComponent
       },
       {
+        path: 'dashboard/settings',
+        title: 'تنظیمات داشبورد',
+        loadComponent: () => import('./pages/dashboard-settings/dashboard-settings.component')
+          .then(e => e.DashboardSettingsComponent)
+      },
+      {
         path: '', title: 'میزکار',
         loadComponent: () =>
           import('./pages/dashboard/dashboard.component')
