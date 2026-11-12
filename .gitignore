@@ -16,6 +16,9 @@
 # ---------- Visual Studio: build output (any folder) ----------
 [Bb]in/
 [Oo]bj/
+# Keep the shared API client's generated build output out of source control.
+/shared/MarketAnalyzer.ApiClient/bin/
+/shared/MarketAnalyzer.ApiClient/obj/
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
