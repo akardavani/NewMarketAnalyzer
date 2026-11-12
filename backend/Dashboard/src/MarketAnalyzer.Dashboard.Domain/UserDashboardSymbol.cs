@@ -1,4 +1,4 @@
-namespace MarketAnalyzer.Membership.Domain;
+namespace MarketAnalyzer.Dashboard.Domain;
 
 /// <summary>A symbol selected by a user for their personal dashboard.</summary>
 public sealed class UserDashboardSymbol

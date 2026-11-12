@@ -1,8 +1,8 @@
-using MarketAnalyzer.Membership.Domain;
+using MarketAnalyzer.Dashboard.Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace MarketAnalyzer.Membership.Persistence;
+namespace MarketAnalyzer.Dashboard.Persistence;
 
 internal sealed class UserDashboardSymbolConfiguration : IEntityTypeConfiguration<UserDashboardSymbol>
 {

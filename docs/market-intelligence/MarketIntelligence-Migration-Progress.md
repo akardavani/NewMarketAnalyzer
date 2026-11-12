@@ -134,7 +134,15 @@ The selected-symbol widget now renders all prices inside one compact card, as on
 On desktop, the price card matches the width of one dashboard summary card and aligns beneath the rightmost summary card; on narrow screens it expands to full width.
 Each quote label now appends its source date in Solar Hijri `dd-MM-yyyy` format, using the existing Jalali date pipe; the duplicate Gregorian timestamp line was removed.
 
-The API and Angular build validation are recorded with this change. The `AddUserDashboardSymbols` migration has been generated but has **not** been applied to any database. Apply it before running the new API endpoints.
+The API and Angular build validation are recorded with this change. The `AddUserDashboardSymbols` migration has been generated but has **not** been applied to any database. Apply pending migrations before running the new API endpoints.
+
+## Dashboard domain extraction (2026-11-12)
+
+Created `backend/Dashboard/src` with `MarketAnalyzer.Dashboard.Domain`, `.Application`, and `.Persistence`. `UserDashboardSymbol` and its EF configuration moved out of Membership; API request/response models and dashboard orchestration moved into Dashboard.Application. `DashboardController` now delegates to `IDashboardService`, and existing quotes/catalog/history still come from MarketData read contracts without changing ingestion or storage behavior.
+
+Added `20261112085954_DashboardDomainRefactor`. Its Up/Down are intentionally empty because the existing `DashboardSymbols` table and columns are unchanged; the migration snapshot now records the entity under `MarketAnalyzer.Dashboard.Domain`. The migration has **not** been applied. Do not run `Update-Database` on the user's behalf.
+
+The API source compiled successfully to a temporary output path. A normal build could not overwrite files in the running API's output directory because the API process holds those DLLs; the running process was left untouched. EF migration scaffolding succeeded using the temporary build output. Existing unrelated compiler warnings remain.
 
 Remaining integration item: add the `تنظیمات داشبورد` root item to the CMS menu seed at `backend/Cms/src/MarketAnalyzer.Cms.Persistence/Menu.json`. The attempted edit left that file empty, and the automatic review rejected restoring it because it could discard pre-existing edits. Restore the seed file from its known-good copy, then add the menu item and rebuild/restart the API so menu seeding updates the database. Do not treat the sidebar entry as available until this is completed.
 

@@ -724,6 +724,40 @@ namespace MarketAnalyzer.Persistence.Migrations
                     b.ToTable("Users", "cms");
                 });
 
+            modelBuilder.Entity("MarketAnalyzer.Dashboard.Domain.UserDashboardSymbol", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("DisplayOrder")
+                        .HasColumnType("int");
+
+                    b.Property<string>("MarketKey")
+                        .IsRequired()
+                        .HasMaxLength(80)
+                        .HasColumnType("nvarchar(80)");
+
+                    b.Property<string>("SymbolKey")
+                        .IsRequired()
+                        .HasMaxLength(120)
+                        .HasColumnType("nvarchar(120)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId", "DisplayOrder");
+
+                    b.HasIndex("UserId", "MarketKey", "SymbolKey")
+                        .IsUnique();
+
+                    b.ToTable("DashboardSymbols", (string)null);
+                });
+
             modelBuilder.Entity("MarketAnalyzer.MarketData.Domain.CorporateAction", b =>
                 {
                     b.Property<long>("Id")
@@ -2375,40 +2409,6 @@ namespace MarketAnalyzer.Persistence.Migrations
                         .IsUnique();
 
                     b.ToTable("Users", "membership");
-                });
-
-            modelBuilder.Entity("MarketAnalyzer.Membership.Domain.UserDashboardSymbol", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("DisplayOrder")
-                        .HasColumnType("int");
-
-                    b.Property<string>("MarketKey")
-                        .IsRequired()
-                        .HasMaxLength(80)
-                        .HasColumnType("nvarchar(80)");
-
-                    b.Property<string>("SymbolKey")
-                        .IsRequired()
-                        .HasMaxLength(120)
-                        .HasColumnType("nvarchar(120)");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId", "DisplayOrder");
-
-                    b.HasIndex("UserId", "MarketKey", "SymbolKey")
-                        .IsUnique();
-
-                    b.ToTable("DashboardSymbols", (string)null);
                 });
 
             modelBuilder.Entity("MarketAnalyzer.Membership.Domain.UserRole", b =>

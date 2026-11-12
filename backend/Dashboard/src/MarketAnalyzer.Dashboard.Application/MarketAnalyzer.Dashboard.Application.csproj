@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MarketAnalyzer.Dashboard.Domain\MarketAnalyzer.Dashboard.Domain.csproj" />
+    <ProjectReference Include="..\..\..\Common\src\MarketAnalyzer.Abstractions\MarketAnalyzer.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\MarketData\src\MarketAnalyzer.MarketData.Application\MarketAnalyzer.MarketData.Application.csproj" />
+    <ProjectReference Include="..\..\..\MarketData\src\MarketAnalyzer.MarketData.Domain\MarketAnalyzer.MarketData.Domain.csproj" />
+  </ItemGroup>
+</Project>

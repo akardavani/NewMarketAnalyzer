@@ -10,6 +10,8 @@ using MarketAnalyzer.MarketData.Application.Operations;
 using MarketAnalyzer.MarketIntelligence.Infrastructure;
 using MarketAnalyzer.MarketData.Persistence;
 using MarketAnalyzer.MarketData.Providers;
+using MarketAnalyzer.Dashboard.Application;
+using MarketAnalyzer.Dashboard.Persistence;
 using MarketAnalyzer.Membership.Application;
 using MarketAnalyzer.Tools.Application;
 using Microsoft.AspNetCore.Builder;
@@ -121,6 +123,8 @@ builder.Services.AddSingleton(Options.Create(urlSettings));
 builder.Services.AddCms();
 builder.Services.AddMembership();
 builder.Services.AddTools();
+builder.Services.AddDashboardApplication();
+builder.Services.AddDashboardPersistence();
 
 builder.Services.AddMarketDataStores();
 builder.Services.AddMarketDataIngestion();

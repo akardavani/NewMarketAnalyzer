@@ -1,7 +1,4 @@
-using System;
-using System.Collections.Generic;
-
-namespace MarketAnalyzer.Api.Models;
+namespace MarketAnalyzer.Dashboard.Application;
 
 public sealed record DashboardSymbolDto
 {
@@ -34,3 +31,5 @@ public sealed record DashboardSymbolSearchDto
     public required string Name { get; init; }
     public required string CurrencyCode { get; init; }
 }
+
+public sealed record SaveDashboardSymbolsResult(bool Succeeded, string? Error = null);
