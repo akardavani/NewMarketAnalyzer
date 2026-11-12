@@ -42,4 +42,19 @@ export class DashboardComponent implements OnInit {
       ? new Intl.NumberFormat('en-US', { maximumFractionDigits: 4 }).format(amount)
       : '';
   }
+
+  protected formatPriceDate(value: string | null): string {
+    if (!value) return '';
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) return '';
+
+    const parts = new Intl.DateTimeFormat('en-US-u-ca-persian-nu-latn', {
+      timeZone: 'Asia/Tehran',
+      day: '2-digit',
+      month: '2-digit',
+      year: 'numeric'
+    }).formatToParts(date);
+    const part = (type: Intl.DateTimeFormatPartTypes) => parts.find(x => x.type === type)?.value ?? '';
+    return `${part('day')}-${part('month')}-${part('year')}`;
+  }
 }

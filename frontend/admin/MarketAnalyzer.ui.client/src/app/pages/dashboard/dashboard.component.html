@@ -42,7 +42,12 @@
               <span>{{ item.marketKey }} · {{ item.symbolKey }}</span>
             </div>
             <div class="price-details">
-              <span class="price-label">{{ item.priceLabel }}</span>
+              <span class="price-label">
+                {{ item.priceLabel }}
+                @if (item.priceTimestampUtc) {
+                  <bdi dir="ltr">({{ formatPriceDate(item.priceTimestampUtc) }})</bdi>
+                }
+              </span>
               @if (item.lastPrice == null) {
                 <strong class="price-missing">دادهٔ قیمت موجود نیست</strong>
               } @else {
@@ -52,9 +57,6 @@
                     <small>{{ item.currencyCode }}</small>
                   }
                 </strong>
-              }
-              @if (item.priceTimestampUtc) {
-                <span class="price-updated">{{ item.priceTimestampUtc | date:'yyyy/MM/dd HH:mm' }}</span>
               }
             </div>
           </article>

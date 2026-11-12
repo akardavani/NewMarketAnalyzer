@@ -78,6 +78,12 @@ This document is the current migration checklist. Start with [README.md](README.
 - Kept the requested history schedule as daily 20:00 candle runs for TSE and both crypto catalogs (`crypto` and `crypto-toman`); order-book refresh defaults to every five minutes. Existing saved operator settings still take precedence over code defaults.
 - Improved the settings page's ZIP download error handling so binary HTTP error responses (such as an unauthorized sysadmin request) show the server's message. Backend solution build succeeds with zero errors; Angular build succeeds with the existing bundle/style budget and CommonJS warnings.
 
+## TSE candle freshness investigation (2026-11-12)
+
+Read-only inspection of the Development database for TSE symbol ID `419` (`IRO1TKNO0001`, active) found 4,266 daily candles, with the latest candle opening at `2026-11-02 20:30 UTC` and last received at `2026-11-04 12:41 UTC`. Its current-state row is separate and has source time `2026-11-10 07:30 UTC`. The market is active; `Scheduler:IngestCandles:Enabled=true`, `IntervalSeconds=86400`, and `RunAt=20:00` in `Asia/Tehran`. Active history provider is `nahayatnegar`, its candle URL setting is present, and no `Ingestion:NoDataUntil:419` cache row exists.
+
+The currently running API process started at `11:23` Tehran on November 12; at the `11:42` check, today's scheduled 20:00 run had not happened yet. `NextRunAt` schedules the next future 20:00 after process startup rather than immediately catching up. The database does not persist job outcomes; Development logs are console-only, and no historical failure record was found. Therefore earlier provider errors cannot be confirmed from this database snapshot. A direct symbol-specific request to the third-party provider was blocked by automatic approval review, so current upstream availability remains unverified. Check the TSE candle job result/log after its scheduled run before attributing the older gap to a provider error.
+
 ## Current ownership and legacy boundaries
 
 - MarketData EF configurations are in `backend/MarketData/src/MarketAnalyzer.MarketData.Persistence/Context/MarketData/`; stores are under `Stores/`. Provider implementations and embedded symbol catalogs are under `MarketData.Providers/`.
@@ -126,6 +132,7 @@ The first per-user dashboard widget is implemented in code: users can search and
 
 The selected-symbol widget now renders all prices inside one compact card, as one row per symbol. Amounts are formatted explicitly and currency codes use smaller text so values stay legible.
 On desktop, the price card matches the width of one dashboard summary card and aligns beneath the rightmost summary card; on narrow screens it expands to full width.
+Each quote label now appends its source date in Solar Hijri `dd-MM-yyyy` format, using the existing Jalali date pipe; the duplicate Gregorian timestamp line was removed.
 
 The API and Angular build validation are recorded with this change. The `AddUserDashboardSymbols` migration has been generated but has **not** been applied to any database. Apply it before running the new API endpoints.
 

@@ -23,11 +23,11 @@ p { margin: 0; color: var(--fd-text-3); font-size: 12px; }
 .symbol-title strong { color: var(--fd-text); font-size: 14px; }
 .symbol-title span { color: var(--fd-text-3); font-size: 11px; }
 .price-details { min-width: 150px; display: flex; flex-direction: column; align-items: flex-start; gap: 2px; text-align: left; }
-.price-label { color: var(--fd-text-3); font-size: 10px; }
+.price-label { color: var(--fd-text-3); font-size: 10px; white-space: nowrap; }
+.price-label bdi { unicode-bidi: isolate; }
 .price-value { display: inline-flex; align-items: baseline; gap: 5px; color: var(--fd-text); font-size: 17px; font-weight: 700; white-space: nowrap; }
 .price-value small { color: var(--fd-text-3); font-size: 10px; font-weight: 500; }
 .price-missing { color: var(--fd-text-3); font-size: 12px; }
-.price-updated { color: var(--fd-text-3); font-size: 9px; }
 
 @media (max-width: 760px) {
   .welcome { align-items: flex-start; flex-direction: column; padding: 17px; }
