@@ -9,6 +9,7 @@ public sealed record DashboardSymbolDto
     public required string SymbolKey { get; init; }
     public required string Name { get; init; }
     public required string CurrencyCode { get; init; }
+    public required string PriceLabel { get; init; }
     public decimal? LastPrice { get; init; }
     public DateTime? PriceTimestampUtc { get; init; }
     public int DisplayOrder { get; init; }

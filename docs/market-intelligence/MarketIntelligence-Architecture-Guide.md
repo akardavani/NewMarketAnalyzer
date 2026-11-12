@@ -85,8 +85,10 @@ The first widget is the selected-symbol price list:
 
 - User selections are stored in `Membership` as `UserDashboardSymbol` rows, keyed by the authenticated user and the stable `(MarketKey, SymbolKey)` pair. They are not global market settings and are not stored under Tools.
 - `DashboardController` exposes symbol search, read, and replacement-save endpoints. It validates selected symbols against the active MarketData catalog and scopes every preference query to the current user.
-- The dashboard reads `ICurrentStateReader` from MarketData. This is the latest state already collected and stored by scheduled jobs; opening the dashboard does not call a provider.
-- With no selected symbols, the dashboard hides the price widget. A selected symbol with no current state remains listed and reports that no price is available.
+- The dashboard composes existing MarketData reads: the catalog and `ICurrentSymbolStateStore` provide current symbol quotes, `FundNavPoint` supplies fund NAV, and `IHistoricalCandleStore` provides the most recent daily candle only when the current value is missing. Opening the dashboard does not call a provider or change MarketData ingestion/storage.
+- Fund cards show the latest stored cancellation NAV (then statistical or issuance NAV), labeled `NAV ابطال`; stock and other current-state cards show `LastPrice` (falling back to `ClosePrice` when needed). If that current value is missing, the card shows the latest `HistoricalCandles` daily `Close`, labeled `آخرین قیمت تاریخی`.
+- Dashboard quotes are presented together in one compact card, with one row per selected symbol; the currency code is visually secondary to the formatted amount.
+- With no selected symbols, the dashboard hides the price widget. A selected symbol with no current value and no daily historical candle remains listed and reports that no price is available.
 - The settings page is routed at `/dashboard/settings`. Add its sidebar menu row to the CMS menu seed, which is reseeded from `backend/Cms/src/MarketAnalyzer.Cms.Persistence/Menu.json` when the API starts.
 - The table is created by the `AddUserDashboardSymbols` EF migration in `backend/MarketAnalyzer.Persistence/Migrations`. Apply migrations before using this feature against a database.
 

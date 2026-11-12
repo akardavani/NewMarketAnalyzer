@@ -11,7 +11,8 @@ interface DashboardSymbol {
   symbolKey: string;
   name: string;
   currencyCode: string;
-  lastPrice: number | null;
+  priceLabel: string;
+  lastPrice: number | string | null;
   priceTimestampUtc: string | null;
 }
 
@@ -32,5 +33,13 @@ export class DashboardComponent implements OnInit {
       .subscribe(result => {
         if (result.successed) this.symbols.set(result.data ?? []);
       });
+  }
+
+  protected formatPrice(value: number | string | null): string {
+    if (value === null || value === '') return '';
+    const amount = Number(value);
+    return Number.isFinite(amount)
+      ? new Intl.NumberFormat('en-US', { maximumFractionDigits: 4 }).format(amount)
+      : '';
   }
 }

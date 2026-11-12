@@ -122,7 +122,10 @@ After those steps, continue with the migration and final-cleanup items below.
 
 ## Dashboard personalization
 
-The first per-user dashboard widget is implemented in code: users can search and select active symbols, their selection is stored in Membership, and the dashboard reads each latest stored price from MarketData. No provider is called by dashboard reads. The price widget is hidden when no symbols are selected; selected symbols without a current state remain visible without a price.
+The first per-user dashboard widget is implemented in code: users can search and select active symbols, their selection is stored in Membership, and the dashboard reads existing values from MarketData. Current-state quotes come from `ICurrentSymbolStateStore`; funds use their latest stored cancellation NAV; if either current value is absent, the dashboard reads the latest daily `Close` from `IHistoricalCandleStore` (`HistoricalCandles`). Historical fallback is labeled `آخرین قیمت تاریخی`. No provider is called and ingestion/storage behavior is unchanged. The price widget is hidden when no symbols are selected; selected symbols without a current value or daily candle remain visible without a price.
+
+The selected-symbol widget now renders all prices inside one compact card, as one row per symbol. Amounts are formatted explicitly and currency codes use smaller text so values stay legible.
+On desktop, the price card matches the width of one dashboard summary card and aligns beneath the rightmost summary card; on narrow screens it expands to full width.
 
 The API and Angular build validation are recorded with this change. The `AddUserDashboardSymbols` migration has been generated but has **not** been applied to any database. Apply it before running the new API endpoints.
 

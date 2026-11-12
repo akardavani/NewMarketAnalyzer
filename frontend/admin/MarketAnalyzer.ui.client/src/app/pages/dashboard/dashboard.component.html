@@ -26,28 +26,37 @@
   </div>
 
   @if (symbols().length > 0) {
-    <section class="price-section">
-      <header class="price-header fd-card">
+    <section class="price-section fd-card">
+      <header class="price-header">
         <div>
           <span class="eyebrow">داشبورد شخصی</span>
           <h2>قیمت نمادهای انتخاب‌شده</h2>
         </div>
         <a routerLink="/dashboard/settings">تنظیم نمادها</a>
       </header>
-      <div class="price-grid">
+      <div class="price-list">
         @for (item of symbols(); track item.marketKey + ':' + item.symbolKey) {
-          <article class="price-card fd-card">
+          <article class="price-row">
             <div class="symbol-title">
               <strong>{{ item.name }}</strong>
               <span>{{ item.marketKey }} · {{ item.symbolKey }}</span>
             </div>
-            <strong class="price-value" dir="ltr">
+            <div class="price-details">
+              <span class="price-label">{{ item.priceLabel }}</span>
               @if (item.lastPrice == null) {
-                دادهٔ قیمت موجود نیست
+                <strong class="price-missing">دادهٔ قیمت موجود نیست</strong>
               } @else {
-                {{ item.lastPrice | number:'1.0-4' }} {{ item.currencyCode }}
+                <strong class="price-value" dir="ltr">
+                  <span>{{ formatPrice(item.lastPrice) }}</span>
+                  @if (item.currencyCode) {
+                    <small>{{ item.currencyCode }}</small>
+                  }
+                </strong>
               }
-            </strong>
+              @if (item.priceTimestampUtc) {
+                <span class="price-updated">{{ item.priceTimestampUtc | date:'yyyy/MM/dd HH:mm' }}</span>
+              }
+            </div>
           </article>
         }
       </div>

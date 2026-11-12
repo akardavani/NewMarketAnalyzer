@@ -20,12 +20,18 @@ public sealed class DashboardController : FundControllerBase
     private readonly IDbContext _db;
     private readonly IMarketCatalogReader _catalog;
     private readonly ICurrentSymbolStateStore _currentStates;
+    private readonly IHistoricalCandleStore _historicalCandles;
 
-    public DashboardController(IDbContext db, IMarketCatalogReader catalog, ICurrentSymbolStateStore currentStates)
+    public DashboardController(
+        IDbContext db,
+        IMarketCatalogReader catalog,
+        ICurrentSymbolStateStore currentStates,
+        IHistoricalCandleStore historicalCandles)
     {
         _db = db;
         _catalog = catalog;
         _currentStates = currentStates;
+        _historicalCandles = historicalCandles;
     }
 
     [HttpGet]
@@ -44,19 +50,67 @@ public sealed class DashboardController : FundControllerBase
         }).ToList(), cancellationToken);
         var states = await _currentStates.GetAsync(selected.Select(x => x.SymbolId).ToArray(), cancellationToken);
         var stateById = states.ToDictionary(x => x.SymbolId);
+        var fundSymbolIds = selected
+            .Where(x => string.Equals(x.MarketKey, "fund", StringComparison.OrdinalIgnoreCase))
+            .Select(x => x.SymbolId)
+            .Distinct()
+            .ToArray();
+        var fundNavBySymbolId = fundSymbolIds.Length == 0
+            ? new Dictionary<int, FundNavPoint>()
+            : await _db.Set<FundNavPoint>().AsNoTracking()
+                .Where(x => fundSymbolIds.Contains(x.SymbolId))
+                .GroupBy(x => x.SymbolId)
+                .Select(group => group.OrderByDescending(x => x.Date).First())
+                .ToDictionaryAsync(x => x.SymbolId, cancellationToken);
+
+        // CurrentSymbolStates stores the latest/current quote; closed daily history is
+        // stored in HistoricalCandles. Read history only when the current source has no value.
+        var historicalBySymbolId = new Dictionary<int, HistoricalCandle>();
+        foreach (var symbol in selected)
+        {
+            stateById.TryGetValue(symbol.SymbolId, out var state);
+            fundNavBySymbolId.TryGetValue(symbol.SymbolId, out var fundNav);
+            var isFund = string.Equals(symbol.MarketKey, "fund", StringComparison.OrdinalIgnoreCase);
+            var currentPrice = isFund
+                ? fundNav?.CancellationNav ?? fundNav?.StatisticalNav ?? fundNav?.IssuanceNav
+                : state?.LastPrice ?? state?.ClosePrice;
+            if (currentPrice.HasValue || historicalBySymbolId.ContainsKey(symbol.SymbolId))
+                continue;
+
+            var candles = await _historicalCandles.GetLastAsync(
+                symbol.SymbolId,
+                Timeframe.Daily,
+                1,
+                cancellationToken);
+            if (candles.Count > 0)
+                historicalBySymbolId[symbol.SymbolId] = candles[^1];
+        }
 
         var result = rows.Select((row, index) =>
         {
             var symbol = selected.FirstOrDefault(x => x.MarketKey == row.MarketKey && x.SymbolKey == row.SymbolKey);
             stateById.TryGetValue(symbol?.SymbolId ?? -1, out var state);
+            fundNavBySymbolId.TryGetValue(symbol?.SymbolId ?? -1, out var fundNav);
+            historicalBySymbolId.TryGetValue(symbol?.SymbolId ?? -1, out var historicalCandle);
+            var isFund = string.Equals(row.MarketKey, "fund", StringComparison.OrdinalIgnoreCase);
+            var currentPrice = isFund
+                ? fundNav?.CancellationNav ?? fundNav?.StatisticalNav ?? fundNav?.IssuanceNav
+                : state?.LastPrice ?? state?.ClosePrice;
             return new DashboardSymbolDto
             {
                 MarketKey = row.MarketKey,
                 SymbolKey = row.SymbolKey,
                 Name = symbol is null ? row.SymbolKey : symbol.PersianName ?? symbol.Name ?? symbol.SymbolKey,
                 CurrencyCode = symbol?.CurrencyCode ?? string.Empty,
-                LastPrice = state?.LastPrice,
-                PriceTimestampUtc = state?.SourceTimestampUtc,
+                PriceLabel = currentPrice.HasValue
+                    ? isFund ? "NAV ابطال" : "آخرین قیمت"
+                    : historicalCandle is not null ? "آخرین قیمت تاریخی" : isFund ? "NAV ابطال" : "آخرین قیمت",
+                LastPrice = currentPrice ?? historicalCandle?.Close,
+                PriceTimestampUtc = currentPrice.HasValue
+                    ? isFund && fundNav is not null
+                        ? DateTime.SpecifyKind(fundNav.Date.ToDateTime(TimeOnly.MinValue), DateTimeKind.Utc)
+                        : state?.SourceTimestampUtc
+                    : historicalCandle?.OpenTimeUtc,
                 DisplayOrder = row.DisplayOrder
             };
         }).ToList();
