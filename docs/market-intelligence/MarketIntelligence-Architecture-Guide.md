@@ -1,6 +1,6 @@
 # MarketData and MarketIntelligence architecture guide
 
-**Status:** living migration guide, updated 2026-11-04. The MarketData project split is in place, but the shared database schema and legacy-table cleanup are still pending. Update this guide whenever project ownership, routes, settings, seed behavior, or migration steps change.
+**Status:** living migration guide, updated 2026-11-12. The MarketData project split is in place, but the shared database schema and legacy-table cleanup are still pending. Update this guide whenever project ownership, routes, settings, seed behavior, or migration steps change.
 
 ## Responsibility boundary
 
@@ -30,6 +30,9 @@ Strategies and calculators now use `AnalysisCandle`, an analysis-owned value in 
 | `backend/Dashboard/src/MarketAnalyzer.Dashboard.Domain` | User dashboard preference entities. |
 | `backend/Dashboard/src/MarketAnalyzer.Dashboard.Application` | Dashboard composition, symbol selection validation, and API-facing read models; consumes existing MarketData read stores. |
 | `backend/Dashboard/src/MarketAnalyzer.Dashboard.Persistence` | EF mapping and persistence for dashboard preferences and dashboard-specific reads. |
+| `backend/Tools/src/MarketAnalyzer.Tools.Domain` | User-utility entities such as notes, bookmarks, password vaults, resources, and publishing targets. |
+| `backend/Tools/src/MarketAnalyzer.Tools.Application` | Tool commands, queries, validation, and bounded file utilities; depends on Tools.Domain and Common.Abstractions, not Tools.Persistence. |
+| `backend/Tools/src/MarketAnalyzer.Tools.Persistence` | EF configuration registration for Tools entities, composed by the API host. |
 | `backend/MarketIntelligence/src/MarketAnalyzer.MarketIntelligence.Domain` | Legacy strategy, fund, TSETMC, and UnifiedSymbol models that have not yet moved. It references MarketData.Domain while migration continues. |
 | `backend/MarketIntelligence/src/MarketAnalyzer.MarketIntelligence.Application` | Analysis strategies and calculators, plus temporary compatibility ports/adapters. |
 | `backend/MarketIntelligence/src/MarketAnalyzer.MarketIntelligence.Infrastructure` | Legacy analysis/fund services, old seed entry point, and compatibility integrations. |
@@ -138,7 +141,9 @@ The active migrations are `20261104062635_InitialCreate` and `20261104063811_Mov
 
 Development currently uses `localhost/MarketAnalyzer`. Startup seeding was run and verified with 1 membership user, 28 CMS menus, 68 MarketData settings, and 1,045 unified symbols. The old `localhost/db_MarketAnalyzer_GM` database remains the source and was not changed.
 
-The `Tools` schema is independent of MarketData and contains user data (bookmarks, notes, password-vault entries, resources/files, and publish targets). The preview-first `transfer-tools-data.sql` script copied 102 rows across its 13 tables from `db_MarketAnalyzer_GM`; source and target counts matched for every table. The script stays in preview mode by default. The execution used `sqlcmd -I` to enable the `QUOTED_IDENTIFIER` setting required during constraint validation. Do not rerun the copy when the target tables are populated; use a read-only count check to verify a completed transfer.
+The `Tools` schema is independent of MarketData and contains user data (bookmarks, notes, password-vault entries, resources/files, and publish targets). Backend ownership is split across Domain, Application, and Persistence. Application owns handlers and bounded filesystem utilities; Persistence registers the EF configuration assembly, and the API composition root calls `AddToolsApplication()` and `AddToolsPersistence()`. Keep controllers as HTTP adapters and keep mediator handlers registered from the Tools.Application assembly. The preview-first `transfer-tools-data.sql` script copied 102 rows across its 13 tables from `db_MarketAnalyzer_GM`; source and target counts matched for every table. The script stays in preview mode by default. The execution used `sqlcmd -I` to enable the `QUOTED_IDENTIFIER` setting required during constraint validation. Do not rerun the copy when the target tables are populated; use a read-only count check to verify a completed transfer.
+
+The admin UI already organizes each tool under `frontend/admin/MarketAnalyzer.ui.client/src/modules/tools/<tool>/` with a dedicated component and service, and shares base action styling through `src/styles/components/tool-shared.scss` and theme tokens. The sidebar is a composition point for tool launchers. Keep editor-like tools such as Notes in their own viewport-level panel/dialog rather than nesting a large editor inside the narrow sidebar flyout. The Notes panel currently opens as a fixed editor beside the rail; its data remains user-scoped through the existing API. There is no need to introduce a second generic UI framework for Tools.
 
 The user requested legacy classes/tables be removed only after replacement reads and collection behavior are validated. Final cleanup must search all code references, migration history, model mappings, live table ownership, and old Collector registration/deployment use before dropping anything.
 

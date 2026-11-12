@@ -146,6 +146,14 @@ The API source compiled successfully to a temporary output path. A normal build 
 
 Remaining integration item: add the `تنظیمات داشبورد` root item to the CMS menu seed at `backend/Cms/src/MarketAnalyzer.Cms.Persistence/Menu.json`. The attempted edit left that file empty, and the automatic review rejected restoring it because it could discard pre-existing edits. Restore the seed file from its known-good copy, then add the menu item and rebuild/restart the API so menu seeding updates the database. Do not treat the sidebar entry as available until this is completed.
 
+## Tools domain refactor (2026-11-12)
+
+Reviewed the Tools controllers, Application/Persistence projects, Angular tool modules, and sidebar composition. UI features are already separated by tool into dedicated components and services and use the shared theme/action styles; the Notes editor opens in its own fixed panel beside the sidebar. No UI restructuring was needed.
+
+Removed the Application → Persistence project dependency. `MarketAnalyzer.Tools.Application` now references Tools.Domain and Common.Abstractions directly, and registers only its runtime utilities through `AddToolsApplication()`. Tools.Persistence owns `AddToolsPersistence()` and registers its EF configuration assembly. The API explicitly references and composes both projects. Controller routes, command/query contracts, entity mappings, database tables, and data remain unchanged.
+
+Built Tools.Persistence, Tools.Application, and the API successfully (0 errors); the API build used a temporary output path to avoid replacing files held by the running API process. No tests were run and no database update or migration was needed. Future cleanup can split the large Application source files by tool without changing these contracts, if feature-level growth makes that worthwhile.
+
 - `docs/market-intelligence/README.md` — AI contributor entry point, document index, project intent, and working rules.
 - `docs/market-intelligence/MarketIntelligence-Migration-Progress.md` — current status and ordered remaining work.
 - `docs/market-intelligence/MarketIntelligence-Architecture-Guide.md` — living AI-oriented project and operations guide; finalize at the end.

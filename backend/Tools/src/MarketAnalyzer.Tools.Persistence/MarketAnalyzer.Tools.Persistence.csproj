@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MarketAnalyzer.Tools.Domain\MarketAnalyzer.Tools.Domain.csproj" />
+    <ProjectReference Include="..\..\..\Common\src\MarketAnalyzer.Abstractions\MarketAnalyzer.Abstractions.csproj" />
   </ItemGroup>
 
 </Project>

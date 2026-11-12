@@ -7,6 +7,7 @@ Read this file first whenever work is requested in MarketData or MarketIntellige
 - **MarketData** collects, validates, and stores market catalogs, historical prices, market state, order books, fund NAV, and other provider data.
 - **MarketIntelligence** consumes collected data to run analysis strategies and expose their results in the API and admin UI.
 - **Dashboard** owns per-user dashboard preferences and composes dashboard views from data already stored by other domains; future dashboard schedules belong here.
+- **Tools** owns user-facing utilities such as notes, bookmarks, password entries, resources, and publishing targets. Keep its API contracts and UI features grouped by tool.
 - **Common** contains reusable contracts and infrastructure intended to be shared by multiple domains.
 - Market collection and analysis are being separated. Legacy Collector code and tables remain until the new path is verified.
 
@@ -40,7 +41,7 @@ Kilid (`real-estate`) scheduled catalog sync and candle ingestion are temporaril
 ## How to handle a new request
 
 1. Read the four documents above and inspect the current implementation before proposing a duplicate component.
-2. Identify whether the request belongs to collection (MarketData), analysis (MarketIntelligence), per-user dashboard composition (Dashboard), or shared Common functionality.
+2. Identify whether the request belongs to collection (MarketData), analysis (MarketIntelligence), per-user dashboard composition (Dashboard), user utilities (Tools), or shared Common functionality.
 3. For a new market/provider, follow the provider and settings ownership described in the architecture guide; do not add market-specific collection code to analysis handlers.
 4. For a new strategy, follow `MarketIntelligence-Strategies.md`: backend handler, API contract/endpoint, dedicated UI page, navigation, and documentation.
 5. For the `RsiDivergence` strategy, compare representative TSETMC and Nahayatnegar daily candle series and check backend output against the supplied Python screener before claiming parity.
