@@ -758,6 +758,476 @@ namespace MarketAnalyzer.Persistence.Migrations
                     b.ToTable("DashboardSymbols", (string)null);
                 });
 
+            modelBuilder.Entity("MarketAnalyzer.Learn.Domain.LearningCollection", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTimeOffset>("CreatedAtUtc")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)");
+
+                    b.Property<int>("OwnerUserId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<DateTimeOffset>("UpdatedAtUtc")
+                        .HasColumnType("datetimeoffset");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OwnerUserId", "Status", "Title");
+
+                    b.ToTable("LearningCollections", "learn");
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.Learn.Domain.LearningContentRevision", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ContentHash")
+                        .IsRequired()
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
+
+                    b.Property<DateTimeOffset>("CreatedAtUtc")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("DisplayContent")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Format")
+                        .HasColumnType("int");
+
+                    b.Property<int>("LearningItemId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("OriginalContent")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("RevisionNumber")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LearningItemId", "ContentHash");
+
+                    b.HasIndex("LearningItemId", "RevisionNumber")
+                        .IsUnique();
+
+                    b.ToTable("LearningContentRevisions", "learn");
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.Learn.Domain.LearningExportHistory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CollectionId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTimeOffset>("CreatedAtUtc")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("FileName")
+                        .IsRequired()
+                        .HasMaxLength(260)
+                        .HasColumnType("nvarchar(260)");
+
+                    b.Property<int>("OwnerUserId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("SelectedItemIdsJson")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CollectionId");
+
+                    b.HasIndex("OwnerUserId", "CollectionId", "CreatedAtUtc");
+
+                    b.ToTable("LearningExportHistories", "learn");
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.Learn.Domain.LearningImportSource", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CollectionId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTimeOffset>("ImportedAtUtc")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("SourceHash")
+                        .IsRequired()
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
+
+                    b.Property<string>("SourceName")
+                        .IsRequired()
+                        .HasMaxLength(260)
+                        .HasColumnType("nvarchar(260)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CollectionId", "SourceHash")
+                        .IsUnique();
+
+                    b.ToTable("LearningImportSources", "learn");
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.Learn.Domain.LearningItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CollectionId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTimeOffset>("CreatedAtUtc")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<int?>("CurrentRevisionId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DisplayOrder")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ExternalNumber")
+                        .HasMaxLength(80)
+                        .HasColumnType("nvarchar(80)");
+
+                    b.Property<int>("ItemType")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("SectionId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SectionId");
+
+                    b.HasIndex("CollectionId", "DisplayOrder");
+
+                    b.HasIndex("CollectionId", "ExternalNumber")
+                        .IsUnique()
+                        .HasFilter("[ExternalNumber] IS NOT NULL");
+
+                    b.ToTable("LearningItems", "learn");
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.Learn.Domain.LearningReviewHistory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CollectionId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IntervalDays")
+                        .HasColumnType("int");
+
+                    b.Property<int>("LearningItemId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTimeOffset>("NextReviewAtUtc")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<int>("OwnerUserId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Rating")
+                        .HasColumnType("int");
+
+                    b.Property<DateTimeOffset>("ReviewedAtUtc")
+                        .HasColumnType("datetimeoffset");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CollectionId");
+
+                    b.HasIndex("LearningItemId");
+
+                    b.HasIndex("OwnerUserId", "CollectionId", "LearningItemId", "ReviewedAtUtc");
+
+                    b.ToTable("LearningReviewHistories", "learn");
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.Learn.Domain.LearningReviewSchedule", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CollectionId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("EaseFactor")
+                        .HasPrecision(4, 2)
+                        .HasColumnType("decimal(4,2)");
+
+                    b.Property<int>("IntervalDays")
+                        .HasColumnType("int");
+
+                    b.Property<int>("LearningItemId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTimeOffset>("NextReviewAtUtc")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<int>("OwnerUserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CollectionId");
+
+                    b.HasIndex("LearningItemId");
+
+                    b.HasIndex("OwnerUserId", "NextReviewAtUtc");
+
+                    b.HasIndex("OwnerUserId", "CollectionId", "LearningItemId")
+                        .IsUnique();
+
+                    b.ToTable("LearningReviewSchedules", "learn");
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.Learn.Domain.LearningSection", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CollectionId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DisplayOrder")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ParentSectionId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(300)
+                        .HasColumnType("nvarchar(300)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ParentSectionId");
+
+                    b.HasIndex("CollectionId", "DisplayOrder");
+
+                    b.ToTable("LearningSections", "learn");
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.Learn.Domain.StudyBatch", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTimeOffset?>("CompletedAtUtc")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<DateOnly>("ScheduledDate")
+                        .HasColumnType("date");
+
+                    b.Property<int>("Sequence")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StudyPlanId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ScheduledDate");
+
+                    b.HasIndex("StudyPlanId", "Sequence")
+                        .IsUnique();
+
+                    b.ToTable("StudyBatches", "learn");
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.Learn.Domain.StudyBatchItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("DisplayOrder")
+                        .HasColumnType("int");
+
+                    b.Property<int>("LearningItemId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StudyBatchId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LearningItemId");
+
+                    b.HasIndex("StudyBatchId", "LearningItemId")
+                        .IsUnique();
+
+                    b.ToTable("StudyBatchItems", "learn");
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.Learn.Domain.StudyPlan", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CollectionId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTimeOffset>("CreatedAtUtc")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<int?>("DailyTimeBudgetMinutes")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ItemsPerBatch")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Mode")
+                        .HasColumnType("int");
+
+                    b.Property<int>("OwnerUserId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("TargetDaysPerBatch")
+                        .HasColumnType("int");
+
+                    b.Property<DateTimeOffset>("UpdatedAtUtc")
+                        .HasColumnType("datetimeoffset");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CollectionId");
+
+                    b.HasIndex("OwnerUserId", "CollectionId", "Status");
+
+                    b.ToTable("StudyPlans", "learn");
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.Learn.Domain.StudySession", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CollectionId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTimeOffset?>("FinishedAtUtc")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<int>("OwnerUserId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Source")
+                        .HasColumnType("int");
+
+                    b.Property<DateTimeOffset>("StartedAtUtc")
+                        .HasColumnType("datetimeoffset");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CollectionId");
+
+                    b.HasIndex("OwnerUserId", "CollectionId", "StartedAtUtc");
+
+                    b.ToTable("StudySessions", "learn");
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.Learn.Domain.StudySessionItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("LearningItemId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<DateTimeOffset?>("StudiedAtUtc")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<int>("StudySessionId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LearningItemId");
+
+                    b.HasIndex("StudySessionId", "LearningItemId");
+
+                    b.ToTable("StudySessionItems", "learn");
+                });
+
             modelBuilder.Entity("MarketAnalyzer.MarketData.Domain.CorporateAction", b =>
                 {
                     b.Property<long>("Id")
@@ -2996,6 +3466,148 @@ namespace MarketAnalyzer.Persistence.Migrations
                     b.HasOne("MarketAnalyzer.Cms.Domain.News", null)
                         .WithMany()
                         .HasForeignKey("NewsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.Learn.Domain.LearningContentRevision", b =>
+                {
+                    b.HasOne("MarketAnalyzer.Learn.Domain.LearningItem", null)
+                        .WithMany()
+                        .HasForeignKey("LearningItemId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.Learn.Domain.LearningExportHistory", b =>
+                {
+                    b.HasOne("MarketAnalyzer.Learn.Domain.LearningCollection", null)
+                        .WithMany()
+                        .HasForeignKey("CollectionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.Learn.Domain.LearningImportSource", b =>
+                {
+                    b.HasOne("MarketAnalyzer.Learn.Domain.LearningCollection", null)
+                        .WithMany()
+                        .HasForeignKey("CollectionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.Learn.Domain.LearningItem", b =>
+                {
+                    b.HasOne("MarketAnalyzer.Learn.Domain.LearningCollection", null)
+                        .WithMany()
+                        .HasForeignKey("CollectionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MarketAnalyzer.Learn.Domain.LearningSection", null)
+                        .WithMany()
+                        .HasForeignKey("SectionId")
+                        .OnDelete(DeleteBehavior.SetNull);
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.Learn.Domain.LearningReviewHistory", b =>
+                {
+                    b.HasOne("MarketAnalyzer.Learn.Domain.LearningCollection", null)
+                        .WithMany()
+                        .HasForeignKey("CollectionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MarketAnalyzer.Learn.Domain.LearningItem", null)
+                        .WithMany()
+                        .HasForeignKey("LearningItemId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.Learn.Domain.LearningReviewSchedule", b =>
+                {
+                    b.HasOne("MarketAnalyzer.Learn.Domain.LearningCollection", null)
+                        .WithMany()
+                        .HasForeignKey("CollectionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MarketAnalyzer.Learn.Domain.LearningItem", null)
+                        .WithMany()
+                        .HasForeignKey("LearningItemId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.Learn.Domain.LearningSection", b =>
+                {
+                    b.HasOne("MarketAnalyzer.Learn.Domain.LearningCollection", null)
+                        .WithMany()
+                        .HasForeignKey("CollectionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MarketAnalyzer.Learn.Domain.LearningSection", null)
+                        .WithMany()
+                        .HasForeignKey("ParentSectionId")
+                        .OnDelete(DeleteBehavior.Restrict);
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.Learn.Domain.StudyBatch", b =>
+                {
+                    b.HasOne("MarketAnalyzer.Learn.Domain.StudyPlan", null)
+                        .WithMany()
+                        .HasForeignKey("StudyPlanId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.Learn.Domain.StudyBatchItem", b =>
+                {
+                    b.HasOne("MarketAnalyzer.Learn.Domain.LearningItem", null)
+                        .WithMany()
+                        .HasForeignKey("LearningItemId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("MarketAnalyzer.Learn.Domain.StudyBatch", null)
+                        .WithMany()
+                        .HasForeignKey("StudyBatchId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.Learn.Domain.StudyPlan", b =>
+                {
+                    b.HasOne("MarketAnalyzer.Learn.Domain.LearningCollection", null)
+                        .WithMany()
+                        .HasForeignKey("CollectionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.Learn.Domain.StudySession", b =>
+                {
+                    b.HasOne("MarketAnalyzer.Learn.Domain.LearningCollection", null)
+                        .WithMany()
+                        .HasForeignKey("CollectionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.Learn.Domain.StudySessionItem", b =>
+                {
+                    b.HasOne("MarketAnalyzer.Learn.Domain.LearningItem", null)
+                        .WithMany()
+                        .HasForeignKey("LearningItemId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("MarketAnalyzer.Learn.Domain.StudySession", null)
+                        .WithMany()
+                        .HasForeignKey("StudySessionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

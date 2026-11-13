@@ -1,0 +1,64 @@
+<main class="fd-page learn-page" dir="rtl">
+  <header class="fd-card page-heading">
+    <div><a class="back-link" routerLink="/learn/collections">بازگشت به مجموعه‌ها</a><h1>{{ content()?.collection?.title || 'مجموعه یادگیری' }}</h1><p>{{ content()?.collection?.description }}</p></div>
+    <button class="fd-button" type="button" (click)="exportSelected()" [disabled]="!content()?.items?.length">خروجی HTML آفلاین</button>
+  </header>
+
+  <section class="fd-card panel">
+    <h2>ورود محتوای HTML</h2>
+    <p>فایل‌ها را انتخاب کنید، پیش‌نمایش را بررسی کنید و سپس ثبت را تأیید کنید.</p>
+    <label class="fd-button file-picker">انتخاب فایل‌های HTML<input type="file" accept=".html,text/html" multiple (change)="filesChanged($event)" /></label>
+    @if (preview(); as result) {
+      <div class="preview-summary">پیش‌نمایش: {{ result.items.length }} سؤال شناسایی شد.</div>
+      @for (file of result.files; track file.fileName) {
+        <p class="file-report">{{ file.fileName }} · {{ file.discoveredItems }} شناسایی · {{ file.newItems }} جدید · {{ file.updatedItems }} نسخهٔ جدید · {{ file.duplicateItems }} تکراری @for (warning of file.warnings; track warning) { <span> · {{ warning }}</span> }</p>
+      }
+      <div class="preview-items">
+        @for (item of result.items; track item.contentHash) { <span>{{ item.externalNumber || 'بدون شماره' }} · {{ item.title }}</span> }
+      </div>
+      <button class="fd-button primary" type="button" [disabled]="busy()" (click)="confirmImport()">تأیید و ثبت محتوا</button>
+    }
+  </section>
+
+  <section class="fd-card panel plan-panel">
+    <div><h2>برنامه و جلسهٔ مطالعه</h2><p>برنامه، بسته‌ها و سابقهٔ هر جلسه از محتوای مجموعه جدا ذخیره می‌شوند.</p></div>
+    <label>تعداد موارد در هر بسته<input type="number" min="1" [ngModel]="itemsPerBatch()" (ngModelChange)="itemsPerBatch.set($event)" /></label>
+    <button class="fd-button" type="button" (click)="createPlan()">ساخت برنامه</button>
+    <button class="fd-button primary" type="button" (click)="startSession()">شروع جلسه</button>
+  </section>
+
+  @if (plans().length) {
+    <section class="fd-card panel plans-list">
+      <h2>برنامه‌های این مجموعه</h2>
+      @for (plan of plans(); track plan.id) {
+        <div class="plan-row"><span>برنامه {{ plan.id }} · {{ plan.batchCount }} بسته · {{ plan.status === 1 ? 'فعال' : plan.status === 2 ? 'متوقف' : 'پایان‌یافته' }}</span>
+          @if (plan.status === 1) { <button class="fd-button" type="button" (click)="setPlanStatus(plan, 2)">توقف</button> }
+          @if (plan.status === 2) { <button class="fd-button" type="button" (click)="setPlanStatus(plan, 1)">ادامه</button> }
+        </div>
+      }
+    </section>
+    <section class="fd-card panel manual-batch">
+      <div><h2>افزودن بستهٔ دستی</h2><p>{{ selectedBatchIds().size }} مورد برای بسته انتخاب شده است.</p></div>
+      <label>برنامه
+        <select [value]="batchPlanId() ?? ''" (change)="batchPlanId.set(+$any($event.target).value || null)">
+          <option value="">انتخاب برنامه</option>
+          @for (plan of plans(); track plan.id) { <option [value]="plan.id">برنامه {{ plan.id }}</option> }
+        </select>
+      </label>
+      <label>تاریخ اجرا<input type="date" [value]="batchDate()" (change)="batchDate.set($any($event.target).value)" /></label>
+      <button class="fd-button primary" type="button" (click)="addBatch()">افزودن بسته</button>
+    </section>
+  }
+
+  <p class="message" role="status">{{ message() }}</p>
+
+  <section class="items-list">
+    @for (item of content()?.items ?? []; track item.id) {
+      <article class="fd-card learning-item">
+        <header><div class="item-selectors"><label><input type="checkbox" [checked]="selectedBatchIds().has(item.id)" (change)="toggleBatchItem(item.id, $any($event.target).checked)" /> انتخاب برای بسته</label><label><input type="checkbox" [checked]="selectedExportIds().has(item.id)" (change)="toggleExport(item.id, $any($event.target).checked)" /> انتخاب برای خروجی</label></div><div><span class="item-number">{{ item.externalNumber ? 'سؤال ' + item.externalNumber : 'مورد آموزشی' }}</span><h2>{{ item.title }}</h2></div><button class="fd-button" type="button" [class.done]="studiedIds().has(item.id)" (click)="markStudied(item.id)">{{ studiedIds().has(item.id) ? 'مطالعه شد' : 'ثبت مطالعه' }}</button></header>
+        <div class="learning-content" [innerHTML]="item.displayContent || ''"></div>
+        <footer class="review-actions"><span>ارزیابی مرور:</span><button type="button" (click)="review(item.id, 1)">دوباره</button><button type="button" (click)="review(item.id, 2)">سخت</button><button type="button" (click)="review(item.id, 3)">خوب</button><button type="button" (click)="review(item.id, 4)">آسان</button></footer>
+      </article>
+    }
+  </section>
+</main>

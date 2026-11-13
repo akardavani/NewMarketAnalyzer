@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\MarketAnalyzer.Learn.Domain\MarketAnalyzer.Learn.Domain.csproj" />
+    <ProjectReference Include="..\MarketAnalyzer.Learn.Application\MarketAnalyzer.Learn.Application.csproj" />
+    <ProjectReference Include="..\..\..\Common\src\MarketAnalyzer.Abstractions\MarketAnalyzer.Abstractions.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.13" />
+  </ItemGroup>
+
+</Project>

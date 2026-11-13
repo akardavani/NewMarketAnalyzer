@@ -92,27 +92,6 @@
     ]
   },
   {
-    "Id": 300,
-    "Title": "حسابداری",
-    "Path": null,
-    "DisplayOrder": 300,
-    "Icon": "",
-    "RequiredRoute": null,
-    "IsActive": true,
-    "SubMenus": [
-      {
-        "Id": 301,
-        "Title": "اسناد",
-        "Path": "accounting/vouchers",
-        "DisplayOrder": 0,
-        "Icon": "",
-        "RequiredRoute": "Voucher/GetAll",
-        "IsActive": true
-      }
-    ]
-  },
-
-  {
     "Id": 400,
     "Title": "بورس",
     "Path": null,
@@ -208,6 +187,35 @@
         "DisplayOrder": 0,
         "Icon": "",
         "RequiredRoute": "NewsCategory/GetAll",
+        "IsActive": true
+      }
+    ]
+  },
+  {
+    "Id": 2000,
+    "Title": "یادگیری",
+    "Path": null,
+    "DisplayOrder": 1400,
+    "Icon": "",
+    "RequiredRoute": null,
+    "IsActive": true,
+    "SubMenus": [
+      {
+        "Id": 2001,
+        "Title": "مجموعه‌های یادگیری",
+        "Path": "learn/collections",
+        "DisplayOrder": 0,
+        "Icon": "",
+        "RequiredRoute": null,
+        "IsActive": true
+      },
+      {
+        "Id": 2002,
+        "Title": "نمای کلی یادگیری",
+        "Path": "learn/overview",
+        "DisplayOrder": 1,
+        "Icon": "",
+        "RequiredRoute": null,
         "IsActive": true
       }
     ]

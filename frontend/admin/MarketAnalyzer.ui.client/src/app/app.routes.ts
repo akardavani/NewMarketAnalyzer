@@ -36,6 +36,11 @@ export const routes: Routes = [
             .then(e => e.routes)
       },
       {
+        path: 'learn',
+        title: 'یادگیری',
+        loadChildren: () => import('../modules/Learn/learn.routes').then(m => m.routes)
+      },
+      {
         path: 'market-intelligence',
         title: 'تحلیل بازار',
         loadChildren: () =>

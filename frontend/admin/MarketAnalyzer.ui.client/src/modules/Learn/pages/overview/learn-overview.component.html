@@ -1,0 +1,22 @@
+<main class="fd-page learn-overview" dir="rtl">
+  <header class="fd-card page-heading"><div><span class="eyebrow">Learn</span><h1>نمای کلی یادگیری</h1><p>مجموعه‌های آموزشی، پیشرفت مطالعه و مرورهای سررسیدشدهٔ شما.</p></div><a class="fd-button primary" routerLink="/learn/collections">مجموعه‌های من</a></header>
+  @if (overview(); as data) {
+    <section class="metrics">
+      <article class="fd-card metric"><span>مجموعه‌ها</span><strong>{{ data.collectionCount }}</strong></article>
+      <article class="fd-card metric"><span>برنامه‌های فعال</span><strong>{{ data.activePlanCount }}</strong></article>
+      <article class="fd-card metric"><span>موارد مطالعه‌شده</span><strong>{{ data.studiedItemCount }}</strong></article>
+      <article class="fd-card metric due"><span>مرورهای سررسیدشده</span><strong>{{ data.dueReviewCount }}</strong></article>
+      <article class="fd-card metric overdue"><span>مرورهای عقب‌افتاده</span><strong>{{ data.overdueReviewCount }}</strong></article>
+    </section>
+    <section class="fd-card due-list">
+      <h2>مرورهای امروز و عقب‌افتاده</h2>
+      @if (!dueReviews().length) { <p>مرور سررسیدشده‌ای ندارید.</p> }
+      @for (item of dueReviews(); track item.learningItemId + ':' + item.collectionId) {
+        <article class="due-row"><div><strong>{{ item.title }}</strong><span>{{ item.collectionTitle }} · {{ item.externalNumber || 'بدون شماره' }}</span></div>
+          <div class="review-actions"><button type="button" (click)="review(item, 1)">دوباره</button><button type="button" (click)="review(item, 2)">سخت</button><button type="button" (click)="review(item, 3)">خوب</button><button type="button" (click)="review(item, 4)">آسان</button></div>
+        </article>
+      }
+    </section>
+  } @else { <p class="message" role="status">{{ message() || 'در حال دریافت اطلاعات…' }}</p> }
+  <p class="message" role="status">{{ message() }}</p>
+</main>

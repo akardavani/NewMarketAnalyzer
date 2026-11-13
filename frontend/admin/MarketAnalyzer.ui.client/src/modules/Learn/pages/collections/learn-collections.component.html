@@ -1,0 +1,31 @@
+<main class="fd-page learn-page" dir="rtl">
+  <header class="fd-card page-heading">
+    <div><span class="eyebrow">یادگیری</span><h1>مجموعه‌های یادگیری</h1><p>محتوا، برنامه و سابقهٔ مطالعهٔ هر مجموعه جدا نگه داشته می‌شود.</p></div>
+  </header>
+
+  <section class="fd-card panel">
+    <h2>ساخت مجموعه</h2>
+    <div class="create-grid">
+      <label>عنوان<input [ngModel]="title()" (ngModelChange)="title.set($event)" maxlength="200" placeholder="مثلاً پرسش‌های C#" /></label>
+      <label>توضیح<input [ngModel]="description()" (ngModelChange)="description.set($event)" maxlength="2000" placeholder="توضیح اختیاری" /></label>
+      <button type="button" class="fd-button primary" [disabled]="busy()" (click)="create()">ساخت</button>
+    </div>
+    <p class="message" role="status">{{ message() }}</p>
+  </section>
+
+  <section class="fd-card panel">
+    <h2>مجموعه‌های من</h2>
+    @if (!collections().length) { <p class="empty">هنوز مجموعه‌ای نساخته‌اید.</p> }
+    <div class="collection-list">
+      @for (item of collections(); track item.id) {
+        <article class="collection-row">
+          <div><h3>{{ item.title }}</h3><p>{{ item.description || 'بدون توضیح' }} · {{ item.itemCount }} مورد</p></div>
+          <div class="row-actions">
+            <a class="fd-button primary" [routerLink]="['/learn/collections', item.id]">بازکردن</a>
+            <button type="button" class="fd-button" (click)="archive(item)">بایگانی</button>
+          </div>
+        </article>
+      }
+    </div>
+  </section>
+</main>
