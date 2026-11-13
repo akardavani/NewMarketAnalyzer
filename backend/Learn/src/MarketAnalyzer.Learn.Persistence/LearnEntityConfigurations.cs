@@ -34,7 +34,9 @@ internal sealed class LearningItemConfiguration : IEntityTypeConfiguration<Learn
         b.HasIndex(x => new { x.CollectionId, x.ExternalNumber }).IsUnique().HasFilter("[ExternalNumber] IS NOT NULL");
         b.HasIndex(x => new { x.CollectionId, x.DisplayOrder });
         b.HasOne<LearningCollection>().WithMany().HasForeignKey(x => x.CollectionId).OnDelete(DeleteBehavior.Cascade);
-        b.HasOne<LearningSection>().WithMany().HasForeignKey(x => x.SectionId).OnDelete(DeleteBehavior.SetNull);
+        // A collection owns both sections and items. SET NULL here creates a
+        // second cascade path from collection deletion to items in SQL Server.
+        b.HasOne<LearningSection>().WithMany().HasForeignKey(x => x.SectionId).OnDelete(DeleteBehavior.Restrict);
     }
 }
 

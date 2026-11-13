@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MarketAnalyzer.Persistence.Migrations
 {
     [DbContext(typeof(FundDbContext))]
-    [Migration("20261113121305_LearnDomainInitial")]
+    [Migration("20261113155537_LearnDomainInitial")]
     partial class LearnDomainInitial
     {
         /// <inheritdoc />
@@ -3511,7 +3511,7 @@ namespace MarketAnalyzer.Persistence.Migrations
                     b.HasOne("MarketAnalyzer.Learn.Domain.LearningSection", null)
                         .WithMany()
                         .HasForeignKey("SectionId")
-                        .OnDelete(DeleteBehavior.SetNull);
+                        .OnDelete(DeleteBehavior.Restrict);
                 });
 
             modelBuilder.Entity("MarketAnalyzer.Learn.Domain.LearningReviewHistory", b =>

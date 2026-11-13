@@ -3508,7 +3508,7 @@ namespace MarketAnalyzer.Persistence.Migrations
                     b.HasOne("MarketAnalyzer.Learn.Domain.LearningSection", null)
                         .WithMany()
                         .HasForeignKey("SectionId")
-                        .OnDelete(DeleteBehavior.SetNull);
+                        .OnDelete(DeleteBehavior.Restrict);
                 });
 
             modelBuilder.Entity("MarketAnalyzer.Learn.Domain.LearningReviewHistory", b =>

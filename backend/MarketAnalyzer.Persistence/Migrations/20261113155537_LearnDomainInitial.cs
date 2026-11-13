@@ -199,7 +199,7 @@ namespace MarketAnalyzer.Persistence.Migrations
                         principalSchema: "learn",
                         principalTable: "LearningSections",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.SetNull);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(

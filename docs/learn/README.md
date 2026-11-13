@@ -37,7 +37,7 @@ The supplied folder currently contains 17 HTML files, with named ranges from que
 - [x] Add an initial Learn frontend route, collection list/create/archive page, HTML preview/import flow, study controls, review actions, and export action.
 - [x] Generate deterministic daily batches for sequential, items-per-batch, target-days, and time-budget plans; support plan pause/resume.
 - [x] Build the solution successfully after adding the Learn projects.
-- [x] Generate and inspect the Learn migration; it has not been applied to a database.
+- [x] Generate and inspect the Learn migration; it is applied to the currently configured database.
 - [x] Inspect representative source HTML and skip unnumbered summary headings in the numbered-question importer.
 - [x] Add per-file import preview reporting and a collection import UI.
 - [x] Add manual batch composition endpoint and UI; richer plan editing remains open.
@@ -72,5 +72,6 @@ The supplied folder currently contains 17 HTML files, with named ranges from que
 - Backend solution build succeeded with zero errors (35 existing warnings).
 - Angular production build succeeded; existing bundle-size, style-size, and CommonJS warnings remain.
 - `dotnet ef migrations has-pending-model-changes` reports no pending model changes.
-- Migration `20261113121305_LearnDomainInitial` has been generated but has not been applied to a database.
+- Migration `20261113155537_LearnDomainInitial` was applied successfully to the currently configured database.
+- The item-to-section foreign key uses `NO ACTION` behavior to avoid SQL Server's multiple cascade path restriction; collections are archived through the application by default.
 - No automated tests were added or run.
