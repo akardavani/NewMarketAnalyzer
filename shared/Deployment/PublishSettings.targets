@@ -1,0 +1,12 @@
+<Project>
+  <ItemGroup>
+    <Content Update="appsettings.*.json" CopyToPublishDirectory="Never" />
+    <Content Update="appsettings.$(EnvironmentName).json" CopyToPublishDirectory="PreserveNewest" Condition="'$(EnvironmentName)' != '' And '$(EnvironmentName)' != 'Development'" />
+    <Content Update="appsettings.Development.json" CopyToPublishDirectory="Never" />
+    <Content Update="appsettings.*.local.json" CopyToPublishDirectory="Never" />
+  </ItemGroup>
+  <Target Name="ValidateSelectedDeploymentEnvironment" BeforeTargets="PrepareForPublish" Condition="'$(RequireDeploymentSettings)' == 'true'">
+    <Error Condition="'$(EnvironmentName)' == '' Or '$(EnvironmentName)' == 'Development'" Text="Select an explicit deployment EnvironmentName (for example Local or Production)." />
+    <Error Condition="!Exists('$(MSBuildProjectDirectory)\appsettings.$(EnvironmentName).json')" Text="Missing appsettings.$(EnvironmentName).json. Create the environment settings before publishing." />
+  </Target>
+</Project>

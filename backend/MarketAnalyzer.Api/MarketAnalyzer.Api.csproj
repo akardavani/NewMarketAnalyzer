@@ -65,4 +65,5 @@
 	<!--<Target Name="CopyCustomContent" AfterTargets="AfterBuild">
 		<Copy SourceFiles="@(StimulCrackFiles)" DestinationFolder="$(OutDir)" />
 	</Target>-->
+  <Import Project="..\..\shared\Deployment\PublishSettings.targets" />
 </Project>
