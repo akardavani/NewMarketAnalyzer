@@ -196,3 +196,11 @@ desktop.ini
 !.vscode/extensions.json
 !.vscode/launch.json
 !.vscode/tasks.json
+
+# Reproducible publish profiles; environment values and secrets remain local.
+!backend/MarketAnalyzer.Api/Properties/PublishProfiles/
+!backend/MarketAnalyzer.Api/Properties/PublishProfiles/Local.pubxml
+!backend/MarketAnalyzer.Api/Properties/PublishProfiles/Production.pubxml
+!frontend/admin/MarketAnalyzer.Ui.Server/Properties/PublishProfiles/
+!frontend/admin/MarketAnalyzer.Ui.Server/Properties/PublishProfiles/Local.pubxml
+!frontend/admin/MarketAnalyzer.Ui.Server/Properties/PublishProfiles/Production.pubxml

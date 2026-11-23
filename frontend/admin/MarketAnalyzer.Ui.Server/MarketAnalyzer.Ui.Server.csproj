@@ -103,5 +103,5 @@
 
     <Message Importance="high" Text="✅ Copied @(_SpaFiles->Count()) SPA files to $(_DestRoot)" />
   </Target>
-  
+  <Import Project="..\..\..\shared\Deployment\PublishSettings.targets" />
 </Project>

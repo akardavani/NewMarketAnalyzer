@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>راهنمای Publish پروژه MarketAnalyzer</title>
+  <style>
+    :root{--ink:#172b3a;--muted:#5b6b78;--line:#d8e1e8;--accent:#0c6b58;--bg:#f3f7f8;--code:#edf2f5}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.9 Tahoma,Arial,sans-serif}
+    main{max-width:1050px;margin:auto;padding:34px 22px 60px}header{border-bottom:3px solid var(--accent);padding-bottom:18px}
+    h1{font-size:28px;margin:0 0 8px}h2{font-size:21px;margin:0 0 12px}h3{font-size:17px;margin:20px 0 6px}
+    section{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px;margin-top:20px}
+    p{margin:8px 0}.muted{color:var(--muted);font-size:14px}.note{background:#edf8f4;border-right:4px solid var(--accent);padding:10px 14px;margin:12px 0}.warn{background:#fff5e5;border-right:4px solid #ae731d;padding:10px 14px;margin:12px 0}
+    code,pre{direction:ltr;text-align:left;font-family:Consolas,"Courier New",monospace}code{background:var(--code);padding:2px 5px;border-radius:4px}pre{background:var(--code);border:1px solid var(--line);border-radius:7px;padding:14px;white-space:pre-wrap;overflow:auto;font-size:14px;line-height:1.65}
+    table{width:100%;border-collapse:collapse;margin-top:10px;font-size:14px}th,td{border:1px solid var(--line);padding:9px;text-align:right;vertical-align:top}th{background:var(--code)}ul,ol{padding-right:24px}li{margin:6px 0}.path{direction:ltr;text-align:left;display:block;overflow-wrap:anywhere}
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>راهنمای انتشار MarketAnalyzer</h1>
+    <p class="muted">نسخه‌ی تنظیمات محیطی و Publish امن؛ تنظیمات محرمانه داخل <code>appsettings.json</code> پایه نگهداری نمی‌شوند.</p>
+  </header>
+  <section>
+    <h2>ساختار پروژه</h2>
+    <table>
+      <tr><th>بخش</th><th>مسیر پروژه</th><th>چارچوب</th></tr>
+      <tr><td>API</td><td><code>backend/MarketAnalyzer.Api</code></td><td>.NET 8</td></tr>
+      <tr><td>پنل وب</td><td><code>frontend/admin/MarketAnalyzer.Ui.Server</code></td><td>.NET 9 + Angular</td></tr>
+      <tr><td>فایل تنظیمات پایه</td><td><code>appsettings.json</code></td><td>عمومی و بدون secret</td></tr>
+      <tr><td>فایل محیطی</td><td><code>appsettings.Local.json</code> یا <code>appsettings.Production.json</code></td><td>محلی/سرور</td></tr>
+    </table>
+  </section>
+  <section>
+    <h2>۱) آماده‌سازی تنظیمات</h2>
+    <ol>
+      <li>برای API فایل <code>backend/MarketAnalyzer.Api/appsettings.Local.example.json</code> را به <code>appsettings.Local.json</code> کپی کنید.</li>
+      <li>برای UI فایل <code>frontend/admin/MarketAnalyzer.Ui.Server/appsettings.Local.example.json</code> را به <code>appsettings.Local.json</code> کپی کنید.</li>
+      <li>مقادیر اتصال SQL، <code>SigningKey</code>، کلید Stimulsoft، RabbitMQ و ApiKey را با مقادیر معتبر جایگزین کنید.</li>
+      <li>برای سرور از فایل‌های <code>appsettings.Production.example.json</code> استفاده کنید، نام آن‌ها را به <code>appsettings.Production.json</code> تغییر دهید و فقط روی سرور نگه دارید.</li>
+    </ol>
+    <div class="warn">فایل‌های محیطی واقعی عمداً در Git قرار نمی‌گیرند. فایل پایه نباید شامل password، token یا connection string واقعی باشد.</div>
+  </section>
+  <section>
+    <h2>۲) Publish محلی</h2>
+    <p>از ریشه‌ی ریپو، PowerShell را اجرا کنید:</p>
+    <pre>powershell -NoProfile -ExecutionPolicy Bypass -File .\project-workspace\scripts\Publish-MarketAnalyzer.ps1 -EnvironmentName Local</pre>
+    <p>اگر Angular از قبل build شده و فقط می‌خواهید بسته‌ی .NET ساخته شود:</p>
+    <pre>powershell -NoProfile -ExecutionPolicy Bypass -File .\project-workspace\scripts\Publish-MarketAnalyzer.ps1 -EnvironmentName Local -SkipSpaBuild</pre>
+    <p>خروجی جدید در مسیرهای زیر ساخته می‌شود:</p>
+    <span class="path"><code>artifacts/publish/Local/&lt;timestamp&gt;/Api</code></span>
+    <span class="path"><code>artifacts/publish/Local/&lt;timestamp&gt;/Ui</code></span>
+    <p>در هر دو پوشه فایل <code>appsettings.Local.json</code> نیز کپی می‌شود و فایل <code>READY.txt</code> پایان موفق فرایند را مشخص می‌کند.</p>
+  </section>
+  <section>
+    <h2>۳) اجرای بسته‌ی محلی</h2>
+    <pre># API
+$env:ASPNETCORE_ENVIRONMENT = "Local"
+dotnet .\artifacts\publish\Local\&lt;timestamp&gt;\Api\MarketAnalyzer.Api.dll --urls "https://localhost:7260"
+
+# UI (در ترمینال جدا)
+$env:ASPNETCORE_ENVIRONMENT = "Local"
+dotnet .\artifacts\publish\Local\&lt;timestamp&gt;\Ui\MarketAnalyzer.Ui.Server.dll --urls "https://localhost:7213"</pre>
+    <p>سپس پنل را در <code>https://localhost:7213</code> و Swagger را در <code>https://localhost:7260/swagger</code> باز کنید.</p>
+  </section>
+  <section>
+    <h2>۴) Publish برای سرور</h2>
+    <ol>
+      <li>روی سیستم توسعه، <code>appsettings.Production.json</code> را برای API و UI آماده کنید.</li>
+      <li>مقدار <code>CorsOptions:AllowedOrigins</code> را برابر origin واقعی پنل قرار دهید.</li>
+      <li>بسته را بسازید:</li>
+    </ol>
+    <pre>powershell -NoProfile -ExecutionPolicy Bypass -File .\project-workspace\scripts\Publish-MarketAnalyzer.ps1 -EnvironmentName Production</pre>
+    <p>خروجی در <code>artifacts/publish/Production/&lt;timestamp&gt;</code> قرار می‌گیرد. پوشه‌های API و UI را جداگانه به سرور منتقل کنید.</p>
+    <h3>تنظیم IIS</h3>
+    <ul>
+      <li>برای API و UI دو Application Pool مستقل با <strong>No Managed Code</strong> بسازید.</li>
+      <li>برای هر پوشه یک IIS Site یا Application بسازید و binding دامنه/HTTPS را تنظیم کنید.</li>
+      <li>فایل‌های <code>web.config</code> تولیدشده را نگه دارید و Hosting Bundle متناسب با .NET 8 و .NET 9 را روی سرور نصب کنید.</li>
+      <li>پس از کپی، سایت‌ها را recycle کنید و ابتدا Swagger، سپس ورود پنل و یک درخواست API را بررسی کنید.</li>
+    </ul>
+    <div class="note">برای جلوگیری از مخلوط شدن نسخه‌ها، خروجی هر بار در پوشه‌ی timestamp‌دار ساخته می‌شود. پوشه‌ی قبلی را با فایل‌های نسخه‌ی جدید ادغام نکنید.</div>
+  </section>
+  <section>
+    <h2>۵) Publish از Visual Studio</h2>
+    <p>برای API و UI در بخش Publish، پروفایل <code>Local</code> یا <code>Production</code> را انتخاب کنید. پروفایل‌ها از نوع Folder، حالت Release، runtime ویندوز x64 و self-contained هستند.</p>
+    <p>پروفایل‌ها:</p>
+    <span class="path"><code>backend/MarketAnalyzer.Api/Properties/PublishProfiles/Local.pubxml</code></span>
+    <span class="path"><code>backend/MarketAnalyzer.Api/Properties/PublishProfiles/Production.pubxml</code></span>
+    <span class="path"><code>frontend/admin/MarketAnalyzer.Ui.Server/Properties/PublishProfiles/Local.pubxml</code></span>
+    <span class="path"><code>frontend/admin/MarketAnalyzer.Ui.Server/Properties/PublishProfiles/Production.pubxml</code></span>
+  </section>
+  <section>
+    <h2>خطاهای متداول</h2>
+    <ul>
+      <li><strong>Missing appsettings...</strong>: فایل محیطی با نام دقیق <code>appsettings.&lt;Environment&gt;.json</code> را کنار csproj بسازید.</li>
+      <li><strong>خطای SQL</strong>: مقدار <code>ConnectionStrings:Defualt</code> و دسترسی کاربر SQL را بررسی کنید؛ نام کلید فعلی عمداً <code>Defualt</code> باقی مانده است.</li>
+      <li><strong>401 یا خطای ورود</strong>: <code>JsonTokenOptions:SigningKey</code> در API و <code>IdentityClientOptions:ApiKey</code> در UI باید معتبر باشند.</li>
+      <li><strong>CORS</strong>: origin دقیق پنل را بدون slash انتهایی در <code>AllowedOrigins</code> قرار دهید.</li>
+      <li><strong>صفحه‌ی خالی پنل</strong>: build Angular، وجود فایل‌های <code>wwwroot</code> و مقدار <code>AppOptions:ApiUrl</code> را بررسی کنید.</li>
+    </ul>
+  </section>
+</main>
+</body>
+</html>
