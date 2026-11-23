@@ -1,0 +1,30 @@
+<section class="settings-page fd-page" dir="rtl">
+  <header class="page-heading fd-card">
+    <div>
+      <span class="eyebrow">داشبورد شخصی</span>
+      <h1>تنظیم نمادهای داشبورد</h1>
+      <p>نمادهایی را انتخاب کنید که قیمت آخرین دادهٔ ذخیره‌شدهٔ آن‌ها در صفحهٔ اول نمایش داده شود.</p>
+    </div>
+  </header>
+
+  <section class="fd-card panel">
+      <div class="panel-heading">
+        <div>
+          <h2>جستجوی نماد</h2>
+          <p>نمادها را جستجو و انتخاب کنید؛ برای حذف، روی × کنار هر نماد بزنید.</p>
+        </div>
+        <span class="selection-count">{{ selected().length }} نماد</span>
+      </div>
+      <mi-symbol-picker
+        [selected]="pickerSelection()"
+        [searchSymbols]="searchSymbols"
+        (selectedChange)="selectionChanged($event)" />
+      @if (!selected().length) {
+        <p class="empty">هنوز نمادی انتخاب نشده است؛ در این حالت داشبورد بخش قیمت‌ها را نشان نمی‌دهد.</p>
+      }
+      <footer class="actions">
+        <span role="status">{{ message() }}</span>
+        <button type="button" class="fd-button primary" [disabled]="busy()" (click)="save()">{{ busy() ? 'در حال ذخیره…' : 'ذخیره تنظیمات' }}</button>
+      </footer>
+  </section>
+</section>

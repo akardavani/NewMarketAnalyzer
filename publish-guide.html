@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>راهنمای Publish محلی MarketAnalyzer</title>
+  <style>
+    :root { color-scheme: light; --ink: #172b3a; --muted: #526577; --line: #d9e2e9; --accent: #126456; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f4f7f8; color: var(--ink); font: 16px/1.95 Tahoma, Arial, sans-serif; }
+    main { max-width: 960px; margin: auto; padding: 32px 20px 56px; }
+    header, section { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 24px; margin-bottom: 20px; }
+    header { border-top: 4px solid var(--accent); }
+    h1 { font-size: 26px; margin: 0 0 10px; }
+    h2 { font-size: 20px; margin: 0 0 12px; }
+    p { margin: 8px 0; }
+    code, pre { direction: ltr; unicode-bidi: embed; font-family: Consolas, monospace; }
+    code { overflow-wrap: anywhere; }
+    pre { text-align: left; white-space: pre-wrap; overflow-wrap: anywhere; background: #eef3f6; border: 1px solid var(--line); border-radius: 6px; padding: 14px; }
+    li { margin-bottom: 8px; }
+    .muted { color: var(--muted); font-size: 14px; }
+    .note, .warning { padding: 10px 14px; border-right: 4px solid var(--accent); background: #edf7f3; }
+    .warning { border-color: #a66a13; background: #fff6e7; }
+    @media (max-width: 600px) { main { padding: 16px 10px; } header, section { padding: 16px 12px; } h1 { font-size: 22px; } }
+    @media print { body { background: white; } main { max-width: none; padding: 0; } header, section { break-inside: avoid; } }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>راهنمای گرفتن خروجی Publish محلی MarketAnalyzer</h1>
+    <p>این راهنما برای ساخت بسته روی ویندوز و نگهداری خروجی روی همین رایانه است. پروفایل‌ها برای نصب روی سرور یا انتشار عمومی تنظیم نشده‌اند.</p>
+    <p class="muted">با تغییر مسیر پروژه‌ها، target frameworkها، تنظیمات اجرای محلی یا روش ساخت Angular، این راهنما را هم‌زمان به‌روزرسانی کنید.</p>
+  </header>
+
+  <section>
+    <h2>۱. پروفایل‌های انتشار</h2>
+    <ul>
+      <li>API: <code>backend/MarketAnalyzer.Api/Properties/PublishProfiles/Local.pubxml</code> — تنظیم‌شده برای <code>Release</code>، <code>net8.0</code>، <code>win-x64</code> و self-contained.</li>
+      <li>UI Server: <code>frontend/admin/MarketAnalyzer.Ui.Server/Properties/PublishProfiles/Local.pubxml</code> — تنظیم‌شده برای <code>Release</code>، <code>net9.0</code>، <code>win-x64</code> و self-contained.</li>
+      <li>فرایند Publish پروژهٔ UI Server، پروژهٔ Angular را با <code>npm ci</code> و <code>npm run build</code> می‌سازد و فایل‌های خروجی را در <code>wwwroot</code> بسته قرار می‌دهد.</li>
+      <li>محیط اجرا در هر دو خروجی <code>Development</code> است تا تنظیمات توسعهٔ موجود بارگذاری شود.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>۲. ساخت بسته در Visual Studio</h2>
+    <ol>
+      <li>پروژهٔ <code>backend/MarketAnalyzer.Api/MarketAnalyzer.Api.csproj</code> را باز کنید، روی آن راست‌کلیک و <strong>Publish</strong> را انتخاب کنید؛ پروفایل <strong>Local</strong> را اجرا کنید.</li>
+      <li>همین کار را برای <code>frontend/admin/MarketAnalyzer.Ui.Server/MarketAnalyzer.Ui.Server.csproj</code> انجام دهید و پروفایل <strong>Local</strong> را انتخاب کنید.</li>
+      <li>خروجی‌ها در ریشهٔ مخزن ساخته می‌شوند:</li>
+    </ol>
+    <pre>artifacts\publish\Local\Api\
+artifacts\publish\Local\Ui\</pre>
+    <p>Angular client را جداگانه Publish نکنید؛ UI Server ساخت و کپی آن را انجام می‌دهد.</p>
+  </section>
+
+  <section>
+    <h2>۳. ساخت از خط فرمان</h2>
+    <p>از ریشهٔ مخزن در PowerShell اجرا کنید:</p>
+    <pre>dotnet publish backend/MarketAnalyzer.Api/MarketAnalyzer.Api.csproj -c Release -p:PublishProfile=Local
+dotnet publish frontend/admin/MarketAnalyzer.Ui.Server/MarketAnalyzer.Ui.Server.csproj -c Release -p:PublishProfile=Local</pre>
+    <p>فرمان دوم به Node.js/npm و دسترسی نصب پکیج‌های ثبت‌شده در lockfile نیاز دارد. اسکریپت پروژه پیش از build از <code>npm ci</code> استفاده می‌کند.</p>
+  </section>
+
+  <section>
+    <h2>۴. کنترل خروجی و اجرای محلی</h2>
+    <ul>
+      <li>در هر دو پوشه بررسی کنید فایل اجرایی، <code>web.config</code> و <code>appsettings.json</code> تولید شده باشند.</li>
+      <li>در خروجی UI، وجود <code>wwwroot/index.html</code> و فایل‌های جاوااسکریپت build‌شده را بررسی کنید.</li>
+      <li>تنظیمات UI فعلی به API در <code>https://localhost:7260</code> اشاره می‌کنند. CORS فعلی API نیز originهای <code>http://localhost:44426</code> و <code>https://localhost:44426</code> را مجاز می‌داند؛ پیش از اجرا، فایل‌های تنظیمات منتشرشده را با تنظیمات واقعی خودت تطبیق دهید.</li>
+      <li>برای اجرای نمونهٔ محلی، ابتدا API را با پورت HTTPS تنظیم‌شده اجرا کنید و سپس UI را روی origin مجاز بالا بیاورید. از پوشهٔ هر خروجی در دو پنجرهٔ PowerShell اجرا کنید:</li>
+    </ul>
+    <p>در اجرای مستقیم فایل exe، مقدار محیط را در هر پنجرهٔ PowerShell قبل از اجرای برنامه تنظیم کنید؛ مقدار نوشته‌شده در <code>web.config</code> فقط هنگام میزبانی در IIS اعمال می‌شود:</p>
+    <pre>$env:ASPNETCORE_ENVIRONMENT = 'Development'
+./MarketAnalyzer.Api.exe --urls https://localhost:7260</pre>
+    <pre>$env:ASPNETCORE_ENVIRONMENT = 'Development'
+./MarketAnalyzer.Ui.Server.exe --urls http://localhost:44426</pre>
+    <p>گواهی توسعهٔ HTTPS باید روی همین رایانه معتبر باشد. اگر پورت یا scheme را تغییر دادید، <code>AppOptions:ApiUrl</code>، <code>IdentityClientOptions:Url</code> و <code>CorsOptions:AllowedOrigins</code> را هماهنگ کنید.</p>
+    <p class="warning">فایل‌های <code>appsettings.json</code> فعلی شامل Connection String، کلیدها و اطلاعات broker هستند. آن‌ها را در خروجی، راهنما یا مخزن عمومی منتشر نکنید. پیش از اجرای بسته، مقصد دیتابیس و سرویس‌های پس‌زمینه را حتماً کنترل کنید.</p>
+  </section>
+
+  <section>
+    <h2>۵. محدودیت این پروفایل</h2>
+    <p>Publish فقط فایل‌های خروجی را روی همین رایانه می‌سازد. این تنظیمات IIS، سرویس‌ها، دیتابیس، DNS یا داده‌های برنامه را تغییر نمی‌دهند و خروجی را به سرور منتقل نمی‌کنند. برای نصب سرور باید پروفایل و تنظیمات مخصوص همان مقصد جداگانه تعریف شود.</p>
+  </section>
+
+  <section>
+    <h2>۶. وقتی تنظیمات پروژه عوض شد</h2>
+    <p>اگر مسیر پروژه، نسخهٔ .NET، runtime/معماری، self-contained بودن، نام فایل‌های تنظیمات، پورت‌ها، مسیر API، CORS یا فرمان build کلاینت تغییر کرد، هر دو فایل <code>Local.pubxml</code> را با وضعیت جدید تطبیق دهید و همین راهنما را اصلاح کنید. تغییرات کاری و تنظیمات نامرتبط پروژه را وارد فرایند انتشار نکنید.</p>
+  </section>
+</main>
+</body>
+</html>

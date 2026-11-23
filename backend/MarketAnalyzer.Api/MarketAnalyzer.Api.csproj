@@ -34,6 +34,8 @@
 		<ProjectReference Include="..\Common\src\MarketAnalyzer.DataProvider\MarketAnalyzer.DataProvider.csproj" />
 		<ProjectReference Include="..\MarketData\src\MarketAnalyzer.MarketData.Providers\MarketAnalyzer.MarketData.Providers.csproj" />
 		<ProjectReference Include="..\Membership\src\MarketAnalyzer.Membership.Application\MarketAnalyzer.Membership.Application.csproj" />
+		<ProjectReference Include="..\Dashboard\src\MarketAnalyzer.Dashboard.Application\MarketAnalyzer.Dashboard.Application.csproj" />
+		<ProjectReference Include="..\Dashboard\src\MarketAnalyzer.Dashboard.Persistence\MarketAnalyzer.Dashboard.Persistence.csproj" />
 
 		<ProjectReference Include="..\MarketAnalyzer.Persistence\MarketAnalyzer.Persistence.csproj" />
 		<ProjectReference Include="..\Common\src\MarketAnalyzer.Infrastructure\MarketAnalyzer.Infrastructure.csproj" />
@@ -42,6 +44,9 @@
 		<ProjectReference Include="..\MarketData\src\MarketAnalyzer.MarketData.Persistence\MarketAnalyzer.MarketData.Persistence.csproj" />
 		<ProjectReference Include="..\MarketIntelligence\src\MarketAnalyzer.MarketIntelligence.Infrastructure\MarketAnalyzer.MarketIntelligence.Infrastructure.csproj" />
 		<ProjectReference Include="..\Tools\src\MarketAnalyzer.Tools.Application\MarketAnalyzer.Tools.Application.csproj" />
+		<ProjectReference Include="..\Tools\src\MarketAnalyzer.Tools.Persistence\MarketAnalyzer.Tools.Persistence.csproj" />
+		<ProjectReference Include="..\Learn\src\MarketAnalyzer.Learn.Application\MarketAnalyzer.Learn.Application.csproj" />
+		<ProjectReference Include="..\Learn\src\MarketAnalyzer.Learn.Persistence\MarketAnalyzer.Learn.Persistence.csproj" />
 		
 	</ItemGroup>
 

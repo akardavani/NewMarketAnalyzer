@@ -78,6 +78,12 @@ This document is the current migration checklist. Start with [README.md](README.
 - Kept the requested history schedule as daily 20:00 candle runs for TSE and both crypto catalogs (`crypto` and `crypto-toman`); order-book refresh defaults to every five minutes. Existing saved operator settings still take precedence over code defaults.
 - Improved the settings page's ZIP download error handling so binary HTTP error responses (such as an unauthorized sysadmin request) show the server's message. Backend solution build succeeds with zero errors; Angular build succeeds with the existing bundle/style budget and CommonJS warnings.
 
+## TSE candle freshness investigation (2026-11-12)
+
+Read-only inspection of the Development database for TSE symbol ID `419` (`IRO1TKNO0001`, active) found 4,266 daily candles, with the latest candle opening at `2026-11-02 20:30 UTC` and last received at `2026-11-04 12:41 UTC`. Its current-state row is separate and has source time `2026-11-10 07:30 UTC`. The market is active; `Scheduler:IngestCandles:Enabled=true`, `IntervalSeconds=86400`, and `RunAt=20:00` in `Asia/Tehran`. Active history provider is `nahayatnegar`, its candle URL setting is present, and no `Ingestion:NoDataUntil:419` cache row exists.
+
+The currently running API process started at `11:23` Tehran on November 12; at the `11:42` check, today's scheduled 20:00 run had not happened yet. `NextRunAt` schedules the next future 20:00 after process startup rather than immediately catching up. The database does not persist job outcomes; Development logs are console-only, and no historical failure record was found. Therefore earlier provider errors cannot be confirmed from this database snapshot. A direct symbol-specific request to the third-party provider was blocked by automatic approval review, so current upstream availability remains unverified. Check the TSE candle job result/log after its scheduled run before attributing the older gap to a provider error.
+
 ## Current ownership and legacy boundaries
 
 - MarketData EF configurations are in `backend/MarketData/src/MarketAnalyzer.MarketData.Persistence/Context/MarketData/`; stores are under `Stores/`. Provider implementations and embedded symbol catalogs are under `MarketData.Providers/`.
@@ -119,6 +125,38 @@ After those steps, continue with the migration and final-cleanup items below.
 - User input is only needed if the source-of-truth decision for legacy URL settings changes intended runtime behavior, if an authenticated sysadmin session is unavailable for exercising the UI/export, or if live DB inventory contradicts the migration assumptions. Workspace code and docs can continue without those inputs. Do not apply schema changes or remove legacy tables while the corresponding inventory/runtime evidence is missing.
 
 ## Documentation locations
+
+## Dashboard personalization
+
+The first per-user dashboard widget is implemented in code: users can search and select active symbols, their selection is stored in Membership, and the dashboard reads existing values from MarketData. Current-state quotes come from `ICurrentSymbolStateStore`; funds use their latest stored cancellation NAV; if either current value is absent, the dashboard reads the latest daily `Close` from `IHistoricalCandleStore` (`HistoricalCandles`). Historical fallback is labeled `آخرین قیمت تاریخی`. No provider is called and ingestion/storage behavior is unchanged. The price widget is hidden when no symbols are selected; selected symbols without a current value or daily candle remain visible without a price.
+
+The selected-symbol widget now renders all prices inside one compact card, as one row per symbol. Amounts are formatted explicitly and currency codes use smaller text so values stay legible.
+On desktop, the price card matches the width of one dashboard summary card and aligns beneath the rightmost summary card; on narrow screens it expands to full width.
+Each quote label now appends its source date in Solar Hijri `dd-MM-yyyy` format, using the existing Jalali date pipe; the duplicate Gregorian timestamp line was removed.
+
+The API and Angular build validation are recorded with this change. The `AddUserDashboardSymbols` migration has been generated but has **not** been applied to any database. Apply pending migrations before running the new API endpoints.
+
+## Dashboard domain extraction (2026-11-12)
+
+Created `backend/Dashboard/src` with `MarketAnalyzer.Dashboard.Domain`, `.Application`, and `.Persistence`. `UserDashboardSymbol` and its EF configuration moved out of Membership; API request/response models and dashboard orchestration moved into Dashboard.Application. `DashboardController` now delegates to `IDashboardService`, and existing quotes/catalog/history still come from MarketData read contracts without changing ingestion or storage behavior.
+
+Added `20261112085954_DashboardDomainRefactor`. Its Up/Down are intentionally empty because the existing `DashboardSymbols` table and columns are unchanged; the migration snapshot now records the entity under `MarketAnalyzer.Dashboard.Domain`. The migration has **not** been applied. Do not run `Update-Database` on the user's behalf.
+
+The API source compiled successfully to a temporary output path. A normal build could not overwrite files in the running API's output directory because the API process holds those DLLs; the running process was left untouched. EF migration scaffolding succeeded using the temporary build output. Existing unrelated compiler warnings remain.
+
+Remaining integration item: add the `تنظیمات داشبورد` root item to the CMS menu seed at `backend/Cms/src/MarketAnalyzer.Cms.Persistence/Menu.json`. The attempted edit left that file empty, and the automatic review rejected restoring it because it could discard pre-existing edits. Restore the seed file from its known-good copy, then add the menu item and rebuild/restart the API so menu seeding updates the database. Do not treat the sidebar entry as available until this is completed.
+
+Dashboard symbol settings now use the shared RatioCandles symbol picker for compact typeahead search and removable chips. The dashboard-specific `Dashboard/SearchSymbols` endpoint, per-user selection, save, and remove behavior remain intact. The Angular production build completed successfully; it reported existing bundle/style budget and CommonJS warnings.
+
+The dashboard settings panel is now constrained to a compact centered width. Market Data settings use responsive half/third-width market cards, and string-backed `true`/`false` values use checkboxes; saving still sends the same string values through the existing endpoint. The Angular production build completed with 0 errors; existing bundle/style budget and CommonJS warnings remain.
+
+## Tools domain refactor (2026-11-12)
+
+Reviewed the Tools controllers, Application/Persistence projects, Angular tool modules, and sidebar composition. UI features are already separated by tool into dedicated components and services and use the shared theme/action styles; the Notes editor opens in its own fixed panel beside the sidebar. No UI restructuring was needed.
+
+Removed the Application → Persistence project dependency. `MarketAnalyzer.Tools.Application` now references Tools.Domain and Common.Abstractions directly, and registers only its runtime utilities through `AddToolsApplication()`. Tools.Persistence owns `AddToolsPersistence()` and registers its EF configuration assembly. The API explicitly references and composes both projects. Controller routes, command/query contracts, entity mappings, database tables, and data remain unchanged.
+
+Built Tools.Persistence, Tools.Application, and the API successfully (0 errors); the API build used a temporary output path to avoid replacing files held by the running API process. No tests were run and no database update or migration was needed. Future cleanup can split the large Application source files by tool without changing these contracts, if feature-level growth makes that worthwhile.
 
 - `docs/market-intelligence/README.md` — AI contributor entry point, document index, project intent, and working rules.
 - `docs/market-intelligence/MarketIntelligence-Migration-Progress.md` — current status and ordered remaining work.

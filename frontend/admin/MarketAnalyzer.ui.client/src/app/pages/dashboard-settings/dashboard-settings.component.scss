@@ -1,0 +1,19 @@
+:host { display: block; }
+.settings-page { display: grid; gap: 14px; width: min(100%, 600px); margin-inline: auto; }
+.page-heading { padding: 16px 20px; }
+.page-heading h1 { margin: 5px 0; color: var(--fd-text); font-size: 20px; }
+.page-heading p { margin: 0; color: var(--fd-text-3); font-size: 12px; }
+.eyebrow { color: var(--fd-primary); font-size: 11px; font-weight: 700; }
+.panel { min-width: 0; padding: 14px 16px; }
+.panel-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
+.panel h2 { margin: 0; color: var(--fd-text); font-size: 16px; }
+.panel-heading p { margin: 3px 0 0; color: var(--fd-text-3); font-size: 11px; }
+.selection-count { flex: none; color: var(--fd-text-3); font-size: 11px; }
+mi-symbol-picker { max-width: 360px; }
+.fd-button { border: 0; border-radius: 9px; padding: 0 16px; background: var(--fd-surface-3); color: var(--fd-text); cursor: pointer; }
+.fd-button.primary { min-height: 38px; background: var(--fd-primary); color: white; }
+.fd-button:disabled { opacity: .6; cursor: wait; }
+.empty { margin: 8px 0 0; color: var(--fd-text-3); font-size: 11px; line-height: 1.8; }
+.actions { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 10px; }
+.actions span { color: var(--fd-text-3); font-size: 12px; }
+@media (max-width: 760px) { .panel { padding: 12px; } mi-symbol-picker { max-width: 100%; } }

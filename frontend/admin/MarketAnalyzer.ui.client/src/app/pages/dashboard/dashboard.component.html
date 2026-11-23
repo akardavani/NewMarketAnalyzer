@@ -2,26 +2,66 @@
   <header class="welcome fd-card">
     <div>
       <span class="eyebrow">داشبورد</span>
-      <h1>خوش آمدید، {{ appData.fullName }}</h1>
+      <h1>خوش آمدید، {{ appData.fullName() }}</h1>
       <p>نمای کلی حساب و وضعیت سامانه</p>
     </div>
-    <span class="status-pill" [class.ready]="appData.appState === 2">
-      {{ appData.appState === 2 ? 'سامانه فعال' : 'سامانه غیرفعال' }}
+    <span class="status-pill" [class.ready]="appData.appState() === 2">
+      {{ appData.appState() === 2 ? 'سامانه فعال' : 'سامانه غیرفعال' }}
     </span>
   </header>
 
   <div class="summary-grid">
     <article class="summary-card fd-card">
       <span class="summary-label">نام کامل</span>
-      <strong>{{ appData.fullName }}</strong>
+      <strong>{{ appData.fullName() }}</strong>
     </article>
     <article class="summary-card fd-card">
       <span class="summary-label">آخرین ورود</span>
-      <strong dir="ltr">{{ appData.lastLoginDate | date:'yyyy/MM/dd HH:mm' }}</strong>
+      <strong dir="ltr">{{ appData.lastLoginDate() | date:'yyyy/MM/dd HH:mm' }}</strong>
     </article>
     <article class="summary-card accent fd-card">
       <span class="summary-label">وضعیت سامانه</span>
-      <strong>{{ appData.appState === 2 ? 'آماده به کار' : 'در حال بررسی' }}</strong>
+      <strong>{{ appData.appState() === 2 ? 'آماده به کار' : 'در حال بررسی' }}</strong>
     </article>
   </div>
+
+  @if (symbols().length > 0) {
+    <section class="price-section fd-card">
+      <header class="price-header">
+        <div>
+          <span class="eyebrow">داشبورد شخصی</span>
+          <h2>قیمت نمادهای انتخاب‌شده</h2>
+        </div>
+        <a routerLink="/dashboard/settings">تنظیم نمادها</a>
+      </header>
+      <div class="price-list">
+        @for (item of symbols(); track item.marketKey + ':' + item.symbolKey) {
+          <article class="price-row">
+            <div class="symbol-title">
+              <strong>{{ item.name }}</strong>
+              <span>{{ item.marketKey }} · {{ item.symbolKey }}</span>
+            </div>
+            <div class="price-details">
+              <span class="price-label">
+                {{ item.priceLabel }}
+                @if (item.priceTimestampUtc) {
+                  <bdi dir="ltr">({{ formatPriceDate(item.priceTimestampUtc) }})</bdi>
+                }
+              </span>
+              @if (item.lastPrice == null) {
+                <strong class="price-missing">دادهٔ قیمت موجود نیست</strong>
+              } @else {
+                <strong class="price-value" dir="ltr">
+                  <span>{{ formatPrice(item.lastPrice) }}</span>
+                  @if (item.currencyCode) {
+                    <small>{{ item.currencyCode }}</small>
+                  }
+                </strong>
+              }
+            </div>
+          </article>
+        }
+      </div>
+    </section>
+  }
 </section>

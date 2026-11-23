@@ -10,8 +10,13 @@ using MarketAnalyzer.MarketData.Application.Operations;
 using MarketAnalyzer.MarketIntelligence.Infrastructure;
 using MarketAnalyzer.MarketData.Persistence;
 using MarketAnalyzer.MarketData.Providers;
+using MarketAnalyzer.Dashboard.Application;
+using MarketAnalyzer.Dashboard.Persistence;
+using MarketAnalyzer.Learn.Application;
+using MarketAnalyzer.Learn.Persistence;
 using MarketAnalyzer.Membership.Application;
 using MarketAnalyzer.Tools.Application;
+using MarketAnalyzer.Tools.Persistence;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
@@ -120,7 +125,12 @@ builder.Services.AddSingleton(Options.Create(urlSettings));
 
 builder.Services.AddCms();
 builder.Services.AddMembership();
-builder.Services.AddTools();
+builder.Services.AddToolsApplication();
+builder.Services.AddToolsPersistence();
+builder.Services.AddDashboardApplication();
+builder.Services.AddDashboardPersistence();
+builder.Services.AddLearnApplication();
+builder.Services.AddLearnPersistence();
 
 builder.Services.AddMarketDataStores();
 builder.Services.AddMarketDataIngestion();
@@ -136,6 +146,7 @@ builder.Services.AddMediator(
     CmsMarker.Assembly,
     MembershipMarker.Assembly,
     ToolsMarker.Assembly,
+    LearnMarker.Assembly,
 ]);
 
 

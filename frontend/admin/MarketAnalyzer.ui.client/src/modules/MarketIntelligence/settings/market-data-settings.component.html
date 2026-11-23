@@ -59,7 +59,14 @@
               @for (setting of marketSettings(market); track setting.key) {
                 <label class="setting-row">
                   <span class="setting-name">{{ settingLabel(setting.key) }}</span>
-                  <input [type]="isSecret(setting.key) ? 'password' : 'text'" [(ngModel)]="setting.value" [disabled]="busy() || isSecret(setting.key)" [placeholder]="isSecret(setting.key) ? 'از Environment یا User Secrets تنظیم شود' : ''" />
+                  @if (isBoolean(setting)) {
+                    <span class="boolean-editor">
+                      <input type="checkbox" [checked]="booleanValue(setting)" (change)="setBoolean(setting, $event)" [disabled]="busy()" />
+                      <span>{{ booleanValue(setting) ? 'فعال' : 'غیرفعال' }}</span>
+                    </span>
+                  } @else {
+                    <input [type]="isSecret(setting.key) ? 'password' : 'text'" [(ngModel)]="setting.value" [disabled]="busy() || isSecret(setting.key)" [placeholder]="isSecret(setting.key) ? 'از Environment یا User Secrets تنظیم شود' : ''" />
+                  }
                   <button type="button" class="secondary" (click)="saveSetting(setting)" [disabled]="busy() || isSecret(setting.key)">ذخیره</button>
                 </label>
               }
@@ -106,7 +113,14 @@
       </select>
     </label>
     @for (setting of providerSettings(); track setting.key) {
-      <label class="setting-row"><span class="setting-name">{{ settingLabel(setting.key) }}<small>{{ setting.key }}</small></span><input [type]="isSecret(setting.key) ? 'password' : 'text'" [(ngModel)]="setting.value" [disabled]="busy() || isSecret(setting.key)" [placeholder]="isSecret(setting.key) ? 'از Environment یا User Secrets تنظیم شود' : ''" /><button type="button" class="secondary" (click)="saveSetting(setting)" [disabled]="busy() || isSecret(setting.key)">ذخیره</button></label>
+      <label class="setting-row"><span class="setting-name">{{ settingLabel(setting.key) }}<small>{{ setting.key }}</small></span>
+        @if (isBoolean(setting)) {
+          <span class="boolean-editor"><input type="checkbox" [checked]="booleanValue(setting)" (change)="setBoolean(setting, $event)" [disabled]="busy()" /><span>{{ booleanValue(setting) ? 'فعال' : 'غیرفعال' }}</span></span>
+        } @else {
+          <input [type]="isSecret(setting.key) ? 'password' : 'text'" [(ngModel)]="setting.value" [disabled]="busy() || isSecret(setting.key)" [placeholder]="isSecret(setting.key) ? 'از Environment یا User Secrets تنظیم شود' : ''" />
+        }
+        <button type="button" class="secondary" (click)="saveSetting(setting)" [disabled]="busy() || isSecret(setting.key)">ذخیره</button>
+      </label>
     }
     @if (selectedProvider()) {
       <div class="setting-row add-setting">
