@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using MarketAnalyzer.Abstractions;
 using MarketAnalyzer.Cms.Domain;
+using MarketAnalyzer.Cms.Persistence.Navigation;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -14,13 +15,11 @@ namespace MarketAnalyzer.Cms.Persistence
     {
         private readonly IDbContext _dbContext;
         private readonly IWebHostEnvironment _environment;
-        private readonly IServiceProvider _serviceProvider;
 
-        public CmsDataSeed(IDbContext dbContext, IWebHostEnvironment environment, IServiceProvider serviceProvider)
+        public CmsDataSeed(IDbContext dbContext, IWebHostEnvironment environment)
         {
             _dbContext = dbContext;
             _environment = environment;
-            _serviceProvider = serviceProvider;
         }
 
         public int Order => 600;
@@ -29,47 +28,8 @@ namespace MarketAnalyzer.Cms.Persistence
         {
             await SeedFileTypesAsync();
             await SeedFilePurposesAsync();
-            await SeedMenusAsync();
+            await NavigationCatalogSeed.SyncAsync(_dbContext);
             await SeedTemplatesAsync();
-        }
-
-        private async Task SeedMenusAsync()
-        {
-            //Clean old menus
-            await _dbContext.Set<Menu>().ExecuteDeleteAsync();
-
-            using var stream = typeof(CmsDataSeed).Assembly.GetManifestResourceStream(typeof(CmsDataSeed), "Menu.json");
-            var entries = await System.Text.Json.JsonSerializer.DeserializeAsync<List<MenuEntry>>(stream);
-            foreach (var entry in entries)
-            {
-                ProcessMenuEntry(entry, null);
-            }
-
-            void ProcessMenuEntry(MenuEntry entry, Menu parent)
-            {
-                var menu = Menu.Create(
-                    id: entry.Id,
-                    title: entry.Title,
-                    path: entry.Path,
-                    displayOrder: entry.DisplayOrder,
-                    icon: entry.Icon,
-                    requiredRoute: entry.RequiredRoute,
-                    isActive: entry.IsActive,
-                    requiredInvestmentTypes: entry.RequiredInvestmentTypes);
-
-                if (entry.SubMenus?.Count > 0)
-                {
-                    foreach (var subMenu in entry.SubMenus)
-                    {
-                        ProcessMenuEntry(subMenu, menu);
-                    }
-                }
-
-                _dbContext.Set<Menu>().Add(menu);
-                parent?.AddSubMenu(menu);
-            }
-
-            await _dbContext.SaveChangesAsync();
         }
 
         private async Task SeedFileTypesAsync()
@@ -316,19 +276,6 @@ namespace MarketAnalyzer.Cms.Persistence
         {
             public required string Id { get; init; }
             public required string Name { get; init; }
-        }
-
-        private class MenuEntry
-        {
-            public int Id { get; set; }
-            public string Title { get; set; }
-            public string Path { get; set; }
-            public int DisplayOrder { get; set; }
-            public string Icon { get; set; }
-            public bool IsActive { get; set; }
-            public string RequiredRoute { get; set; }
-            public List<MenuEntry> SubMenus { get; set; }
-            public List<int> RequiredInvestmentTypes { get; set; }
         }
 
         #endregion

@@ -107,6 +107,17 @@ namespace MarketAnalyzer.Cms.Domain
             IsActive = isActive;
         }
 
+        public void SetParent(Menu parent) => Parent = parent;
+
+        public void SetRequiredInvestmentTypes(IReadOnlyCollection<int> types)
+        {
+            ArgumentNullException.ThrowIfNull(types);
+            if (!RequiredInvestmentTypes.SequenceEqual(types))
+            {
+                _requiredInvestmentTypes = types.ToList();
+            }
+        }
+
         public void AddSubMenu(Menu subMenu)
         {
             ArgumentNullException.ThrowIfNull(subMenu);

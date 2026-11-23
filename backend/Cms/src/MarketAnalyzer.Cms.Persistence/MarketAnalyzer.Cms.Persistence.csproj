@@ -5,15 +5,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <None Remove="Menu.json" />
-	</ItemGroup>
-
-	<ItemGroup>
 	  <Compile Include="..\..\..\MarketAnalyzer.Persistence\Extensions\OwnedNavigationBuilderExtensions.cs" Link="OwnedNavigationBuilderExtensions.cs" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<EmbeddedResource Include="Menu.json" />
 	</ItemGroup>
 
 	<ItemGroup>

@@ -28,26 +28,23 @@ namespace MarketAnalyzer.Cms.Application
             //TODO: Cache
             var menus = await _dbContext
                 .Set<Menu>()
-                .AsNoTracking()
-                .Include(e => e.SubMenus.Where(e => e.IsActive))
-                .Where(e => e.IsActive && e.Parent == null)
+                .AsNoTrackingWithIdentityResolution()
+                .Include(e => e.SubMenus)
                 .ToListAsync(cancellationToken);
 
             var investmentType = 1;
 
             var result = new List<UserMenuQueryResult>(menus.Count);
-            foreach (var menu in menus)
+            foreach (var menu in menus.Where(menu => menu.Parent == null).OrderBy(menu => menu.DisplayOrder).ThenBy(menu => menu.Id))
             {
-                if (Ignore(menu, investmentType))
-                    continue;
-
-                result.Add(await FormatMenuAsync(request, menu, investmentType, cancellationToken));
+                var item = await FormatMenuAsync(request, menu, investmentType, cancellationToken);
+                if (item is not null)
+                {
+                    result.Add(item);
+                }
             }
 
-            return result
-                .Where(e => e is not null && (!string.IsNullOrEmpty(e.Path) || e.Children?.Count > 0))
-                .OrderBy(e => e.DisplayOrder)
-                .ToList();
+            return result;
         }
 
         private async ValueTask<UserMenuQueryResult> FormatMenuAsync(
@@ -56,37 +53,39 @@ namespace MarketAnalyzer.Cms.Application
             int investmentType,
             CancellationToken cancellation)
         {
-            if (Ignore(menu, investmentType))
+            if (!menu.IsActive || Ignore(menu, investmentType))
                 return null;
 
-            if (menu.Path == "assets/calculate-nav")
+            var children = new List<UserMenuQueryResult>();
+            foreach (var childMenu in menu.SubMenus.OrderBy(child => child.DisplayOrder).ThenBy(child => child.Id))
             {
-
-            }
-            if (string.IsNullOrEmpty(menu.RequiredRoute) ||
-                await _routeAuthorizationEvaluator.EvaluateAsync(request.Principal, new RouteDescriptor(menu.RequiredRoute)))
-            {
-                var children = new List<UserMenuQueryResult>(menu.SubMenus.Count);
-                foreach (var subMenu in menu.SubMenus)
+                var child = await FormatMenuAsync(request, childMenu, investmentType, cancellation);
+                if (child is not null)
                 {
-                    var child = await FormatMenuAsync(request, subMenu, investmentType, cancellation);
-                    if (child is not null)
-                    {
-                        children.Add(child);
-                    }
+                    children.Add(child);
                 }
-
-                return new UserMenuQueryResult()
-                {
-                    Label = menu.Title,
-                    Icon = menu.Icon,
-                    Path = menu.Path,
-                    DisplayOrder = menu.DisplayOrder,
-                    Children = children.OrderBy(e => e.DisplayOrder).ToList()
-                };
             }
 
-            return null;
+            var allowed = string.IsNullOrEmpty(menu.RequiredRoute) ||
+                await _routeAuthorizationEvaluator.EvaluateAsync(request.Principal, new RouteDescriptor(menu.RequiredRoute));
+            if (menu.SubMenus.Count > 0 && children.Count == 0)
+            {
+                return null;
+            }
+
+            if (menu.SubMenus.Count == 0 && (!allowed || string.IsNullOrEmpty(menu.Path)))
+            {
+                return null;
+            }
+
+            return new UserMenuQueryResult
+            {
+                Label = menu.Title,
+                Icon = menu.Icon,
+                Path = allowed ? menu.Path : null,
+                DisplayOrder = menu.DisplayOrder,
+                Children = children
+            };
         }
 
         private static bool Ignore(Menu menu, int investmentType)
