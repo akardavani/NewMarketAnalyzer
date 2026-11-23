@@ -1,6 +1,6 @@
 # MarketData / MarketIntelligence migration progress
 
-Last updated: 2026-11-04
+Last updated: 2026-11-14
 
 ## Temporary operator change: Kilid paused
 
@@ -163,3 +163,15 @@ Built Tools.Persistence, Tools.Application, and the API successfully (0 errors);
 - `docs/market-intelligence/MarketIntelligence-Architecture-Guide.md` — living AI-oriented project and operations guide; finalize at the end.
 - `docs/market-intelligence/MarketIntelligence-Strategies.md` — current strategy inventory and backend-handler/UI extension recipe.
 - `docs/market-intelligence/MarketData-Run-Report-2026-11-03.md` — collection run results and representative source errors.
+
+## Codal / company financial-data infrastructure (2026-11-14)
+
+Started the new financial-data work under `docs/market-intelligence/market-financial-data/`. Architecture discovery found that MarketData already has Domain/Application/Providers/Persistence, a market-data store layer, request pacing, scheduling, and job execution to extend after validation. No Codal provider or normalized financial-statement persistence was found under MarketData. The existing MarketIntelligence `TsetmcCodalClient`/parser/collector is an incomplete prototype (income-only route, narrow text parser, hard-coded symbol/request paths, and no reliable persistence), so it is not treated as production behavior.
+
+Batch 01 has five deterministic active TSE catalog candidates from a read-only query of `MarketAnalyzer`, with SymbolIds, names, SymbolKeys, InsCodes, Mnemonics, and sector codes recorded in `market-financial-data/CODAL_PROVIDERS_POC_BATCH_01.md`. Python 3.14.10 is installed, and yfinance-ir 2026.11.1, CodalPy 0.4.5, and Codal MCP 0.2.1 were installed in separate temporary environments. Codal MCP completed paced discovery searches for financial statements and monthly activity across the five issuers; `SymbolId=4759` uses Codal's symbol `شپدیس` although its database PersianName is `دیسشپ`. For `فایرا`, yfinance-ir parsed three financial sheets and a monthly report; CodalPy's income and balance parsers succeeded, its monthly JSON parser failed, and its private sheet-9 cash-flow attempt found no data. Codal MCP's financial page required following a same-host 302 redirect; a temporary POC client override followed it and parsed 10 sheets. Selected monthly values for Fāyra and Shakbir match the original Codal tables; the Shakbir table also exposed that yfinance-ir's generic monthly DataFrame omits metric/unit meaning. Two Fāyra financial rows match Codal MCP output. yfinance-ir parsed a Shakbir financial report (source-value check pending), a Kari report that Codal MCP did not return as tables, and found a pre-1397 Fāyra monthly report whose page had no embedded datasource. Codal access has intermittently returned HTTP 429/captcha, so batch 01 remains incomplete. Batch 02 is intentionally not started; no provider has been chosen.
+
+**Gate:** no operational MarketData/MarketIntelligence code, jobs, migrations, or database writes were made for this task. The Python environments and package installs are isolated under `%TEMP%\MarketFinancialPoc`; the application environment is unchanged. No successful POC gate has been met.
+
+Next action: continue batch 01 with small, spaced requests and expand original-source value/unit checks across the five symbols and historical windows. Stop requests immediately if another 429/captcha occurs. Start batch 02 only after batch 01 passes. Stop before implementation if source-value accuracy, historical coverage, or parse-success acceptance fails. See `market-financial-data/IMPLEMENTATION_STATUS.md` and `NEXT_STEPS.md`.
+
+**Five-symbol follow-up (2026-11-14):** Codal statement rows and units were checked against yfinance-ir for financial statements in four sample symbols (Fāyra, Shakbir, Kari, and Shapdis). Bransfo's historical 1396 financial report was read directly from Codal; its yfinance-ir comparison remains pending. Current monthly source rows were read for Fāyra, Shakbir, Kari, and Shapdis; generic monthly parsing loses aggregation/measure meaning for Kari, Shakbir, and Shapdis. Bransfo monthly tracing 425503 was discovered but its page timed out; two targeted retries then received HTTP 429, including one after the 60-second wait. Stop Codal calls until the longer block expires. No provider has passed, no Batch 02 or implementation has started. Full evidence: `market-financial-data/BATCH_01_LIVE_SOURCE_CHECKS.md`.
