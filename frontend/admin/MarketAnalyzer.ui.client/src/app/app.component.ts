@@ -1,4 +1,4 @@
-import { Component, Renderer2 } from '@angular/core';
+import { afterNextRender, Component, Renderer2 } from '@angular/core';
 import { NavigationEnd, NavigationStart, Router, RouterModule } from '@angular/router';
 
 
@@ -12,6 +12,7 @@ export class AppComponent {
   title = 'MarketAnalyzer.ui.client';
 
   constructor(renderer: Renderer2, router: Router) {
+    afterNextRender(() => renderer.addClass(document.body, 'loaded'));
     router.events
       .subscribe(event => {
         if (event instanceof NavigationStart) {

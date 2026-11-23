@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectorRef, Component, effect, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 import { AppDataService } from '../../infrastructure/services/app-data.service';
@@ -22,12 +22,22 @@ export class LayoutComponent {
   protected readonly brand = inject(BrandService);
   private readonly dialog = inject(DialogService);
   private readonly appData = inject(AppDataService);
+  private readonly cdr = inject(ChangeDetectorRef);
 
   protected readonly menuItems = this.appData.menuItems;
   protected readonly userFullname = this.appData.fullName;
 
   get userAlertCount(): number {
     return this.appData.userAlerts().length;
+  }
+
+  constructor() {
+    effect(() => {
+      this.appData.menuItems();
+      this.appData.fullName();
+      this.appData.userAlerts();
+      this.cdr.markForCheck();
+    });
   }
 
   openSearch(): void {
