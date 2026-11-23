@@ -48,6 +48,10 @@ Kilid (`real-estate`) scheduled catalog sync and candle ingestion are temporaril
 6. Update the matching guide and progress ledger with what changed, evidence, remaining work, and any real blocker.
 7. Preserve per-symbol/per-market failure continuation. Report actual keys and errors, and continue independent work.
 
+## Financial reports / Codal
+
+For the staged Codal and company financial-data work, read [market-financial-data/README.md](market-financial-data/README.md). The latest five-symbol source checks are in [BATCH_01_LIVE_SOURCE_CHECKS.md](market-financial-data/BATCH_01_LIVE_SOURCE_CHECKS.md); financial samples were source-matched, but generic monthly parsing loses measure/aggregation meaning and Codal is currently rate-limiting the Bransfo historical report read. The POC acceptance gate is still closed. Do not create operational collectors, jobs, schema changes, or migrations while it remains closed.
+
 ## How to give an AI a change request
 
 Start by asking the AI to read this `README.md` and the linked progress, architecture, and strategy guides. Then describe the outcome you want and provide any source URLs, sample payloads, market/symbol scope, and expected behavior. For a new strategy, include its rules, required candle timeframe, inputs, and an example of the expected output. The AI should first map the request to the existing ownership and extension steps, then update code and the relevant Markdown guides together. The migration progress guide must always say what was completed, what remains, current blockers, and the next concrete action.
@@ -70,3 +74,4 @@ The dated live TSE provider comparison is [MarketData-Provider-Comparison-2026-1
 - `MarketIntelligence-Strategies.md` — strategy-specific backend and UI extension guide.
 - `MarketData-Run-Report-YYYY-MM-DD.md` — dated run evidence and representative failures.
 - `transfer-tools-data.sql` — preview-first, one-time copy of existing `Tools` rows into a fresh database; separate from EF migrations.
+- `market-financial-data/` — Codal provider investigation, reproducible POC batches, data-quality requirements, and post-POC implementation plan.
