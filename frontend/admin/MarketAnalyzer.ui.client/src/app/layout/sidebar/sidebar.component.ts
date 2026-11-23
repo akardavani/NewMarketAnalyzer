@@ -162,6 +162,10 @@ export class SidebarComponent {
     return !!node.path && trimSlashes(node.path) === this.activePath();
   }
 
+  protected isHome(): boolean {
+    return this.activePath() === '';
+  }
+
   protected hasActive(node: NavNode): boolean {
     return this.activeKeys().includes(node.key);
   }

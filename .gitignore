@@ -16,6 +16,9 @@
 # ---------- Visual Studio: build output (any folder) ----------
 [Bb]in/
 [Oo]bj/
+# Explicit recursive forms keep generated folders ignored in nested projects.
+**/[Bb]in/
+**/[Oo]bj/
 # Keep the shared API client's generated build output out of source control.
 /shared/MarketAnalyzer.ApiClient/bin/
 /shared/MarketAnalyzer.ApiClient/obj/
@@ -23,6 +26,10 @@
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
+**/[Dd]ebug/
+**/[Rr]elease/
+**/[Dd]ebugPublic/
+**/[Rr]eleases/
 x64/
 x86/
 [Ww][Ii][Nn]32/
@@ -152,6 +159,7 @@ appsettings.Local.json
 
 # ---------- Node / Angular ----------
 node_modules/
+**/node_modules/
 .angular/
 .angular-cache/
 .cache/
@@ -160,6 +168,7 @@ node_modules/
 .stylelintcache
 .sass-cache/
 dist/
+**/dist/
 tmp/
 temp/
 out-tsc/

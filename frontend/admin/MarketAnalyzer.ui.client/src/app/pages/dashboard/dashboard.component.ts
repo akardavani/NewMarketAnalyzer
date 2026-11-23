@@ -1,4 +1,4 @@
-import { Component, inject, OnInit, signal } from '@angular/core';
+import { ChangeDetectorRef, Component, inject, OnInit, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { GlobalImports } from '@imports';
 import { AppDataService } from '@services/app-data.service';
@@ -27,11 +27,15 @@ export class DashboardComponent implements OnInit {
   protected readonly appData = inject(AppDataService);
   protected readonly symbols = signal<DashboardSymbol[]>([]);
   private readonly http = inject(HttpClient);
+  private readonly cdr = inject(ChangeDetectorRef);
 
   ngOnInit(): void {
     this.http.get<ApiResult<DashboardSymbol[]>>(apiUrl('Dashboard/GetSymbols'))
       .subscribe(result => {
-        if (result.successed) this.symbols.set(result.data ?? []);
+        if (result.successed) {
+          this.symbols.set(result.data ?? []);
+          this.cdr.markForCheck();
+        }
       });
   }
 

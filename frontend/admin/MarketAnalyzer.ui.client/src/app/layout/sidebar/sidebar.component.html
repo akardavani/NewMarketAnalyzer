@@ -7,6 +7,15 @@
     </div>
   </div>
 
+  <a class="brand" routerLink="/" (click)="closeFlyouts()" [class.on]="isHome()"
+     title="خانه" aria-label="خانه" [attr.aria-current]="isHome() ? 'page' : null">
+    <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+      <path d="M9 21.5 24 13l15 8.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+      <rect x="10" y="22" width="28" height="13.5" rx="3.5" fill="currentColor" fill-opacity=".16" stroke="currentColor" stroke-width="2" />
+      <path d="M15 22v-3.5h18V22M16.5 27.5v4M22.5 27.5v4M28.5 27.5v4M33 27.5v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+    </svg>
+  </a>
+
   <div class="sidebar-actions" aria-label="میانبرها">
     <button type="button" class="sidebar-mini-button" data-tip="اعلان‌ها" aria-label="اعلان‌ها" title="اعلان‌ها" (click)="openNotifications()">
       <i class="pa pa-notification" aria-hidden="true"></i>
@@ -32,11 +41,7 @@
     </section>
   }
 
-  @if (selectedSectionNode(); as section) {
-    <section class="submenu-flyout" aria-label="زیرمنو">
-      <div class="flyout-content"><ng-container *ngTemplateOutlet="list; context: { $implicit: section.children, depth: 1 }" /></div>
-    </section>
-  } @else if (selectedSection() === 'tools') {
+  @if (toolsOpen()) {
     <section class="submenu-flyout tools-flyout" aria-label="ابزارها">
       <div class="flyout-content tool-list">
         @if (quickAction().path) { <a class="item tool-action" [routerLink]="quickAction().path"><span class="l">{{ quickAction().label }}</span></a> }
@@ -51,9 +56,18 @@
   @for (n of nodes; track n.key) {
     @if (n.children.length) {
       @if (depth === 0) {
-        <button type="button" class="rail-item" [class.has-active]="hasActive(n)" [attr.data-tip]="n.label" (click)="openSection(n, $event)">
-          <span class="ico"><i [class]="iconFor(n)"></i></span>
-        </button>
+        <section class="sec" [class.has-active]="hasActive(n)" [class.is-closed]="selectedSection() !== n.key">
+          <button type="button" class="sec-h" [attr.data-tip]="n.label" [attr.aria-expanded]="selectedSection() === n.key" (click)="openSection(n, $event)">
+            <span class="ico"><i [class]="iconFor(n)"></i></span>
+            <span class="t">{{ n.label }}</span>
+            <span class="join" aria-hidden="true"></span>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6" /></svg>
+          </button>
+          <div class="sec-body" [attr.aria-label]="n.label">
+            <div class="flyout-title">{{ n.label }}</div>
+            <div class="flyout-items"><ng-container *ngTemplateOutlet="list; context: { $implicit: n.children, depth: 1 }" /></div>
+          </div>
+        </section>
       } @else {
         <div class="grp" [class.is-closed]="!isOpen(n)" [class.has-active]="hasActive(n)">
           <button type="button" class="item sub" [attr.aria-expanded]="isOpen(n)" (click)="toggle(n)">
