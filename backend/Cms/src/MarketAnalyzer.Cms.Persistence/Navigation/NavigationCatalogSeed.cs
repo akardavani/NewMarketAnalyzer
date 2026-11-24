@@ -55,7 +55,7 @@ internal static class NavigationCatalogSeed
                     || entry.Title.Length > 200 || entry.Icon?.Length > 20 || entry.Path?.Length > 300
                     || entry.Permission?.Length > 500 || (entry.Path is not null
                         && (!paths.Add(entry.Path) || entry.Path.Length == 0 || entry.Children.Count != 0
-                            || (entry.Path != "/" && string.IsNullOrWhiteSpace(entry.Permission)))))
+                            )))
                 {
                     throw new InvalidOperationException($"Invalid navigation catalog entry: {entry.Id} ({entry.Title}).");
                 }
