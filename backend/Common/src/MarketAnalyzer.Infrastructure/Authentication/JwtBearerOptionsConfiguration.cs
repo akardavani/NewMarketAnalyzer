@@ -19,6 +19,8 @@ namespace MarketAnalyzer.Infrastructure.Authentication
 
         public void PostConfigure(string name, JwtBearerOptions options)
         {
+            var signingKey = DecodeSigningKey(_options.SigningKey);
+
             options.SaveToken = true;
             options.RequireHttpsMetadata = false;
             options.TokenValidationParameters = new TokenValidationParameters()
@@ -32,13 +34,41 @@ namespace MarketAnalyzer.Infrastructure.Authentication
                 ValidAudience = _options.Audience,
                 ValidateIssuerSigningKey = true,
                 ClockSkew = TimeSpan.FromMinutes(2),
-                IssuerSigningKey = new SymmetricSecurityKey(Convert.FromBase64String(_options.SigningKey))
+                IssuerSigningKey = new SymmetricSecurityKey(signingKey)
             };
 
             options.Events = new JwtBearerEvents()
             {
                 OnTokenValidated = UpdateUserSessionAsync
             };
+        }
+
+        private static byte[] DecodeSigningKey(string signingKey)
+        {
+            if (string.IsNullOrWhiteSpace(signingKey))
+            {
+                throw new InvalidOperationException("Configuration 'JsonTokenOptions:SigningKey' is missing.");
+            }
+
+            byte[] keyBytes;
+            try
+            {
+                keyBytes = Convert.FromBase64String(signingKey);
+            }
+            catch (FormatException exception)
+            {
+                throw new InvalidOperationException(
+                    "Configuration 'JsonTokenOptions:SigningKey' must be a valid Base64 value containing at least 32 bytes.",
+                    exception);
+            }
+
+            if (keyBytes.Length < 32)
+            {
+                throw new InvalidOperationException(
+                    "Configuration 'JsonTokenOptions:SigningKey' must contain at least 32 decoded bytes.");
+            }
+
+            return keyBytes;
         }
 
         public static Task UpdateUserSessionAsync(TokenValidatedContext validatedContext)
