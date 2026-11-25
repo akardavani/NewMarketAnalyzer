@@ -43,7 +43,10 @@ export class MarketDataSettingsComponent implements OnInit {
 
   marketSettings(market: MarketOverview): SettingItem[] {
     return Object.entries(market.settings ?? {})
+      // These are per-symbol retry/cache markers stored internally in MarketSettings,
+      // not operator configuration. Showing them creates hundreds of cryptic rows.
       .filter(([key]) => !key.toLowerCase().startsWith('provider:'))
+      .filter(([key]) => !/^Ingestion:NoDataUntil:\d+$/i.test(key) && !/^NavRetry:\d+$/i.test(key))
       .map(([key, value]) => ({ scope: `market:${market.key}`, key, value }));
   }
 
@@ -90,10 +93,10 @@ export class MarketDataSettingsComponent implements OnInit {
       };
       const parts: Record<string, string> = {
         Enabled: 'فعال بودن کار',
-        IntervalSeconds: 'فاصلهٔ اجرا (ثانیه)',
+        IntervalSeconds: 'فاصلهٔ اجرا (دقیقه)',
         RunAt: 'ساعت اجرای روزانه',
-        WindowFrom: 'شروع بازهٔ اجرا',
-        WindowTo: 'پایان بازهٔ اجرا'
+        WindowFrom: 'شروع ساعت دریافت',
+        WindowTo: 'پایان ساعت دریافت'
       };
       return `${jobs[scheduler[1]] ?? scheduler[1]} — ${parts[scheduler[2]] ?? scheduler[2]}`;
     }
@@ -104,6 +107,27 @@ export class MarketDataSettingsComponent implements OnInit {
       TimeoutSeconds: 'مهلت پاسخ (ثانیه)',
       PageSize: 'تعداد در هر درخواست'
     } as Record<string, string>)[key] ?? key;
+  }
+
+  isIntervalSetting(setting: SettingItem): boolean {
+    return /^Scheduler:[^:]+:IntervalSeconds$/i.test(setting.key);
+  }
+
+  intervalMinutes(setting: SettingItem): number {
+    const seconds = Number(setting.value);
+    return Number.isFinite(seconds) ? seconds / 60 : 1;
+  }
+
+  setIntervalMinutes(setting: SettingItem, value: number | string): void {
+    const minutes = Number(value);
+    if (Number.isFinite(minutes) && minutes > 0)
+      setting.value = String(Math.round(minutes * 60));
+  }
+
+  settingInputType(setting: SettingItem): string {
+    if (this.isSecret(setting.key)) return 'password';
+    if (/^Scheduler:[^:]+:(RunAt|WindowFrom|WindowTo)$/i.test(setting.key)) return 'time';
+    return 'text';
   }
 
   providerChanged(market: MarketOverview, capability: MarketCapability, providerKey: string): void {

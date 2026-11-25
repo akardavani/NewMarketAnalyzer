@@ -128,7 +128,7 @@ After those steps, continue with the migration and final-cleanup items below.
 
 ## Dashboard personalization
 
-The first per-user dashboard widget is implemented in code: users can search and select active symbols, their selection is stored in Membership, and the dashboard reads existing values from MarketData. Current-state quotes come from `ICurrentSymbolStateStore`; funds use their latest stored cancellation NAV; if either current value is absent, the dashboard reads the latest daily `Close` from `IHistoricalCandleStore` (`HistoricalCandles`). Historical fallback is labeled `آخرین قیمت تاریخی`. No provider is called and ingestion/storage behavior is unchanged. The price widget is hidden when no symbols are selected; selected symbols without a current value or daily candle remain visible without a price.
+The first per-user dashboard widget is implemented in code: users can search and select active symbols, and the dashboard reads existing values from MarketData. Current-state quotes come from `ICurrentSymbolStateStore`; funds use their latest stored cancellation NAV; the service also reads the latest daily `Close` from `IHistoricalCandleStore` (`HistoricalCandles`) and displays whichever observation has the newer source timestamp. Historical fallback is labeled `آخرین قیمت تاریخی`. No provider is called and ingestion/storage behavior is unchanged. The price widget is hidden when no symbols are selected; selected symbols without a current value or daily candle remain visible without a price.
 
 The selected-symbol widget now renders all prices inside one compact card, as one row per symbol. Amounts are formatted explicitly and currency codes use smaller text so values stay legible.
 On desktop, the price card matches the width of one dashboard summary card and aligns beneath the rightmost summary card; on narrow screens it expands to full width.
@@ -149,6 +149,12 @@ Remaining integration item: add the `تنظیمات داشبورد` root item to
 Dashboard symbol settings now use the shared RatioCandles symbol picker for compact typeahead search and removable chips. The dashboard-specific `Dashboard/SearchSymbols` endpoint, per-user selection, save, and remove behavior remain intact. The Angular production build completed successfully; it reported existing bundle/style budget and CommonJS warnings.
 
 The dashboard settings panel is now constrained to a compact centered width. Market Data settings use responsive half/third-width market cards, and string-backed `true`/`false` values use checkboxes; saving still sends the same string values through the existing endpoint. The Angular production build completed with 0 errors; existing bundle/style budget and CommonJS warnings remain.
+
+## Dashboard quote freshness (2026-11-25)
+
+Dashboard price composition now compares the timestamp on `CurrentSymbolStates`/`FundNavPoints` with the latest daily candle's `OpenTimeUtc`; an old current-state row no longer masks a newer historical close. The UI marks the selected historical close as `آخرین قیمت تاریخی` and shows its candle date. When querying `marketdata.HistoricalCandles` manually, filter `Timeframe = 3` (`Daily`) so weekly/monthly aggregates are not mistaken for daily rows. The dashboard selection only controls which symbols are displayed; it does not control MarketData ingestion.
+
+Market Data settings now hide per-symbol retry/no-data bookkeeping keys (`Ingestion:NoDataUntil:<symbolId>` and `NavRetry:<symbolId>`) from the operator-facing schedule list while retaining them in `MarketSettings` for ingestion behavior. Scheduler intervals are shown in minutes and translated to seconds on save; daily run/window values use time inputs with an explicit market-local-time explanation.
 
 ## Tools domain refactor (2026-11-12)
 
