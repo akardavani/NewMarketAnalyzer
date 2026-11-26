@@ -156,6 +156,8 @@ Dashboard price composition now compares the timestamp on `CurrentSymbolStates`/
 
 Market Data settings now hide per-symbol retry/no-data bookkeeping keys (`Ingestion:NoDataUntil:<symbolId>` and `NavRetry:<symbolId>`) from the operator-facing schedule list while retaining them in `MarketSettings` for ingestion behavior. Scheduler intervals are shown in minutes and translated to seconds on save; daily run/window values use time inputs with an explicit market-local-time explanation.
 
+Market settings now use stable client-side edit models so input changes are retained until submitted. Each market has one save button for all its editable settings, and the selected provider has one save button for its settings; the API persists each submitted group in a single database save.
+
 ## Tools domain refactor (2026-11-12)
 
 Reviewed the Tools controllers, Application/Persistence projects, Angular tool modules, and sidebar composition. UI features are already separated by tool into dedicated components and services and use the shared theme/action styles; the Notes editor opens in its own fixed panel beside the sidebar. No UI restructuring was needed.

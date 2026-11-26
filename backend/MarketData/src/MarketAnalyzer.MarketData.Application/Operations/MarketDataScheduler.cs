@@ -169,7 +169,7 @@ namespace MarketAnalyzer.MarketData.Application.Operations
                 await _concurrency.WaitAsync(ct);
                 try
                 {
-                    var result = await _runner.RunAsync(market.Key, job, ct);
+                    var result = await _runner.RunAsync(market.Key, job, ct, MarketJobTrigger.Scheduled);
                     ApplyResult(market, job, plan, state, result);
                 }
                 finally

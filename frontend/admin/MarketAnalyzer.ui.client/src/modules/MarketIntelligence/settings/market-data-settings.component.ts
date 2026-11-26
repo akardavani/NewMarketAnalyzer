@@ -20,14 +20,15 @@ export class MarketDataSettingsComponent implements OnInit {
   readonly notice = signal('');
   readonly lastJob = signal<MarketJobResult | null>(null);
   readonly marketSettingDrafts: Record<string, SettingItem> = {};
+  private readonly marketSettingsCache = new Map<string, SettingItem[]>();
   readonly providerSettingDraft: SettingItem = { scope: '', key: '', value: '' };
   readonly jobs = [
-    { id: 1, label: 'همگام‌سازی نمادها' },
-    { id: 2, label: 'دریافت کندل تاریخی' },
-    { id: 3, label: 'وضعیت لحظه‌ای' },
-    { id: 4, label: 'دفتر سفارش' },
-    { id: 5, label: 'فعالیت حقیقی/حقوقی' },
-    { id: 6, label: 'NAV صندوق‌ها' }
+    { id: 1, capability: 1, label: 'همگام‌سازی نمادها' },
+    { id: 2, capability: 2, label: 'دریافت کندل تاریخی' },
+    { id: 3, capability: 3, label: 'وضعیت لحظه‌ای' },
+    { id: 4, capability: 4, label: 'دفتر سفارش' },
+    { id: 5, capability: 6, label: 'فعالیت حقیقی/حقوقی' },
+    { id: 6, capability: 7, label: 'NAV صندوق‌ها' }
   ];
 
   ngOnInit(): void { this.reload(); }
@@ -36,18 +37,23 @@ export class MarketDataSettingsComponent implements OnInit {
     this.loading.set(true);
     this.error.set('');
     this.service.overview().subscribe({
-      next: result => { this.markets.set(result); this.loading.set(false); },
+      next: result => { this.marketSettingsCache.clear(); this.markets.set(result); this.loading.set(false); },
       error: e => { this.error.set(this.message(e)); this.loading.set(false); }
     });
   }
 
   marketSettings(market: MarketOverview): SettingItem[] {
-    return Object.entries(market.settings ?? {})
+    const cached = this.marketSettingsCache.get(market.key);
+    if (cached) return cached;
+
+    const settings = Object.entries(market.settings ?? {})
       // These are per-symbol retry/cache markers stored internally in MarketSettings,
       // not operator configuration. Showing them creates hundreds of cryptic rows.
       .filter(([key]) => !key.toLowerCase().startsWith('provider:'))
       .filter(([key]) => !/^Ingestion:NoDataUntil:\d+$/i.test(key) && !/^NavRetry:\d+$/i.test(key))
       .map(([key, value]) => ({ scope: `market:${market.key}`, key, value }));
+    this.marketSettingsCache.set(market.key, settings);
+    return settings;
   }
 
   marketSettingDraft(marketKey: string): SettingItem {
@@ -78,6 +84,35 @@ export class MarketDataSettingsComponent implements OnInit {
 
   capabilityName(id: number): string {
     return ({ 1: 'کاتالوگ نماد', 2: 'کندل تاریخی', 3: 'وضعیت لحظه‌ای', 4: 'دفتر سفارش', 5: 'رویداد شرکتی', 6: 'فعالیت حقیقی/حقوقی', 7: 'NAV صندوق' } as Record<number, string>)[id] ?? `قابلیت ${id}`;
+  }
+
+  jobsFor(market: MarketOverview): Array<{ id: number; capability: number; label: string }> {
+    const availableCapabilities = new Set(market.capabilities.map(capability => capability.capability));
+    // Keep the three common market operations visible for every market. A market
+    // without a provider for one of them will show the option disabled in the UI.
+    return this.jobs.filter(job => job.id <= 3 || availableCapabilities.has(job.capability));
+  }
+
+  isJobAvailable(market: MarketOverview, job: { capability: number }): boolean {
+    const capability = market.capabilities.find(item => item.capability === job.capability);
+    if (capability?.activeProviderKey) return true;
+
+    // Markets without a live quote provider can still refresh the current-state
+    // snapshot from their active candle provider when the operator runs it manually.
+    if (job.capability === 3) {
+      return !!market.capabilities.find(item => item.capability === 2)?.activeProviderKey;
+    }
+
+    return false;
+  }
+
+  jobOptionLabel(market: MarketOverview, job: { capability: number; label: string }): string {
+    if (job.capability === 3) {
+      const hasLiveProvider = !!market.capabilities.find(item => item.capability === 3)?.activeProviderKey;
+      if (!hasLiveProvider && this.isJobAvailable(market, job)) return `${job.label} (از آخرین کندل)`;
+    }
+    if (this.isJobAvailable(market, job)) return job.label;
+    return `${job.label} (منبع این کار برای بازار تنظیم نشده)`;
   }
 
   settingLabel(key: string): string {
@@ -148,8 +183,34 @@ export class MarketDataSettingsComponent implements OnInit {
     });
   }
 
-  saveSetting(item: SettingItem): void {
-    this.perform(() => this.service.setSetting(item.scope, item.key, item.value), 'تنظیم ذخیره شد.');
+  saveMarketSettings(market: MarketOverview): void {
+    const settings = this.marketSettings(market)
+      .filter(setting => !this.isSecret(setting.key))
+      .map(({ key, value }) => ({ key, value }));
+    this.perform(
+      () => this.service.setSettings(`market:${market.key}`, settings),
+      `تنظیمات ${market.persianName || market.name} ذخیره شد.`
+    );
+  }
+
+  setMarketActive(market: MarketOverview): void {
+    const isActive = !market.isActive;
+    const state = isActive ? 'فعال' : 'غیرفعال';
+    this.perform(
+      () => this.service.setMarketActive(market.key, isActive),
+      `دریافت دادهٔ ${market.persianName || market.name} ${state} شد.`
+    );
+  }
+
+  saveProviderSettings(): void {
+    const providerKey = this.selectedProvider();
+    const settings = this.providerSettings()
+      .filter(setting => !this.isSecret(setting.key))
+      .map(({ key, value }) => ({ key, value }));
+    this.perform(
+      () => this.service.setSettings(`provider:${providerKey}`, settings),
+      `تنظیمات ${providerKey} ذخیره شد.`
+    );
   }
 
   runJob(market: MarketOverview, jobId: number): void {

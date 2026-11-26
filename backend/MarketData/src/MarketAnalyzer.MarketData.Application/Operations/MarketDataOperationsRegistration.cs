@@ -23,7 +23,8 @@ namespace MarketAnalyzer.MarketData.Application.Operations
 
             services.TryAddSingleton(TimeProvider.System);
             services.TryAddSingleton<IMarketJobGate, MarketJobGate>();
-            services.TryAddSingleton<IMarketDataJobRunner, MarketDataJobRunner>();
+            services.TryAddSingleton<MarketDataJobRunner>();
+            services.TryAddSingleton<IMarketDataJobRunner>(provider => provider.GetRequiredService<MarketDataJobRunner>());
             services.TryAddScoped<IMarketBootstrapService, MarketBootstrapService>();
             services.TryAddScoped<IProviderSwitchService, ProviderSwitchService>();
             services.TryAddScoped<IMarketSettingsAdminService, MarketSettingsAdminService>();

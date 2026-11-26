@@ -26,7 +26,7 @@
 
   <nav class="nav">
     <ng-container *ngTemplateOutlet="list; context: { $implicit: mainTree(), depth: 0 }" />
-    <button type="button" class="rail-item tools-root" data-tip="ابزارها" [class.has-active]="selectedSection() === 'tools'" (click)="openTools($event)">
+    <button type="button" class="rail-item tools-root" data-tip="ابزارها" [class.has-active]="selectedSection() === 'tools'" (mouseenter)="showItemTooltip('ابزارها', $event)" (mouseleave)="hideItemTooltip()" (focus)="showItemTooltip('ابزارها', $event)" (blur)="hideItemTooltip()" (click)="openTools($event)">
       <span class="ico"><i class="pa pa-settings" aria-hidden="true"></i></span>
     </button>
     <ng-container *ngTemplateOutlet="list; context: { $implicit: securityTree(), depth: 0 }" />
@@ -59,6 +59,10 @@
       </div>
     </section>
   }
+
+  @if (itemTooltip(); as tip) {
+    <div class="sidebar-tooltip" role="tooltip" [style.top.px]="tip.top" [style.left.px]="tip.left">{{ tip.label }}</div>
+  }
 </aside>
 
 <ng-template #list let-nodes let-depth="depth">
@@ -66,7 +70,7 @@
     @if (n.children.length) {
       @if (depth === 0) {
         <section class="sec" [class.has-active]="hasActive(n)" [class.is-closed]="selectedSection() !== n.key">
-          <button type="button" class="sec-h" [attr.data-tip]="n.label" [attr.aria-expanded]="selectedSection() === n.key" (click)="openSection(n, $event)">
+          <button type="button" class="sec-h" [attr.data-tip]="n.label" [attr.aria-expanded]="selectedSection() === n.key" (mouseenter)="showItemTooltip(n.label, $event)" (mouseleave)="hideItemTooltip()" (focus)="showItemTooltip(n.label, $event)" (blur)="hideItemTooltip()" (click)="openSection(n, $event)">
             <span class="ico"><i [class]="iconFor(n)"></i></span>
             <span class="t">{{ n.label }}</span>
             <span class="join" aria-hidden="true"></span>
@@ -84,7 +88,7 @@
       }
     } @else if (n.url) {
       @if (depth === 0) {
-        <a class="rail-item" [routerLink]="n.url" [class.on]="isActive(n)" [attr.data-tip]="n.label" (click)="closeFlyouts()">
+        <a class="rail-item" [routerLink]="n.url" [class.on]="isActive(n)" [attr.data-tip]="n.label" (mouseenter)="showItemTooltip(n.label, $event)" (mouseleave)="hideItemTooltip()" (focus)="showItemTooltip(n.label, $event)" (blur)="hideItemTooltip()" (click)="closeFlyouts()">
           <span class="ico"><i [class]="iconFor(n)"></i></span>
         </a>
       } @else {

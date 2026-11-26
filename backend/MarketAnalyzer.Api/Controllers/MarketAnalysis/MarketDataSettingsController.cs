@@ -31,6 +31,23 @@ namespace MarketAnalyzer.Api.Controllers.MarketAnalysis
         public string Value { get; set; } = "";
     }
 
+    /// <summary>درخواست ذخیرهٔ گروهی تنظیمات یک بازار یا Provider.</summary>
+    public sealed class SetMarketSettingsRequest
+    {
+        /// <summary>محدوده: market:{key} یا provider:{key}.</summary>
+        public string Scope { get; set; } = "";
+
+        /// <summary>تنظیماتی که باید با هم ذخیره شوند.</summary>
+        public List<MarketSettingValue> Settings { get; set; } = [];
+    }
+
+    /// <summary>درخواست تغییر وضعیت دریافت یک بازار.</summary>
+    public sealed class SetMarketActiveRequest
+    {
+        public string MarketKey { get; set; } = "";
+        public bool IsActive { get; set; }
+    }
+
     /// <summary>درخواست تعویض منبع فعال.</summary>
     public sealed class SwitchProviderRequest
     {
@@ -115,6 +132,40 @@ namespace MarketAnalyzer.Api.Controllers.MarketAnalysis
             }
         }
 
+        /// <summary>ذخیرهٔ گروهی تنظیمات بازار یا Provider.</summary>
+        [HttpPost]
+        [RouteInfo(DisplayName = "ذخیره گروهی تنظیمات منبع داده", AuthorizedRoles = [ConstStrings.SysAdminRoleName])]
+        [ProducesResponseType(typeof(ApiResult<object>), StatusCodes.Status200OK)]
+        public async Task<IActionResult> SetSettings([FromBody] SetMarketSettingsRequest request, CancellationToken cancellationToken)
+        {
+            try
+            {
+                await _admin.SetSettingsAsync(request.Scope, request.Settings, CurrentUserId.ToString(), cancellationToken);
+                return Ok(ApiResult.Success);
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(ApiResult.FromError<object>(ex.Message));
+            }
+        }
+
+        /// <summary>تغییر وضعیت فعال بودن دریافت دادهٔ یک بازار.</summary>
+        [HttpPost]
+        [RouteInfo(DisplayName = "تغییر وضعیت دریافت بازار", AuthorizedRoles = [ConstStrings.SysAdminRoleName])]
+        [ProducesResponseType(typeof(ApiResult<object>), StatusCodes.Status200OK)]
+        public async Task<IActionResult> SetMarketActive([FromBody] SetMarketActiveRequest request, CancellationToken cancellationToken)
+        {
+            try
+            {
+                await _admin.SetMarketActiveAsync(request.MarketKey, request.IsActive, cancellationToken);
+                return Ok(ApiResult.Success);
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(ApiResult.FromError<object>(ex.Message));
+            }
+        }
+
         /// <summary>تعویض منبع فعال یک قابلیت. برای کندل‌ها باید confirmWipe=true باشد.</summary>
         [HttpPost]
         [RouteInfo(DisplayName = "تعویض منبع داده", AuthorizedRoles = [ConstStrings.SysAdminRoleName])]
@@ -146,7 +197,7 @@ namespace MarketAnalyzer.Api.Controllers.MarketAnalysis
             {
                 try
                 {
-                    outcomes.Add(await _runner.RunAsync(market.Key, MarketJobKind.SyncCatalog, cancellationToken));
+                    outcomes.Add(await _runner.RunAsync(market.Key, MarketJobKind.SyncCatalog, cancellationToken, MarketJobTrigger.CatalogRefresh));
                 }
                 catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested)
                 {

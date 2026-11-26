@@ -12,6 +12,9 @@ namespace MarketAnalyzer.MarketData.Domain
         /// <summary>بازار را با کلید می‌خواند؛ اگر نباشد null.</summary>
         Task<MarketDefinition?> GetByKeyAsync(string key, CancellationToken cancellationToken);
 
+        /// <summary>وضعیت دریافت دادهٔ بازار را به‌عنوان تصمیم اپراتور ذخیره می‌کند.</summary>
+        Task<bool> SetActiveAsync(string key, bool isActive, CancellationToken cancellationToken);
+
         /// <summary>همهٔ بازارها (فقط خواندنی، بدون tracking).</summary>
         Task<IReadOnlyList<MarketDefinition>> GetAllAsync(CancellationToken cancellationToken);
     }

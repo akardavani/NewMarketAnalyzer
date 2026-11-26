@@ -50,6 +50,15 @@ namespace MarketAnalyzer.MarketData.Application.Operations
         }
 
         /// <inheritdoc />
+        public async Task SetMarketActiveAsync(string marketKey, bool isActive, CancellationToken cancellationToken)
+        {
+            if (string.IsNullOrWhiteSpace(marketKey))
+                throw new ArgumentException("Market key is required.", nameof(marketKey));
+
+            if (!await _markets.SetActiveAsync(marketKey, isActive, cancellationToken))
+                throw new ArgumentException($"Unknown market '{marketKey}'.", nameof(marketKey));
+        }
+
         public async Task<IReadOnlyList<SettingItem>> GetProviderSettingsAsync(string providerKey, CancellationToken cancellationToken)
         {
             var scope = MarketSettingScopes.ForProvider(providerKey);
@@ -60,11 +69,20 @@ namespace MarketAnalyzer.MarketData.Application.Operations
         /// <inheritdoc />
         public async Task SetSettingAsync(string scope, string key, string value, string? updatedBy, CancellationToken cancellationToken)
         {
-            if (string.IsNullOrWhiteSpace(scope) || string.IsNullOrWhiteSpace(key))
-                throw new ArgumentException("Scope and key are required.");
+            await SetSettingsAsync(scope, [new MarketSettingValue(key, value)], updatedBy, cancellationToken);
+        }
 
-            if (key.Length > 200 || scope.Length > 200 || value is null || value.Length > 4000)
+        /// <inheritdoc />
+        public async Task SetSettingsAsync(string scope, IReadOnlyList<MarketSettingValue> settings, string? updatedBy, CancellationToken cancellationToken)
+        {
+            if (string.IsNullOrWhiteSpace(scope))
+                throw new ArgumentException("Scope is required.");
+
+            if (scope.Length > 200)
                 throw new ArgumentException("Scope, key or value is too long.");
+
+            if (settings is null || settings.Count == 0)
+                throw new ArgumentException("At least one setting is required.");
 
             var isMarket = scope.StartsWith("market:", StringComparison.Ordinal);
             var isProvider = scope.StartsWith("provider:", StringComparison.Ordinal);
@@ -77,14 +95,27 @@ namespace MarketAnalyzer.MarketData.Application.Operations
             if (isProvider && !_providers.Any(p => p.Descriptor.ProviderKey == owner))
                 throw new ArgumentException($"Unknown provider '{owner}'.");
 
-            if (key.StartsWith("Provider:", StringComparison.OrdinalIgnoreCase))
-                throw new ArgumentException("Change the active provider through the switch endpoint, not as a plain setting.");
+            var values = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+            foreach (var setting in settings)
+            {
+                if (setting is null || string.IsNullOrWhiteSpace(setting.Key))
+                    throw new ArgumentException("Scope and key are required.");
 
-            // رمز و نام کاربری فقط در User Secrets/Environment؛ هرگز در دیتابیس.
-            if (IsSecret(key))
-                throw new ArgumentException("Secrets must be configured via User Secrets or environment variables, not stored in MarketSettings.");
+                if (setting.Key.Length > 200 || setting.Value is null || setting.Value.Length > 4000)
+                    throw new ArgumentException("Scope, key or value is too long.");
 
-            await _settings.SetAsync(scope, key, value, updatedBy, cancellationToken);
+                if (setting.Key.StartsWith("Provider:", StringComparison.OrdinalIgnoreCase))
+                    throw new ArgumentException("Change the active provider through the switch endpoint, not as a plain setting.");
+
+                // رمز و نام کاربری فقط در User Secrets/Environment؛ هرگز در دیتابیس.
+                if (IsSecret(setting.Key))
+                    throw new ArgumentException("Secrets must be configured via User Secrets or environment variables, not stored in MarketSettings.");
+
+                if (!values.TryAdd(setting.Key, setting.Value))
+                    throw new ArgumentException($"Duplicate setting key '{setting.Key}'.");
+            }
+
+            await _settings.SetManyAsync(scope, values, updatedBy, cancellationToken);
         }
 
         private static bool IsSecret(string key)

@@ -12,4 +12,7 @@ namespace MarketAnalyzer.MarketData.Application.Operations
 
     /// <summary>یک تنظیم.</summary>
     public sealed record SettingItem(string Scope, string Key, string Value);
+
+    /// <summary>مقدار یک تنظیم در درخواست ذخیرهٔ گروهی.</summary>
+    public sealed record MarketSettingValue(string Key, string Value);
 }

@@ -758,6 +758,119 @@ namespace MarketAnalyzer.Persistence.Migrations
                     b.ToTable("DashboardSymbols", (string)null);
                 });
 
+            modelBuilder.Entity("MarketAnalyzer.DataMonitoring.Domain.DataJobRun", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("ErrorIssueCount")
+                        .HasColumnType("int");
+
+                    b.Property<int>("FailedCount")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("FinishedAtUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("JobKey")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("MarketKey")
+                        .IsRequired()
+                        .HasMaxLength(80)
+                        .HasColumnType("nvarchar(80)");
+
+                    b.Property<int>("NoDataCount")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProcessedCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("SourceKey")
+                        .IsRequired()
+                        .HasMaxLength(80)
+                        .HasColumnType("nvarchar(80)");
+
+                    b.Property<DateTime>("StartedAtUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<int>("SucceededCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Summary")
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)");
+
+                    b.Property<string>("TimeZoneId")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Trigger")
+                        .IsRequired()
+                        .HasMaxLength(40)
+                        .HasColumnType("nvarchar(40)");
+
+                    b.Property<int>("UpdatedCount")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("StartedAtUtc");
+
+                    b.HasIndex("SourceKey", "MarketKey", "JobKey", "StartedAtUtc");
+
+                    b.ToTable("JobRuns", "monitoring");
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.DataMonitoring.Domain.DataJobRunIssue", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ErrorType")
+                        .IsRequired()
+                        .HasMaxLength(80)
+                        .HasColumnType("nvarchar(80)");
+
+                    b.Property<string>("Fingerprint")
+                        .IsRequired()
+                        .HasMaxLength(64)
+                        .HasColumnType("nvarchar(64)");
+
+                    b.Property<DateTime>("FirstSeenAtUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Message")
+                        .IsRequired()
+                        .HasMaxLength(4000)
+                        .HasColumnType("nvarchar(4000)");
+
+                    b.Property<int>("Occurrences")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("RunId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("TargetKeysJson")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RunId", "ErrorType", "Fingerprint");
+
+                    b.ToTable("JobRunIssues", "monitoring");
+                });
+
             modelBuilder.Entity("MarketAnalyzer.Learn.Domain.LearningCollection", b =>
                 {
                     b.Property<int>("Id")
@@ -3470,6 +3583,17 @@ namespace MarketAnalyzer.Persistence.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("MarketAnalyzer.DataMonitoring.Domain.DataJobRunIssue", b =>
+                {
+                    b.HasOne("MarketAnalyzer.DataMonitoring.Domain.DataJobRun", "Run")
+                        .WithMany("Issues")
+                        .HasForeignKey("RunId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Run");
+                });
+
             modelBuilder.Entity("MarketAnalyzer.Learn.Domain.LearningContentRevision", b =>
                 {
                     b.HasOne("MarketAnalyzer.Learn.Domain.LearningItem", null)
@@ -4028,6 +4152,11 @@ namespace MarketAnalyzer.Persistence.Migrations
             modelBuilder.Entity("MarketAnalyzer.Cms.Domain.Menu", b =>
                 {
                     b.Navigation("SubMenus");
+                });
+
+            modelBuilder.Entity("MarketAnalyzer.DataMonitoring.Domain.DataJobRun", b =>
+                {
+                    b.Navigation("Issues");
                 });
 
             modelBuilder.Entity("MarketAnalyzer.Tools.Domain.Resource", b =>

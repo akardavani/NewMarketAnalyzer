@@ -15,6 +15,9 @@ namespace MarketAnalyzer.MarketData.Application.Operations
         /// <summary>تعداد نمادها یا ردیف‌های بررسی‌شده.</summary>
         public int Processed { get; init; }
 
+        /// <summary>تعداد مواردی که بدون خطا پردازش شدند.</summary>
+        public int Succeeded { get; init; }
+
         /// <summary>تعداد موارد به‌روزشده.</summary>
         public int Updated { get; init; }
 

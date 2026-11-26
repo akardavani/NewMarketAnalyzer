@@ -38,6 +38,13 @@
         </summary>
 
         <div class="market-content">
+          <div class="market-status-actions">
+            <span class="muted">وضعیت دریافت زمان‌بندی‌شده: {{ market.isActive ? 'فعال' : 'غیرفعال' }}</span>
+            <button type="button" [class.secondary]="!market.isActive" [class.danger]="market.isActive" (click)="setMarketActive(market)" [disabled]="busy()">
+              {{ market.isActive ? 'غیرفعال‌کردن بازار' : 'فعال‌کردن بازار' }}
+            </button>
+          </div>
+
           <section>
             <h4>منابع دریافت</h4>
             <div class="capabilities">
@@ -69,9 +76,11 @@
                   } @else {
                     <input [type]="settingInputType(setting)" [(ngModel)]="setting.value" [disabled]="busy() || isSecret(setting.key)" [placeholder]="isSecret(setting.key) ? 'از Environment یا User Secrets تنظیم شود' : ''" />
                   }
-                  <button type="button" class="secondary" (click)="saveSetting(setting)" [disabled]="busy() || isSecret(setting.key)">ذخیره</button>
                 </label>
               }
+            </div>
+            <div class="settings-actions">
+              <button type="button" class="secondary" (click)="saveMarketSettings(market)" [disabled]="busy()">ذخیره تنظیمات {{ market.persianName || market.name }}</button>
             </div>
 
             <details class="advanced-settings">
@@ -88,7 +97,7 @@
           <details class="subsection">
             <summary>اجرای دستی یک کار</summary>
             <div class="run-job">
-              <select #jobSelect aria-label="انتخاب کار"><option value="">انتخاب کار</option>@for (job of jobs; track job.id) { <option [value]="job.id">{{ job.label }}</option> }</select>
+              <select #jobSelect aria-label="انتخاب کار"><option value="">انتخاب کار</option>@for (job of jobsFor(market); track job.id) { <option [value]="job.id" [disabled]="!isJobAvailable(market, job)">{{ jobOptionLabel(market, job) }}</option> }</select>
               <button type="button" (click)="jobSelect.value && runJob(market, +jobSelect.value)" [disabled]="busy() || !jobSelect.value">اجرا</button>
             </div>
           </details>
@@ -121,8 +130,12 @@
         } @else {
           <input [type]="isSecret(setting.key) ? 'password' : 'text'" [(ngModel)]="setting.value" [disabled]="busy() || isSecret(setting.key)" [placeholder]="isSecret(setting.key) ? 'از Environment یا User Secrets تنظیم شود' : ''" />
         }
-        <button type="button" class="secondary" (click)="saveSetting(setting)" [disabled]="busy() || isSecret(setting.key)">ذخیره</button>
       </label>
+    }
+    @if (selectedProvider() && providerSettings().length) {
+      <div class="settings-actions">
+        <button type="button" class="secondary" (click)="saveProviderSettings()" [disabled]="busy()">ذخیره تنظیمات {{ selectedProvider() }}</button>
+      </div>
     }
     @if (selectedProvider()) {
       <div class="setting-row add-setting">

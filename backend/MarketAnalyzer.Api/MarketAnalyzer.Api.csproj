@@ -47,6 +47,8 @@
 		<ProjectReference Include="..\Tools\src\MarketAnalyzer.Tools.Persistence\MarketAnalyzer.Tools.Persistence.csproj" />
 		<ProjectReference Include="..\Learn\src\MarketAnalyzer.Learn.Application\MarketAnalyzer.Learn.Application.csproj" />
 		<ProjectReference Include="..\Learn\src\MarketAnalyzer.Learn.Persistence\MarketAnalyzer.Learn.Persistence.csproj" />
+		<ProjectReference Include="..\DataMonitoring\src\MarketAnalyzer.DataMonitoring.Application\MarketAnalyzer.DataMonitoring.Application.csproj" />
+		<ProjectReference Include="..\DataMonitoring\src\MarketAnalyzer.DataMonitoring.Persistence\MarketAnalyzer.DataMonitoring.Persistence.csproj" />
 		
 	</ItemGroup>
 
