@@ -1,0 +1,459 @@
+# MarketData — Architecture & Provider Integration Analysis
+
+## 1. هدف
+
+در کنار پروژه فعلی MarketData، قصد داریم یک پروژه آزمایشگاهی کاملاً مستقل با نام MarketDataLab ایجاد کنیم.
+
+مسئولیت پروژه جدید، بررسی منابع جدید اطلاعات بازار، دریافت آزمایشی داده‌های واقعی، پیاده‌سازی دریافت‌کننده‌ها با C# و ذخیره نمونه اطلاعات در فایل JSON است.
+
+پس از تکمیل و تأیید آزمایشگاه، دریافت‌کننده‌های موفق به پروژه اصلی MarketData منتقل خواهند شد.
+
+هدف این تحلیل، شناخت معماری و قراردادهای فعلی پروژه اصلی است تا دریافت‌کننده‌های پروژه آزمایشگاهی از ابتدا به شکلی طراحی شوند که برای انتقال آن‌ها کمترین بازنویسی لازم باشد.
+
+## 2. محدودیت‌های الزامی
+
+این عملیات صرفاً Read-Only Analysis است.
+
+- هیچ فایل موجودی تغییر نکند.
+- هیچ Refactor انجام نشود.
+- هیچ کد عملیاتی جدیدی نوشته نشود.
+- هیچ تغییری در دیتابیس یا تنظیمات ایجاد نشود.
+- هیچ Job یا Scheduler اجرا یا تغییر داده نشود.
+- هیچ Migration اجرا نشود.
+- هیچ Package جدیدی نصب نشود.
+- هیچ درخواست شبکه‌ای برای دریافت داده بازار انجام نشود.
+- هیچ معماری جدیدی به پروژه فعلی تحمیل نشود.
+- اطلاعات محرمانه، رمز عبور، API Key و Connection String در خروجی قرار نگیرند.
+
+نیازی به تحلیل کامل سایر Domainها و بخش‌های غیرمرتبط سیستم نیست.
+
+فقط بخش‌هایی بررسی شوند که برای شناخت معماری MarketData و اضافه کردن Providerهای جدید مورد نیاز هستند.
+
+تمام اطلاعات باید از ساختار و کد واقعی پروژه استخراج شوند. موارد نامشخص به‌صورت Unknown ثبت شوند.
+
+## 3. Solution & Architecture
+
+ساختار فعلی پروژه MarketData را استخراج کن.
+
+موارد زیر مشخص شوند:
+
+- نسخه .NET
+- نسخه C#
+- نام Solution
+- نام پروژه‌های مرتبط
+- مسئولیت هر پروژه
+- Project References
+- وابستگی به سایر Domainها
+- ساختار Layerها
+- Namespaceها
+- Naming Convention
+- الگوی معماری مورد استفاده
+- کتابخانه‌ها و Packageهای مرتبط
+- محل تعریف Interfaceها
+- محل پیاده‌سازی Providerها
+- محل تعریف DTOها
+- محل تعریف Entityها
+- محل نگاشت داده‌ها
+
+یک ساختار درختی از فولدرها و فایل‌های مرتبط ارائه کن.
+
+فولدرهای bin، obj، node_modules و سایر خروجی‌های Build بررسی نشوند.
+
+## 4. Provider Architecture
+
+این بخش مهم‌ترین قسمت تحلیل است.
+
+تمام انواع Providerهای MarketData را شناسایی کن.
+
+برای هر نوع Provider مشخص کن:
+
+- نام Interface
+- Namespace
+- مسیر فایل
+- Base Class احتمالی
+- Generic Parameters
+- امضای Methodها
+- Input Parameters
+- Return Types
+- CancellationToken
+- تنظیمات مورد نیاز
+- وابستگی‌های Constructor
+- نحوه مدیریت Pagination
+- نحوه مدیریت Date Range
+- نحوه تشخیص No Data
+- نحوه مدیریت داده ناقص
+- نحوه مدیریت خطا
+
+به‌خصوص بررسی کن که دریافت‌کننده‌های فعلی از چه قراردادهایی استفاده می‌کنند.
+
+برای مثال:
+
+- Candle Provider
+- Instrument Provider
+- Catalog Provider
+- Market Information Provider
+- NAV Provider
+- Macro Data Provider
+- سایر Providerهای واقعی پروژه
+
+این نام‌ها صرفاً مثال هستند. نام‌های واقعی موجود در پروژه استخراج شوند.
+
+مشخص کن آیا Providerها Interface مشترک دارند یا هر نوع داده قرارداد متفاوتی دارد.
+
+کد کامل Interfaceها و Base Classهای مرتبط را در خروجی قرار بده.
+
+## 5. Representative Providers
+
+چند Provider واقعی و نماینده معماری موجود را انتخاب کن.
+
+ترجیحاً نمونه‌های زیر بررسی شوند، در صورتی که در پروژه وجود دارند:
+
+- TGJU
+- Wallex
+- KuCoin
+- TSETMC
+- Fipiran
+- Nahayatnegar
+
+نیازی به استخراج تمام Providerهای موجود نیست.
+
+نمونه‌هایی انتخاب شوند که تفاوت روش دریافت و ساختار داده را به بهترین شکل نشان دهند.
+
+برای هر Provider مشخص کن:
+
+- مسیر فایل‌ها
+- Interface پیاده‌سازی‌شده
+- Base Class
+- Constructor Dependencies
+- نحوه دریافت اطلاعات
+- نحوه Parse پاسخ
+- نحوه تبدیل داده خام به مدل داخلی
+- نحوه تعیین SourceId
+- نحوه تعیین Symbol یا InstrumentId
+- نحوه فراخوانی توسط سیستم
+- نحوه ثبت خطا
+- نحوه ثبت Provider در Dependency Injection
+
+کد واقعی حداقل سه Provider نماینده را همراه با وابستگی‌های ضروری آن‌ها ارائه کن.
+
+هدف شناخت سبک واقعی پیاده‌سازی پروژه است، نه نوشتن نمونه فرضی.
+
+## 6. Data Models & Contracts
+
+تمام مدل‌هایی را که Providerها دریافت یا برمی‌گردانند، بررسی کن.
+
+به‌خصوص:
+
+- Candle
+- OHLCV
+- Instrument
+- Symbol
+- Market
+- Provider
+- TimeFrame
+- TimeSeries
+- NAV
+- Price
+- Data Source
+- Collection Result
+
+نام واقعی کلاس‌ها و مدل‌های موجود استخراج شوند.
+
+برای هر مدل مشخص کن:
+
+- Namespace
+- Properties
+- Property Types
+- Required / Optional Fields
+- شناسه یکتا
+- واحد قیمت
+- واحد حجم
+- واحد پول
+- Calendar
+- Timezone
+- Timestamp Format
+- Nullable Fields
+- Enumهای مرتبط
+- قواعد اعتبارسنجی
+
+کد واقعی DTOها، Recordها، Enumها و Contractهای مرتبط را ارائه کن.
+
+### سؤال مهم
+
+آیا مدل فعلی پروژه صرفاً برای Candle و OHLCV طراحی شده است یا قابلیت نگهداری داده‌های اقتصادی غیرکندلی را نیز دارد؟
+
+نمونه داده‌های غیرکندلی:
+
+- نرخ بهره
+- تورم
+- نقدینگی
+- GDP
+- بازده اوراق
+- ترازنامه بانک مرکزی
+- Funding Rate
+- Open Interest
+
+مشخص کن در معماری فعلی این داده‌ها چگونه قابل دریافت، مدل‌سازی و ذخیره هستند.
+
+اگر برای آن‌ها مدل یا قرارداد مناسبی وجود ندارد، فقط این محدودیت را گزارش کن.
+
+هیچ مدل جدیدی در پروژه اصلی ایجاد نکن.
+
+## 7. HTTP & Data Extraction Infrastructure
+
+زیرساخت دریافت اطلاعات را بررسی کن.
+
+- HttpClient
+- IHttpClientFactory
+- Named Clients
+- Typed Clients
+- HTTP Wrapperهای اختصاصی
+- Timeout
+- Retry
+- Rate Limiting
+- Error Handling
+- Logging
+- Cancellation
+- Encoding
+- JSON Deserialization
+- HTML Parsing
+- CSV Parsing
+- Excel Parsing
+- ZIP Extraction
+- Browser Automation
+
+برای هر قابلیت مشخص کن آیا پیاده‌سازی موجود دارد یا خیر.
+
+کلاس‌ها و قراردادهای قابل استفاده مجدد را معرفی کن.
+
+کد Helperها و Wrapperهای ضروری برای پیاده‌سازی Provider جدید را ارائه کن.
+
+## 8. Provider Configuration
+
+ساختار تنظیمات Providerها را استخراج کن.
+
+مشخص کن:
+
+- Provider چگونه تعریف می‌شود؟
+- SourceId چگونه تعیین می‌شود؟
+- URLها کجا نگهداری می‌شوند؟
+- URL Templateها چگونه تعریف می‌شوند؟
+- Placeholderها چگونه جایگزین می‌شوند؟
+- تنظیمات اختصاصی هر Provider چگونه نگهداری می‌شوند؟
+- Symbol Mapping چگونه انجام می‌شود؟
+- TimeFrame Mapping چگونه انجام می‌شود؟
+- بازه زمانی درخواست چگونه تعیین می‌شود؟
+- Provider فعال چگونه انتخاب می‌شود؟
+- Provider جایگزین چگونه تعریف می‌شود؟
+- Provider جدید چگونه ثبت می‌شود؟
+
+نمونه واقعی Configuration و کلاس‌های Options ارائه کن.
+
+اطلاعات محرمانه و مقادیر حساس حذف شوند.
+
+به‌جای آن‌ها از Placeholder استفاده شود.
+
+## 9. Data Flow
+
+مسیر کامل دریافت داده تا ذخیره‌سازی را برای چند نمونه واقعی استخراج کن.
+
+ترجیحاً:
+
+- Candle سهام
+- Candle کریپتو
+- داده اقتصادی TGJU
+- NAV صندوق
+
+برای هر مسیر مشخص کن:
+
+1. چه چیزی عملیات را آغاز می‌کند؟
+2. کدام Handler یا Service اجرا می‌شود؟
+3. Provider چگونه انتخاب می‌شود؟
+4. Request چگونه ساخته می‌شود؟
+5. داده چگونه دریافت می‌شود؟
+6. داده چگونه Parse و Map می‌شود؟
+7. Validation کجا انجام می‌شود؟
+8. Duplicate چگونه تشخیص داده می‌شود؟
+9. اطلاعات چگونه به مدل دامنه تبدیل می‌شوند؟
+10. ذخیره‌سازی چگونه انجام می‌شود؟
+11. خطا چگونه ثبت می‌شود؟
+12. وضعیت اجرای عملیات چگونه گزارش می‌شود؟
+
+برای مسیرهای اصلی Sequence Diagram یا Mermaid Diagram ارائه کن.
+
+## 10. Job & Scheduler Integration
+
+ساختار فعلی اجرای دوره‌ای دریافت اطلاعات را بررسی کن.
+
+- Scheduler مورد استفاده
+- نام Jobها
+- قرارداد Jobها
+- نحوه فراخوانی Provider
+- پارامترهای ورودی
+- نحوه تعیین آخرین تاریخ دریافت‌شده
+- Historical Backfill
+- Incremental Update
+- Resume
+- Retry
+- مدیریت اجرای هم‌زمان
+- جلوگیری از دریافت تکراری
+- ثبت نتیجه Job
+
+هدف شناخت قرارداد اتصال Provider به Job است.
+
+قرار نیست Scheduler یا Jobهای پروژه اصلی در آزمایشگاه مجدداً پیاده‌سازی شوند.
+
+مشخص کن Provider جدید باید چه قرارداد و قابلیت‌هایی داشته باشد تا در آینده بتوان آن را به Job موجود متصل کرد.
+
+## 11. Dependency Injection & Registration
+
+مشخص کن Provider جدید چگونه در سیستم ثبت می‌شود.
+
+- IServiceCollection
+- Extension Methodها
+- Service Lifetime
+- Factory
+- Resolver
+- Registry
+- Keyed Services
+- Discovery
+- Module Registration
+- تنظیمات انتخاب Provider
+
+نمونه واقعی کد Registration ارائه کن.
+
+## 12. Testing
+
+ساختار تست‌های فعلی MarketData را بررسی کن.
+
+- Test Framework
+- Naming Convention
+- Unit Test
+- Integration Test
+- Mock HTTP
+- Raw Data Fixtures
+- Parser Tests
+- Provider Tests
+
+در صورت وجود، چند تست واقعی و نماینده ارائه کن.
+
+اگر تستی وجود ندارد، صریحاً گزارش کن.
+
+## 13. Adding a New Provider
+
+این بخش باید به‌صورت یک دستورالعمل واقعی و مرحله‌به‌مرحله ارائه شود.
+
+فرض کن می‌خواهیم یک Provider جدید برای دریافت اطلاعات اقتصادی از سایت Federal Reserve ایجاد کنیم.
+
+بدون پیاده‌سازی واقعی و بدون تغییر پروژه، توضیح بده:
+
+- چه فایل‌هایی باید ایجاد شوند؟
+- هر فایل در کدام پروژه و فولدر قرار می‌گیرد؟
+- نام پیشنهادی کلاس‌ها بر اساس Naming Convention فعلی چیست؟
+- کدام Interface باید پیاده‌سازی شود؟
+- چه Base Classهایی قابل استفاده هستند؟
+- چه DTOهایی قابل استفاده هستند؟
+- چه Dependencyهایی لازم هستند؟
+- Configuration چگونه تعریف می‌شود؟
+- Provider چگونه ثبت می‌شود؟
+- Job چگونه آن را فراخوانی خواهد کرد؟
+- خروجی Provider چه ساختاری دارد؟
+- آیا برای داده غیرکندلی نیازمند توسعه قرارداد موجود هستیم؟
+- چه تغییراتی در آینده در پروژه اصلی لازم خواهند بود؟
+
+دو سناریو بررسی شوند:
+
+A. اضافه کردن یک Provider جدید برای Candle و OHLCV.
+
+B. اضافه کردن یک Provider جدید برای داده اقتصادی Time Series غیرکندلی.
+
+## 14. Standalone Lab Compatibility
+
+با توجه به ساختار واقعی پروژه، مشخص کن کدام بخش‌ها می‌توانند در آزمایشگاه مستقل استفاده یا با وابستگی حداقلی بازتولید شوند.
+
+برای هر مورد یکی از وضعیت‌های زیر را تعیین کن:
+
+- DirectlyReusable
+- ReusableWithMinimalChanges
+- ContractOnly
+- RequiresAdapter
+- MainProjectOnly
+- NotRequiredInLab
+
+موارد زیر به‌صورت ویژه بررسی شوند:
+
+- Provider Interfaceها
+- Base Classها
+- DTOها
+- Enumها
+- Parsers
+- Mappers
+- HTTP Helpers
+- Configuration Models
+- Logging Contracts
+- Validation
+- Result Models
+- Dependency Injection
+- Persistence
+- Job Infrastructure
+
+هدف، کمینه کردن تغییرات هنگام انتقال آینده است.
+
+نباید کل معماری پروژه اصلی در آزمایشگاه تکرار شود.
+
+## 15. Deliverables
+
+تمام خروجی‌ها در یک فولدر مستقل با نام زیر قرار گیرند:
+
+MARKETDATA_ARCHITECTURE_EXPORT
+
+ساختار خروجی:
+
+- 00_EXECUTIVE_SUMMARY.md
+- 01_SOLUTION_STRUCTURE.md
+- 02_PROVIDER_ARCHITECTURE.md
+- 03_DATA_MODELS_AND_CONTRACTS.md
+- 04_HTTP_AND_EXTRACTION_INFRASTRUCTURE.md
+- 05_PROVIDER_CONFIGURATION.md
+- 06_DATA_FLOW.md
+- 07_JOB_INTEGRATION.md
+- 08_DEPENDENCY_INJECTION.md
+- 09_TESTING_STRUCTURE.md
+- 10_ADDING_NEW_PROVIDER.md
+- 11_NON_CANDLE_DATA_SUPPORT.md
+- 12_LAB_COMPATIBILITY_MATRIX.csv
+- 13_DEPENDENCY_MAP.md
+- 14_TECHNICAL_DECISIONS_AND_LIMITATIONS.md
+- FILE_MANIFEST.csv
+- code-samples/
+
+در فولدر code-samples، فایل‌های واقعی و ضروری C# شامل قراردادها، مدل‌ها، Base Classها، Providerهای منتخب، نمونه Registration و تست‌ها قرار گیرند.
+
+برای هر فایل نمونه، مسیر اصلی آن در مخزن و دلیل انتخاب ثبت شود.
+
+تمام وابستگی‌های ضروری معرفی شوند تا امکان تحلیل کد بدون دسترسی به Repository اصلی وجود داشته باشد.
+
+نیازی به Export کل Repository نیست.
+
+تمام فایل‌ها باید فاقد اطلاعات محرمانه باشند.
+
+## 16. Final Report
+
+در پایان، یک جمع‌بندی کوتاه ارائه کن که به سؤالات زیر پاسخ دهد:
+
+- معماری فعلی MarketData چگونه است؟
+- اضافه کردن Provider جدید چه الگویی دارد؟
+- کدام قراردادها و کلاس‌ها باید در آزمایشگاه حفظ شوند؟
+- چه بخش‌هایی نباید در آزمایشگاه تکرار شوند؟
+- آیا معماری فعلی از داده اقتصادی غیرکندلی پشتیبانی می‌کند؟
+- چه محدودیت‌هایی برای انتقال دریافت‌کننده‌های جدید وجود دارد؟
+
+تمام خروجی‌ها را در فایل زیر قرار بده:
+
+MARKETDATA_ARCHITECTURE_EXPORT.zip
+
+پس از پایان تحلیل اعلام کن:
+
+MARKETDATA ARCHITECTURE EXPORT — READY FOR REVIEW
+
+هیچ تغییر یا پیاده‌سازی دیگری انجام نده و در همین نقطه متوقف شو.

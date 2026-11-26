@@ -2,6 +2,8 @@
 
 Read this file first whenever work is requested in MarketData or MarketIntelligence. It is the index and working agreement; the linked documents hold the current details. Update the relevant documents when implementation, status, or an important decision changes. Do not create a competing project overview elsewhere.
 
+For the cross-project documentation map and the rules for keeping project knowledge current, see the [project knowledge index](../PROJECT_KNOWLEDGE.md). Keep MarketData / MarketIntelligence implementation details in the domain guides linked below.
+
 ## What this project does
 
 - **MarketData** collects, validates, and stores market catalogs, historical prices, market state, order books, fund NAV, and other provider data.
