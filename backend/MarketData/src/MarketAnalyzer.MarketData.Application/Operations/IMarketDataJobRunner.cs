@@ -7,6 +7,6 @@ namespace MarketAnalyzer.MarketData.Application.Operations
         /// کار را اجرا می‌کند. خطای منبع به‌صورت استثنا بالا نمی‌آید و در نتیجه می‌آید؛
         /// تنها استثناهای لغو و خطاهای ثبت دیتابیس (مثل قفل برنامه) بالا می‌روند تا زمان‌بند تصمیم بگیرد.
         /// </summary>
-        Task<MarketJobResult> RunAsync(string marketKey, MarketJobKind job, CancellationToken cancellationToken);
+        Task<MarketJobResult> RunAsync(string marketKey, MarketJobKind job, CancellationToken cancellationToken, MarketJobTrigger trigger = MarketJobTrigger.Manual);
     }
 }

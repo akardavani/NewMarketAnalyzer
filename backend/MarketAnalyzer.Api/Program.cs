@@ -17,6 +17,8 @@ using MarketAnalyzer.Learn.Persistence;
 using MarketAnalyzer.Membership.Application;
 using MarketAnalyzer.Tools.Application;
 using MarketAnalyzer.Tools.Persistence;
+using MarketAnalyzer.DataMonitoring.Application;
+using MarketAnalyzer.DataMonitoring.Persistence;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
@@ -136,6 +138,9 @@ builder.Services.AddMarketDataStores();
 builder.Services.AddMarketDataIngestion();
 builder.Services.AddMarketDataProviders(builder.Configuration);
 builder.Services.AddMarketDataOperations(builder.Configuration);
+builder.Services.AddDataMonitoringApplication();
+builder.Services.AddDataMonitoringPersistence();
+builder.Services.Replace(ServiceDescriptor.Singleton<IMarketDataJobRunner, MonitoringMarketDataJobRunner>());
 
 //builder.Services.AddSejamClient(builder.Configuration);
 builder.Services.AddFundInfrastructure(builder.Configuration, true);

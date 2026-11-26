@@ -40,19 +40,10 @@ internal sealed class DashboardService : IDashboardService
             .ToArray();
         var fundNavBySymbolId = await _dashboardStore.GetLatestFundNavsAsync(fundSymbolIds, cancellationToken);
 
-        // Historical candles are a fallback only when the current quote/NAV is unavailable.
+        // Current-state data can be stale; load the latest daily candle to compare timestamps.
         var historicalBySymbolId = new Dictionary<int, HistoricalCandle>();
         foreach (var symbol in selected)
         {
-            stateById.TryGetValue(symbol.SymbolId, out var state);
-            fundNavBySymbolId.TryGetValue(symbol.SymbolId, out var fundNav);
-            var isFund = string.Equals(symbol.MarketKey, "fund", StringComparison.OrdinalIgnoreCase);
-            var currentPrice = isFund
-                ? fundNav?.CancellationNav ?? fundNav?.StatisticalNav ?? fundNav?.IssuanceNav
-                : state?.LastPrice ?? state?.ClosePrice;
-            if (currentPrice.HasValue || historicalBySymbolId.ContainsKey(symbol.SymbolId))
-                continue;
-
             var candles = await _historicalCandles.GetLastAsync(
                 symbol.SymbolId,
                 Timeframe.Daily,
@@ -74,6 +65,14 @@ internal sealed class DashboardService : IDashboardService
             var currentPrice = isFund
                 ? fundNav?.CancellationNav ?? fundNav?.StatisticalNav ?? fundNav?.IssuanceNav
                 : state?.LastPrice ?? state?.ClosePrice;
+            var currentTimestampUtc = isFund && fundNav is not null
+                ? DateTime.SpecifyKind(fundNav.Date.ToDateTime(TimeOnly.MinValue), DateTimeKind.Utc)
+                : state?.SourceTimestampUtc;
+            if (historicalCandle is not null && currentPrice.HasValue &&
+                (!currentTimestampUtc.HasValue || historicalCandle.OpenTimeUtc > currentTimestampUtc.Value))
+            {
+                currentPrice = null;
+            }
 
             return new DashboardSymbolDto
             {

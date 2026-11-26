@@ -62,6 +62,23 @@ namespace MarketAnalyzer.MarketData.Persistence
             => _db.Set<MarketDefinition>().AsNoTracking().FirstOrDefaultAsync(x => x.Key == key, cancellationToken);
 
         /// <inheritdoc />
+        public async Task<bool> SetActiveAsync(string key, bool isActive, CancellationToken cancellationToken)
+        {
+            var market = await _db.Set<MarketDefinition>().FirstOrDefaultAsync(x => x.Key == key, cancellationToken);
+            if (market is null)
+                return false;
+
+            if (market.IsActive != isActive)
+            {
+                market.IsActive = isActive;
+                market.UpdatedAtUtc = _time.GetUtcNow().UtcDateTime;
+                await _db.SaveChangesAsync(cancellationToken);
+            }
+
+            return true;
+        }
+
+        /// <inheritdoc />
         public async Task<IReadOnlyList<MarketDefinition>> GetAllAsync(CancellationToken cancellationToken)
             => await _db.Set<MarketDefinition>().AsNoTracking().OrderBy(x => x.Id).ToListAsync(cancellationToken);
     }

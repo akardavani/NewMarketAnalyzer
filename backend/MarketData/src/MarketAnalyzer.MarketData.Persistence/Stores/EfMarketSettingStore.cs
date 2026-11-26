@@ -94,5 +94,55 @@ namespace MarketAnalyzer.MarketData.Persistence
                 }
             }
         }
+
+        /// <inheritdoc />
+        public async Task SetManyAsync(string scope, IReadOnlyDictionary<string, string> values, string? updatedBy, CancellationToken cancellationToken)
+        {
+            if (values.Count == 0)
+                return;
+
+            var keys = values.Keys.ToArray();
+            for (var attempt = 0; attempt < 2; attempt++)
+            {
+                var now = _time.GetUtcNow().UtcDateTime;
+                var currentSettings = await _db.Set<MarketSetting>()
+                    .Where(x => x.Scope == scope && keys.Contains(x.Key))
+                    .ToListAsync(cancellationToken);
+                var existing = currentSettings.ToDictionary(x => x.Key, StringComparer.OrdinalIgnoreCase);
+
+                foreach (var (key, value) in values)
+                {
+                    if (existing.TryGetValue(key, out var current))
+                    {
+                        current.Value = value;
+                        current.UpdatedAtUtc = now;
+                        current.UpdatedBy = updatedBy;
+                    }
+                    else
+                    {
+                        _db.Set<MarketSetting>().Add(new MarketSetting
+                        {
+                            Scope = scope,
+                            Key = key,
+                            Value = value,
+                            UpdatedAtUtc = now,
+                            UpdatedBy = updatedBy
+                        });
+                    }
+                }
+
+                try
+                {
+                    await _db.SaveChangesAsync(cancellationToken);
+                    _db.ClearChangeTracker();
+                    return;
+                }
+                catch (DbUpdateException ex) when (attempt == 0 && UniqueViolation.IsUniqueViolation(ex))
+                {
+                    // درج هم‌زمانِ کلیدی که هنوز در خواندن اولیه وجود نداشت؛ بار دوم آن را به‌روزرسانی می‌کنیم.
+                    _db.ClearChangeTracker();
+                }
+            }
+        }
     }
 }

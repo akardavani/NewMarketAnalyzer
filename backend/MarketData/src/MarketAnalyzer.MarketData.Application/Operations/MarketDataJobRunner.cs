@@ -37,7 +37,7 @@ namespace MarketAnalyzer.MarketData.Application.Operations
         }
 
         /// <inheritdoc />
-        public async Task<MarketJobResult> RunAsync(string marketKey, MarketJobKind job, CancellationToken cancellationToken)
+        public async Task<MarketJobResult> RunAsync(string marketKey, MarketJobKind job, CancellationToken cancellationToken, MarketJobTrigger trigger = MarketJobTrigger.Manual)
         {
             using var lease = _gate.TryEnter(marketKey, job);
             if (lease is null)
@@ -55,7 +55,7 @@ namespace MarketAnalyzer.MarketData.Application.Operations
             {
                 MarketJobKind.SyncCatalog => await SyncCatalogAsync(sp, market, cancellationToken),
                 MarketJobKind.IngestCandles => await IngestCandlesAsync(sp, market, cancellationToken),
-                MarketJobKind.RefreshCurrentState => await RefreshCurrentStateAsync(sp, market, cancellationToken),
+                MarketJobKind.RefreshCurrentState => await RefreshCurrentStateAsync(sp, market, cancellationToken, trigger),
                 MarketJobKind.RefreshOrderBook => await RefreshOrderBookAsync(sp, market, cancellationToken),
                 MarketJobKind.RefreshInvestorActivity => await RefreshInvestorActivityAsync(sp, market, cancellationToken),
                 MarketJobKind.RefreshFundNav => await RefreshFundNavAsync(sp, market, cancellationToken),
@@ -66,7 +66,7 @@ namespace MarketAnalyzer.MarketData.Application.Operations
             return new MarketJobResult
             {
                 MarketKey = result.MarketKey, Job = result.Job, Status = result.Status, Processed = result.Processed,
-                Updated = result.Updated, NoData = result.NoData, FullyRefetched = result.FullyRefetched, Failed = result.Failed,
+                Succeeded = result.Succeeded, Updated = result.Updated, NoData = result.NoData, FullyRefetched = result.FullyRefetched, Failed = result.Failed,
                 Message = result.Message, ErrorSamples = result.ErrorSamples, Duration = sw.Elapsed
             };
         }
@@ -118,7 +118,7 @@ namespace MarketAnalyzer.MarketData.Application.Operations
             return new MarketJobResult
             {
                 MarketKey = market.Key, Job = MarketJobKind.SyncCatalog, Status = MarketJobStatus.Completed,
-                Processed = symbols.Count, Updated = sync.Inserted + sync.Updated,
+                Processed = symbols.Count, Succeeded = symbols.Count, Updated = sync.Inserted + sync.Updated,
                 Message = $"inserted={sync.Inserted}, updated={sync.Updated}, deactivated={sync.Deactivated}" + (deactivateMissing ? "" : " (partial: no deactivation)")
             };
         }
@@ -193,6 +193,7 @@ namespace MarketAnalyzer.MarketData.Application.Operations
                 MarketKey = market.Key, Job = MarketJobKind.IngestCandles,
                 Status = MarketJobStatus.Completed,
                 Processed = all.Count,
+                Succeeded = all.Count(r => !r.IsFailure && r.Outcome != IngestionOutcome.NoData),
                 Updated = all.Count(r => r.Outcome == IngestionOutcome.Updated),
                 NoData = all.Count(r => r.Outcome == IngestionOutcome.NoData),
                 FullyRefetched = all.Count(r => r.Outcome == IngestionOutcome.FullyRefetched),
@@ -231,13 +232,18 @@ namespace MarketAnalyzer.MarketData.Application.Operations
 
         // ---------------------------------------------------------------- current state / order book / investors
 
-        private async Task<MarketJobResult> RefreshCurrentStateAsync(IServiceProvider sp, MarketDefinition market, CancellationToken ct)
+        private async Task<MarketJobResult> RefreshCurrentStateAsync(IServiceProvider sp, MarketDefinition market, CancellationToken ct, MarketJobTrigger trigger)
         {
             const MarketJobKind job = MarketJobKind.RefreshCurrentState;
             var provider = await sp.GetRequiredService<IMarketProviderResolver>()
                 .ResolveAsync<ICurrentStateProvider>(market.Key, ProviderCapability.CurrentState, ct);
             if (provider is null)
-                return MarketJobResult.Skipped(market.Key, job, "No current-state provider is selected.");
+            {
+                if (trigger != MarketJobTrigger.Manual)
+                    return MarketJobResult.Skipped(market.Key, job, "No current-state provider is selected; the candle fallback is available for manual runs only.");
+
+                return await RefreshCurrentStateFromCandlesAsync(sp, market, ct);
+            }
 
             var fetched = await provider.FetchStatesAsync(ct);
             if (!IsUsable(fetched, allowPartial: true, out var early, market.Key, job))
@@ -260,6 +266,137 @@ namespace MarketAnalyzer.MarketData.Application.Operations
 
             var stats = states.Count == 0 ? default : await sp.GetRequiredService<ICurrentSymbolStateStore>().UpsertAsync(states, ct);
             return Done(market.Key, job, fetched, states.Count, stats.Inserted + stats.Existing, unknown);
+        }
+
+        private async Task<MarketJobResult> RefreshCurrentStateFromCandlesAsync(IServiceProvider sp, MarketDefinition market, CancellationToken ct)
+        {
+            const MarketJobKind job = MarketJobKind.RefreshCurrentState;
+            var provider = await sp.GetRequiredService<IMarketProviderResolver>()
+                .ResolveAsync<IHistoricalCandleProvider>(market.Key, ProviderCapability.HistoricalCandles, ct);
+            if (provider is null)
+                return MarketJobResult.Skipped(market.Key, job, "No current-state or historical-candle provider is selected.");
+
+            var symbols = await sp.GetRequiredService<IMarketSymbolStore>().GetByMarketAsync(market.Id, onlyActive: true, ct);
+            if (symbols.Count == 0)
+                return MarketJobResult.Skipped(market.Key, job, "Market has no active symbols (run SyncCatalog first).");
+
+            var descriptor = provider.Descriptor;
+            var timeframe = descriptor.NativeTimeframes.OrderByDescending(value => (int)value).FirstOrDefault();
+            if (timeframe == default)
+                return MarketJobResult.Skipped(market.Key, job, "The selected candle provider has no native timeframe.");
+
+            var providerKey = descriptor.ProviderKey;
+            var pacer = new RequestPacer(descriptor.MaxRequestsPerMinute, _time);
+            var states = new ConcurrentBag<CurrentSymbolState>();
+            var errors = new ConcurrentBag<string>();
+            var noData = 0;
+            var failed = 0;
+
+            await Parallel.ForEachAsync(
+                symbols,
+                new ParallelOptions { MaxDegreeOfParallelism = Math.Max(1, _options.Value.MaxParallelSymbols), CancellationToken = ct },
+                async (symbol, token) =>
+                {
+                    await pacer.WaitAsync(token);
+
+                    try
+                    {
+                        using var symbolScope = _scopes.CreateScope();
+                        var symbolProvider = symbolScope.ServiceProvider.GetServices<IMarketDataProvider>()
+                            .OfType<IHistoricalCandleProvider>()
+                            .FirstOrDefault(item => item.Descriptor.ProviderKey == providerKey && item.Descriptor.MarketKey == market.Key);
+
+                        if (symbolProvider is null)
+                        {
+                            Interlocked.Increment(ref failed);
+                            errors.Add($"{symbol.SymbolKey}: Provider '{providerKey}' is not registered for market '{market.Key}'.");
+                            return;
+                        }
+
+                        var fetched = await symbolProvider.FetchCandlesAsync(new CandleRequest
+                        {
+                            SymbolKey = symbol.SymbolKey,
+                            ExternalId = symbol.ExternalId,
+                            Timeframe = timeframe,
+                            LastCandlesCount = 2
+                        }, token);
+
+                        if (fetched.Status == FetchStatus.Failed)
+                        {
+                            Interlocked.Increment(ref failed);
+                            errors.Add($"{symbol.SymbolKey}: {fetched.ErrorMessage ?? "Candle request failed."}");
+                            return;
+                        }
+
+                        var candles = fetched.Data?.Candles
+                            .Where(candle => candle.Close > 0)
+                            .OrderBy(candle => candle.OpenTimeUtc)
+                            .ToArray();
+                        if (candles is null || candles.Length == 0)
+                        {
+                            if (fetched.Status == FetchStatus.SuccessEmpty || fetched.Data is null || fetched.Data.Candles.Count == 0)
+                                Interlocked.Increment(ref noData);
+                            else
+                            {
+                                Interlocked.Increment(ref failed);
+                                errors.Add($"{symbol.SymbolKey}: Candle response did not contain a positive closing price.");
+                            }
+                            return;
+                        }
+
+                        var latest = candles[^1];
+                        states.Add(new CurrentSymbolState
+                        {
+                            SymbolId = symbol.Id,
+                            LastPrice = latest.Close,
+                            ClosePrice = latest.Close,
+                            OpenPrice = latest.Open,
+                            HighPrice = latest.High,
+                            LowPrice = latest.Low,
+                            PreviousClosePrice = candles.Length > 1 ? candles[^2].Close : null,
+                            Volume = latest.Volume,
+                            Value = latest.Value,
+                            // This is a snapshot fetched now, based on the latest candle.
+                            // Keep it monotonic with the existing open-candle fallback snapshots.
+                            SourceTimestampUtc = _time.GetUtcNow().UtcDateTime
+                        });
+
+                        if (fetched.Status == FetchStatus.Partial && fetched.ErrorMessage is not null)
+                        {
+                            Interlocked.Increment(ref failed);
+                            errors.Add($"{symbol.SymbolKey}: Partial candle response: {fetched.ErrorMessage}");
+                        }
+                    }
+                    catch (OperationCanceledException) when (token.IsCancellationRequested)
+                    {
+                        throw;
+                    }
+                    catch (Exception ex)
+                    {
+                        Interlocked.Increment(ref failed);
+                        _logger.LogError(ex, "Current-state candle fallback failed for {Market}/{Symbol}", market.Key, symbol.SymbolKey);
+                        errors.Add($"{symbol.SymbolKey}: {ex.Message}");
+                    }
+                });
+
+            var stateList = states.ToList();
+            var stats = stateList.Count == 0
+                ? default
+                : await sp.GetRequiredService<ICurrentSymbolStateStore>().UpsertAsync(stateList, ct);
+
+            return new MarketJobResult
+            {
+                MarketKey = market.Key,
+                Job = job,
+                Status = failed > 0 && stateList.Count == 0 && noData == 0 ? MarketJobStatus.Failed : MarketJobStatus.Completed,
+                Processed = symbols.Count,
+                Succeeded = stateList.Count,
+                Updated = stats.Inserted + stats.Existing,
+                NoData = noData,
+                Failed = failed,
+                Message = $"provider={providerKey}, source=latest-candle, timeframe={timeframe}, symbols={symbols.Count}",
+                ErrorSamples = errors.Take(20).ToArray()
+            };
         }
 
         private async Task<MarketJobResult> RefreshOrderBookAsync(IServiceProvider sp, MarketDefinition market, CancellationToken ct)
@@ -364,7 +501,7 @@ namespace MarketAnalyzer.MarketData.Application.Operations
             return new MarketJobResult
             {
                 MarketKey = result.MarketKey, Job = result.Job, Status = result.Status, Processed = result.Processed,
-                Updated = result.Updated, Message = $"newNavPoints={inserted}. {result.Message}",
+                Succeeded = result.Succeeded, Updated = result.Updated, Message = $"newNavPoints={inserted}. {result.Message}",
                 Failed = fetched.Status == FetchStatus.Partial ? 1 : 0,
                 ErrorSamples = fetched.Status == FetchStatus.Partial && fetched.ErrorMessage is not null ? new[] { fetched.ErrorMessage } : Array.Empty<string>()
             };
@@ -402,7 +539,9 @@ namespace MarketAnalyzer.MarketData.Application.Operations
         private static MarketJobResult Done<T>(string marketKey, MarketJobKind job, FetchResult<T> fetched, int processed, int updated, int unknown)
             => new()
             {
-                MarketKey = marketKey, Job = job, Status = MarketJobStatus.Completed, Processed = processed, Updated = updated,
+                MarketKey = marketKey, Job = job, Status = MarketJobStatus.Completed, Processed = processed, Succeeded = processed, Updated = updated,
+                Failed = fetched.Status == FetchStatus.Partial ? 1 : 0,
+                ErrorSamples = fetched.Status == FetchStatus.Partial && fetched.ErrorMessage is not null ? new[] { fetched.ErrorMessage } : Array.Empty<string>(),
                 Message = (unknown > 0 ? $"{unknown} source symbols are not in the catalog and were skipped. " : "")
                           + (fetched.Status == FetchStatus.Partial ? $"Partial: {fetched.ErrorMessage}" : "")
             };

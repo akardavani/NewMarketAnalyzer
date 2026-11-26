@@ -134,7 +134,24 @@
   line-height: 1;
 }
 
-.nav { flex: 1; min-height: 0; display: flex; flex-direction: column; justify-content: center; gap: 7px; overflow-y: auto; overflow-x: visible; padding: 10px 6px; scrollbar-width: thin; scrollbar-color: rgb(255 255 255 / .22) transparent; }
+.nav { flex: 1; min-height: 0; display: flex; flex-direction: column; justify-content: center; gap: 7px; overflow-y: auto; overflow-x: hidden; padding: 10px 6px; scrollbar-width: thin; scrollbar-color: rgb(255 255 255 / .22) transparent; }
+
+.sidebar-tooltip {
+  position: absolute;
+  z-index: 100;
+  transform: translate(-100%, -50%);
+  width: max-content;
+  max-width: 190px;
+  padding: 6px 9px;
+  border: 1px solid rgb(255 255 255 / .12);
+  border-radius: 7px;
+  background: #171715;
+  color: #f5f3ee;
+  font-size: 11px;
+  line-height: 1.4;
+  white-space: nowrap;
+  pointer-events: none;
+}
 
 .sec, .rail-item, .tools-root {
   position: relative;
@@ -179,55 +196,12 @@
   &:focus-visible { outline: 2px solid #a6e22e; outline-offset: -2px; }
   &.on, &.has-active { background: #292927; color: #fff; }
   .ico { width: 20px; height: 20px; display: grid; place-items: center; font-size: 16px; }
-  &::after {
-    content: attr(data-tip);
-    position: absolute;
-    z-index: 80;
-    top: 50%;
-    right: calc(100% + 9px);
-    transform: translateY(-50%);
-    width: max-content;
-    max-width: 190px;
-    padding: 6px 9px;
-    border: 1px solid rgb(255 255 255 / .12);
-    border-radius: 7px;
-    background: #171715;
-    color: #f5f3ee;
-    font-size: 11px;
-    line-height: 1.4;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: opacity 120ms ease;
-  }
-  &:hover::after, &:focus-visible::after { opacity: 1; visibility: visible; }
 }
 
 .sec { height: 38px; }
 .sec-h .t, .sec-h > svg, .sec-h .join { display: none; }
 .sec.has-active .sec-h { background: #292927; color: #fff; }
-.sec-body {
-  display: none;
-  position: absolute;
-  z-index: 50;
-  top: var(--submenu-top, 72px);
-  right: 100%;
-  width: 224px;
-  max-height: var(--submenu-max-height, calc(100% - 24px));
-  padding: 10px;
-  overflow-x: hidden;
-  overflow-y: auto;
-  border: 1px solid rgb(255 255 255 / .12);
-  border-radius: 14px;
-  background: #171715;
-  color: #f5f3ee;
-  box-shadow: 0 14px 36px rgb(15 14 12 / .24);
-}
-.sec:not(.is-closed) > .sec-body { display: block; }
 .flyout-title { padding: 5px 9px 10px; margin-bottom: 6px; border-bottom: 1px solid rgb(255 255 255 / .12); color: #f5f3ee; font-size: 12px; font-weight: 700; }
-.flyout-items { display: flex; flex-direction: column; gap: 3px; }
-.sec.is-closed .sec-h::after { content: attr(data-tip); }
 .tools-root { flex: 0 0 38px; }
 
 .submenu-flyout {
@@ -248,6 +222,8 @@
   box-shadow: 0 14px 36px rgb(15 14 12 / .24);
 }
 .flyout-content { flex: 1; min-height: 0; overflow-y: auto; padding: 1px 2px; }
+.section-flyout .flyout-title { flex: none; }
+.section-flyout .flyout-content { min-height: 0; }
 .tools-flyout { width: 240px; }
 .account-flyout { top: 12px; width: 208px; gap: 3px; }
 .account-flyout strong { padding: 6px 8px 9px; border-bottom: 1px solid rgb(255 255 255 / .12); font-size: 13px; }
@@ -277,9 +253,9 @@
   .chev { flex: none; transition: transform 150ms; }
 }
 .grp.is-closed > .item .chev { transform: rotate(90deg); }
-.grp > .sec-body { display: grid; grid-template-rows: 1fr; transition: grid-template-rows 160ms ease; }
-.grp > .sec-body > div { min-height: 0; overflow: hidden; }
-.grp.is-closed > .sec-body { grid-template-rows: 0fr; }
+.grp > .nested-body { display: grid; grid-template-rows: 1fr; transition: grid-template-rows 160ms ease; }
+.grp > .nested-body > div { min-height: 0; overflow: hidden; }
+.grp.is-closed > .nested-body { grid-template-rows: 0fr; }
 .nested { margin: 2px 0 4px; padding: 3px 2px; border-radius: 8px; background: rgb(255 255 255 / .045); }
 .tool-list { display: flex; flex-direction: column; gap: 2px; padding: 3px 2px; border-radius: 8px; background: rgb(255 255 255 / .045); }
 .tool-action { text-align: start; }
@@ -290,4 +266,4 @@
   .sb { --sidebar-popover-right: 94px; }
   .nav { padding-inline: 5px; }
 }
-@media (prefers-reduced-motion: reduce) { .sec-body, .item .chev { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .nested-body, .item .chev { transition: none; } }

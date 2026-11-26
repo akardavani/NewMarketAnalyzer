@@ -52,7 +52,9 @@ export class SidebarComponent {
   protected readonly tree = computed(() => build(this.nodes(), '', 0)
     .filter(n => !isFinancialReports(n.label))
     .sort((a, b) => Number(isSecurity(a.label)) - Number(isSecurity(b.label))));
-  protected readonly mainTree = computed(() => this.tree().filter(n => !isSecurity(n.label)));
+  protected readonly mainTree = computed(() => this.tree().filter(n =>
+    !isSecurity(n.label) && !(n.depth === 0 && n.url === '/')
+  ));
   protected readonly securityTree = computed(() => this.tree().filter(n => isSecurity(n.label)));
   protected readonly accountOpen = signal(false);
   private readonly sidebarRoot = viewChild<ElementRef<HTMLElement>>('sidebarRoot');
@@ -77,6 +79,7 @@ export class SidebarComponent {
   protected readonly selectedSection = signal<string | null>(null);
   protected readonly submenuTop = signal(72);
   protected readonly selectedSectionNode = computed(() => this.tree().find(n => n.key === this.selectedSection()) ?? null);
+  protected readonly itemTooltip = signal<{ label: string; top: number; left: number } | null>(null);
 
   protected changePassword(): void {
     this.closeFlyouts();
@@ -98,6 +101,24 @@ export class SidebarComponent {
   protected openNotifications(): void {
     this.closeFlyouts();
     this.notificationRequested.emit();
+  }
+
+  protected showItemTooltip(label: string, event: Event): void {
+    const anchor = event.currentTarget as HTMLElement | null;
+    const sidebar = this.sidebarRoot()?.nativeElement;
+    if (!anchor || !sidebar) return;
+
+    const anchorRect = anchor.getBoundingClientRect();
+    const sidebarRect = sidebar.getBoundingClientRect();
+    this.itemTooltip.set({
+      label,
+      top: anchorRect.top - sidebarRect.top + anchorRect.height / 2,
+      left: anchorRect.left - sidebarRect.left - 9
+    });
+  }
+
+  protected hideItemTooltip(): void {
+    this.itemTooltip.set(null);
   }
 
   @HostListener('document:click', ['$event'])

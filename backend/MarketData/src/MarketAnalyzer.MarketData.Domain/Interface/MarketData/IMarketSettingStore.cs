@@ -17,5 +17,8 @@ namespace MarketAnalyzer.MarketData.Domain
 
         /// <summary>مقدار تنظیم را (اگر نبود می‌سازد) تغییر می‌دهد؛ برای API ویرایش اپراتور.</summary>
         Task SetAsync(string scope, string key, string value, string? updatedBy, CancellationToken cancellationToken);
+
+        /// <summary>چند تنظیم را با یک SaveChanges و به‌صورت یک واحد ذخیره می‌کند.</summary>
+        Task SetManyAsync(string scope, IReadOnlyDictionary<string, string> values, string? updatedBy, CancellationToken cancellationToken);
     }
 }

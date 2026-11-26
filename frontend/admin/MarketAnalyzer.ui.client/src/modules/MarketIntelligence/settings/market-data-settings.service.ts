@@ -57,6 +57,14 @@ export class MarketDataSettingsService {
     return this.http.post<ApiResult<void>>(apiUrl('MarketDataSettings/SetSetting'), { scope, key, value }).pipe(map(r => this.unwrap(r)));
   }
 
+  setSettings(scope: string, settings: Array<{ key: string; value: string }>): Observable<void> {
+    return this.http.post<ApiResult<void>>(apiUrl('MarketDataSettings/SetSettings'), { scope, settings }).pipe(map(r => this.unwrap(r)));
+  }
+
+  setMarketActive(marketKey: string, isActive: boolean): Observable<void> {
+    return this.http.post<ApiResult<void>>(apiUrl('MarketDataSettings/SetMarketActive'), { marketKey, isActive }).pipe(map(r => this.unwrap(r)));
+  }
+
   switchProvider(marketKey: string, capability: number, providerKey: string, confirmWipe: boolean): Observable<unknown> {
     return this.http.post<ApiResult<unknown>>(apiUrl('MarketDataSettings/SwitchProvider'), { marketKey, capability, providerKey, confirmWipe }).pipe(map(r => this.unwrap(r)));
   }

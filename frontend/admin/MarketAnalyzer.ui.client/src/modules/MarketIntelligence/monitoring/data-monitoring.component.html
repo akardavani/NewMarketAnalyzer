@@ -1,0 +1,46 @@
+<main class="monitor-page" dir="rtl">
+  <header class="panel page-header">
+    <div><span class="eyebrow">داده‌های بازار</span><h1>مانیتورینگ داده‌ها</h1><p>آخرین اجراهای زمان‌بندی‌شده و دستی، نتیجه‌ها و خطاهای هر بازار</p></div>
+    <button type="button" class="primary" (click)="reload()" [disabled]="loading()">{{ loading() ? 'در حال دریافت…' : 'به‌روزرسانی' }}</button>
+  </header>
+
+  <p class="message error" *ngIf="error()">{{ error() }}</p>
+  <p class="message success" *ngIf="notice()">{{ notice() }}</p>
+
+  <section class="panel runs-panel">
+    <div class="section-heading"><h2>گزارش اجراها</h2><span class="muted">{{ runs().length }} اجرا</span></div>
+    <div class="empty" *ngIf="!loading() && runs().length === 0">هنوز اجرای ثبت‌شده‌ای وجود ندارد.</div>
+    <div class="run-list" *ngIf="runs().length">
+      <article class="run-card" *ngFor="let run of runs()">
+        <button type="button" class="run-summary" (click)="toggleDetails(run)" [attr.aria-expanded]="expandedRunId() === run.id">
+          <span class="run-title"><strong>{{ run.marketKey }} <span class="sep">·</span> {{ run.jobKey }}</strong><small>{{ run.sourceKey }} / {{ run.trigger === 'Scheduled' ? 'زمان‌بندی‌شده' : run.trigger === 'CatalogRefresh' ? 'دریافت کاتالوگ' : 'دستی' }}</small></span>
+          <span class="run-time">شروع: {{ date(run.startedAtUtc, run.timeZoneId) }}<small *ngIf="run.finishedAtUtc">پایان: {{ date(run.finishedAtUtc, run.timeZoneId) }}</small></span>
+          <span class="badge" [class.bad]="run.status === 'Failed' || run.status === 'Partial'" [class.running]="run.status === 'Running'">{{ statusLabel(run.status) }}</span>
+          <span class="counts"><b>بررسی‌شده {{ run.processedCount }}</b><b>موفق {{ run.succeededCount }}</b><b>به‌روزشده {{ run.updatedCount }}</b><b>بدون داده {{ run.noDataCount }}</b><b class="bad-text">خطا {{ run.failedCount }}</b></span>
+          <span class="issue-count">{{ run.remainingIssueCount }} / {{ run.errorIssueCount }} گروه خطا</span>
+          <span class="expand-mark">{{ expandedRunId() === run.id ? '−' : '+' }}</span>
+        </button>
+        <div class="run-details" *ngIf="expandedRunId() === run.id">
+          <p class="muted" *ngIf="run.summary">{{ run.summary }}</p>
+          <p class="muted" *ngIf="busyRunId() === run.id">در حال دریافت جزئیات…</p>
+          <ng-container *ngIf="details()[run.id] as detail">
+            <div class="issues-heading" *ngIf="detail.issues.length">
+              <strong>خطاها و هشدارها <span class="muted">(تکرارهای هم‌نوع گروه‌بندی شده‌اند)</span></strong>
+              <button type="button" class="danger" (click)="deleteSelected(run.id)" [disabled]="!selectedCount(run.id) || busyRunId() === run.id">حذف انتخاب‌شده‌ها ({{ selectedCount(run.id) }})</button>
+            </div>
+            <p class="empty" *ngIf="!detail.issues.length">جزئیات خطایی برای این اجرا باقی نمانده است. شمارندهٔ خلاصه حفظ شده است.</p>
+            <div class="issue-list" *ngIf="detail.issues.length">
+              <div class="issue-row" *ngFor="let issue of detail.issues; trackBy: trackIssue">
+                <input type="checkbox" [checked]="selectedIssues()[run.id]?.has(issue.id) || false" (change)="issueSelected(run.id, issue.id, $any($event.target).checked)" [attr.aria-label]="'انتخاب خطای ' + (issue.targetKeys.join(', ') || issue.errorType)">
+                <span class="issue-kind">{{ issue.errorType }}<small *ngIf="issue.targetKeys.length">{{ issue.targetKeys.join(', ') }}</small></span>
+                <span class="issue-message">{{ issue.message }}</span>
+                <span class="occurrences">× {{ issue.occurrences }}</span>
+                <small class="fingerprint" [title]="issue.fingerprint">{{ issue.fingerprint.slice(0, 12) }}</small>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>

@@ -54,7 +54,8 @@ internal static class NavigationCatalog
                                 Page(802, "نقش‌ها", 0, "membership/roles", "Role/GetAll"),
                                 Page(803, "گزارش ورود و خروج کاربران", 0, "membership/users-login-history", "Account/UsersLoginHistory"),
                                 Page(804, "گزارش ورود و خروج ناشناس", 0, "membership/unknown-login-history", "Account/UnknownLoginHistory"),
-                                Page(805, "تنظیمات دریافت داده‌های بازار", 4, "market-intelligence/settings", "MarketDataSettings/Overview")
+                                Page(805, "تنظیمات دریافت داده‌های بازار", 4, "market-intelligence/settings", "MarketDataSettings/Overview"),
+                                Page(108, "مانیتورینگ داده‌ها", 5, "market-intelligence/data-monitoring", "DataMonitoring/Overview")
                 ])
     ];
 

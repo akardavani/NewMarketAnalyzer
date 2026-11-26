@@ -21,6 +21,8 @@ details[open] > .market-summary::after, details[open] > summary::after { content
 .badge { color: #166534; background: #dcfce7; border-radius: 1rem; padding: .2rem .55rem; font-size: .75rem; }
 .badge.off { color: #991b1b; background: #fee2e2; }
 .market-content { display: grid; gap: .6rem; border-top: 1px solid var(--fd-line); padding: .75rem .85rem; }
+.market-status-actions { display: flex; align-items: center; justify-content: space-between; gap: .75rem; }
+.market-status-actions .muted { margin: 0; }
 .market-content h4 { font-size: .88rem; margin-bottom: .45rem; }
 .capabilities { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: .45rem; }
 .capability { justify-content: space-between; min-width: 0; border: 1px solid var(--fd-line); border-radius: .45rem; padding: .45rem .55rem; font-size: .83rem; }
@@ -28,6 +30,7 @@ details[open] > .market-summary::after, details[open] > summary::after { content
 .subsection { border-top: 1px solid var(--fd-line); padding-top: .55rem; }
 .subsection > summary, .advanced-settings > summary, .provider-panel > summary { cursor: pointer; font-weight: 600; font-size: .86rem; }
 .settings-list { margin-top: .35rem; }
+.settings-actions { display: flex; justify-content: flex-start; padding-top: .6rem; }
 .setting-row { justify-content: flex-start; padding: .3rem 0; border-bottom: 1px solid var(--fd-line); }
 .setting-name { display: grid; width: min(175px, 42%); gap: .08rem; font-size: .82rem; }
 .setting-name small { color: var(--fd-text-3); font-size: .68rem; direction: ltr; text-align: right; overflow-wrap: anywhere; }
@@ -37,6 +40,7 @@ select, input:not([type='checkbox']) { min-width: 0; border: 1px solid var(--fd-
 .boolean-editor input[type='checkbox'] { flex: 0 0 17px; width: 17px; height: 17px; accent-color: var(--fd-primary); cursor: pointer; }
 button { flex: 0 0 auto; border: 0; border-radius: .38rem; background: #2563eb; color: #fff; padding: .44rem .72rem; font: inherit; font-size: .82rem; cursor: pointer; }
 button.secondary { background: color-mix(in srgb, var(--fd-primary) 12%, var(--fd-surface)); color: var(--fd-primary); }
+button.danger { background: #fee2e2; color: #991b1b; }
 button:disabled { opacity: .55; cursor: wait; }
 .advanced-settings { margin-top: .5rem; padding: .5rem; background: #f8fafc; border-radius: .45rem; }
 .add-setting { margin-top: .35rem; }
@@ -52,6 +56,7 @@ button:disabled { opacity: .55; cursor: wait; }
   .settings-page { padding: .6rem; }
   .markets-section { grid-template-columns: 1fr; }
   .page-header, .catalog-panel { align-items: stretch; flex-direction: column; }
+  .market-status-actions { align-items: stretch; flex-direction: column; }
   .setting-row, .capability, .run-job { align-items: stretch; flex-direction: column; }
   .setting-name { width: 100%; }
   .capability select, .run-job select { max-width: none; width: 100%; }

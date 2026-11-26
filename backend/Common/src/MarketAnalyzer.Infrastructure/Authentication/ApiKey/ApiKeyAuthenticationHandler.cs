@@ -50,7 +50,7 @@ namespace MarketAnalyzer.Infrastructure.Authentication.ApiKey
             var principal = await _apiKeyValidator.ValidateAsync(validationContext, Context.RequestAborted);
             if (principal is null)
             {
-                throw new Exception($"The principal is null after api key validated.");
+                return AuthenticateResult.Fail("The API key is invalid or inactive.");
             }
 
             var ticket = new AuthenticationTicket(
